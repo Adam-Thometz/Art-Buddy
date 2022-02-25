@@ -1,0 +1,42 @@
+.Word {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.Word-letter {
+  display: inline-block;
+  padding: 5px 20px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.C {
+  background-color: red;
+  color: white;
+}
+
+.D {
+  background-color: rgb(238, 169, 41);
+}
+
+.E {
+  background-color: yellow;
+}
+
+.F {
+  background-color: green;
+}
+
+.G {
+  background-color: rgb(99, 196, 228);
+}
+
+.A {
+  background-color: rgb(0, 0, 172);
+  color: white;
+}
+
+.B {
+  background-color: purple;
+  color: white;
+}
