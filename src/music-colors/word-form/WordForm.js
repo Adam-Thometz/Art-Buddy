@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createWord } from "../../actions";
+import './WordForm.css'
 
 const WordForm = () => {
   const dispatch = useDispatch()
@@ -34,14 +35,15 @@ const WordForm = () => {
   return (
     <div className="WordForm">
       <div className="WordForm-form-group">
-        <label className="WordForm-input" htmlFor="word">Type a word to turn into a melody</label>
+        <label className="WordForm-label" htmlFor="word">Type a word to turn into a melody</label>
         <input
+          className="WordForm-input"
           name="word"
           id="word"
           value={wordInput}
           onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Generate word</button>
+        <button className="WordForm-button" onClick={handleSubmit}>Generate word</button>
       </div>
       <div className="WordForm-error">
         {error.length ? <span>{error}</span> : null}
