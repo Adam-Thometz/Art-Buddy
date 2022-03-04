@@ -4,32 +4,31 @@ import { createWord } from "../../actions";
 import './WordForm.css'
 
 const WordForm = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [wordInput, setWordInput] = useState('');
-  const [error, setError] = useState([])
+  const [error, setError] = useState([]);
 
   const checkValidWord = wordInput => {
-    const resObject = { errors: [] }
-    if (wordInput.length > 45) resObject.errors.push('Word should be no longer than 45 characters');
-    if (!wordInput.match(/^[A-Za-z]+$/)) resObject.errors.push('Only letters are allowed')
+    const errors = [];
+    if (wordInput.length > 45) errors.push('Word should be no longer than 45 characters');
+    if (!wordInput.match(/^[A-Za-z]+$/)) errors.push('Only letters are allowed');
 
-    resObject.errors.length ? resObject.isValid = false : resObject.isValid = true;
-    return resObject;
-  }
+    return errors;
+  };
 
   const handleChange = e => {
     setWordInput(e.target.value);
   };
 
   const handleSubmit = () => {
-    const check = checkValidWord(wordInput);
-    if (!check.isValid) {
-      setError(check.errors);
+    const errors = checkValidWord(wordInput);
+    if (errors.length) {
+      setError(errors);
     } else {
-      dispatch(createWord(wordInput))
+      dispatch(createWord(wordInput));
       setWordInput('');
-      if (error.length) setError([])
-    }
+      if (error.length) setError([]);
+    };
   };
 
   return (
@@ -49,7 +48,7 @@ const WordForm = () => {
         {error.length ? <span>{error}</span> : null}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WordForm
+export default WordForm;
