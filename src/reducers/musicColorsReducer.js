@@ -15,7 +15,8 @@ export default function musicColors(state = INITIAL_STATE, action) {
           note: null
         };
       });
-      return { ...state, wordDisplay, wordInput: '' }
+      const player = wordDisplay.every(char => char.note !== null)
+      return { ...state, wordDisplay, showPlayer: player }
     case FILL_LETTER:
       const { letter, note } = action;
       const wordDisplayCopy = [...state.wordDisplay];

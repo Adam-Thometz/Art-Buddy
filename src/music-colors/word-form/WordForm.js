@@ -9,26 +9,28 @@ const WordForm = () => {
   const [error, setError] = useState([]);
 
   const checkValidWord = wordInput => {
+    if (!wordInput) {
+      dispatch(createWord(''));
+      return;
+    };
     const errors = [];
-    if (wordInput.length > 45) errors.push('Word should be no longer than 45 characters');
-    if (!wordInput.match(/^[A-Za-z]+$/)) errors.push('Only letters are allowed');
+    if (wordInput.length > 12) errors.push('Word should be no longer than 12 characters');
+    if (!wordInput.match(/^[A-Za-z]+$/)) errors.push('Only letters are allowed!');
 
     return errors;
   };
 
   const handleChange = e => {
-    setWordInput(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    const errors = checkValidWord(wordInput);
+    const input = e.target.value;
+    setWordInput(input);
+    const errors = checkValidWord(input);
     if (errors.length) {
       setError(errors);
     } else {
-      dispatch(createWord(wordInput));
-      setWordInput('');
-      if (error.length) setError([]);
-    };
+      dispatch(createWord(input));
+      if (error.length) setError([])
+    }
+
   };
 
   return (
@@ -42,7 +44,6 @@ const WordForm = () => {
           value={wordInput}
           onChange={handleChange}
         />
-        <button className="WordForm-button" onClick={handleSubmit}>Generate word</button>
       </div>
       <div className="WordForm-error">
         {error.length ? <span>{error}</span> : null}
