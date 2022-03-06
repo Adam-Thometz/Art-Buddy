@@ -14,6 +14,6 @@ const MusicColors = () => {
         {wordDisplay.length ? <Word /> : null}
       </div>
   );
-}
+};
 
 export default MusicColors;
