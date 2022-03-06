@@ -1,4 +1,5 @@
 import MusicColors from './music-colors/MusicColors';
+// import SequenceMaker from './sequence-maker/SequenceMaker';
 import './App.css';
 
 function App() {
