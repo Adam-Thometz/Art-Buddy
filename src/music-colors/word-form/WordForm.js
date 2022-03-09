@@ -30,7 +30,6 @@ const WordForm = () => {
       dispatch(createWord(input));
       if (error.length) setError([])
     }
-
   };
 
   return (
