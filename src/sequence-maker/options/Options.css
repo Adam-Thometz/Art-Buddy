@@ -1,0 +1,14 @@
+.Options {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Options-img {
+  height: 200px;
+  width: 200px;
+}
+
+.Options-description {
+  font-weight: bold;
+}
