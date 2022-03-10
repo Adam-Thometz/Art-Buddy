@@ -8,7 +8,7 @@ const Word = () => {
   const showPlayer = useSelector(store => store.musicColors.showPlayer);
   return (
     <div className="Word">
-      <p className="Word-prompt">{showPlayer ? 'Play your melody!' : 'Click on the letters in the chart above!'}</p>
+      <p className="Word-prompt">{showPlayer ? 'Play your melody!' : 'Find the letters in the chart above!'}</p>
       {wordDisplay.map(char => (
         <div className={`Word-letter ${char.note}`}>
           {char.letter}
