@@ -1,5 +1,6 @@
 .Options {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding: 20px;
 }

@@ -14,7 +14,11 @@ const INITIAL_STATE = {
 export default function sequenceMaker(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CHANGE_CATEGORY:
-      return { ...state, category: action.category };
+      return { 
+        ...state, 
+        category: action.category,
+        sequence: [null, null, null, null] 
+      };
     case ADD_TO_SEQUENCE:
       return { ...state  };
     case REMOVE_FROM_SEQUENCE:
