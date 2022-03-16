@@ -1,11 +1,6 @@
-import { CREATE_WORD, FILL_LETTER, CHECK_WORD, CHANGE_CATEGORY, ADD_TO_SEQUENCE, REMOVE_FROM_SEQUENCE } from "./actionTypes";
+import { CREATE_WORD, FILL_LETTER, CHANGE_CATEGORY, ADD_TO_SEQUENCE, REMOVE_FROM_SEQUENCE } from "./actionTypes";
 
 // Actions for Music Colors
-export const checkWord = (wordInput) => ({
-  type: CHECK_WORD,
-  wordInput
-});
-
 export const createWord = (wordInput) => ({
   type: CREATE_WORD,
   wordInput

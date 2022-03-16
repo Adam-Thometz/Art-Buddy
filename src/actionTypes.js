@@ -1,5 +1,4 @@
 // Actions for Music Colors
-export const CHECK_WORD = 'CHECK_WORD';
 export const CREATE_WORD = 'CREATE_WORD';
 export const FILL_LETTER = 'FILL_LETTER';
 

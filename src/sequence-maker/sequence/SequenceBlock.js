@@ -5,8 +5,8 @@ import './SequenceBlock.css'
 
 const SequenceBlock = ({block}) => {
   const dispatch = useDispatch();
-  const remove = id => {
-    dispatch(removeFromSequence(id));
+  const remove = () => {
+    dispatch(removeFromSequence(block.id));
   }
 
   return (
@@ -14,7 +14,7 @@ const SequenceBlock = ({block}) => {
       {block !== null ? (
         <div>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} />
-          <button className="SequenceBlock-delete" onClick={() => remove(block.id)}>X</button>
+          <button className="SequenceBlock-delete" onClick={remove}>X</button>
         </div>
       ) : null}
     </div>
