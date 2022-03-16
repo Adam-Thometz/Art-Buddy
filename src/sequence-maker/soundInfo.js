@@ -28,12 +28,12 @@ const soundInfo = {
     }
   },
   soundsOnce: {
-    clapping: {
+    clap: {
       image: clapping,
       sound: clappingOnce,
       alt: 'clap'
     },
-    stomping: {
+    stomp: {
       image: stomping,
       sound: stompingOnce,
       alt: 'stomp'
@@ -47,16 +47,24 @@ const soundInfo = {
   rhythms: {
     quarterRest: {
       image: '',
-      sound: ''
+      sound: '',
+      alt: 'Quarter rest'
     },
     quarterNote: {
       image: '',
-      sound: ''
+      sound: '',
+      alt: 'Quarter note'
     },
     eighthNotes: {
       image: '',
-      sound: ''
+      sound: '',
+      alt: 'Eighth notes'
     },
+    eighthRestAndEighthNote: {
+      image: '',
+      sound: '',
+      alt: 'Eighth rest + eighth note'
+    }
   },
   pitches: {
     C: {

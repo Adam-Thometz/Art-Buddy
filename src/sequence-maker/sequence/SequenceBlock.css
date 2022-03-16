@@ -4,3 +4,10 @@
   height: 300px;
   width: 300px;
 }
+
+.SequenceBlock-img {
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  display: block;
+}
