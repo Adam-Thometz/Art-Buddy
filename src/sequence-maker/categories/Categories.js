@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useDispatch } from "react-redux";
 import { changeCategory } from "../../actions";
 
@@ -6,7 +7,7 @@ const Categories = () => {
   const dispatch = useDispatch();
   
   const handleChange = e => {
-    dispatch(changeCategory(e.target.value))
+    dispatch(changeCategory(e.target.value));
   }
   
   return (

@@ -1,8 +1,10 @@
 import React from 'react';
-import WordForm from './word-form/WordForm';
-import Word from './word/Word';
-import AlphabetTable from './alphabet-table/AlphabetTable'
+
 import { useSelector } from 'react-redux';
+
+import WordForm from './word-form/WordForm';
+import AlphabetTable from './alphabet-table/AlphabetTable'
+import Word from './word/Word';
 
 const MusicColors = () => {
   const wordDisplay = useSelector(store => store.musicColors.wordDisplay)

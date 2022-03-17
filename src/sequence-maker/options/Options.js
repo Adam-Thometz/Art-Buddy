@@ -1,8 +1,11 @@
 import React from "react";
+
 import { useSelector, useDispatch } from "react-redux";
 import { addToSequence } from "../../actions";
-import soundInfo from "../soundInfo";
+
 import './Options.css';
+
+import soundInfo from "../soundInfo";
 
 const Options = () => {
   const dispatch = useDispatch()

@@ -1,13 +1,20 @@
+// Recommended import order for all React components:
+
+// React imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+// Redux imports
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
+// CSS imports
+import './index.css';
+// Component imports
+import App from './App';
+// Everything else
+import reportWebVitals from './reportWebVitals';
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>

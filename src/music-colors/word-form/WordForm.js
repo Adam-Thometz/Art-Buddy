@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
 import { createWord } from "../../actions";
-import './WordForm.css'
+
+import './WordForm.css';
 
 const WordForm = () => {
   const dispatch = useDispatch();
@@ -28,7 +30,7 @@ const WordForm = () => {
       setError(errors);
     } else {
       dispatch(createWord(input));
-      if (error.length) setError([])
+      if (error.length) setError([]);
     }
   };
 

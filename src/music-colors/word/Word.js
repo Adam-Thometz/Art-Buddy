@@ -1,7 +1,11 @@
 import React from "react";
-import './Word.css'
-import WordPlayer from "./WordPlayer";
+
 import { useSelector } from "react-redux";
+
+import './Word.css';
+
+import WordPlayer from "./WordPlayer";
+
 import synth from "../utils/synth";
 
 const Word = () => {

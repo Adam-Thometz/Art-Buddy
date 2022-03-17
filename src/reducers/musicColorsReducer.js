@@ -1,4 +1,5 @@
 import { CREATE_WORD, FILL_LETTER } from "../actionTypes";
+
 import synth from "../music-colors/utils/synth";
 
 const INITIAL_STATE = {

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+
 import musicColorsReducer from './musicColorsReducer';
 import sequenceMakerReducer from './sequenceMakerReducer';
 

@@ -1,17 +1,22 @@
 import React from "react";
-import AlphabetCell from "./AlphabetCell";
-import { rows, notes } from '../utils/musicAlphabetData'
-import './AlphabetTable.css'
+
 import { useDispatch } from "react-redux";
 import { fillLetter } from "../../actions";
 
+import './AlphabetTable.css';
+
+import AlphabetCell from "./AlphabetCell";
+
+import { rows, notes } from '../utils/musicAlphabetData';
+
 const AlphabetTable = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const colorLetter = e => {
     const letter = e.target.innerText;
     const note = e.target.classList[1];
     dispatch(fillLetter(letter, note));
   }
+  
   return (
     <table className="AlphabetTable">
       <tbody onClick={colorLetter}>

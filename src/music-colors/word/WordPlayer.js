@@ -1,13 +1,17 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
-import synth from "../utils/synth";
-import { now } from 'tone'
+
 import { useSelector } from "react-redux";
-import './WordPlayer.css'
+
+import './WordPlayer.css';
+
+import synth from "../utils/synth";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { now } from 'tone';
 
 const WordPlayer = () => {
-  const wordDisplay = useSelector(state => state.musicColors.wordDisplay)
+  const wordDisplay = useSelector(state => state.musicColors.wordDisplay);
 
   const playMelody = () => {
     const start = now();
