@@ -41,3 +41,7 @@
   background-color: purple;
   color: white;
 }
+
+.filled {
+  cursor: pointer;
+}

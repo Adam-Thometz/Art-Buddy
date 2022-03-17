@@ -13,7 +13,7 @@ export default function musicColors(state = INITIAL_STATE, action) {
       const wordDisplay = action.wordInput.toUpperCase().split('').map(letter => {
         return {
           letter,
-          note: null
+          note: null,
         };
       });
       const player = wordDisplay.every(char => char.note !== null)
