@@ -16,9 +16,13 @@ const WordPlayer = () => {
   const playMelody = () => {
     const start = now();
     for (let i = 0; i < wordDisplay.length; i++) {
-      const note = wordDisplay[i].note;
+      const { letter, note } = wordDisplay[i]
       const seconds = i * 0.5;
-      synth.triggerAttackRelease(`${note}4`, "8n", start + seconds);
+      if (letter === ' ') {
+        
+      } else {
+        synth.triggerAttackRelease(`${note}4`, "8n", start + seconds);
+      }
     }
   }
 

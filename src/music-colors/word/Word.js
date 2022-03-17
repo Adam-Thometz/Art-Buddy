@@ -14,6 +14,7 @@ const Word = () => {
 
   const playNote = e => {
     const note = e.target.classList[2];
+    if (!note) return;
     synth.triggerAttackRelease(`${note}4`, '4n');
   }
   
