@@ -6,7 +6,7 @@ import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable'
 import Word from './word/Word';
 
-const MusicColors = () => {
+const WordToMusicDecoder = () => {
   const wordDisplay = useSelector(store => store.musicColors.wordDisplay)
 
   return (
@@ -18,4 +18,4 @@ const MusicColors = () => {
   );
 };
 
-export default MusicColors;
+export default WordToMusicDecoder;

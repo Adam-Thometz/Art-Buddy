@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import musicColorsReducer from './musicColorsReducer';
+import musicColorsReducer from './wordToMusicDecoderReducer';
 import sequenceMakerReducer from './sequenceMakerReducer';
 
 const rootReducer = combineReducers({

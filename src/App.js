@@ -1,11 +1,11 @@
-import MusicColors from './music-colors/MusicColors';
+import WordToMusicDecoder from './music-colors/WordToMusicDecoder';
 // import SequenceMaker from './sequence-maker/SequenceMaker';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <MusicColors />
+      <WordToMusicDecoder />
     </div>
   );
 }
