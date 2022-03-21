@@ -14,22 +14,24 @@ export default function freezeDanceReducer(state = INITIAL_STATE, action) {
       };
       studentsWithNewStudent.push(newStudent);
       return { ...state, students: studentsWithNewStudent };
+
     case REMOVE_STUDENT:
       const studentsMinusOneStudent = [ ...state.students ];
       studentsMinusOneStudent.filter(student => student.name !== action.name);
       return { ...state, students: studentsMinusOneStudent };
 
-    // TODO: Make adding and removing points more dynamic
     case ADD_POINT:
       const studentsWithAddedPoint = [ ...state.students ];
       const studentToAddIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithAddedPoint[studentToAddIdx].points++;
       return { ...state, students: studentsWithAddedPoint };
+
     case REMOVE_POINT:
       const studentsWithSubtractedPoint = [ ...state.students ];
       const studentToSubtractIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithSubtractedPoint[studentToSubtractIdx].points--;
       return { ...state, students: studentsWithSubtractedPoint };
+      
     default:
       return state;
   };

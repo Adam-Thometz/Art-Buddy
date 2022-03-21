@@ -16,8 +16,9 @@ export default function wordToMusicDecoder(state = INITIAL_STATE, action) {
           note: null,
         };
       });
-      const player = wordDisplay.every(char => char.note !== null)
-      return { ...state, wordDisplay, showPlayer: player }
+      const player = wordDisplay.every(char => char.note !== null);
+      return { ...state, wordDisplay, showPlayer: player };
+
     case FILL_LETTER:
       const { letter, note } = action;
       const wordDisplayCopy = [...state.wordDisplay];
@@ -29,6 +30,7 @@ export default function wordToMusicDecoder(state = INITIAL_STATE, action) {
       synth.triggerAttackRelease(`${note}4`, '4n');
       const showPlayer = wordDisplayCopy.every(char => char.note !== null);
       return { ...state, wordDisplay: wordDisplayCopy, showPlayer };
+      
     default:
       return state;
   };

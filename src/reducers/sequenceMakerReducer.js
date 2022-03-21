@@ -17,19 +17,24 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
         category: action.category,
         sequence: [null, null, null, null] 
       };
+
     case ADD_TO_SEQUENCE:
-      const newSequenceWithAdd = [...state.sequence];
       const currIdx = state.sequence.indexOf(null);
-      const block = {...soundInfo[state.category][action.sound]}
+      if (currIdx === -1) {
+        return;
+      };
+      const newSequenceWithAdd = [...state.sequence];
+      const block = { ...soundInfo[state.category][action.sound] };
       block.id = currIdx;
       console.log(block.id);
       newSequenceWithAdd[currIdx] = block;
       return { ...state, sequence: newSequenceWithAdd  };
+
     case REMOVE_FROM_SEQUENCE:
-      console.log(action.id)
       const newSequenceWithRemove = [...state.sequence];
       newSequenceWithRemove[action.id] = null;
       return { ...state, sequence: newSequenceWithRemove };
+
     default:
       return state;
   };
