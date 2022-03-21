@@ -15,14 +15,16 @@ const Student = ({ student }) => {
   };
 
   const remove = () => {
-    dispatch(removePoint(student.name));
+    if (student.points > 0) {
+      dispatch(removePoint(student.name));
+    };
   };
 
   return (
     <div className="Student">
       <p className="Student-name">{student.name}</p>
-      <button className="Student-button" onClick={add}>+</button>
       <button className="Student-button" onClick={remove}>-</button>
+      <button className="Student-button" onClick={add}>+</button>
       <Points points={student.points} />
     </div>
   );
