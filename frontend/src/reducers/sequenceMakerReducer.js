@@ -21,7 +21,7 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
     case ADD_TO_SEQUENCE:
       const currIdx = state.sequence.indexOf(null);
       if (currIdx === -1) {
-        return;
+        return state;
       };
       const newSequenceWithAdd = [...state.sequence];
       const block = { ...soundInfo[state.category][action.sound] };

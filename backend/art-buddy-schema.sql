@@ -1,0 +1,11 @@
+CREATE TABLE user (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(20) UNIQUE NOT NULL,
+  password TEXT NOT NULL
+)
+
+CREATE TABLE student (
+  id SERIAL PRIMARY KEY,
+  firstName TEXT NOT NULL,
+  lastName TEXT NOT NULL
+)

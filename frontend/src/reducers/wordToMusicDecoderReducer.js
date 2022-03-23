@@ -1,6 +1,6 @@
 import { CREATE_WORD, FILL_LETTER } from "../actionTypes";
 
-import synth from "../music-colors/utils/synth";
+import synth from "../music-decoder/utils/synth";
 
 const INITIAL_STATE = {
   wordDisplay: [],
