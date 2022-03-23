@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   showPlayer: false,
 };
 
-export default function wordToMusicDecoder(state = INITIAL_STATE, action) {
+export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CREATE_WORD:
       const wordDisplay = action.wordInput.toUpperCase().split('').map(letter => {

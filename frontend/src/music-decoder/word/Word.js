@@ -9,8 +9,8 @@ import WordPlayer from "./WordPlayer";
 import synth from "../utils/synth";
 
 const Word = () => {
-  const wordDisplay = useSelector(store => store.musicColors.wordDisplay);
-  const showPlayer = useSelector(store => store.musicColors.showPlayer);
+  const wordDisplay = useSelector(store => store.wordToMusicDecoder.wordDisplay);
+  const showPlayer = useSelector(store => store.wordToMusicDecoder.showPlayer);
 
   const playNote = e => {
     const note = e.target.classList[2];

@@ -11,7 +11,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { now } from 'tone';
 
 const WordPlayer = () => {
-  const wordDisplay = useSelector(state => state.musicColors.wordDisplay);
+  const wordDisplay = useSelector(state => state.wordToMusicDecoder.wordDisplay);
 
   const playMelody = () => {
     const start = now();
