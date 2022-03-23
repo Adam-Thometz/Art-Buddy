@@ -1,0 +1,25 @@
+{
+  "name": "music-apps-collection",
+  "version": "1.0.0",
+  "description": "Developer: Adam Thometz   UX designer: Mattie Becker",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "npm install --prefix backend",
+    "install-frontend": "npm install --prefix frontend",
+    "install": "npm run install-backend && npm run install-frontend",
+    "backend": "npm run watch --prefix backend",
+    "frontend": "npm start --prefix frontend",
+    "start": "npm run backend & npm run frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Thometz/Music-For-Special-Education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adam-Thometz/Music-For-Special-Education/issues"
+  },
+  "homepage": "https://github.com/Adam-Thometz/Music-For-Special-Education#readme"
+}
