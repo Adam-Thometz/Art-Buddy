@@ -7,7 +7,7 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import Word from './word/Word';
 
 const WordToMusicDecoder = () => {
-  const wordDisplay = useSelector(store => store.musicColors.wordDisplay);
+  const wordDisplay = useSelector(store => store.wordToMusicDecoder.wordDisplay);
 
   return (
       <div className="App">
