@@ -1,6 +1,7 @@
-// Action types for Music Colors
+// Action types for Word to Music
 export const CREATE_WORD = 'CREATE_WORD';
 export const FILL_LETTER = 'FILL_LETTER';
+export const PLAY_MELODY = 'PLAY_MELODY';
 
 // Action types for Sequence Maker
 export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';

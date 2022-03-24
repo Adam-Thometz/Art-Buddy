@@ -1,6 +1,7 @@
 import { 
   CREATE_WORD,
   FILL_LETTER,
+  PLAY_MELODY,
 
   CHANGE_CATEGORY,
   ADD_TO_SEQUENCE,
@@ -10,7 +11,7 @@ import {
   REMOVE_STUDENT,
   ADD_POINT,
   REMOVE_POINT
- } from "./actionTypes";
+} from "./actionTypes";
 
 // Actions for Music Colors
 export const createWord = (wordInput) => ({
@@ -23,6 +24,11 @@ export const fillLetter = (letter, note) => ({
   letter,
   note
 });
+
+export const playMelody = (word) => ({
+  type: PLAY_MELODY,
+  word
+})
 
 // Actions for Sequence Maker
 export const changeCategory = (category) => ({

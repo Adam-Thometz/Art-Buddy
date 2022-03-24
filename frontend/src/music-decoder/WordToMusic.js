@@ -7,13 +7,17 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import Word from './word/Word';
 
 const WordToMusicDecoder = () => {
-  const wordDisplay = useSelector(store => store.wordToMusicDecoder.wordDisplay);
+  const wordDisplay = useSelector(store => store.wordToMusic.wordDisplay);
 
   return (
       <div className="App">
         <WordForm />
         <AlphabetTable />
-        {wordDisplay.length ? <Word /> : null}
+        {wordDisplay.length ? (
+          wordDisplay.map(word => (
+            <Word word={word} />
+          ))
+        ) : null}
       </div>
   );
 };

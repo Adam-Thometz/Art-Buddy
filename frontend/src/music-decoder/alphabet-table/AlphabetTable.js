@@ -11,6 +11,7 @@ import { rows, notes } from '../utils/musicAlphabetData';
 
 const AlphabetTable = () => {
   const dispatch = useDispatch();
+  
   const colorLetter = e => {
     const letter = e.target.innerText;
     const note = e.target.classList[1];

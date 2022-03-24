@@ -16,8 +16,8 @@ const WordForm = () => {
       return;
     };
     const errors = [];
-    if (wordInput.length > 12) errors.push('Word should be no longer than 12 characters');
-    if (!wordInput.match(/^[A-Za-z]+$/)) errors.push('Only letters are allowed!');
+    if (wordInput.length > 20) errors.push('Word should be no longer than 12 characters');
+    if (!wordInput.match(/^[A-Za-z\s]+$/)) errors.push('Only letters and spaces are allowed!');
 
     return errors;
   };
