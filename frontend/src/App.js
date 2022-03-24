@@ -1,10 +1,12 @@
+import Navbar from './Navbar';
 import AppRoutes from './AppRoutes';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      <Navbar />
       <AppRoutes />
     </div>
   );
