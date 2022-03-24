@@ -50,6 +50,7 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
         const seconds = i * 0.5;
         synth.triggerAttackRelease(`${note}4`, "8n", (i === currWord.length-1 ? start + seconds + 0.5 : start + seconds));
       }
+      return state;
     default:
       return state;
   };
