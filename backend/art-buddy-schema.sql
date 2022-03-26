@@ -1,11 +1,11 @@
-CREATE TABLE user (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(20) UNIQUE NOT NULL,
   password TEXT NOT NULL
-)
+);
 
-CREATE TABLE student (
+CREATE TABLE students (
   id SERIAL PRIMARY KEY,
   firstName TEXT NOT NULL,
   lastName TEXT NOT NULL
-)
+);
