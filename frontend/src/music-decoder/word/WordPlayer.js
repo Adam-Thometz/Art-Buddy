@@ -1,21 +1,24 @@
 import React from "react";
 
-import { useSelector, useDispatch } from "react-redux";
-import { playMelody } from "../../actions";
+import { useSelector } from "react-redux";
 
 import './WordPlayer.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import synth from "../utils/synth";
+import { now } from "tone";
 
 const WordPlayer = () => {
-  const dispatch = useDispatch();
   const wordDisplay = useSelector(state => state.wordToMusic.wordDisplay);
 
   const play = () => {
     // debugger;
-    for (let word of wordDisplay) {
-      dispatch(playMelody(word))
+    const start = now();
+    for (let i = 0; i < wordDisplay.length; i++) {
+      const { note } = wordDisplay[i];
+      const seconds = i * 0.5;
+      synth.triggerAttackRelease(`${note}4`, "8n", start + seconds);
     }
   }
 

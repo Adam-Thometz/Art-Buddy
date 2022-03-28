@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
-class Api {
+class ArtBuddyApi {
   static token;
 
   static async request(endpoint, data = {}, method = 'get') {
@@ -20,13 +20,13 @@ class Api {
 
   static async signup(data) {
     const res = await this.request('/auth/signup', data, 'post');
-    return res;
+    return res.token;
   };
 
   static async login(data) {
     const res = await this.request('/auth/login', data, 'post');
-    return res;
+    return res.token;
   };
 };
 
-export default Api;
+export default ArtBuddyApi;

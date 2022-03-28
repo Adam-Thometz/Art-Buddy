@@ -13,11 +13,7 @@ const WordToMusicDecoder = () => {
       <div className="App">
         <WordForm />
         <AlphabetTable />
-        {wordDisplay.length ? (
-          wordDisplay.map(word => (
-            <Word word={word} />
-          ))
-        ) : null}
+        {wordDisplay.length ? <Word /> : null}
       </div>
   );
 };

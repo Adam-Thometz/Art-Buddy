@@ -1,3 +1,8 @@
+// Action types for authentication
+export const SET_TOKEN = 'SET_TOKEN';
+export const SET_USER = 'SET_USER';
+export const ERROR = 'ERROR';
+
 // Action types for Word to Music
 export const CREATE_WORD = 'CREATE_WORD';
 export const FILL_LETTER = 'FILL_LETTER';

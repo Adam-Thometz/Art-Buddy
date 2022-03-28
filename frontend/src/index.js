@@ -4,9 +4,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // Redux imports
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
+import thunk from 'redux-thunk'
 // CSS imports
 import './index.css';
 // Component imports
@@ -15,8 +16,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+const store = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__
+    && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
+  
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

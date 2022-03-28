@@ -8,9 +8,10 @@ import WordPlayer from "./WordPlayer";
 
 import synth from "../utils/synth";
 
-const Word = ({ word }) => {
+const Word = () => {
+  const wordDisplay = useSelector(store => store.wordToMusic.wordDisplay)
   const showPlayer = useSelector(store => store.wordToMusic.showPlayer);
-  // debugger;
+  
   const playNote = e => {
     const note = e.target.classList[2];
     if (!note) return;
@@ -20,7 +21,7 @@ const Word = ({ word }) => {
   return (
     <div className="Word">
       <p className="Word-prompt">{showPlayer ? 'Play your melody! Or click a letter to hear a note' : 'Find the letters in the chart above!'}</p>
-      {word.map(char => (
+      {wordDisplay.map(char => (
         <div className={`Word-letter ${char.note ? `filled ${char.note}` : null}`} onClick={playNote}>
           {char.letter}
         </div>

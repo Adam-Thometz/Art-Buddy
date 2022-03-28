@@ -17,7 +17,7 @@ const WordForm = () => {
     };
     const errors = [];
     if (wordInput.length > 20) errors.push('Word should be no longer than 12 characters');
-    if (!wordInput.match(/^[A-Za-z\s]+$/)) errors.push('Only letters and spaces are allowed!');
+    if (!wordInput.match(/^[A-Za-z]+$/)) errors.push('Only letters are allowed!');
 
     return errors;
   };
@@ -37,7 +37,7 @@ const WordForm = () => {
   return (
     <div className="WordForm">
       <div className="WordForm-form-group">
-        <label className="WordForm-label" htmlFor="word">Type a word to turn into a melody</label>
+        <label className="WordForm-label" htmlFor="word">Type words to turn into a melody</label>
         <input
           className="WordForm-input"
           name="word"
