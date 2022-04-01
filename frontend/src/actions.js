@@ -3,9 +3,7 @@ import {
   SET_USER,
   ERROR,
 
-  CREATE_WORD,
-  FILL_LETTER,
-  PLAY_MELODY,
+  wordToMusicActions,
 
   CHANGE_CATEGORY,
   ADD_TO_SEQUENCE,
@@ -60,19 +58,24 @@ export const gotError = () => ({
 })
 
 // Actions for Music Colors
-export const createWord = (wordInput) => ({
-  type: CREATE_WORD,
-  wordInput
+export const createWord = (wordInput, wordId) => ({
+  type: wordToMusicActions.CREATE_WORD,
+  wordInput,
+  wordId
 });
 
+export const addWord = () => ({
+  type: wordToMusicActions.ADD_WORD
+})
+
 export const fillLetter = (letter, note) => ({
-  type: FILL_LETTER,
+  type: wordToMusicActions.FILL_LETTER,
   letter,
   note
 });
 
 export const playMelody = (word) => ({
-  type: PLAY_MELODY,
+  type: wordToMusicActions.PLAY_MELODY,
   word
 })
 

@@ -1,36 +1,51 @@
-import { CREATE_WORD, FILL_LETTER, PLAY_MELODY } from "../actionTypes";
+import { wordToMusicActions } from "../actionTypes";
 
 import synth from "../music-decoder/utils/synth";
 import { now } from 'tone';
 
 const INITIAL_STATE = {
-  wordDisplay: [],
+  wordDisplay: [
+    []
+  ],
   showPlayer: false,
 };
 
 export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case CREATE_WORD:
-      const wordDisplay = action.wordInput.toUpperCase().split('').map(letter => ({
+    case wordToMusicActions.CREATE_WORD:
+      const newWordDisplay = [...state.wordDisplay];
+      const newWord = action.wordInput.toUpperCase().split('').map(letter => ({
         letter,
         note: null
       }));
-      const player = wordDisplay.every(char => char.note !== null);
-      return { ...state, wordDisplay, showPlayer: player };
-
-    case FILL_LETTER:
+      newWordDisplay[action.wordId] = newWord.length ?
+        newWord :
+        [];
+      return { 
+        ...state,
+        wordDisplay: newWordDisplay,
+      };
+    case wordToMusicActions.ADD_WORD:
+      const addWordInput = [...state.wordDisplay]
+      addWordInput.push([])
+      return { ...state, wordDisplay: addWordInput };
+    case wordToMusicActions.FILL_LETTER:
       const { letter, note } = action;
       const wordDisplayCopy = [...state.wordDisplay];
-      const letterIdx = wordDisplayCopy.findIndex(block => !block.note && (block.letter === letter));
-      if (letterIdx === -1) {
+      const letterLocation = searchLetter(wordDisplayCopy, letter);
+      if (letterLocation.length) {
+        const wordIdx = letterLocation[0];
+        const letterIdx = letterLocation[1];
+        wordDisplayCopy[wordIdx][letterIdx].note = note;
+        synth.triggerAttackRelease(`${note}4`, '4n');
+        return {
+          ...state,
+          wordDisplay: wordDisplayCopy,
+        };
+      } else {
         return state;
       }
-      wordDisplayCopy[letterIdx].note = note;
-      synth.triggerAttackRelease(`${note}4`, '4n');
-      const showPlayer = wordDisplayCopy.every(char => char.note !== null);
-      return { ...state, wordDisplay: wordDisplayCopy, showPlayer };
-      
-    case PLAY_MELODY:
+    case wordToMusicActions.PLAY_MELODY:
       const start = now();
       const currWord = action.word;
       for (let i = 0; i < currWord.length; i++) {
@@ -43,3 +58,15 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
       return state;
   };
 };
+
+function searchLetter(wordDisplay, letter) {
+  const result = []
+  for (let i = 0; i < wordDisplay.length; i++) {
+    const letterIdx = wordDisplay[i].findIndex(block => !block.note && (block.letter === letter));
+    if (letterIdx !== -1) {
+      result.push(i, letterIdx);
+      break;
+    }
+  }
+  return result;
+}

@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
 import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable';
-import Word from './word/Word';
+import WordList from './word/WordList';
 
-const WordToMusicDecoder = () => {
-  const wordDisplay = useSelector(store => store.wordToMusic.wordDisplay);
+import './WordToMusic.css';
 
+const WordToMusic = () => {
   return (
-      <div className="App">
-        <WordForm />
+    <div className="WordToMusic">
+      <div className='WordToMusic-form-chart-wrapper'>
         <AlphabetTable />
-        {wordDisplay.length ? <Word /> : null}
+        <WordForm />
       </div>
+      <WordList />
+    </div>
   );
 };
 
-export default WordToMusicDecoder;
+export default WordToMusic;

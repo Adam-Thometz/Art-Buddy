@@ -1,10 +1,11 @@
 .WordForm {
-  padding: 30px;
-  margin: 5px auto;
-  width: 50%;
-  height: 4vh;
+  padding: 2% 50px;
+  margin: 0 auto;
+  width: 20%;
+  height: 50%;
   border: 1px solid black;
   border-radius: 10px;
+  font-size: 1.5rem;
 }
 
 .WordForm-form-group {
@@ -15,14 +16,13 @@
   margin: 0 auto;
 }
 
-.WordForm-input {
-  width: 60%;
-  margin: 5px auto;
+.WordForm-label {
+  margin: 5px;
 }
 
 .WordForm-button {
   width: 25%;
-  margin: 5px auto;
+  margin: 15px auto;
 }
 
 .WordForm-error {

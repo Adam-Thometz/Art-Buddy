@@ -1,5 +1,6 @@
 .AlphabetTable {
   margin: 0 auto;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  width: 50%;
+  width: 60%;
+  padding: 0 50px;
 }

@@ -1,0 +1,10 @@
+.WordInput-input {
+  font-size: 24px;
+  margin: 5px auto;
+  width: 75%;
+}
+
+.WordInput-error {
+  font-size: 12px;
+  color: rgb(181, 0, 0);
+}
