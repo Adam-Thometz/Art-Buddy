@@ -1,7 +1,7 @@
 {
   "name": "music-apps-collection",
   "version": "1.0.0",
-  "description": "Developer: Adam Thometz   UX designer: Mattie Becker",
+  "description": "A collection of teaching tools focused on using the arts to teach ELA and math to special needs students",
   "main": "index.js",
   "scripts": {
     "install-backend": "npm install --prefix backend",
