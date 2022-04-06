@@ -44,65 +44,55 @@ const soundInfo = {
       alt: 'stop'
     }
   },
-  rhythms: {
-    quarterRest: {
+  animals: {
+    dog: {
       image: '',
       sound: '',
-      alt: 'Quarter rest'
+      alt: 'dog'
     },
-    quarterNote: {
+    cat: {
       image: '',
       sound: '',
-      alt: 'Quarter note'
+      alt: 'cat'
     },
-    eighthNotes: {
+    cow: {
       image: '',
       sound: '',
-      alt: 'Eighth notes'
+      alt: 'cow'
     },
-    eighthRestAndEighthNote: {
+    horse: {
       image: '',
       sound: '',
-      alt: 'Eighth rest + eighth note'
+      alt: 'horse'
+    },
+    stop: {
+      image: stop,
+      sound: '',
+      alt: 'stop'
     }
   },
-  pitches: {
-    C: {
-      image: 'C',
-      sound: '',
-      alt: 'C'
-    },
-    D: {
-      image: 'D',
-      sound: '',
-      alt: 'D'
-    },
-    E: {
-      image: 'E',
-      sound: '',
-      alt: 'E'
-    },
-    F: {
-      image: 'F',
-      sound: '',
-      alt: 'F'
-    },
-    G: {
-      image: 'G',
-      sound: '',
-      alt: 'G'
-    },
-    A: {
-      image: 'A',
-      sound: '',
-      alt: 'A'
-    },
-    B: {
-      image: 'B',
-      sound: '',
-      alt: 'B'
-    },
-  },
+  // vehicles: {
+  //   car: {
+  //     image: '',
+  //     sound: '',
+  //     alt: 'car'
+  //   },
+  //   plane: {
+  //     image: '',
+  //     sound: '',
+  //     alt: 'plane'
+  //   },
+  //   train: {
+  //     image: '',
+  //     sound: '',
+  //     alt: 'train'
+  //   },
+  //   truck: {
+  //     image: '',
+  //     sound: '',
+  //     alt: 'bicycle'
+  //   },
+  // }
 };
 
 export default soundInfo;

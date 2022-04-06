@@ -11,14 +11,14 @@ const Categories = () => {
   }
   
   return (
-    <div className="Options">
+    <div className="Categories">
       <label>Select a sound category:</label>
       <select onChange={handleChange}>
         <option value="" selected>---</option>
-        <option value="soundsContinuous">Level 1: Clapping and Stomping (continuous)</option>
-        <option value="soundsOnce">Level 2: Clapping and Stomping (once)</option>
-        <option value="rhythms">Level 3: Rhythms</option>
-        <option value="pitches">Level 4: Musical Pitches</option>
+        <option value="soundsContinuous">Clapping and Stomping (continuous)</option>
+        <option value="soundsOnce">Clapping and Stomping (once)</option>
+        <option value="animals">Animals</option>
+        <option value="vehicles">Vehicles</option>
       </select>
     </div>
   );
