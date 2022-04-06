@@ -15,8 +15,8 @@ const Categories = () => {
       <label>Select a sound category:</label>
       <select onChange={handleChange}>
         <option value="" selected>---</option>
-        <option value="soundsContinuous">Clapping and Stomping (continuous)</option>
-        <option value="soundsOnce">Clapping and Stomping (once)</option>
+        <option value="bodySoundsContinuous">Body Sounds (continuous)</option>
+        <option value="bodySoundsOnce">Body Sounds (once)</option>
         <option value="animals">Animals</option>
       </select>
     </div>

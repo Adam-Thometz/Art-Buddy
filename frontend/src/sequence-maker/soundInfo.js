@@ -10,7 +10,7 @@ import stomping from './images/stomping.jpeg';
 import stop from './images/stop.png'
 
 const soundInfo = {
-  soundsContinuous: {
+  bodySoundsContinuous: {
     clapping: {
       image: clapping,
       sound: clappingContinuous,
@@ -27,7 +27,7 @@ const soundInfo = {
       alt: 'stop'
     }
   },
-  soundsOnce: {
+  bodySoundsOnce: {
     clap: {
       image: clapping,
       sound: clappingOnce,
