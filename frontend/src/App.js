@@ -1,37 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from './actions';
 
 import './App.css';
 
 import Navbar from './_common/Navbar';
-import AppRoutes from './AppRoutes';
-// import { setUser } from './actions';
+import AppRoutes from './_common/AppRoutes';
 
-// import jwt from 'jsonwebtoken';
-// import ArtBuddyApi from './api';
+import jwtDecode from "jwt-decode";
+import ArtBuddyApi from './api';
 
 const App = () => {
-  // const user = useSelector(state => state.userInfo.user);
-  // const token = useSelector(state => state.userInfo.token);
-  // const error = useSelector(state => state.userInfo.error);
-  // const dispatch = useDispatch();
+  const user = useSelector(state => state.userInfo.user);
+  const token = useSelector(state => state.userInfo.token);
+  const error = useSelector(state => state.userInfo.error);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (token) {
-  //     try {
-  //       // DO NOT RUN THE FOLLOWING LINE UNTIL FIGURED OUT. RIGHT NOW, IT CRASHES THE APP
-  //       const currUser = jwt.decode(token);
-  //       ArtBuddyApi.token = token;
-  //       dispatch(setUser(currUser))
-  //     } catch (err) {
-  //       dispatch(setUser({
-  //         username: '',
-  //         students: []
-  //       }))
-  //     }
-  //   }
-  // }, [dispatch, token])
+  useEffect(() => {
+    if (token) {
+      try {
+        const currUser = jwtDecode(token);
+        ArtBuddyApi.token = token;
+        dispatch(setUser(currUser))
+      } catch (err) {
+        dispatch(setUser({
+          username: '',
+          students: []
+        }))
+      }
+    } else {
+      dispatch(setUser({}))
+    }
+  }, [dispatch, token])
 
   return (
     <div className="App">
