@@ -18,7 +18,6 @@ const Categories = () => {
         <option value="soundsContinuous">Clapping and Stomping (continuous)</option>
         <option value="soundsOnce">Clapping and Stomping (once)</option>
         <option value="animals">Animals</option>
-        <option value="vehicles">Vehicles</option>
       </select>
     </div>
   );
