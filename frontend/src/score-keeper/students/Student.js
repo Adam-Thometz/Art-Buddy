@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { addPoint, removePoint } from "../../../actions";
+import { addPoint, removePoint } from "../../actions";
 
 import './Student.css';
 

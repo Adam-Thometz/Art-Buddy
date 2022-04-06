@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { addStudent } from "../../../actions";
+import { addStudent } from "../../actions";
 
 const NewStudentForm = () => {
   const dispatch = useDispatch();
