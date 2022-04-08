@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
@@ -8,10 +9,11 @@ import LoggedIn from "./LoggedIn";
 import LoggedOut from "./LoggedOut";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const user = useSelector(state => state.userInfo.user);
   return (
     <div className="Navbar">
-      <h1 className="Navbar-header">Art Buddy!</h1>
+      <h1 className="Navbar-header" onClick={() => navigate('/')}>Art Buddy!</h1>
       {user.username ? <LoggedIn /> : <LoggedOut />}
     </div>
   );
