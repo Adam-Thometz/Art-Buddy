@@ -50,17 +50,17 @@ const soundInfo = {
     dog: {
       image: images.dog,
       sound: samples.dogSample,
-      alt: 'bark'
+      alt: 'dog'
     },
     cat: {
       image: images.cat,
       sound: samples.catSample,
-      alt: 'meow'
+      alt: 'cat'
     },
     bird: {
       image: images.bird,
       sound: samples.birdSample,
-      alt: 'tweet'
+      alt: 'bird'
     },
     stop: {
       image: images.stop,

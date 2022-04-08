@@ -1,59 +1,23 @@
 import * as Tone from 'tone';
 import { sounds } from './soundImageImports';
 
-const clappingSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.clappingContinuous
-  }
-}).toDestination()
+const newSample = (sound) => {
+  return new Tone.Sampler({
+    urls: {
+      A1: sound
+    }
+  }).toDestination()
+}
 
-const stompingSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.stompingContinuous
-  }
-}).toDestination()
-
-const yeahLongSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.yeahContinuous
-  }
-}).toDestination()
-
-const clapSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.clappingOnce
-  }
-}).toDestination()
-
-const stompSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.stompingOnce
-  }
-}).toDestination()
-
-const yeahShortSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.yeahOnce
-  }
-}).toDestination()
-
-const dogSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.bark
-  }
-}).toDestination()
-
-const catSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.meow
-  }
-}).toDestination()
-
-const birdSample = new Tone.Sampler({
-  urls: {
-    A1: sounds.tweet
-  }
-}).toDestination()
+const clappingSample = newSample(sounds.clappingContinuous)
+const stompingSample = newSample(sounds.stompingContinuous)
+const yeahLongSample = newSample(sounds.yeahContinuous)
+const clapSample = newSample(sounds.clappingOnce)
+const stompSample = newSample(sounds.stompingOnce)
+const yeahShortSample = newSample(sounds.yeahOnce)
+const dogSample = newSample(sounds.bark)
+const catSample = newSample(sounds.meow)
+const birdSample = newSample(sounds.tweet)
 
 export {
   clappingSample,
