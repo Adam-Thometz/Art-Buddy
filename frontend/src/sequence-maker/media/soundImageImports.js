@@ -32,27 +32,25 @@ import cat from './images/animals/cat.jpeg';
 import dog from './images/animals/dog.jpeg';
 import bird from './images/animals/bird.jpeg';
 
-const media = {
-  sounds: {
-    clappingContinuous,
-    clappingOnce,
-    stompingContinuous,
-    stompingOnce,
-    yeahContinuous,
-    yeahOnce,
-    bark,
-    meow,
-    tweet
-  },
-  images: {
-    stop,
-    clapping,
-    stomping,
-    yeah,
-    cat,
-    dog,
-    bird
-  }
-};
+const sounds = {
+  clappingContinuous,
+  clappingOnce,
+  stompingContinuous,
+  stompingOnce,
+  yeahContinuous,
+  yeahOnce,
+  bark,
+  meow,
+  tweet
+}
+const images = {
+  stop,
+  clapping,
+  stomping,
+  yeah,
+  cat,
+  dog,
+  bird
+}
 
-export default media;
+export { sounds, images };

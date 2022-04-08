@@ -1,22 +1,21 @@
-import media from './soundImageImports';
-
-const { sounds, images } = media;
+import { images } from './soundImageImports';
+import * as samples from './sampler';
 
 const soundInfo = {
   bodySoundsContinuous: {
     clapping: {
       image: images.clapping,
-      sound: sounds.clappingContinuous,
+      sound: samples.clappingSample,
       alt: 'clapping'
     },
     stomping: {
       image: images.stomping,
-      sound: sounds.stompingContinuous,
+      sound: samples.stompingSample,
       alt: 'stomping'
     },
     yeah: {
       image: images.yeah,
-      sound: sounds.yeahContinuous,
+      sound: samples.yeahLongSample,
       alt: 'say yeah'
     },
     stop: {
@@ -28,17 +27,17 @@ const soundInfo = {
   bodySoundsOnce: {
     clap: {
       image: images.clapping,
-      sound: sounds.clappingOnce,
+      sound: samples.clapSample,
       alt: 'clap'
     },
     stomp: {
       image: images.stomping,
-      sound: sounds.stompingOnce,
+      sound: samples.stompSample,
       alt: 'stomp'
     },
     yeah: {
       image: images.yeah,
-      sound: sounds.yeahOnce,
+      sound: samples.yeahShortSample,
       alt: 'say yeah'
     },
     stop: {
@@ -50,17 +49,17 @@ const soundInfo = {
   animals: {
     dog: {
       image: images.dog,
-      sound: sounds.bark,
+      sound: samples.dogSample,
       alt: 'bark'
     },
     cat: {
       image: images.cat,
-      sound: sounds.meow,
+      sound: samples.catSample,
       alt: 'meow'
     },
     bird: {
       image: images.bird,
-      sound: sounds.tweet,
+      sound: samples.birdSample,
       alt: 'tweet'
     },
     stop: {

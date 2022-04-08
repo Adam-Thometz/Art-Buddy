@@ -15,7 +15,7 @@ const SequenceBlock = ({block}) => {
     <div className="SequenceBlock">
       {block !== null ? (
         <div>
-          <img className="SequenceBlock-img" src={block.image} alt={block.alt} />
+          <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={() => block.sound.triggerAttackRelease('C2', 2)} />
           <button className="SequenceBlock-delete" onClick={remove}>X</button>
         </div>
       ) : null}
