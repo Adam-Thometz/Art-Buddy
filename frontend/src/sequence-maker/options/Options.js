@@ -5,7 +5,7 @@ import { addToSequence } from "../../actions";
 
 import './Options.css';
 
-import soundInfo from "../soundInfo";
+import soundInfo from "../media/soundInfo";
 
 const Options = () => {
   const dispatch = useDispatch()

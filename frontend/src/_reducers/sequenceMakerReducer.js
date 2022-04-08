@@ -1,6 +1,6 @@
 import { ADD_TO_SEQUENCE, CHANGE_CATEGORY, REMOVE_FROM_SEQUENCE } from "../actionTypes";
 
-import soundInfo from "../sequence-maker/soundInfo";
+import soundInfo from "../sequence-maker/media/soundInfo";
 
 const INITIAL_STATE = {
   category: '',
