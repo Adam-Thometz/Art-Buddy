@@ -6,7 +6,7 @@ import WordToMusic from '../music-decoder/WordToMusic';
 import SequenceMaker from '../sequence-maker/SequenceMaker';
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 
-import { urls } from "./routeUrls";
+import urls from "./routeUrls";
 
 const AppRoutes = () => {
   return (

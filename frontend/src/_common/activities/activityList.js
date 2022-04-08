@@ -1,4 +1,4 @@
-import { urls } from "../routeUrls";
+import urls from "../routeUrls";
 
 const types = ['Music', 'Art', 'Misc'];
 
