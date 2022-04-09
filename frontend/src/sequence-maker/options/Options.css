@@ -5,6 +5,10 @@
   padding: 20px;
 }
 
+.Options-option {
+  margin: 10px;
+}
+
 .Options-img {
   height: 200px;
   width: 200px;

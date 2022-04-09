@@ -10,14 +10,17 @@ const SequenceBlock = ({block}) => {
   const remove = () => {
     dispatch(removeFromSequence(block.id));
   }
+  const play = () => {
+    if (block.alt !== 'stop') block.sound.triggerAttackRelease('C2', 2);
+  }
 
   return (
     <div className="SequenceBlock">
       {block !== null ? (
-        <div>
-          <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={() => block.sound.triggerAttackRelease('C2', 2)} />
+        <>
+          <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <button className="SequenceBlock-delete" onClick={remove}>X</button>
-        </div>
+        </>
       ) : null}
     </div>
   );
