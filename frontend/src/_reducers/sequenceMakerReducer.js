@@ -26,7 +26,6 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const newSequenceWithAdd = [...state.sequence];
       const block = { ...soundInfo[state.category][action.sound] };
       block.id = currIdx;
-      console.log(block.id);
       newSequenceWithAdd[currIdx] = block;
       return { ...state, sequence: newSequenceWithAdd  };
 
