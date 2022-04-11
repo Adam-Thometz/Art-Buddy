@@ -1,0 +1,11 @@
+.LandingPage {
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.LandingPage-description {
+  width: 90%;
+  margin: 0 auto;
+}

@@ -13,7 +13,7 @@ const Navbar = () => {
   const user = useSelector(state => state.userInfo.user);
   return (
     <div className="Navbar">
-      <h1 className="Navbar-header" onClick={() => navigate('/')}>Art Buddy!</h1>
+      <h1 className="Navbar-header" onClick={() => navigate('/')}>ARTBUDDY</h1>
       {user.username ? <LoggedIn /> : <LoggedOut />}
     </div>
   );
