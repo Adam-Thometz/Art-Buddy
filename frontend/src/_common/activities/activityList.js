@@ -8,14 +8,14 @@ const activities = {
     img: '',
     url: urls.wordToMusicUrl,
     activityType: types[0],
-    description: 'Learn about melodies by turning words into music!'
+    description: 'Turn words into music!'
   },
   sequecnceMaker: {
     name: 'Sequence Maker',
     img: '',
     url: urls.sequencerUrl,
     activityType: types[0],
-    description: 'Sequence different sounds together and see what you get!'
+    description: 'Put different sounds together and see what you get!'
   },
   scoreKeeper: {
     name: 'Score Keeper',

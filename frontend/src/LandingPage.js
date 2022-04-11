@@ -2,7 +2,7 @@ import React from "react";
 
 import './LandingPage.css';
 
-import Activity from "./_common/activities/Activity";
+import ActivityCard from "./_common/activities/ActivityCard";
 
 import activities from "./_common/activities/activityList";
 
@@ -16,7 +16,7 @@ const LandingPage = () => {
       </div>
       <div className="LandingPage-activities">
         {Object.keys(activities).map(a => (
-          <Activity
+          <ActivityCard
             name={activities[a].name}
             img={activities[a].img}
             url={activities[a].url}
