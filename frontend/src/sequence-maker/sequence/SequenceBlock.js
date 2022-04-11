@@ -11,7 +11,7 @@ const SequenceBlock = ({block}) => {
     dispatch(removeFromSequence(block.id));
   }
   const play = () => {
-    if (block.alt !== 'stop') block.sound.triggerAttackRelease('C2', 2);
+    if (block.alt !== 'stop') block.sound.triggerAttackRelease('C2', 4);
   }
 
   return (

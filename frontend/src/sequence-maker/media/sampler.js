@@ -4,20 +4,20 @@ import { sounds } from './soundImageImports';
 const newSample = (sound) => {
   return new Tone.Sampler({
     urls: {
-      A1: sound
+      C2: sound
     }
-  }).toDestination()
+  }).toDestination();
 }
 
-const clappingSample = newSample(sounds.clappingContinuous)
-const stompingSample = newSample(sounds.stompingContinuous)
-const yeahLongSample = newSample(sounds.yeahContinuous)
-const clapSample = newSample(sounds.clappingOnce)
-const stompSample = newSample(sounds.stompingOnce)
-const yeahShortSample = newSample(sounds.yeahOnce)
-const dogSample = newSample(sounds.bark)
-const catSample = newSample(sounds.meow)
-const birdSample = newSample(sounds.tweet)
+const clappingSample = newSample(sounds.clappingContinuous);
+const stompingSample = newSample(sounds.stompingContinuous);
+const yeahLongSample = newSample(sounds.yeahContinuous);
+const clapSample = newSample(sounds.clappingOnce);
+const stompSample = newSample(sounds.stompingOnce);
+const yeahShortSample = newSample(sounds.yeahOnce);
+const dogSample = newSample(sounds.bark);
+const catSample = newSample(sounds.meow);
+const birdSample = newSample(sounds.tweet);
 
 export {
   clappingSample,
@@ -29,4 +29,4 @@ export {
   dogSample,
   catSample,
   birdSample
-}
+};
