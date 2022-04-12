@@ -1,4 +1,4 @@
-import { ERROR, SET_TOKEN, SET_USER } from "../actionTypes";
+import { ERROR, SET_TOKEN, SET_USER } from "../_actions/actionTypes";
 import ArtBuddyApi from "../api";
 
 const INITIAL_STATE = {

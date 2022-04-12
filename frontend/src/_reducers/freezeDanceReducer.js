@@ -1,4 +1,4 @@
-import { ADD_POINT, ADD_STUDENT, REMOVE_POINT, REMOVE_STUDENT, SET_MUSIC } from "../actionTypes";
+import { ADD_POINT, ADD_STUDENT, REMOVE_POINT, REMOVE_STUDENT, SET_MUSIC } from "../_actions/actionTypes";
 
 const INITIAL_STATE = {
   students: [],

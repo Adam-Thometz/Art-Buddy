@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { addStudent } from "../../actions";
+import { addStudent } from "../../_actions/actions";
 
 const NewStudentForm = () => {
   const dispatch = useDispatch();
@@ -18,15 +18,16 @@ const NewStudentForm = () => {
 
   return (
     <div className="NewStudentForm">
-      <label htmlFor="newStudent">Add a student: </label>
+      <label className="NewStudentForm-label" htmlFor="newStudent">Add a student: </label>
       <input
+      className="NewStudentForm-input"
         type="text"
         id="newStudent"
         name="newStudent"
         value={studentName}
         onChange={handleChange}
       />
-      <button onClick={handleSubmit}>Add</button>
+      <button className="NewStudentForm-add-btn" onClick={handleSubmit}>Add</button>
     </div>
   );
 };

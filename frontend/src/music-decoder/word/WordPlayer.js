@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { playMelody } from "../../actions";
+import { playMelody } from "../../_actions/actions";
 
 import './WordPlayer.css';
 

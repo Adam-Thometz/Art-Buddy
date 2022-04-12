@@ -1,4 +1,4 @@
-import { wordToMusicActions } from "../actionTypes";
+import { wordToMusicActions } from "../_actions/actionTypes";
 
 import synth from "../music-decoder/utils/synth";
 import { now } from 'tone';

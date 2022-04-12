@@ -2,9 +2,9 @@ import React from "react";
 
 import './LandingPage.css';
 
-import ActivityCard from "../_common/activities/ActivityCard";
+import ActivityCard from "./activities/ActivityCard";
 
-import activities from "../_common/activities/activityList";
+import activities from "./activities/activityList";
 
 const LandingPage = () => {
   return (

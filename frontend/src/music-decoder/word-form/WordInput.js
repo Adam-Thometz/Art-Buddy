@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { createWord } from "../../actions";
+import { createWord } from "../../_actions/actions";
 
 import './WordInput.css';
 

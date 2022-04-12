@@ -14,7 +14,7 @@ import {
   ADD_POINT,
   REMOVE_POINT,
 } from "./actionTypes";
-import ArtBuddyApi from "./api";
+import ArtBuddyApi from "../api";
 
 // Actions for authentication
 export const signup = (user) => {

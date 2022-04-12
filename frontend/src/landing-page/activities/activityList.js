@@ -1,4 +1,4 @@
-import urls from "../routeUrls";
+import urls from "../../_nav-routes/routeUrls";
 
 const types = ['Music', 'Art', 'Misc'];
 
