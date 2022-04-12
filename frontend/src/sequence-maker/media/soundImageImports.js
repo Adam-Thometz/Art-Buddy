@@ -28,7 +28,7 @@ import stomping from './images/body-sounds/stomping.jpeg';
 import yeah from './images/body-sounds/yeah.png';
 
 // Animals
-import cat from './images/animals/cat.jpeg';
+import cat from './images/animals/cat.png';
 import dog from './images/animals/dog.jpeg';
 import bird from './images/animals/bird.jpeg';
 

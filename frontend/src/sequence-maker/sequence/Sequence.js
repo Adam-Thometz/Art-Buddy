@@ -10,9 +10,12 @@ const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence)
   return (
     <div className="Sequence">
-      {sequence.map(block => (
-        <SequenceBlock block={block} />
-      ))}
+      <div className="Sequence-display">
+        {sequence.map(block => (
+          <SequenceBlock block={block} />
+        ))}
+      </div>
+      {sequence.some(block => block !== null) ? "Click on a picture to hear the sound!" : null}
     </div>
   );
 };

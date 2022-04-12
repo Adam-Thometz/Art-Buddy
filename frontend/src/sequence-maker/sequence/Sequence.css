@@ -1,4 +1,9 @@
 .Sequence {
   display: flex;
+  flex-direction: column;
+}
+
+.Sequence-display {
+  display: flex;
   justify-content: center;
 }
