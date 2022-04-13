@@ -11,7 +11,7 @@ const LandingPage = () => {
     <div className="LandingPage">
       <h1>Welcome to Art Buddy!</h1>
       <div className="LandingPage-description">
-        <p>Art Buddy is a collection of tools that you can use in your special education classroom to incorporate the arts while focusing on your student's goals.</p>
+        <p>Art Buddy is a collection of fun and interactive fine arts games designed specifically with special education goals in mind</p>
         <p>Pick an activity to begin.</p>
       </div>
       <div className="LandingPage-activities">
