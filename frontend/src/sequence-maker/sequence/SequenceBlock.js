@@ -5,7 +5,7 @@ import { removeFromSequence, setPitch } from "../../_actions/actions";
 
 import './SequenceBlock.css';
 
-import { pitches } from "../_utils/pitchMap";
+import pitches from "../_utils/pitchMap";
 
 const SequenceBlock = ({block}) => {
   const dispatch = useDispatch();
@@ -13,10 +13,11 @@ const SequenceBlock = ({block}) => {
     dispatch(removeFromSequence(block.id));
   }
   const changePitch = pitch => {
-    dispatch(setPitch(block.id, pitch))
+    dispatch(setPitch(block.id, pitch));
   }
   const play = () => {
-    if (block.alt !== 'stop') block.sound.triggerAttackRelease(`C${pitches[block.pitch]}`, 4);
+    const pitch = pitches[block.pitch];
+    if (block.alt !== 'stop') block.sound.triggerAttackRelease(`C${pitch}`, 4);
   }
 
   return (
