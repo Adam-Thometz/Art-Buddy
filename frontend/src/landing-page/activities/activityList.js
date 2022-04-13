@@ -15,7 +15,7 @@ const activities = [
     img: '',
     url: urls.sequencerUrl,
     activityType: types[0],
-    description: 'Put different sounds together and see what you get!'
+    description: 'Put sounds together and hear what you get!'
   },
   {
     name: 'Score Keeper',
