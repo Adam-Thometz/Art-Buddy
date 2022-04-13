@@ -15,13 +15,13 @@ const LandingPage = () => {
         <p>Pick an activity to begin.</p>
       </div>
       <div className="LandingPage-activities">
-        {Object.keys(activities).map(a => (
+        {activities.map(a => (
           <ActivityCard
-            name={activities[a].name}
-            img={activities[a].img}
-            url={activities[a].url}
-            activityType={activities[a].activityType}
-            description={activities[a].description}
+            name={a.name}
+            img={a.img}
+            url={a.url}
+            activityType={a.activityType}
+            description={a.description}
           />
         ))}
       </div>
