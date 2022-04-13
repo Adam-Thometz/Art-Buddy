@@ -7,7 +7,7 @@ import './AlphabetTable.css';
 
 import AlphabetCell from "./AlphabetCell";
 
-import { rows, notes } from '../utils/musicAlphabetData';
+import { rows, notes } from '../_utils/musicAlphabetData';
 
 const AlphabetTable = () => {
   const dispatch = useDispatch();

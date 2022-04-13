@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // import { useSelector } from "react-redux";
 
@@ -6,7 +6,7 @@ import './Word.css';
 
 import WordPlayer from "./WordPlayer";
 
-import synth from "../utils/synth";
+import synth from "../_utils/synth";
 
 const Word = ({ word, id }) => {
   const playNote = e => {
