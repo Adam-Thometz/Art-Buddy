@@ -1,17 +1,22 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { removeFromSequence } from "../../_actions/actions";
+import { removeFromSequence, setPitch } from "../../_actions/actions";
 
 import './SequenceBlock.css';
+
+import { pitches } from "../_utils/pitchMap";
 
 const SequenceBlock = ({block}) => {
   const dispatch = useDispatch();
   const remove = () => {
     dispatch(removeFromSequence(block.id));
   }
+  const changePitch = pitch => {
+    dispatch(setPitch(block.id, pitch))
+  }
   const play = () => {
-    if (block.alt !== 'stop') block.sound.triggerAttackRelease('C2', 4);
+    if (block.alt !== 'stop') block.sound.triggerAttackRelease(`C${pitches[block.pitch]}`, 4);
   }
 
   return (
@@ -19,7 +24,17 @@ const SequenceBlock = ({block}) => {
       {block !== null ? (
         <>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
-          <button className="SequenceBlock-delete" onClick={remove}>X</button>
+          <div className="SequenceBlock-controls">
+            {block.alt !== 'stop' ?
+              <div className="SequenceBlock-set-pitch">
+                <p>Current pitch: {block.pitch}</p>
+                <button onClick={() => changePitch('low')}>Low</button>
+                <button onClick={() => changePitch('medium')}>Medium</button>
+                <button onClick={() => changePitch('high')}>High</button>
+              </div>
+            : null}
+            <button className="SequenceBlock-delete" onClick={remove}>X</button>
+          </div>
         </>
       ) : null}
     </div>
