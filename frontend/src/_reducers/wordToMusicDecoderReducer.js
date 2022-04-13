@@ -1,6 +1,6 @@
 import { wordToMusicActions } from "../_actions/actionTypes";
 
-import synth from "../music-decoder/utils/synth";
+import synth from "../music-decoder/_utils/synth";
 import { now } from 'tone';
 
 const INITIAL_STATE = {

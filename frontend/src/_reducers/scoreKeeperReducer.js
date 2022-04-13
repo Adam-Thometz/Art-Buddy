@@ -1,4 +1,4 @@
-import { ADD_POINT, ADD_STUDENT, REMOVE_POINT, REMOVE_STUDENT, SET_MUSIC } from "../_actions/actionTypes";
+import { ADD_POINT, ADD_STUDENT, REMOVE_POINT, REMOVE_STUDENT } from "../_actions/actionTypes";
 
 const INITIAL_STATE = {
   students: [],
@@ -7,8 +7,6 @@ const INITIAL_STATE = {
 
 export default function freezeDanceReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case SET_MUSIC:
-      return { ...state, isPlaying: action.isPlaying }
     case ADD_STUDENT:
       const studentsWithNewStudent = [ ...state.students ];
       const newStudent = {

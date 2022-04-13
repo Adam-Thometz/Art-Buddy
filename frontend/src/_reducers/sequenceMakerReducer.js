@@ -1,4 +1,4 @@
-import { ADD_TO_SEQUENCE, CHANGE_CATEGORY, REMOVE_FROM_SEQUENCE } from "../_actions/actionTypes";
+import { ADD_TO_SEQUENCE, CHANGE_CATEGORY, REMOVE_FROM_SEQUENCE, SET_PITCH } from "../_actions/actionTypes";
 
 import soundInfo from "../sequence-maker/media/soundInfo";
 
@@ -26,6 +26,7 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const newSequenceWithAdd = [...state.sequence];
       const block = { ...soundInfo[state.category][action.sound] };
       block.id = currIdx;
+      block.pitch = 'medium';
       newSequenceWithAdd[currIdx] = block;
       return { ...state, sequence: newSequenceWithAdd  };
 
@@ -34,6 +35,10 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       newSequenceWithRemove[action.id] = null;
       return { ...state, sequence: newSequenceWithRemove };
 
+    case SET_PITCH:
+      const newSequenceDifferentPitch = [...state.sequence];
+      newSequenceDifferentPitch[action.id].pitch = action.pitch;
+      return { ...state, sequence: newSequenceDifferentPitch };
     default:
       return state;
   };

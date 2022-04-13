@@ -3,7 +3,7 @@ export const SET_TOKEN = 'SET_TOKEN';
 export const SET_USER = 'SET_USER';
 export const ERROR = 'ERROR';
 
-// Action types for Word to Music
+// Action types for Word to Music Decoder
 export const wordToMusicActions = {
   CREATE_WORD: 'CREATE_WORD',
   ADD_WORD: 'ADD_WORD',
@@ -16,9 +16,9 @@ export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
 export const ADD_TO_SEQUENCE = 'ADD_TO_SEQUENCE';
 export const REMOVE_FROM_SEQUENCE = 'REMOVE_FROM_SEQUENCE';
 export const RESET_SEQUENCE = 'RESET_SEQUENCE';
+export const SET_PITCH = 'SET_PITCH'
 
-// Action types for Freeze Dance
-export const SET_MUSIC = 'SET_MUSIC';
+// Action types for Score Keeper
 export const ADD_STUDENT = 'ADD_STUDENT';
 export const REMOVE_STUDENT = 'REMOVE_STUDENT';
 export const ADD_POINT = 'ADD_POINT';

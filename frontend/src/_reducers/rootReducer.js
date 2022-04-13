@@ -2,14 +2,14 @@ import { combineReducers } from 'redux';
 
 import wordToMusicDecoderReducer from './wordToMusicDecoderReducer';
 import sequenceMakerReducer from './sequenceMakerReducer';
-import freezeDanceReducer from './freezeDanceReducer';
+import scoreKeeperReducer from './scoreKeeperReducer';
 import userInfoReducer from './userReducer';
 
 const rootReducer = combineReducers({
   userInfo: userInfoReducer,
   wordToMusic: wordToMusicDecoderReducer,
   sequenceMaker: sequenceMakerReducer,
-  freezeDance: freezeDanceReducer
+  scoreKeeper: scoreKeeperReducer
 });
 
 export default rootReducer;

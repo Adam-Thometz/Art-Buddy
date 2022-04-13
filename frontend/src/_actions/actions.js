@@ -13,6 +13,7 @@ import {
   REMOVE_STUDENT,
   ADD_POINT,
   REMOVE_POINT,
+  SET_PITCH,
 } from "./actionTypes";
 import ArtBuddyApi from "../api";
 
@@ -57,7 +58,7 @@ export const gotError = () => ({
   type: ERROR
 })
 
-// Actions for Music Colors
+// Actions for Word to Music Decoder
 export const createWord = (wordInput, wordId) => ({
   type: wordToMusicActions.CREATE_WORD,
   wordInput,
@@ -95,7 +96,13 @@ export const removeFromSequence = (id) => ({
   id
 });
 
-// Actions for Freeze Dance
+export const setPitch = (id, pitch) => ({
+  type: SET_PITCH,
+  id,
+  pitch
+})
+
+// Actions for Score Keeper
 export const addStudent = (name) => ({
   type: ADD_STUDENT,
   name
