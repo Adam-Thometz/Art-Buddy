@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { setUser } from './_actions/actions';
+import { setUser } from './_redux/actions/actions';
 
 import './App.css';
 
-import Navbar from './_nav-routes/Navbar';
-import AppRoutes from './_nav-routes/AppRoutes';
+import Navbar from './_navbar/Navbar';
+import AppRoutes from './_routes/AppRoutes';
 
 import jwtDecode from "jwt-decode";
 import ArtBuddyApi from './api';

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // Redux imports
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import rootReducer from './_reducers/rootReducer';
+import rootReducer from './_redux/reducers/rootReducer';
 import thunk from 'redux-thunk'
 // CSS imports
 import './index.css';

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { removeFromSequence, setPitch } from "../../_actions/actions";
+import { removeFromSequence, setPitch } from "../../_redux/actions/actions";
 
 import './SequenceBlock.css';
 

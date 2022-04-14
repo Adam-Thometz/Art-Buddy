@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { changeCategory } from "../../_actions/actions";
+import { changeCategory } from "../../_redux/actions/actions";
 
 const Categories = () => {
   const dispatch = useDispatch();
