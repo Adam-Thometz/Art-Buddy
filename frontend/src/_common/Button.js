@@ -2,13 +2,13 @@ import React from "react";
 
 import './Button.css'
 
-const Button = ({ text, outlineColor, onClick }) => {
+const Button = ({ children, outlineColor, onClick }) => {
   const buttonStyle = { borderColor: outlineColor }
   return <button
     className="Button"
     onClick={onClick}
     style={buttonStyle}>
-      {text}
+      {children}
     </button>
 }
 
