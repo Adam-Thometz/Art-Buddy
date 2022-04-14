@@ -12,7 +12,7 @@ import urls from "./routeUrls";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route index element={<Window><LandingPage /></Window>} />
+      <Route index element={<Window customStyles={{width: '70%'}}><LandingPage /></Window>} />
       <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
       <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
       <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />

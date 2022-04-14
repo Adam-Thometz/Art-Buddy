@@ -2,9 +2,9 @@ import React from "react";
 
 import './Window.css';
 
-const Window = ({ children }) => {
+const Window = ({ children, customStyles = {} }) => {
   return (
-    <div className="Window">
+    <div className="Window" style={customStyles}>
       {children}
     </div>
   );
