@@ -11,7 +11,7 @@ const Activities = () => {
   return (
     <div className="Activities">
       <ActivitiesNavbar setCategory={setCategory} />
-      <div className="LandingPage-activities">
+      <div className="Activities-list">
         {filteredActivities.map(a => (
           <ActivityCard
             name={a.name}
