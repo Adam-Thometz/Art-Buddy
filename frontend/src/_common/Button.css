@@ -1,0 +1,11 @@
+.Button {
+  background-color: #ffffff00;
+  padding: 3% 5%;
+  margin: 5%;
+  border: 15px solid;
+  box-shadow: 2 6 11 0;
+  border-radius: 25px;
+  font-size: 2rem;
+  font-family: 'Chelsea Market', 'Nunito', sans-serif;
+  cursor: pointer;
+}
