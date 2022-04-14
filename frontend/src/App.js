@@ -30,7 +30,10 @@ const App = () => {
         }))
       }
     } else {
-      dispatch(setUser({}))
+      dispatch(setUser({
+        username: '',
+        students: []
+      }))
     }
   }, [dispatch, token])
 
