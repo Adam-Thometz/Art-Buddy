@@ -1,11 +1,3 @@
-.Welcome {
-  width: 85%;
-  margin: 50px auto;
-  border-radius: 50px;
-  border: 1px solid black;
-  background-color: white;
-}
-
 .Welcome-description {
   text-align: left;
   width: 90%;

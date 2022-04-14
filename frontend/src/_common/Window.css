@@ -1,7 +1,8 @@
-.LandingPage {
+.Window {
   width: 85%;
   margin: 50px auto;
+  padding: 50px;
   border-radius: 50px;
-  border: 1px solid black;
+  border: none;
   background-color: white;
 }

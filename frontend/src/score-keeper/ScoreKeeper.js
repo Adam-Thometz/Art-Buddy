@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './ScoreKeeper.css';
-
 import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';
 
