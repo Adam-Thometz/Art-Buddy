@@ -1,6 +1,6 @@
 import urls from "../../_routes/routeUrls";
 
-const types = ['Music', 'Art', 'Misc'];
+const types = ['games', 'tools'];
 
 const activities = [
   {
@@ -21,7 +21,7 @@ const activities = [
     name: 'Score Keeper',
     img: '',
     url: urls.scoreKeeperUrl,
-    activityType: types[2],
+    activityType: types[1],
     description: 'An all-purpose score keeper!'
   }
 ]

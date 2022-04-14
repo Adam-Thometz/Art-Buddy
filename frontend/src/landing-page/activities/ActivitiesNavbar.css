@@ -1,0 +1,9 @@
+.ActivitiesNavbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ActivitiesNavbar-label {
+  font-size: 3rem;
+  cursor: pointer;
+}
