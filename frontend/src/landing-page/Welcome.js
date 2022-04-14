@@ -2,7 +2,7 @@ import React from "react";
 
 import './Welcome.css';
 
-import Button from "../_common/button/Button";
+import Button from "../_components/button/Button";
 
 const Welcome = ({ setHasVisited }) => {
   const handleVisited = () => {
