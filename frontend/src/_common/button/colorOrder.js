@@ -1,4 +1,4 @@
-
+// Used to loop through colors for the button component
 
 const colors = [
   '#89EB0A', // Lizard Green

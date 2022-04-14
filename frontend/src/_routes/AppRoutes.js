@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Window from "../_common/Window";
+import Window from "../_common/window/Window";
 import LandingPage from "../landing-page/LandingPage";
 import WordToMusic from '../music-decoder/WordToMusic';
 import SequenceMaker from '../sequence-maker/SequenceMaker';
