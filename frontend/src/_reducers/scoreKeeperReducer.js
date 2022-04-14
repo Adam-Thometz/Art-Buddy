@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   isPlaying: false
 }
 
-export default function freezeDanceReducer(state = INITIAL_STATE, action) {
+export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_STUDENT:
       const studentsWithNewStudent = [ ...state.students ];
