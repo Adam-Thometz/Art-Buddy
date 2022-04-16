@@ -3,9 +3,11 @@
   justify-content: space-between;
   padding: 0 2%;
   background-color: white;
+  height: 90px;
 }
 
 .Navbar-header {
   display: inline-block;
   cursor: pointer;
+  font-size: 2rem;
 }
