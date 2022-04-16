@@ -3,8 +3,7 @@ import React from "react";
 import './Button.css'
 
 const Button = ({ children, outlineColor, onClick }) => {
-  const buttonStyle = { borderColor: outlineColor }
-  return <button className="Button" onClick={onClick} style={buttonStyle}>
+  return <button className="Button" onClick={onClick} style={{ borderColor: outlineColor }}>
     {children}
   </button>
 }
