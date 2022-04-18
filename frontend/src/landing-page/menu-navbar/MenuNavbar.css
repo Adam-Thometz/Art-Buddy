@@ -1,11 +1,15 @@
-.ActivitiesNavbar {
+.MenuNavbar {
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin: 0 auto;
 }
 
-.ActivitiesNavbar-label {
+.MenuNavbar-button {
   font-size: 3rem;
   cursor: pointer;
+}
+
+.MenuNavbar-lebel {
+  font-size: 3rem;
 }

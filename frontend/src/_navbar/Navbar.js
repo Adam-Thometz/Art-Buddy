@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <h1 className="Navbar-header" onClick={() => navigate('/')}>ARTBUDDY</h1>
-      {user.username ? <LoggedIn /> : <LoggedOut />}
+      {/* {user.username ? <LoggedIn /> : <LoggedOut />} */}
     </div>
   );
 };

@@ -1,0 +1,5 @@
+.Activities-list {
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 2;
+}

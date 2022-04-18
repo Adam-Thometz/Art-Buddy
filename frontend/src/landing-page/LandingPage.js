@@ -1,15 +1,15 @@
 import React from "react";
-
 import useLocalStorage from "../_hooks/useLocalStorage";
-import Welcome from "./Welcome";
-import Activities from "./activities/Activities";
+
+import Welcome from "./welcome/Welcome";
+import Menu from "./menu/Menu";
 
 const LandingPage = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited')
 
   return (
     <div>
-      {!hasVisited ? <Welcome setHasVisited={setHasVisited} /> : <Activities />}
+      {!hasVisited ? <Welcome setHasVisited={setHasVisited} /> : <Menu />}
     </div>
   )
 };
