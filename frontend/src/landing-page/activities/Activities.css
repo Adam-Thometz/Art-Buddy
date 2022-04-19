@@ -1,5 +1,5 @@
 .Activities-list {
+  margin: 0 auto;
   display: grid;
-  grid-template-rows: 2;
-  grid-template-columns: 2;
+  grid-template-columns: repeat(2, 50%);
 }

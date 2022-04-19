@@ -11,9 +11,9 @@ import colors from "../../_components/button/colorOrder";
 
 const Activities = ({ category }) => {
   const navigate = useNavigate();
-  const filteredActivities = category !== 'all' ?
-    activities.filter(a => a.genre === category) :
-    activities.filter(a => a.activityType === 'games');
+  const filteredActivities = category === 'all' ?
+    activities.filter(a => a.activityType === 'games') :
+    activities.filter(a => a.genre === category);
   return (
     <div className="Activities">
       <MenuNavbar page={category} />

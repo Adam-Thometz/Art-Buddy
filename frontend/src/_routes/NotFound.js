@@ -8,7 +8,7 @@ import colors from "../_components/button/colorOrder";
 const NotFound = () => {
   const navigate = useNavigate();
   const goHome = () => {
-    navigate('/')
+    navigate('/');
   }
   return (
     <div className="NotFound">
