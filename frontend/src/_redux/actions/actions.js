@@ -14,6 +14,7 @@ import {
   ADD_POINT,
   REMOVE_POINT,
   SET_PITCH,
+  RESET_SEQUENCE,
 } from "./actionTypes";
 import ArtBuddyApi from "../../api";
 
@@ -95,6 +96,10 @@ export const removeFromSequence = (id) => ({
   type: REMOVE_FROM_SEQUENCE,
   id
 });
+
+export const resetSequence = () => ({
+  type: RESET_SEQUENCE
+})
 
 export const setPitch = (id, pitch) => ({
   type: SET_PITCH,

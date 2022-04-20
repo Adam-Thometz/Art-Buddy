@@ -5,7 +5,7 @@ import { addToSequence } from "../../_redux/actions/actions";
 
 import './Options.css';
 
-import soundInfo from "../media/soundInfo";
+import soundInfo from "../_media/soundInfo";
 
 const Options = () => {
   const dispatch = useDispatch()

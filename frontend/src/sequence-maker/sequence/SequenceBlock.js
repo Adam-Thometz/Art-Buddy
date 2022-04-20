@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import { useDispatch } from "react-redux";
 import { removeFromSequence, setPitch } from "../../_redux/actions/actions";
@@ -23,7 +23,7 @@ const SequenceBlock = ({block}) => {
   return (
     <div className="SequenceBlock">
       {block !== null ? (
-        <>
+        <Fragment>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <div className="SequenceBlock-controls">
             {block.alt !== 'stop' ?
@@ -36,7 +36,7 @@ const SequenceBlock = ({block}) => {
             : null}
             <button className="SequenceBlock-delete" onClick={remove}>X</button>
           </div>
-        </>
+        </Fragment>
       ) : null}
     </div>
   );
