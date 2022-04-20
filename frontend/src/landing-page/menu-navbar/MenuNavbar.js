@@ -17,7 +17,7 @@ const MenuNavbar = ({ page = null, setCategory }) => {
   const subPage = () => (
     <div className="MenuNavbar">
       {/* <img src={ Back button image goes here! }/> */}
-      <span className="MenuNavbar-lebel">{page.toUpperCase()} GAMES</span>
+      <span className="MenuNavbar-label">{page.toUpperCase()} GAMES</span>
     </div>
   )
   return page ? subPage() : mainPage();
