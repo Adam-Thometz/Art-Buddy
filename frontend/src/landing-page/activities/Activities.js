@@ -20,7 +20,7 @@ const Activities = ({ category }) => {
       <div className="Activities-list">
         {filteredActivities.map((a, i) => (
           <Button 
-            outlineColor={colors[i%4]}
+            borderColor={colors[i%4]}
             onClick={() => navigate(a.url)}
           >
             {a.name}

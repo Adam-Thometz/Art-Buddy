@@ -16,7 +16,7 @@ const Menu = () => {
     <div className="Menu">
       <MenuNavbar setCategory={setCategory} />
       {options.map((option, i) => (
-        <Button outlineColor={colors[i%4]} onClick={() => navigate(option.url)}>{option.name}</Button>
+        <Button borderColor={colors[i%4]} onClick={() => navigate(option.url)}>{option.name}</Button>
       ))}
     </div>
   );

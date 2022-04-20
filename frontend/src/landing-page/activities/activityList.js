@@ -15,7 +15,7 @@ const activities = [
   {
     name: 'INSTRUMENT IDENTIFICATION',
     img: '',
-    url: null,
+    url: urls.instrumentIdUrl,
     activityType: types[0],
     genre: genres[0],
     description: 'Learn about instruments while practicing listening skills!'
