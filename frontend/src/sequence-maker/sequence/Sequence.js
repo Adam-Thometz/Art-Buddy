@@ -8,11 +8,15 @@ import SequenceBlock from "./SequenceBlock";
 import Button from "../../_components/button/Button";
 
 import colors from "../../_components/button/colorOrder";
-import { resetSequence } from "../../_redux/actions/actions";
+import { playSequence, resetSequence } from "../../_redux/actions/actions";
 
 const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence);
   const dispatch = useDispatch()
+
+  const handlePlay = () => {
+    dispatch(playSequence())
+  }
 
   const handleReset = () => {
     dispatch(resetSequence());
@@ -26,7 +30,10 @@ const Sequence = () => {
           <SequenceBlock block={block} />
         ))}
       </div>
-      <Button outlineColor={colors[3]} onClick={handleReset}>RESET</Button>
+      <div className="Sequence-options">
+        <Button outlineColor={colors[0]} onClick={handlePlay}>PLAY</Button>
+        <Button outlineColor={colors[3]} onClick={handleReset}>RESET</Button>
+      </div>
     </div>
   );
 };

@@ -1,13 +1,22 @@
-import { ADD_TO_SEQUENCE, CHANGE_CATEGORY, REMOVE_FROM_SEQUENCE, RESET_SEQUENCE, SET_PITCH } from "../actions/actionTypes";
+import { sequenceMakerActions } from "../actions/actionTypes";
 
 import soundInfo from "../../sequence-maker/_media/soundInfo";
+import pitches from "../../sequence-maker/_utils/pitchMap";
+import { now } from "tone";
 
 const INITIAL_STATE = {
   category: '',
   sequence: [null, null, null, null],
 };
 
-//  TODO: Play sequence using sounds
+const {
+  CHANGE_CATEGORY,
+  ADD_TO_SEQUENCE,
+  REMOVE_FROM_SEQUENCE,
+  PLAY_SEQUENCE,
+  RESET_SEQUENCE,
+  SET_PITCH
+} = sequenceMakerActions;
 
 export default function sequenceMaker(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -26,7 +35,6 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const block = { ...soundInfo[state.category][action.sound] };
       block.id = currIdx;
       block.pitch = 'medium';
-      console.log(block);
       newSequenceWithAdd[currIdx] = block;
       return { ...state, sequence: newSequenceWithAdd  };
 
@@ -34,6 +42,19 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const newSequenceWithRemove = [...state.sequence];
       newSequenceWithRemove[action.id] = null;
       return { ...state, sequence: newSequenceWithRemove };
+
+    case PLAY_SEQUENCE:
+      const start = now();
+      for (let i = 0; i < state.sequence.length; i++) {
+        const { sound, pitch } = state.sequence[i]
+        const seconds = i * 4;
+        if (sound === null) {
+          continue;
+        } else {
+          sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', start + seconds)
+        }
+      }
+      return state;
 
     case RESET_SEQUENCE:
       return { ...state, sequence: [null, null, null, null] }

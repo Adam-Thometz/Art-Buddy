@@ -12,11 +12,14 @@ export const wordToMusicActions = {
 }
 
 // Action types for Sequence Maker
-export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
-export const ADD_TO_SEQUENCE = 'ADD_TO_SEQUENCE';
-export const REMOVE_FROM_SEQUENCE = 'REMOVE_FROM_SEQUENCE';
-export const RESET_SEQUENCE = 'RESET_SEQUENCE';
-export const SET_PITCH = 'SET_PITCH'
+export const sequenceMakerActions = {
+  CHANGE_CATEGORY: 'CHANGE_CATEGORY',
+  ADD_TO_SEQUENCE: 'ADD_TO_SEQUENCE',
+  REMOVE_FROM_SEQUENCE: 'REMOVE_FROM_SEQUENCE',
+  PLAY_SEQUENCE: 'PLAY_SEQUENCE',
+  RESET_SEQUENCE: 'RESET_SEQUENCE',
+  SET_PITCH: 'SET_PITCH'
+}
 
 // Action types for Score Keeper
 export const ADD_STUDENT = 'ADD_STUDENT';

@@ -4,17 +4,12 @@ import {
   ERROR,
 
   wordToMusicActions,
-
-  CHANGE_CATEGORY,
-  ADD_TO_SEQUENCE,
-  REMOVE_FROM_SEQUENCE,
+  sequenceMakerActions,
 
   ADD_STUDENT,
   REMOVE_STUDENT,
   ADD_POINT,
   REMOVE_POINT,
-  SET_PITCH,
-  RESET_SEQUENCE,
 } from "./actionTypes";
 import ArtBuddyApi from "../../api";
 
@@ -83,26 +78,30 @@ export const playMelody = (word) => ({
 
 // Actions for Sequence Maker
 export const changeCategory = (category) => ({
-  type: CHANGE_CATEGORY,
+  type: sequenceMakerActions.CHANGE_CATEGORY,
   category
 });
 
 export const addToSequence = (sound) => ({
-  type: ADD_TO_SEQUENCE,
+  type: sequenceMakerActions.ADD_TO_SEQUENCE,
   sound
 });
 
 export const removeFromSequence = (id) => ({
-  type: REMOVE_FROM_SEQUENCE,
+  type: sequenceMakerActions.REMOVE_FROM_SEQUENCE,
   id
 });
 
+export const playSequence = () => ({
+  type: sequenceMakerActions.PLAY_SEQUENCE
+})
+
 export const resetSequence = () => ({
-  type: RESET_SEQUENCE
+  type: sequenceMakerActions.RESET_SEQUENCE
 })
 
 export const setPitch = (id, pitch) => ({
-  type: SET_PITCH,
+  type: sequenceMakerActions.SET_PITCH,
   id,
   pitch
 })

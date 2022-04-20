@@ -3,6 +3,13 @@ import { wordToMusicActions } from "../actions/actionTypes";
 import synth from "../../music-decoder/_utils/synth";
 import { now } from 'tone';
 
+const {
+  CREATE_WORD,
+  ADD_WORD,
+  FILL_LETTER,
+  PLAY_MELODY
+} = wordToMusicActions
+
 const INITIAL_STATE = {
   wordDisplay: [
     []
@@ -12,7 +19,7 @@ const INITIAL_STATE = {
 
 export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case wordToMusicActions.CREATE_WORD:
+    case CREATE_WORD:
       const newWordDisplay = [...state.wordDisplay];
       const newWord = action.wordInput.toUpperCase().split('').map(letter => ({
         letter,
@@ -25,11 +32,11 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
         ...state,
         wordDisplay: newWordDisplay,
       };
-    case wordToMusicActions.ADD_WORD:
+    case ADD_WORD:
       const addWordInput = [...state.wordDisplay]
       addWordInput.push([])
       return { ...state, wordDisplay: addWordInput };
-    case wordToMusicActions.FILL_LETTER:
+    case FILL_LETTER:
       const { letter, note } = action;
       const wordDisplayCopy = [...state.wordDisplay];
       const letterLocation = searchLetter(wordDisplayCopy, letter);
@@ -45,7 +52,7 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
       } else {
         return state;
       }
-    case wordToMusicActions.PLAY_MELODY:
+    case PLAY_MELODY:
       const start = now();
       const currWord = action.word;
       for (let i = 0; i < currWord.length; i++) {
