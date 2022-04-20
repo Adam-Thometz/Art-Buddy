@@ -5,6 +5,7 @@ const urls = {
   byIEPGoals: '/goals',
   wordToMusicUrl: '/word-to-music',
   sequencerUrl: '/sequencer',
+  instrumentIdUrl: '/instrument-id',
   scoreKeeperUrl: '/score-keeper'
 }
 
