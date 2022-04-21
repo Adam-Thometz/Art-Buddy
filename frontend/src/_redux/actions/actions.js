@@ -76,6 +76,11 @@ export const playMelody = (word) => ({
   word
 })
 
+export const changeScale = (scale) => ({
+  type: wordToMusicActions.CHANGE_SCALE,
+  scale
+})
+
 // Actions for Sequence Maker
 export const changeCategory = (category) => ({
   type: sequenceMakerActions.CHANGE_CATEGORY,

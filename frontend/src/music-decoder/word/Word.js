@@ -1,14 +1,13 @@
 import React from "react";
 
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import './Word.css';
 
 import WordPlayer from "./WordPlayer";
 
-import synth from "../_utils/synth";
-
 const Word = ({ word, id }) => {
+  const synth = useSelector(state => state.wordToMusic.synth)
   const playNote = e => {
     const note = e.target.classList[2];
     if (!note) return;

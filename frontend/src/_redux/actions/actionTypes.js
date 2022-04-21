@@ -8,7 +8,8 @@ export const wordToMusicActions = {
   CREATE_WORD: 'CREATE_WORD',
   ADD_WORD: 'ADD_WORD',
   FILL_LETTER: 'FILL_LETTER',
-  PLAY_MELODY: 'PLAY_MELODY'
+  PLAY_MELODY: 'PLAY_MELODY',
+  CHANGE_SCALE: 'CHANGE_SCALE'
 }
 
 // Action types for Sequence Maker
