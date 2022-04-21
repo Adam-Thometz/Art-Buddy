@@ -6,8 +6,8 @@ const Button = ({ children, borderColor, onClick, small = false, selected = fals
   const smallStyles = {
     fontSize: '1rem',
     border: '3px solid',
-    margin: '2%',
-    padding: '2%',
+    margin: '2% 3%',
+    padding: '2% 3%',
     color: selected ? 'white' : 'black',
     backgroundColor: selected ? 'black' : 'white',
     borderColor
