@@ -5,11 +5,7 @@ import {
 
   wordToMusicActions,
   sequenceMakerActions,
-
-  ADD_STUDENT,
-  REMOVE_STUDENT,
-  ADD_POINT,
-  REMOVE_POINT,
+  scoreKeeperActions
 } from "./actionTypes";
 import ArtBuddyApi from "../../api";
 
@@ -125,21 +121,21 @@ export const setPitch = (id, pitch) => ({
 
 // Actions for Score Keeper
 export const addStudent = (name) => ({
-  type: ADD_STUDENT,
+  type: scoreKeeperActions.ADD_STUDENT,
   name
 });
 
 export const removeStudent = (name) => ({
-  type: REMOVE_STUDENT,
+  type: scoreKeeperActions.REMOVE_STUDENT,
   name
 });
 
 export const addPoint = (name) => ({
-  type: ADD_POINT,
+  type: scoreKeeperActions.ADD_POINT,
   name
 })
 
 export const removePoint = (name) => ({
-  type: REMOVE_POINT,
+  type: scoreKeeperActions.REMOVE_POINT,
   name
 })

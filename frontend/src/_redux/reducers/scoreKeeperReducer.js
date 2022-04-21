@@ -1,9 +1,16 @@
-import { ADD_POINT, ADD_STUDENT, REMOVE_POINT, REMOVE_STUDENT } from "../actions/actionTypes";
+import { scoreKeeperActions } from "../actions/actionTypes";
 
 const INITIAL_STATE = {
   students: [],
   isPlaying: false
 }
+
+const {
+  ADD_STUDENT,
+  REMOVE_STUDENT,
+  ADD_POINT,
+  REMOVE_POINT
+} = scoreKeeperActions;
 
 export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
   switch (action.type) {

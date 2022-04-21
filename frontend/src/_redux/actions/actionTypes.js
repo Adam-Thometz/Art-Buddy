@@ -26,7 +26,9 @@ export const sequenceMakerActions = {
 }
 
 // Action types for Score Keeper
-export const ADD_STUDENT = 'ADD_STUDENT';
-export const REMOVE_STUDENT = 'REMOVE_STUDENT';
-export const ADD_POINT = 'ADD_POINT';
-export const REMOVE_POINT = 'REMOVE_POINT';
+export const scoreKeeperActions = {
+  ADD_STUDENT: 'ADD_STUDENT',
+  REMOVE_STUDENT: 'REMOVE_STUDENT',
+  ADD_POINT: 'ADD_POINT',
+  REMOVE_POINT: 'REMOVE_POINT'
+}
