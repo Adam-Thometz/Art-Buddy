@@ -12,7 +12,7 @@ const SequenceMaker = () => {
     <div className="SequenceMaker">
       <Categories />
       {category ? <Options /> : null}
-      {category ? <Sequence /> : null}
+      <Sequence />
     </div>
   );
 };

@@ -46,10 +46,10 @@ const Sequence = () => {
           <SequenceBlock block={block} borderColor={colors[i%4]} />
         ))}
       </div>
-      <div className="Sequence-options">
-        <Button borderColor={colors[0]} onClick={handlePlayAll}>PLAY ALL AT ONCE</Button>
+      <div className="Sequence-controls">
+        <Button borderColor={colors[0]} onClick={handlePlayAll}>PLAY ALTOGETHER</Button>
         <Button borderColor={colors[1]} onClick={handlePlay}>PLAY ONE AT A TIME</Button>
-        <Button borderColor={colors[2]} onClick={handleReset}>RESET</Button>
+        <Button borderColor={colors[2]} onClick={handleReset}>ERASE SEQUENCE</Button>
       </div>
     </div>
   );

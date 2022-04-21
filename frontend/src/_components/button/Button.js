@@ -3,19 +3,18 @@ import React from "react";
 import './Button.css'
 
 const Button = ({ children, borderColor, onClick, small = false, selected = false, icon = null }) => {
-  const styles = {
-    borderColor,
-    fontSize: small ? '1rem' : '2rem',
-    border: small ? '5px solid' : '15px solid',
-    margin: small ? '2%' : '5%',
-    height: small ? '25px' : null,
-    padding: small ? '2%' : '5%',
+  const smallStyles = {
+    fontSize: '1rem',
+    border: '3px solid',
+    margin: '2%',
+    padding: '2%',
     color: selected ? 'white' : 'black',
-    backgroundColor: selected ? 'black' : 'white'
+    backgroundColor: selected ? 'black' : 'white',
+    borderColor
   }
 
   return (
-    <span className="Button" onClick={onClick} style={styles}>
+    <span className="Button" onClick={onClick} style={small ? {...smallStyles, borderColor} : {borderColor}}>
       {icon ? <img src={icon} alt='' /> : null}
       {children}
     </span>
