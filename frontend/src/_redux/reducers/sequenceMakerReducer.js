@@ -13,7 +13,10 @@ const {
   CHANGE_CATEGORY,
   ADD_TO_SEQUENCE,
   REMOVE_FROM_SEQUENCE,
+  ADD_BLOCK,
+  REMOVE_BLOCK,
   PLAY_SEQUENCE,
+  PLAY_ALL_SEQUENCE,
   RESET_SEQUENCE,
   SET_PITCH
 } = sequenceMakerActions;
@@ -42,6 +45,16 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const newSequenceWithRemove = [...state.sequence];
       newSequenceWithRemove[action.id] = null;
       return { ...state, sequence: newSequenceWithRemove };
+    
+    case ADD_BLOCK:
+      const newBlockAdded = [...state.sequence];
+      newBlockAdded.push(null);
+      return { ...state, sequence: newBlockAdded };
+    
+    case REMOVE_BLOCK: 
+      const removedBlock = [...state.sequence];
+      removedBlock.pop();
+      return { ...state, sequence: removedBlock };
 
     case PLAY_SEQUENCE:
       const start = now();
@@ -56,6 +69,14 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       }
       return state;
 
+    case PLAY_ALL_SEQUENCE:
+      const startAll = now();
+      for (let i = 0; i < state.sequence.length; i++) {
+        const { sound, pitch } = state.sequence[i];
+        sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', startAll);
+      }
+      return state;
+
     case RESET_SEQUENCE:
       return { ...state, sequence: [null, null, null, null] }
 
@@ -63,6 +84,7 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const newSequenceDifferentPitch = [...state.sequence];
       newSequenceDifferentPitch[action.id].pitch = action.pitch;
       return { ...state, sequence: newSequenceDifferentPitch };
+
     default:
       return state;
   };

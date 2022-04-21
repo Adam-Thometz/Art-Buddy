@@ -92,8 +92,20 @@ export const removeFromSequence = (id) => ({
   id
 });
 
+export const addBlock = () => ({
+  type: sequenceMakerActions.ADD_BLOCK
+});
+
+export const removeBlock = () => ({
+  type: sequenceMakerActions.REMOVE_BLOCK
+});
+
 export const playSequence = () => ({
   type: sequenceMakerActions.PLAY_SEQUENCE
+})
+
+export const playAllSequence = () => ({
+  type: sequenceMakerActions.PLAY_ALL_SEQUENCE
 })
 
 export const resetSequence = () => ({

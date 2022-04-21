@@ -4,6 +4,12 @@
 }
 
 .Sequence-display {
+  display: grid;
+  grid-template-columns: repeat(4, 375px);
+  margin: 0 auto;
+}
+
+.Sequence-options {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }

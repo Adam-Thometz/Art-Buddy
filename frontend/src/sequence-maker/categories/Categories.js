@@ -12,7 +12,7 @@ const Categories = () => {
   
   return (
     <div className="Categories">
-      <label>Select a sound category: </label>
+      <label>SELECT A SOUND CATEGORY: </label>
       <select defaultValue="" onChange={handleChange}>
         <option value="">---</option>
         <option value="bodySoundsContinuous">Body Sounds (continuous)</option>
