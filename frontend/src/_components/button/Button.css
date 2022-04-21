@@ -1,12 +1,8 @@
 .Button {
   display: inline-block;
   background-color: #ffffff00;
-  padding: 5% 5%;
-  margin: 5%;
-  border: 15px solid;
   box-shadow: 2px 6px 11px 0px #00000040;
   border-radius: 25px;
-  font-size: 2rem;
   font-family: 'Chelsea Market', 'Nunito', sans-serif;
   cursor: pointer;
 }
