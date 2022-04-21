@@ -82,17 +82,17 @@ function searchLetter(wordDisplay, letter) {
   return result;
 }
 
-function generateSynth(scale = 0, sample = null) {
+function generateSynth(pitch = 0, sample = null) {
   let synth;
-  const pitchShift = new Tone.PitchShift({pitch: scale}).toDestination();
+  const pitchShift = new Tone.PitchShift({pitch}).toDestination();
   if (sample) {
     synth = new Tone.Sampler({
       urls: {
         C2: sample
       }
-    }).connect(pitchShift).toDestination();
+    }).connect(pitchShift);
   } else {
-    synth = new Tone.Synth().connect(pitchShift).toDestination();
+    synth = new Tone.Synth().connect(pitchShift);
   }
   return synth;
 }
