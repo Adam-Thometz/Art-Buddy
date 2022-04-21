@@ -1,8 +1,9 @@
 // Recommended import order for all React components:
 
-// React imports
+// React/React Router imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 // Redux imports
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -14,7 +15,6 @@ import './index.css';
 import App from './App';
 // Everything else
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(
   rootReducer,
