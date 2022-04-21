@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.Sequence-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .Sequence-display {
   display: grid;
   grid-template-columns: repeat(4, 375px);
