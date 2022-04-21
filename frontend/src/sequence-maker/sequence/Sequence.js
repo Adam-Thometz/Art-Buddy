@@ -14,11 +14,11 @@ const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence);
   const dispatch = useDispatch();
 
-  const add = () => {
+  const handleAdd = () => {
     dispatch(addBlock());
   }
   
-  const remove = () => {
+  const handleRemove = () => {
     dispatch(removeBlock());
   }
 
@@ -37,9 +37,9 @@ const Sequence = () => {
   return (
     <div className="Sequence">
       <div className="Sequence-header">
-        <Button small borderColor={colors[2]} onClick={remove}>REMOVE BLOCK</Button>
+        <Button small borderColor={colors[2]} onClick={handleRemove}>REMOVE BLOCK</Button>
         {sequence.some(block => block !== null) ? <p>CLICK ON A PICTURE TO HEAR THE SOUND.</p> : null}
-        <Button small borderColor={colors[3]} onClick={add}>ADD BLOCK</Button>
+        <Button small borderColor={colors[3]} onClick={handleAdd}>ADD BLOCK</Button>
       </div>
       <div className="Sequence-display">
         {sequence.map((block, i) => (
@@ -47,7 +47,7 @@ const Sequence = () => {
         ))}
       </div>
       <div className="Sequence-controls">
-        <Button borderColor={colors[0]} onClick={handlePlayAll}>PLAY ALTOGETHER</Button>
+        <Button borderColor={colors[0]} onClick={handlePlayAll}>PLAY TOGETHER</Button>
         <Button borderColor={colors[1]} onClick={handlePlay}>PLAY ONE AT A TIME</Button>
         <Button borderColor={colors[2]} onClick={handleReset}>ERASE SEQUENCE</Button>
       </div>
