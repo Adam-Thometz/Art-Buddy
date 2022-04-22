@@ -49,7 +49,7 @@ const Sequence = () => {
       <div className="Sequence-controls">
         <Button borderColor={colors[0]} onClick={handlePlayAll}>PLAY TOGETHER</Button>
         <Button borderColor={colors[1]} onClick={handlePlay}>PLAY ONE AT A TIME</Button>
-        <Button borderColor={colors[2]} onClick={handleReset}>ERASE SEQUENCE</Button>
+        <Button borderColor={colors[2]} onClick={handleReset}>RESET SEQUENCE</Button>
       </div>
     </div>
   );
