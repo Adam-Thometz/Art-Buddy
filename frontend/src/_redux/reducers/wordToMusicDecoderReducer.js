@@ -8,7 +8,8 @@ const {
   ADD_WORD,
   FILL_LETTER,
   PLAY_MELODY,
-  CHANGE_SCALE
+  CHANGE_SCALE,
+  CHANGE_SOUND
 } = wordToMusicActions
 
 const INITIAL_STATE = {
@@ -59,10 +60,14 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
         state.synth.triggerAttackRelease(`${note}4`, "8n", start + seconds);
       }
       return state;
-      
+
     case CHANGE_SCALE:
-      const synth = generateSynth(action.scale);
-      return { ...state, synth};
+      const soundWithNewScale = generateSynth(action.scale, action.sound);
+      return { ...state, synth: soundWithNewScale};
+
+    case CHANGE_SOUND:
+      const newSound = generateSynth(action.scale, action.sound)
+      return { ...state, synth: newSound }
 
     default:
       return state;
@@ -88,7 +93,7 @@ function generateSynth(pitch = 0, sample = null) {
   if (sample) {
     synth = new Tone.Sampler({
       urls: {
-        C2: sample
+        C4: sample
       }
     }).connect(pitchShift);
   } else {
