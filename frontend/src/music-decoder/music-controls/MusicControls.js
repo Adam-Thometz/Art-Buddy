@@ -7,8 +7,8 @@ import './MusicControls.css'
 
 import Dropdown from "../../_components/dropdown/Dropdown";
 
-import scales from "../_utils/scales";
-import instruments from "../_utils/instruments";
+import scales from "../_utils/dropdown-options/scales";
+import instruments from "../_utils/dropdown-options/instruments";
 import * as instrumentIdCollection from '../../instrument-id/_sounds/soundImports'
 
 const MusicControls = () => {
