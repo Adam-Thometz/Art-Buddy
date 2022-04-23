@@ -8,8 +8,6 @@ import './WordForm.css';
 import WordInput from "./WordInput";
 import Button from "../../_components/button/Button";
 
-import colors from '../../_components/button/colorOrder'
-
 const WordForm = () => {
   const wordDisplay = useSelector(state => state.wordToMusic.wordDisplay);
   const dispatch = useDispatch();
@@ -25,7 +23,7 @@ const WordForm = () => {
         {wordDisplay.map((word, id) => (
           <WordInput word={word} id={id} />
         ))}
-        <Button small borderColor={colors[0]} onClick={add}>ADD WORD</Button>
+        <Button small colorId={0} onClick={add}>ADD WORD</Button>
       </div>
     </div>
   );

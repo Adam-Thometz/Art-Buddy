@@ -6,7 +6,6 @@ import './Menu.css';
 import MenuNavbar from "../menu-navbar/MenuNavbar";
 import Button from "../../_components/button/Button";
 
-import colors from "../../_components/button/colorOrder";
 import menuOptions from "./menuOptions";
 import activities from "./activityList";
 
@@ -31,7 +30,7 @@ const Menu = ({ type = null }) => {
       <div className="Menu-options">
         {options.map((option, i) => (
           <Button
-            borderColor={colors[i%4]}
+            colorId={i%4}
             onClick={() => navigate(option.url)}
             icon={option.icon}
           >{option.name}</Button>

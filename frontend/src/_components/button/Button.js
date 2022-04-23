@@ -2,7 +2,10 @@ import React from "react";
 
 import './Button.css'
 
-const Button = ({ children, borderColor, onClick, small = false, selected = false, icon = null }) => {
+import colors from "./colorOrder";
+
+const Button = ({ children, colorId, onClick, small = false, selected = false, icon = null }) => {
+  const borderColor = colors[colorId]
   return (
     <span
       className={`Button ${small ? 'small' : 'regular'} ${selected ? 'selected' : null}`}
