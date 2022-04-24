@@ -28,7 +28,8 @@ export const sequenceMakerActions = {
 
 // Action types for What's That Instrument?
 export const instrumentIdActions = {
-  CHANGE_MODE: 'CHANGE_MODE'
+  CHANGE_MODE: 'CHANGE_MODE',
+  CHANGE_FAMILY: 'CHANGE_FAMILY',
 }
 
 // Action types for Score Keeper

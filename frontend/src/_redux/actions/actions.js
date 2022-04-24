@@ -5,6 +5,7 @@ import {
 
   wordToMusicActions,
   sequenceMakerActions,
+  instrumentIdActions,
   scoreKeeperActions
 } from "./actionTypes";
 import ArtBuddyApi from "../../api";
@@ -130,6 +131,21 @@ export const setPitch = (id, pitch) => ({
   id,
   pitch
 })
+
+/////////////////////////////////////////
+// Actions for What's That Instrument? //
+/////////////////////////////////////////
+
+export const changeMode = (mode) => ({
+  type: instrumentIdActions.CHANGE_MODE,
+  mode
+})
+
+export const changeFamily = (family) => ({
+  type: instrumentIdActions.CHANGE_FAMILY,
+  family
+})
+
 
 //////////////////////////////
 // Actions for Score Keeper //
