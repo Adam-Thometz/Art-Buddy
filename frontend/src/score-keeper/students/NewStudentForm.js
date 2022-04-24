@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addStudent } from "../../_redux/actions/actions";
 
 import './NewStudentForm.css';
@@ -11,6 +11,7 @@ import Button from "../../_components/button/Button";
 import colorOptions from "../_utils/colorOptions";
 
 const NewStudentForm = () => {
+  const error = useSelector(state => state.scoreKeeper.error);
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [color, setColor] = useState('');
@@ -18,6 +19,7 @@ const NewStudentForm = () => {
   const handleChangeName = e => {
     setName(e.target.value);
   };
+
   const handleChangeColor = e => {
     setColor(e.target.value.replace('hex', '#'));
   };
@@ -39,6 +41,7 @@ const NewStudentForm = () => {
           value={name}
           onChange={handleChangeName}
         />
+        {error ? <p>{error}</p> : null}
       </div>
       <Dropdown
         labelText="PICK A COLOR"

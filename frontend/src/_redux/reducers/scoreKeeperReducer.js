@@ -2,7 +2,8 @@ import { scoreKeeperActions } from "../actions/actionTypes";
 
 const INITIAL_STATE = {
   students: [],
-  maxScore: 5
+  maxScore: 5,
+  error: null
 }
 
 const {
@@ -17,15 +18,18 @@ const {
 export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_STUDENT:
+      const { name, color } = action;
+      const duplicateStudent = state.students.find(student => student.name === name);
+      if (duplicateStudent) return { ...state, error: 'Student already in play!'};
+
       const studentsWithNewStudent = [ ...state.students ];
-      const { name, color } = action
       const newStudent = {
         name,
         color,
         points: 0
       };
       studentsWithNewStudent.push(newStudent);
-      return { ...state, students: studentsWithNewStudent };
+      return { ...state, students: studentsWithNewStudent, error: null };
 
     case REMOVE_STUDENT:
       const studentsMinusOneStudent = [ ...state.students ];
