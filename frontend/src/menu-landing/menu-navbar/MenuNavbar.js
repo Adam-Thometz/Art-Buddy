@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import './MenuNavbar.css'
+import './MenuNavbar.css';
+
+import arrow from './icons/arrow.png'
 
 const MenuNavbar = ({ page = null, setCategory }) => {
   const navigate = useNavigate()
@@ -11,7 +13,7 @@ const MenuNavbar = ({ page = null, setCategory }) => {
   }
 
   const goHome = () => {
-    navigate('/')
+    navigate('/');
   }
 
   const mainPage = () => (
@@ -24,11 +26,13 @@ const MenuNavbar = ({ page = null, setCategory }) => {
   const subPage = () => (
     <div className="MenuNavbar-games">
       <div className="MenuNavbar-back" onClick={goHome}>
-        <p>BACK</p>
+        <img src={arrow}n alt="" />
+        <span>BACK</span>
       </div>
       <span className="MenuNavbar-label">{page.toUpperCase()} GAMES</span>
     </div>
-  )
+  );
+
   return page ? subPage() : mainPage();
 }
 

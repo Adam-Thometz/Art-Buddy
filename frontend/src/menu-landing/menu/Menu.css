@@ -3,4 +3,5 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   height: 60vh;
+  padding: 20px;
 }

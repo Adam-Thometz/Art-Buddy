@@ -1,12 +1,18 @@
 import urls from "../../_routes/routeUrls";
 
+import wordToMusicIcon from './activity-icons/word-to-music.png'
+import sequenceMakerIcon from './activity-icons/sequence-maker.png'
+import instrumentIdIcon from './activity-icons/instrument-id.png'
+import colorTheoryIcon from './activity-icons/color-theory.png'
+import paintingTimeIcon from './activity-icons/painting-time.png'
+
 const types = ['games', 'tools'];
 const genres = ['music', 'art', 'other'];
 
 const activities = [
   {
     name: 'WORD TO MUSIC DECODER',
-    icon: '',
+    icon: wordToMusicIcon,
     url: urls.wordToMusicUrl,
     activityType: types[0],
     genre: genres[0],
@@ -14,7 +20,7 @@ const activities = [
   },
   {
     name: "WHAT'S THAT INSTRUMENT?",
-    icon: '',
+    icon: instrumentIdIcon,
     url: urls.instrumentIdUrl,
     activityType: types[0],
     genre: genres[0],
@@ -22,7 +28,7 @@ const activities = [
   },
   {
     name: 'JUMP INTO RHYTHM',
-    icon: '',
+    icon: null,
     url: null,
     activityType: types[0],
     genre: genres[0],
@@ -30,11 +36,43 @@ const activities = [
   },
   {
     name: 'SEQUENCE MAKER',
-    icon: '',
+    icon: sequenceMakerIcon,
     url: urls.sequencerUrl,
     activityType: types[0],
     genre: genres[0],
     description: 'Put sounds together and hear what you get!'
+  },
+  {
+    name: 'COLOR THEORY',
+    icon: colorTheoryIcon,
+    url: null,
+    activityType: types[0],
+    genre: genres[1],
+    description: 'Learn about the colors with mixing and matching!'
+  },
+  {
+    name: 'PAINTING TIME',
+    icon: paintingTimeIcon,
+    url: null,
+    activityType: types[0],
+    genre: genres[1],
+    description: 'Draw different things like letters and shapes!'
+  },
+  {
+    name: 'PLACE HOLDER',
+    icon: null,
+    url: null,
+    activityType: types[0],
+    genre: genres[1],
+    description: ''
+  },
+  {
+    name: 'PLACE HOLDER',
+    icon: null,
+    url: null,
+    activityType: types[0],
+    genre: genres[1],
+    description: ''
   },
   {
     name: 'SCORE KEEPER',
