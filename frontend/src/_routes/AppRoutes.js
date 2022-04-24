@@ -21,7 +21,7 @@ const AppRoutes = () => {
       <Route path={urls.allGames} element={<Window smallWindow><Menu type={'all'} /></Window>} />
       <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
       <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
-      <Route path={urls.sequencerUrl} element={<Window><InstrumentId /></Window>} />
+      <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
       <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />
       <Route path="*" element={<Window smallWindow><NotFound /></Window>}/>
     </Routes>

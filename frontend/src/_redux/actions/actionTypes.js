@@ -26,6 +26,11 @@ export const sequenceMakerActions = {
   SET_PITCH: 'SET_PITCH'
 }
 
+// Action types for What's That Instrument?
+export const instrumentIdActions = {
+  CHANGE_MODE: 'CHANGE_MODE'
+}
+
 // Action types for Score Keeper
 export const scoreKeeperActions = {
   ADD_STUDENT: 'ADD_STUDENT',
