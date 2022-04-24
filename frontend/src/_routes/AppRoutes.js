@@ -23,7 +23,7 @@ const AppRoutes = () => {
       <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
       <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
       <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />
-      <Route path="*" element={<Window smallWindow><NotFound /></Window>}/>
+      <Route path="*" element={<Window small><NotFound /></Window>}/>
     </Routes>
   );
 };
