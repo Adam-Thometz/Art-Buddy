@@ -2,9 +2,9 @@ import React from "react";
 
 import './Window.css';
 
-const Window = ({ children, smallWindow = false }) => {
+const Window = ({ children, small = false }) => {
   return (
-    <div className="Window" style={{ width: smallWindow ? '75%' : '90%' }}>
+    <div className="Window" style={{ width: small ? '75%' : '90%' }}>
       {children}
     </div>
   );

@@ -15,10 +15,10 @@ import urls from "./routeUrls";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route index element={<Window smallWindow><LandingPage /></Window>} />
-      <Route path={urls.artGames} element={<Window smallWindow><Menu type={'art'} /></Window>} />
-      <Route path={urls.musicGames} element={<Window smallWindow><Menu type={'music'} /></Window>} />
-      <Route path={urls.allGames} element={<Window smallWindow><Menu type={'all'} /></Window>} />
+      <Route index element={<Window small><LandingPage /></Window>} />
+      <Route path={urls.artGames} element={<Window small><Menu type={'art'} /></Window>} />
+      <Route path={urls.musicGames} element={<Window small><Menu type={'music'} /></Window>} />
+      <Route path={urls.allGames} element={<Window small><Menu type={'all'} /></Window>} />
       <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
       <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
       <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
