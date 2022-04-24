@@ -1,0 +1,13 @@
+.Clickable {
+  cursor: pointer;
+}
+
+.Clickable img {
+  width: 250px;
+  height: 250px;
+  z-index: -50;
+}
+
+.Clickable p {
+  z-index: -50;
+}
