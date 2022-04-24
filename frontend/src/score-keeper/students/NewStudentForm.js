@@ -3,31 +3,50 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addStudent } from "../../_redux/actions/actions";
 
+import './NewStudentForm.css';
+
+import Dropdown from "../../_components/dropdown/Dropdown";
+import Button from "../../_components/button/Button";
+
+import colorOptions from "../_utils/colorOptions";
+
 const NewStudentForm = () => {
   const dispatch = useDispatch();
-  const [studentName, setStudentName] = useState('');
+  const [name, setName] = useState('');
+  const [color, setColor] = useState('');
 
-  const handleChange = e => {
-    setStudentName(e.target.value);
+  const handleChangeName = e => {
+    setName(e.target.value);
+  };
+  const handleChangeColor = e => {
+    setColor(e.target.value.replace('hex', '#'));
   };
 
   const handleSubmit = () => {
-    dispatch(addStudent(studentName));
-    setStudentName('');
+    dispatch(addStudent({name, color}));
+    setName('');
   };
 
   return (
     <div className="NewStudentForm">
-      <label className="NewStudentForm-label" htmlFor="newStudent">Add a student: </label>
-      <input
-      className="NewStudentForm-input"
-        type="text"
-        id="newStudent"
-        name="newStudent"
-        value={studentName}
-        onChange={handleChange}
+      <div className="NewStudentForm-student-name">
+        <label className="NewStudentForm-label" htmlFor="newStudent">ADD A STUDENT: </label>
+        <input
+          className="NewStudentForm-input"
+          type="text"
+          id="newStudent"
+          name="newStudent"
+          value={name}
+          onChange={handleChangeName}
+        />
+      </div>
+      <Dropdown
+        labelText="PICK A COLOR"
+        onChange={handleChangeColor}
+        options={colorOptions}
+        defaultValue='hexFFFFFF'
       />
-      <button className="NewStudentForm-add-btn" onClick={handleSubmit}>Add</button>
+      <Button small colorId={3} onClick={handleSubmit}>ADD STUDENT</Button>
     </div>
   );
 };

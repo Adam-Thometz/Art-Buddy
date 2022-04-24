@@ -50,7 +50,9 @@ export const gotError = () => ({
   type: ERROR
 })
 
-// Actions for Word to Music Decoder
+///////////////////////////////////////
+// Actions for Word to Music Decoder //
+///////////////////////////////////////
 export const createWord = (wordInput, wordId) => ({
   type: wordToMusicActions.CREATE_WORD,
   wordInput,
@@ -84,7 +86,10 @@ export const changeSound = (scale, sound) => ({
   sound
 })
 
-// Actions for Sequence Maker
+////////////////////////////////
+// Actions for Sequence Maker //
+////////////////////////////////
+
 export const changeCategory = (category) => ({
   type: sequenceMakerActions.CHANGE_CATEGORY,
   category
@@ -126,10 +131,14 @@ export const setPitch = (id, pitch) => ({
   pitch
 })
 
-// Actions for Score Keeper
-export const addStudent = (name) => ({
+//////////////////////////////
+// Actions for Score Keeper //
+//////////////////////////////
+
+export const addStudent = ({name, color}) => ({
   type: scoreKeeperActions.ADD_STUDENT,
-  name
+  name,
+  color
 });
 
 export const removeStudent = (name) => ({
@@ -145,4 +154,13 @@ export const addPoint = (name) => ({
 export const removePoint = (name) => ({
   type: scoreKeeperActions.REMOVE_POINT,
   name
+})
+
+export const changeMaxScore = (maxScore) => ({
+  type: scoreKeeperActions.CHANGE_MAX_SCORE,
+  maxScore
+})
+
+export const resetScores = () => ({
+  type: scoreKeeperActions.RESET_SCORES
 })

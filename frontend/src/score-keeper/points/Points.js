@@ -2,7 +2,7 @@ import React from "react";
 
 import Point from "./Point";
 
-const Points = ({ points }) => {
+const Points = ({ points, color }) => {
   const pointDisplay = [];
   for (let i = 1; i <= points; i++) {
     pointDisplay.push(i);
@@ -11,7 +11,7 @@ const Points = ({ points }) => {
   return (
     <div>
       {pointDisplay.map(num => (
-        <Point num={num} />
+        <Point num={num} color={color} />
       ))}
     </div>
   );

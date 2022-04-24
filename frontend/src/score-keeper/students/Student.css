@@ -2,9 +2,8 @@
   font-size: 2rem;
 }
 
-.Student-button {
+.Student-point-control {
   font-size: 1.2rem;
-  margin: 0 20px 10px 20px;
-  padding: 5px;
-  width: 40px;
+  margin: 0 auto;
+  height: 100px;
 }

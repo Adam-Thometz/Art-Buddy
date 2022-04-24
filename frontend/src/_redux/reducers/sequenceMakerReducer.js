@@ -4,7 +4,7 @@ import soundInfo from "../../sequence-maker/_media/soundInfo";
 import pitches from "../../sequence-maker/_utils/pitchMap";
 import { now } from "tone";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   category: '',
   sequence: [null, null, null, null],
 };
@@ -21,7 +21,7 @@ const {
   SET_PITCH
 } = sequenceMakerActions;
 
-export default function sequenceMaker(state = INITIAL_STATE, action) {
+export default function sequenceMakerReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CHANGE_CATEGORY:
       return { 
@@ -73,6 +73,7 @@ export default function sequenceMaker(state = INITIAL_STATE, action) {
       const startAll = now();
       for (let i = 0; i < state.sequence.length; i++) {
         const { sound, pitch } = state.sequence[i];
+        if (sound === null) continue;
         sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', startAll);
       }
       return state;

@@ -1,12 +1,13 @@
 import React from 'react';
 
+import MaxScore from './max-score/MaxScore';
 import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';
 
 const ScoreKeeper = () => {  
   return (
     <div className="ScoreKeeper">
-      <h1>Score Keeper</h1>
+      <MaxScore />
       <NewStudentForm />
       <Students />
     </div>

@@ -12,7 +12,7 @@ const {
   CHANGE_SOUND
 } = wordToMusicActions
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   wordDisplay: [
     []
   ],
@@ -74,7 +74,7 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
   };
 };
 
-function searchLetter(wordDisplay, letter) {
+export function searchLetter(wordDisplay, letter) {
   const result = []
   for (let i = 0; i < wordDisplay.length; i++) {
     const currWord = wordDisplay[i];
@@ -87,7 +87,7 @@ function searchLetter(wordDisplay, letter) {
   return result;
 }
 
-function generateSynth(pitch = 0, sample = null) {
+export function generateSynth(pitch = 0, sample = null) {
   let synth;
   const pitchShift = new Tone.PitchShift({pitch}).toDestination();
   if (sample) {
