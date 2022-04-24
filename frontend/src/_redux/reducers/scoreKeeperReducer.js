@@ -32,8 +32,9 @@ export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
       return { ...state, students: studentsWithNewStudent, error: null };
 
     case REMOVE_STUDENT:
-      const studentsMinusOneStudent = [ ...state.students ];
-      studentsMinusOneStudent.filter(student => student.name !== action.name);
+      const studentsMinusOneStudent = state.students.filter(
+        student => student.name !== action.name
+      );
       return { ...state, students: studentsMinusOneStudent };
 
     case ADD_POINT:
