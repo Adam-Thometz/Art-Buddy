@@ -2,7 +2,8 @@ import { instrumentIdActions } from "../actions/actionTypes"
 
 const INITIAL_STATE = {
   mode: null,
-  currFamily: null
+  currFamily: null,
+  currInstrument: null
 }
 
 const {

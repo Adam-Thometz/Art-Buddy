@@ -16,21 +16,17 @@ const Learn = () => {
     dispatch(changeMode(null));
   }
 
-  const handleChangeFamily = e => {
-    dispatch(changeFamily(e.currentTarget.title))
-  }
-
   return (
     <div className="Learn">
       <Button small colorId={3} onClick={goBack}>GO BACK</Button>
       <h1>This is the LEARN page</h1>
       <p>Pick an instrument family to learn more</p>
       <div className="Learn-options">
-        <Clickable onClick={handleChangeFamily} icon={trumpetIcon} text="BRASS" />
-        <Clickable onClick={handleChangeFamily} icon={synthIcon} text="ELECTRONIC" />
-        <Clickable onClick={handleChangeFamily} icon={drumSetIcon} text="PERCUSSION" />
-        <Clickable onClick={handleChangeFamily} icon={harpIcon} text="STRINGS" />
-        <Clickable onClick={handleChangeFamily} icon={clarinetIcon} text="WOODWIND" />
+        <Clickable onClick={() => dispatch(changeFamily('brass'))} icon={trumpetIcon} text="BRASS" />
+        <Clickable onClick={() => dispatch(changeFamily('electronic'))} icon={synthIcon} text="ELECTRONIC" />
+        <Clickable onClick={() => dispatch(changeFamily('percussion'))} icon={drumSetIcon} text="PERCUSSION" />
+        <Clickable onClick={() => dispatch(changeFamily('strings'))} icon={harpIcon} text="STRINGS" />
+        <Clickable onClick={() => dispatch(changeFamily('woodwind'))} icon={clarinetIcon} text="WOODWIND" />
       </div>
     </div>
   );
