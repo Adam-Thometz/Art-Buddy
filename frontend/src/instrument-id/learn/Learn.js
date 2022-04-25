@@ -8,7 +8,7 @@ import './Learn.css';
 import Button from "../../_components/button/Button";
 import Clickable from "../../_components/clickable-icon/Clickable";
 
-import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon } from "../icons/iconImports";
+import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon } from "../_icons/iconImports";
 
 const Learn = () => {
   const dispatch = useDispatch();

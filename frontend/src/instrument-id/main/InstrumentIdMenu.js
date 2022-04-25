@@ -7,7 +7,7 @@ import './InstrumentIdMenu.css';
 
 import Clickable from "../../_components/clickable-icon/Clickable";
 
-import { playIcon, learnIcon } from "../icons/iconImports";
+import { playIcon, learnIcon } from "../_icons/iconImports";
 
 const InstrumentIdMenu = () => {
   const dispatch = useDispatch();
