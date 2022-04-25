@@ -1,6 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu component renders the music games 1`] = `
+exports[`Menu component matches the snapshot art games 1`] = `
+<DocumentFragment>
+  <div
+    class="Menu"
+  >
+    <div
+      class="MenuNavbar-games"
+    >
+      <div
+        class="MenuNavbar-back"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <span>
+          BACK
+        </span>
+      </div>
+      <span
+        class="MenuNavbar-label"
+      >
+        ART GAMES
+      </span>
+    </div>
+    <div
+      class="Menu-options"
+    >
+      <span
+        class="Button regular"
+        style="border-color: #89eb0a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        COLOR THEORY
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #ffe81a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        PAINTING TIME
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #fd4d3a;"
+      >
+        PLACE HOLDER
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #4d4f5e;"
+      >
+        PLACE HOLDER
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu component matches the snapshot music games 1`] = `
+<DocumentFragment>
+  <div
+    class="Menu"
+  >
+    <div
+      class="MenuNavbar-games"
+    >
+      <div
+        class="MenuNavbar-back"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <span>
+          BACK
+        </span>
+      </div>
+      <span
+        class="MenuNavbar-label"
+      >
+        MUSIC GAMES
+      </span>
+    </div>
+    <div
+      class="Menu-options"
+    >
+      <span
+        class="Button regular"
+        style="border-color: #89eb0a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        WORD TO MUSIC DECODER
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #ffe81a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        WHAT'S THAT INSTRUMENT?
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #fd4d3a;"
+      >
+        JUMP INTO RHYTHM
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #4d4f5e;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        SEQUENCE MAKER
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu component matches the snapshot of the main menu 1`] = `
 <DocumentFragment>
   <div
     class="Menu"

@@ -9,7 +9,7 @@ const Clickable = ({ icon, text, onClick, size = "250px", additionalClass = null
   };
 
   return (
-    <div className={`Clickable${additionalClass ? " " + additionalClass : null}`} onClick={onClick}>
+    <div className={`Clickable${additionalClass ? ` ${additionalClass}` : ''}`} onClick={onClick}>
       <img style={sizeStyle} src={icon} alt="" />
       <p>{text}</p>
     </div>

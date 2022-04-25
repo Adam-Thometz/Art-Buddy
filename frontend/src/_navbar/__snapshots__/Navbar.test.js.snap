@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component matches the snapshot of the navbar 1`] = `
+<DocumentFragment>
+  <div
+    class="Navbar"
+  >
+    <h1
+      class="Navbar-header"
+    >
+      ARTBUDDY
+    </h1>
+  </div>
+</DocumentFragment>
+`;

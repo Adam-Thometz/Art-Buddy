@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clickable component matches the snapshot of the clickable icon 1`] = `
+<DocumentFragment>
+  <div
+    class="Clickable"
+  >
+    <img
+      alt=""
+      style="width: 250px; height: 250px;"
+    />
+    <p />
+  </div>
+</DocumentFragment>
+`;

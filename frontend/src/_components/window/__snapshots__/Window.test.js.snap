@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Window component matches the snapshot of the button 1`] = `
+<DocumentFragment>
+  <div
+    class="Window"
+    style="width: 90%;"
+  />
+</DocumentFragment>
+`;

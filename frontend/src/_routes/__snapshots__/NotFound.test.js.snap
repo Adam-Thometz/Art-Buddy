@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component matches the snapshot of the not found page 1`] = `
+<DocumentFragment>
+  <div
+    class="NotFound"
+  >
+    <h1>
+      UH OH!
+    </h1>
+    <p>
+      Are you lost? We couldn't find the page you were looking for
+    </p>
+    <span
+      class="Button regular"
+      style="border-color: #89eb0a;"
+    >
+      RETURN TO HOME PAGE
+    </span>
+  </div>
+</DocumentFragment>
+`;

@@ -3,12 +3,22 @@ import renderWithRouter from '../../_testUtils/renderWithRouter';
 import Menu from "./Menu";;
 
 describe('Menu component', () => {
-  it('renders the main menu', () => {
-    renderWithRouter(<Menu />, { initialRoutes: ['/'] });
+  it('renders without crashing', () => {
+    renderWithRouter(<Menu />);
   })
 
-  it('renders the music games', () => {
-    const { asFragment } = renderWithRouter(<Menu />, { initialRoutes: ['/'] });
+  it('matches the snapshot of the main menu', () => {
+    const { asFragment } = renderWithRouter(<Menu />);
+    expect(asFragment()).toMatchSnapshot();
+  })
+
+  it('matches the snapshot music games', () => {
+    const { asFragment } = renderWithRouter(<Menu type={'music'} />);
+    expect(asFragment()).toMatchSnapshot();
+  })
+
+  it('matches the snapshot art games', () => {
+    const { asFragment } = renderWithRouter(<Menu type={'art'} />);
     expect(asFragment()).toMatchSnapshot();
   })
 })
