@@ -1,5 +1,10 @@
+// Main icons
 import playIcon from './main/play.png';
 import learnIcon from './main/learn.png';
+
+// Play icons
+import songMaker from './play/song-maker.png';
+import listeningSkills from './play/listening-skills.png';
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
@@ -32,6 +37,8 @@ import panFluteIcon from './instruments/woodwind/pan-flute.png';
 export {
   playIcon,
   learnIcon,
+  songMaker,
+  listeningSkills,
   trumpetIcon,
   frenchHornIcon,
   electricBassIcon,
