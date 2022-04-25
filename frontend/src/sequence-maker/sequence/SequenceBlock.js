@@ -6,7 +6,7 @@ import { removeFromSequence, setPitch } from "../../_redux/actions/actions";
 import './SequenceBlock.css';
 
 import Button from "../../_components/button/Button";
-import colors from "../../_components/button/colorOrder";
+import Options from "../../_components/option/Options";
 
 import pitches from "../_utils/pitchMap";
 
@@ -33,13 +33,20 @@ const SequenceBlock = ({ block, borderColor }) => {
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <div className="SequenceBlock-controls">
             {block.alt !== 'stop' ?
-              <div className="SequenceBlock-set-pitch">
-                <Button small selected={isPitch('low')} borderColor={colors[3]} onClick={() => changePitch('low')}>Low</Button>
-                <Button small selected={isPitch('medium')} borderColor={colors[3]} onClick={() => changePitch('medium')}>Medium</Button>
-                <Button small selected={isPitch('high')} borderColor={colors[3]} onClick={() => changePitch('high')}>High</Button>
-              </div>
+              <Options>
+                {Object.keys(pitches).map(pitch => (
+                  <Button
+                    small
+                    selected={isPitch(pitch)}
+                    colorId={3}
+                    onClick={() => changePitch(pitch)} 
+                  >
+                    {pitch.toUpperCase()}
+                  </Button>
+                ))}
+              </Options>
             : null}
-            <Button small borderColor={colors[2]} onClick={remove}>X</Button>
+            <Button small colorId={2} onClick={remove}>REMOVE</Button>
           </div>
         </Fragment>
       ) : null}

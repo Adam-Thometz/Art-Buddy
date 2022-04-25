@@ -17,3 +17,8 @@
   display: block;
   cursor: pointer;
 }
+
+.SequenceBlock-set-pitch {
+  display: flex;
+  justify-content: space-evenly;
+}
