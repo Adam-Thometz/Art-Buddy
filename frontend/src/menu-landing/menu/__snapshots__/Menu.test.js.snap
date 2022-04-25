@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component renders the music games 1`] = `
+<DocumentFragment>
+  <div
+    class="Menu"
+  >
+    <div
+      class="MenuNavbar-main"
+    >
+      <span
+        class="MenuNavbar-button"
+      >
+        GAMES
+      </span>
+      <span
+        class="MenuNavbar-button"
+      >
+        TOOLS
+      </span>
+    </div>
+    <div
+      class="Menu-options"
+    >
+      <span
+        class="Button regular"
+        style="border-color: #89eb0a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        ART GAMES
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #ffe81a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        MUSIC GAMES
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #fd4d3a;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        ALL GAMES
+      </span>
+      <span
+        class="Button regular"
+        style="border-color: #4d4f5e;"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        IEP GOALS
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
