@@ -1,6 +1,6 @@
 import { scoreKeeperActions } from "../actions/actionTypes";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   students: [],
   maxScore: 5,
   error: null
@@ -35,22 +35,22 @@ export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
       const studentsMinusOneStudent = state.students.filter(
         student => student.name !== action.name
       );
-      return { ...state, students: studentsMinusOneStudent };
+      return { ...state, students: studentsMinusOneStudent, error: null };
 
     case ADD_POINT:
       const studentsWithAddedPoint = [ ...state.students ];
       const studentToAddIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithAddedPoint[studentToAddIdx].points++;
-      return { ...state, students: studentsWithAddedPoint };
+      return { ...state, students: studentsWithAddedPoint, error: null };
 
     case REMOVE_POINT:
       const studentsWithSubtractedPoint = [ ...state.students ];
       const studentToSubtractIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithSubtractedPoint[studentToSubtractIdx].points--;
-      return { ...state, students: studentsWithSubtractedPoint };
+      return { ...state, students: studentsWithSubtractedPoint, error: null };
 
     case CHANGE_MAX_SCORE:
-      return { ...state, maxScore: action.maxScore };
+      return { ...state, maxScore: action.maxScore, error: null };
     
     case RESET_SCORES:
       const resetScores = state.students.map(s => ({
@@ -58,7 +58,7 @@ export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
         points: 0,
         color: s.color
       }));
-      return { ...state, students: resetScores };
+      return { ...state, students: resetScores, error: null };
       
     default:
       return state;

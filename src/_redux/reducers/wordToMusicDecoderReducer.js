@@ -94,10 +94,10 @@ export function searchLetter(wordDisplay, letter) {
 export function generateSynth(pitch = 0, sample = null) {
   let synth;
   const pitchShift = new Tone.PitchShift({pitch}).toDestination();
-  if (sample) {
+  if (sample && sample !== 'synth') {
     synth = new Tone.Sampler({
       urls: {
-        C4: sample
+        C3: sample
       }
     }).connect(pitchShift);
   } else {
