@@ -12,13 +12,13 @@ const WordPlayer = ({ id }) => {
   const word = useSelector(state => state.wordToMusic.wordDisplay)[id];
   const dispatch = useDispatch()
 
-  const play = () => {
+  const handlePlayNote = () => {
     dispatch(playMelody(word))
   }
 
   return (
     <div className="WordPlayer">
-      <button onClick={play} className="WordPlayer-button">
+      <button onClick={handlePlayNote} className="WordPlayer-button">
         <FontAwesomeIcon icon={faPlay} />
       </button>
     </div>

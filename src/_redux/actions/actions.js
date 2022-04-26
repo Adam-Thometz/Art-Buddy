@@ -24,6 +24,11 @@ export const fillLetter = (letter, note) => ({
   note
 });
 
+export const playNote = (word) => ({
+  type: wordToMusicActions.PLAY_MELODY,
+  word
+})
+
 export const playMelody = (word) => ({
   type: wordToMusicActions.PLAY_MELODY,
   word

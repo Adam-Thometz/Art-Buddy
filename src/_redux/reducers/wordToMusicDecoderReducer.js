@@ -7,6 +7,7 @@ const {
   CREATE_WORD,
   ADD_WORD,
   FILL_LETTER,
+  PLAY_NOTE,
   PLAY_MELODY,
   CHANGE_SCALE,
   CHANGE_SOUND
@@ -41,15 +42,18 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
       const { letter, note } = action;
       const wordDisplayWithFilledLetter = [...state.wordDisplay];
       const letterLocation = searchLetter(wordDisplayWithFilledLetter, letter);
-      if (letterLocation.length) {
-        const wordIdx = letterLocation[0];
-        const letterIdx = letterLocation[1];
-        wordDisplayWithFilledLetter[wordIdx][letterIdx].note = note;
-        state.synth.triggerAttackRelease(`${note}4`, '4n');
-        return { ...state, wordDisplay: wordDisplayWithFilledLetter };
-      } else {
+      if (!letterLocation.length) {
         return state;
       }
+      const wordIdx = letterLocation[0];
+      const letterIdx = letterLocation[1];
+      wordDisplayWithFilledLetter[wordIdx][letterIdx].note = note;
+      state.synth.triggerAttackRelease(`${note}3`, '4n');
+      return { ...state, wordDisplay: wordDisplayWithFilledLetter };
+
+    case PLAY_NOTE:
+      state.synth.triggerAttackRelease(`${action.note}3`, "4n")
+      return state;
 
     case PLAY_MELODY:
       const start = now();
@@ -57,7 +61,7 @@ export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action)
       for (let i = 0; i < currWord.length; i++) {
         const { note } = currWord[i];
         const seconds = i * 0.5;
-        state.synth.triggerAttackRelease(`${note}4`, "8n", start + seconds);
+        state.synth.triggerAttackRelease(`${note}3`, "8n", start + seconds);
       }
       return state;
 
