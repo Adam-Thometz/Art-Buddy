@@ -11,8 +11,10 @@
 
 .Sequence-display {
   display: grid;
-  grid-template-columns: repeat(4, 375px);
+  grid-template-columns: repeat(4, 22%);
+  gap: 3%;
   margin: 0 auto;
+  width: 100%;
 }
 
 .Sequence-controls {
