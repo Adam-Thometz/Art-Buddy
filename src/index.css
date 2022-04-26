@@ -6,16 +6,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.lines {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  z-index: -50;
-  width: 100vw;
-}
-
-.right {
-  position: relative;
-  bottom: 0;
-}

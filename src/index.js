@@ -5,36 +5,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 // Redux imports
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './_redux/reducers/rootReducer';
-import thunk from 'redux-thunk'
 // CSS imports
 import './index.css';
 // Component imports
 import App from './App';
 // Everything else
 import reportWebVitals from './reportWebVitals';
-import leftLines from './_background/LL.png'
-import rightLines from './_background/RL.png'
 
-const store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(thunk),
-    // window.__REDUX_DEVTOOLS_EXTENSION__
-    // && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
-);
+const store = createStore(rootReducer);
   
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <React.StrictMode>
-        <div className='lines'>
-          <img src={leftLines} alt='' />
-          <img className='right' src={rightLines} alt='' />
-        </div>
         <App />
       </React.StrictMode>
     </BrowserRouter>
