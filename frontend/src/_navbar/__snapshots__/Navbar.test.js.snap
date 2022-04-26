@@ -5,11 +5,11 @@ exports[`Navbar component matches the snapshot of the navbar 1`] = `
   <div
     class="Navbar"
   >
-    <h1
+    <span
       class="Navbar-header"
     >
       ARTBUDDY
-    </h1>
+    </span>
   </div>
 </DocumentFragment>
 `;
