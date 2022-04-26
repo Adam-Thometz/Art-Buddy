@@ -1,55 +1,9 @@
 import { 
-  SET_TOKEN,
-  SET_USER,
-  ERROR,
-
   wordToMusicActions,
   sequenceMakerActions,
   instrumentIdActions,
   scoreKeeperActions
 } from "./actionTypes";
-import ArtBuddyApi from "../../api";
-
-// Actions for authentication
-export const signup = (user) => {
-  return async (dispatch) => {
-    try {
-      const token = await ArtBuddyApi.signup(user);
-      dispatch(setToken(token));
-      dispatch(setUser(user));
-    } catch (e) {
-      dispatch(gotError());
-      dispatch()
-    }
-  }
-}
-
-export const login = (user) => {
-  return async (dispatch) => {
-    try {
-      const token = await ArtBuddyApi.login(user);
-      dispatch(setToken(token));
-      dispatch(setUser(user));
-    } catch (e) {
-      dispatch(gotError());
-      dispatch();
-    }
-  }
-}
-
-export const setToken = (token) => ({
-  type: SET_TOKEN,
-  token
-});
-
-export const setUser = (user) => ({
-  type: SET_USER,
-  user
-})
-
-export const gotError = () => ({
-  type: ERROR
-})
 
 ///////////////////////////////////////
 // Actions for Word to Music Decoder //
