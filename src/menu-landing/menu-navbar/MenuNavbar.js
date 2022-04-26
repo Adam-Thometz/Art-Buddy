@@ -1,19 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import BackArrow from "../../_components/back-arrow/BackArrow";
 
 import './MenuNavbar.css';
 
-import arrow from './icons/arrow.png'
-
 const MenuNavbar = ({ page = null, setCategory }) => {
-  const navigate = useNavigate()
-
   const handleChange = (label) => {
     setCategory(label);
-  }
-
-  const goHome = () => {
-    navigate('/');
   }
 
   const mainPage = () => (
@@ -25,10 +17,7 @@ const MenuNavbar = ({ page = null, setCategory }) => {
 
   const subPage = () => (
     <div className="MenuNavbar-games">
-      <div className="MenuNavbar-back" onClick={goHome}>
-        <img src={arrow}n alt="" />
-        <span>BACK</span>
-      </div>
+      <BackArrow />
       <span className="MenuNavbar-label">{page.toUpperCase()} GAMES</span>
     </div>
   );

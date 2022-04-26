@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackArrow component matches the snapshot of the back arrow 1`] = `
+<DocumentFragment>
+  <div
+    class="MenuNavbar-back"
+  >
+    <img
+      alt=""
+      src="[object Object]"
+    />
+    <span>
+      BACK
+    </span>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,11 @@
+.BackArrow {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.BackArrow img {
+  height: 65px;
+  width: 73px;
+}
