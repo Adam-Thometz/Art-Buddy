@@ -117,6 +117,10 @@ exports[`Menu component matches the snapshot music games 1`] = `
         class="Button regular"
         style="border-color: #fd4d3a;"
       >
+        <img
+          alt=""
+          src="[object Object]"
+        />
         JUMP INTO RHYTHM
       </span>
       <span

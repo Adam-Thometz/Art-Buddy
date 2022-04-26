@@ -3,6 +3,7 @@ import urls from "../../_routes/routeUrls";
 import wordToMusicIcon from './_icons/activity-icons/word-to-music.png'
 import sequenceMakerIcon from './_icons/activity-icons/sequence-maker.png'
 import instrumentIdIcon from './_icons/activity-icons/instrument-id.png'
+import jumpIntoRhythmIcon from './_icons/activity-icons/jump-into-rhythm.png'
 import colorTheoryIcon from './_icons/activity-icons/color-theory.png'
 import paintingTimeIcon from './_icons/activity-icons/painting-time.png'
 
@@ -28,7 +29,7 @@ const activities = [
   },
   {
     name: 'JUMP INTO RHYTHM',
-    icon: null,
+    icon: jumpIntoRhythmIcon,
     url: null,
     activityType: types[0],
     genre: genres[0],
