@@ -1,16 +1,15 @@
 import React from "react";
 
-import './Clickable.css';
-
-const Clickable = ({ icon, text, onClick, size = "250px", additionalClass = null }) => {
-  const sizeStyle = {
+const Clickable = ({ icon, text, onClick = null, size = "250px", additionalClass = null }) => {
+  const styles = {
     width: size,
-    height: size
+    height: size,
+    cursor: onClick !== null ? 'pointer' : null
   };
 
   return (
     <div className={`Clickable${additionalClass ? ` ${additionalClass}` : ''}`} onClick={onClick}>
-      <img style={sizeStyle} src={icon} alt="" />
+      <img style={styles} src={icon} alt="" />
       <p>{text}</p>
     </div>
   );
