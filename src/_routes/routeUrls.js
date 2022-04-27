@@ -12,6 +12,7 @@ const urls = {
 export const instrumentIdUrls = {
   learnUrl: '/instrument-id/learn',
   learnFamilyUrl: '/instrument-id/learn/:family',
+  learnInstrumentUrl: '/instrument-id/learn/:family/:instrument',
   playUrl: '/instrument-id/play',
 }
 

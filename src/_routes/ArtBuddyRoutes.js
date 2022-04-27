@@ -9,6 +9,7 @@ import SequenceMaker from '../sequence-maker/SequenceMaker';
 import InstrumentId from "../instrument-id/InstrumentId";
   import Learn from "../instrument-id/learn/learn-main/Learn";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
+  import Instrument from "../instrument-id/learn/instruments/Instrument";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
@@ -33,7 +34,7 @@ const AppRoutes = () => {
         {/* Learn */}
         <Route path={instrumentIdUrls.learnUrl} element={<Window><Learn /></Window>}/>
         <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window><LearnFamilyPage /></Window>}/>
-        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window><LearnFamilyPage /></Window>}/>
+        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window><Instrument /></Window>}/>
       
       {/* TOOLS */}
       {/* Score Keeper */}
