@@ -5,7 +5,7 @@ import { changeCategory, addToSequence } from "../_redux/actions/actions";
 
 import Sequence from "./sequence/Sequence";
 import Dropdown from "../_components/dropdown/Dropdown";
-import Clickable from "../_components/clickable-icon/Clickable";
+import Icon from "../_components/icon/Icon";
 import Options from "../_components/option/Options";
 
 import categories from "./_utils/categories";
@@ -39,7 +39,7 @@ const SequenceMaker = () => {
       {category ? (
         <Options>
           {Object.keys(options).map(option => (
-            <Clickable
+            <Icon
               icon={options[option].image}
               size='150px'
               text={options[option].alt}
