@@ -3,7 +3,7 @@
 exports[`Clickable component matches the snapshot of the clickable icon 1`] = `
 <DocumentFragment>
   <div
-    class="Clickable"
+    class="Icon"
   >
     <img
       alt=""
