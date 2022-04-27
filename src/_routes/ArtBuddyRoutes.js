@@ -7,22 +7,42 @@ import Menu from "../menu-landing/menu/Menu";
 import WordToMusic from '../music-decoder/WordToMusic';
 import SequenceMaker from '../sequence-maker/SequenceMaker';
 import InstrumentId from "../instrument-id/InstrumentId";
+  import Learn from "../instrument-id/learn/Learn";
+  import LearnFamilyPage from "../instrument-id/learn/LearnFamilyPage";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
-import urls from "./routeUrls";
+import urls, { instrumentIdUrls } from "./routeUrls";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route index element={<Window small><LandingPage /></Window>} />
+      {/* MENUS */}
       <Route path={urls.artGames} element={<Window small><Menu type={'art'} /></Window>} />
       <Route path={urls.musicGames} element={<Window small><Menu type={'music'} /></Window>} />
       <Route path={urls.allGames} element={<Window small><Menu type={'all'} /></Window>} />
+
+      {/* MUSIC GAMES */}
+      {/* Word To Music Decoder */}
       <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
+      {/* Sequence Maker */}
       <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
+      {/* What's That Instrument? */}
       <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
+        {/* Learn */}
+        <Route path={instrumentIdUrls.learnUrl} element={<Window><Learn /></Window>}/>
+        <Route path={instrumentIdUrls.learnBrassUrl} element={<Window><LearnFamilyPage family='brass' /></Window>}/>
+        <Route path={instrumentIdUrls.learnElectronicUrl} element={<Window><LearnFamilyPage family='electronic' /></Window>}/>
+        <Route path={instrumentIdUrls.learnPercussionUrl} element={<Window><LearnFamilyPage family='percussion' /></Window>}/>
+        <Route path={instrumentIdUrls.learnStringsUrl} element={<Window><LearnFamilyPage family='strings' /></Window>}/>
+        <Route path={instrumentIdUrls.learnWoodwindUrl} element={<Window><LearnFamilyPage family='woodwind' /></Window>}/>
+      
+      {/* TOOLS */}
+      {/* Score Keeper */}
       <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />
+      
+      {/* GENERAL 404 HANDLER */}
       <Route path="*" element={<Window small><NotFound /></Window>}/>
     </Routes>
   );
