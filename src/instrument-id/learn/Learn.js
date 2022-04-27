@@ -1,7 +1,5 @@
 import React from "react";
-
-import { useDispatch } from "react-redux";
-import { changeFamily, changeMode } from "../../_redux/actions/actions";
+import { useNavigate } from "react-router-dom";
 
 import './Learn.css';
 
@@ -9,12 +7,14 @@ import Button from "../../_components/button/Button";
 import Clickable from "../../_components/clickable-icon/Clickable";
 import Options from "../../_components/option/Options";
 
+import { instrumentIdUrls } from "../../_routes/routeUrls";
+
 import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon } from "../_icons/iconImports";
 
 const Learn = () => {
-  const dispatch = useDispatch();
+  const navigate = useNavigate()
   const goBack = () => {
-    dispatch(changeMode(null));
+    navigate('/instrument-id')
   }
 
   return (
@@ -23,11 +23,11 @@ const Learn = () => {
       <h1>This is the LEARN page</h1>
       <p>Pick an instrument family to learn more</p>
       <Options>
-        <Clickable onClick={() => dispatch(changeFamily('brass'))} icon={trumpetIcon} text="BRASS" />
-        <Clickable onClick={() => dispatch(changeFamily('electronic'))} icon={synthIcon} text="ELECTRONIC" />
-        <Clickable onClick={() => dispatch(changeFamily('percussion'))} icon={drumSetIcon} text="PERCUSSION" />
-        <Clickable onClick={() => dispatch(changeFamily('strings'))} icon={harpIcon} text="STRINGS" />
-        <Clickable onClick={() => dispatch(changeFamily('woodwind'))} icon={clarinetIcon} text="WOODWIND" />
+        <Clickable onClick={() => navigate(instrumentIdUrls.learnBrassUrl)} icon={trumpetIcon} text="BRASS" />
+        <Clickable onClick={() => navigate(instrumentIdUrls.learnElectronicUrl)} icon={synthIcon} text="ELECTRONIC" />
+        <Clickable onClick={() => navigate(instrumentIdUrls.learnPercussionUrl)} icon={drumSetIcon} text="PERCUSSION" />
+        <Clickable onClick={() => navigate(instrumentIdUrls.learnStringsUrl)} icon={harpIcon} text="STRINGS" />
+        <Clickable onClick={() => navigate(instrumentIdUrls.learnWoodwindUrl)} icon={clarinetIcon} text="WOODWIND" />
       </Options>
     </div>
   );

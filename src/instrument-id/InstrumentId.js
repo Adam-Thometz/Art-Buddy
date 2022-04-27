@@ -1,36 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import { useSelector } from "react-redux";
-import Learn from "./learn/Learn";
+import Clickable from "../_components/clickable-icon/Clickable";
+import Options from "../_components/option/Options";
 
-import InstrumentIdMenu from "./main/InstrumentIdMenu";
-import Play from "./play/Play";
+import { playIcon, learnIcon } from "./_icons/iconImports";
+import { instrumentIdUrls } from "../_routes/routeUrls";
 
 const InstrumentId = () => {
-  const mode = useSelector(state => state.instrumentId.mode);
-  const currFamily = useSelector(state => state.instrumentId.currFamily);
-
-  const showPage = (mode, family) => {
-    if (mode === 'learn') {
-      if (!family) {
-        return <Learn />;
-      } else {
-
-      }
-    }
-    if (mode === 'play') {
-      if (!family) {
-        return <Play />;
-      } else {
-        
-      }
-    }
-    return <InstrumentIdMenu />
-  }
-  
+  const navigate = useNavigate();
   return (
     <div className="InstrumentId">
-      {showPage(mode, currFamily)}
+      <div className="InstrumentIdMenu">
+        <h1>MAIN MENU</h1>
+        <p>Let's learn about different instruments! Click PLAY to play different instruments and click LEARN to learn about and listen to different instruments</p>
+        <Options width="60%">
+          <Clickable icon={playIcon} text="PLAY" onClick={() => navigate(instrumentIdUrls.playUrl)} />
+          <Clickable icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />
+        </Options>
+      </div>
     </div>
   );
 };
