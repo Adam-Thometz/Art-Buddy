@@ -12,7 +12,7 @@ const WordList = () => {
         <Word word={word} id={id} />
       ))}
     </div>
-  )
+  );
 };
 
 export default WordList;

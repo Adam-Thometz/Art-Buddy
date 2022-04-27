@@ -10,10 +10,10 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const WordPlayer = ({ id }) => {
   const word = useSelector(state => state.wordToMusic.wordDisplay)[id];
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handlePlayNote = () => {
-    dispatch(playMelody(word))
+    dispatch(playMelody(word));
   }
 
   return (
