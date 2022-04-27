@@ -1,12 +1,21 @@
 import React from "react";
-
-import { useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
+import Icon from "../../../_components/icon/Icon";
+import learnInstrumentOptions from "../learnInstrumentOptions";
 
 const Instrument = () => {
-  const instrument = useSelector(state => state.instrumentId.currInstrument);
+  const { family, instrument } = useParams();
+  const instrumentInfo = learnInstrumentOptions[family]
+    .instruments
+    .find(i => i.name === instrument.replace('-', ' '));
   return (
     <div className="Instrument">
+      <div className="Instrument-name">
+        <Icon icon={instrumentInfo.icon} text={instrumentInfo.name.toUpperCase()} />
+      </div>
+      <div className="Instrument-information">
 
+      </div>
     </div>
   );
 };

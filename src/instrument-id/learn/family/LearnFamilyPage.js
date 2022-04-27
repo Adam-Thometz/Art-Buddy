@@ -1,29 +1,34 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import './LearnFamilyPage.css'
 
-import Clickable from "../../_components/clickable-icon/Clickable";
+import Icon from "../../../_components/icon/Icon";
 
-import learnOptions from "./learnOptions";
+import learnInstrumentOptions from "../learnInstrumentOptions";
+import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
-const LearnFamilyPage = ({ family }) => {
-  // debugger;
-  const instrumentFamily = learnOptions[family];
+const LearnFamilyPage = () => {
+  const navigate = useNavigate();
+  const { family } = useParams();
+  const instrumentFamily = learnInstrumentOptions[family];
   const { instruments } = instrumentFamily;
   return (
     <div className="LearnFamilyPage">
       <div className="LearnFamilyPage-header">
-        <Clickable
+        <Icon
           icon={instrumentFamily.main}
           text={`THE ${family.toUpperCase()} FAMILY`}
         />
       </div>
       <div className="LearnFamilyPage-options">
         {instruments.map(instrument => (
-          <Clickable
+          <Icon
             icon={instrument.icon}
             size='150px'
             text={instrument.name.toUpperCase()}
+            onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.replace(' ', '-')}`)}
           />
         ))}
       </div>
