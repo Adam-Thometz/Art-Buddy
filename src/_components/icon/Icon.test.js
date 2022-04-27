@@ -1,14 +1,14 @@
 import React from "react";
 import renderWithRouter from '../../_testUtils/renderWithRouter';
-import Clickable from './Clickable'
+import Icon from './Icon'
 
 describe('Clickable component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<Clickable />);
+    renderWithRouter(<Icon />);
   })
 
   it('matches the snapshot of the clickable icon', () => {
-    const { asFragment } = renderWithRouter(<Clickable />);
+    const { asFragment } = renderWithRouter(<Icon />);
     expect(asFragment()).toMatchSnapshot();
   })
 })
