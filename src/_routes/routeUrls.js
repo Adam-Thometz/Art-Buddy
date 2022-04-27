@@ -11,12 +11,7 @@ const urls = {
 
 export const instrumentIdUrls = {
   learnUrl: '/instrument-id/learn',
-  learnBrassUrl: '/instrument-id/learn/brass',
-  learnWoodwindUrl: '/instrument-id/learn/woodwind',
-  learnStringsUrl: '/instrument-id/learn/strings',
-  learnPercussionUrl: '/instrument-id/learn/percussion',
-  learnElectronicUrl: '/instrument-id/learn/electronic',
-  learnVoiceUrl: '/instrument-id/learn/voice',
+  learnFamilyUrl: '/instrument-id/learn/:family',
   playUrl: '/instrument-id/play',
 }
 

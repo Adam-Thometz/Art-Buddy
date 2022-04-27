@@ -7,8 +7,8 @@ import Menu from "../menu-landing/menu/Menu";
 import WordToMusic from '../music-decoder/WordToMusic';
 import SequenceMaker from '../sequence-maker/SequenceMaker';
 import InstrumentId from "../instrument-id/InstrumentId";
-  import Learn from "../instrument-id/learn/Learn";
-  import LearnFamilyPage from "../instrument-id/learn/LearnFamilyPage";
+  import Learn from "../instrument-id/learn/learn-main/Learn";
+  import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
@@ -32,11 +32,8 @@ const AppRoutes = () => {
       <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
         {/* Learn */}
         <Route path={instrumentIdUrls.learnUrl} element={<Window><Learn /></Window>}/>
-        <Route path={instrumentIdUrls.learnBrassUrl} element={<Window><LearnFamilyPage family='brass' /></Window>}/>
-        <Route path={instrumentIdUrls.learnElectronicUrl} element={<Window><LearnFamilyPage family='electronic' /></Window>}/>
-        <Route path={instrumentIdUrls.learnPercussionUrl} element={<Window><LearnFamilyPage family='percussion' /></Window>}/>
-        <Route path={instrumentIdUrls.learnStringsUrl} element={<Window><LearnFamilyPage family='strings' /></Window>}/>
-        <Route path={instrumentIdUrls.learnWoodwindUrl} element={<Window><LearnFamilyPage family='woodwind' /></Window>}/>
+        <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window><LearnFamilyPage /></Window>}/>
+        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window><LearnFamilyPage /></Window>}/>
       
       {/* TOOLS */}
       {/* Score Keeper */}
