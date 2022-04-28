@@ -6,4 +6,19 @@ body {
   background-color: #17225A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 95vh;
+}
+
+.lines {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: -50;
+  width: 100vw;
+  height: 100vh;
+}
+
+.right {
+  position: relative;
+  bottom: 0;
 }
