@@ -147,7 +147,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
       class="MenuNavbar-main"
     >
       <span
-        class="MenuNavbar-button"
+        class="MenuNavbar-button underlined"
       >
         GAMES
       </span>

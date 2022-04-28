@@ -10,18 +10,6 @@
   margin: 0 auto;
 }
 
-.MenuNavbar-back {
-  position: absolute;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.MenuNavbar-back img {
-  height: 65px;
-  width: 73px;
-}
-
 .MenuNavbar-button {
   font-size: 3rem;
   cursor: pointer;
@@ -30,4 +18,9 @@
 .MenuNavbar-label {
   font-size: 3rem;
   margin: 0 auto;
+}
+
+.underlined {
+  border-bottom: 10px solid transparent;
+  border-image: url(_icons/underline.png) 17;
 }

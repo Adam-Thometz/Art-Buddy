@@ -20,7 +20,7 @@ const Menu = ({ type = null }) => {
   );
 
   const createNav = () => (
-    !type ? <MenuNavbar setCategory={setCategory} /> : <MenuNavbar page={type} />
+    !type ? <MenuNavbar category={category} setCategory={setCategory} /> : <MenuNavbar page={type} />
   )
 
   const options = !type ? menuOptions[category] : getGames(type);
