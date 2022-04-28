@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import './BackArrow.css';
+
 import arrow from './arrow.png'
 
 const BackArrow = () => {
@@ -9,7 +11,7 @@ const BackArrow = () => {
     navigate(-1);
   }
   return (
-    <div className="MenuNavbar-back" onClick={goBack}>
+    <div className="BackArrow" onClick={goBack}>
         <img src={arrow} alt="" />
         <span>BACK</span>
       </div>
