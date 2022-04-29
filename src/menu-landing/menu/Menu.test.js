@@ -1,5 +1,6 @@
 import React from "react";
 import renderWithRouter from '../../_testUtils/renderWithRouter';
+import { screen } from "@testing-library/react";
 import Menu from "./Menu";;
 
 describe('Menu component', () => {
@@ -12,13 +13,13 @@ describe('Menu component', () => {
     expect(asFragment()).toMatchSnapshot();
   })
 
-  it('matches the snapshot music games', () => {
-    const { asFragment } = renderWithRouter(<Menu type={'music'} />);
-    expect(asFragment()).toMatchSnapshot();
+  it('renders music games', () => {
+    renderWithRouter(<Menu type='music' />);
+    expect(screen.getByText('SEQUENCE MAKER')).toMatchSnapshot();
   })
 
-  it('matches the snapshot art games', () => {
-    const { asFragment } = renderWithRouter(<Menu type={'art'} />);
-    expect(asFragment()).toMatchSnapshot();
+  it('renders art games', () => {
+    renderWithRouter(<Menu type='art' />);
+    expect(screen.getByText('COLOR THEORY')).toMatchSnapshot();
   })
 })
