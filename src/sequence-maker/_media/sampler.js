@@ -9,24 +9,12 @@ const newSample = (sound) => {
   }).toDestination();
 }
 
-const clappingSample = newSample(sounds.clappingContinuous);
-const stompingSample = newSample(sounds.stompingContinuous);
-const yeahLongSample = newSample(sounds.yeahContinuous);
-const clapSample = newSample(sounds.clappingOnce);
-const stompSample = newSample(sounds.stompingOnce);
-const yeahShortSample = newSample(sounds.yeahOnce);
-const dogSample = newSample(sounds.bark);
-const catSample = newSample(sounds.meow);
-const birdSample = newSample(sounds.tweet);
-
-export {
-  clappingSample,
-  stompingSample,
-  yeahLongSample,
-  clapSample,
-  stompSample,
-  yeahShortSample,
-  dogSample,
-  catSample,
-  birdSample
-};
+export const clappingSample = newSample(sounds.clappingContinuous);
+export const stompingSample = newSample(sounds.stompingContinuous);
+export const yeahLongSample = newSample(sounds.yeahContinuous);
+export const clapSample = newSample(sounds.clappingOnce);
+export const stompSample = newSample(sounds.stompingOnce);
+export const yeahShortSample = newSample(sounds.yeahOnce);
+export const dogSample = newSample(sounds.bark);
+export const catSample = newSample(sounds.meow);
+export const birdSample = newSample(sounds.tweet);
