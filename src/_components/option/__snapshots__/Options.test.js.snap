@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Options"
+    style="width: 100%;"
+  />
+</DocumentFragment>
+`;
+
+exports[`Options component matches snapshot of smaller window 1`] = `
+<DocumentFragment>
+  <div
+    class="Options"
+    style="width: 65%;"
+  />
+</DocumentFragment>
+`;
