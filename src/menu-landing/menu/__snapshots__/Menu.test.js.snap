@@ -9,7 +9,7 @@ exports[`Menu component matches the snapshot art games 1`] = `
       class="MenuNavbar-games"
     >
       <div
-        class="MenuNavbar-back"
+        class="BackArrow"
       >
         <img
           alt=""
@@ -74,7 +74,7 @@ exports[`Menu component matches the snapshot music games 1`] = `
       class="MenuNavbar-games"
     >
       <div
-        class="MenuNavbar-back"
+        class="BackArrow"
       >
         <img
           alt=""

@@ -3,7 +3,7 @@
 exports[`BackArrow component matches the snapshot of the back arrow 1`] = `
 <DocumentFragment>
   <div
-    class="MenuNavbar-back"
+    class="BackArrow"
   >
     <img
       alt=""

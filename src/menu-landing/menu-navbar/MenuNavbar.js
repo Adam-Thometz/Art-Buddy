@@ -8,7 +8,6 @@ const MenuNavbar = ({ page = null, category, setCategory }) => {
     setCategory(label);
   }
   const underline = target => {
-    console.log(category, target);
     return category === target ? ' underlined' : '';
   }
 
