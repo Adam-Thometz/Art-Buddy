@@ -1,4 +1,4 @@
-import { INITIAL_STATE } from "../../_redux/reducers/scoreKeeperReducer";
+import { INITIAL_STATE, updateWinners } from "../../_redux/reducers/scoreKeeperReducer";
 
 const addedStudents = {
   ...INITIAL_STATE,
@@ -13,7 +13,8 @@ const addedStudents = {
       color: 'red',
       points: 3
     },
-  ]
+  ],
+  winners: [{ name: 'Jake', color: 'blue' }]
 }
 
 export {

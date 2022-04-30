@@ -25,15 +25,20 @@ const Student = ({ name, color, points }) => {
     };
   };
 
+  const pointButtonStyles = {
+    fontSize: '1.5rem',
+    width: '30%'
+  }
+
   return (
     <div className="Student">
       <p className="Student-name" style={{color}}>{name}</p>
-      <Button small colorId={2} onClick={remove}>REMOVE</Button>
       <div className="Student-point-control">
-        <Button small otherStyles={{fontSize: '1.5rem'}} colorId={2} onClick={minus}>-</Button>
-        <Button small otherStyles={{fontSize: '1.5rem'}} colorId={0} onClick={plus}>+</Button>
+        <Button small otherStyles={pointButtonStyles} colorId={2} onClick={minus}>-</Button>
+        <Button small otherStyles={pointButtonStyles} colorId={0} onClick={plus}>+</Button>
       </div>
       <Points points={points} color={color} />
+      <Button small colorId={2} onClick={remove}>REMOVE FROM GAME</Button>
     </div>
   );
 };

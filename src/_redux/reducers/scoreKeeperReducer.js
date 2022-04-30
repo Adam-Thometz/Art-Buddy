@@ -2,7 +2,8 @@ import { scoreKeeperActions } from "../actions/actionTypes";
 
 export const INITIAL_STATE = {
   students: [],
-  maxScore: 5,
+  winners: [],
+  gameOver: false,
   error: null
 }
 
@@ -11,7 +12,7 @@ const {
   REMOVE_STUDENT,
   ADD_POINT,
   REMOVE_POINT,
-  CHANGE_MAX_SCORE,
+  GAME_OVER,
   RESET_SCORES
 } = scoreKeeperActions;
 
@@ -29,28 +30,47 @@ export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
         points: 0
       };
       studentsWithNewStudent.push(newStudent);
-      return { ...state, students: studentsWithNewStudent, error: null };
+      return {
+        ...state,
+        students: studentsWithNewStudent,
+        error: null
+      };
 
     case REMOVE_STUDENT:
       const studentsMinusOneStudent = state.students.filter(
         student => student.name !== action.name
       );
-      return { ...state, students: studentsMinusOneStudent, error: null };
+      return {
+        ...state,
+        students: studentsMinusOneStudent,
+        winners: updateWinners(studentsMinusOneStudent),
+        error: null
+      };
 
     case ADD_POINT:
       const studentsWithAddedPoint = [ ...state.students ];
       const studentToAddIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithAddedPoint[studentToAddIdx].points++;
-      return { ...state, students: studentsWithAddedPoint, error: null };
-
+      return {
+        ...state,
+        students: studentsWithAddedPoint,
+        winners: updateWinners(studentsWithAddedPoint),
+        error: null
+      };
+      
     case REMOVE_POINT:
       const studentsWithSubtractedPoint = [ ...state.students ];
       const studentToSubtractIdx = state.students.findIndex(student => student.name === action.name);
       studentsWithSubtractedPoint[studentToSubtractIdx].points--;
-      return { ...state, students: studentsWithSubtractedPoint, error: null };
-
-    case CHANGE_MAX_SCORE:
-      return { ...state, maxScore: action.maxScore, error: null };
+      return {
+        ...state,
+        students: studentsWithSubtractedPoint,
+        winners: updateWinners(studentsWithSubtractedPoint),
+        error: null
+      };
+    
+    case GAME_OVER:
+      return { ...state, gameOver: action.gameOver };
     
     case RESET_SCORES:
       const resetScores = state.students.map(s => ({
@@ -58,9 +78,31 @@ export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
         points: 0,
         color: s.color
       }));
-      return { ...state, students: resetScores, error: null };
+      return {
+        ...state,
+        students: resetScores,
+        winners: [],
+        error: null
+      };
       
     default:
       return state;
   };
 };
+
+export function updateWinners(students) {
+  const winners = [];
+  let currWinningScore = 0;
+  for (let student of students) {
+    if (student.points > currWinningScore) {
+      winners.length = 0;
+      const { name, color } = student;
+      winners.push({name, color});
+      currWinningScore = student.points;
+    } else if (student.points === currWinningScore) {
+      const { name, color } = student;
+      winners.push({name, color});
+    }
+  }
+  return winners;
+}

@@ -1,15 +1,39 @@
 import React from 'react';
 
-import MaxScore from './max-score/MaxScore';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleGameOver } from '../_redux/actions/actions';
+
 import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';
+import Winners from './winners/Winners';
+import Button from '../_components/button/Button';
 
-const ScoreKeeper = () => {  
+const ScoreKeeper = () => { 
+  const dispatch = useDispatch()
+  const students = useSelector(state => state.scoreKeeper.students);
+  const gameOver = useSelector(state => state.scoreKeeper.gameOver);
+  const buttonStyles = {width: '20%', margin: '15px auto', padding: '15px'};
+
+  const endGame = () => {
+    dispatch(toggleGameOver(true));
+  }
+
   return (
     <div className="ScoreKeeper">
-      <MaxScore />
-      <NewStudentForm />
-      <Students />
+      {!gameOver ? (
+        <>
+          <NewStudentForm />
+          <Students />
+          {students.length ? 
+            <Button
+              small
+              otherStyles={buttonStyles}
+              colorId={2}
+              onClick={endGame}
+            >END GAME</Button>
+          : null}
+        </>
+      ) : <Winners />}
     </div>
   );
 };

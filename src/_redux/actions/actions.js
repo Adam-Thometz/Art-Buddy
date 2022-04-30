@@ -16,7 +16,7 @@ export const createWord = (wordInput, wordId) => ({
 
 export const addWord = () => ({
   type: wordToMusicActions.ADD_WORD
-})
+});
 
 export const fillLetter = (letter, note) => ({
   type: wordToMusicActions.FILL_LETTER,
@@ -27,24 +27,24 @@ export const fillLetter = (letter, note) => ({
 export const playNote = (word) => ({
   type: wordToMusicActions.PLAY_MELODY,
   word
-})
+});
 
 export const playMelody = (word) => ({
   type: wordToMusicActions.PLAY_MELODY,
   word
-})
+});
 
 export const changeScale = (scale, sound) => ({
   type: wordToMusicActions.CHANGE_SCALE,
   scale,
   sound
-})
+});
 
 export const changeSound = (scale, sound) => ({
   type: wordToMusicActions.CHANGE_SOUND,
   scale,
   sound
-})
+});
 
 ////////////////////////////////
 // Actions for Sequence Maker //
@@ -75,21 +75,21 @@ export const removeBlock = () => ({
 
 export const playSequence = () => ({
   type: sequenceMakerActions.PLAY_SEQUENCE
-})
+});
 
 export const playAllSequence = () => ({
   type: sequenceMakerActions.PLAY_ALL_SEQUENCE
-})
+});
 
 export const resetSequence = () => ({
   type: sequenceMakerActions.RESET_SEQUENCE
-})
+});
 
 export const setPitch = (id, pitch) => ({
   type: sequenceMakerActions.SET_PITCH,
   id,
   pitch
-})
+});
 
 /////////////////////////////////////////
 // Actions for What's That Instrument? //
@@ -98,12 +98,12 @@ export const setPitch = (id, pitch) => ({
 export const changeMode = (mode) => ({
   type: instrumentIdActions.CHANGE_MODE,
   mode
-})
+});
 
 export const changeFamily = (family) => ({
   type: instrumentIdActions.CHANGE_FAMILY,
   family
-})
+});
 
 
 //////////////////////////////
@@ -124,18 +124,18 @@ export const removeStudent = (name) => ({
 export const addPoint = (name) => ({
   type: scoreKeeperActions.ADD_POINT,
   name
-})
+});
 
 export const removePoint = (name) => ({
   type: scoreKeeperActions.REMOVE_POINT,
   name
-})
+});
 
-export const changeMaxScore = (maxScore) => ({
-  type: scoreKeeperActions.CHANGE_MAX_SCORE,
-  maxScore
+export const toggleGameOver = (gameOver) => ({
+  type: scoreKeeperActions.GAME_OVER,
+  gameOver
 })
 
 export const resetScores = () => ({
   type: scoreKeeperActions.RESET_SCORES
-})
+});
