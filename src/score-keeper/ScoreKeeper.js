@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleGameOver } from '../_redux/actions/actions';
+import { toggleGameOver } from '../_redux/actions';
 
 import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';

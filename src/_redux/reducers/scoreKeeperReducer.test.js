@@ -1,14 +1,6 @@
 import scoreKeeperReducer, { INITIAL_STATE, updateWinners } from './scoreKeeperReducer';
-import { scoreKeeperActions } from '../actions/actionTypes';
+import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores } from '../actions';
 import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
-
-beforeEach(() => {
-  scoreKeeperReducer(addedStudents, {});
-});
-
-afterEach(() => {
-  scoreKeeperReducer(undefined, {});
-});
 
 describe('updateWinners', () => {
   it('should determine winners', () => {
@@ -24,12 +16,7 @@ describe('Score Keeper reducer', () => {
   });
 
   it('should handle adding a student', () => {
-    const addAction = {
-      type: scoreKeeperActions.ADD_STUDENT,
-      name: 'Jake',
-      color: 'blue'
-    };
-    expect(scoreKeeperReducer(undefined, addAction)).toEqual({
+    expect(scoreKeeperReducer(undefined, addStudent({name: 'Jake', color: 'blue'}))).toEqual({
       ...INITIAL_STATE,
       students: [{
         name: 'Jake',
@@ -40,23 +27,14 @@ describe('Score Keeper reducer', () => {
   });
 
   it('should throw an error if adding a duplicate student', () => {
-    const addAction = {
-      type: scoreKeeperActions.ADD_STUDENT,
-      name: 'Jake',
-      color: 'blue'
-    };
-    expect(scoreKeeperReducer(addedStudents, addAction)).toEqual({
+    expect(scoreKeeperReducer(addedStudents, addStudent({name: 'Jake', color: 'blue'}))).toEqual({
       ...addedStudents,
       error: 'Student already in play!'
     });
   });
 
   it('should handle removing a student', () => {
-    const removeAction = {
-      type: scoreKeeperActions.REMOVE_STUDENT,
-      name: 'Jane'
-    }
-    expect(scoreKeeperReducer(addedStudents, removeAction)).toEqual({
+    expect(scoreKeeperReducer(addedStudents, removeStudent('Jane'))).toEqual({
       ...addedStudents,
       students: [{
         name: 'Jake',
@@ -67,41 +45,30 @@ describe('Score Keeper reducer', () => {
   });
 
   it('should handle adding a point', () => {
-    const addPointAction = {
-      type: scoreKeeperActions.ADD_POINT,
-      name: 'Jane'
-    };
-    const result = scoreKeeperReducer(addedStudents, addPointAction)
-    const testStudent = result.students.find(student => student.name === addPointAction.name);
+    const result = scoreKeeperReducer(addedStudents, addPoint('Jane'))
+    const testStudent = result.students.find(student => student.name === 'Jane');
     expect(testStudent.points).toEqual(4);
   });
   
   it('should handle removing a point', () => {
-    const removePointAction = {
-      type: scoreKeeperActions.REMOVE_POINT,
-      name: 'Jake'
-    };
-    const result = scoreKeeperReducer(addedStudents, removePointAction)
-    const testStudent = result.students.find(student => student.name === removePointAction.name);
+    const result = scoreKeeperReducer(addedStudents, removePoint('Jake'))
+    const testStudent = result.students.find(student => student.name === 'Jake');
     expect(testStudent.points).toEqual(3);
   });
 
   it('should handle toggling game over', () => {
-    const toggleGameOverAction = {
-      type: scoreKeeperActions.GAME_OVER,
-      gameOver: true
-    }
-    const result = scoreKeeperReducer(addedStudents, toggleGameOverAction);
+    const result = scoreKeeperReducer(addedStudents, toggleGameOver());
     expect(result.gameOver).toBe(true);
     expect(result.winners).toContainEqual({name:'Jake', color: 'blue'});
+    const result2 = scoreKeeperReducer(result, toggleGameOver());
+    expect(result2.gameOver).toBe(false);
   });
 
   it('should handle resetting scores', () => {
-    const resetScoresAction = {
-      type: scoreKeeperActions.RESET_SCORES
-    }
-    const result = scoreKeeperReducer(addedStudents, resetScoresAction);
+    const result = scoreKeeperReducer(addedStudents, resetScores());
+    console.log(result)
     const hasReset = result.students.every(student => student.points === 0)
+    console.log(hasReset)
     expect(hasReset).toBe(true);
   })
 });

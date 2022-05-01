@@ -1,4 +1,5 @@
-import { sequenceMakerActions } from "../actions/actionTypes";
+import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence, removeBlock, removeFromSequence, resetSequence, setPitch } from "../actions";
+import { createReducer } from "@reduxjs/toolkit";
 
 import soundInfo from "../../sequence-maker/_media/soundInfo";
 import pitches from "../../sequence-maker/_utils/pitchMap";
@@ -9,84 +10,56 @@ export const INITIAL_STATE = {
   sequence: [null, null, null, null],
 };
 
-const {
-  CHANGE_CATEGORY,
-  ADD_TO_SEQUENCE,
-  REMOVE_FROM_SEQUENCE,
-  ADD_BLOCK,
-  REMOVE_BLOCK,
-  PLAY_SEQUENCE,
-  PLAY_ALL_SEQUENCE,
-  RESET_SEQUENCE,
-  SET_PITCH
-} = sequenceMakerActions;
-
-export default function sequenceMakerReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case CHANGE_CATEGORY:
-      return { 
-        ...state, 
-        category: action.category
-      };
-
-    case ADD_TO_SEQUENCE:
+const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
+  builder
+    .addCase(changeCategory, (state, action) => {
+      state.category = action.payload;
+    })
+    .addCase(addToSequence, (state, action) => {
       const currIdx = state.sequence.indexOf(null);
-      if (currIdx === -1) {
-        return state;
-      };
-      const newSequenceWithAdd = [...state.sequence];
-      const block = { ...soundInfo[state.category][action.sound] };
+      if (currIdx === -1) return;
+      const block = { ...soundInfo[state.category][action.payload] };
       block.id = currIdx;
       block.pitch = 'medium';
-      newSequenceWithAdd[currIdx] = block;
-      return { ...state, sequence: newSequenceWithAdd  };
-
-    case REMOVE_FROM_SEQUENCE:
-      const newSequenceWithRemove = [...state.sequence];
-      newSequenceWithRemove[action.id] = null;
-      return { ...state, sequence: newSequenceWithRemove };
-    
-    case ADD_BLOCK:
-      const newBlockAdded = [...state.sequence];
-      newBlockAdded.push(null);
-      return { ...state, sequence: newBlockAdded };
-    
-    case REMOVE_BLOCK: 
-      const removedBlock = [...state.sequence];
-      removedBlock.pop();
-      return { ...state, sequence: removedBlock };
-
-    case PLAY_SEQUENCE:
+      state.sequence[currIdx] = block;
+    })
+    .addCase(removeFromSequence, (state, action) => {
+      const id = action.payload;
+      state.sequence[id] = null;
+    })
+    .addCase(addBlock, (state) => {
+      state.sequence.push(null);
+    })
+    .addCase(removeBlock, (state) => {
+      state.sequence.pop();
+    })
+    .addCase(playSequence, (state) => {
       const start = now();
       for (let i = 0; i < state.sequence.length; i++) {
-        const { sound, pitch } = state.sequence[i]
+        const { sound, pitch } = state.sequence[i];
         const seconds = i * 4;
         if (sound === null) {
           continue;
         } else {
           sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', start + seconds)
-        }
-      }
-      return state;
-
-    case PLAY_ALL_SEQUENCE:
-      const startAll = now();
+        };
+      };
+    })
+    .addCase(playAllSequence, (state) => {
+      const start = now();
       for (let i = 0; i < state.sequence.length; i++) {
         const { sound, pitch } = state.sequence[i];
         if (sound === null) continue;
-        sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', startAll);
+        sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', start)
       }
-      return state;
+    })
+    .addCase(resetSequence, (state) => {
+      state.sequence.fill(null);
+    })
+    .addCase(setPitch, (state, action) => {
+      const { id, pitch } = action.payload;
+      state.sequence[id].pitch = pitch;
+    })
+})
 
-    case RESET_SEQUENCE:
-      return { ...state, sequence: [null, null, null, null] }
-
-    case SET_PITCH:
-      const newSequenceDifferentPitch = [...state.sequence];
-      newSequenceDifferentPitch[action.id].pitch = action.pitch;
-      return { ...state, sequence: newSequenceDifferentPitch };
-
-    default:
-      return state;
-  };
-};
+export default sequenceMakerReducer;

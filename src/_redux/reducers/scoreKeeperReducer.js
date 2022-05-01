@@ -1,4 +1,5 @@
-import { scoreKeeperActions } from "../actions/actionTypes";
+import { createReducer } from "@reduxjs/toolkit";
+import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver } from "../actions";
 
 export const INITIAL_STATE = {
   students: [],
@@ -7,88 +8,50 @@ export const INITIAL_STATE = {
   error: null
 }
 
-const {
-  ADD_STUDENT,
-  REMOVE_STUDENT,
-  ADD_POINT,
-  REMOVE_POINT,
-  GAME_OVER,
-  RESET_SCORES
-} = scoreKeeperActions;
-
-export default function scoreKeeperReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case ADD_STUDENT:
-      const { name, color } = action;
+const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
+  builder
+    .addCase(addStudent, (state, action) => {
+      const { name, color } = action.payload;
       const duplicateStudent = state.students.find(student => student.name === name);
-      if (duplicateStudent) return { ...state, error: 'Student already in play!'};
-
-      const studentsWithNewStudent = [ ...state.students ];
-      const newStudent = {
-        name,
-        color,
+      if (duplicateStudent) {
+        state.error = 'Student already in play!';
+      } else {
+        const newStudent = { name, color, points: 0 };
+        state.students.push(newStudent);
+        state.error = null;
+      }
+    })
+    .addCase(removeStudent, (state, action) => {
+      const targetName = action.payload;
+      state.students = [ ...state.students.filter(student => student.name !== targetName) ];
+      state.winners = updateWinners(state.students);
+    })
+    .addCase(addPoint, (state, action) => {
+      const targetName = action.payload;
+      const targetIdx = state.students.findIndex(student => student.name === targetName);
+      state.students[targetIdx].points++;
+      state.winners = updateWinners(state.students);
+    })
+    .addCase(removePoint, (state, action) => {
+      const targetName = action.payload;
+      const targetIdx = state.students.findIndex(student => student.name === targetName);
+      state.students[targetIdx].points--;
+      state.winners = updateWinners(state.students);
+    })
+    .addCase(toggleGameOver, (state) => {
+      state.gameOver = !state.gameOver;
+    })
+    .addCase(resetScores, (state) => {
+      state.students = [...state.students.map(student => ({
+        name: student.name,
+        color: student.color,
         points: 0
-      };
-      studentsWithNewStudent.push(newStudent);
-      return {
-        ...state,
-        students: studentsWithNewStudent,
-        error: null
-      };
+      }))];
+      state.winners = updateWinners(state.students);
+    })
+})
 
-    case REMOVE_STUDENT:
-      const studentsMinusOneStudent = state.students.filter(
-        student => student.name !== action.name
-      );
-      return {
-        ...state,
-        students: studentsMinusOneStudent,
-        winners: updateWinners(studentsMinusOneStudent),
-        error: null
-      };
-
-    case ADD_POINT:
-      const studentsWithAddedPoint = [ ...state.students ];
-      const studentToAddIdx = state.students.findIndex(student => student.name === action.name);
-      studentsWithAddedPoint[studentToAddIdx].points++;
-      return {
-        ...state,
-        students: studentsWithAddedPoint,
-        winners: updateWinners(studentsWithAddedPoint),
-        error: null
-      };
-      
-    case REMOVE_POINT:
-      const studentsWithSubtractedPoint = [ ...state.students ];
-      const studentToSubtractIdx = state.students.findIndex(student => student.name === action.name);
-      studentsWithSubtractedPoint[studentToSubtractIdx].points--;
-      return {
-        ...state,
-        students: studentsWithSubtractedPoint,
-        winners: updateWinners(studentsWithSubtractedPoint),
-        error: null
-      };
-    
-    case GAME_OVER:
-      return { ...state, gameOver: action.gameOver };
-    
-    case RESET_SCORES:
-      const resetScores = state.students.map(s => ({
-        name: s.name,
-        points: 0,
-        color: s.color
-      }));
-      return {
-        ...state,
-        students: resetScores,
-        winners: [],
-        error: null
-      };
-      
-    default:
-      return state;
-  };
-};
+export default scoreKeeperReducer;
 
 export function updateWinners(students) {
   const winners = [];

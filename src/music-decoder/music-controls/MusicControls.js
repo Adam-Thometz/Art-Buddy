@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { changeScale, changeSound } from "../../_redux/actions/actions";
+import { changeScale, changeSound } from "../../_redux/actions";
 
 import './MusicControls.css'
 
@@ -18,14 +18,15 @@ const MusicControls = () => {
 
   const handleChangeScale = e => {
     const newScale = e.target.value;
-    dispatch(changeScale(newScale, instrumentIdCollection[currSound]));
+    const currInstrument = instrumentIdCollection[currSound]
+    dispatch(changeScale({newScale, currInstrument}));
     setCurrScale(newScale);
   };
 
   const handleChangeSound = e => {
-    const newSound = e.target.value;
-    dispatch(changeSound(currScale, instrumentIdCollection[newSound]));
-    setCurrSound(newSound);
+    const newInstrument = instrumentIdCollection[e.target.value];
+    dispatch(changeSound({currScale, newInstrument}));
+    setCurrSound(e.target.value);
   }
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { fillLetter } from "../../_redux/actions/actions";
+import { fillLetter } from "../../_redux/actions";
 
 import './AlphabetTable.css';
 
@@ -15,7 +15,7 @@ const AlphabetTable = () => {
   const colorLetter = e => {
     const letter = e.target.innerText;
     const note = e.target.classList[1];
-    dispatch(fillLetter(letter, note));
+    dispatch(fillLetter({letter, note}));
   }
   
   return (

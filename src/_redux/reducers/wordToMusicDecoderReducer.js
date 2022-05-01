@@ -1,82 +1,65 @@
-import { wordToMusicActions } from "../actions/actionTypes";
+import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, playNote } from "../actions";
+import { createReducer } from "@reduxjs/toolkit";
 
 import { now } from 'tone';
 import * as Tone from 'tone';
 
-const {
-  CREATE_WORD,
-  ADD_WORD,
-  FILL_LETTER,
-  PLAY_NOTE,
-  PLAY_MELODY,
-  CHANGE_SCALE,
-  CHANGE_SOUND
-} = wordToMusicActions
+const defaultSynth = generateSynth();
 
 export const INITIAL_STATE = {
   wordDisplay: [
     []
   ],
-  synth: generateSynth(),
+  synth: defaultSynth,
 };
 
-export default function wordToMusicDecoderReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case CREATE_WORD:
-      const newWordDisplay = [...state.wordDisplay];
-      const newWord = action.wordInput.toUpperCase().split('').map(letter => ({
+const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
+  builder
+    .addCase(addWord, (state) => {
+      state.wordDisplay.push([])
+    })
+    .addCase(createWord, (state, action) => {
+      const { input, id } = action.payload;
+      const newWord = input.toUpperCase().split('').map(letter => ({
         letter,
         note: null
       }));
-      newWordDisplay[action.wordId] = newWord.length ?
+      state.wordDisplay[id] = newWord.length ?
         newWord :
         [];
-      return { ...state, wordDisplay: newWordDisplay };
+    })
+    .addCase(fillLetter, (state, action) => {
+      const { letter, note } = action.payload;
+      const letterLocation = searchLetter(state.wordDisplay, letter);
+      if (!letterLocation.length) return;
 
-    case ADD_WORD:
-      const addWordInput = [...state.wordDisplay]
-      addWordInput.push([])
-      return { ...state, wordDisplay: addWordInput };
-
-    case FILL_LETTER:
-      const { letter, note } = action;
-      const wordDisplayWithFilledLetter = [...state.wordDisplay];
-      const letterLocation = searchLetter(wordDisplayWithFilledLetter, letter);
-      if (!letterLocation.length) {
-        return state;
-      }
       const wordIdx = letterLocation[0];
       const letterIdx = letterLocation[1];
-      wordDisplayWithFilledLetter[wordIdx][letterIdx].note = note;
+      state.wordDisplay[wordIdx][letterIdx].note = note;
       state.synth.triggerAttackRelease(`${note}3`, '4n');
-      return { ...state, wordDisplay: wordDisplayWithFilledLetter };
-
-    case PLAY_NOTE:
-      state.synth.triggerAttackRelease(`${action.note}3`, "4n")
-      return state;
-
-    case PLAY_MELODY:
+    })
+    .addCase(playNote, (state, action) => {
+      const note = action.payload;
+      state.synth.triggerAttackRelease(`${note}3`, "4n");
+    })
+    .addCase(playMelody, (state, action) => {
       const start = now();
-      const currWord = action.word;
+      const currWord = action.payload;
       for (let i = 0; i < currWord.length; i++) {
         const { note } = currWord[i];
         const seconds = i * 0.5;
-        state.synth.triggerAttackRelease(`${note}3`, "8n", start + seconds);
-      }
-      return state;
-
-    case CHANGE_SCALE:
-      const soundWithNewScale = generateSynth(action.scale, action.sound);
-      return { ...state, synth: soundWithNewScale};
-
-    case CHANGE_SOUND:
-      const newSound = generateSynth(action.scale, action.sound)
-      return { ...state, synth: newSound }
-
-    default:
-      return state;
-  };
-};
+        state.synth.triggerAttackRelease(`${note}3`, '8n', start+seconds);
+      };
+    })
+    .addCase(changeScale, (state, action) => {
+      const { newScale, currInstrument } = action.payload;
+      state.synth = generateSynth(newScale, currInstrument);
+    })
+    .addCase(changeSound, (state, action) => {
+      const { currScale, newInstrument } = action.payload;
+      state.synth = generateSynth(currScale, newInstrument);
+    });
+})
 
 export function searchLetter(wordDisplay, letter) {
   const result = []
@@ -105,3 +88,5 @@ export function generateSynth(pitch = 0, sample = null) {
   }
   return synth;
 }
+
+export default wordToMusicDecoderReducer;

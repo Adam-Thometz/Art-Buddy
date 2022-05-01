@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeCategory, addToSequence } from "../_redux/actions/actions";
+import { changeCategory, addToSequence } from "../_redux/actions";
 
 import Sequence from "./sequence/Sequence";
 import Dropdown from "../_components/dropdown/Dropdown";
@@ -22,12 +22,12 @@ const SequenceMaker = () => {
 
   const handleAddToSequence = e => {
     if (sequence.some(block => !block)) {
-      dispatch(addToSequence(e.currentTarget.classList[1]))
+      const sound = e.currentTarget.classList[1];
+      dispatch(addToSequence(sound));
     };
   }
 
   const options = soundInfo[category];
-  console.log(options);
 
   return (
     <div className="SequenceMaker">

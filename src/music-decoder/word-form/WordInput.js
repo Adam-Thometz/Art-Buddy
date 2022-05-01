@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { createWord } from "../../_redux/actions/actions";
+import { createWord } from "../../_redux/actions";
 
 import './WordInput.css';
 
@@ -29,7 +29,7 @@ const WordInput = ({ id }) => {
     if (errors.length) {
       setError(errors);
     } else {
-      dispatch(createWord(input, id));
+      dispatch(createWord({input, id}));
       if (error.length) setError([]);
     }
   };

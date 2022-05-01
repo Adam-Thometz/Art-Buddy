@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { resetScores, toggleGameOver } from "../../_redux/actions/actions";
+import { resetScores, toggleGameOver } from "../../_redux/actions";
 
 import './Winners.css';
 

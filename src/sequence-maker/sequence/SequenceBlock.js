@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 import { useDispatch } from "react-redux";
-import { removeFromSequence, setPitch } from "../../_redux/actions/actions";
+import { removeFromSequence, setPitch } from "../../_redux/actions";
 
 import './SequenceBlock.css';
 
@@ -17,7 +17,8 @@ const SequenceBlock = ({ block, borderColor }) => {
     dispatch(removeFromSequence(block.id));
   }
   const changePitch = pitch => {
-    dispatch(setPitch(block.id, pitch));
+    const id = block.id
+    dispatch(setPitch({id, pitch}));
   }
   const isPitch = pitch => block.pitch === pitch;
   const play = () => {
