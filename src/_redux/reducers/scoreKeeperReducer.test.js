@@ -41,17 +41,17 @@ describe('Score Keeper reducer', () => {
         color: 'blue',
         points: 4
       }]
-    })
+    });
   });
 
   it('should handle adding a point', () => {
-    const result = scoreKeeperReducer(addedStudents, addPoint('Jane'))
+    const result = scoreKeeperReducer(addedStudents, addPoint('Jane'));
     const testStudent = result.students.find(student => student.name === 'Jane');
     expect(testStudent.points).toEqual(4);
   });
   
   it('should handle removing a point', () => {
-    const result = scoreKeeperReducer(addedStudents, removePoint('Jake'))
+    const result = scoreKeeperReducer(addedStudents, removePoint('Jake'));
     const testStudent = result.students.find(student => student.name === 'Jake');
     expect(testStudent.points).toEqual(3);
   });
@@ -66,9 +66,7 @@ describe('Score Keeper reducer', () => {
 
   it('should handle resetting scores', () => {
     const result = scoreKeeperReducer(addedStudents, resetScores());
-    console.log(result)
-    const hasReset = result.students.every(student => student.points === 0)
-    console.log(hasReset)
+    const hasReset = result.students.every(student => student.points === 0);
     expect(hasReset).toBe(true);
   })
 });
