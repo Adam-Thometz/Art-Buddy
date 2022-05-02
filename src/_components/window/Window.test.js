@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../../_testUtils/renderWithRouter';
+import renderWithProvider from '../../_testUtils/renderWithProvider';
 import Window from './Window'
 
 describe('Window component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<Window />);
+    renderWithProvider(<Window />);
   })
 
   it('matches the snapshot of the button', () => {
-    const { asFragment } = renderWithRouter(<Window />);
+    const { asFragment } = renderWithProvider(<Window />);
     expect(asFragment()).toMatchSnapshot();
   })
 })

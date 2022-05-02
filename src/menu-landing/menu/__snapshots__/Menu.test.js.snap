@@ -6,15 +6,15 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     class="Menu"
   >
     <div
-      class="MenuNavbar-main"
+      class="WindowNavbar-main"
     >
       <span
-        class="MenuNavbar-button underlined"
+        class="WindowNavbar-button underlined"
       >
         GAMES
       </span>
       <span
-        class="MenuNavbar-button"
+        class="WindowNavbar-button"
       >
         TOOLS
       </span>

@@ -1,32 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux";
 
 import './Menu.css';
 
-import MenuNavbar from "../menu-navbar/MenuNavbar";
 import Button from "../../_components/button/Button";
 
 import menuOptions from "./menuOptions";
 import activities from "./activityList";
 
 const Menu = ({ type = null }) => {
-  const [category, setCategory] = useState('games');
+  const menu = useSelector(state => state.mainSettings.menu)
   const navigate = useNavigate();
-
   const getGames = (category) => (
     category === 'all' ?
       activities.filter(a => a.activityType === 'games') :
       activities.filter(a => a.genre === category)
   );
-
-  const createNav = () => (
-    !type ? <MenuNavbar category={category} setCategory={setCategory} /> : <MenuNavbar page={type} />
-  )
-
-  const options = !type ? menuOptions[category] : getGames(type);
+  const options = !type ? menuOptions[menu] : getGames(type);
   return (
     <div className="Menu">
-      {createNav()}
       <div className="Menu-options">
         {options.map((option, i) => (
           <Button

@@ -20,25 +20,25 @@ const AppRoutes = () => {
     <Routes>
       <Route index element={<Window small><LandingPage /></Window>} />
       {/* MENUS */}
-      <Route path={urls.artGames} element={<Window small><Menu type={'art'} /></Window>} />
-      <Route path={urls.musicGames} element={<Window small><Menu type={'music'} /></Window>} />
-      <Route path={urls.allGames} element={<Window small><Menu type={'all'} /></Window>} />
+      <Route path={urls.artGames} element={<Window small page='ART GAMES'><Menu type={'art'} /></Window>} />
+      <Route path={urls.musicGames} element={<Window small page='MUSIC GAMES'><Menu type={'music'} /></Window>} />
+      <Route path={urls.allGames} element={<Window small page='ALL GAMES'><Menu type={'all'} /></Window>} />
 
       {/* MUSIC GAMES */}
       {/* Word To Music Decoder */}
-      <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
+      <Route path={urls.wordToMusicUrl} element={<Window page='WORD-TO-MUSIC DECODER'><WordToMusic /></Window>} />
       {/* Sequence Maker */}
-      <Route path={urls.sequencerUrl} element={<Window><SequenceMaker /></Window>} />
+      <Route path={urls.sequencerUrl} element={<Window page='SEQUENCE MAKER'><SequenceMaker /></Window>} />
       {/* What's That Instrument? */}
-      <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
+      <Route path={urls.instrumentIdUrl} element={<Window page='INSTRUMENT ID'><InstrumentId /></Window>} />
         {/* Learn */}
-        <Route path={instrumentIdUrls.learnUrl} element={<Window><Learn /></Window>}/>
-        <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window><LearnFamilyPage /></Window>}/>
-        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window><Instrument /></Window>}/>
+        <Route path={instrumentIdUrls.learnUrl} element={<Window page='INSTRUMENT ID: LEARN'><Learn /></Window>}/>
+        <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window page='INSTRUMENT ID: LEARN'><LearnFamilyPage /></Window>}/>
+        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window page='INSTRUMENT ID: LEARN'><Instrument /></Window>}/>
       
       {/* TOOLS */}
       {/* Score Keeper */}
-      <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />
+      <Route path={urls.scoreKeeperUrl} element={<Window page='SCORE KEEPER'><ScoreKeeper /></Window>} />
       
       {/* GENERAL 404 HANDLER */}
       <Route path="*" element={<Window small><NotFound /></Window>}/>

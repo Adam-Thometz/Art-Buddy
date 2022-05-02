@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MenuNavbar component matches the snapshot of the MenuNavbar 1`] = `
+exports[`WindowNavbar component matches the snapshot of the WindowNavbar 1`] = `
 <DocumentFragment>
   <div
-    class="MenuNavbar-main"
+    class="WindowNavbar-main"
   >
     <span
-      class="MenuNavbar-button"
+      class="WindowNavbar-button"
     >
       GAMES
     </span>
     <span
-      class="MenuNavbar-button"
+      class="WindowNavbar-button"
     >
       TOOLS
     </span>
