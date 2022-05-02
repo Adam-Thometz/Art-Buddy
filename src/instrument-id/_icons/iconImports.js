@@ -8,20 +8,24 @@ import listeningSkills from './play/listening-skills.png';
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
+import tromboneIcon from './instruments/brass/trombone.png';
 import frenchHornIcon from './instruments/brass/french-horn.png';
+import tubaIcon from './instruments/brass/tuba.png';
 
 // Electronic instruments
 import electricGuitarIcon from './instruments/electronic/electric-guitar.png';
 import electricBassIcon from './instruments/electronic/electric-bass.png';
 import synthIcon from './instruments/electronic/synth.png';
 import samplerIcon from './instruments/electronic/sampler.png';
+import thereminIcon from './instruments/electronic/theremin.png';
 
 // Percussion instruments
 import djembeIcon from './instruments/percussion/djembe.png';
 import xylophoneIcon from './instruments/percussion/xylophone.png';
 import tambourineIcon from './instruments/percussion/tambourine.png';
 import drumSetIcon from './instruments/percussion/drum-set.png';
-import triangleIcon from './instruments/percussion/triangle.png'
+import triangleIcon from './instruments/percussion/triangle.png';
+import congaIcon from './instruments/percussion/conga.png';
 
 // String instruments
 import banjoIcon from './instruments/strings/banjo.png';
@@ -31,6 +35,8 @@ import violinIcon from './instruments/strings/violin.png';
 import acousticGuitarIcon from './instruments/strings/acoustic-guitar.png';
 
 // Woodwind instruments
+import fluteIcon from './instruments/woodwind/flute.png';
+import bassoonIcon from './instruments/woodwind/bassoon.png';
 import clarinetIcon from './instruments/woodwind/clarinet.png';
 import saxophoneIcon from './instruments/woodwind/saxophone.png';
 import panFluteIcon from './instruments/woodwind/pan-flute.png';
@@ -44,7 +50,6 @@ import tenorIcon from './instruments/voice/tenor.png'
 import baritoneIcon from './instruments/voice/baritone.png'
 import bassIcon from './instruments/voice/bass.png'
 
-
 export {
   playIcon,
   learnIcon,
@@ -52,15 +57,19 @@ export {
   listeningSkills,
   trumpetIcon,
   frenchHornIcon,
+  tromboneIcon,
+  tubaIcon,
   electricBassIcon,
   electricGuitarIcon,
   synthIcon,
   samplerIcon,
+  thereminIcon,
   djembeIcon,
   xylophoneIcon,
   tambourineIcon,
   drumSetIcon,
   triangleIcon,
+  congaIcon,
   banjoIcon,
   harpIcon,
   pianoIcon,
@@ -69,6 +78,8 @@ export {
   clarinetIcon,
   saxophoneIcon,
   panFluteIcon,
+  fluteIcon,
+  bassoonIcon,
   voiceMainIcon,
   sopranoIcon,
   mezzoSopranoIcon,

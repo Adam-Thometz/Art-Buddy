@@ -29,14 +29,14 @@ const learnInstrumentOptions = {
       },
       {
         name: 'trombone',
-        // icon: icons.tromboneIcon,
+        icon: icons.tromboneIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.trombone),
         videoUrl: ''
       },
       {
         name: 'tuba',
-        // icon: icons.tubaIcon,
+        icon: icons.tubaIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.tuba),
         videoUrl: ''
@@ -76,7 +76,7 @@ const learnInstrumentOptions = {
       },
       {
         name: 'theremin',
-        // icon: icons.thereminIcon,
+        icon: icons.thereminIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.theremin),
         videoUrl: ''
@@ -123,7 +123,7 @@ const learnInstrumentOptions = {
       },
       {
         name: 'conga',
-        // icon: icons.congaIcon,
+        icon: icons.congaIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.conga),
         videoUrl: ''
@@ -182,14 +182,14 @@ const learnInstrumentOptions = {
       },
       {
         name: 'bassoon',
-        // icon: icons.bassoonIcon,
+        icon: icons.bassoonIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.bassoon),
         videoUrl: ''
       },
       {
         name: 'flute',
-        // icon: icons.fluteIcon,
+        icon: icons.fluteIcon,
         description: 'lorum ipsum dolor and all that',
         sound: sample(sounds.flute),
         videoUrl: ''
