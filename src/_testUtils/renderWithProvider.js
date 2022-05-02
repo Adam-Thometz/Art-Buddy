@@ -1,9 +1,10 @@
-import rootReducer from '../_redux/reducers/rootReducer';
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import renderWithRouter from './renderWithRouter';
 
-const mockReduxStore = createStore(rootReducer)
+import renderWithRouter from './renderWithRouter';
+import mockReducer from './mocks/mockRootReducer';
+
+const mockReduxStore = configureStore({ reducer: mockReducer });
 
 const renderWithProvider = (ui) => {
   return (
