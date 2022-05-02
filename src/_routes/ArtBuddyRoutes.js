@@ -10,6 +10,7 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import Learn from "../instrument-id/learn/learn-main/Learn";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
   import Instrument from "../instrument-id/learn/instruments/Instrument";
+  import Play from '../instrument-id/play/play-main/Play';
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
@@ -35,13 +36,15 @@ const AppRoutes = () => {
         <Route path={instrumentIdUrls.learnUrl} element={<Window page='INSTRUMENT ID: LEARN'><Learn /></Window>}/>
         <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window page='INSTRUMENT ID: LEARN'><LearnFamilyPage /></Window>}/>
         <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window page='INSTRUMENT ID: LEARN'><Instrument /></Window>}/>
+        {/* Play */}
+        <Route path={instrumentIdUrls.playUrl} element={<Window page='INSTRUMENT ID: PLAY'><Play /></Window>} />
       
       {/* TOOLS */}
       {/* Score Keeper */}
       <Route path={urls.scoreKeeperUrl} element={<Window page='SCORE KEEPER'><ScoreKeeper /></Window>} />
       
       {/* GENERAL 404 HANDLER */}
-      <Route path="*" element={<Window small><NotFound /></Window>}/>
+      <Route path="*" element={<Window small page="UH OH!"><NotFound /></Window>}/>
     </Routes>
   );
 };

@@ -14,6 +14,8 @@ export const instrumentIdUrls = {
   learnFamilyUrl: '/instrument-id/learn/:family',
   learnInstrumentUrl: '/instrument-id/learn/:family/:instrument',
   playUrl: '/instrument-id/play',
+  playListeningUrl: '/instrument-id/play/listening-skills',
+  playSongMakerUrl: '/instrument-id/play/song-maker',
 }
 
 export default urls;
