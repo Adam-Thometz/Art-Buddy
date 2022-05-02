@@ -3,6 +3,7 @@ import {
   testWordDisplayOneWord,
   testWordDisplayTwoWords
 } from '../../_testUtils/test-states/wordToMusicTestState';
+jest.mock('tone');
 
 describe('searchLetters function', () => {
   it('should work with one word', () => {

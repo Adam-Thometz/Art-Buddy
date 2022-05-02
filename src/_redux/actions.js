@@ -1,5 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
+export const changeMenuGames = createAction('changeMenuGames');
+
 export const addWord = createAction('addWord');
 export const createWord = createAction('createWord');
 export const fillLetter = createAction('fillLetter');
