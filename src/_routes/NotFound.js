@@ -10,7 +10,6 @@ const NotFound = () => {
   }
   return (
     <div className="NotFound">
-      <h1>UH OH!</h1>
       <p>Are you lost? We couldn't find the page you were looking for</p>
       <Button onClick={goHome} colorId={0}>RETURN TO HOME PAGE</Button>
     </div>
