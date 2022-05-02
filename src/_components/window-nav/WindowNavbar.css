@@ -13,6 +13,7 @@
 .WindowNavbar-button {
   font-size: 3rem;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 
 .WindowNavbar-label {
@@ -21,6 +22,8 @@
 }
 
 .underlined {
-  border-bottom: 10px solid transparent;
-  border-image: url(_icons/underline.png) 17;
+  background-image: url(_icons/underline.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
 }
