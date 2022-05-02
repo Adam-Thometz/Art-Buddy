@@ -11,6 +11,7 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
   import Instrument from "../instrument-id/learn/instruments/Instrument";
   import Play from '../instrument-id/play/play-main/Play';
+  import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
@@ -38,6 +39,7 @@ const AppRoutes = () => {
         <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window page='INSTRUMENT ID: LEARN'><Instrument /></Window>}/>
         {/* Play */}
         <Route path={instrumentIdUrls.playUrl} element={<Window page='INSTRUMENT ID: PLAY'><Play /></Window>} />
+        <Route path={instrumentIdUrls.playListeningUrl} element={<Window page='INSTRUMENT ID: PLAY'><ListeningSkills /></Window>} />
       
       {/* TOOLS */}
       {/* Score Keeper */}
