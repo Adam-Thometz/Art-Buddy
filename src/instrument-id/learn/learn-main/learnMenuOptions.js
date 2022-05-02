@@ -1,4 +1,4 @@
-import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon } from "../../_icons/iconImports";
+import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon, voiceMainIcon } from "../../_icons/iconImports";
 
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
@@ -27,6 +27,11 @@ const learnMenuOptions = [
     name: 'WOODWIND',
     icon: clarinetIcon,
     url: `${instrumentIdUrls.learnUrl}/woodwind`
+  },
+  {
+    name: 'VOICE',
+    icon: voiceMainIcon,
+    url: `${instrumentIdUrls.learnUrl}/voice`
   }
 ]
 

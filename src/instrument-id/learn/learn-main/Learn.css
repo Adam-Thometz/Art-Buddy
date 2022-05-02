@@ -1,4 +1,20 @@
-.Learn-options {
+.Learn {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+.Learn-header {
+  font-size: 3rem;
+  width: 42%;
+  border-right: 1px solid #4D4F5E;
+}
+
+.Learn-options {
+  width: 58%;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 50%);
 }

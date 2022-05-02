@@ -1,0 +1,22 @@
+.Instrument {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+.Instrument-name {
+  width: 42%;
+  font-size: 3rem;
+  border-right: 1px solid #4D4F5E;
+}
+
+.Instrument-information {
+  width: 58%;
+  
+}
+
+.Instrument-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}

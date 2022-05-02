@@ -11,7 +11,7 @@ const InstrumentId = () => {
   const navigate = useNavigate();
   return (
     <div className="InstrumentId">
-      <div className="InstrumentIdMenu">
+      <div className="InstrumentId">
         <h1>MAIN MENU</h1>
         <p>Let's learn about different instruments! Click PLAY to play different instruments and click LEARN to learn about and listen to different instruments</p>
         <Options width="60%">

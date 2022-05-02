@@ -21,6 +21,7 @@ import djembeIcon from './instruments/percussion/djembe.png';
 import xylophoneIcon from './instruments/percussion/xylophone.png';
 import tambourineIcon from './instruments/percussion/tambourine.png';
 import drumSetIcon from './instruments/percussion/drum-set.png';
+import triangleIcon from './instruments/percussion/triangle.png'
 
 // String instruments
 import banjoIcon from './instruments/strings/banjo.png';
@@ -33,6 +34,16 @@ import acousticGuitarIcon from './instruments/strings/acoustic-guitar.png';
 import clarinetIcon from './instruments/woodwind/clarinet.png';
 import saxophoneIcon from './instruments/woodwind/saxophone.png';
 import panFluteIcon from './instruments/woodwind/pan-flute.png';
+
+// Voice icons
+import voiceMainIcon from './instruments/voice/main.png';
+import sopranoIcon from './instruments/voice/soprano.png'
+import mezzoSopranoIcon from './instruments/voice/mezzo-soprano.png'
+import altoIcon from './instruments/voice/alto.png'
+import tenorIcon from './instruments/voice/tenor.png'
+import baritoneIcon from './instruments/voice/baritone.png'
+import bassIcon from './instruments/voice/bass.png'
+
 
 export {
   playIcon,
@@ -49,6 +60,7 @@ export {
   xylophoneIcon,
   tambourineIcon,
   drumSetIcon,
+  triangleIcon,
   banjoIcon,
   harpIcon,
   pianoIcon,
@@ -56,5 +68,12 @@ export {
   acousticGuitarIcon,
   clarinetIcon,
   saxophoneIcon,
-  panFluteIcon
+  panFluteIcon,
+  voiceMainIcon,
+  sopranoIcon,
+  mezzoSopranoIcon,
+  altoIcon,
+  tenorIcon,
+  baritoneIcon,
+  bassIcon
 }
