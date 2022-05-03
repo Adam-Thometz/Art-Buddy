@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import './InstrumentId.css';
+
 import Icon from "../_components/icon/Icon";
 import Options from "../_components/option/Options";
 
@@ -11,14 +13,11 @@ const InstrumentId = () => {
   const navigate = useNavigate();
   return (
     <div className="InstrumentId">
-      <div className="InstrumentId">
-        <h1>MAIN MENU</h1>
-        <p>Let's learn about different instruments! Click PLAY to play different instruments and click LEARN to learn about and listen to different instruments</p>
-        <Options width="60%">
-          <Icon icon={playIcon} text="PLAY" onClick={() => navigate(instrumentIdUrls.playUrl)} />
-          <Icon icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />
-        </Options>
-      </div>
+      <p className="InstrumentId-instructions">Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills</p>
+      <Options width="60%">
+        <Icon icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />
+        <Icon icon={playIcon} text="PLAY" onClick={() => navigate(instrumentIdUrls.playUrl)} />
+      </Options>
     </div>
   );
 };
