@@ -5,9 +5,6 @@ exports[`Welcome component matches the snapshot of the welcome page 1`] = `
   <div
     class="Welcome"
   >
-    <h1>
-      WELCOME TO ARTBUDDY!
-    </h1>
     <div
       class="Welcome-description"
     >
@@ -18,12 +15,12 @@ exports[`Welcome component matches the snapshot of the welcome page 1`] = `
         Click below to get started
       </p>
     </div>
-    <span
+    <button
       class="Button regular"
       style="border-color: #89eb0a;"
     >
       LET'S GO!
-    </span>
+    </button>
   </div>
 </DocumentFragment>
 `;

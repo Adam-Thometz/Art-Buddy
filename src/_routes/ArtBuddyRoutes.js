@@ -20,7 +20,7 @@ import urls, { instrumentIdUrls } from "./routeUrls";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route index element={<Window small><LandingPage /></Window>} />
+      <Route index element={<LandingPage />} />
       {/* MENUS */}
       <Route path={urls.artGames} element={<Window small page='ART GAMES'><Menu type={'art'} /></Window>} />
       <Route path={urls.musicGames} element={<Window small page='MUSIC GAMES'><Menu type={'music'} /></Window>} />

@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../_testUtils/renderWithRouter';
+import renderWithProvider from '../_testUtils/renderWithProvider';
 import LandingPage from './LandingPage'
 
 describe('LandingPage component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<LandingPage />);
+    renderWithProvider(<LandingPage />);
   })
 
   it('matches the snapshot of the landing page displaying the welcome page', () => {
-    const { asFragment } = renderWithRouter(<LandingPage />);
+    const { asFragment } = renderWithProvider(<LandingPage />);
     expect(asFragment()).toMatchSnapshot();
   })
 })
