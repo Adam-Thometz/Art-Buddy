@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './Dropdown.css';
 
-const Dropdown = ({ labelText, onChange, options, defaultValue }) => {
+import downArrowIcon from './_icons/down-arrow.png';
+
+const Dropdown = ({ labelText, onClick, options, borderColor }) => {
+  const [displayLabelText, setDisplayLabelText] = useState(labelText)
+  const handleChangeLabel = e => {
+    setDisplayLabelText(e.target.textContent)
+  };
+  const downArrow = <img src={downArrowIcon} alt='' />
   return (
     <div className="Dropdown">
-      <label className="Dropdown-label">{labelText}: </label>
-      <select defaultValue={defaultValue} onChange={onChange}>
+      <span className='Dropdown-label' style={{borderColor}}>{displayLabelText} {downArrow}</span>
+      <div className='Dropdown-options' onClick={onClick}>
         {Object.keys(options).map(value => (
-          <option value={value}>{options[value]}</option>
+          <p className='Dropdown-option' onClick={handleChangeLabel} id={value}>{options[value]}</p>
         ))}
-      </select>
+      </div>
     </div>
   );
 };

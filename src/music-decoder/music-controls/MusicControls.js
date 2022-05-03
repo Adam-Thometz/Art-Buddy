@@ -17,31 +17,29 @@ const MusicControls = () => {
   const dispatch = useDispatch();
 
   const handleChangeScale = e => {
-    const newScale = e.target.value;
+    const newScale = +e.target.id;
     const currInstrument = instrumentIdCollection[currSound]
     dispatch(changeScale({newScale, currInstrument}));
     setCurrScale(newScale);
   };
 
   const handleChangeSound = e => {
-    const newInstrument = instrumentIdCollection[e.target.value];
+    const newInstrument = instrumentIdCollection[e.target.id];
     dispatch(changeSound({currScale, newInstrument}));
-    setCurrSound(e.target.value);
+    setCurrSound(e.target.id);
   }
 
   return (
     <div className="MusicControls">
       <Dropdown
         labelText='SELECT SCALE'
-        onChange={handleChangeScale}
+        onClick={handleChangeScale}
         options={scales}
-        defaultValue={0}
       />
       <Dropdown
         labelText='SELECT SOUND'
-        onChange={handleChangeSound}
+        onClick={handleChangeSound}
         options={instruments}
-        defaultValue='synth'
       />
     </div>
   );

@@ -10,11 +10,11 @@ import './WordToMusic.css';
 const WordToMusic = () => {
   return (
     <div className="WordToMusic">
+      <MusicControls />
       <div className='WordToMusic-form-chart-wrapper'>
         <AlphabetTable />
         <WordForm />
       </div>
-      <MusicControls />
       <WordList />
     </div>
   );

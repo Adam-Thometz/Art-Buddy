@@ -1,0 +1,40 @@
+.Dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 15px 0;
+  width: 200px;
+}
+
+.Dropdown-label {
+  border: 5px solid;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.Dropdown-label img {
+  height: 12px;
+  width: 18px;
+}
+
+.Dropdown-options {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  font-size: 1rem;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.Dropdown:hover .Dropdown-options {
+  display: block;
+}
+
+.Dropdown-option {
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.Dropdown-option:hover {
+  background-color: pink;
+}

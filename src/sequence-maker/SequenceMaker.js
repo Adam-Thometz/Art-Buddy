@@ -17,7 +17,7 @@ const SequenceMaker = () => {
   const dispatch = useDispatch();
 
   const handleChangeCategory = e => {
-    dispatch(changeCategory(e.target.value));
+    dispatch(changeCategory(e.target.id));
   }
 
   const handleAddToSequence = e => {
@@ -33,7 +33,7 @@ const SequenceMaker = () => {
     <div className="SequenceMaker">
       <Dropdown
         labelText="SELECT A SOUND CATEGORY"
-        onChange={handleChangeCategory}
+        onClick={handleChangeCategory}
         options={categories}
       />
       {category ? (
