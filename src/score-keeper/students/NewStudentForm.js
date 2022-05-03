@@ -21,7 +21,7 @@ const NewStudentForm = () => {
   };
 
   const handleChangeColor = e => {
-    setColor(e.target.value.replace('hex', '#'));
+    setColor(e.target.id.replace('hex', '#'));
   };
 
   const handleSubmit = () => {
@@ -45,7 +45,7 @@ const NewStudentForm = () => {
       </div>
       <Dropdown
         labelText="PICK A COLOR"
-        onChange={handleChangeColor}
+        onClick={handleChangeColor}
         options={colorOptions}
         defaultValue='hexFFFFFF'
       />
