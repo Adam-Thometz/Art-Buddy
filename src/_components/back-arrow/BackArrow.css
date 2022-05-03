@@ -3,9 +3,20 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 2rem;
+  color: #4D4F5E;
+  font-family: 'Chelsea Market', 'Nunito', sans-serif;
+  z-index: 50;
 }
 
-.BackArrow img {
+.BackArrow-img {
   height: 65px;
   width: 73px;
+}
+
+.BackArrow-text {
+  position: absolute;
+  top: 65px;
 }

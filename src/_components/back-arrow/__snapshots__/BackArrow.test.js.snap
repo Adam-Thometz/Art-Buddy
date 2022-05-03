@@ -2,16 +2,19 @@
 
 exports[`BackArrow component matches the snapshot of the back arrow 1`] = `
 <DocumentFragment>
-  <div
+  <button
     class="BackArrow"
   >
     <img
       alt=""
+      class="BackArrow-img"
       src="[object Object]"
     />
-    <span>
+    <span
+      class="BackArrow-text"
+    >
       BACK
     </span>
-  </div>
+  </button>
 </DocumentFragment>
 `;

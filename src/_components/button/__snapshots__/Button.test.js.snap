@@ -2,7 +2,7 @@
 
 exports[`Button component matches the snapshot of the button 1`] = `
 <DocumentFragment>
-  <span
+  <button
     class="Button regular"
   />
 </DocumentFragment>

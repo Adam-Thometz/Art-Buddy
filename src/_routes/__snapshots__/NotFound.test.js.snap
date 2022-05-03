@@ -8,12 +8,12 @@ exports[`NotFound component matches the snapshot of the not found page 1`] = `
     <p>
       Are you lost? We couldn't find the page you were looking for
     </p>
-    <span
+    <button
       class="Button regular"
       style="border-color: #89eb0a;"
     >
       RETURN TO HOME PAGE
-    </span>
+    </button>
   </div>
 </DocumentFragment>
 `;

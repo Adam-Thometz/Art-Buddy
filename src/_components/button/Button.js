@@ -1,6 +1,6 @@
 import React from "react";
 
-import './Button.css'
+import './Button.css';
 
 import colors from "./colorOrder";
 
@@ -15,14 +15,14 @@ const Button = ({
 }) => {
   const borderColor = colors[colorId]
   return (
-    <span
+    <button
       className={`Button ${small ? 'small' : 'regular'}${selected ? ' selected' : ''}`}
       onClick={onClick}
       style={{borderColor, ...otherStyles}}
     >
       {icon ? <img src={icon} alt='' /> : null}
       {children}
-    </span>
+    </button>
   );
 };
 

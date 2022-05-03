@@ -26,8 +26,8 @@ const WindowNavbar = ({ page = null }) => {
 
   const regularPage = () => (
     <div className="WindowNavbar-games">
-      <BackArrow />
-      <span className="WindowNavbar-label">{page}</span>
+      {page === 'WELCOME TO ART BUDDY!' ? null : <BackArrow />}
+      <h1 className="WindowNavbar-label">{page}</h1>
     </div>
   );
 
