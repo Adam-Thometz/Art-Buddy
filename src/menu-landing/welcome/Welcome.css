@@ -1,5 +1,15 @@
+.Welcome {
+  display: flex;
+  flex-direction: column;
+}
+
 .Welcome-description {
   text-align: left;
   width: 90%;
+  margin: 0 auto;
+}
+
+.Welcome button {
+  width: 50%;
   margin: 0 auto;
 }
