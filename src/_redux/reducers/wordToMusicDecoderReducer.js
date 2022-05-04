@@ -4,13 +4,14 @@ import { createReducer } from "@reduxjs/toolkit";
 import { now } from 'tone';
 import * as Tone from 'tone';
 
-const defaultSynth = generateSynth();
+// const defaultSynth = generateSynth();
 
 export const INITIAL_STATE = {
   wordDisplay: [
     []
   ],
-  synth: defaultSynth,
+  synth: null,
+  scale: null
 };
 
 const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
