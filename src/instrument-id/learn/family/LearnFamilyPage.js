@@ -28,7 +28,7 @@ const LearnFamilyPage = () => {
             icon={instrument.icon}
             size='150px'
             text={instrument.name.toUpperCase()}
-            onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.replace(' ', '-')}`)}
+            onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)}
           />
         ))}
       </div>
