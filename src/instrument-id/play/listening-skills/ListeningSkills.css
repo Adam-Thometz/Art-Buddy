@@ -11,11 +11,32 @@
   border-right: 1px solid #4D4F5E;
 }
 
-.ListeningSkills-levels {
+.ListeningSkills-levels-report-cards {
   width: 58%;
   height: 100%;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+.ListeningSkills-level {
+  display: flex;
+}
+
+.ListeningSkills-report-card {
+  display: flex;
+  align-items: center;
+}
+
+.ListeningSkills-report-card img {
+  width: 48px;
+  height: 72px;
+}
+
+.ListeningSkills-report-card p {
+  text-align: left;
+  padding-left: 10px;
+  width: 88px;
+  font-size: 1.2rem;
 }

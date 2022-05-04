@@ -5,6 +5,7 @@ import learnIcon from './main/learn.png';
 // Play icons
 import songMaker from './play/song-maker.png';
 import listeningSkills from './play/listening-skills.png';
+import reportCard from './play/report-card.png';
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
@@ -55,6 +56,7 @@ export {
   learnIcon,
   songMaker,
   listeningSkills,
+  reportCard,
   trumpetIcon,
   frenchHornIcon,
   tromboneIcon,
