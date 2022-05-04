@@ -14,34 +14,34 @@ const learnInstrumentOptions = {
   brass: {
     main: icons.trumpetIcon,
     instruments: [{
-        name: 'trumpet',
+        name: 'TRUMPET',
         icon: icons.trumpetIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['BRASS'],
+        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sample(sounds.trumpet),
         videoUrl: ''
       },
       {
-        name: 'french horn',
+        name: 'FRENCH HORN',
         icon: icons.frenchHornIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['BRASS'],
+        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sample(sounds.frenchHorn),
         videoUrl: ''
       },
       {
-        name: 'trombone',
+        name: 'TROMBONE',
         icon: icons.tromboneIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['BRASS'],
+        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sample(sounds.trombone),
         videoUrl: ''
       },
       {
-        name: 'tuba',
+        name: 'TUBA',
         icon: icons.tubaIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['BRASS'],
+        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sample(sounds.tuba),
         videoUrl: ''
       },
@@ -51,42 +51,42 @@ const learnInstrumentOptions = {
     main: icons.synthIcon,
     instruments: [
       {
-        name: 'electric guitar',
+        name: 'ELECTRIC GUITAR',
         icon: icons.electricGuitarIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sample(sounds.electricGuitar),
         videoUrl: ''
       },
       {
-        name: 'electric bass',
+        name: 'ELECTRIC BASS',
         icon: icons.electricBassIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick or fingers',
         sound: sample(sounds.electricBass),
         videoUrl: ''
       },
       {
-        name: 'synthesizer',
+        name: 'SYNTHESIZER',
         icon: icons.synthIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
+        howToPlay: 'adjusting knobs and/or pressing keys',
         sound: sample(sounds.synthesizer),
         videoUrl: ''
       },
       {
-        name: 'sampler',
+        name: 'SAMPLER',
         icon: icons.samplerIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
+        howToPlay: 'pressing buttons on the instrument',
         sound: sample(sounds.sampler),
         videoUrl: ''
       },
       {
-        name: 'theremin',
+        name: 'THEREMIN',
         icon: icons.thereminIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['METAL', 'ELECTRICITY', 'HEAT SENSOR'],
+        howToPlay: 'waving your hands back and forth from the antenna',
         sound: sample(sounds.theremin),
         videoUrl: ''
       },
@@ -96,50 +96,50 @@ const learnInstrumentOptions = {
     main: icons.drumSetIcon,
     instruments: [
       {
-        name: 'djembe',
+        name: 'DJEMBE',
         icon: icons.djembeIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'ANIMAL SKIN'],
+        howToPlay: 'hitting the animal skin',
         sound: sample(sounds.djembe),
         videoUrl: ''
       },
       {
-        name: 'drum set',
+        name: 'DRUM SET',
         icon: icons.drumSetIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'METAL'],
+        howToPlay: 'using drum sticks to hit different parts of the set',
         sound: sample(sounds.drumSet),
         videoUrl: ''
       },
       {
-        name: 'tambourine',
+        name: 'TAMBOURINE',
         icon: icons.tambourineIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'METAL'],
+        howToPlay: 'shaking it!',
         sound: sample(sounds.tambourine),
         videoUrl: ''
       },
       {
-        name: 'xylophone',
+        name: 'XYLOPHONE',
         icon: icons.xylophoneIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD'],
+        howToPlay: 'hitting different blocks with a mallet',
         sound: sample(sounds.xylophone),
         videoUrl: ''
       },
       {
-        name: 'triangle',
+        name: 'TRIANGLE',
         icon: icons.triangleIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['METAL'],
+        howToPlay: 'hitting it with a metal stick',
         sound: sample(sounds.triangle),
         videoUrl: ''
       },
       {
-        name: 'conga',
+        name: 'CONGA',
         icon: icons.congaIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'ANIMAL SKIN'],
+        howToPlay: 'hitting the animal skin',
         sound: sample(sounds.conga),
         videoUrl: ''
       },
@@ -149,42 +149,42 @@ const learnInstrumentOptions = {
     main: icons.harpIcon,
     instruments: [
       {
-        name: 'acoustic guitar',
+        name: 'ACOUSTIC GUITAR',
         icon: icons.acousticGuitarIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD'],
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sample(sounds.acousticGuitar),
         videoUrl: ''
       },
       {
-        name: 'banjo',
+        name: 'BANJO',
         icon: icons.banjoIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD', 'ANIMAL SKIN'],
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sample(sounds.banjo),
         videoUrl: ''
       },
       {
-        name: 'harp',
+        name: 'HARP',
         icon: icons.harpIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD'],
+        howToPlay: 'plucking the strings',
         sound: sample(sounds.harp),
         videoUrl: ''
       },
       {
-        name: 'piano',
+        name: 'PIANO',
         icon: icons.pianoIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD'],
+        howToPlay: 'pressing the keys, which activate hammers that bang on strings',
         sound: sample(sounds.piano),
         videoUrl: ''
       },
       {
-        name: 'violin',
+        name: 'VIOLIN',
         icon: icons.violinIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['WOOD'],
+        howToPlay: 'putting your fingers on the fretboard and bowing the strings using a bow',
         sound: sample(sounds.violin),
         videoUrl: ''
       },
@@ -194,41 +194,41 @@ const learnInstrumentOptions = {
     main: icons.harpIcon,
     instruments: [
       {
-        name: 'clarinet',
+        name: 'CLARINET',
         icon: icons.clarinetIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
+        madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sample(sounds.clarinet),
         videoUrl: ''
       },
       {
-        name: 'bassoon',
+        name: 'BASSOON',
         icon: icons.bassoonIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
+        madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sample(sounds.bassoon),
         videoUrl: ''
       },
       {
-        name: 'flute',
+        name: 'FLUTE',
         icon: icons.fluteIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
+        madeFrom: ['WOOD', 'METAL'],
         howToPlay: '',
         sound: sample(sounds.flute),
         videoUrl: ''
       },
       {
-        name: 'saxophone',
+        name: 'SAXOPHONE',
         icon: icons.saxophoneIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
+        madeFrom: ['BRASS'],
         howToPlay: '',
         sound: sample(sounds.saxophone),
         videoUrl: ''
       },
       {
-        name: 'pan flute',
+        name: 'PAN FLUTE',
         icon: icons.panFluteIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
+        madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sample(sounds.panFlute),
         videoUrl: ''
@@ -239,50 +239,50 @@ const learnInstrumentOptions = {
     main: icons.voiceMainIcon,
     instruments: [
       {
-        name: 'soprano',
+        name: 'SOPRANO',
         icon: icons.sopranoIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.soprano),
         videoUrl: ''
       },
       {
-        name: 'mezzo soprano',
+        name: 'MEZZO SOPRANO',
         icon: icons.mezzoSopranoIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.mezzoSoprano),
         videoUrl: ''
       },
       {
-        name: 'alto',
+        name: 'ALSO',
         icon: icons.altoIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.alto),
         videoUrl: ''
       },
       {
-        name: 'tenor',
+        name: 'TENOR',
         icon: icons.tenorIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.tenor),
         videoUrl: ''
       },
       {
-        name: 'baritone',
+        name: 'BARITONE',
         icon: icons.baritoneIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.baritone),
         videoUrl: ''
       },
       {
-        name: 'bass',
+        name: 'BASS',
         icon: icons.bassIcon,
-        madeFrom: 'lorum ipsum dolor and all that',
-        howToPlay: '',
+        madeFrom: ['HUMANS!'],
+        howToPlay: 'using your voice!',
         sound: sample(sounds.bass),
         videoUrl: ''
       }
