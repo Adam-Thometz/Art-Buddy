@@ -279,6 +279,6 @@ const learnInstrumentOptions = {
       }
     ]
   }
-}
+};
 
 export default learnInstrumentOptions;
