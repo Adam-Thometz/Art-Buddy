@@ -1,6 +1,8 @@
-import { renderWithRouter } from './_testUtils/renderWithRouter'
+import renderWithProvider from './_testUtils/renderWithProvider';
 import App from './App';
 
-test('renders App', () => {
-  renderWithRouter(<App />);
+describe('App component', () => {
+  it('renders without crashing', () => {
+    renderWithProvider(<App />);
+  });
 });
