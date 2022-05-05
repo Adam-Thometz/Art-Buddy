@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../../_testUtils/renderWithRouter';
+import renderWithProvider from '../../_testUtils/renderWithProvider';
 import BackArrow from './BackArrow'
 
 describe('BackArrow component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<BackArrow />);
+    renderWithProvider(<BackArrow />);
   })
 
   it('matches the snapshot of the back arrow', () => {
-    const { asFragment } = renderWithRouter(<BackArrow/>);
+    const { asFragment } = renderWithProvider(<BackArrow/>);
     expect(asFragment()).toMatchSnapshot();
   })
 })

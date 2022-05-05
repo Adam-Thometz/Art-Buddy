@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../../_testUtils/renderWithRouter';
+import renderWithProvider from '../../_testUtils/renderWithProvider';
 import Icon from './Icon'
 
-describe('Clickable component', () => {
+describe('Icon component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<Icon />);
+    renderWithProvider(<Icon />);
   })
 
-  it('matches the snapshot of the clickable icon', () => {
-    const { asFragment } = renderWithRouter(<Icon />);
+  it('matches the snapshot of the icon', () => {
+    const { asFragment } = renderWithProvider(<Icon />);
     expect(asFragment()).toMatchSnapshot();
   })
 })

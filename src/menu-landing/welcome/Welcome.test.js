@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../../_testUtils/renderWithRouter';
+import renderWithProvider from '../../_testUtils/renderWithProvider';
 import Welcome from './Welcome'
 
 describe('Welcome component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<Welcome />);
+    renderWithProvider(<Welcome />);
   })
 
   it('matches the snapshot of the welcome page', () => {
-    const { asFragment } = renderWithRouter(<Welcome />);
+    const { asFragment } = renderWithProvider(<Welcome />);
     expect(asFragment()).toMatchSnapshot();
   })
 })

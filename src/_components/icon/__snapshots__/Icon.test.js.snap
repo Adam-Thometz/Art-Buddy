@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Clickable component matches the snapshot of the clickable icon 1`] = `
+exports[`Icon component matches the snapshot of the icon 1`] = `
 <DocumentFragment>
   <div
     class="Icon"
