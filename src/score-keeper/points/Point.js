@@ -4,7 +4,7 @@ import './Point.css'
 const Point = ({num, color}) => {
   const backgroundColor = color;
   return (
-    <div className="Point" style={{backgroundColor}}>
+    <div data-testid='point' className="Point" style={{backgroundColor}}>
       {num}
     </div>
   );

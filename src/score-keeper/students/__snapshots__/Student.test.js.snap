@@ -27,7 +27,9 @@ exports[`Student component matches the snapshot 1`] = `
         +
       </button>
     </div>
-    <div />
+    <div
+      data-testid="points"
+    />
     <button
       class="Button small"
       style="border-color: #fd4d3a;"
