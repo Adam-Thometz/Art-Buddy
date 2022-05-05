@@ -1,24 +1,27 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
 
+import { useDispatch } from "react-redux";
+
 import './Instrument.css';
 
 import Icon from "../../../_components/icon/Icon";
 import Button from "../../../_components/button/Button";
 
 import learnInstrumentOptions from "../learnInstrumentOptions";
-import { now } from 'tone';
+import { playSound } from "../../../_redux/actions/insturmentIdActions";
 
 const Instrument = () => {
+  const dispatch = useDispatch()
   const { family, instrument } = useParams();
   const instrumentInfo = learnInstrumentOptions[family]
     .instruments
     .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
   
   const playInstrument = () => {
-    const start = now();
-    instrumentInfo.sound.triggerAttackRelease('C3', '3m', start)
+    dispatch(playSound(instrumentInfo.sound));
   }
+
   return (
     <div className="Instrument">
       <div className="Instrument-name">

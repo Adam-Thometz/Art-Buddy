@@ -1,14 +1,5 @@
 import * as icons from '../_icons/iconImports';
 import * as sounds from '../_sounds/soundImports';
-import { Sampler } from 'tone';
-
-const sample = (instrument) => (
-  new Sampler({
-    urls: {
-      C3: instrument
-    }
-  }).toDestination()
-);
 
 const learnInstrumentOptions = {
   brass: {
@@ -18,7 +9,7 @@ const learnInstrumentOptions = {
         icon: icons.trumpetIcon,
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
-        sound: sample(sounds.trumpet),
+        sound: sounds.trumpet,
         videoUrl: ''
       },
       {
@@ -26,7 +17,7 @@ const learnInstrumentOptions = {
         icon: icons.frenchHornIcon,
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
-        sound: sample(sounds.frenchHorn),
+        sound: sounds.frenchHorn,
         videoUrl: ''
       },
       {
@@ -34,7 +25,7 @@ const learnInstrumentOptions = {
         icon: icons.tromboneIcon,
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
-        sound: sample(sounds.trombone),
+        sound: sounds.trombone,
         videoUrl: ''
       },
       {
@@ -42,7 +33,7 @@ const learnInstrumentOptions = {
         icon: icons.tubaIcon,
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
-        sound: sample(sounds.tuba),
+        sound: sounds.tuba,
         videoUrl: ''
       },
     ]
@@ -55,7 +46,7 @@ const learnInstrumentOptions = {
         icon: icons.electricGuitarIcon,
         madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
-        sound: sample(sounds.electricGuitar),
+        sound: sounds.electricGuitar,
         videoUrl: ''
       },
       {
@@ -63,7 +54,7 @@ const learnInstrumentOptions = {
         icon: icons.electricBassIcon,
         madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick or fingers',
-        sound: sample(sounds.electricBass),
+        sound: sounds.electricBass,
         videoUrl: ''
       },
       {
@@ -71,7 +62,7 @@ const learnInstrumentOptions = {
         icon: icons.synthIcon,
         madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
         howToPlay: 'adjusting knobs and/or pressing keys',
-        sound: sample(sounds.synthesizer),
+        sound: sounds.synthesizer,
         videoUrl: ''
       },
       {
@@ -79,7 +70,7 @@ const learnInstrumentOptions = {
         icon: icons.samplerIcon,
         madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
         howToPlay: 'pressing buttons on the instrument',
-        sound: sample(sounds.sampler),
+        sound: sounds.sampler,
         videoUrl: ''
       },
       {
@@ -87,7 +78,7 @@ const learnInstrumentOptions = {
         icon: icons.thereminIcon,
         madeFrom: ['METAL', 'ELECTRICITY', 'HEAT SENSOR'],
         howToPlay: 'waving your hands back and forth from the antenna',
-        sound: sample(sounds.theremin),
+        sound: sounds.theremin,
         videoUrl: ''
       },
     ]
@@ -100,7 +91,7 @@ const learnInstrumentOptions = {
         icon: icons.djembeIcon,
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
-        sound: sample(sounds.djembe),
+        sound: sounds.djembe,
         videoUrl: ''
       },
       {
@@ -108,7 +99,7 @@ const learnInstrumentOptions = {
         icon: icons.drumSetIcon,
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'using drum sticks to hit different parts of the set',
-        sound: sample(sounds.drumSet),
+        sound: sounds.drumSet,
         videoUrl: ''
       },
       {
@@ -116,7 +107,7 @@ const learnInstrumentOptions = {
         icon: icons.tambourineIcon,
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'shaking it!',
-        sound: sample(sounds.tambourine),
+        sound: sounds.tambourine,
         videoUrl: ''
       },
       {
@@ -124,7 +115,7 @@ const learnInstrumentOptions = {
         icon: icons.xylophoneIcon,
         madeFrom: ['WOOD'],
         howToPlay: 'hitting different blocks with a mallet',
-        sound: sample(sounds.xylophone),
+        sound: sounds.xylophone,
         videoUrl: ''
       },
       {
@@ -132,7 +123,7 @@ const learnInstrumentOptions = {
         icon: icons.triangleIcon,
         madeFrom: ['METAL'],
         howToPlay: 'hitting it with a metal stick',
-        sound: sample(sounds.triangle),
+        sound: sounds.triangle,
         videoUrl: ''
       },
       {
@@ -140,7 +131,7 @@ const learnInstrumentOptions = {
         icon: icons.congaIcon,
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
-        sound: sample(sounds.conga),
+        sound: sounds.conga,
         videoUrl: ''
       },
     ]
@@ -153,7 +144,7 @@ const learnInstrumentOptions = {
         icon: icons.acousticGuitarIcon,
         madeFrom: ['WOOD'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
-        sound: sample(sounds.acousticGuitar),
+        sound: sounds.acousticGuitar,
         videoUrl: ''
       },
       {
@@ -161,7 +152,7 @@ const learnInstrumentOptions = {
         icon: icons.banjoIcon,
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
-        sound: sample(sounds.banjo),
+        sound: sounds.banjo,
         videoUrl: ''
       },
       {
@@ -169,7 +160,7 @@ const learnInstrumentOptions = {
         icon: icons.harpIcon,
         madeFrom: ['WOOD'],
         howToPlay: 'plucking the strings',
-        sound: sample(sounds.harp),
+        sound: sounds.harp,
         videoUrl: ''
       },
       {
@@ -177,7 +168,7 @@ const learnInstrumentOptions = {
         icon: icons.pianoIcon,
         madeFrom: ['WOOD'],
         howToPlay: 'pressing the keys, which activate hammers that bang on strings',
-        sound: sample(sounds.piano),
+        sound: sounds.piano,
         videoUrl: ''
       },
       {
@@ -185,7 +176,7 @@ const learnInstrumentOptions = {
         icon: icons.violinIcon,
         madeFrom: ['WOOD'],
         howToPlay: 'putting your fingers on the fretboard and bowing the strings using a bow',
-        sound: sample(sounds.violin),
+        sound: sounds.violin,
         videoUrl: ''
       },
     ]
@@ -198,7 +189,7 @@ const learnInstrumentOptions = {
         icon: icons.clarinetIcon,
         madeFrom: ['WOOD'],
         howToPlay: '',
-        sound: sample(sounds.clarinet),
+        sound: sounds.clarinet,
         videoUrl: ''
       },
       {
@@ -206,7 +197,7 @@ const learnInstrumentOptions = {
         icon: icons.bassoonIcon,
         madeFrom: ['WOOD'],
         howToPlay: '',
-        sound: sample(sounds.bassoon),
+        sound: sounds.bassoon,
         videoUrl: ''
       },
       {
@@ -214,7 +205,7 @@ const learnInstrumentOptions = {
         icon: icons.fluteIcon,
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: '',
-        sound: sample(sounds.flute),
+        sound: sounds.flute,
         videoUrl: ''
       },
       {
@@ -222,7 +213,7 @@ const learnInstrumentOptions = {
         icon: icons.saxophoneIcon,
         madeFrom: ['BRASS'],
         howToPlay: '',
-        sound: sample(sounds.saxophone),
+        sound: sounds.saxophone,
         videoUrl: ''
       },
       {
@@ -230,7 +221,7 @@ const learnInstrumentOptions = {
         icon: icons.panFluteIcon,
         madeFrom: ['WOOD'],
         howToPlay: '',
-        sound: sample(sounds.panFlute),
+        sound: sounds.panFlute,
         videoUrl: ''
       },
     ]
@@ -243,7 +234,7 @@ const learnInstrumentOptions = {
         icon: icons.sopranoIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.soprano),
+        sound: sounds.soprano,
         videoUrl: ''
       },
       {
@@ -251,7 +242,7 @@ const learnInstrumentOptions = {
         icon: icons.mezzoSopranoIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.mezzoSoprano),
+        sound: sounds.mezzoSoprano,
         videoUrl: ''
       },
       {
@@ -259,7 +250,7 @@ const learnInstrumentOptions = {
         icon: icons.altoIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.alto),
+        sound: sounds.alto,
         videoUrl: ''
       },
       {
@@ -267,7 +258,7 @@ const learnInstrumentOptions = {
         icon: icons.tenorIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.tenor),
+        sound: sounds.tenor,
         videoUrl: ''
       },
       {
@@ -275,7 +266,7 @@ const learnInstrumentOptions = {
         icon: icons.baritoneIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.baritone),
+        sound: sounds.baritone,
         videoUrl: ''
       },
       {
@@ -283,7 +274,7 @@ const learnInstrumentOptions = {
         icon: icons.bassIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
-        sound: sample(sounds.bass),
+        sound: sounds.bass,
         videoUrl: ''
       }
     ]
