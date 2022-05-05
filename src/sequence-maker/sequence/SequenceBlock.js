@@ -33,7 +33,7 @@ const SequenceBlock = ({ block, borderColor }) => {
           <p>{block.alt}</p>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <div className="SequenceBlock-controls">
-            {block.alt !== 'stop' ?
+            {block.alt !== 'STOP' ?
               <Options>
                 {Object.keys(pitches).map(pitch => (
                   <Button

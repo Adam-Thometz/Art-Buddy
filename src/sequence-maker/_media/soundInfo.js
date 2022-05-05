@@ -1,72 +1,56 @@
 import { images } from './soundImageImports';
-import * as samples from './sampler';
+
+const stop = {
+  image: images.stop,
+  sound: null,
+  alt: 'STOP'
+}
 
 const soundInfo = {
   bodySoundsContinuous: {
-    clapping: {
+    clappingContinuous: {
       image: images.clapping,
-      sound: samples.clappingSample,
-      alt: 'clapping'
+      alt: 'CLAPPING',
     },
-    stomping: {
+    stompingContinuous: {
       image: images.stomping,
-      sound: samples.stompingSample,
-      alt: 'stomping'
+      alt: 'STOMPING',
     },
-    yeah: {
+    yeahContinuous: {
       image: images.yeah,
-      sound: samples.yeahLongSample,
-      alt: 'say yeah'
+      alt: 'SAY YEAH',
     },
-    stop: {
-      image: images.stop,
-      sound: null,
-      alt: 'stop'
-    }
+    stop
   },
   bodySoundsOnce: {
-    clap: {
+    clappingOnce: {
       image: images.clapping,
-      sound: samples.clapSample,
-      alt: 'clap'
+      alt: 'CLAP',
     },
-    stomp: {
+    stompingOnce: {
       image: images.stomping,
-      sound: samples.stompSample,
-      alt: 'stomp'
+      alt: 'STOMP',
     },
-    yeah: {
+    yeahOnce: {
       image: images.yeah,
-      sound: samples.yeahShortSample,
-      alt: 'say yeah'
+      alt: 'SAY YEAH',
     },
-    stop: {
-      image: images.stop,
-      sound: null,
-      alt: 'stop'
-    }
+    stop
   },
   animals: {
     dog: {
       image: images.dog,
-      sound: samples.dogSample,
-      alt: 'dog'
+      alt: 'DOG',
     },
     cat: {
       image: images.cat,
-      sound: samples.catSample,
-      alt: 'cat'
+      alt: 'CAT',
     },
     bird: {
       image: images.bird,
-      sound: samples.birdSample,
-      alt: 'bird'
+      alt: 'BIRD',
     },
-    stop: {
-      image: images.stop,
-      sound: null,
-      alt: 'stop'
-    }
+    stop
   },
 };
 

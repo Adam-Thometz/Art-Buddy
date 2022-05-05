@@ -22,7 +22,7 @@ const SequenceMaker = () => {
 
   const handleAddToSequence = e => {
     if (sequence.some(block => !block)) {
-      const sound = e.currentTarget.classList[1];
+      const sound = e.currentTarget.id;
       dispatch(addToSequence(sound));
     };
   }
@@ -43,7 +43,7 @@ const SequenceMaker = () => {
               icon={options[option].image}
               size='150px'
               text={options[option].alt}
-              additionalClass={option}
+              id={option}
               onClick={handleAddToSequence}
             />
           ))}

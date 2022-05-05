@@ -22,3 +22,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.SequenceBlock button {
+  width: 35%;
+  margin: 5px auto;
+}
