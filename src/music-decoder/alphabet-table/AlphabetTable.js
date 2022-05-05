@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { fillLetter } from "../../_redux/actions";
+import { fillLetter } from "../../_redux/actions/wordToMusicActions";
 
 import './AlphabetTable.css';
 

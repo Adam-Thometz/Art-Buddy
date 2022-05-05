@@ -1,4 +1,4 @@
-import { searchLetter } from './wordToMusicDecoderReducer';
+import { searchLetter, generateSynth } from './wordToMusicDecoderReducer';
 import {
   testWordDisplayOneWord,
   testWordDisplayTwoWords

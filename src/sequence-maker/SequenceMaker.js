@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeCategory, addToSequence } from "../_redux/actions";
+import { changeCategory, addToSequence } from "../_redux/actions/sequenceMakerActions";
 
 import Sequence from "./sequence/Sequence";
 import Dropdown from "../_components/dropdown/Dropdown";

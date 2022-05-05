@@ -1,10 +1,8 @@
-import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, playNote } from "../actions";
+import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, playNote } from "../actions/wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import { now } from 'tone';
 import * as Tone from 'tone';
-
-// const defaultSynth = generateSynth();
 
 export const INITIAL_STATE = {
   wordDisplay: [

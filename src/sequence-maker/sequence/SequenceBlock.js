@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 import { useDispatch } from "react-redux";
-import { removeFromSequence, setPitch } from "../../_redux/actions";
+import { removeFromSequence, setPitch } from "../../_redux/actions/sequenceMakerActions";
 
 import './SequenceBlock.css';
 

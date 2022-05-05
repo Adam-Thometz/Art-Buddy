@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver } from "../actions";
+import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver } from "../actions/scoreKeeperActions";
 
 export const INITIAL_STATE = {
   students: [],

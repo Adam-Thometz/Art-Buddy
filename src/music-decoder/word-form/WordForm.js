@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { addWord } from "../../_redux/actions";
+import { addWord } from "../../_redux/actions/wordToMusicActions";
 
 import './WordForm.css';
 

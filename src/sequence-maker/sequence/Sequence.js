@@ -1,6 +1,6 @@
 import React from "react";
 
-import { playAllSequence, playSequence, resetSequence, addBlock, removeBlock } from "../../_redux/actions";
+import { playAllSequence, playSequence, resetSequence, addBlock, removeBlock } from "../../_redux/actions/sequenceMakerActions";
 import { useSelector, useDispatch } from "react-redux";
 
 import './Sequence.css';

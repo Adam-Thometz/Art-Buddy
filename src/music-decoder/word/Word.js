@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { playNote } from "../../_redux/actions";
+import { playNote } from "../../_redux/actions/wordToMusicActions";
 
 import './Word.css';
 

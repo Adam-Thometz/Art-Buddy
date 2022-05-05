@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { changeScale, changeSound } from "../../_redux/actions";
+import { changeScale, changeSound } from "../../_redux/actions/wordToMusicActions";
 
 import './MusicControls.css'
 

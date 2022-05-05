@@ -1,4 +1,4 @@
-import { changeMenuGames } from "../actions";
+import { changeMenuGames } from "../actions/mainSettingsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
