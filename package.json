@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "jest --setupFilesAfterEnv ./src/setupTests.js",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
   },
