@@ -6,7 +6,7 @@ exports[`WindowNavbar component matches the snapshot of the WindowNavbar 1`] = `
     class="WindowNavbar-main"
   >
     <span
-      class="WindowNavbar-button"
+      class="WindowNavbar-button underlined"
     >
       GAMES
     </span>

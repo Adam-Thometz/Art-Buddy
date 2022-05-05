@@ -1,10 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Window component matches the snapshot of the button 1`] = `
+exports[`Window component matches the snapshot of the window 1`] = `
 <DocumentFragment>
   <div
     class="Window"
     style="width: 90%;"
-  />
+  >
+    <div
+      class="WindowNavbar-main"
+    >
+      <span
+        class="WindowNavbar-button underlined"
+      >
+        GAMES
+      </span>
+      <span
+        class="WindowNavbar-button"
+      >
+        TOOLS
+      </span>
+    </div>
+  </div>
 </DocumentFragment>
 `;
