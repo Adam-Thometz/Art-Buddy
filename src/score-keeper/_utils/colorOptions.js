@@ -1,5 +1,5 @@
 const colorOptions = {
-  hexFFFFFF: 'Black',
+  hex000000: 'Black',
   hexE60026: 'Red',
   hexFF8B3D: 'Orange',
   hexFFE81A: 'Yellow',
@@ -10,4 +10,4 @@ const colorOptions = {
   hexEE82EE: 'Pink'
 }
 
-export default colorOptions
+export default colorOptions;
