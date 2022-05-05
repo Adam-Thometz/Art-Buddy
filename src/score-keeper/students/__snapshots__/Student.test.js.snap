@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Student component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Student"
+  >
+    <p
+      class="Student-name"
+      style="color: rgb(0, 0, 0);"
+    >
+      Eddie
+    </p>
+    <div
+      class="Student-point-control"
+    >
+      <button
+        class="Button small"
+        style="border-color: #fd4d3a; font-size: 1.5rem; width: 30%;"
+      >
+        -
+      </button>
+      <button
+        class="Button small"
+        style="border-color: #89eb0a; font-size: 1.5rem; width: 30%;"
+      >
+        +
+      </button>
+    </div>
+    <div />
+    <button
+      class="Button small"
+      style="border-color: #fd4d3a;"
+    >
+      REMOVE FROM GAME
+    </button>
+  </div>
+</DocumentFragment>
+`;
