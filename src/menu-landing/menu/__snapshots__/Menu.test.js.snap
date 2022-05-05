@@ -6,23 +6,9 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     class="Menu"
   >
     <div
-      class="WindowNavbar-main"
-    >
-      <span
-        class="WindowNavbar-button underlined"
-      >
-        GAMES
-      </span>
-      <span
-        class="WindowNavbar-button"
-      >
-        TOOLS
-      </span>
-    </div>
-    <div
       class="Menu-options"
     >
-      <span
+      <button
         class="Button regular"
         style="border-color: #89eb0a;"
       >
@@ -31,8 +17,8 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
           src="[object Object]"
         />
         ART GAMES
-      </span>
-      <span
+      </button>
+      <button
         class="Button regular"
         style="border-color: #ffe81a;"
       >
@@ -41,8 +27,8 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
           src="[object Object]"
         />
         MUSIC GAMES
-      </span>
-      <span
+      </button>
+      <button
         class="Button regular"
         style="border-color: #fd4d3a;"
       >
@@ -51,8 +37,8 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
           src="[object Object]"
         />
         ALL GAMES
-      </span>
-      <span
+      </button>
+      <button
         class="Button regular"
         style="border-color: #4d4f5e;"
       >
@@ -61,14 +47,14 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
           src="[object Object]"
         />
         IEP GOALS
-      </span>
+      </button>
     </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Menu component renders art games 1`] = `
-<span
+<button
   class="Button regular"
   style="border-color: #89eb0a;"
 >
@@ -77,11 +63,11 @@ exports[`Menu component renders art games 1`] = `
     src="[object Object]"
   />
   COLOR THEORY
-</span>
+</button>
 `;
 
 exports[`Menu component renders music games 1`] = `
-<span
+<button
   class="Button regular"
   style="border-color: #4d4f5e;"
 >
@@ -90,5 +76,5 @@ exports[`Menu component renders music games 1`] = `
     src="[object Object]"
   />
   SEQUENCE MAKER
-</span>
+</button>
 `;

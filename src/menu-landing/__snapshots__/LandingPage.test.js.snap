@@ -3,27 +3,38 @@
 exports[`LandingPage component matches the snapshot of the landing page displaying the welcome page 1`] = `
 <DocumentFragment>
   <div
-    class="Welcome"
+    class="Window"
+    style="width: 75%;"
   >
-    <h1>
-      WELCOME TO ARTBUDDY!
-    </h1>
     <div
-      class="Welcome-description"
+      class="WindowNavbar-games"
     >
-      <p>
-        ARTBUDDY is a collection of fun and interactive fine arts games designed specifically with special education goals in mind
-      </p>
-      <p>
-        Click below to get started
-      </p>
+      <h1
+        class="WindowNavbar-label"
+      >
+        WELCOME TO ART BUDDY!
+      </h1>
     </div>
-    <span
-      class="Button regular"
-      style="border-color: #89eb0a;"
+    <div
+      class="Welcome"
     >
-      LET'S GO!
-    </span>
+      <div
+        class="Welcome-description"
+      >
+        <p>
+          ARTBUDDY is a collection of fun and interactive fine arts games designed specifically with special education goals in mind
+        </p>
+        <p>
+          Click below to get started
+        </p>
+      </div>
+      <button
+        class="Button regular"
+        style="border-color: #89eb0a;"
+      >
+        LET'S GO!
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
