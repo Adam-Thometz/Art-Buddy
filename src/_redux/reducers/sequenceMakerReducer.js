@@ -2,8 +2,9 @@ import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence,
 import { createReducer } from "@reduxjs/toolkit";
 
 import soundInfo from "../../sequence-maker/_media/soundInfo";
+import { sounds } from "../../sequence-maker/_media/soundImageImports";
 import pitches from "../../sequence-maker/_utils/pitchMap";
-import { now } from "tone";
+import { now, Sampler } from "tone";
 
 export const INITIAL_STATE = {
   category: '',
@@ -16,11 +17,16 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       state.category = action.payload;
     })
     .addCase(addToSequence, (state, action) => {
+      const sound = action.payload;
       const currIdx = state.sequence.indexOf(null);
       if (currIdx === -1) return;
-      const block = { ...soundInfo[state.category][action.payload] };
-      block.id = currIdx;
-      block.pitch = 'medium';
+      console.log(soundInfo[state.category][sound])
+      const block = { 
+        ...soundInfo[state.category][sound],
+        id: currIdx,
+        pitch: 'medium',
+        sound: sound === 'stop' ? null : sample(sounds[sound])
+      };
       state.sequence[currIdx] = block;
     })
     .addCase(removeFromSequence, (state, action) => {
@@ -61,5 +67,13 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       state.sequence[id].pitch = pitch;
     })
 })
+
+const sample = (sound) => {
+  return new Sampler({
+    urls: {
+      C2: sound
+    }
+  }).toDestination();
+};
 
 export default sequenceMakerReducer;
