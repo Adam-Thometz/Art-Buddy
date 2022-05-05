@@ -2,8 +2,7 @@ import { searchLetter, generateSynth } from './wordToMusicDecoderReducer';
 import {
   testWordDisplayOneWord,
   testWordDisplayTwoWords
-} from '../../_testUtils/test-states/wordToMusicTestState';
-jest.mock('tone');
+} from '../../_testUtils/test-states/wordToMusicReducerTestState';
 
 describe('searchLetters function', () => {
   it('should work with one word', () => {

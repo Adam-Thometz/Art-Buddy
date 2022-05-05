@@ -1,5 +1,5 @@
 import scoreKeeperReducer, { INITIAL_STATE, updateWinners } from './scoreKeeperReducer';
-import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores } from '../actions';
+import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores } from '../actions/scoreKeeperActions';
 import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
 
 describe('updateWinners', () => {

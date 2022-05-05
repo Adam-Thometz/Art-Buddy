@@ -1,5 +1,5 @@
 import mainSettingsReducer, { INITIAL_STATE } from "./mainSettingsReducer";
-import { changeMenuGames } from "../actions";
+import { changeMenuGames } from "../actions/mainSettingsActions";
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
