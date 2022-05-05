@@ -3,6 +3,10 @@ import {
   testWordDisplayOneWord,
   testWordDisplayTwoWords
 } from '../../_testUtils/test-states/wordToMusicReducerTestState';
+// jest.mock('tone', () => ({
+//   esModule: true,
+//   now: jest.fn(() => 0)
+// }));
 
 describe('searchLetters function', () => {
   it('should work with one word', () => {

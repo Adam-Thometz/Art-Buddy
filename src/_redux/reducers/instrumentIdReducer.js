@@ -10,10 +10,10 @@ const INITIAL_STATE = {
 
 const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
-    // .addCase(createSound, (state, action) => {
-    //   const instrument = action.payload;
-    //   const sound = storedSounds[instrument];
-    // })
+    .addCase(createSound, (state, action) => {
+      const instrument = action.payload;
+      const sound = storedSounds[instrument];
+    })
     .addCase(playSound, (state, action) => {
       debugger;
       const sound = action.payload;
