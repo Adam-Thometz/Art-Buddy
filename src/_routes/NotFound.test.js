@@ -1,14 +1,14 @@
 import React from "react";
-import renderWithRouter from '../_testUtils/renderWithRouter';
+import renderWithProvider from '../_testUtils/renderWithProvider';
 import NotFound from './NotFound'
 
 describe('NotFound component', () => {
   it('renders without crashing', () => {
-    renderWithRouter(<NotFound />);
+    renderWithProvider(<NotFound />);
   })
 
   it('matches the snapshot of the not found page', () => {
-    const { asFragment } = renderWithRouter(<NotFound />);
+    const { asFragment } = renderWithProvider(<NotFound />);
     expect(asFragment()).toMatchSnapshot();
   })
 })
