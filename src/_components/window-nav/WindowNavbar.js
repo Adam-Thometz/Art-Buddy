@@ -1,11 +1,11 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
+import { changeMenuGames } from "../../_redux/actions/mainSettingsActions";
 
 import './WindowNavbar.css';
 
 import BackArrow from "../back-arrow/BackArrow";
-import { changeMenuGames } from "../../_redux/actions/mainSettingsActions";
 
 const WindowNavbar = ({ page = null }) => {
   const dispatch = useDispatch();
