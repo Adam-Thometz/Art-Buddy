@@ -7,8 +7,8 @@ const MemoryRouterWithInitialRoutes = ({ children, initialRoutes }) => {
     <MemoryRouter initialEntries={initialRoutes}>
       {children}
     </MemoryRouter>
-  )
-}
+  );
+};
 
 function renderWithRouter(component, options) {
   const initialRoutes = (options && options.initialRoutes)
