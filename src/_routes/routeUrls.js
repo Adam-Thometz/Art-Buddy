@@ -15,6 +15,7 @@ export const instrumentIdUrls = {
   learnInstrumentUrl: '/instrument-id/learn/:family/:instrument',
   playUrl: '/instrument-id/play',
   playListeningUrl: '/instrument-id/play/listening-skills',
+  playListeningLevelUrl: '/instrument-id/play/listening-skills/:level',
   playSongMakerUrl: '/instrument-id/play/song-maker',
 }
 
