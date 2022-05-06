@@ -5,10 +5,10 @@ import Icon from './Icon'
 describe('Icon component', () => {
   it('renders without crashing', () => {
     renderWithProvider(<Icon />);
-  })
+  });
 
   it('matches the snapshot of the icon', () => {
     const { asFragment } = renderWithProvider(<Icon />);
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 })

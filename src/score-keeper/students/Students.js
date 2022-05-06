@@ -10,8 +10,8 @@ const Students = () => {
   const students = useSelector(state => state.scoreKeeper.students);
   return (
     <div className="Students">
-      {students.map(s => (
-        <Student name={s.name} color={s.color} points={s.points} />
+      {students.map((s, i) => (
+        <Student key={i} name={s.name} color={s.color} points={s.points} />
       ))}
     </div>
   )

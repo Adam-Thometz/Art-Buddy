@@ -16,9 +16,9 @@ describe('Points component', () => {
   });
 
   it('renders the correct amount of points', () => {
-    renderWithProvider(<Points points={4} />)
-    const pointContainer = screen.getByTestId('points')
-    const points = within(pointContainer).getAllByTestId('point')
+    renderWithProvider(<Points points={4} />);
+    const pointContainer = screen.getByTestId('points');
+    const points = within(pointContainer).getAllByTestId('point');
     expect(points.length).toBe(4);
-  })
+  });
 })

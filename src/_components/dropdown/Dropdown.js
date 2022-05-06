@@ -14,8 +14,8 @@ const Dropdown = ({ labelText, onClick, options, borderColor }) => {
     <div className="Dropdown">
       <span className='Dropdown-label' style={{borderColor}}>{displayLabelText} {downArrow}</span>
       <div className='Dropdown-options' onClick={onClick}>
-        {Object.keys(options).map(value => (
-          <p className='Dropdown-option' onClick={handleChangeLabel} id={value}>{options[value]}</p>
+        {Object.keys(options).map((value, i) => (
+          <p key={i} className='Dropdown-option' onClick={handleChangeLabel} id={value}>{options[value]}</p>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ const Icon = ({ icon, text, onClick = null, size = "250px", id = null }) => {
   const styles = {
     width: size,
     height: size,
-    cursor: onClick !== null ? 'pointer' : null
+    cursor: onClick ? 'pointer' : null
   };
 
   return (

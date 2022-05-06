@@ -1,5 +1,5 @@
 import React from "react";
-import './Point.css'
+import './Point.css';
 
 const Point = ({num, color}) => {
   const backgroundColor = color;
