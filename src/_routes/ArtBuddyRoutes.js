@@ -17,7 +17,7 @@ import NotFound from "./NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
 
-const AppRoutes = () => {
+const ArtBuddyRoutes = () => {
   return (
     <Routes>
       <Route index element={<LandingPage />} />
@@ -51,4 +51,4 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+export default ArtBuddyRoutes;
