@@ -5,7 +5,7 @@ import sample from "../../_utils/sample";
 import soundInfo from "../../sequence-maker/_media/soundInfo";
 import { sounds } from "../../sequence-maker/_media/soundImageImports";
 import pitches from "../../sequence-maker/_utils/pitchMap";
-import { now, Sampler } from "tone";
+import { now } from "tone";
 
 export const INITIAL_STATE = {
   category: '',
@@ -21,7 +21,6 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       const sound = action.payload;
       const currIdx = state.sequence.indexOf(null);
       if (currIdx === -1) return;
-      console.log(soundInfo[state.category][sound])
       const block = { 
         ...soundInfo[state.category][sound],
         id: currIdx,
