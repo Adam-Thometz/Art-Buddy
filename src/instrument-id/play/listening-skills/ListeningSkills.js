@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import './ListeningSkills.css';
 
@@ -6,8 +7,10 @@ import Button from "../../../_components/button/Button";
 import Icon from "../../../_components/icon/Icon";
 
 import { listeningSkills, reportCard } from "../../_icons/iconImports";
+import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
 const ListeningSkills = () => {
+  const navigate = useNavigate();
   return (
     <div className="ListeningSkills">
       <div className="ListeningSkills-icon">
@@ -18,20 +21,18 @@ const ListeningSkills = () => {
       </div>
       <div className="ListeningSkills-levels-report-cards">
         <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
-        <div className="ListeningSkills-level">
-          <Button colorId={0}>Level 1</Button>
-          <div className="ListeningSkills-report-card">
-            <img src={reportCard} alt='' />
-            <p>Report Card</p>
+        {[1,2].map(level => (
+          <div className="ListeningSkills-level">
+            <Button
+              colorId={level-1}
+              onClick={() => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`)}
+            >Level {level}</Button>
+            <div className="ListeningSkills-report-card">
+              <img src={reportCard} alt='' />
+              <p>Report Card</p>
+            </div>
           </div>
-        </div>
-        <div className="ListeningSkills-level">
-          <Button colorId={1}>Level 2</Button>
-          <div className="ListeningSkills-report-card">
-            <img src={reportCard} alt='' />
-            <p>Report Card</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

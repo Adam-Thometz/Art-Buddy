@@ -8,7 +8,7 @@ import './Instrument.css';
 import Icon from "../../../_components/icon/Icon";
 import Button from "../../../_components/button/Button";
 
-import learnInstrumentOptions from "../learnInstrumentOptions";
+import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { playSound } from "../../../_redux/actions/insturmentIdActions";
 
 const Instrument = () => {

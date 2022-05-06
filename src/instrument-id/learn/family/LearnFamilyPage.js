@@ -6,7 +6,7 @@ import './LearnFamilyPage.css'
 
 import Icon from "../../../_components/icon/Icon";
 
-import learnInstrumentOptions from "../learnInstrumentOptions";
+import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
 const LearnFamilyPage = () => {

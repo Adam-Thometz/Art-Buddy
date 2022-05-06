@@ -1,5 +1,5 @@
-import * as icons from '../_icons/iconImports';
-import * as sounds from '../_sounds/soundImports';
+import * as icons from './_icons/iconImports';
+import * as sounds from './_sounds/soundImports';
 
 const learnInstrumentOptions = {
   brass: {
@@ -44,7 +44,7 @@ const learnInstrumentOptions = {
       {
         name: 'ELECTRIC GUITAR',
         icon: icons.electricGuitarIcon,
-        madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
+        madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.electricGuitar,
         videoUrl: ''
@@ -52,7 +52,7 @@ const learnInstrumentOptions = {
       {
         name: 'ELECTRIC BASS',
         icon: icons.electricBassIcon,
-        madeFrom: ['WOOD', 'MAGNETS', 'METAL', 'ELECTRICITY'],
+        madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick or fingers',
         sound: sounds.electricBass,
         videoUrl: ''
@@ -60,7 +60,7 @@ const learnInstrumentOptions = {
       {
         name: 'SYNTHESIZER',
         icon: icons.synthIcon,
-        madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
+        madeFrom: ['METAL'],
         howToPlay: 'adjusting knobs and/or pressing keys',
         sound: sounds.synthesizer,
         videoUrl: ''
@@ -68,7 +68,7 @@ const learnInstrumentOptions = {
       {
         name: 'SAMPLER',
         icon: icons.samplerIcon,
-        madeFrom: ['METAL', 'ELECTRICITY', 'COMPUTERS'],
+        madeFrom: ['METAL'],
         howToPlay: 'pressing buttons on the instrument',
         sound: sounds.sampler,
         videoUrl: ''
@@ -76,7 +76,7 @@ const learnInstrumentOptions = {
       {
         name: 'THEREMIN',
         icon: icons.thereminIcon,
-        madeFrom: ['METAL', 'ELECTRICITY', 'HEAT SENSOR'],
+        madeFrom: ['METAL'],
         howToPlay: 'waving your hands back and forth from the antenna',
         sound: sounds.theremin,
         videoUrl: ''
