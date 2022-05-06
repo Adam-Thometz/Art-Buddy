@@ -7,7 +7,7 @@ import downArrowIcon from './_icons/down-arrow.png';
 const Dropdown = ({ labelText, onClick, options, borderColor }) => {
   const [displayLabelText, setDisplayLabelText] = useState(labelText)
   const handleChangeLabel = e => {
-    setDisplayLabelText(e.target.textContent)
+    setDisplayLabelText(e.target.textContent);
   };
   const downArrow = <img src={downArrowIcon} alt='' />
   return (
