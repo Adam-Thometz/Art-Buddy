@@ -24,6 +24,7 @@ const Menu = ({ type = null }) => {
       <div className="Menu-options">
         {options.map((option, i) => (
           <Button
+            key={i}
             colorId={i%4}
             onClick={() => navigate(option.url)}
             icon={option.icon}
