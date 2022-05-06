@@ -10,8 +10,8 @@ const Points = ({ points, color }) => {
 
   return (
     <div data-testid='points'>
-      {pointDisplay.map(num => (
-        <Point num={num} color={color} />
+      {pointDisplay.map((num, i) => (
+        <Point key={i} num={num} color={color} />
       ))}
     </div>
   );
