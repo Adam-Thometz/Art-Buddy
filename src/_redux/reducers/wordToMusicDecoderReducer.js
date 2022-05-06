@@ -2,7 +2,7 @@ import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, 
 import { createReducer } from "@reduxjs/toolkit";
 
 import { now } from 'tone';
-import * as Tone from 'tone';
+import generateSynth from "../../_utils/synth";
 
 export const INITIAL_STATE = {
   wordDisplay: [
@@ -71,21 +71,6 @@ export function searchLetter(wordDisplay, letter) {
     }
   }
   return result;
-}
-
-export function generateSynth(pitch = 0, sample = null) {
-  let synth;
-  const pitchShift = new Tone.PitchShift({pitch}).toDestination();
-  if (sample && sample !== 'synth') {
-    synth = new Tone.Sampler({
-      urls: {
-        C3: sample
-      }
-    }).connect(pitchShift);
-  } else {
-    synth = new Tone.Synth().connect(pitchShift);
-  }
-  return synth;
 }
 
 export default wordToMusicDecoderReducer;

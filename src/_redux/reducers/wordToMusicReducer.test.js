@@ -3,10 +3,14 @@ import {
   testWordDisplayOneWord,
   testWordDisplayTwoWords
 } from '../../_testUtils/test-states/wordToMusicReducerTestState';
-// jest.mock('tone', () => ({
-//   esModule: true,
-//   now: jest.fn(() => 0)
-// }));
+
+jest.mock('tone', () => ({
+  esModule: true,
+  Synth: jest.fn()
+  // now: jest.fn(() => 0)
+}));
+
+// const synthSpy = jest.spyOn('./wordToMusicDecoderReducer', generateSynth);
 
 describe('searchLetters function', () => {
   it('should work with one word', () => {
@@ -27,3 +31,9 @@ describe('searchLetters function', () => {
     expect(result2[1]).toBe(4);
   });
 });
+
+describe('generateSynth function', () => {
+  it('should return a synth', () => {
+
+  })
+})

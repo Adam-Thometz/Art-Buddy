@@ -1,7 +1,7 @@
 const pitches = {
-  low: 1,
-  medium: 2,
-  high: 3
+  low: 2,
+  medium: 3,
+  high: 4
 }
 
 export default pitches

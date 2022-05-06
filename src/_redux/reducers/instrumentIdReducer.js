@@ -2,7 +2,7 @@ import { createSound, playSound } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 import * as storedSounds from '../../instrument-id/_sounds/soundImports';
 
-import { Sampler } from "tone";
+import sample from "../../_utils/sample";
 
 const INITIAL_STATE = {
   currInstrument: null
@@ -20,14 +20,6 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const audio = new Audio(sound);
       audio.play();
     })
-})
-
-const sample = (instrument) => (
-  new Sampler({
-    urls: {
-      C3: instrument
-    }
-  }).toDestination()
-);
+});
 
 export default instrumentIdReducer

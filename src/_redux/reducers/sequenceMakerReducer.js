@@ -1,6 +1,7 @@
 import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence, removeBlock, removeFromSequence, resetSequence, setPitch } from "../actions/sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
+import sample from "../../_utils/sample";
 import soundInfo from "../../sequence-maker/_media/soundInfo";
 import { sounds } from "../../sequence-maker/_media/soundImageImports";
 import pitches from "../../sequence-maker/_utils/pitchMap";
@@ -65,15 +66,7 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(setPitch, (state, action) => {
       const { id, pitch } = action.payload;
       state.sequence[id].pitch = pitch;
-    })
-})
-
-const sample = (sound) => {
-  return new Sampler({
-    urls: {
-      C2: sound
-    }
-  }).toDestination();
-};
+    });
+});
 
 export default sequenceMakerReducer;
