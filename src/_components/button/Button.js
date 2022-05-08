@@ -10,15 +10,17 @@ const Button = ({
   onClick,
   small = false,
   selected = false,
+  disabled = false,
   icon = null,
   otherStyles = {}
 }) => {
   const borderColor = colors[colorId]
   return (
     <button
+      disabled={disabled}
       className={`Button ${small ? 'small' : 'regular'}${selected ? ' selected' : ''}`}
       onClick={onClick}
-      style={{borderColor, ...otherStyles}}
+      style={{borderColor, backgroundColor: disabled ? 'grey' : null, ...otherStyles}}
     >
       {icon ? <img src={icon} alt='' /> : null}
       {children}
