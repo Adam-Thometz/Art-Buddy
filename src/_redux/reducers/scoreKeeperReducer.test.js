@@ -1,5 +1,5 @@
 import scoreKeeperReducer, { INITIAL_STATE, updateWinners } from './scoreKeeperReducer';
-import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores } from '../actions/scoreKeeperActions';
+import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores, clearGame } from '../actions/scoreKeeperActions';
 import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
 
 describe('updateWinners', () => {
@@ -68,5 +68,10 @@ describe('Score Keeper reducer', () => {
     const result = scoreKeeperReducer(addedStudents, resetScores());
     const hasReset = result.students.every(student => student.points === 0);
     expect(hasReset).toBe(true);
-  })
+  });
+
+  it('should handle resetting the game', () => {
+    const result = scoreKeeperReducer(addedStudents, clearGame());
+    expect(result).toEqual(INITIAL_STATE);
+  });
 });

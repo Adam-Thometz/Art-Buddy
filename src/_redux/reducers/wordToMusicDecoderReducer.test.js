@@ -25,6 +25,11 @@ describe('Word To Music reducer', () => {
     }));
     expect(result.wordDisplay).toEqual(testWordDisplayOneWord);
   });
+
+  it('should handle resetting the game', () => {
+    // const result = wordToMusicDecoderReducer(withCategory, clearGame());
+    // expect(result).toEqual(INITIAL_STATE);
+  });
 });
 
 describe('searchLetters function', () => {

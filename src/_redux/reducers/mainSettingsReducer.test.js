@@ -7,9 +7,15 @@ describe('Main Menu & Settings Reducer', () => {
   });
 
   it('should handle changing menu category', () => {
-    expect(mainSettingsReducer(undefined, changeMenuGames('tools'))).toEqual({
+    const result = mainSettingsReducer(undefined, changeMenuGames('tools'));
+    expect(result).toEqual({
       ...INITIAL_STATE,
       menu: 'tools'
+    });
+    const result2 = mainSettingsReducer(result, changeMenuGames('games'));
+    expect(result2).toEqual({
+      ...INITIAL_STATE,
+      menu: 'games'
     });
   });
 });

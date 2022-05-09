@@ -1,5 +1,5 @@
 import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import { addBlock, addToSequence, changeCategory, removeBlock, removeFromSequence, resetSequence, setPitch } from "../actions/sequenceMakerActions";
+import { addBlock, addToSequence, changeCategory, clearGame, removeBlock, removeFromSequence, resetSequence, setPitch } from "../actions/sequenceMakerActions";
 
 import { withCategory } from '../../_testUtils/test-states/sequenceMakerReducerTestState'
 
@@ -62,4 +62,9 @@ describe('Sequence Maker reducer', () => {
     }));
     expect(result.sequence[0].pitch).toBe('low')
   });
-})
+
+  it('should handle resetting the game', () => {
+    const result = sequenceMakerReducer(withCategory, clearGame());
+    expect(result).toEqual(INITIAL_STATE);
+  });
+});
