@@ -4,3 +4,4 @@ export const selectChoice = createAction('selectChoice');
 export const createSound = createAction('createSound');
 export const generateAnswer = createAction('generateAnswer');
 export const playSound = createAction('playSound');
+export const clearChoices = createAction('clearChoices');

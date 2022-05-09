@@ -6,3 +6,4 @@ export const addPoint = createAction('addPoint');
 export const removePoint = createAction('removePoint');
 export const toggleGameOver = createAction('toggleGameOver');
 export const resetScores = createAction('resetScores');
+export const clearGame = createAction('clearGame');

@@ -9,3 +9,4 @@ export const playSequence = createAction('playSequence');
 export const playAllSequence = createAction('playAllSequence');
 export const resetSequence = createAction('resetSequence');
 export const setPitch = createAction('setPitch');
+export const clearGame = createAction('clearGame');

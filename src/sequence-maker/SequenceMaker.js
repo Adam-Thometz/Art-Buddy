@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeCategory, addToSequence } from "../_redux/actions/sequenceMakerActions";
+import { changeCategory, addToSequence, clearGame } from "../_redux/actions/sequenceMakerActions";
 
 import Sequence from "./sequence/Sequence";
 import Dropdown from "../_components/dropdown/Dropdown";
@@ -15,6 +15,12 @@ const SequenceMaker = () => {
   const category = useSelector(state => state.sequenceMaker.category);
   const sequence = useSelector(state => state.sequenceMaker.sequence);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearGame());
+    }
+  }, [dispatch]);
 
   const handleChangeCategory = e => {
     dispatch(changeCategory(e.target.id));

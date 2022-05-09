@@ -7,3 +7,4 @@ export const playNote = createAction('playNote');
 export const playMelody = createAction('playMelody');
 export const changeScale = createAction('changeScale');
 export const changeSound = createAction('changeSound');
+export const clearGame = createAction('clearGame');

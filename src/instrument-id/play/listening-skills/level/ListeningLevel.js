@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, generateAnswer } from "../../../../_redux/actions/insturmentIdActions";
+import { selectChoice, generateAnswer, clearChoices } from "../../../../_redux/actions/insturmentIdActions";
 
 import './ListeningLevel.css';
 
@@ -24,12 +24,17 @@ const ListeningLevel = () => {
     const id = e.currentTarget.id;
     const choice = e.target.id;
     dispatch(selectChoice({ id, level, choice }));
-    
   };
 
   useEffect(() => {
     if (choice1 && choice2) dispatch(generateAnswer({ choice1, choice2 }));
   }, [dispatch, choice1, choice2]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearChoices());
+    }
+  }, [dispatch]);
 
   const dropdown = (id) => <Dropdown
     id={id}

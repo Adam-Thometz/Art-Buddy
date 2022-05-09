@@ -1,4 +1,4 @@
-import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, playNote } from "../actions/wordToMusicActions";
+import { addWord, changeScale, changeSound, createWord, fillLetter, playMelody, playNote, clearGame } from "../actions/wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import { now } from 'tone';
@@ -57,7 +57,14 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(changeSound, (state, action) => {
       const { currScale, newInstrument } = action.payload;
       state.synth = generateSynth(currScale, newInstrument);
-    });
+    })
+    .addCase(clearGame, (state, action) => {
+      state.wordDisplay = [
+        []
+      ]
+      state.synth = null
+      state.scale = null
+    });;
 })
 
 export function searchLetter(wordDisplay, letter) {

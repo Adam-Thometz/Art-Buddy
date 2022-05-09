@@ -1,4 +1,4 @@
-import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence, removeBlock, removeFromSequence, resetSequence, setPitch } from "../actions/sequenceMakerActions";
+import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence, removeBlock, removeFromSequence, resetSequence, setPitch, clearGame } from "../actions/sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import sample from "../../_utils/sample";
@@ -65,7 +65,11 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(setPitch, (state, action) => {
       const { id, pitch } = action.payload;
       state.sequence[id].pitch = pitch;
-    });
+    })
+    .addCase(clearGame, (state, action) => {
+      state.category = '';
+      state.sequence = [null, null, null, null];
+    });;
 });
 
 export default sequenceMakerReducer;

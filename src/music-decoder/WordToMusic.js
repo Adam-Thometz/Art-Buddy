@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useDispatch } from 'react-redux';
+import { clearGame } from '../_redux/actions/wordToMusicActions';
 
 import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable';
@@ -8,6 +11,14 @@ import MusicControls from './music-controls/MusicControls';
 import './WordToMusic.css';
 
 const WordToMusic = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearGame());
+    }
+  }, [dispatch]);
+
   return (
     <div className="WordToMusic">
       <MusicControls />

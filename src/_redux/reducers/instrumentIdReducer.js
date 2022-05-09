@@ -1,4 +1,4 @@
-import { createSound, generateAnswer, playSound, selectChoice } from "../actions/insturmentIdActions";
+import { clearChoices, createSound, generateAnswer, playSound, selectChoice } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
@@ -47,6 +47,11 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const audio = new Audio(sound);
       audio.play();
     })
+    .addCase(clearChoices, (state, action) => {
+      state.choice1 = null;
+      state.choice2 = null;
+      state.answer = null;
+    });
 });
 
 export default instrumentIdReducer;

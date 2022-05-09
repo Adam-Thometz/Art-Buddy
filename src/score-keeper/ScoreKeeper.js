@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleGameOver } from '../_redux/actions/scoreKeeperActions';
+import { toggleGameOver, clearGame } from '../_redux/actions/scoreKeeperActions';
 
 import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';
@@ -17,6 +17,12 @@ const ScoreKeeper = () => {
   const endGame = () => {
     dispatch(toggleGameOver(true));
   }
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearGame());
+    }
+  }, [dispatch]);
 
   return (
     <div className="ScoreKeeper">
