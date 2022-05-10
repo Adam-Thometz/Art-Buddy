@@ -17,12 +17,12 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       if (level === '1') {
         if (id === '1') {
           const instrument1Idx = Math.floor(Math.random() * choices.length);
-          state.choice1 = choices[instrument1Idx];
-          state.choice1.family = choice;
+          const instrumentChoice = { ...choices[instrument1Idx], family: choice }
+          state.choice1 = instrumentChoice;
         } else if (id === '2') {
           const instrument2Idx = Math.floor(Math.random() * choices.length);
-          state.choice2 = choices[instrument2Idx];
-          state.choice2.family = choice;
+          const instrumentChoice = { ...choices[instrument2Idx], family: choice }
+          state.choice2 = instrumentChoice;
         }
       } else {
         const instrument1Idx = Math.floor(Math.random() * choices.length);

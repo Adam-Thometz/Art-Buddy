@@ -15,12 +15,13 @@ const Choice = ({ id, level, choice }) => {
   const checkAnswer = () => {
     const result = choice.name === answer.name ? true : false;
     setIsCorrect(result);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (answer.name === choice.name) {
         dispatch(selectChoice({ id, level, choice: choice.family }));
       }
       setIsCorrect(null);
-    }, 3000);
+      clearTimeout(timer);
+    }, 1000);
   };
 
   const swapInstrument = () => {
