@@ -1,8 +1,6 @@
 import { addWord, changeScale, createWord, fillLetter, playMelody, playNote, clearGame } from "../actions/wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import { now } from 'tone';
-import generateSynth from "../../music-decoder/_utils/synth";
 import play from "../../music-decoder/_utils/synth";
 
 export const INITIAL_STATE = {

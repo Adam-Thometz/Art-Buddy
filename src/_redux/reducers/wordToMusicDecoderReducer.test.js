@@ -43,6 +43,14 @@ describe('Word To Music reducer', () => {
     expect(result.wordDisplay).toEqual(testWordDisplayOneWord);
   });
 
+  it('should change the scale of a word', () => {
+    const result = wordToMusicDecoderReducer(testState, changeScale({
+      scaleId: 5,
+      wordId: 0
+    }))
+    expect(result.wordDisplay[0].scale).toBe(5);
+  })
+
   it('should handle resetting the game', () => {
     const result = wordToMusicDecoderReducer(testState, clearGame());
     expect(result).toEqual(INITIAL_STATE);
