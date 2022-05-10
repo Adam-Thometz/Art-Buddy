@@ -1,12 +1,13 @@
 import wordToMusicDecoderReducer, { INITIAL_STATE, searchLetter } from './wordToMusicDecoderReducer';
-import { addWord, createWord, fillLetter, playNote, playMelody, changeScale, changeSound } from '../actions/wordToMusicActions';
+import { addWord, createWord, fillLetter, changeScale, clearGame } from '../actions/wordToMusicActions';
 
 import {
   testWordDisplayOneWord,
-  testWordDisplayTwoWords
+  testWordDisplayTwoWords,
+  testState
 } from '../../_testUtils/test-states/wordToMusicReducerTestState';
 
-jest.mock('../../_utils/synth');
+jest.mock('../../music-decoder/_utils/synth');
 
 describe('Word To Music reducer', () => {
   it('should return the initial state', () => {
@@ -26,9 +27,25 @@ describe('Word To Music reducer', () => {
     expect(result.wordDisplay).toEqual(testWordDisplayOneWord);
   });
 
+  it('should fill a letter with a note', () => {
+    const result = wordToMusicDecoderReducer(testState, fillLetter({
+      letter: 'H',
+      note: 'A'
+    }));
+    expect(result.wordDisplay[0].word[0]).toEqual({ letter: 'H', note: 'A' });
+  });
+  
+  it('should not work if fill letter is called with a letter not in wordDisplay', () => {
+    const result = wordToMusicDecoderReducer(testState, fillLetter({
+      letter: 'B',
+      note: 'B'
+    }));
+    expect(result.wordDisplay).toEqual(testWordDisplayOneWord);
+  });
+
   it('should handle resetting the game', () => {
-    // const result = wordToMusicDecoderReducer(withCategory, clearGame());
-    // expect(result).toEqual(INITIAL_STATE);
+    const result = wordToMusicDecoderReducer(testState, clearGame());
+    expect(result).toEqual(INITIAL_STATE);
   });
 });
 

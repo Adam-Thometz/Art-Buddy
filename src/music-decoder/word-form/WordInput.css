@@ -1,7 +1,13 @@
+.WordInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .WordInput-input {
   font-size: 24px;
   margin: 5px auto;
-  width: 75%;
+  width: 60%;
 }
 
 .WordInput-error {

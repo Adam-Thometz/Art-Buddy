@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { createWord } from "../../_redux/actions/wordToMusicActions";
+import { changeScale, createWord } from "../../_redux/actions/wordToMusicActions";
 
 import './WordInput.css';
+
+import Dropdown from "../../_components/dropdown/Dropdown";
+
+import scales from "../_utils/dropdown-options/scales";
 
 const WordInput = ({ id }) => {
   const dispatch = useDispatch();
@@ -17,6 +21,11 @@ const WordInput = ({ id }) => {
 
     return errors;
   };
+
+  const handleChangeScale = e => {
+    const scaleId = +e.target.id;
+    dispatch(changeScale({ scaleId, wordId: id }))
+  }
 
   const handleChange = e => {
     const input = e.target.value;
@@ -36,6 +45,9 @@ const WordInput = ({ id }) => {
 
   return (
     <div className="WordInput">
+      <div className="WordInput-error">
+        {error.length ? <span>{error}</span> : null}
+      </div>
       <input
         className="WordInput-input"
         name="word"
@@ -43,8 +55,13 @@ const WordInput = ({ id }) => {
         value={wordInput}
         onChange={handleChange}
       />
-      <div className="WordInput-error">
-        {error.length ? <span>{error}</span> : null}
+      <div className="WordInput-controls">
+        <Dropdown
+          small
+          labelText='SCALE'
+          onClick={handleChangeScale}
+          options={scales}
+        />
       </div>
     </div>
   );
