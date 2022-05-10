@@ -16,7 +16,7 @@ import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
-import ListeningLevel from "../instrument-id/play/listening-skills/level/ListeningLevel";
+import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
 
 const ArtBuddyRoutes = () => {
   return (
@@ -41,7 +41,7 @@ const ArtBuddyRoutes = () => {
         {/* Play */}
         <Route path={instrumentIdUrls.playUrl} element={<Window page='INSTRUMENT ID: PLAY'><Play /></Window>} />
         <Route path={instrumentIdUrls.playListeningUrl} element={<Window page='INSTRUMENT ID: PLAY'><ListeningSkills /></Window>} />
-        <Route path={instrumentIdUrls.playListeningLevelUrl} element={<Window page='Listening Skills Test'><ListeningLevel /></Window>} />
+        <Route path={instrumentIdUrls.playListeningLevelUrl} element={<Window page='Listening Skills Test'><ListeningSkillsTest /></Window>} />
       
       {/* TOOLS */}
       {/* Score Keeper */}

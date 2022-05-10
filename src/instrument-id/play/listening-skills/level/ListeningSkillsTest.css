@@ -1,0 +1,26 @@
+.ListeningSkillsTest-game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ListeningSkillsTest-options {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+.ListeningSkillsTest-game button {
+  width: 10%;
+}
+
+.ListeningSkillsTest-choice-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.ListeningSkillsTest-choices {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+}

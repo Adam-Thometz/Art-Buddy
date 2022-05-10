@@ -18,24 +18,27 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
         if (id === '1') {
           const instrument1Idx = Math.floor(Math.random() * choices.length);
           state.choice1 = choices[instrument1Idx];
+          state.choice1.family = choice;
         } else if (id === '2') {
           const instrument2Idx = Math.floor(Math.random() * choices.length);
           state.choice2 = choices[instrument2Idx];
+          state.choice2.family = choice;
         }
       } else {
         const instrument1Idx = Math.floor(Math.random() * choices.length);
         state.choice1 = choices[instrument1Idx];
+        state.choice1.family = choice;
         let instrument2Idx = instrument1Idx;
         while (instrument2Idx === instrument1Idx) {
           instrument2Idx = Math.floor(Math.random() * choices.length);
         }
         state.choice2 = choices[instrument2Idx];
+        state.choice2.family = choice;
       }
     })
     .addCase(generateAnswer, (state, action) => {
       const { choice1, choice2 } = action.payload;
       const answer = Math.ceil(Math.random() * 2);
-      // debugger;
       state.answer = answer === 1 ? choice1 : choice2;
     })
     .addCase(createSound, (state, action) => {

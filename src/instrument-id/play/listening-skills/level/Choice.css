@@ -1,0 +1,9 @@
+.correct {
+  background-color: #89EB0A;
+  border-radius: 25px;
+}
+
+.incorrect {
+  background-color: #FD4D3A;
+  border-radius: 25px;
+}

@@ -246,7 +246,7 @@ const learnInstrumentOptions = {
         videoUrl: ''
       },
       {
-        name: 'ALSO',
+        name: 'ALTO',
         icon: icons.altoIcon,
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
