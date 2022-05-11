@@ -5,6 +5,6 @@ const instrumentOptions = {
   strings: 'STRINGS',
   woodwind: 'WOODWIND',
   voice: 'VOICE'
-}
+};
 
-export default instrumentOptions
+export default instrumentOptions;

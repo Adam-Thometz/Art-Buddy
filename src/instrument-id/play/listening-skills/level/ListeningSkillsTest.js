@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useReportCard from "../../../../_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice, generateAnswer, clearChoices } from "../../../../_redux/actions/insturmentIdActions";
@@ -17,6 +18,7 @@ const ListeningSkillsTest = () => {
   const choice1 = useSelector(state => state.instrumentId.choice1);
   const choice2 = useSelector(state => state.instrumentId.choice2);
   const answer = useSelector(state => state.instrumentId.answer);
+  const [savedReportCard, setSavedReportCard] = useReportCard(`instrument-id-level-${level}-report-card`);
   const dispatch = useDispatch();
 
   const setInstruments = e => {
@@ -30,9 +32,7 @@ const ListeningSkillsTest = () => {
   }, [dispatch, choice1, choice2]);
 
   useEffect(() => {
-    return () => {
-      dispatch(clearChoices());
-    }
+    return () => dispatch(clearChoices());
   }, [dispatch]);
   
   const playSound = () => {
@@ -66,13 +66,9 @@ const ListeningSkillsTest = () => {
             {level === '1' ? dropdown(2) : null}
           </div>
           <div className="ListeningSkillsTest-choices">
-            <div className="ListeningSkillsTest-choice-wrapper" id="1">
-              {choice1 ? <Choice choice={choice1} id='1' level={level} /> : null}
-            </div>
+            {choice1 ? <Choice choice={choice1} id='1' level={level} setReportCard={setSavedReportCard} /> : null}
             <p>{choice1 && choice2 ? 'OR' : null}</p>
-            <div className="ListeningSkillsTest-choice-wrapper" id="2">
-              {choice2 ? <Choice choice={choice2} id='2' level={level} /> : null}
-            </div>
+            {choice2 ? <Choice choice={choice2} id='2' level={level} setReportCard={setSavedReportCard} /> : null}
           </div>
         </div>
       </div>
