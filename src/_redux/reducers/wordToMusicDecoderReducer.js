@@ -2,6 +2,7 @@ import { addWord, changeScale, createWord, fillLetter, playMelody, playNote, cle
 import { createReducer } from "@reduxjs/toolkit";
 
 import play from "../../music-decoder/_utils/synth";
+import searchLetter from "../helpers/searchLetter";
 
 export const INITIAL_STATE = {
   wordDisplay: [
@@ -62,18 +63,5 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       ]
     });
 })
-
-export function searchLetter(wordDisplay, letter) {
-  const result = []
-  for (let i = 0; i < wordDisplay.length; i++) {
-    const currWord = wordDisplay[i].word;
-    const letterIdx = currWord.findIndex(block => !block.note && (block.letter === letter));
-    if (letterIdx !== -1) {
-      result.push(i, letterIdx);
-      break;
-    }
-  }
-  return result;
-}
 
 export default wordToMusicDecoderReducer;

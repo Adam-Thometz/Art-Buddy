@@ -2,11 +2,14 @@ import { clearChoices, createSound, generateAnswer, playSound, selectChoice } fr
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
+import getReportCards from "../helpers/getReportCards";
 
 const INITIAL_STATE = {
   choice1: null,
   choice2: null,
-  answer: null
+  answer: null,
+  reportCard1: null,
+  reportCard2: null
 }
 
 const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -26,14 +29,14 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
         }
       } else {
         const instrument1Idx = Math.floor(Math.random() * choices.length);
-        state.choice1 = choices[instrument1Idx];
-        state.choice1.family = choice;
+        const instrumentChoice1 = { ...choices[instrument1Idx], family: choice }
+        state.choice1 = instrumentChoice1;
         let instrument2Idx = instrument1Idx;
         while (instrument2Idx === instrument1Idx) {
           instrument2Idx = Math.floor(Math.random() * choices.length);
         }
-        state.choice2 = choices[instrument2Idx];
-        state.choice2.family = choice;
+        const instrumentChoice2 = { ...choices[instrument2Idx], family: choice }
+        state.choice2 = instrumentChoice2;
       }
     })
     .addCase(generateAnswer, (state, action) => {

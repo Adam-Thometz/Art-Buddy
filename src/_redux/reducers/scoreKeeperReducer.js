@@ -1,6 +1,8 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame } from "../actions/scoreKeeperActions";
 
+import updateWinners from "../helpers/updateWinners";
+
 export const INITIAL_STATE = {
   students: [],
   winners: [],
@@ -58,20 +60,3 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
 })
 
 export default scoreKeeperReducer;
-
-export function updateWinners(students) {
-  const winners = [];
-  let currWinningScore = 0;
-  for (let student of students) {
-    if (student.points > currWinningScore) {
-      winners.length = 0;
-      const { name, color } = student;
-      winners.push({name, color});
-      currWinningScore = student.points;
-    } else if (student.points === currWinningScore) {
-      const { name, color } = student;
-      winners.push({name, color});
-    }
-  }
-  return winners;
-}

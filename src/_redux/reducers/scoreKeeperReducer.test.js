@@ -1,14 +1,6 @@
-import scoreKeeperReducer, { INITIAL_STATE, updateWinners } from './scoreKeeperReducer';
+import scoreKeeperReducer, { INITIAL_STATE } from './scoreKeeperReducer';
 import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores, clearGame } from '../actions/scoreKeeperActions';
 import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
-
-describe('updateWinners', () => {
-  it('should determine winners', () => {
-    const result = updateWinners(addedStudents.students);
-    expect(result.length).toBe(1);
-    expect(result).toEqual([{name:'Jake', color: 'blue'}])
-  });
-});
 
 describe('Score Keeper reducer', () => {
   it('should return the initial state', () => {
