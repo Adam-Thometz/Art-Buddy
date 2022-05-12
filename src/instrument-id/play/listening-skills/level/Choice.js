@@ -17,6 +17,7 @@ const Choice = ({ id, level, choice, setReportCard }) => {
 
   const checkAnswer = () => {
     const result = choice.name === answer.name ? true : false;
+    // debugger;
     setIsCorrect(result);
     if (result) {
       const alreadyGot = reportCard[choice.family].includes(choice.name);
@@ -25,7 +26,6 @@ const Choice = ({ id, level, choice, setReportCard }) => {
           ...reportCard,
           [choice.family]: [...reportCard[choice.family], choice.name]
         };
-        console.log(newReportCard)
         dispatch(updateReportCard({ level, newReportCard }));
         setReportCard(JSON.stringify(newReportCard));
       }

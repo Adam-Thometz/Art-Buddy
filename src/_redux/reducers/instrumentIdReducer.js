@@ -1,4 +1,4 @@
-import { clearChoices, clearReportCards, createSound, generateAnswer, playSound, selectChoice, updateReportCard } from "../actions/insturmentIdActions";
+import { clearChoices, clearReportCards, createSound, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
@@ -43,6 +43,11 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const { choice1, choice2 } = action.payload;
       const answer = Math.ceil(Math.random() * 2);
       state.answer = answer === 1 ? choice1 : choice2;
+    })
+    .addCase(loadReportCards, (state, action) => {
+      const { savedReportCard1, savedReportCard2 } = action.payload;
+      state.reportCard1 = savedReportCard1;
+      state.reportCard2 = savedReportCard2;
     })
     .addCase(updateReportCard, (state, action) => {
       const { level, newReportCard } = action.payload

@@ -10,7 +10,7 @@ export const INITIAL_REPORT_CARD = {
 }
 
 const useReportCard = (key) => {
-  const initialValue = localStorage.getItem(key) || INITIAL_REPORT_CARD;
+  const initialValue = localStorage.getItem(key) || JSON.stringify(INITIAL_REPORT_CARD);
   const [state, setState] = useState(initialValue);
 
   useEffect(() => {

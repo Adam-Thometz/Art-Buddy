@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useReportCard from "../../../_hooks/useReportCard";
+
+import { useSelector, useDispatch } from "react-redux";
+import { loadReportCards } from "../../../_redux/actions/insturmentIdActions";
 
 import './ListeningSkills.css';
 
@@ -12,9 +15,15 @@ import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const reportCard1 = useSelector(state => state.instrumentId.reportCard1);
+  const reportCard2 = useSelector(state => state.instrumentId.reportCard2);
+  const [savedReportCard1, setSavedReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
+  const [savedReportCard2, setSavedReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
 
-  // const [reportCard1, setReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
-  // const [reportCard2, setReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
+  useEffect(() => {
+    dispatch(loadReportCards({ savedReportCard1, savedReportCard2 }));
+  }, [dispatch, savedReportCard1, savedReportCard2]);
 
   return (
     <div className="ListeningSkills">
