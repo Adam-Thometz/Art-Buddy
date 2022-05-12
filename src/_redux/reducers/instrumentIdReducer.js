@@ -46,8 +46,8 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(loadReportCards, (state, action) => {
       const { savedReportCard1, savedReportCard2 } = action.payload;
-      state.reportCard1 = savedReportCard1;
-      state.reportCard2 = savedReportCard2;
+      state.reportCard1 = JSON.parse(savedReportCard1);
+      state.reportCard2 = JSON.parse(savedReportCard2);
     })
     .addCase(updateReportCard, (state, action) => {
       const { level, newReportCard } = action.payload

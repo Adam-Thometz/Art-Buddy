@@ -18,8 +18,8 @@ const ListeningSkills = () => {
   const dispatch = useDispatch();
   const reportCard1 = useSelector(state => state.instrumentId.reportCard1);
   const reportCard2 = useSelector(state => state.instrumentId.reportCard2);
-  const [savedReportCard1, setSavedReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
-  const [savedReportCard2, setSavedReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
+  const [savedReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
+  const [savedReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
 
   useEffect(() => {
     dispatch(loadReportCards({ savedReportCard1, savedReportCard2 }));

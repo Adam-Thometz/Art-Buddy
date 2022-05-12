@@ -17,7 +17,6 @@ const Choice = ({ id, level, choice, setReportCard }) => {
 
   const checkAnswer = () => {
     const result = choice.name === answer.name ? true : false;
-    // debugger;
     setIsCorrect(result);
     if (result) {
       const alreadyGot = reportCard[choice.family].includes(choice.name);
@@ -47,14 +46,16 @@ const Choice = ({ id, level, choice, setReportCard }) => {
     ? (isCorrect ? ' correct' : ' incorrect')
     : '';
 
+  const isCorrectWrapper = isCorrect !== null ? (
+    isCorrect ?
+      <Icon size="150px" icon={correctIcon} text='CORRECT' /> :
+      <Icon size="150px" icon={incorrectIcon} text='INCORRECT' />
+  ) : null
+
   return (
     <div className={`Choice`}>
       <div className={`Choice-wrapper${isCorrectClass}`}>
-        {isCorrect !== null ? (
-          isCorrect ? 
-            <Icon size="150px" icon={correctIcon} text='CORRECT' /> :
-            <Icon size="150px" icon={incorrectIcon} text='INCORRECT' />
-        ) : null}
+        {isCorrectWrapper}
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />
       <Icon text='SWAP' size="30px" onClick={swapInstrument}/>

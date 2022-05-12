@@ -4,7 +4,7 @@ export const INITIAL_REPORT_CARD = {
   brass: [],
   electronic: [],
   percussion: [],
-  string: [],
+  strings: [],
   woodwind: [],
   voice: []
 }
