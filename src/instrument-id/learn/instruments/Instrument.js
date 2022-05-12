@@ -22,6 +22,10 @@ const Instrument = () => {
     dispatch(playSound(instrumentInfo.sound));
   }
 
+  const openVideo = () => {
+    window.open(instrumentInfo.videoUrl);
+  }
+
   return (
     <div className="Instrument">
       <div className="Instrument-name">
@@ -38,7 +42,7 @@ const Instrument = () => {
         <p>{instrumentInfo.howToPlay}</p>
         <div className="Instrument-buttons">
           <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
-          <Button colorId={2}>Watch Video</Button>
+          <Button colorId={2} onClick={openVideo}>Watch Video</Button>
         </div>
       </div>
     </div>
