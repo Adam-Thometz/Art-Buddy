@@ -17,40 +17,91 @@ import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
-import help from './_icons/help.png';
-import { reportCardIcon } from "../instrument-id/_icons/iconImports";
+import ReportCardIcon from "../_components/window-nav/corner-icons/report-card/ReportCardIcon";
+import HelpIcon from "../_components/window-nav/corner-icons/help/HelpIcon";
 
 const ArtBuddyRoutes = () => {
   return (
     <Routes>
       <Route index element={<LandingPage />} />
       {/* MENUS */}
-      <Route path={urls.artGames} element={<Window small page='ART GAMES'><Menu type={'art'} /></Window>} />
-      <Route path={urls.musicGames} element={<Window small page='MUSIC GAMES'><Menu type={'music'} /></Window>} />
-      <Route path={urls.allGames} element={<Window small page='ALL GAMES'><Menu type={'all'} /></Window>} />
+      <Route path={urls.artGames} element={
+        <Window small page='ART GAMES'>
+          <Menu type={'art'} />
+        </Window>} />
+      <Route path={urls.musicGames} element={
+        <Window small page='MUSIC GAMES'>
+          <Menu type={'music'} />
+        </Window>} />
+      <Route path={urls.allGames} element={
+        <Window small page='ALL GAMES'>
+          <Menu type={'all'} />
+        </Window>} />
 
       {/* MUSIC GAMES */}
+
       {/* Word To Music Decoder */}
-      <Route path={urls.wordToMusicUrl} element={<Window page='WORD-TO-MUSIC DECODER'><WordToMusic /></Window>} />
+      <Route path={urls.wordToMusicUrl} element={
+        <Window page='WORD-TO-MUSIC DECODER'>
+          <WordToMusic />
+        </Window>} />
+
       {/* Sequence Maker */}
-      <Route path={urls.sequencerUrl} element={<Window page='SEQUENCE MAKER'><SequenceMaker /></Window>} />
+      <Route path={urls.sequencerUrl} element={
+        <Window page='SEQUENCE MAKER'>
+          <SequenceMaker />
+        </Window>} />
+
       {/* What's That Instrument? */}
-      <Route path={urls.instrumentIdUrl} element={<Window icon={help} page='INSTRUMENT ID'><InstrumentId /></Window>} />
+      <Route path={urls.instrumentIdUrl} element={
+        <Window icon={<HelpIcon />} page='INSTRUMENT ID'>
+          <InstrumentId />
+        </Window>} />
+
         {/* Learn */}
-        <Route path={instrumentIdUrls.learnUrl} element={<Window icon={help} page='INSTRUMENT ID: LEARN'><Learn /></Window>}/>
-        <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window page='INSTRUMENT ID: LEARN'><LearnFamilyPage /></Window>}/>
-        <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window page='INSTRUMENT ID: LEARN'><Instrument /></Window>}/>
+        <Route path={instrumentIdUrls.learnUrl} element={
+          <Window icon={<HelpIcon />} page='INSTRUMENT ID: LEARN'>
+            <Learn />
+          </Window>}/>
+
+        <Route path={instrumentIdUrls.learnFamilyUrl} element={
+          <Window page='INSTRUMENT ID: LEARN'>
+            <LearnFamilyPage />
+          </Window>}/>
+
+        <Route path={instrumentIdUrls.learnInstrumentUrl} element={
+          <Window page='INSTRUMENT ID: LEARN'>
+            <Instrument />
+          </Window>}/>
+
         {/* Play */}
-        <Route path={instrumentIdUrls.playUrl} element={<Window icon={help} page='INSTRUMENT ID: PLAY'><Play /></Window>} />
-        <Route path={instrumentIdUrls.playListeningUrl} element={<Window icon={help} page='INSTRUMENT ID: PLAY'><ListeningSkills /></Window>} />
-        <Route path={instrumentIdUrls.playListeningLevelUrl} element={<Window icon={reportCardIcon} iconText='REPORT CARD' page='Listening Skills Test'><ListeningSkillsTest /></Window>} />
+        <Route path={instrumentIdUrls.playUrl} element={
+          <Window icon={<HelpIcon />} page='INSTRUMENT ID: PLAY'>
+            <Play />
+          </Window>} />
+
+        <Route path={instrumentIdUrls.playListeningUrl} element={
+          <Window cornerIcon={<HelpIcon />} page='INSTRUMENT ID: PLAY'>
+            <ListeningSkills />
+          </Window>} />
+
+        <Route path={instrumentIdUrls.playListeningLevelUrl} element={
+          <Window cornerIcon={<ReportCardIcon />} page='Listening Skills Test'>
+            <ListeningSkillsTest />
+          </Window>} />
       
       {/* TOOLS */}
       {/* Score Keeper */}
-      <Route path={urls.scoreKeeperUrl} element={<Window page='SCORE KEEPER'><ScoreKeeper /></Window>} />
+      <Route path={urls.scoreKeeperUrl} element={
+        <Window page='SCORE KEEPER'>
+          <ScoreKeeper />
+        </Window>} />
       
       {/* GENERAL 404 HANDLER */}
-      <Route path="*" element={<Window small page="UH OH!"><NotFound /></Window>}/>
+      <Route path="*" element={
+        <Window small page="UH OH!">
+          <NotFound />
+        </Window>}/>
     </Routes>
   );
 };

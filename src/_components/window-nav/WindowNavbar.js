@@ -6,9 +6,8 @@ import { changeMenuGames } from "../../_redux/actions/mainSettingsActions";
 import './WindowNavbar.css';
 
 import BackArrow from "../back-arrow/BackArrow";
-import Icon from "../icon/Icon";
 
-const WindowNavbar = ({ icon = null, iconText = null, page = null }) => {
+const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   const dispatch = useDispatch();
   const menuCategory = useSelector(state => state.mainSettings.menu);
   const handleChange = (label) => {
@@ -25,13 +24,11 @@ const WindowNavbar = ({ icon = null, iconText = null, page = null }) => {
     </div>
   );
 
-  const iconDisplay = icon ? <Icon icon={icon} text={iconText} size='40px' /> : null;
-
   const regularPage = () => (
     <div className="WindowNavbar-games">
       {page === 'WELCOME TO ART BUDDY!' ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
-      {iconDisplay}
+      {cornerIcon}
     </div>
   );
 

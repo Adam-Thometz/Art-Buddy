@@ -22,6 +22,17 @@
   margin: 0 auto;
 }
 
+.WindowNavbar-corner-icon {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+.report-card img {
+  width: 34px;
+  height: 50px;
+}
+
 .underlined {
   background-image: url(_icons/underline.png);
   background-repeat: no-repeat;
