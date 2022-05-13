@@ -1,3 +1,7 @@
+.ListeningSkillsTest h2 {
+  margin-top: 0;
+}
+
 .ListeningSkillsTest-game {
   display: flex;
   justify-content: space-between;
