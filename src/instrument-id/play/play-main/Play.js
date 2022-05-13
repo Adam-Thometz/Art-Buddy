@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import './Play.css';
+
 import Icon from "../../../_components/icon/Icon";
 import Options from "../../../_components/option/Options";
 
@@ -13,8 +15,8 @@ const Play = () => {
     <div className="Play">
       <p>Master skills in Listening Skills to unlock instruments for the Song Maker!</p>
       <Options width="65%">
-        <Icon icon={listeningSkills} text="LISTENING SKILLS" onClick={() => navigate(instrumentIdUrls.playListeningUrl)} />
-        <Icon icon={songMaker} text="SONG MAKER" onClick={() => navigate(instrumentIdUrls.playSongMakerUrl)} />
+        <Icon icon={listeningSkills} text="Listening Skills Test" onClick={() => navigate(instrumentIdUrls.playListeningUrl)} />
+        <Icon icon={songMaker} text="Song Maker" onClick={() => navigate(instrumentIdUrls.playSongMakerUrl)} />
       </Options>
     </div>
   );

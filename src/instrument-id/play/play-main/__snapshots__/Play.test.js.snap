@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Play component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Play"
+  >
+    <p>
+      Master skills in Listening Skills to unlock instruments for the Song Maker!
+    </p>
+    <div
+      class="Options"
+      style="width: 65%;"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px; cursor: pointer;"
+        />
+        <p>
+          Listening Skills Test
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px; cursor: pointer;"
+        />
+        <p>
+          Song Maker
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
