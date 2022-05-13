@@ -22,11 +22,13 @@
 
 .ListeningSkills-level {
   display: flex;
+  justify-content: center;
 }
 
 .ListeningSkills-report-card {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .ListeningSkills-report-card img {
