@@ -12,10 +12,10 @@ const ReportCard = ({ level }) => {
   const scoreDisplay = Object.keys(reportCard).map(family => {
     const score = reportCard[family].length;
     const maxScore = learnInstrumentOptions[family].instruments.length;
-    const midRange = Array.from({length: maxScore-2}, (x, i) => i+1)
+    const midRange = Array.from({length: maxScore-2}, (x, i) => i+1);
     const midScoreDisplay = midRange.map(s => (
-      <img src={score >= s ? fullMid : emptyMid} alt='' />
-    ))
+      <img src={score >= s+1 ? fullMid : emptyMid} alt='' />
+    ));
     return (
       <div className='ReportCard-score-display'>
         <span>{family.toUpperCase()} FAMILY</span>
