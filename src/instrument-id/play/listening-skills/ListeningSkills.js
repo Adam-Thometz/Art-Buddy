@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useReportCard from "../../../_hooks/useReportCard";
 
@@ -18,8 +18,6 @@ import { instrumentIdUrls } from "../../../_routes/routeUrls";
 const ListeningSkills = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [triggerPopup1, setTriggerPopup1] = useState(false);
-  const [triggerPopup2, setTriggerPopup2] = useState(false);
   const [savedReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
   const [savedReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
 
@@ -27,11 +25,12 @@ const ListeningSkills = () => {
     dispatch(loadReportCards({ savedReportCard1, savedReportCard2 }));
   }, [dispatch, savedReportCard1, savedReportCard2]);
 
-  const handleTriggerPopup = (level) => {
-    level === 1 ?
-      setTriggerPopup1(trigger => !trigger) :
-      setTriggerPopup2(trigger => !trigger)
-  }
+  const popupTrigger = (
+    <div className="ListeningSkills-report-card">
+      <img src={reportCardIcon} alt='' />
+      <p>Report Card</p>
+    </div>
+  );
 
   const levels = [1,2].map(level => (
     <div className="ListeningSkills-level">
@@ -39,16 +38,12 @@ const ListeningSkills = () => {
         colorId={level-1}
         onClick={() => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`)}
       >Level {level}</Button>
-      <div className="ListeningSkills-report-card" onClick={() => handleTriggerPopup(level)}>
-        <img src={reportCardIcon} alt='' />
-        <p>Report Card</p>
-        <Popup
-          title='REPORT CARD'
-          trigger={level === 1 ? triggerPopup1 : triggerPopup2}
-          setTrigger={level === 1 ? setTriggerPopup1 : setTriggerPopup2} >
-          <ReportCard level={level} />
-        </Popup>
-      </div>
+      <Popup
+        title='REPORT CARD'
+        trigger={popupTrigger}
+        triggerClass='ListeningSkills-report-card'
+        popup={<ReportCard level={level} />}
+      />
     </div>
   ));
 

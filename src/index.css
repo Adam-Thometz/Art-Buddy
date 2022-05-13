@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Chelsea Market', 'Nunito', sans-serif;
   font-size: 1.5rem;
-  color: #4D4F5E;
+  color: #0D0709;
   background-color: #17225A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,6 +10,7 @@ body {
 }
 
 h1 {
+  color: #4D4F5E;
   font-weight: 100;
 }
 
