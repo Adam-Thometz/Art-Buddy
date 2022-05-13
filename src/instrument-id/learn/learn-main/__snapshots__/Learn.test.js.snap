@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Learn component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Learn"
+  >
+    <div
+      class="Learn-header"
+    >
+      <p>
+        To begin, choose an instrument family
+      </p>
+    </div>
+    <div
+      class="Learn-options"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          BRASS
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          ELECTRONIC
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          PERCUSSION
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          STRINGS
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          WOODWIND
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 200px; height: 200px; cursor: pointer;"
+        />
+        <p>
+          VOICE
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Instrument component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Instrument"
+  >
+    <div
+      class="Instrument-name"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px;"
+        />
+        <p>
+          TRUMPET
+        </p>
+      </div>
+    </div>
+    <div
+      class="Instrument-information"
+    >
+      <h2>
+        WHAT IS THE TRUMPET MADE OUT OF?
+      </h2>
+      <ul>
+        <li>
+          BRASS
+        </li>
+      </ul>
+      <h2>
+        THE TRUMPET IS PLAYED BY...
+      </h2>
+      <p>
+        blowing into the mouthpiece and pressing on the valves
+      </p>
+      <div
+        class="Instrument-buttons"
+      >
+        <button
+          class="Button regular"
+          style="border-color: #89eb0a;"
+        >
+          Play Sound
+        </button>
+        <button
+          class="Button regular"
+          style="border-color: #fd4d3a;"
+        >
+          Watch Video
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

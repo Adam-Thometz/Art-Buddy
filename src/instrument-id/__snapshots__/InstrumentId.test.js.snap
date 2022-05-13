@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstrumentId component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="InstrumentId"
+  >
+    <p
+      class="InstrumentId-instructions"
+    >
+      Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills
+    </p>
+    <div
+      class="Options"
+      style="width: 60%;"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px; cursor: pointer;"
+        />
+        <p>
+          LEARN
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px; cursor: pointer;"
+        />
+        <p>
+          PLAY
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

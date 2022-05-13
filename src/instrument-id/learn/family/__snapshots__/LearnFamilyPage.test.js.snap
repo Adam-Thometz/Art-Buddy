@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LearnFamilyPage component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="LearnFamilyPage"
+  >
+    <div
+      class="LearnFamilyPage-header"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px;"
+        />
+        <p>
+          THE BRASS FAMILY
+        </p>
+      </div>
+    </div>
+    <div
+      class="LearnFamilyPage-options"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 150px; height: 150px; cursor: pointer;"
+        />
+        <p>
+          TRUMPET
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 150px; height: 150px; cursor: pointer;"
+        />
+        <p>
+          FRENCH HORN
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 150px; height: 150px; cursor: pointer;"
+        />
+        <p>
+          TROMBONE
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 150px; height: 150px; cursor: pointer;"
+        />
+        <p>
+          TUBA
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
