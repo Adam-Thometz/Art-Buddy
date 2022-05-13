@@ -12,11 +12,13 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import Instrument from "../instrument-id/learn/instruments/Instrument";
   import Play from '../instrument-id/play/play-main/Play';
   import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
+  import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
-import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
+import help from './_icons/help.png';
+import { reportCardIcon } from "../instrument-id/_icons/iconImports";
 
 const ArtBuddyRoutes = () => {
   return (
@@ -33,15 +35,15 @@ const ArtBuddyRoutes = () => {
       {/* Sequence Maker */}
       <Route path={urls.sequencerUrl} element={<Window page='SEQUENCE MAKER'><SequenceMaker /></Window>} />
       {/* What's That Instrument? */}
-      <Route path={urls.instrumentIdUrl} element={<Window page='INSTRUMENT ID'><InstrumentId /></Window>} />
+      <Route path={urls.instrumentIdUrl} element={<Window icon={help} page='INSTRUMENT ID'><InstrumentId /></Window>} />
         {/* Learn */}
-        <Route path={instrumentIdUrls.learnUrl} element={<Window page='INSTRUMENT ID: LEARN'><Learn /></Window>}/>
+        <Route path={instrumentIdUrls.learnUrl} element={<Window icon={help} page='INSTRUMENT ID: LEARN'><Learn /></Window>}/>
         <Route path={instrumentIdUrls.learnFamilyUrl} element={<Window page='INSTRUMENT ID: LEARN'><LearnFamilyPage /></Window>}/>
         <Route path={instrumentIdUrls.learnInstrumentUrl} element={<Window page='INSTRUMENT ID: LEARN'><Instrument /></Window>}/>
         {/* Play */}
-        <Route path={instrumentIdUrls.playUrl} element={<Window page='INSTRUMENT ID: PLAY'><Play /></Window>} />
-        <Route path={instrumentIdUrls.playListeningUrl} element={<Window page='INSTRUMENT ID: PLAY'><ListeningSkills /></Window>} />
-        <Route path={instrumentIdUrls.playListeningLevelUrl} element={<Window page='Listening Skills Test'><ListeningSkillsTest /></Window>} />
+        <Route path={instrumentIdUrls.playUrl} element={<Window icon={help} page='INSTRUMENT ID: PLAY'><Play /></Window>} />
+        <Route path={instrumentIdUrls.playListeningUrl} element={<Window icon={help} page='INSTRUMENT ID: PLAY'><ListeningSkills /></Window>} />
+        <Route path={instrumentIdUrls.playListeningLevelUrl} element={<Window icon={reportCardIcon} iconText='REPORT CARD' page='Listening Skills Test'><ListeningSkillsTest /></Window>} />
       
       {/* TOOLS */}
       {/* Score Keeper */}
