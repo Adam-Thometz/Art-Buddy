@@ -3,17 +3,16 @@ import WindowNavbar from "../window-nav/WindowNavbar";
 
 import './Window.css';
 
-const Window = ({ page = null, children, small = false }) => {
-  const createNav = () => (
-    !page ? (
+const Window = ({ children, icon = null, iconText = null, page = null, small = false }) => {
+  const windowNav = !page ? (
       <WindowNavbar />
     ) : (
-      <WindowNavbar page={page} />
+      <WindowNavbar page={page} icon={icon} iconText={iconText} />
     )
-  )
+
   return (
     <div className="Window" style={{ width: small ? '75%' : '90%' }}>
-      {createNav()}
+      {windowNav}
       {children}
     </div>
   );
