@@ -8,6 +8,7 @@ import listeningSkills from './play/listening-skills.png';
 import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
+import addInstrumentIcon from './play/add-instrument.png'
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
@@ -61,6 +62,7 @@ export {
   reportCardIcon,
   correctIcon,
   incorrectIcon,
+  addInstrumentIcon,
   trumpetIcon,
   frenchHornIcon,
   tromboneIcon,
