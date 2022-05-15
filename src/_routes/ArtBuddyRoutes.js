@@ -19,6 +19,8 @@ import NotFound from "./NotFound";
 import urls, { instrumentIdUrls } from "./routeUrls";
 import ReportCardIcon from "../_components/window-nav/corner-icons/report-card/ReportCardIcon";
 import HelpIcon from "../_components/window-nav/corner-icons/help/HelpIcon";
+import SongMaker from "../instrument-id/play/song-maker/SongMaker";
+import SavedSongsIcon from "../_components/window-nav/corner-icons/saved-songs/SavedSongsIcon";
 
 const ArtBuddyRoutes = () => {
   return (
@@ -89,6 +91,12 @@ const ArtBuddyRoutes = () => {
           <Window cornerIcon={<ReportCardIcon />} page='Listening Skills Test'>
             <ListeningSkillsTest />
           </Window>} />
+        
+        <Route path={instrumentIdUrls.playSongMakerUrl} element={
+          <Window cornerIcon={<SavedSongsIcon />} page='Song Maker'>
+            <SongMaker />
+          </Window>
+        } />
       
       {/* TOOLS */}
       {/* Score Keeper */}
