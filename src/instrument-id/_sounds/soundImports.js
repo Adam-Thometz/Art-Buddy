@@ -19,12 +19,23 @@ import bassoon from './instruments/woodwinds/bassoon.mp3';
 import saxophone from './instruments/woodwinds/saxophone.mp3';
 
 // Percussion
-import tambourine from './instruments/percussion/tambourine.mp3';
-import djembe from './instruments/percussion/djembe.mp3';
-import triangle from './instruments/percussion/triangle.mp3';
 import xylophone from './instruments/percussion/xylophone.mp3';
-import drumSet from './instruments/percussion/drum-set.mp3';
-import conga from './instruments/percussion/conga.mp3';
+import tambourineAccent from './instruments/percussion/tambourine/accent.mp3';
+import tambourineDimple from './instruments/percussion/tambourine/dimple.mp3';
+import tambourineForward from './instruments/percussion/tambourine/forward.mp3';
+import djembeHigh from './instruments/percussion/djembe/high.mp3';
+import djembeMedium from './instruments/percussion/djembe/medium.mp3';
+import djembeLow from './instruments/percussion/djembe/low.mp3';
+import triangleLoud from './instruments/percussion/triangle/loud.mp3';
+import triangleQuiet from './instruments/percussion/triangle/quiet.mp3';
+import drumSetBassDrum from './instruments/percussion/drum-set/bass-drum.mp3';
+import drumSetSnareDrum from './instruments/percussion/drum-set/snare-drum.mp3';
+import drumSetHiHat from './instruments/percussion/drum-set/hi-hat.mp3';
+import drumSetCrash from './instruments/percussion/drum-set/crash.mp3';
+import congaHeel from './instruments/percussion/conga/heel.mp3';
+import congaHigh from './instruments/percussion/conga/high.mp3';
+import congaLow from './instruments/percussion/conga/low.mp3';
+import congaMuffled from './instruments/percussion/conga/muffled.mp3';
 
 // Voice
 import soprano from './instruments/voice/soprano.mp3';
@@ -38,8 +49,51 @@ import bass from './instruments/voice/bass.mp3';
 import electricGuitar from './instruments/electronic/electric-guitar.mp3';
 import electricBass from './instruments/electronic/electric-bass.mp3';
 import synthesizer from './instruments/electronic/synthesizer.mp3';
-import sampler from './instruments/electronic/sampler.mp3';
+import samplerBassDrum from './instruments/electronic/sampler/bass-drum.mp3';
+import samplerSnareDrum from './instruments/electronic/sampler/snare-drum.mp3';
+import samplerHiHat from './instruments/electronic/sampler/hi-hat.mp3';
+import samplerCrash from './instruments/electronic/sampler/crash.mp3';
+import samplerOther from './instruments/electronic/sampler/other.mp3';
 import theremin from './instruments/electronic/theremin.mp3';
+
+const sampler = {
+  bassDrum: samplerBassDrum,
+  snareDrum: samplerSnareDrum,
+  hiHat: samplerHiHat,
+  crash: samplerCrash,
+  other: samplerOther
+};
+
+const tambourine = {
+  accent: tambourineAccent,
+  dimple: tambourineDimple,
+  forward: tambourineForward
+};
+
+const djembe = {
+  high: djembeHigh,
+  medium: djembeMedium,
+  low: djembeLow
+};
+
+const triangle = {
+  loud: triangleLoud,
+  quiet: triangleQuiet
+};
+
+const conga = {
+  heel: congaHeel,
+  high: congaHigh,
+  low: congaLow,
+  muffled: congaMuffled
+};
+
+const drumSet = {
+  bassDrum: drumSetBassDrum,
+  snareDrum: drumSetSnareDrum,
+  hiHat: drumSetHiHat,
+  crash: drumSetCrash
+}
 
 export {
   trumpet,
