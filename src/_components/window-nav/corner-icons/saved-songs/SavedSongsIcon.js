@@ -6,7 +6,7 @@ import Icon from '../../../icon/Icon';
 import savedSongsIcon from '../_icons/saved-songs.png';
 
 const SavedSongsIcon = () => {
-  const popupTrigger = (<Icon icon={savedSongsIcon} text='SAVED SONGS' />)
+  const popupTrigger = (<Icon icon={savedSongsIcon} text='SAVED SONGS' size='49px' />)
   return (
     <Popup
       title='SAVED SONGS'
