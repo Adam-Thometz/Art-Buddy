@@ -1,26 +1,16 @@
 .Dropdown {
   position: relative;
   display: inline-block;
-  font-size: 1.5rem;
   margin: 15px 0;
 }
 
 .Dropdown-label {
-  border: 5px solid;
   border-radius: 25px;
-  padding: 10px;
-}
-
-.Dropdown-label img {
-  height: 16px;
-  width: 24px;
 }
 
 .Dropdown-options {
   display: none;
-  position: absolute;
   z-index: 50;
-  font-size: 1rem;
   background-color: white;
   padding: 10px 20px;
   height: 20vh;
@@ -28,6 +18,9 @@
 }
 
 .Dropdown:hover .Dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 25%;
   display: block;
 }
 
