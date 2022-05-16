@@ -10,6 +10,7 @@ import Button from "../../../_components/button/Button";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { playSound } from "../../../_redux/actions/insturmentIdActions";
+import { Buffer } from "tone";
 
 const Instrument = () => {
   const dispatch = useDispatch()
@@ -25,6 +26,8 @@ const Instrument = () => {
   const openVideo = () => {
     window.open(instrumentInfo.videoUrl);
   }
+
+  window.buffer = new Buffer(instrumentInfo.sound)
 
   return (
     <div className="Instrument">
