@@ -7,7 +7,8 @@ import close from './_icons/close.png';
 const Popup = ({ title, trigger, triggerClass, popup }) => {
   const [popupTrigger, setPopupTrigger] = useState(false);
   
-  const handleSetTrigger = () => {
+  const handleSetTrigger = e => {
+    if (popupTrigger && e.target.classList[0] !== 'Popup') return;
     setPopupTrigger(trigger => !trigger);
   }
 
@@ -17,7 +18,7 @@ const Popup = ({ title, trigger, triggerClass, popup }) => {
         {trigger}
       </div>
       {popupTrigger ? (
-        <div className='Popup'>
+        <div className='Popup' onClick={handleSetTrigger}>
           <div className='Popup-box'>
             <div className='Popup-header'>
               <h1>{title}</h1>
