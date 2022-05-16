@@ -1,16 +1,25 @@
-import { clearChoices, clearReportCards, createSound, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard } from "../actions/insturmentIdActions";
+import { clearChoices, clearReportCards, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard, addInstrument, selectInstrument } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import { INITIAL_REPORT_CARD } from "../../_hooks/useReportCard";
+import { playBeat, playScale } from "../../instrument-id/_utils/play";
+
+const defaultInstrument = {
+  instrument: null,
+  melody: null
+}
 
 const INITIAL_STATE = {
+  // Listening Skills Test
   choice1: null,
   choice2: null,
   answer: null,
   reportCard1: INITIAL_REPORT_CARD,
-  reportCard2: INITIAL_REPORT_CARD
-}
+  reportCard2: INITIAL_REPORT_CARD,
+  // Song Maker
+  instruments: [defaultInstrument, null, null, null]
+};
 
 const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
@@ -63,14 +72,21 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.reportCard1 = INITIAL_REPORT_CARD;
       state.reportCard2 = INITIAL_REPORT_CARD;
     })
-    .addCase(createSound, (state, action) => {
-      // const instrument = action.payload;
-      // const sound = storedSounds[instrument];
-    })
     .addCase(playSound, (state, action) => {
       const sound = action.payload;
-      const audio = new Audio(sound);
-      audio.play();
+      if (typeof sound === 'object') {
+        playBeat(sound);
+      } else {
+        playScale();
+      }
+    })
+    .addCase(addInstrument, (state, action) => {
+      const id = action.payload;
+      state.instruments[id] = defaultInstrument;
+    })
+    .addCase(selectInstrument, (state, action) => {
+      const { id, instrument } = action.payload;
+      state.instruments[id].instrument = instrument;
     })
 });
 
