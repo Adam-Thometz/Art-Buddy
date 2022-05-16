@@ -66,8 +66,8 @@ const sampler = {
 
 const tambourine = {
   accent: tambourineAccent,
-  dimple: tambourineDimple,
-  forward: tambourineForward
+  forward: tambourineForward,
+  dimple: tambourineDimple
 };
 
 const djembe = {

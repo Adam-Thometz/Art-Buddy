@@ -27,10 +27,20 @@ const Instrument = () => {
     window.open(instrumentInfo.videoUrl);
   }
 
-  window.buffer = new Buffer(instrumentInfo.sound)
+  const createBuffers = () => {
+    const { sound } = instrumentInfo
+    if (typeof sound === 'object') {
+      const percussiveHits = Object.keys(sound);
+      for (let i = 0; i < percussiveHits.length; i++) {
+        window[`buffer${i+1}`] = new Buffer(sound[percussiveHits[i]])
+      }
+    } else {
+      window.buffer = new Buffer(sound);
+    }
+  }
 
   return (
-    <div className="Instrument">
+    <div className="Instrument" onLoad={createBuffers}>
       <div className="Instrument-name">
         <Icon icon={instrumentInfo.icon} text={instrumentInfo.name} />
       </div>
