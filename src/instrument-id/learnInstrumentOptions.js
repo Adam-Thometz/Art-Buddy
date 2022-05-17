@@ -145,6 +145,11 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.acousticGuitar,
+        melodies: [
+          ['C', 'G', 'C'],
+          ['D', 'A', 'D'],
+          ['E', 'B', 'E']
+        ],
         videoUrl: 'https://www.youtube.com/watch?v=VOMipc60JvA'
       },
       {
