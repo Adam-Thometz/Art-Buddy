@@ -13,3 +13,4 @@ export const clearReportCards = createAction('clearReportCards');
 // Song maker
 export const addInstrument = createAction('addInstrument');
 export const selectInstrument = createAction('selectInstrument');
+export const selectMelody = createAction('selectMelody');

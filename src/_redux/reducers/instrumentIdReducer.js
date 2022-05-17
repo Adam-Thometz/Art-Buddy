@@ -1,12 +1,14 @@
-import { clearChoices, clearReportCards, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard, addInstrument, selectInstrument } from "../actions/insturmentIdActions";
+import { clearChoices, clearReportCards, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import { INITIAL_REPORT_CARD } from "../../_hooks/useReportCard";
 import { playBeat, playScale } from "../../instrument-id/_utils/play";
+import getMelody from "../helpers/getMelody";
 
 const defaultInstrument = {
-  instrument: null,
+  instrumentId: null,
+  instrumentName: null,
   melody: null
 }
 
@@ -85,8 +87,23 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.instruments[id] = defaultInstrument;
     })
     .addCase(selectInstrument, (state, action) => {
-      const { id, instrument } = action.payload;
-      state.instruments[id].instrument = instrument;
+      const { id, instrumentId, instrumentName } = action.payload;
+      const newInstrument = {
+        instrumentId,
+        instrumentName,
+        melody: null
+      }
+      state.instruments[id] = newInstrument;
+    })
+    .addCase(selectMelody, (state, action) => {
+      const { id, melodyId } = action.payload;
+      const { instrumentName } = state.instruments[id];
+      const melody = getMelody({ instrumentName, melodyId });
+      const instrumentWithMelody = {
+        ...state.instruments[id],
+        melody
+      };
+      state.instruments[id] = instrumentWithMelody;
     })
 });
 
