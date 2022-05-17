@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListeningSkills component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ListeningSkills"
+  >
+    <div
+      class="ListeningSkills-icon"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+          style="width: 250px; height: 250px;"
+        />
+        <p>
+          Listening Skills Test
+        </p>
+      </div>
+    </div>
+    <div
+      class="ListeningSkills-levels-report-cards"
+    >
+      <p>
+        Practice your listening skills to unlock instruments that you can play later on the Song Maker section!
+      </p>
+      <div
+        class="ListeningSkills-level"
+      >
+        <button
+          class="Button regular"
+          style="border-color: #89eb0a;"
+        >
+          Level 1
+        </button>
+        <div
+          class="ListeningSkills-report-card"
+        >
+          <div
+            class="ListeningSkills-report-card"
+          >
+            <img
+              alt=""
+              src="[object Object]"
+            />
+            <p>
+              Report Card
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ListeningSkills-level"
+      >
+        <button
+          class="Button regular"
+          style="border-color: #ffe81a;"
+        >
+          Level 2
+        </button>
+        <div
+          class="ListeningSkills-report-card"
+        >
+          <div
+            class="ListeningSkills-report-card"
+          >
+            <img
+              alt=""
+              src="[object Object]"
+            />
+            <p>
+              Report Card
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

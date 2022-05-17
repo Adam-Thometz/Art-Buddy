@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Choice component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Choice"
+  >
+    <div
+      class="Choice-wrapper"
+    />
+    <div
+      class="Icon"
+    >
+      <img
+        alt=""
+        src="[object Object]"
+        style="width: 250px; height: 250px; cursor: pointer;"
+      />
+      <p>
+        THEREMIN
+      </p>
+    </div>
+    <div
+      class="Icon"
+    >
+      <img
+        alt=""
+        style="width: 30px; height: 30px; cursor: pointer;"
+      />
+      <p
+        style="font-size: .75rem;"
+      >
+        SWAP
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
