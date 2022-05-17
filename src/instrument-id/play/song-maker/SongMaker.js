@@ -15,7 +15,8 @@ import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions } from './dropdownOptions';
 import { Buffer } from 'tone';
 import * as sounds from '../../_sounds/soundImports';
-import { isRhythmicInstrument, playMelody } from '../../_utils/play';
+import { isRhythmicInstrument, playMelody, playRhythm } from '../../_utils/play';
+import getInstrument from '../../_utils/getInstrument';
 
 const SongMaker = () => {
   const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
@@ -31,7 +32,18 @@ const SongMaker = () => {
     const instrumentId = e.target.id;
     const instrumentName = e.target.innerText;
     dispatch(selectInstrument({ id, instrumentId, instrumentName }));
-    window[`buffer${id+1}`] = new Buffer(sounds[instrumentId]);
+    if (isRhythmicInstrument(instrumentName)) {
+      const percussion = getInstrument(instrumentName);
+      const sounds = Object.keys(percussion.sound);
+      for (let i = 1; i <= sounds.length; i++) {
+        const currBufferId = `${instrumentId}Buffer${i}`;
+        const sound = percussion.sound[sounds[i]];
+        window[currBufferId] = new Buffer(sound);
+      }
+    } else {
+      const currBufferId = `${instrumentId}Buffer`;
+      window[currBufferId] = new Buffer(sounds[instrumentId]);
+    }
   }
 
   const handleSelectMelody = e => {
@@ -44,12 +56,22 @@ const SongMaker = () => {
     for (let i = 0; i < instrumentsToPlay.length; i++) {
       const instrument = instrumentsToPlay[i];
       if (!instrument) continue;
+      
+      const { instrumentId, instrumentName, melody } = instrument;
 
-      const buffer = window[`buffer${i+1}`]
-      const { instrumentName, melody } = instrument;
       if (isRhythmicInstrument(instrumentName)) {
-
+        const percussion = getInstrument(instrumentName);
+        const sounds = Object.keys(percussion.sound);
+        const buffers = []
+        for (let i = 1; i < sounds.length; i++) {
+          const currBufferId = `${instrumentId}Buffer${i}`;
+          const buffer = window[currBufferId];
+          buffers.push(buffer);
+        };
+        playRhythm(melody, buffers);
       } else {
+        const currBuffer = `${instrumentId}Buffer`;
+        const buffer = window[currBuffer];
         playMelody(melody, buffer);
       }
     }

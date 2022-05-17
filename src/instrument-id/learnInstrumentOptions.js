@@ -132,6 +132,9 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
         sound: sounds.conga,
+        melodies: [
+          [[0, 1],[1],[2, 1],[0,2]]
+        ],
         videoUrl: 'https://www.youtube.com/watch?v=Dy9-P4MauuM'
       },
     ]
@@ -146,7 +149,7 @@ const learnInstrumentOptions = {
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.acousticGuitar,
         melodies: [
-          ['C', 'G', 'C'],
+          [['C', 'G'], ['G', 'D'], ['C', 'A']],
           ['D', 'A', 'D'],
           ['E', 'B', 'E']
         ],
