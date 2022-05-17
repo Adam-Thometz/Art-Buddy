@@ -28,11 +28,11 @@ const Instrument = () => {
   }
 
   const createBuffers = () => {
-    const { sound } = instrumentInfo
+    const { sound } = instrumentInfo;
     if (typeof sound === 'object') {
       const percussiveHits = Object.keys(sound);
       for (let i = 0; i < percussiveHits.length; i++) {
-        window[`buffer${i+1}`] = new Buffer(sound[percussiveHits[i]])
+        window[`buffer${i+1}`] = new Buffer(sound[percussiveHits[i]]);
       }
     } else {
       window.buffer = new Buffer(sound);
