@@ -1,5 +1,6 @@
 import { now } from 'tone';
 import sample from '../../_utils/sample';
+import getInstrument from './getInstrument';
 
 function playScale() {
   const scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C'];
@@ -32,4 +33,23 @@ function playBeat(sound) {
   }
 }
 
-export { playScale, playBeat };
+function playMelody(melody, buffer) {
+  const instrument = sample(buffer);
+  const start = now();
+  for (let i = 0; i < melody.length; i++) {
+    const note = melody[i]
+    const seconds = i / 2;
+    instrument.triggerAttackRelease(`${note}3`, '8n', start + seconds);
+  }
+}
+
+function playRhythm(rhythm) {
+
+}
+
+function isRhythmicInstrument(instrumentName) {
+  const instrument = getInstrument(instrumentName);
+  return typeof instrument.sound === 'object' ? true : false;
+}
+
+export { playScale, playBeat, playMelody, playRhythm, isRhythmicInstrument };
