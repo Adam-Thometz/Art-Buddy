@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { changeScale, createWord } from "../../_redux/actions/wordToMusicActions";
+import { createWord } from "../../_redux/actions/wordToMusicActions";
 
 import './WordInput.css';
 
 import Dropdown from "../../_components/dropdown/Dropdown";
 
 import scales from "../_utils/dropdown-options/scales";
+import { PitchShift, Synth } from "tone";
 
 const WordInput = ({ id }) => {
   const dispatch = useDispatch();
@@ -24,7 +25,9 @@ const WordInput = ({ id }) => {
 
   const handleChangeScale = e => {
     const scaleId = +e.target.id;
-    dispatch(changeScale({ scaleId, wordId: id }))
+    const pitchShift = new PitchShift({scaleId}).toDestination()
+    const newSynth = new Synth().connect(pitchShift);
+    window.synth = newSynth;
   }
 
   const handleChange = e => {

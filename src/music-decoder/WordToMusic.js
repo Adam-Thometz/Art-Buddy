@@ -8,9 +8,15 @@ import './WordToMusic.css';
 import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 import WordList from './word/WordList';
+import { Synth } from 'tone';
 
 const WordToMusic = () => {
   const dispatch = useDispatch();
+
+  const loadSynth = () => {
+    const synth = new Synth().toDestination();
+    window.synth = synth;
+  }
 
   useEffect(() => {
     return () => {
@@ -19,7 +25,7 @@ const WordToMusic = () => {
   }, [dispatch]);
 
   return (
-    <div className="WordToMusic">
+    <div className="WordToMusic" onLoad={loadSynth}>
       <div className='WordToMusic-form-chart-wrapper'>
         <AlphabetTable />
         <WordForm />

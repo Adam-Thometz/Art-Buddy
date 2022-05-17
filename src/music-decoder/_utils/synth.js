@@ -1,17 +1,7 @@
-import { PitchShift, Synth, Sampler, now } from "tone";
+import { now } from "tone";
 
-const play = (notes, pitch = 0, sample = null) => {
-  let synth;
-  const pitchShift = new PitchShift({pitch}).toDestination();
-  if (sample && sample !== 'synth') {
-    synth = new Sampler({
-      urls: {
-        C3: sample
-      }
-    }).connect(pitchShift);
-  } else {
-    synth = new Synth().connect(pitchShift);
-  }
+const play = (notes) => {
+  const synth = window.synth;
   
   if (!Array.isArray(notes)) {
     synth.triggerAttackRelease(`${notes}3`, '4n');
