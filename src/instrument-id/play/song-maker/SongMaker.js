@@ -13,10 +13,9 @@ import SaveSong from './save-song/SaveSong';
 
 import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions } from './dropdownOptions';
-import { Buffer } from 'tone';
-import * as sounds from '../../_sounds/soundImports';
 import { isRhythmicInstrument, playMelody, playRhythm } from '../../_utils/play';
 import getInstrument from '../../_utils/getInstrument';
+import createBuffers from '../../_utils/createBuffers';
 
 const SongMaker = () => {
   const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
@@ -32,18 +31,7 @@ const SongMaker = () => {
     const instrumentId = e.target.id;
     const instrumentName = e.target.innerText;
     dispatch(selectInstrument({ id, instrumentId, instrumentName }));
-    if (isRhythmicInstrument(instrumentName)) {
-      const percussion = getInstrument(instrumentName);
-      const sounds = Object.keys(percussion.sound);
-      for (let i = 1; i <= sounds.length; i++) {
-        const currBufferId = `${instrumentId}Buffer${i}`;
-        const sound = percussion.sound[sounds[i]];
-        window[currBufferId] = new Buffer(sound);
-      }
-    } else {
-      const currBufferId = `${instrumentId}Buffer`;
-      window[currBufferId] = new Buffer(sounds[instrumentId]);
-    }
+    createBuffers(instrumentId, instrumentName)
   }
 
   const handleSelectMelody = e => {
@@ -58,6 +46,7 @@ const SongMaker = () => {
       if (!instrument) continue;
       
       const { instrumentId, instrumentName, melody } = instrument;
+      if (!melody) continue;
 
       if (isRhythmicInstrument(instrumentName)) {
         const percussion = getInstrument(instrumentName);
