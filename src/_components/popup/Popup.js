@@ -8,8 +8,16 @@ const Popup = ({ title, trigger, triggerClass, popup }) => {
   const [popupTrigger, setPopupTrigger] = useState(false);
   
   const handleSetTrigger = e => {
-    if (popupTrigger && e.target.classList[0] !== 'Popup') return;
-    setPopupTrigger(trigger => !trigger);
+    if (popupTrigger) {
+      const correctBounds =
+        e.currentTarget.classList[0] === 'Popup-close' ||
+        e.target.classList[0] === 'Popup';
+      if (correctBounds) {
+        setPopupTrigger(trigger => !trigger);
+      }
+    } else {
+      setPopupTrigger(trigger => !trigger);
+    };
   }
 
   return (
