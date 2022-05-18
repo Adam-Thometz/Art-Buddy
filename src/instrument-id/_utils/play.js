@@ -1,23 +1,20 @@
-import { now } from 'tone';
+import { now, Time } from 'tone';
 import sample from '../../_utils/sample';
-import getInstrument from './getInstrument';
 
-function playScale() {
-  const scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C'];
+export function playScale() {
+  const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
   if (!window.buffer) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
   const instrument = sample(window.buffer);
 
   const start = now();
   for (let i = 0; i < scale.length; i++) {
     const note = scale[i];
-    const octave = i === scale.length-1 ? 4 : 3
-    const noteOctave = `${note}${octave}`;
     const seconds = i / 2;
-    instrument.triggerAttackRelease(noteOctave, '4n', start + seconds);
+    instrument.triggerAttackRelease(note, '4n', start + seconds);
   };
 };
 
-function playBeat(sound) {
+export function playBeat(sound) {
   const soundsLength = Object.keys(sound).length;
   const hits = [];
   const upperLimit = soundsLength*2 < 8 ? 8 : soundsLength*2;
@@ -29,40 +26,25 @@ function playBeat(sound) {
   };
   const start = now()
   for (let i = 0; i < hits.length; i++) {
-    const hit = hits[i]
+    const hit = hits[i];
     const seconds = i / 2;
     hit.triggerAttackRelease('C3', '2n', start + seconds);
-  }
-}
+  };
+};
 
-function playMelody(melody, buffer) {
-  const instrument = sample(buffer);
+export function play({ melody, buffers, isRhythm }) {
+  const instrument = isRhythm ?
+    buffers.map(b => sample(b)) :
+    sample(buffers);
   const start = now();
+  let seconds = 0;
   for (let i = 0; i < melody.length; i++) {
-    const notes = melody[i];
-    const seconds = i / 2;
+    const { notes, duration } = melody[i];
     for (let note of notes) {
-      instrument.triggerAttackRelease(`${note}3`, '8n', start + seconds);
+      const instrumentToPlay = isRhythm ? instrument[note] : instrument;
+      const noteToPlay = isRhythm ? 'C3' : note;
+      instrumentToPlay.triggerAttackRelease(noteToPlay, duration, start + seconds);
     }
+    seconds += Time(duration).toSeconds();
   }
 }
-
-function playRhythm(rhythm, buffers) {
-  const rhythmSounds = buffers.map(buffer => sample(buffer));
-  // debugger
-  const start = now();
-  for (let i = 0; i < rhythm.length; i++) {
-    const notes = rhythm[i]
-    const seconds = i / 2;
-    for (let note of notes) {
-      rhythmSounds[note].triggerAttackRelease('C3', '8n', start + seconds);
-    }
-  }
-}
-
-function isRhythmicInstrument(instrumentName) {
-  const instrument = getInstrument(instrumentName);
-  return typeof instrument.sound === 'object' ? true : false;
-}
-
-export { playScale, playBeat, playMelody, playRhythm, isRhythmicInstrument };

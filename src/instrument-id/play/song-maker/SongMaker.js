@@ -13,9 +13,8 @@ import SaveSong from './save-song/SaveSong';
 
 import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions } from './dropdownOptions';
-import { isRhythmicInstrument, playMelody, playRhythm } from '../../_utils/play';
-import getInstrument from '../../_utils/getInstrument';
-import createBuffers from '../../_utils/createBuffers';
+import { play } from '../../_utils/play';
+import { createBuffers, getBuffers } from '../../_utils/buffers';
 
 const SongMaker = () => {
   const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
@@ -29,9 +28,8 @@ const SongMaker = () => {
   const handleSelectInstrument = e => {
     const id = +e.currentTarget.id;
     const instrumentId = e.target.id;
-    const instrumentName = e.target.innerText;
-    dispatch(selectInstrument({ id, instrumentId, instrumentName }));
-    createBuffers(instrumentId, instrumentName)
+    dispatch(selectInstrument({ id, instrumentId }));
+    createBuffers(instrumentId);
   }
 
   const handleSelectMelody = e => {
@@ -45,24 +43,11 @@ const SongMaker = () => {
       const instrument = instrumentsToPlay[i];
       if (!instrument) continue;
       
-      const { instrumentId, instrumentName, melody } = instrument;
+      const { instrumentId, melody } = instrument;
       if (!melody) continue;
 
-      if (isRhythmicInstrument(instrumentName)) {
-        const percussion = getInstrument(instrumentName);
-        const sounds = Object.keys(percussion.sound);
-        const buffers = []
-        for (let i = 1; i < sounds.length; i++) {
-          const currBufferId = `${instrumentId}Buffer${i}`;
-          const buffer = window[currBufferId];
-          buffers.push(buffer);
-        };
-        playRhythm(melody, buffers);
-      } else {
-        const currBuffer = `${instrumentId}Buffer`;
-        const buffer = window[currBuffer];
-        playMelody(melody, buffer);
-      }
+      const { buffers, isRhythm } = getBuffers(instrumentId);
+      play({ melody, buffers, isRhythm });
     }
   }
 

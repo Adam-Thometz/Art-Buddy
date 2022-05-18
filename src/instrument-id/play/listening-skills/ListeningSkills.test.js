@@ -13,4 +13,4 @@ describe('ListeningSkills component', () => {
     const { asFragment } = renderWithProvider(<ListeningSkills />);
     expect(asFragment()).toMatchSnapshot();
   });
-})
+});
