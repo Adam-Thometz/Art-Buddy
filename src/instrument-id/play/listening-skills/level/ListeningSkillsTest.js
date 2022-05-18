@@ -12,6 +12,9 @@ import Button from "../../../../_components/button/Button";
 import Dropdown from "../../../../_components/dropdown/Dropdown";
 
 import instrumentOptions from "./instrumentOptions";
+import { createBuffers } from "../../../_utils/buffers";
+import { isRhythmicInstrument } from "../../../_utils/getInstrument";
+import { playBeat, playScale } from "../../../_utils/play";
 
 const ListeningSkillsTest = () => {
   const { level } = useParams();
@@ -28,7 +31,11 @@ const ListeningSkillsTest = () => {
   };
 
   useEffect(() => {
-    if (choice1 && choice2) dispatch(generateAnswer({ choice1, choice2 }));
+    if (choice1 && choice2) {
+      dispatch(generateAnswer({ choice1, choice2 }));
+      createBuffers(choice1.id);
+      createBuffers(choice2.id);
+    };
   }, [dispatch, choice1, choice2]);
 
   useEffect(() => {
@@ -36,8 +43,12 @@ const ListeningSkillsTest = () => {
   }, [dispatch]);
   
   const playSound = () => {
-    const audio = new Audio(answer.sound);
-    audio.play();
+    const { id, sound } = answer;
+    if (isRhythmicInstrument(answer)) {
+      playBeat(id, sound)
+    } else {
+      playScale(id)
+    };
   };
 
   const dropdown = (id) => <Dropdown

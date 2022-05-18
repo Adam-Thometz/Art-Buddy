@@ -6,24 +6,24 @@ export function createBuffers(instrumentId) {
   const instrument = getInstrument(instrumentId);
   if (isRhythmicInstrument(instrument)) {
     const sounds = Object.keys(instrument.sound);
-    for (let i = 1; i <= sounds.length; i++) {
-      const currBufferId = `${instrumentId}Buffer${i}`;
+    for (let i = 0; i < sounds.length; i++) {
+      const currBufferId = `${instrumentId}Buffer${i+1}`;
       const sound = instrument.sound[sounds[i]];
       window[currBufferId] = new Buffer(sound);
-    }
+    };
   } else {
     const currBufferId = `${instrumentId}Buffer`;
     window[currBufferId] = new Buffer(sounds[instrumentId]);
-  }
-}
+  };
+};
 
 export function getBuffers(instrumentId) {
   const instrument = getInstrument(instrumentId);
   if (isRhythmicInstrument(instrument)) {
     const sounds = Object.keys(instrument.sound);
     const buffers = [];
-    for (let i = 1; i < sounds.length; i++) {
-      const currBufferId = `${instrumentId}Buffer${i}`;
+    for (let i = 0; i < sounds.length; i++) {
+      const currBufferId = `${instrumentId}Buffer${i+1}`;
       const buffer = window[currBufferId];
       buffers.push(buffer);
     };

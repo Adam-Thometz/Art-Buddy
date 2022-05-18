@@ -1,46 +1,41 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
 
-import { useDispatch } from "react-redux";
-
 import './Instrument.css';
 
 import Icon from "../../../_components/icon/Icon";
 import Button from "../../../_components/button/Button";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
-import { playSound } from "../../../_redux/actions/insturmentIdActions";
-import { Buffer } from "tone";
+import { createBuffers } from "../../_utils/buffers";
+import { isRhythmicInstrument } from "../../_utils/getInstrument";
+import { playBeat, playScale } from "../../_utils/play";
 
 const Instrument = () => {
-  const dispatch = useDispatch()
   const { family, instrument } = useParams();
   const instrumentInfo = learnInstrumentOptions[family]
     .instruments
     .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
   
   const playInstrument = () => {
-    dispatch(playSound(instrumentInfo.sound));
+    const { sound, id } = instrumentInfo
+    if (isRhythmicInstrument(instrumentInfo)) {
+      playBeat(id, sound);
+    } else {
+      playScale(id);
+    }
   }
 
   const openVideo = () => {
     window.open(instrumentInfo.videoUrl);
   }
 
-  const createBuffers = () => {
-    const { sound } = instrumentInfo;
-    if (typeof sound === 'object') {
-      const percussiveHits = Object.keys(sound);
-      for (let i = 0; i < percussiveHits.length; i++) {
-        window[`buffer${i+1}`] = new Buffer(sound[percussiveHits[i]]);
-      }
-    } else {
-      window.buffer = new Buffer(sound);
-    }
+  const handleCreateBuffers = () => {
+    createBuffers(instrumentInfo.id);
   }
 
   return (
-    <div className="Instrument" onLoad={createBuffers}>
+    <div className="Instrument" onLoad={handleCreateBuffers}>
       <div className="Instrument-name">
         <Icon icon={instrumentInfo.icon} text={instrumentInfo.name} />
       </div>
