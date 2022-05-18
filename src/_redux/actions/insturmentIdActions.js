@@ -1,7 +1,5 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const playSound = createAction('playSound');
-
 // Listening skills
 export const selectChoice = createAction('selectChoice');
 export const generateAnswer = createAction('generateAnswer');

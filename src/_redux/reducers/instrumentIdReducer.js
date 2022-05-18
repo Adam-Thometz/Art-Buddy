@@ -1,9 +1,8 @@
-import { clearChoices, clearReportCards, generateAnswer, loadReportCards, playSound, selectChoice, updateReportCard, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
+import { clearChoices, clearReportCards, generateAnswer, loadReportCards, selectChoice, updateReportCard, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import { INITIAL_REPORT_CARD } from "../../_hooks/useReportCard";
-import { playBeat, playScale } from "../../instrument-id/_utils/play";
 import getMelody from "../helpers/getMelody";
 
 const defaultInstrument = {
@@ -72,14 +71,6 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(clearReportCards, (state) => {
       state.reportCard1 = INITIAL_REPORT_CARD;
       state.reportCard2 = INITIAL_REPORT_CARD;
-    })
-    .addCase(playSound, (state, action) => {
-      const sound = action.payload;
-      if (typeof sound === 'object') {
-        playBeat(sound);
-      } else {
-        playScale();
-      }
     })
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
