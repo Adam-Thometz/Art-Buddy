@@ -3,7 +3,8 @@ import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import { INITIAL_REPORT_CARD } from "../../_hooks/useReportCard";
-import getMelody from "../helpers/getMelody";
+import * as melodies from '../../instrument-id/play/song-maker/playback/melodies';
+import * as rhythms from '../../instrument-id/play/song-maker/playback/rhythms'
 
 const defaultInstrument = {
   instrumentId: null,
@@ -85,9 +86,8 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.instruments[id] = newInstrument;
     })
     .addCase(selectMelody, (state, action) => {
-      const { id, melodyId } = action.payload;
-      const { instrumentId } = state.instruments[id];
-      const melody = getMelody({ instrumentId, melodyId });
+      const { id, melodyId, isRhythm } = action.payload;
+      const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
       const instrumentWithMelody = {
         ...state.instruments[id],
         melody
