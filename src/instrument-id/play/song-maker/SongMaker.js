@@ -12,9 +12,10 @@ import Popup from '../../../_components/popup/Popup';
 import SaveSong from './save-song/SaveSong';
 
 import { addInstrumentIcon } from '../../_icons/iconImports';
-import { instrumentOptions, melodyOptions } from './dropdownOptions';
+import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers } from '../../_utils/buffers';
+import getInstrument, { isRhythmicInstrument } from '../../_utils/getInstrument';
 
 const SongMaker = () => {
   const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
@@ -35,7 +36,9 @@ const SongMaker = () => {
   const handleSelectMelody = e => {
     const id = e.currentTarget.id;
     const melodyId = e.target.id;
-    dispatch(selectMelody({ id, melodyId }));
+    const instrument = getInstrument(instrumentsToPlay[id].instrumentId);
+    const isRhythm = isRhythmicInstrument(instrument);
+    dispatch(selectMelody({ id, melodyId, isRhythm }));
   };
 
   const playInstruments = () => {
@@ -59,34 +62,48 @@ const SongMaker = () => {
     />
   );
 
-  const instrumentDisplay = instrumentsToPlay.map((instrument, i) => (
-    !instrument ? (
-      <Icon
-        icon={addInstrumentIcon}
-        text='ADD INSTRUMENT'
-        size='69px'
-        id={i}
-        onClick={handleAddInstrument}
-      />
-    ) : (
-      <div className='SongMaker-options'>
-        <Dropdown
+  const instrumentDisplay = instrumentsToPlay.map((instrument, i) => {
+    if (!instrument) {
+      return (
+        <Icon
+          icon={addInstrumentIcon}
+          text='ADD INSTRUMENT'
+          size='69px'
           id={i}
-          labelText='INSTRUMENT'
-          options={instrumentOptions}
-          onClick={handleSelectInstrument}
+          onClick={handleAddInstrument}
         />
-        {instrument.instrumentId ? (
+      );
+    } else {
+      const instrumentDropdown = (
+        <Dropdown
+        id={i}
+        labelText='INSTRUMENT'
+        options={instrumentOptions}
+        onClick={handleSelectInstrument}
+        />
+      );
+      let melodyDropdown;
+      if (instrument && instrument.instrumentId !== null) {
+        const isRhythms = isRhythmicInstrument(getInstrument(instrument.instrumentId));
+        melodyDropdown = (
           <Dropdown
             id={i}
-            labelText='MELODY'
-            options={melodyOptions}
+            labelText={isRhythms ? 'RHYTHM' : 'MELODY'}
+            options={isRhythms ? rhythmOptions : melodyOptions}
             onClick={handleSelectMelody}
           />
-        ) : null}
-      </div>
-    )
-  ));
+        )
+      } else {
+        melodyDropdown = null;
+      }
+      return (
+        <div className='SongMaker-options'>
+          {instrumentDropdown}
+          {melodyDropdown}
+        </div>
+      );
+    };
+  });
 
   return (
     <div className='SongMaker'>

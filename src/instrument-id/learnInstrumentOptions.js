@@ -1,6 +1,5 @@
 import * as icons from './_icons/iconImports';
 import * as sounds from './_sounds/soundImports';
-import { stringMelodies, percussionMelodies, voiceMelodies } from './play/song-maker/melodies';
 
 const learnInstrumentOptions = {
   brass: {
@@ -149,7 +148,6 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
         sound: sounds.conga,
-        melodies: percussionMelodies.conga,
         videoUrl: 'https://www.youtube.com/watch?v=Dy9-P4MauuM'
       },
     ]
@@ -164,7 +162,6 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.acousticGuitar,
-        melodies: stringMelodies.acousticGuitar,
         videoUrl: 'https://www.youtube.com/watch?v=VOMipc60JvA'
       },
       {
@@ -174,7 +171,6 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.banjo,
-        melodies: stringMelodies.banjo,
         videoUrl: 'https://www.youtube.com/watch?v=fnMhUPewk6c'
       },
       {
@@ -284,7 +280,6 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'using your voice!',
         sound: sounds.alto,
-        melodies: voiceMelodies.alto,
         videoUrl: 'https://www.youtube.com/watch?v=wrCxfWVuDXU'
       },
       {

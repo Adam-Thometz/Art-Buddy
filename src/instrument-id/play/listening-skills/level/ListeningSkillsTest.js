@@ -45,9 +45,9 @@ const ListeningSkillsTest = () => {
   const playSound = () => {
     const { id, sound } = answer;
     if (isRhythmicInstrument(answer)) {
-      playBeat(id, sound)
+      playBeat(id, sound);
     } else {
-      playScale(id)
+      playScale(id);
     };
   };
 

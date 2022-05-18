@@ -9,7 +9,7 @@
 
 .ReportCard-score-display {
   font-size: 2rem;
-  margin: 5%0;
+  margin: 5% 0;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 .ReportCard-visual-score img {
   padding-right: 10px;
   height: 50px;
-  width: 22%;
+  width: 23%;
 }
 
 .ReportCard-text-score {

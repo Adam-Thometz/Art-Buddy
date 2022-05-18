@@ -30,12 +30,18 @@ const instrumentOptions = {
   tuba: 'TUBA',
   violin: 'VIOLIN',
   xylophone: 'XYLOPHONE'
-}
+};
 
 const melodyOptions = {
-  0: 'MELODY 1',
-  1: 'MELODY 2',
-  2: 'MELODY 3'
-}
+  babySharkMelody: 'BABY SHARK',
+  inTheEndMelody: 'IN THE END',
+  sevenNationArmyMelody: 'SEVEN NATION ARMY',
+  smellsLikeTeenSpiritMelody: 'SMELLS LIKE TEEN SPIRIT',
+  sweetChildOMineMelody: 'SWEET CHILD O MINE',
+};
 
-export { instrumentOptions, melodyOptions };
+const rhythmOptions = {
+  regularRhythm: 'REGULAR'
+};
+
+export { instrumentOptions, melodyOptions, rhythmOptions };

@@ -18,7 +18,7 @@ const Instrument = () => {
     .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
   
   const playInstrument = () => {
-    const { sound, id } = instrumentInfo
+    const { sound, id } = instrumentInfo;
     if (isRhythmicInstrument(instrumentInfo)) {
       playBeat(id, sound);
     } else {

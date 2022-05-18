@@ -1,0 +1,18 @@
+export const regularRhythm = [
+  { notes: [0, 2, 3], duration: '8n' },
+  { notes: [2], duration: '8n' },
+  { notes: [1, 2], duration: '8n' },
+  { notes: [2], duration: '8n' },
+  { notes: [0, 2], duration: '8n' },
+  { notes: [0, 2], duration: '8n' },
+  { notes: [1, 2], duration: '8n' },
+  { notes: [2, 4], duration: '8n' },
+  { notes: [0, 2], duration: '8n' },
+  { notes: [2], duration: '8n' },
+  { notes: [1, 2], duration: '8n' },
+  { notes: [2], duration: '8n' },
+  { notes: [0, 2], duration: '8n' },
+  { notes: [0, 2], duration: '8n' },
+  { notes: [1, 2], duration: '8n' },
+  { notes: [2, 4], duration: '8n' },
+]
