@@ -8,7 +8,6 @@ import getMelody from "../helpers/getMelody";
 
 const defaultInstrument = {
   instrumentId: null,
-  instrumentName: null,
   melody: null
 }
 
@@ -87,18 +86,17 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.instruments[id] = defaultInstrument;
     })
     .addCase(selectInstrument, (state, action) => {
-      const { id, instrumentId, instrumentName } = action.payload;
+      const { id, instrumentId } = action.payload;
       const newInstrument = {
         instrumentId,
-        instrumentName,
         melody: null
-      }
+      };
       state.instruments[id] = newInstrument;
     })
     .addCase(selectMelody, (state, action) => {
       const { id, melodyId } = action.payload;
-      const { instrumentName } = state.instruments[id];
-      const melody = getMelody({ instrumentName, melodyId });
+      const { instrumentId } = state.instruments[id];
+      const melody = getMelody({ instrumentId, melodyId });
       const instrumentWithMelody = {
         ...state.instruments[id],
         melody
