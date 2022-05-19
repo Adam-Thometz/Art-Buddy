@@ -41,7 +41,9 @@ const melodyOptions = {
 };
 
 const rhythmOptions = {
-  regularRhythm: 'REGULAR'
+  regularRhythm: 'REGULAR',
+  trapRhythm: 'TRAP',
+  claveRhythm: 'CLAVE'
 };
 
 export { instrumentOptions, melodyOptions, rhythmOptions };

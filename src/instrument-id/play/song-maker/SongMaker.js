@@ -16,6 +16,7 @@ import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptio
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers } from '../../_utils/buffers';
 import getInstrument, { isRhythmicInstrument } from '../../_utils/getInstrument';
+import * as Tone from 'tone'
 
 const SongMaker = () => {
   const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
@@ -52,6 +53,8 @@ const SongMaker = () => {
       const { buffers, isRhythm } = getBuffers(instrumentId);
       play({ melody, buffers, isRhythm });
     }
+    Tone.Transport.loop = true;
+    Tone.Transport.start();
   }
 
   const savePopup = (
