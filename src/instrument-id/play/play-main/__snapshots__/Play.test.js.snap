@@ -17,7 +17,7 @@ exports[`Play component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
           style="width: 250px; height: 250px; cursor: pointer;"
         />
         <p>
@@ -29,7 +29,7 @@ exports[`Play component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
           style="width: 250px; height: 250px; cursor: pointer;"
         />
         <p>

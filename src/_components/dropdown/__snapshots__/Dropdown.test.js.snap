@@ -13,7 +13,7 @@ exports[`Dropdown component matches the snapshot 1`] = `
        
       <img
         alt=""
-        src="[object Object]"
+        src="file"
         style="height: 16px; width: 24px;"
       />
     </span>

@@ -13,7 +13,7 @@ exports[`Instrument component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
           style="width: 250px; height: 250px;"
         />
         <p>

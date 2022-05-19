@@ -14,7 +14,7 @@ describe('Score Keeper', () => {
   it('matches snapshot', () => {
     const { asFragment } = renderWithProvider(<ScoreKeeper />);
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   it('inputs a student name and selects a color', () => {
     renderWithProvider(<ScoreKeeper />)
@@ -30,4 +30,4 @@ describe('Score Keeper', () => {
     expect(screen.getByText('Eddie')).toBeInTheDocument();
     expect(screen.getByText('Eddie')).toHaveStyle({color: '#E60026'});
   });
-})
+});

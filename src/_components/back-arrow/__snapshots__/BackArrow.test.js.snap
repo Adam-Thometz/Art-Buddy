@@ -8,7 +8,7 @@ exports[`BackArrow component matches the snapshot of the back arrow 1`] = `
     <img
       alt=""
       class="BackArrow-img"
-      src="[object Object]"
+      src="file"
     />
     <span
       class="BackArrow-text"

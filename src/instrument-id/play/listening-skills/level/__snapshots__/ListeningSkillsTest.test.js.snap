@@ -39,7 +39,7 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
               CHOOSE FAMILY 
               <img
                 alt=""
-                src="[object Object]"
+                src="file"
                 style="height: 16px; width: 24px;"
               />
             </span>

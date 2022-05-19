@@ -14,7 +14,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
         />
         ART GAMES
       </button>
@@ -24,7 +24,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
         />
         MUSIC GAMES
       </button>
@@ -34,7 +34,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
         />
         ALL GAMES
       </button>
@@ -44,7 +44,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
       >
         <img
           alt=""
-          src="[object Object]"
+          src="file"
         />
         IEP GOALS
       </button>
@@ -60,7 +60,7 @@ exports[`Menu component renders art games 1`] = `
 >
   <img
     alt=""
-    src="[object Object]"
+    src="file"
   />
   COLOR THEORY
 </button>
@@ -73,7 +73,7 @@ exports[`Menu component renders music games 1`] = `
 >
   <img
     alt=""
-    src="[object Object]"
+    src="file"
   />
   SEQUENCE MAKER
 </button>
