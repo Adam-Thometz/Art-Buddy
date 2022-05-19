@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp build/index.html build/200.html",
+    "build": "react-scripts build && cp build/index.html build/200.html && npx surge build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
