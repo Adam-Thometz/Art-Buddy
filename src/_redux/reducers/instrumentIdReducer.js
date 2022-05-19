@@ -2,7 +2,6 @@ import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstru
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
-import { INITIAL_REPORT_CARD } from "../../_hooks/useReportCard";
 import * as melodies from '../../instrument-id/play/song-maker/playback/melodies';
 import * as rhythms from '../../instrument-id/play/song-maker/playback/rhythms'
 
