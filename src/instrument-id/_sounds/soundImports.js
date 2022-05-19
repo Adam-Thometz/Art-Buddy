@@ -23,7 +23,7 @@ import xylophone from './instruments/percussion/xylophone.mp3';
 import tambourineAccent from './instruments/percussion/tambourine/accent.mp3';
 import tambourineDimple from './instruments/percussion/tambourine/dimple.mp3';
 import tambourineForward from './instruments/percussion/tambourine/forward.mp3';
-import tambourineVintage from './instruments/percussion/tambourine/vintageß.mp3';
+import tambourineVintage from './instruments/percussion/tambourine/vintage.mp3';
 import tambourinePerformance from './instruments/percussion/tambourine/performance.mp3';
 import djembeHigh from './instruments/percussion/djembe/high.mp3';
 import djembeMid from './instruments/percussion/djembe/medium.mp3';
