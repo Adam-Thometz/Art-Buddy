@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SaveSong component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="SaveSong"
+  >
+    <div
+      class="Input"
+    >
+      <label
+        class="Input-label"
+        for="title"
+      >
+        Song Title
+      </label>
+      <input
+        class="Input-input"
+        id="title"
+        name="title"
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      class="Button regular"
+      style="border-color: #89eb0a;"
+    >
+      SAVE
+    </button>
+    <span
+      class="SaveSong-message hide"
+    >
+      Song Saved!
+    </span>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportCard component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ReportCard"
+  >
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        BRASS FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        ELECTRONIC FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        PERCUSSION FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        STRINGS FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        WOODWIND FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+    <div
+      class="ReportCard-score-display"
+    >
+      <span>
+        VOICE FAMILY
+      </span>
+      <div
+        class="ReportCard-visual-score"
+      >
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+        <img
+          alt=""
+          src="[object Object]"
+        />
+      </div>
+      <span
+        class="ReportCard-text-score"
+      >
+        0/4 passed
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
