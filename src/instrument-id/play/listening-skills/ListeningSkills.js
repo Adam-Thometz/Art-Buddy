@@ -1,9 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import useReportCard from "../../../_hooks/useReportCard";
-
-import { useDispatch } from "react-redux";
-import { loadReportCards } from "../../../_redux/actions/insturmentIdActions";
 
 import './ListeningSkills.css';
 
@@ -17,13 +13,6 @@ import { instrumentIdUrls } from "../../../_routes/routeUrls";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [savedReportCard1] = useReportCard(`instrument-id-level-1-report-card`);
-  const [savedReportCard2] = useReportCard(`instrument-id-level-2-report-card`);
-
-  useEffect(() => {
-    dispatch(loadReportCards({ savedReportCard1, savedReportCard2 }));
-  }, [dispatch, savedReportCard1, savedReportCard2]);
 
   const popupTrigger = (
     <div className="ListeningSkills-report-card">

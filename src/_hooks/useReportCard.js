@@ -17,7 +17,7 @@ const useReportCard = (key) => {
     localStorage.setItem(key, state);
   }, [key, state]);
 
-  return [state, setState];
+  return [JSON.parse(state), setState];
 };
 
 export default useReportCard;

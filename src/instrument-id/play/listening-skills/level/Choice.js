@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, updateReportCard } from "../../../../_redux/actions/insturmentIdActions";
+import { selectChoice } from "../../../../_redux/actions/insturmentIdActions";
 
 import './Choice.css';
 
 import Icon from "../../../../_components/icon/Icon";
 
 import { correctIcon, incorrectIcon } from "../../../_icons/iconImports";
+import useReportCard from "../../../../_hooks/useReportCard";
 
-const Choice = ({ id, level, choice, setReportCard }) => {
+const Choice = ({ id, level, choice }) => {
   const answer = useSelector(state => state.instrumentId.answer);
   const [isCorrect, setIsCorrect] = useState(null);
-  const reportCard = useSelector(state => state.instrumentId[`reportCard${level}`]);
+  const [savedReportCard, setSavedReportCard] = useReportCard(`instrument-id-level-${level}-report-card`);
   const dispatch = useDispatch();
 
   const checkAnswer = () => {
     const result = choice.name === answer.name ? true : false;
     setIsCorrect(result);
     if (result) {
-      const alreadyGot = reportCard[choice.family].includes(choice.name);
+      const alreadyGot = savedReportCard[choice.family].includes(choice.name);
       if (!alreadyGot) {
         const newReportCard = { 
-          ...reportCard,
-          [choice.family]: [...reportCard[choice.family], choice.name]
+          ...savedReportCard,
+          [choice.family]: [...savedReportCard[choice.family], choice.name]
         };
-        dispatch(updateReportCard({ level, newReportCard }));
-        setReportCard(JSON.stringify(newReportCard));
+        setSavedReportCard(JSON.stringify(newReportCard));
       }
     }
     const timer = setTimeout(() => {

@@ -1,4 +1,4 @@
-import { clearChoices, clearReportCards, generateAnswer, loadReportCards, selectChoice, updateReportCard, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
+import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
@@ -16,10 +16,8 @@ const INITIAL_STATE = {
   choice1: null,
   choice2: null,
   answer: null,
-  reportCard1: INITIAL_REPORT_CARD,
-  reportCard2: INITIAL_REPORT_CARD,
   // Song Maker
-  instruments: [defaultInstrument, null, null, null]
+  instruments: [defaultInstrument, null, null, null],
 };
 
 const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -54,24 +52,10 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const answer = Math.ceil(Math.random() * 2);
       state.answer = answer === 1 ? choice1 : choice2;
     })
-    .addCase(loadReportCards, (state, action) => {
-      const { savedReportCard1, savedReportCard2 } = action.payload;
-      state.reportCard1 = JSON.parse(savedReportCard1);
-      state.reportCard2 = JSON.parse(savedReportCard2);
-    })
-    .addCase(updateReportCard, (state, action) => {
-      const { level, newReportCard } = action.payload
-      if (level === '1') state.reportCard1 = newReportCard;
-      if (level === '2') state.reportCard2 = newReportCard;
-    })
     .addCase(clearChoices, (state) => {
       state.choice1 = null;
       state.choice2 = null;
       state.answer = null;
-    })
-    .addCase(clearReportCards, (state) => {
-      state.reportCard1 = INITIAL_REPORT_CARD;
-      state.reportCard2 = INITIAL_REPORT_CARD;
     })
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
