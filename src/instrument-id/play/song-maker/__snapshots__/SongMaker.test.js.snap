@@ -47,7 +47,7 @@ exports[`SongMaker component matches snapshot 1`] = `
               INSTRUMENT 
               <img
                 alt=""
-                src="[object Object]"
+                src="file"
                 style="height: 16px; width: 24px;"
               />
             </span>
@@ -251,7 +251,7 @@ exports[`SongMaker component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="[object Object]"
+            src="file"
             style="width: 69px; height: 69px; cursor: pointer;"
           />
           <p>
@@ -264,7 +264,7 @@ exports[`SongMaker component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="[object Object]"
+            src="file"
             style="width: 69px; height: 69px; cursor: pointer;"
           />
           <p>
@@ -277,7 +277,7 @@ exports[`SongMaker component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="[object Object]"
+            src="file"
             style="width: 69px; height: 69px; cursor: pointer;"
           />
           <p>

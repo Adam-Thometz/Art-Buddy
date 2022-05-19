@@ -15,7 +15,6 @@ import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers } from '../../_utils/buffers';
-import getInstrument, { isRhythmicInstrument } from '../../_utils/getInstrument';
 
 const SongMaker = () => {
   const song = useSelector(state => state.instrumentId.song);
@@ -30,7 +29,7 @@ const SongMaker = () => {
     const id = +e.currentTarget.id;
     const instrumentId = e.target.id;
     dispatch(selectInstrument({ id, instrumentId }));
-    createBuffers(instrumentId);
+    if (process.env.NODE_ENV !== 'test') createBuffers(instrumentId);
   }
 
   const handleSelectMelody = e => {
@@ -80,20 +79,15 @@ const SongMaker = () => {
         onClick={handleSelectInstrument}
         />
       );
-      let melodyDropdown;
-      if (instrument && instrument.instrumentId !== null) {
-        const isRhythms = isRhythmicInstrument(getInstrument(instrument.instrumentId));
-        melodyDropdown = (
-          <Dropdown
-            id={i}
-            labelText={isRhythms ? 'RHYTHM' : 'MELODY'}
-            options={isRhythms ? rhythmOptions : melodyOptions}
-            onClick={handleSelectMelody}
-          />
-        )
-      } else {
-        melodyDropdown = null;
-      }
+      console.log(instrument)
+      const melodyDropdown = (!instrument || !instrument.instrumentId) ? null : (
+        <Dropdown
+          id={i}
+          labelText={instrument.isRhythm ? 'RHYTHM' : 'MELODY'}
+          options={instrument.isRhythm ? rhythmOptions : melodyOptions}
+          onClick={handleSelectMelody}
+        />
+      )
       return (
         <div className='SongMaker-options'>
           {instrumentDropdown}
