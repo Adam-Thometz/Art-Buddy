@@ -2,12 +2,12 @@ import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstru
 import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
-import * as melodies from '../../instrument-id/play/song-maker/playback/melodies';
-import * as rhythms from '../../instrument-id/play/song-maker/playback/rhythms'
+import getInstrument, { isRhythmicInstrument } from "../../instrument-id/_utils/getInstrument";
 
 const defaultInstrument = {
   instrumentId: null,
-  melody: null
+  melodyId: null,
+  isRhythm: null
 }
 
 const INITIAL_STATE = {
@@ -16,7 +16,7 @@ const INITIAL_STATE = {
   choice2: null,
   answer: null,
   // Song Maker
-  instruments: [defaultInstrument, null, null, null],
+  song: [defaultInstrument, null, null, null],
 };
 
 const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -58,24 +58,26 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
-      state.instruments[id] = defaultInstrument;
+      state.song[id] = defaultInstrument;
     })
     .addCase(selectInstrument, (state, action) => {
       const { id, instrumentId } = action.payload;
+      const instrument = getInstrument(instrumentId);
+      const isRhythm = isRhythmicInstrument(instrument);
       const newInstrument = {
+        ...state.song[id],
         instrumentId,
-        melody: null
+        isRhythm
       };
-      state.instruments[id] = newInstrument;
+      state.song[id] = newInstrument;
     })
     .addCase(selectMelody, (state, action) => {
-      const { id, melodyId, isRhythm } = action.payload;
-      const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
+      const { id, melodyId } = action.payload;
       const instrumentWithMelody = {
-        ...state.instruments[id],
-        melody
+        ...state.song[id],
+        melodyId
       };
-      state.instruments[id] = instrumentWithMelody;
+      state.song[id] = instrumentWithMelody;
     })
 });
 

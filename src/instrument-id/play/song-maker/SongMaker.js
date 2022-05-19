@@ -16,10 +16,9 @@ import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptio
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers } from '../../_utils/buffers';
 import getInstrument, { isRhythmicInstrument } from '../../_utils/getInstrument';
-import * as Tone from 'tone'
 
 const SongMaker = () => {
-  const instrumentsToPlay = useSelector(state => state.instrumentId.instruments);
+  const song = useSelector(state => state.instrumentId.song);
   const dispatch = useDispatch()
   
   const handleAddInstrument = e => {
@@ -37,24 +36,20 @@ const SongMaker = () => {
   const handleSelectMelody = e => {
     const id = e.currentTarget.id;
     const melodyId = e.target.id;
-    const instrument = getInstrument(instrumentsToPlay[id].instrumentId);
-    const isRhythm = isRhythmicInstrument(instrument);
-    dispatch(selectMelody({ id, melodyId, isRhythm }));
+    dispatch(selectMelody({ id, melodyId }));
   };
 
   const playInstruments = () => {
-    for (let i = 0; i < instrumentsToPlay.length; i++) {
-      const instrument = instrumentsToPlay[i];
+    for (let i = 0; i < song.length; i++) {
+      const instrument = song[i];
       if (!instrument) continue;
       
-      const { instrumentId, melody } = instrument;
-      if (!melody) continue;
+      const { instrumentId, melodyId, isRhythm } = instrument;
+      if (!melodyId) continue;
 
-      const { buffers, isRhythm } = getBuffers(instrumentId);
-      play({ melody, buffers, isRhythm });
+      const { buffers } = getBuffers(instrumentId);
+      play({ melodyId, buffers, isRhythm });
     }
-    Tone.Transport.loop = true;
-    Tone.Transport.start();
   }
 
   const savePopup = (
@@ -65,7 +60,7 @@ const SongMaker = () => {
     />
   );
 
-  const instrumentDisplay = instrumentsToPlay.map((instrument, i) => {
+  const instrumentDisplay = song.map((instrument, i) => {
     if (!instrument) {
       return (
         <Icon

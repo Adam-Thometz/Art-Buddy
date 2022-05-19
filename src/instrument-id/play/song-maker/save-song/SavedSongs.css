@@ -1,0 +1,30 @@
+.SavedSongs {
+  display: flex;
+
+}
+
+.SavedSongs-options {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.SavedSongs-song-list {
+  border-left: 1px solid #4D4F5E;
+  width: 70%;
+  text-align: left;
+  padding: 0 5%;
+  font-size: 2.5rem;
+  overflow: scroll;
+}
+
+.SavedSongs-title {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5%;
+  border-radius: 15px;
+}
+
+.selected {
+  background-color: #4D4F5E;
+}

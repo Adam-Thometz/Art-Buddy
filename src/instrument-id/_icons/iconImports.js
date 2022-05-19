@@ -9,6 +9,8 @@ import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
 import addInstrumentIcon from './play/add-instrument.png'
+import smallPlayIcon from './play/play.png'
+import deleteIcon from './play/delete.png'
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
@@ -62,6 +64,8 @@ export {
   reportCardIcon,
   correctIcon,
   incorrectIcon,
+  smallPlayIcon,
+  deleteIcon,
   addInstrumentIcon,
   trumpetIcon,
   frenchHornIcon,

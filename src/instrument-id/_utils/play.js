@@ -1,6 +1,9 @@
 import { now, Time } from 'tone';
 import sample from '../../_utils/sample';
 
+import * as melodies from '../play/song-maker/playback/melodies';
+import * as rhythms from '../play/song-maker/playback/rhythms';
+
 export function playScale(instrumentId) {
   const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
   const bufferId = `${instrumentId}Buffer`
@@ -33,10 +36,11 @@ export function playBeat(instrumentId, sound) {
   };
 };
 
-export function play({ melody, buffers, isRhythm }) {
+export function play({ melodyId, buffers, isRhythm }) {
   const instrument = isRhythm ?
     buffers.map(b => sample(b)) :
     sample(buffers);
+  const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
   const start = now();
   let seconds = 0;
   for (let i = 0; i < melody.length; i++) {
