@@ -1,33 +1,29 @@
 import React from "react";
 
-import { playAllSequence, playSequence, resetSequence, addBlock, removeBlock } from "../../_redux/actions/sequenceMakerActions";
+import { resetSequence } from "../../_redux/actions/sequenceMakerActions";
+import { playSequence } from "../_utils/playSequence";
 import { useSelector, useDispatch } from "react-redux";
 
 import './Sequence.css';
 
 import SequenceBlock from "./SequenceBlock";
-import Button from "../../_components/button/Button";
+import Icon from "../../_components/icon/Icon";
 
 import colors from "../../_components/button/colorOrder";
+import play from '../_media/_icons/play.png'
+import playAll from '../_media/_icons/play-all.png'
 
 const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence);
-  const dispatch = useDispatch();
-
-  const handleAdd = () => {
-    dispatch(addBlock());
-  }
-  
-  const handleRemove = () => {
-    dispatch(removeBlock());
-  }
+  const pitch = useSelector(state => state.sequenceMaker.pitch);
+  const dispatch = useDispatch(); 
 
   const handlePlay = () => {
-    dispatch(playSequence())
+    playSequence({ sequence, pitch, playAll: false })
   }
   
   const handlePlayAll = () => {
-    dispatch(playAllSequence())
+    playSequence({ sequence, pitch, playAll: true })
   }
 
   const handleReset = () => {
@@ -36,20 +32,17 @@ const Sequence = () => {
   
   return (
     <div className="Sequence">
-      <div className="Sequence-header">
-        <Button small colorId={2} onClick={handleRemove}>REMOVE BLOCK</Button>
-        {sequence.some(block => block !== null) ? <p>CLICK ON A PICTURE TO HEAR THE SOUND.</p> : null}
-        <Button small colorId={3} onClick={handleAdd}>ADD BLOCK</Button>
+      <div className="Sequence-play-options">
+        <Icon icon={play} text='Play' size='48px' onClick={handlePlay} />
+        <Icon icon={playAll} text='Play All' size='48px' onClick={handlePlayAll} />
       </div>
       <div className="Sequence-display">
         {sequence.map((block, i) => (
           <SequenceBlock block={block} borderColor={colors[i%4]} />
         ))}
       </div>
-      <div className="Sequence-controls">
-        <Button colorId={0} onClick={handlePlayAll}>PLAY TOGETHER</Button>
-        <Button colorId={1} onClick={handlePlay}>PLAY ONE AT A TIME</Button>
-        <Button colorId={2} onClick={handleReset}>RESET SEQUENCE</Button>
+      <div className="Sequence-reset">
+        <Icon text='Reset Sequence' size="48px" onClick={handleReset} />
       </div>
     </div>
   );

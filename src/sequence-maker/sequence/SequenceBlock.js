@@ -1,52 +1,39 @@
 import React, { Fragment } from "react";
 
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { removeFromSequence, setPitch } from "../../_redux/actions/sequenceMakerActions";
 
 import './SequenceBlock.css';
 
 import Button from "../../_components/button/Button";
-import Options from "../../_components/option/Options";
 
-import pitches from "../_utils/pitchMap";
+import sample from "../../_utils/sample";
 
 const SequenceBlock = ({ block, borderColor }) => {
+  const pitch = useSelector(state => state.sequenceMaker.pitch)
   const dispatch = useDispatch();
   
   const remove = () => {
     dispatch(removeFromSequence(block.id));
   }
-  const changePitch = pitch => {
-    const id = block.id
-    dispatch(setPitch({id, pitch}));
-  }
-  const isPitch = pitch => block.pitch === pitch;
+  // const changePitch = pitch => {
+  //   const id = block.id
+  //   dispatch(setPitch({id, pitch}));
+  // }
+
   const play = () => {
-    const pitch = pitches[block.pitch];
-    if (block.alt !== 'stop') block.sound.triggerAttackRelease(`C${pitch}`, 4);
+    if (block.alt === 'stop') return;
+    const buffer = window[`${block.id}Buffer`];
+    const sound = sample(buffer);
+    sound.triggerAttackRelease(`C${pitch}`, 4);
   }
 
   return (
     <div className="SequenceBlock" style={{borderColor}}>
       {block !== null ? (
         <Fragment>
-          <p>{block.alt}</p>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <div className="SequenceBlock-controls">
-            {block.alt !== 'STOP' ?
-              <Options>
-                {Object.keys(pitches).map(pitch => (
-                  <Button
-                    small
-                    selected={isPitch(pitch)}
-                    colorId={3}
-                    onClick={() => changePitch(pitch)} 
-                  >
-                    {pitch.toUpperCase()}
-                  </Button>
-                ))}
-              </Options>
-            : null}
             <Button small colorId={2} onClick={remove}>REMOVE</Button>
           </div>
         </Fragment>

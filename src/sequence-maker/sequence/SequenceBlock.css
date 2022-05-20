@@ -1,19 +1,18 @@
 .SequenceBlock {
   display: inline-block;
-  border: 5px solid black;
+  border: 10px solid;
   border-radius: 25px;
   margin: 10px;
-  height: 450px;
-  width: 90%;
+  height: 25vh;
+  width: 85%;
   padding: 15px;
   font-size: 1.5rem;
-  box-shadow: 2px 6px 11px 0px #00000040;
 }
 
 .SequenceBlock-img {
-  margin: 15px auto;
-  height: 250px;
-  width: 250px;
+  margin: 0 auto;
+  height: 18vh;
+  width: 12vw;
   display: block;
   cursor: pointer;
 }
@@ -26,4 +25,5 @@
 .SequenceBlock button {
   width: 35%;
   margin: 5px auto;
+  font-size: 1rem;
 }
