@@ -7,12 +7,12 @@
 
 .ListeningSkills-icon {
   font-size: 3rem;
-  width: 42%;
-  border-right: 1px solid #4D4F5E;
+  width: 40%;
 }
 
 .ListeningSkills-levels-report-cards {
-  width: 58%;
+  border-left: 1px solid #4D4F5E;
+  width: 60%;
   height: 100%;
   font-size: 2rem;
   display: flex;
@@ -22,7 +22,12 @@
 
 .ListeningSkills-level {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.ListeningSkills-level button {
+  width: 30%;
 }
 
 .ListeningSkills-report-card {

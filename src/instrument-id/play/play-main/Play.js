@@ -14,9 +14,9 @@ const Play = () => {
   return (
     <div className="Play">
       <p>Master skills in Listening Skills to unlock instruments for the Song Maker!</p>
-      <Options width="65%">
-        <Icon icon={listeningSkills} text="Listening Skills Test" onClick={() => navigate(instrumentIdUrls.playListeningUrl)} />
-        <Icon icon={songMaker} text="Song Maker" onClick={() => navigate(instrumentIdUrls.playSongMakerUrl)} />
+      <Options width="50%">
+        <Icon largeFont icon={listeningSkills} text="Listening Skills Test" onClick={() => navigate(instrumentIdUrls.playListeningUrl)} />
+        <Icon largeFont icon={songMaker} text="Song Maker" onClick={() => navigate(instrumentIdUrls.playSongMakerUrl)} />
       </Options>
     </div>
   );

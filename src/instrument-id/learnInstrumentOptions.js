@@ -260,7 +260,7 @@ const learnInstrumentOptions = {
         name: 'SOPRANO',
         icon: icons.sopranoIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'singing really high!',
         sound: sounds.soprano,
         videoUrl: 'https://www.youtube.com/watch?v=3ZSyAcIS4fo'
       },
@@ -269,7 +269,7 @@ const learnInstrumentOptions = {
         name: 'MEZZO SOPRANO',
         icon: icons.mezzoSopranoIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'singing high!',
         sound: sounds.mezzoSoprano,
         videoUrl: 'https://www.youtube.com/watch?v=6m1T1BsB9rg'
       },
@@ -278,7 +278,7 @@ const learnInstrumentOptions = {
         name: 'ALTO',
         icon: icons.altoIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'siinging a little high!',
         sound: sounds.alto,
         videoUrl: 'https://www.youtube.com/watch?v=wrCxfWVuDXU'
       },
@@ -287,7 +287,7 @@ const learnInstrumentOptions = {
         name: 'TENOR',
         icon: icons.tenorIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'singing a little low!',
         sound: sounds.tenor,
         videoUrl: 'https://www.youtube.com/watch?v=cWc7vYjgnTs'
       },
@@ -296,7 +296,7 @@ const learnInstrumentOptions = {
         name: 'BARITONE',
         icon: icons.baritoneIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'singing low!',
         sound: sounds.baritone,
         videoUrl: 'https://www.youtube.com/watch?v=d-m1JtnZbEQ'
       },
@@ -305,7 +305,7 @@ const learnInstrumentOptions = {
         name: 'BASS',
         icon: icons.bassIcon,
         madeFrom: ['HUMANS!'],
-        howToPlay: 'using your voice!',
+        howToPlay: 'singing really low!',
         sound: sounds.bass,
         videoUrl: 'https://www.youtube.com/watch?v=wJv0jMLLRcw'
       }

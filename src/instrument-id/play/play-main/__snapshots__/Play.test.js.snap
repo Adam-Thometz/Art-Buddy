@@ -10,7 +10,7 @@ exports[`Play component matches snapshot 1`] = `
     </p>
     <div
       class="Options"
-      style="width: 65%;"
+      style="width: 50%;"
     >
       <div
         class="Icon"
@@ -21,7 +21,7 @@ exports[`Play component matches snapshot 1`] = `
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <p
-          style="font-size: 1.75rem;"
+          style="font-size: 2.5rem;"
         >
           Listening Skills Test
         </p>
@@ -35,7 +35,7 @@ exports[`Play component matches snapshot 1`] = `
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <p
-          style="font-size: 1.75rem;"
+          style="font-size: 2.5rem;"
         >
           Song Maker
         </p>

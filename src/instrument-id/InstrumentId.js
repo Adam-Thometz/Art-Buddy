@@ -14,7 +14,7 @@ const InstrumentId = () => {
   return (
     <div className="InstrumentId">
       <p className="InstrumentId-instructions">Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills</p>
-      <Options width="60%">
+      <Options width="50%">
         <Icon largeFont icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />
         <Icon largeFont icon={playIcon} text="PLAY" onClick={() => navigate(instrumentIdUrls.playUrl)} />
       </Options>

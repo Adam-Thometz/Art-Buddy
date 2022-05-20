@@ -24,6 +24,7 @@ const ListeningSkills = () => {
   const levels = [1,2].map(level => (
     <div className="ListeningSkills-level">
       <Button
+        small
         colorId={level-1}
         onClick={() => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`)}
       >Level {level}</Button>
@@ -40,6 +41,7 @@ const ListeningSkills = () => {
     <div className="ListeningSkills">
       <div className="ListeningSkills-icon">
         <Icon
+          largeFont
           icon={listeningSkills}
           text='Listening Skills Test'
         />

@@ -12,7 +12,7 @@ exports[`InstrumentId component matches snapshot 1`] = `
     </p>
     <div
       class="Options"
-      style="width: 60%;"
+      style="width: 50%;"
     >
       <div
         class="Icon"
