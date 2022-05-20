@@ -37,7 +37,7 @@ const Instrument = () => {
   return (
     <div className="Instrument" onLoad={handleCreateBuffers}>
       <div className="Instrument-name">
-        <Icon icon={instrumentInfo.icon} text={instrumentInfo.name} />
+        <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />
       </div>
       <div className="Instrument-information">
         <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>

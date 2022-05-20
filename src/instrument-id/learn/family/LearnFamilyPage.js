@@ -20,6 +20,7 @@ const LearnFamilyPage = () => {
         <Icon
           icon={instrumentFamily.main}
           text={`THE ${family.toUpperCase()} FAMILY`}
+          largeFont
         />
       </div>
       <div className="LearnFamilyPage-options">
@@ -28,6 +29,7 @@ const LearnFamilyPage = () => {
             icon={instrument.icon}
             size='150px'
             text={instrument.name.toUpperCase()}
+            largeFont
             onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)}
           />
         ))}

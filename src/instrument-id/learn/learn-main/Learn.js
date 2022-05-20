@@ -22,6 +22,7 @@ const Learn = () => {
             icon={option.icon}
             text={option.name}
             size="200px"
+            largeFont
           />
         ))}
       </div>

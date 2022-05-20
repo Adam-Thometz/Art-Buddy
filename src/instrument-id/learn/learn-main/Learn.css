@@ -7,12 +7,12 @@
 
 .Learn-header {
   font-size: 3rem;
-  width: 42%;
-  border-right: 1px solid #4D4F5E;
+  width: 40%;
 }
 
 .Learn-options {
-  width: 58%;
+  border-left: 1px solid #4D4F5E;
+  width: 60%;
   font-size: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 33%);

@@ -2,15 +2,15 @@ import React from "react";
 
 import './Icon.css';
 
-const Icon = ({ icon, text, onClick = null, size = "250px", id = null }) => {
+const Icon = ({ icon, text, onClick = null, size = "250px", width = null, largeFont = false,  id = null }) => {
   const imgStyles = {
-    width: size,
     height: size,
+    width: width ? width : size,
     cursor: onClick ? 'pointer' : null
   };
 
   const textStyles = {
-    fontSize: parseInt(size) <= 50 ? '.75rem' : null
+    fontSize: largeFont ? '2.5rem' : (parseInt(size) <= 50 ? '1rem' : '1.75rem')
   };
 
   return (
