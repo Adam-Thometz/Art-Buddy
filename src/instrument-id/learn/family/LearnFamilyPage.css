@@ -6,13 +6,13 @@
 }
 
 .LearnFamilyPage-header {
-  width: 42%;
+  width: 40%;
   font-size: 3rem;
-  border-right: 1px solid #4D4F5E;
 }
 
 .LearnFamilyPage-options {
-  width: 58%;
+  border-left: 1px solid #4D4F5E;
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(2, 50%);

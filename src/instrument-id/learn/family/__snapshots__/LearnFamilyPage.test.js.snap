@@ -32,10 +32,10 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 150px; width: 150px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
         <p
-          style="font-size: 2.5rem;"
+          style="font-size: 1.75rem;"
         >
           TRUMPET
         </p>
@@ -46,10 +46,10 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 150px; width: 150px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
         <p
-          style="font-size: 2.5rem;"
+          style="font-size: 1.75rem;"
         >
           FRENCH HORN
         </p>
@@ -60,10 +60,10 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 150px; width: 150px; cursor: pointer;"
+          style="height: 200px; width: 250px; cursor: pointer;"
         />
         <p
-          style="font-size: 2.5rem;"
+          style="font-size: 1.75rem;"
         >
           TROMBONE
         </p>
@@ -74,10 +74,10 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 150px; width: 150px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
         <p
-          style="font-size: 2.5rem;"
+          style="font-size: 1.75rem;"
         >
           TUBA
         </p>

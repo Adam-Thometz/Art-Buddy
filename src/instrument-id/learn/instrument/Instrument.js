@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
 import './Instrument.css';
@@ -7,7 +7,7 @@ import Icon from "../../../_components/icon/Icon";
 import Button from "../../../_components/button/Button";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
-import { createBuffers } from "../../_utils/buffers";
+import { createBuffers, removeBuffers } from "../../_utils/buffers";
 import { isRhythmicInstrument } from "../../_utils/getInstrument";
 import { playBeat, playScale } from "../../_utils/play";
 
@@ -19,12 +19,14 @@ const Instrument = () => {
   
   const playInstrument = () => {
     const { sound, id } = instrumentInfo;
-    if (isRhythmicInstrument(instrumentInfo)) {
-      playBeat(id, sound);
-    } else {
+    isRhythmicInstrument(instrumentInfo) ?
+      playBeat(id, sound) :
       playScale(id);
-    }
   }
+
+  useEffect(() => {
+    return () => removeBuffers();
+  })
 
   const openVideo = () => {
     window.open(instrumentInfo.videoUrl);

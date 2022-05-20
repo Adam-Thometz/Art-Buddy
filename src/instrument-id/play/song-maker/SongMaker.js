@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addInstrument, selectInstrument, selectMelody } from '../../../_redux/actions/insturmentIdActions';
@@ -14,7 +14,7 @@ import SaveSong from './save-song/SaveSong';
 import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
 import { play } from '../../_utils/play';
-import { createBuffers, getBuffers } from '../../_utils/buffers';
+import { createBuffers, getBuffers, removeBuffers } from '../../_utils/buffers';
 
 const SongMaker = () => {
   const song = useSelector(state => state.instrumentId.song);
@@ -50,6 +50,10 @@ const SongMaker = () => {
       play({ melodyId, buffers, isRhythm });
     }
   }
+
+  useEffect(() => {
+    return () => removeBuffers();
+  })
 
   const savePopup = (
     <Popup

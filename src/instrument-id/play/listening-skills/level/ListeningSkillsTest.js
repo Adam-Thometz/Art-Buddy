@@ -11,7 +11,7 @@ import Button from "../../../../_components/button/Button";
 import Dropdown from "../../../../_components/dropdown/Dropdown";
 
 import instrumentOptions from "./instrumentOptions";
-import { createBuffers } from "../../../_utils/buffers";
+import { createBuffers, removeBuffers } from "../../../_utils/buffers";
 import { isRhythmicInstrument } from "../../../_utils/getInstrument";
 import { playBeat, playScale } from "../../../_utils/play";
 
@@ -37,7 +37,10 @@ const ListeningSkillsTest = () => {
   }, [dispatch, choice1, choice2]);
 
   useEffect(() => {
-    return () => dispatch(clearChoices());
+    return () => {
+      dispatch(clearChoices())
+      removeBuffers();
+    };
   }, [dispatch]);
   
   const playSound = () => {

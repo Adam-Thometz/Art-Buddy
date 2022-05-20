@@ -32,5 +32,12 @@ export function getBuffers(instrumentId) {
     const bufferId = `${instrumentId}Buffer`;
     const buffer = window[bufferId];
     return { buffers: buffer, isRhythm: false };
+  };
+};
+
+export function removeBuffers() { 
+  const bufferKeys = Object.keys(window).filter(key => key.includes('Buffer'));
+  for (let key of bufferKeys) {
+    delete window[key];
   }
 }

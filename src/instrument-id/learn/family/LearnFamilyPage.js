@@ -27,9 +27,9 @@ const LearnFamilyPage = () => {
         {instruments.map(instrument => (
           <Icon
             icon={instrument.icon}
-            size='150px'
+            size='200px'
+            width={instrument.name === 'TROMBONE' ? '250px' : null}
             text={instrument.name.toUpperCase()}
-            largeFont
             onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)}
           />
         ))}
