@@ -1,5 +1,7 @@
 import React from "react";
 
+import './Icon.css';
+
 const Icon = ({ icon, text, onClick = null, size = "250px", id = null }) => {
   const imgStyles = {
     width: size,
@@ -9,7 +11,7 @@ const Icon = ({ icon, text, onClick = null, size = "250px", id = null }) => {
 
   const textStyles = {
     fontSize: parseInt(size) <= 50 ? '.75rem' : null
-  }
+  };
 
   return (
     <div className="Icon" onClick={onClick} id={id ? id : null}>

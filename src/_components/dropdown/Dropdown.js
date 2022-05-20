@@ -11,14 +11,14 @@ const Dropdown = ({ id = null, labelText, onClick, options, borderColor, small =
   };
 
   const styles = small ? {
+    arrow: { height: '8px', width: '12px' },
     general: { fontSize: '0.75rem' },
     label: { padding: '5px', border: '2px solid' },
-    arrow: { height: '8px', width: '12px' },
     options: { fontSize: '0.75rem' },
   } : {
+    arrow: { height: '20px', width: '30px' },
     general: {  fontSize: '1.5rem' },
     label: { padding: '10px', border: '8px solid' },
-    arrow: { height: '16px', width: '24px' },
     options: { fontSize: '1rem' }
   };
 
