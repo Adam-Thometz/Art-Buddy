@@ -1,15 +1,12 @@
-import { addBlock, addToSequence, changeCategory, playAllSequence, playSequence, removeBlock, removeFromSequence, resetSequence, setPitch, clearGame } from "../actions/sequenceMakerActions";
+import { addToSequence, changeCategory, removeFromSequence, resetSequence, setPitch, clearGame } from "../actions/sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import sample from "../../_utils/sample";
 import soundInfo from "../../sequence-maker/_media/soundInfo";
-import { sounds } from "../../sequence-maker/_media/soundImageImports";
-import pitches from "../../sequence-maker/_utils/pitchMap";
-import { now } from "tone";
 
 export const INITIAL_STATE = {
   category: '',
   sequence: [null, null, null, null],
+  pitch: 3
 };
 
 const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -18,14 +15,12 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       state.category = action.payload;
     })
     .addCase(addToSequence, (state, action) => {
-      const sound = action.payload;
+      const id = action.payload;
       const currIdx = state.sequence.indexOf(null);
       if (currIdx === -1) return;
       const block = { 
-        ...soundInfo[state.category][sound],
-        id: currIdx,
-        pitch: 'medium',
-        sound: sound === 'stop' ? null : sample(sounds[sound])
+        ...soundInfo[state.category][id],
+        id
       };
       state.sequence[currIdx] = block;
     })
@@ -33,38 +28,11 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       const id = action.payload;
       state.sequence[id] = null;
     })
-    .addCase(addBlock, (state) => {
-      state.sequence.push(null);
-    })
-    .addCase(removeBlock, (state) => {
-      state.sequence.pop();
-    })
-    .addCase(playSequence, (state) => {
-      const start = now();
-      for (let i = 0; i < state.sequence.length; i++) {
-        const { sound, pitch } = state.sequence[i];
-        const seconds = i * 4;
-        if (sound === null) {
-          continue;
-        } else {
-          sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', start + seconds)
-        };
-      };
-    })
-    .addCase(playAllSequence, (state) => {
-      const start = now();
-      for (let i = 0; i < state.sequence.length; i++) {
-        const { sound, pitch } = state.sequence[i];
-        if (sound === null) continue;
-        sound.triggerAttackRelease(`C${pitches[pitch]}`, '2m', start)
-      }
-    })
     .addCase(resetSequence, (state) => {
       state.sequence.fill(null);
     })
     .addCase(setPitch, (state, action) => {
-      const { id, pitch } = action.payload;
-      state.sequence[id].pitch = pitch;
+      state.pitch = action.payload;
     })
     .addCase(clearGame, (state, action) => {
       state.category = '';
