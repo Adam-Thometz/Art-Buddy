@@ -1,10 +1,9 @@
 import React from 'react'
 
-import Popup from '../../../popup/Popup';
-import Icon from '../../../icon/Icon';
-
+import Icon from '../../../_components/icon/Icon';
+import Popup from '../../../_components/popup/Popup';
+import SavedSongs from '../../../instrument-id/play/song-maker/save-song/SavedSongs';
 import savedSongsIcon from '../_icons/saved-songs.png';
-import SavedSongs from '../../../../instrument-id/play/song-maker/save-song/SavedSongs';
 
 const SavedSongsIcon = () => {
   const popupTrigger = (<Icon icon={savedSongsIcon} text='SAVED SONGS' size='49px' />)

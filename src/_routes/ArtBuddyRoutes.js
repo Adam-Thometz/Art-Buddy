@@ -1,6 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+import HelpIcon from "./corner-icons/help/HelpIcon";
+import ReportCardIcon from "./corner-icons/report-card/ReportCardIcon";
+import SavedSongsIcon from "./corner-icons/saved-songs/SavedSongsIcon";
+
 import Window from "../_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
 import Menu from "../menu-landing/menu/Menu";
@@ -13,14 +17,11 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import Play from '../instrument-id/play/play-main/Play';
   import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
   import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
+  import SongMaker from "../instrument-id/play/song-maker/SongMaker";
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
-import ReportCardIcon from "../_components/window-nav/corner-icons/report-card/ReportCardIcon";
-import HelpIcon from "../_components/window-nav/corner-icons/help/HelpIcon";
-import SongMaker from "../instrument-id/play/song-maker/SongMaker";
-import SavedSongsIcon from "../_components/window-nav/corner-icons/saved-songs/SavedSongsIcon";
 
 const ArtBuddyRoutes = () => {
   return (
@@ -67,7 +68,7 @@ const ArtBuddyRoutes = () => {
           </Window>}/>
 
         <Route path={instrumentIdUrls.learnFamilyUrl} element={
-          <Window page='INSTRUMENT ID: LEARN'>
+          <Window icon={<HelpIcon />} page='INSTRUMENT ID: LEARN'>
             <LearnFamilyPage />
           </Window>}/>
 
