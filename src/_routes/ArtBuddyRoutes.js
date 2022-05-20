@@ -45,46 +45,46 @@ const ArtBuddyRoutes = () => {
 
       {/* Word To Music Decoder */}
       <Route path={urls.wordToMusicUrl} element={
-        <Window page='WORD-TO-MUSIC DECODER'>
+        <Window page='Word-To-Music Decoder'>
           <WordToMusic />
         </Window>} />
 
       {/* Sequence Maker */}
       <Route path={urls.sequencerUrl} element={
-        <Window page='SEQUENCE MAKER'>
+        <Window page='Sequence Maker'>
           <SequenceMaker />
         </Window>} />
 
       {/* What's That Instrument? */}
       <Route path={urls.instrumentIdUrl} element={
-        <Window icon={<HelpIcon />} page='INSTRUMENT ID'>
+        <Window cornerIcon={<HelpIcon />} page="What's That Instrument?">
           <InstrumentId />
         </Window>} />
 
         {/* Learn */}
         <Route path={instrumentIdUrls.learnUrl} element={
-          <Window icon={<HelpIcon />} page='INSTRUMENT ID: LEARN'>
+          <Window cornerIcon={<HelpIcon />} page="What's That Instrument?: Learn">
             <Learn />
           </Window>}/>
 
         <Route path={instrumentIdUrls.learnFamilyUrl} element={
-          <Window icon={<HelpIcon />} page='INSTRUMENT ID: LEARN'>
+          <Window page="What's That Instrument?: Learn">
             <LearnFamilyPage />
           </Window>}/>
 
         <Route path={instrumentIdUrls.learnInstrumentUrl} element={
-          <Window page='INSTRUMENT ID: LEARN'>
+          <Window page="What's That Instrument?: Learn">
             <Instrument />
           </Window>}/>
 
         {/* Play */}
         <Route path={instrumentIdUrls.playUrl} element={
-          <Window icon={<HelpIcon />} page='INSTRUMENT ID: PLAY'>
+          <Window cornerIcon={<HelpIcon />} page="What's That Instrument: Play">
             <Play />
           </Window>} />
 
         <Route path={instrumentIdUrls.playListeningUrl} element={
-          <Window cornerIcon={<HelpIcon />} page='INSTRUMENT ID: PLAY'>
+          <Window cornerIcon={<HelpIcon />} page="What's That Instrument: Play">
             <ListeningSkills />
           </Window>} />
 
@@ -102,7 +102,7 @@ const ArtBuddyRoutes = () => {
       {/* TOOLS */}
       {/* Score Keeper */}
       <Route path={urls.scoreKeeperUrl} element={
-        <Window page='SCORE KEEPER'>
+        <Window page='Score Keeper'>
           <ScoreKeeper />
         </Window>} />
       
