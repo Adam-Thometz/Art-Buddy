@@ -42,13 +42,13 @@ exports[`SongMaker component matches snapshot 1`] = `
           >
             <span
               class="Dropdown-label"
-              style="padding: 10px; border: 5px solid;"
+              style="padding: 10px; border: 8px solid;"
             >
               INSTRUMENT 
               <img
                 alt=""
                 src="file"
-                style="height: 16px; width: 24px;"
+                style="height: 20px; width: 30px;"
               />
             </span>
             <div

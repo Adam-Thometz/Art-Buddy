@@ -21,6 +21,19 @@ exports[`SaveSong component matches snapshot 1`] = `
         type="text"
         value=""
       />
+      <div
+        class="Input-keyboard"
+      >
+        <div
+          class="Icon"
+        >
+          <img
+            alt=""
+            style="width: 250px; height: 250px;"
+          />
+          <p />
+        </div>
+      </div>
     </div>
     <button
       class="Button regular"

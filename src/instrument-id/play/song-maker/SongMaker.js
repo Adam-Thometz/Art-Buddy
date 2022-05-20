@@ -79,7 +79,6 @@ const SongMaker = () => {
         onClick={handleSelectInstrument}
         />
       );
-      console.log(instrument)
       const melodyDropdown = (!instrument || !instrument.instrumentId) ? null : (
         <Dropdown
           id={i}
