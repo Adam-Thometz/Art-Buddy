@@ -24,13 +24,13 @@ import stop from './images/stop.png';
 
 // Body Sounds
 import clapping from './images/body-sounds/clapping.png';
-import stomping from './images/body-sounds/stomping.jpeg';
+import stomping from './images/body-sounds/stomping.png';
 import yeah from './images/body-sounds/yeah.png';
 
 // Animals
 import cat from './images/animals/cat.png';
-import dog from './images/animals/dog.jpeg';
-import bird from './images/animals/bird.jpeg';
+import dog from './images/animals/dog.png';
+import bird from './images/animals/bird.png';
 
 const sounds = {
   clappingContinuous,
