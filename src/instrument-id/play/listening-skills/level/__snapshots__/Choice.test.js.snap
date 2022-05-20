@@ -14,9 +14,11 @@ exports[`Choice component matches snapshot 1`] = `
       <img
         alt=""
         src="file"
-        style="width: 250px; height: 250px; cursor: pointer;"
+        style="height: 250px; width: 250px; cursor: pointer;"
       />
-      <p>
+      <p
+        style="font-size: 1.75rem;"
+      >
         THEREMIN
       </p>
     </div>
@@ -25,10 +27,10 @@ exports[`Choice component matches snapshot 1`] = `
     >
       <img
         alt=""
-        style="width: 30px; height: 30px; cursor: pointer;"
+        style="height: 30px; width: 30px; cursor: pointer;"
       />
       <p
-        style="font-size: .75rem;"
+        style="font-size: 1rem;"
       >
         SWAP
       </p>

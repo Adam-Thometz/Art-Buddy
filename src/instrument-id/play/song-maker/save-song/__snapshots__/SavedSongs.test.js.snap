@@ -14,10 +14,10 @@ exports[`SavedSongs component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 49px; height: 49px; cursor: pointer;"
+          style="height: 49px; width: 49px; cursor: pointer;"
         />
         <p
-          style="font-size: .75rem;"
+          style="font-size: 1rem;"
         >
           Play
         </p>
@@ -28,10 +28,10 @@ exports[`SavedSongs component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 49px; height: 49px; cursor: pointer;"
+          style="height: 49px; width: 49px; cursor: pointer;"
         />
         <p
-          style="font-size: .75rem;"
+          style="font-size: 1rem;"
         >
           Delete
         </p>

@@ -7,9 +7,11 @@ exports[`Icon component matches the snapshot of the icon 1`] = `
   >
     <img
       alt=""
-      style="width: 250px; height: 250px;"
+      style="height: 250px; width: 250px;"
     />
-    <p />
+    <p
+      style="font-size: 1.75rem;"
+    />
   </div>
 </DocumentFragment>
 `;

@@ -21,9 +21,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           BRASS
         </p>
       </div>
@@ -33,9 +35,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           ELECTRONIC
         </p>
       </div>
@@ -45,9 +49,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           PERCUSSION
         </p>
       </div>
@@ -57,9 +63,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           STRINGS
         </p>
       </div>
@@ -69,9 +77,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           WOODWIND
         </p>
       </div>
@@ -81,9 +91,11 @@ exports[`Learn component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 200px; height: 200px; cursor: pointer;"
+          style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           VOICE
         </p>
       </div>

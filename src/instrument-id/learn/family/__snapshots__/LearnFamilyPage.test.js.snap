@@ -14,9 +14,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 250px; height: 250px;"
+          style="height: 250px; width: 250px;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           THE BRASS FAMILY
         </p>
       </div>
@@ -30,9 +32,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 150px; height: 150px; cursor: pointer;"
+          style="height: 150px; width: 150px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           TRUMPET
         </p>
       </div>
@@ -42,9 +46,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 150px; height: 150px; cursor: pointer;"
+          style="height: 150px; width: 150px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           FRENCH HORN
         </p>
       </div>
@@ -54,9 +60,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 150px; height: 150px; cursor: pointer;"
+          style="height: 150px; width: 150px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           TROMBONE
         </p>
       </div>
@@ -66,9 +74,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 150px; height: 150px; cursor: pointer;"
+          style="height: 150px; width: 150px; cursor: pointer;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           TUBA
         </p>
       </div>

@@ -29,9 +29,14 @@ exports[`SaveSong component matches snapshot 1`] = `
         >
           <img
             alt=""
-            style="width: 250px; height: 250px;"
+            src="file"
+            style="height: 40px; width: 40px;"
           />
-          <p />
+          <p
+            style="font-size: 1rem;"
+          >
+            OPEN KEYBOARD
+          </p>
         </div>
       </div>
     </div>
