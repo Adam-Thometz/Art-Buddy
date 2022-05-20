@@ -38,7 +38,7 @@ const Sequence = () => {
       </div>
       <div className="Sequence-display">
         {sequence.map((block, i) => (
-          <SequenceBlock block={block} borderColor={colors[i%4]} />
+          <SequenceBlock id={i} block={block} borderColor={colors[i%4]} />
         ))}
       </div>
       <div className="Sequence-reset">
