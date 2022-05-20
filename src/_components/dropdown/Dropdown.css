@@ -6,7 +6,6 @@
 }
 
 .Dropdown-label {
-  z-index: 50;
   border-radius: 25px;
   width: 20vw;
   display: flex;
@@ -25,14 +24,15 @@
   padding: 10px 20px;
   height: 20vh;
   overflow: scroll;
-  width: 19.5vw;
+  width: 19.75vw;
   border: 1px solid #D4D2D5;
+  border-top: none;
   border-radius: 0 0 25px 25px;
 }
 
 .Dropdown:hover .Dropdown-options {
   position: absolute;
-  top: 45px;
+  top: 47px;
   display: block;
 }
 
