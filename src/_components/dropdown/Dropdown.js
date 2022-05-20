@@ -17,7 +17,7 @@ const Dropdown = ({ id = null, labelText, onClick, options, borderColor, small =
     options: { fontSize: '0.75rem' },
   } : {
     general: {  fontSize: '1.5rem' },
-    label: { padding: '10px', border: '5px solid' },
+    label: { padding: '10px', border: '8px solid' },
     arrow: { height: '16px', width: '24px' },
     options: { fontSize: '1rem' }
   };

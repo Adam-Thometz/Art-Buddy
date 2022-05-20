@@ -8,7 +8,7 @@ exports[`Dropdown component matches the snapshot 1`] = `
   >
     <span
       class="Dropdown-label"
-      style="padding: 10px; border: 5px solid;"
+      style="padding: 10px; border: 8px solid;"
     >
        
       <img
