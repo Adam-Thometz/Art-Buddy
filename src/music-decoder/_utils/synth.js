@@ -1,6 +1,6 @@
 import { now } from "tone";
 
-const play = (notes) => {
+export default function play(notes) {
   const synth = window.synth;
   
   if (!Array.isArray(notes)) {
@@ -11,8 +11,6 @@ const play = (notes) => {
       const note = notes[i];
       const seconds = i / 2;
       synth.triggerAttackRelease(`${note}3`, '8n', start + seconds);
-    }
-  }
-}
-
-export default play;
+    };
+  };
+};
