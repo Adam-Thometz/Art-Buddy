@@ -12,8 +12,8 @@
 .Popup-box {
   background-color: white;
   width: 75%;
-  height: 81vh;
-  margin: 50px auto;
+  height: 86vh;
+  margin: 24px auto;
   border-radius: 50px;
   overflow: scroll;
 }

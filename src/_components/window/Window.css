@@ -1,9 +1,9 @@
 .Window {
-  margin: 50px auto;
+  margin: 25px auto;
   padding: 30px;
   border-radius: 50px;
   border: none;
   background-color: white;
-  height: 75vh;
+  height: 80vh;
   overflow: scroll;
 }
