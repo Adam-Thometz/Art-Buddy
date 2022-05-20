@@ -9,7 +9,7 @@ import SequenceMaker from '../sequence-maker/SequenceMaker';
 import InstrumentId from "../instrument-id/InstrumentId";
   import Learn from "../instrument-id/learn/learn-main/Learn";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
-  import Instrument from "../instrument-id/learn/instruments/Instrument";
+  import Instrument from "../instrument-id/learn/instrument/Instrument";
   import Play from '../instrument-id/play/play-main/Play';
   import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
   import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
