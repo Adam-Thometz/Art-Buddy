@@ -17,11 +17,15 @@ This app lays out a chart of all letters with different colors that correspond t
 
 ### Sequence Maker
 
-This app allows students to create a sequence of sounds. They pick sounds from different categories and can mix and match them however they want. Students also have the option of either playing the sounds one at a time or playing them altogether at once. Students can also adjust the pitch of each sound.
+This app allows students to create a sequence of sounds. They pick sounds from different categories and can mix and match them however they want. Students also have the option of either playing the sounds one at a time or playing them altogether at once. Students can also adjust the pitch of the sounds. Good for practicing general reading skills such as reading from left to right.
+
+### What's That Instrument?
+
+This app allows students to learn about different instruments based on category. Students can also test their instrument knowledge in the Listening Skills test and unlock instruments in the Song Maker. Good for listening and reading comprehension.
 
 ### Score Keeper
 
-This app is a basic score keeper. Extra features include assigning a color to a student and visualizing how many points each player has.
+This app is a basic score keeper. Extra features include assigning a color to a player and visualizing how many points each player has. When the game ends, user can press the End Game button to show the winner. Good for recognizing and comparing quantity.
 
 ## Technical Information
 
@@ -53,3 +57,12 @@ Or to activate watch mode:
 ```
 npm run test:watch
 ```
+
+### How to deploy app
+
+Hopefully, you see a theme here...
+
+```
+npm run build
+```
+Then type the URL you want to deploy to.
