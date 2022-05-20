@@ -14,9 +14,11 @@ exports[`Instrument component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="width: 250px; height: 250px;"
+          style="height: 250px; width: 250px;"
         />
-        <p>
+        <p
+          style="font-size: 2.5rem;"
+        >
           TRUMPET
         </p>
       </div>
