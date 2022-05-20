@@ -38,23 +38,19 @@ exports[`SongMaker component matches snapshot 1`] = `
         >
           <div
             class="Dropdown"
-            style="font-size: 1.5rem;"
           >
             <span
               class="Dropdown-label"
-              style="padding: 10px; border: 8px solid;"
             >
               INSTRUMENT 
               <img
                 alt=""
                 src="file"
-                style="height: 20px; width: 30px;"
               />
             </span>
             <div
               class="Dropdown-options"
               id="0"
-              style="font-size: 1rem;"
             >
               <p
                 class="Dropdown-option"

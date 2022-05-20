@@ -21,6 +21,7 @@ const WordToMusic = () => {
   useEffect(() => {
     return () => {
       dispatch(clearGame());
+      delete window.synth;
     }
   }, [dispatch]);
 
