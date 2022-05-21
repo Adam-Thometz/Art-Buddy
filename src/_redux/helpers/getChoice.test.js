@@ -18,7 +18,6 @@ describe('getChoices function', () => {
       level: '2',
       choice: 'brass',
     });
-    console.log(result);
     expect(result.instrumentChoice.id).toBe('frenchHorn');
     expect(result.instrumentChoice.family).toBe('brass');
     expect(result.instrumentChoice2.id).toBe('tuba');
