@@ -3,6 +3,7 @@ import { createReducer } from "@reduxjs/toolkit";
 
 import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import getInstrument, { isRhythmicInstrument } from "../../instrument-id/_utils/getInstrument";
+import { getChoice, getChoices } from "../helpers/getChoice";
 
 const defaultInstrument = {
   instrumentId: null,
@@ -10,7 +11,7 @@ const defaultInstrument = {
   isRhythm: null
 }
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   // Listening Skills Test
   choice1: null,
   choice2: null,
@@ -25,26 +26,13 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const { id, level, choice } = action.payload;
       const choices = learnInstrumentOptions[choice].instruments;
       if (level === '1') {
-        if (id === '1') {
-          const instrument1Idx = Math.floor(Math.random() * choices.length);
-          const instrumentChoice = { ...choices[instrument1Idx], family: choice };
-          state.choice1 = instrumentChoice;
-        } else if (id === '2') {
-          const instrument2Idx = Math.floor(Math.random() * choices.length);
-          const instrumentChoice = { ...choices[instrument2Idx], family: choice };
-          state.choice2 = instrumentChoice;
-        };
+        const instrumentChoice = getChoice({ id, level, choices, choice });
+        state[`choice${id}`] = instrumentChoice;
       } else {
-        const instrument1Idx = Math.floor(Math.random() * choices.length);
-        const instrumentChoice1 = { ...choices[instrument1Idx], family: choice };
+        const { instrumentChoice1, instrumentChoice2 } = getChoices({ choice, choices });
         state.choice1 = instrumentChoice1;
-        let instrument2Idx = instrument1Idx;
-        while (instrument2Idx === instrument1Idx) {
-          instrument2Idx = Math.floor(Math.random() * choices.length);
-        };
-        const instrumentChoice2 = { ...choices[instrument2Idx], family: choice };
         state.choice2 = instrumentChoice2;
-      };
+      }
     })
     .addCase(generateAnswer, (state, action) => {
       const { choice1, choice2 } = action.payload;
