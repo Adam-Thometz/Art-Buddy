@@ -49,9 +49,9 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
         color: student.color,
         points: 0
       }))];
-      state.winners = updateWinners(state.students);
+      state.winners = [];
     })
-    .addCase(clearGame, (state, action) => {
+    .addCase(clearGame, (state) => {
       state.students = [];
       state.winners = [];
       state.gameOver = false;

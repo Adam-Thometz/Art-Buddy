@@ -26,13 +26,13 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       const { id, level, choice } = action.payload;
       const choices = learnInstrumentOptions[choice].instruments;
       if (level === '1') {
-        const instrumentChoice = getChoice({ id, level, choices, choice });
+        const instrumentChoice = getChoice({ choices, choice });
         state[`choice${id}`] = instrumentChoice;
       } else {
         const { instrumentChoice1, instrumentChoice2 } = getChoices({ choice, choices });
         state.choice1 = instrumentChoice1;
         state.choice2 = instrumentChoice2;
-      }
+      };
     })
     .addCase(generateAnswer, (state, action) => {
       const { choice1, choice2 } = action.payload;
