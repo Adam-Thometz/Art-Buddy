@@ -6,7 +6,7 @@ import Icon from '../icon/Icon';
 
 import keyboard from './keyboard.png';
 
-const Input = ({ type = 'text', label, id,  }) => {
+const Input = ({ type = 'text', label, id }) => {
   const [input, setInput] = useState('');
 
   const handleChange = e => {
