@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Input"
+  >
+    <label
+      class="Input-label"
+    />
+    <input
+      class="Input-input"
+      type="text"
+      value=""
+    />
+    <div
+      class="Input-keyboard"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 40px; width: 40px;"
+        />
+        <p
+          style="font-size: 1rem;"
+        >
+          OPEN KEYBOARD
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
