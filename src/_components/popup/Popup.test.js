@@ -4,11 +4,11 @@ import Popup from "./Popup";
 
 describe('Popup component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Popup />)
+    renderWithProvider(<Popup />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Popup />)
+    const { asFragment } = renderWithProvider(<Popup />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
