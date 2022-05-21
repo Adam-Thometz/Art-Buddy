@@ -38,7 +38,7 @@ const ListeningSkillsTest = () => {
 
   useEffect(() => {
     return () => {
-      dispatch(clearChoices())
+      dispatch(clearChoices());
       removeBuffers();
     };
   }, [dispatch]);
@@ -48,12 +48,14 @@ const ListeningSkillsTest = () => {
     isRhythmicInstrument(answer) ? playBeat(id, sound) : playScale(id);
   };
 
-  const dropdown = (id) => <Dropdown
+  const dropdown = (id) => (<Dropdown
     id={id}
     labelText='CHOOSE FAMILY'
     onClick={setInstruments}
     options={instrumentOptions}
-  />;
+  />);
+
+  const isDisabled = !(choice1 && choice2)
 
   return (
     <div className="ListeningSkillsTest">
@@ -61,13 +63,7 @@ const ListeningSkillsTest = () => {
       <p>This is instruction text for later</p>
       <hr/>
       <div className="ListeningSkillsTest-game">
-        <Button
-          small
-          disabled={!(choice1 && choice2)}
-          otherStyles={{height: '50%', fontSize: '1.5rem'}} 
-          colorId={0}
-          onClick={playSound}
-        >START</Button>
+        <Button small disabled={isDisabled} colorId={0} onClick={playSound}>START</Button>
         <div className="ListeningSkillsTest-choice-container">
           <div className="ListeningSkillsTest-options">
             {dropdown(1)}

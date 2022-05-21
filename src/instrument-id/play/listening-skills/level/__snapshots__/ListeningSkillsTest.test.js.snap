@@ -18,7 +18,7 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
       <button
         class="Button small"
         disabled=""
-        style="border-color: #89eb0a; background-color: grey; height: 50%; font-size: 1.5rem;"
+        style="border-color: #89eb0a; background-color: grey;"
       >
         START
       </button>
