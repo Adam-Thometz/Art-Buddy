@@ -29,7 +29,7 @@ const SequenceControls = () => {
   }
 
   return (
-    <div className='Controls'>
+    <div className='SequenceControls'>
       <Dropdown
         labelText="SOUND CATEGORY"
         onClick={handleChangeCategory}
