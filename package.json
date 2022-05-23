@@ -23,6 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/200.html && npx surge build",
+    "teardown": "npx surge teardown art-buddy.surge.sh",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"

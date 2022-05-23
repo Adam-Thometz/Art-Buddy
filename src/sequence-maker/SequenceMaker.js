@@ -7,18 +7,22 @@ import Sequence from "./sequence/Sequence";
 import Controls from "./controls/Controls";
 
 import SoundOptions from "./sound-options/SoundOptions";
+import { Transport } from "tone";
 
 const SequenceMaker = () => {;
   const dispatch = useDispatch();
 
+  const setTempo = () => Transport.bpm.value = 240;
+
   useEffect(() => {
     return () => {
       dispatch(clearGame());
+      Transport.bpm.value = 120;
     }
   }, [dispatch]);
 
   return (
-    <div className="SequenceMaker">
+    <div className="SequenceMaker" onLoad={setTempo}>
       <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
       <hr/>
       <Controls />

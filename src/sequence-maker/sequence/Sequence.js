@@ -16,14 +16,15 @@ import playAll from '../_media/_icons/play-all.png'
 const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence);
   const pitch = useSelector(state => state.sequenceMaker.pitch);
+  const duration = useSelector(state => state.sequenceMaker.duration);
   const dispatch = useDispatch(); 
 
   const handlePlay = () => {
-    playSequence({ sequence, pitch, playAll: false })
+    playSequence({ sequence, pitch, duration, playAll: false })
   }
   
   const handlePlayAll = () => {
-    playSequence({ sequence, pitch, playAll: true })
+    playSequence({ sequence, pitch, duration, playAll: true })
   }
 
   const handleReset = () => {
