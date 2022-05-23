@@ -1,4 +1,4 @@
-import { addToSequence, changeCategory, removeFromSequence, resetSequence, setPitch, clearGame } from "../actions/sequenceMakerActions";
+import { addToSequence, changeCategory, removeFromSequence, resetSequence, setPitch, clearGame, setDuration } from "../actions/sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import soundInfo from "../../sequence-maker/_media/soundInfo";
@@ -6,7 +6,8 @@ import soundInfo from "../../sequence-maker/_media/soundInfo";
 export const INITIAL_STATE = {
   category: '',
   sequence: [null, null, null, null],
-  pitch: 3
+  pitch: '3',
+  duration: 3
 };
 
 const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -33,6 +34,9 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(setPitch, (state, action) => {
       state.pitch = action.payload;
+    })
+    .addCase(setDuration, (state, action) => {
+      state.duration = action.payload;
     })
     .addCase(clearGame, (state, action) => {
       state.category = '';

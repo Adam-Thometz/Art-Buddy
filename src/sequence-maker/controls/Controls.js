@@ -1,13 +1,15 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { changeCategory } from "../../_redux/actions/sequenceMakerActions";
+import { changeCategory, setDuration, setPitch } from "../../_redux/actions/sequenceMakerActions";
 
 import './Controls.css'
 
 import Dropdown from '../../_components/dropdown/Dropdown';
 
-import categories from "../_utils/categories";
+import categories from "./dropdown-options/categories";
+import pitches from './dropdown-options/pitches';
+import durations from './dropdown-options/durations';
 
 const Controls = () => {
   const dispatch = useDispatch();
@@ -16,12 +18,32 @@ const Controls = () => {
     dispatch(changeCategory(e.target.id));
   };
 
+  const handleSetPitch = e => {
+    const pitch = e.target.id;
+    dispatch(setPitch(pitch));
+  }
+
+  const handleSetDuration = e => {
+    const duration = +e.target.id;
+    dispatch(setDuration(duration));
+  }
+
   return (
     <div className='Controls'>
       <Dropdown
         labelText="SOUND CATEGORY"
         onClick={handleChangeCategory}
         options={categories}
+      />
+      <Dropdown
+        labelText="PITCH"
+        onClick={handleSetPitch}
+        options={pitches}
+      />
+      <Dropdown
+        labelText="DURATION"
+        onClick={handleSetDuration}
+        options={durations}
       />
     </div>
   );

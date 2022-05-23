@@ -5,4 +5,5 @@ export const addToSequence = createAction('addToSequence');
 export const removeFromSequence = createAction('removeFromSequence');
 export const resetSequence = createAction('resetSequence');
 export const setPitch = createAction('setPitch');
+export const setDuration = createAction('setDuration');
 export const clearGame = createAction('clearGame');

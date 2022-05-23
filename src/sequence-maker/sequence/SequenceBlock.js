@@ -17,10 +17,6 @@ const SequenceBlock = ({ id, block, borderColor }) => {
     const id = +e.target.parentElement.id;
     dispatch(removeFromSequence(id));
   }
-  // const changePitch = pitch => {
-  //   const id = block.id
-  //   dispatch(setPitch({id, pitch}));
-  // }
 
   const play = () => {
     if (block.alt === 'stop') return;

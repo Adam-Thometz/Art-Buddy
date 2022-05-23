@@ -1,5 +1,5 @@
 import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import { addToSequence, changeCategory, clearGame, removeFromSequence, resetSequence, setPitch } from "../actions/sequenceMakerActions";
+import { addToSequence, changeCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame } from "../actions/sequenceMakerActions";
 
 import { withCategory } from '../../_testUtils/test-states/sequenceMakerReducerTestState'
 
@@ -34,9 +34,14 @@ describe('Sequence Maker reducer', () => {
     expect(result.sequence[1]).toBe(null);
   });
   
-  it('should handle setting the pitch of a block', () => {
+  it('should handle setting the pitch', () => {
     const result = sequenceMakerReducer(undefined, setPitch(2));
     expect(result.pitch).toBe(2);
+  });
+  
+  it('should handle setting the duration', () => {
+    const result = sequenceMakerReducer(undefined, setDuration(2));
+    expect(result.duration).toBe(2);
   });
 
   it('should handle resetting the game', () => {
