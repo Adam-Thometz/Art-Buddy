@@ -38,9 +38,11 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(setDuration, (state, action) => {
       state.duration = action.payload;
     })
-    .addCase(clearGame, (state, action) => {
+    .addCase(clearGame, (state) => {
       state.category = '';
       state.sequence = [null, null, null, null];
+      state.pitch = '3';
+      state.duration = 3;
     });;
 });
 
