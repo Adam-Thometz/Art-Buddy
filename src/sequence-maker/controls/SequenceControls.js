@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { changeCategory, setDuration, setPitch } from "../../_redux/actions/sequenceMakerActions";
 
-import './Controls.css'
+import './SequenceControls.css'
 
 import Dropdown from '../../_components/dropdown/Dropdown';
 
@@ -11,7 +11,7 @@ import categories from "./dropdown-options/categories";
 import pitches from './dropdown-options/pitches';
 import durations from './dropdown-options/durations';
 
-const Controls = () => {
+const SequenceControls = () => {
   const dispatch = useDispatch();
 
   const handleChangeCategory = e => {
@@ -49,4 +49,4 @@ const Controls = () => {
   );
 };
 
-export default Controls;
+export default SequenceControls;

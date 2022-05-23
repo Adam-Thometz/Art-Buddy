@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { clearGame } from "../_redux/actions/sequenceMakerActions";
 
 import Sequence from "./sequence/Sequence";
-import Controls from "./controls/Controls";
+import SequenceControls from "./controls/SequenceControls";
 
 import SoundOptions from "./sound-options/SoundOptions";
 import { Transport } from "tone";
@@ -25,7 +25,7 @@ const SequenceMaker = () => {;
     <div className="SequenceMaker" onLoad={setTempo}>
       <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
       <hr/>
-      <Controls />
+      <SequenceControls />
       <SoundOptions />
       <Sequence />
     </div>
