@@ -12,11 +12,12 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
     const buffer = window[`${id}Buffer`];
     const sound = sample(buffer);
     const length = `${duration}m`;
+    const pitchToPlay = `C${pitch}`
     if (playAll) {
-      sound.triggerAttackRelease(`C${pitch}`, length, start);
+      sound.triggerAttackRelease(pitchToPlay, length, start);
     } else {
       const seconds = i * duration;
-      sound.triggerAttackRelease(`C${pitch}`, length, start + seconds);
+      sound.triggerAttackRelease(pitchToPlay, length, start + seconds);
     };
   };
 };
