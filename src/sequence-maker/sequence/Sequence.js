@@ -29,31 +29,21 @@ const Sequence = () => {
   const handleReset = () => {
     dispatch(resetSequence());
   }
-  
-  const hasBlocks = sequence.some(block => !!block);
-
-  const playOptions = hasBlocks ? (
-    <div className="Sequence-play-options">
-      <Icon icon={play} text='Play' size='48px' onClick={handlePlay} />
-      <Icon icon={playAll} text='Play All' size='48px' onClick={handlePlayAll} />
-    </div>
-  ) : null;
-
-  const reset = hasBlocks ? (
-    <div className="Sequence-reset">
-      <Icon text='Reset Sequence' size="48px" onClick={handleReset} />
-    </div>
-  ) : null;
 
   return (
     <div className="Sequence">
-      {playOptions}
+      <div className="Sequence-play-options">
+        <Icon icon={play} text='Play' size='48px' onClick={handlePlay} />
+        <Icon icon={playAll} text='Play All' size='48px' onClick={handlePlayAll} />
+      </div>
       <div className="Sequence-display">
         {sequence.map((block, i) => (
           <SequenceBlock id={i} block={block} borderColor={colors[i%4]} />
         ))}
       </div>
-      {reset}
+      <div className="Sequence-reset">
+        <Icon text='Reset Sequence' size="48px" onClick={handleReset} />
+      </div>
     </div>
   );
 };
