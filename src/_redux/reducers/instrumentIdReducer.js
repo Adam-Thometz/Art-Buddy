@@ -1,11 +1,10 @@
-import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
+import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import learnInstrumentOptions from '../../instrument-id/learnInstrumentOptions';
 import getInstrument, { isRhythmicInstrument } from "../../instrument-id/_utils/getInstrument";
-import { getChoice, getChoices } from "../helpers/getChoice";
+import getChoices from "../helpers/getChoice";
 
-const defaultInstrument = {
+export const defaultInstrument = {
   instrumentId: null,
   melodyId: null,
   isRhythm: null
@@ -24,13 +23,13 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(selectChoice, (state, action) => {
       const { id, level, choice } = action.payload;
-      const choices = learnInstrumentOptions[choice].instruments;
-      if (level === '1') {
-        const instrumentChoice = getChoice({ choices, choice });
-        state[`choice${id}`] = instrumentChoice;
+      const selection = getChoices({ level, choice });
+      const { instrumentChoice, instrumentChoice2 } = selection;
+
+      if (!instrumentChoice && !instrumentChoice2) {
+        state[`choice${id}`] = selection;
       } else {
-        const { instrumentChoice1, instrumentChoice2 } = getChoices({ choice, choices });
-        state.choice1 = instrumentChoice1;
+        state.choice1 = instrumentChoice;
         state.choice2 = instrumentChoice2;
       };
     })
@@ -49,13 +48,19 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.song[id] = defaultInstrument;
     })
     .addCase(selectInstrument, (state, action) => {
+      // debugger
       const { id, instrumentId } = action.payload;
       const instrument = getInstrument(instrumentId);
       const isRhythm = isRhythmicInstrument(instrument);
+      const currInstrument = state.song[id];
+      const isCurrInstrumentRhythm = currInstrument ? currInstrument.isRhythm : !isRhythm;
+      const melodyId = (isCurrInstrumentRhythm === isRhythm) ?
+        state.song[id].melodyId :
+        null
       const newInstrument = {
-        ...state.song[id],
         instrumentId,
-        isRhythm
+        isRhythm,
+        melodyId
       };
       state.song[id] = newInstrument;
     })
@@ -66,6 +71,9 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
         melodyId
       };
       state.song[id] = instrumentWithMelody;
+    })
+    .addCase(clearSong, (state) => {
+      state.song = [defaultInstrument, null, null, null];
     })
 });
 
