@@ -1,5 +1,5 @@
 import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import { addToSequence, changeCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame } from "../actions/sequenceMakerActions";
+import { addToSequence, changeCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "../actions/sequenceMakerActions";
 
 import { withCategory } from '../../_testUtils/test-states/sequenceMakerReducerTestState'
 
@@ -43,6 +43,14 @@ describe('Sequence Maker reducer', () => {
     const result = sequenceMakerReducer(undefined, setDuration(2));
     expect(result.duration).toBe(2);
   });
+
+  it('should handle toggling isPlaying', () => {
+    const before = sequenceMakerReducer(withCategory, addToSequence('dog'));
+    const result = sequenceMakerReducer(before, togglePlaying(0));
+    expect(result.sequence[0].isPlaying).toBeTruthy();
+    const result2 = sequenceMakerReducer(result, togglePlaying(0));
+    expect(result2.sequence[0].isPlaying).toBeFalsy();
+  })
 
   it('should handle resetting the game', () => {
     const result = sequenceMakerReducer(withCategory, clearGame());
