@@ -29,10 +29,12 @@ const ListeningSkillsTest = () => {
   };
 
   useEffect(() => {
-    if (choice1 && choice2) {
+    if (choice1 !== null && choice2 !== null) {
       dispatch(generateAnswer({ choice1, choice2 }));
-      createBuffers(choice1.id);
-      createBuffers(choice2.id);
+      if (process.env.NODE_ENV !== 'test') {
+        createBuffers(choice1.id);
+        createBuffers(choice2.id);
+      }
     };
   }, [dispatch, choice1, choice2]);
 

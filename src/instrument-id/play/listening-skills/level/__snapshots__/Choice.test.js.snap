@@ -7,6 +7,7 @@ exports[`Choice component matches snapshot 1`] = `
   >
     <div
       class="Choice-wrapper"
+      data-testid="isCorrect"
     />
     <div
       class="Icon"

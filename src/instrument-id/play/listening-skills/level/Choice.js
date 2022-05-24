@@ -53,8 +53,8 @@ const Choice = ({ id, level, choice }) => {
   ) : null
 
   return (
-    <div className={`Choice`}>
-      <div className={`Choice-wrapper${isCorrectClass}`}>
+    <div className='Choice'>
+      <div className={`Choice-wrapper${isCorrectClass}`} data-testid='isCorrect'>
         {isCorrectWrapper}
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />

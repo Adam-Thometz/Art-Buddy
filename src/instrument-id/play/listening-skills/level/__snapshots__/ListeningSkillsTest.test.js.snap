@@ -6,7 +6,7 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
     class="ListeningSkillsTest"
   >
     <h2>
-      LEVEL 
+      LEVEL 2
     </h2>
     <p>
       This is instruction text for later

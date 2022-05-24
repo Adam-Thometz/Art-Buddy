@@ -6,7 +6,7 @@ import getInstrument from "../../../_utils/getInstrument";
 import Choice from "./Choice";
 
 describe('Choice component', () => {
-  const choice = getInstrument('theremin')
+  const choice = getInstrument('theremin');
   it('renders without crashing', () => {
     renderWithProvider(<Choice choice={choice} />);
   });
@@ -15,4 +15,4 @@ describe('Choice component', () => {
     const { asFragment } = renderWithProvider(<Choice choice={choice} />);
     expect(asFragment()).toMatchSnapshot();
   });
-})
+});
