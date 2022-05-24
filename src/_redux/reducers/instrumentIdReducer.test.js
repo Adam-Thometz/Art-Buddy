@@ -1,24 +1,7 @@
 import instrumentIdReducer, { INITIAL_STATE, defaultInstrument } from "./instrumentIdReducer";
-import { selectChoice, generateAnswer, clearChoices, addInstrument, selectInstrument, selectMelody } from "../actions/insturmentIdActions";
+import { selectChoice, generateAnswer, clearChoices, addInstrument, selectMelody } from "../actions/insturmentIdActions";
 
-function setupChoices() {
-  Math.random = jest.fn();
-  Math.random.mockReturnValueOnce(0.2).mockReturnValue(0.8);
-  return instrumentIdReducer(undefined, selectChoice({
-    id: 1,
-    level: '2',
-    choice: 'electronic'
-  }));
-};
-
-function setupInstrument({ id, isRhythm, withMelody = undefined }) {
-  const instrumentId = isRhythm ? 'drumSet' : 'acousticGuitar'
-  const result = instrumentIdReducer(withMelody, selectInstrument({
-    id,
-    instrumentId
-  }));
-  return result;
-}
+import { setupChoices, setupInstrument } from '../../_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
 describe("What's That Instrument? reducer", () => {
   it('should return the initial state', () => {
