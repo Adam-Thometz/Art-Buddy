@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SequenceMaker component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="SequenceMaker"
+  >
+    <p>
+      HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ
+    </p>
+    <hr />
+    <div
+      class="SequenceControls"
+    >
+      <div
+        class="Dropdown"
+      >
+        <span
+          class="Dropdown-label"
+        >
+          SOUND CATEGORY 
+          <img
+            alt=""
+            src="file"
+          />
+        </span>
+        <div
+          class="Dropdown-options"
+        >
+          <p
+            class="Dropdown-option"
+            id="bodySoundsContinuous"
+          >
+            BODY SOUNDS
+          </p>
+          <p
+            class="Dropdown-option"
+            id="bodySoundsOnce"
+          >
+            BODY SOUNDS (once)
+          </p>
+          <p
+            class="Dropdown-option"
+            id="animals"
+          >
+            ANIMALS
+          </p>
+        </div>
+      </div>
+      <div
+        class="Dropdown"
+      >
+        <span
+          class="Dropdown-label"
+        >
+          PITCH 
+          <img
+            alt=""
+            src="file"
+          />
+        </span>
+        <div
+          class="Dropdown-options"
+        >
+          <p
+            class="Dropdown-option"
+            id="2"
+          >
+            LOW
+          </p>
+          <p
+            class="Dropdown-option"
+            id="3"
+          >
+            MEDIUM
+          </p>
+          <p
+            class="Dropdown-option"
+            id="4"
+          >
+            HIGH
+          </p>
+        </div>
+      </div>
+      <div
+        class="Dropdown"
+      >
+        <span
+          class="Dropdown-label"
+        >
+          DURATION 
+          <img
+            alt=""
+            src="file"
+          />
+        </span>
+        <div
+          class="Dropdown-options"
+        >
+          <p
+            class="Dropdown-option"
+            id="1"
+          >
+            1 SECOND
+          </p>
+          <p
+            class="Dropdown-option"
+            id="2"
+          >
+            2 SECONDS
+          </p>
+          <p
+            class="Dropdown-option"
+            id="3"
+          >
+            3 SECONDS
+          </p>
+          <p
+            class="Dropdown-option"
+            id="4"
+          >
+            4 SECONDS
+          </p>
+          <p
+            class="Dropdown-option"
+            id="5"
+          >
+            5 SECONDS
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="SoundOptions"
+    />
+    <div
+      class="Sequence"
+    >
+      <div
+        class="Sequence-play-options"
+      >
+        <div
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 48px; width: 48px; cursor: pointer;"
+          />
+          <p
+            style="font-size: 1rem;"
+          >
+            Play
+          </p>
+        </div>
+        <div
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 48px; width: 48px; cursor: pointer;"
+          />
+          <p
+            style="font-size: 1rem;"
+          >
+            Play All
+          </p>
+        </div>
+      </div>
+      <div
+        class="Sequence-display"
+      >
+        <div
+          class="SequenceBlock"
+          id="0"
+          style="border-color: #89eb0a;"
+        />
+        <div
+          class="SequenceBlock"
+          id="1"
+          style="border-color: #ffe81a;"
+        />
+        <div
+          class="SequenceBlock"
+          id="2"
+          style="border-color: #fd4d3a;"
+        />
+        <div
+          class="SequenceBlock"
+          id="3"
+          style="border-color: #4d4f5e;"
+        />
+      </div>
+      <div
+        class="Sequence-reset"
+      >
+        <div
+          class="Icon"
+        >
+          <img
+            alt=""
+            style="height: 48px; width: 48px; cursor: pointer;"
+          />
+          <p
+            style="font-size: 1rem;"
+          >
+            Reset Sequence
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

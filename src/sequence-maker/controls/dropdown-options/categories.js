@@ -1,7 +1,7 @@
 const categories = {
-  bodySoundsContinuous: 'Body Sounds',
-  bodySoundsOnce: 'Body Sounds (once)',
-  animals: 'Animals'
+  bodySoundsContinuous: 'BODY SOUNDS',
+  bodySoundsOnce: 'BODY SOUNDS (once)',
+  animals: 'ANIMALS'
 };
 
 export default categories;

@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sequence component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Sequence"
+  >
+    <div
+      class="Sequence-play-options"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <p
+          style="font-size: 1rem;"
+        >
+          Play
+        </p>
+      </div>
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <p
+          style="font-size: 1rem;"
+        >
+          Play All
+        </p>
+      </div>
+    </div>
+    <div
+      class="Sequence-display"
+    >
+      <div
+        class="SequenceBlock"
+        id="0"
+        style="border-color: #89eb0a;"
+      />
+      <div
+        class="SequenceBlock"
+        id="1"
+        style="border-color: #ffe81a;"
+      />
+      <div
+        class="SequenceBlock"
+        id="2"
+        style="border-color: #fd4d3a;"
+      />
+      <div
+        class="SequenceBlock"
+        id="3"
+        style="border-color: #4d4f5e;"
+      />
+    </div>
+    <div
+      class="Sequence-reset"
+    >
+      <div
+        class="Icon"
+      >
+        <img
+          alt=""
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <p
+          style="font-size: 1rem;"
+        >
+          Reset Sequence
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
