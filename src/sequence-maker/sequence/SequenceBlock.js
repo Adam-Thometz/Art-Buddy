@@ -1,16 +1,17 @@
 import React, { Fragment } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromSequence } from "../../_redux/actions/sequenceMakerActions";
+import { removeFromSequence, togglePlaying } from "../../_redux/actions/sequenceMakerActions";
 
 import './SequenceBlock.css';
 
 import Button from "../../_components/button/Button";
 
-import sample from "../../_utils/sample";
+import { playOne } from "../_utils/playSequence";
 
 const SequenceBlock = ({ id, block, borderColor }) => {
-  const pitch = useSelector(state => state.sequenceMaker.pitch)
+  const pitch = useSelector(state => state.sequenceMaker.pitch);
+  const duration = useSelector(state => state.sequenceMaker.duration);
   const dispatch = useDispatch();
   
   const remove = e => {
@@ -19,14 +20,18 @@ const SequenceBlock = ({ id, block, borderColor }) => {
   }
 
   const play = () => {
-    if (block.alt === 'stop') return;
-    const buffer = window[`${block.id}Buffer`];
-    const sound = sample(buffer);
-    sound.triggerAttackRelease(`C${pitch}`, 4);
+    playOne({ id: block.id, pitch, duration });
+    dispatch(togglePlaying(id));
+    const timer = setTimeout(() => {
+      dispatch(togglePlaying(id));
+      clearTimeout(timer);
+    }, duration * 1000);
   }
 
+  const playing = (block && block.isPlaying) ? ' playing' : '';
+
   return (
-    <div className="SequenceBlock" style={{borderColor}} id={id}>
+    <div className={`SequenceBlock${playing}`} style={{borderColor}} id={id}>
       {block !== null ? (
         <Fragment>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />

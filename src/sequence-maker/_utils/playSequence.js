@@ -21,3 +21,10 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
     };
   };
 };
+
+export function playOne({ id, pitch, duration }) {
+  if (id === 'stop') return;
+  const buffer = window[`${id}Buffer`];
+  const sound = sample(buffer);
+  sound.triggerAttackRelease(`C${pitch}`, `${duration}m`);
+};

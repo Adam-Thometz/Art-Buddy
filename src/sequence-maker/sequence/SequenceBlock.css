@@ -27,3 +27,7 @@
   margin: 5px auto;
   font-size: 1rem;
 }
+
+.playing {
+  box-shadow: 0 0 50px red;
+}

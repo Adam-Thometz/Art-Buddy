@@ -1,6 +1,6 @@
 import React from "react";
 
-import { resetSequence } from "../../_redux/actions/sequenceMakerActions";
+import { resetSequence, togglePlaying } from "../../_redux/actions/sequenceMakerActions";
 import { playSequence } from "../_utils/playSequence";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -20,12 +20,31 @@ const Sequence = () => {
   const dispatch = useDispatch(); 
 
   const handlePlay = () => {
-    playSequence({ sequence, pitch, duration, playAll: false })
+    playSequence({ sequence, pitch, duration, playAll: false });
+    for (let i = 0; i < sequence.length; i++) {
+      if (!sequence[i]) continue;
+      const start = setTimeout(() => {
+        dispatch(togglePlaying(i));
+        clearTimeout(start);
+      }, (duration * 1000) * i);
+      const end = setTimeout(() => {
+        dispatch(togglePlaying(i));
+        clearTimeout(end);
+      }, (duration * 1000) + ((duration * 1000) * i));
+    };
   }
   
   const handlePlayAll = () => {
-    playSequence({ sequence, pitch, duration, playAll: true })
-  }
+    playSequence({ sequence, pitch, duration, playAll: true });
+    for (let i = 0; i < sequence.length; i++) {
+      if (!sequence[i]) continue;
+      dispatch(togglePlaying(i));
+      const timer = setTimeout(() => {
+        dispatch(togglePlaying(i));
+        clearTimeout(timer);
+      }, duration * 1000);
+    };
+  };
 
   const handleReset = () => {
     dispatch(resetSequence());
