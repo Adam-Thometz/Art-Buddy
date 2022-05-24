@@ -6,11 +6,12 @@ import Icon from '../icon/Icon';
 
 import keyboard from './keyboard.png';
 
-const Input = ({ type = 'text', label, id }) => {
+const Input = ({ type = 'text', label, id, otherOnChange = null }) => {
   const [input, setInput] = useState('');
 
   const handleChange = e => {
     setInput(e.target.value);
+    if (otherOnChange) otherOnChange(e)
   };
 
   return (
