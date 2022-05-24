@@ -23,6 +23,11 @@ h1 {
   height: 100vh;
 }
 
+.left {
+  position: relative;
+  top: -5%;
+}
+
 .right {
   position: relative;
   bottom: 0;

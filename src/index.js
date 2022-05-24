@@ -21,7 +21,7 @@ ReactDOM.render(
     <BrowserRouter>
       <React.StrictMode>
         <div className='lines'>
-          <img src={leftLines} alt='' />
+          <img className='left' src={leftLines} alt='' />
           <img className='right' src={rightLines} alt='' />
         </div>
         <App />
