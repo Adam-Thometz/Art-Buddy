@@ -20,7 +20,11 @@ const Button = ({
       disabled={disabled}
       className={`Button ${small ? 'small' : 'regular'}${selected ? ' selected' : ''}`}
       onClick={onClick}
-      style={{borderColor, backgroundColor: disabled ? 'grey' : null, ...otherStyles}}
+      style={{
+        borderColor,
+        backgroundColor: disabled ? 'grey' : null,
+        ...otherStyles
+      }}
     >
       {icon ? <img src={icon} alt='' /> : null}
       {children}
