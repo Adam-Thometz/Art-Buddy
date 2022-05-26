@@ -4,9 +4,9 @@ import './Options.css';
 
 const Options = ({ children, width = '100%' }) => {
   return (
-    <div className="Options" style={{width}}>
+    <section className="Options" style={{width}}>
       {children}
-    </div>
+    </section>
   );
 };
 

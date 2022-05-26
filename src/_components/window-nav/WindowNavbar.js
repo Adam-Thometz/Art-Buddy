@@ -18,18 +18,18 @@ const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   }
 
   const landingPage = () => (
-    <div className="WindowNavbar-main">
+    <header className="WindowNavbar-main">
       <span onClick={() => handleChange('games')} className={`WindowNavbar-button${underline('games')}`}>GAMES</span>
       <span onClick={() => handleChange('tools')} className={`WindowNavbar-button${underline('tools')}`}>TOOLS</span>
-    </div>
+    </header>
   );
 
   const regularPage = () => (
-    <div className="WindowNavbar-games">
+    <header className="WindowNavbar-games">
       {page === 'WELCOME TO ART BUDDY!' ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
       {cornerIcon}
-    </div>
+    </header>
   );
 
   return page ? regularPage() : landingPage();

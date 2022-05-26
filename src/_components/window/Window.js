@@ -11,10 +11,10 @@ const Window = ({ children, cornerIcon = null, page = null, small = false }) => 
     )
 
   return (
-    <div className="Window" style={{ width: small ? '75%' : '90%' }}>
+    <main className="Window" style={{ width: small ? '75%' : '90%' }}>
       {windowNav}
       {children}
-    </div>
+    </main>
   );
 };
 

@@ -26,18 +26,18 @@ const Popup = ({ title, trigger, triggerClass, popup }) => {
         {trigger}
       </div>
       {popupTrigger ? (
-        <div className='Popup' onClick={handleSetTrigger}>
-          <div className='Popup-box'>
-            <div className='Popup-header'>
+        <main className='Popup' onClick={handleSetTrigger}>
+          <section className='Popup-box'>
+            <header className='Popup-header'>
               <h1>{title}</h1>
-              <div className='Popup-close' onClick={handleSetTrigger}>
+              <aside className='Popup-close' onClick={handleSetTrigger}>
                 <img src={close} alt='close button'/>
                 <span>CLOSE</span>
-              </div>
-            </div>
+              </aside>
+            </header>
             {popup}
-          </div>
-        </div>
+          </section>
+        </main>
       ) : ''}
     </>
   )

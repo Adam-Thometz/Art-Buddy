@@ -9,13 +9,13 @@ const Welcome = ({ setHasVisited }) => {
     setHasVisited(true);
   }
   return (
-    <div className="Welcome">
-      <div className="Welcome-description">
+    <section className="Welcome">
+      <article className="Welcome-description">
         <p>ARTBUDDY is a collection of fun and interactive fine arts games designed specifically with special education goals in mind</p>
         <p>Click below to get started</p>
-      </div>
+      </article>
       <Button colorId={0} onClick={handleVisited}>LET'S GO!</Button>
-    </div>
+    </section>
   );
 };
 

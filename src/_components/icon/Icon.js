@@ -14,10 +14,10 @@ const Icon = ({ icon, text, onClick = null, size = "250px", width = null, largeF
   };
 
   return (
-    <div className="Icon" onClick={onClick} id={id ? id : null}>
+    <figure className="Icon" onClick={onClick} id={id ? id : null}>
       <img style={imgStyles} src={icon} alt="" />
-      <p style={textStyles}>{text}</p>
-    </div>
+      <figcaption style={textStyles}>{text}</figcaption>
+    </figure>
   );
 };
 
