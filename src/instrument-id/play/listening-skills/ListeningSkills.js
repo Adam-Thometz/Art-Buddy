@@ -38,19 +38,19 @@ const ListeningSkills = () => {
   ));
 
   return (
-    <div className="ListeningSkills">
-      <div className="ListeningSkills-icon">
+    <main className="ListeningSkills">
+      <header className="ListeningSkills-icon">
         <Icon
           largeFont
           icon={listeningSkills}
           text='Listening Skills Test'
         />
-      </div>
-      <div className="ListeningSkills-levels-report-cards">
+      </header>
+      <section className="ListeningSkills-levels-report-cards">
         <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
         {levels}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

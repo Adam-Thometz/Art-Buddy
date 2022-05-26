@@ -26,11 +26,11 @@ const SaveSong = () => {
   };
 
   return (
-    <div className='SaveSong'>
+    <section className='SaveSong'>
       <Input id='title' label='Song Title' />
       <Button colorId={0} onClick={handleSave}>SAVE</Button>
       <span className={`SaveSong-message ${showMessage ? 'show' : 'hide'}`}>Song Saved!</span>
-    </div>
+    </section>
   );
 };
 

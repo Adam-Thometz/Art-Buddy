@@ -2,14 +2,16 @@
 
 exports[`SongMaker component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="SongMaker"
   >
-    <p>
-      HULLO IM SONG MAKER MAKE A SONG PLZ
-    </p>
+    <header>
+      <p>
+        HULLO IM SONG MAKER MAKE A SONG PLZ
+      </p>
+    </header>
     <hr />
-    <div
+    <section
       class="SongMaker-button-instrument-wrapper"
     >
       <div
@@ -287,7 +289,7 @@ exports[`SongMaker component matches snapshot 1`] = `
           </figcaption>
         </figure>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </DocumentFragment>
 `;

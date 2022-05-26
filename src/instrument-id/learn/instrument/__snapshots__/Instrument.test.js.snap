@@ -2,10 +2,10 @@
 
 exports[`Instrument component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Instrument"
   >
-    <div
+    <header
       class="Instrument-name"
     >
       <figure
@@ -22,8 +22,8 @@ exports[`Instrument component matches snapshot 1`] = `
           TRUMPET
         </figcaption>
       </figure>
-    </div>
-    <div
+    </header>
+    <article
       class="Instrument-information"
     >
       <h2>
@@ -40,7 +40,7 @@ exports[`Instrument component matches snapshot 1`] = `
       <p>
         blowing into the mouthpiece and pressing on the valves
       </p>
-      <div
+      <section
         class="Instrument-buttons"
       >
         <button
@@ -55,8 +55,8 @@ exports[`Instrument component matches snapshot 1`] = `
         >
           Watch Video
         </button>
-      </div>
-    </div>
-  </div>
+      </section>
+    </article>
+  </main>
 </DocumentFragment>
 `;

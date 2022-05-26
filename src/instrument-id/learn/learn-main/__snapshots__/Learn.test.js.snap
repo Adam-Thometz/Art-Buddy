@@ -2,17 +2,17 @@
 
 exports[`Learn component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Learn"
   >
-    <div
+    <header
       class="Learn-header"
     >
       <p>
         To begin, choose an instrument family
       </p>
-    </div>
-    <div
+    </header>
+    <section
       class="Learn-options"
     >
       <figure
@@ -99,7 +99,7 @@ exports[`Learn component matches snapshot 1`] = `
           VOICE
         </figcaption>
       </figure>
-    </div>
-  </div>
+    </section>
+  </main>
 </DocumentFragment>
 `;

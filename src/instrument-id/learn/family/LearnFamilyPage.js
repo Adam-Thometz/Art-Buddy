@@ -14,27 +14,30 @@ const LearnFamilyPage = () => {
   const { family } = useParams();
   const instrumentFamily = learnInstrumentOptions[family];
   const { instruments } = instrumentFamily;
+
+  const options = instruments.map(instrument => (
+    <Icon
+      icon={instrument.icon}
+      size='200px'
+      width={instrument.name === 'TROMBONE' ? '250px' : null}
+      text={instrument.name.toUpperCase()}
+      onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)}
+    />
+  ));
+  
   return (
-    <div className="LearnFamilyPage">
-      <div className="LearnFamilyPage-header">
+    <main className="LearnFamilyPage">
+      <header className="LearnFamilyPage-header">
         <Icon
           icon={instrumentFamily.main}
           text={`THE ${family.toUpperCase()} FAMILY`}
           largeFont
         />
-      </div>
-      <div className="LearnFamilyPage-options">
-        {instruments.map(instrument => (
-          <Icon
-            icon={instrument.icon}
-            size='200px'
-            width={instrument.name === 'TROMBONE' ? '250px' : null}
-            text={instrument.name.toUpperCase()}
-            onClick={() => navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)}
-          />
-        ))}
-      </div>
-    </div>
+      </header>
+      <section className="LearnFamilyPage-options">
+        {options}
+      </section>
+    </main>
   );
 };
 

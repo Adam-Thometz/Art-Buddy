@@ -60,11 +60,13 @@ const ListeningSkillsTest = () => {
   const isDisabled = !(choice1 && choice2)
 
   return (
-    <div className="ListeningSkillsTest">
-      <h2>LEVEL {level}</h2>
-      <p>This is instruction text for later</p>
+    <main className="ListeningSkillsTest">
+      <header>
+        <h2>LEVEL {level}</h2>
+        <p>This is instruction text for later</p>
+      </header>
       <hr/>
-      <div className="ListeningSkillsTest-game">
+      <section className="ListeningSkillsTest-game">
         <Button small disabled={isDisabled} colorId={0} onClick={playSound}>START</Button>
         <div className="ListeningSkillsTest-choice-container">
           <div className="ListeningSkillsTest-options">
@@ -77,8 +79,8 @@ const ListeningSkillsTest = () => {
             {choice2 ? <Choice choice={choice2} id='2' level={level} /> : null}
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

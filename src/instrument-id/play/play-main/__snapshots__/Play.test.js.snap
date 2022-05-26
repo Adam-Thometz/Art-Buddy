@@ -2,12 +2,14 @@
 
 exports[`Play component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Play"
   >
-    <p>
-      Master skills in Listening Skills to unlock instruments for the Song Maker!
-    </p>
+    <header>
+      <p>
+        Master skills in Listening Skills to unlock instruments for the Song Maker!
+      </p>
+    </header>
     <section
       class="Options"
       style="width: 50%;"
@@ -41,6 +43,6 @@ exports[`Play component matches snapshot 1`] = `
         </figcaption>
       </figure>
     </section>
-  </div>
+  </main>
 </DocumentFragment>
 `;

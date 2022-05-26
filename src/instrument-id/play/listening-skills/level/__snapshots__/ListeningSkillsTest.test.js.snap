@@ -2,17 +2,19 @@
 
 exports[`ListeningSkillsTest component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="ListeningSkillsTest"
   >
-    <h2>
-      LEVEL 2
-    </h2>
-    <p>
-      This is instruction text for later
-    </p>
+    <header>
+      <h2>
+        LEVEL 2
+      </h2>
+      <p>
+        This is instruction text for later
+      </p>
+    </header>
     <hr />
-    <div
+    <section
       class="ListeningSkillsTest-game"
     >
       <button
@@ -89,7 +91,7 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
           <p />
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </DocumentFragment>
 `;

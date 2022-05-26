@@ -2,10 +2,10 @@
 
 exports[`ReportCard component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="ReportCard"
   >
-    <div
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -36,8 +36,8 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
-    <div
+    </section>
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -68,8 +68,8 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
-    <div
+    </section>
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -100,8 +100,8 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
-    <div
+    </section>
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -132,8 +132,8 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
-    <div
+    </section>
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -164,8 +164,8 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
-    <div
+    </section>
+    <section
       class="ReportCard-score-display"
     >
       <span>
@@ -196,13 +196,13 @@ exports[`ReportCard component matches snapshot 1`] = `
       >
         0/4 passed
       </span>
-    </div>
+    </section>
     <button
       class="Button regular"
       style="border-color: #fd4d3a;"
     >
       CLEAR
     </button>
-  </div>
+  </main>
 </DocumentFragment>
 `;

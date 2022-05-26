@@ -14,7 +14,7 @@ const ReportCard = ({ level }) => {
     const score = savedReportCard[family].length;
     const maxScore = 4;
     return (
-      <div className='ReportCard-score-display'>
+      <section className='ReportCard-score-display'>
         <span>{family.toUpperCase()} FAMILY</span>
         <div className='ReportCard-visual-score'>
           <img src={score >= 1 ? fullFirst : emptyFirst} alt='' />
@@ -23,7 +23,7 @@ const ReportCard = ({ level }) => {
           <img src={score >= maxScore ? fullLast : emptyLast} alt='' />
         </div>
         <span className='ReportCard-text-score'>{score}/{maxScore} passed</span>
-      </div>
+      </section>
     );
   });
 
@@ -32,10 +32,10 @@ const ReportCard = ({ level }) => {
   };
 
   return (
-    <div className='ReportCard'>
+    <main className='ReportCard'>
       {scoreDisplay}
       <Button colorId={2} onClick={handleClearReportCard}>CLEAR</Button>
-    </div>
+    </main>
   );
 }
 

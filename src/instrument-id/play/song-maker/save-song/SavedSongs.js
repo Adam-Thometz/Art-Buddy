@@ -48,15 +48,15 @@ const SavedSongs = () => {
   ));
 
   return (
-    <div className='SavedSongs'>
-      <div className='SavedSongs-options'>
+    <section className='SavedSongs'>
+      <aside className='SavedSongs-options'>
         <Icon icon={smallPlayIcon} text='Play' size='49px' onClick={handlePlay} />
         <Icon icon={deleteIcon} text='Delete' size='49px' onClick={handleDelete} />
-      </div>
-      <div className='SavedSongs-song-list'>
+      </aside>
+      <section className='SavedSongs-song-list'>
         {songDisplay}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

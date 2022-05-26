@@ -12,13 +12,13 @@ import { instrumentIdUrls } from "../_routes/routeUrls";
 const InstrumentId = () => {
   const navigate = useNavigate();
   return (
-    <div className="InstrumentId">
+    <main className="InstrumentId">
       <p className="InstrumentId-instructions">Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills</p>
       <Options width="50%">
         <Icon largeFont icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />
         <Icon largeFont icon={playIcon} text="PLAY" onClick={() => navigate(instrumentIdUrls.playUrl)} />
       </Options>
-    </div>
+    </main>
   );
 };
 

@@ -101,10 +101,12 @@ const SongMaker = () => {
   });
 
   return (
-    <div className='SongMaker'>
-      <p>HULLO IM SONG MAKER MAKE A SONG PLZ</p>
+    <main className='SongMaker'>
+      <header>
+        <p>HULLO IM SONG MAKER MAKE A SONG PLZ</p>
+      </header>
       <hr/>
-      <div className='SongMaker-button-instrument-wrapper'>
+      <section className='SongMaker-button-instrument-wrapper'>
         <div className='SongMaker-buttons'>
           <Button colorId={0} onClick={playInstruments}>PLAY</Button>
           {savePopup}
@@ -112,8 +114,8 @@ const SongMaker = () => {
         <div className='SongMaker-instruments'>
           {instrumentDisplay}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

@@ -8,25 +8,27 @@ import Icon from "../../../_components/icon/Icon";
 import learnMenuOptions from "./learnMenuOptions";
 
 const Learn = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const options = learnMenuOptions.map(option => (
+    <Icon
+      onClick={() => navigate(option.url)}
+      icon={option.icon}
+      text={option.name}
+      size="200px"
+      largeFont
+    />
+  ));
 
   return (
-    <div className="Learn">
-      <div className="Learn-header">
+    <main className="Learn">
+      <header className="Learn-header">
         <p>To begin, choose an instrument family</p>
-      </div>
-      <div className="Learn-options">
-        {learnMenuOptions.map(option => (
-          <Icon
-            onClick={() => navigate(option.url)}
-            icon={option.icon}
-            text={option.name}
-            size="200px"
-            largeFont
-          />
-        ))}
-      </div>
-    </div>
+      </header>
+      <section className="Learn-options">
+        {options}
+      </section>
+    </main>
   );
 };
 

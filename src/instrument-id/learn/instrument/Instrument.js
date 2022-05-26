@@ -37,11 +37,11 @@ const Instrument = () => {
   }
 
   return (
-    <div className="Instrument" onLoad={handleCreateBuffers}>
-      <div className="Instrument-name">
+    <main className="Instrument" onLoad={handleCreateBuffers}>
+      <header className="Instrument-name">
         <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />
-      </div>
-      <div className="Instrument-information">
+      </header>
+      <article className="Instrument-information">
         <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>
         <ul>
           {instrumentInfo.madeFrom.map(material => (
@@ -50,12 +50,12 @@ const Instrument = () => {
         </ul>
         <h2>THE {instrumentInfo.name} IS PLAYED BY...</h2>
         <p>{instrumentInfo.howToPlay}</p>
-        <div className="Instrument-buttons">
+        <section className="Instrument-buttons">
           <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
           <Button colorId={2} onClick={openVideo}>Watch Video</Button>
-        </div>
-      </div>
-    </div>
+        </section>
+      </article>
+    </main>
   );
 };
 

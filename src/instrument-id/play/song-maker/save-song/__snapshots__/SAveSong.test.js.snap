@@ -2,7 +2,7 @@
 
 exports[`SaveSong component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="SaveSong"
   >
     <div
@@ -51,6 +51,6 @@ exports[`SaveSong component matches snapshot 1`] = `
     >
       Song Saved!
     </span>
-  </div>
+  </section>
 </DocumentFragment>
 `;

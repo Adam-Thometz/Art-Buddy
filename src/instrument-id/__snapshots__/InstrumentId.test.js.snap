@@ -2,7 +2,7 @@
 
 exports[`InstrumentId component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="InstrumentId"
   >
     <p
@@ -43,6 +43,6 @@ exports[`InstrumentId component matches snapshot 1`] = `
         </figcaption>
       </figure>
     </section>
-  </div>
+  </main>
 </DocumentFragment>
 `;
