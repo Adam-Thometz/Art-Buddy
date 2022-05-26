@@ -197,6 +197,12 @@ exports[`ReportCard component matches snapshot 1`] = `
         0/4 passed
       </span>
     </div>
+    <button
+      class="Button regular"
+      style="border-color: #fd4d3a;"
+    >
+      CLEAR
+    </button>
   </div>
 </DocumentFragment>
 `;

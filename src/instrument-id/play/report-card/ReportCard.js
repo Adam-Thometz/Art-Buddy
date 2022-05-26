@@ -1,12 +1,14 @@
 import React from 'react';
+import Button from '../../../_components/button/Button';
 import useReportCard from '../../../_hooks/useReportCard';
 
 import './ReportCard.css';
 
+import { INITIAL_REPORT_CARD } from '../../../_hooks/useReportCard';
 import { emptyFirst, emptyMid, emptyLast, fullFirst, fullMid, fullLast } from './_icons/iconImports';
 
 const ReportCard = ({ level }) => {
-  const [savedReportCard] = useReportCard(`instrument-id-level-${level}-report-card`);
+  const [savedReportCard, setSavedReportCard] = useReportCard(`instrument-id-level-${level}-report-card`);
 
   const scoreDisplay = Object.keys(savedReportCard).map(family => {
     const score = savedReportCard[family].length;
@@ -25,9 +27,14 @@ const ReportCard = ({ level }) => {
     );
   });
 
+  const handleClearReportCard = () => {
+    setSavedReportCard(JSON.stringify(INITIAL_REPORT_CARD));
+  }
+
   return (
     <div className='ReportCard'>
       {scoreDisplay}
+      <Button colorId={2} onClick={handleClearReportCard}>CLEAR</Button>
     </div>
   );
 }
