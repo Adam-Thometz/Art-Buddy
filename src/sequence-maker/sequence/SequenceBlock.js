@@ -17,7 +17,7 @@ const SequenceBlock = ({ id, block, borderColor }) => {
   const remove = e => {
     const id = +e.target.parentElement.id;
     dispatch(removeFromSequence(id));
-  }
+  };
 
   const play = () => {
     playOne({ id: block.id, pitch, duration });
@@ -26,19 +26,19 @@ const SequenceBlock = ({ id, block, borderColor }) => {
       dispatch(togglePlaying(id));
       clearTimeout(timer);
     }, duration * 1000);
-  }
+  };
 
   const playing = (block && block.isPlaying) ? ' playing' : '';
 
   return (
-    <div className={`SequenceBlock${playing}`} style={{borderColor}} id={id}>
+    <figure className={`SequenceBlock${playing}`} style={{borderColor}} id={id}>
       {block !== null ? (
         <Fragment>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <Button small colorId={2} onClick={remove}>REMOVE</Button>
         </Fragment>
       ) : null}
-    </div>
+    </figure>
   );
 };
 

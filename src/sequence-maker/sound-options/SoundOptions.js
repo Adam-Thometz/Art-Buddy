@@ -27,7 +27,7 @@ const SoundOptions = () => {
   const sounds = soundInfo[category]
 
   return (
-    <div className='SoundOptions'>
+    <section className='SoundOptions'>
       {!category ? null : (
         <Options width='50%'>
           {Object.keys(sounds).map(sound => (
@@ -41,7 +41,7 @@ const SoundOptions = () => {
           ))}
         </Options>
       )}
-    </div>
+    </section>
   );
 };
 

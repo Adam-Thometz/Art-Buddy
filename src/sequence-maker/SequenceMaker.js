@@ -22,13 +22,15 @@ const SequenceMaker = () => {;
   }, [dispatch]);
 
   return (
-    <div className="SequenceMaker" onLoad={setTempo}>
-      <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
+    <main className="SequenceMaker" onLoad={setTempo}>
+      <header>
+        <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
+      </header>
       <hr/>
       <SequenceControls />
       <SoundOptions />
       <Sequence />
-    </div>
+    </main>
   );
 };
 

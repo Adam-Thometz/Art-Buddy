@@ -29,7 +29,7 @@ const SequenceControls = () => {
   }
 
   return (
-    <div className='SequenceControls'>
+    <section className='SequenceControls'>
       <Dropdown
         labelText="SOUND CATEGORY"
         onClick={handleChangeCategory}
@@ -45,7 +45,7 @@ const SequenceControls = () => {
         onClick={handleSetDuration}
         options={durations}
       />
-    </div>
+    </section>
   );
 };
 
