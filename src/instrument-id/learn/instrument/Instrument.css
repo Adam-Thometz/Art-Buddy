@@ -6,12 +6,12 @@
 }
 
 .Instrument-name {
-  width: 42%;
+  width: 40%;
   font-size: 3rem;
 }
 
 .Instrument-information {
-  width: 58%;
+  width: 60%;
   border-left: 1px solid #4D4F5E;
 }
 
