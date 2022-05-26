@@ -8,11 +8,11 @@ exports[`Play component matches snapshot 1`] = `
     <p>
       Master skills in Listening Skills to unlock instruments for the Song Maker!
     </p>
-    <div
+    <section
       class="Options"
       style="width: 50%;"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -20,13 +20,13 @@ exports[`Play component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           Listening Skills Test
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -34,13 +34,13 @@ exports[`Play component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           Song Maker
-        </p>
-      </div>
-    </div>
+        </figcaption>
+      </figure>
+    </section>
   </div>
 </DocumentFragment>
 `;

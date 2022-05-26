@@ -2,14 +2,16 @@
 
 exports[`SequenceMaker component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="SequenceMaker"
   >
-    <p>
-      HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ
-    </p>
+    <header>
+      <p>
+        HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ
+      </p>
+    </header>
     <hr />
-    <div
+    <section
       class="SequenceControls"
     >
       <div
@@ -129,17 +131,17 @@ exports[`SequenceMaker component matches snapshot 1`] = `
           </p>
         </div>
       </div>
-    </div>
-    <div
+    </section>
+    <section
       class="SoundOptions"
     />
-    <div
+    <section
       class="Sequence"
     >
-      <div
+      <aside
         class="Sequence-play-options"
       >
-        <div
+        <figure
           class="Icon"
         >
           <img
@@ -147,13 +149,13 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             src="file"
             style="height: 48px; width: 48px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1rem;"
           >
             Play
-          </p>
-        </div>
-        <div
+          </figcaption>
+        </figure>
+        <figure
           class="Icon"
         >
           <img
@@ -161,55 +163,55 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             src="file"
             style="height: 48px; width: 48px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1rem;"
           >
             Play All
-          </p>
-        </div>
-      </div>
-      <div
+          </figcaption>
+        </figure>
+      </aside>
+      <section
         class="Sequence-display"
       >
-        <div
+        <figure
           class="SequenceBlock"
           id="0"
           style="border-color: #89eb0a;"
         />
-        <div
+        <figure
           class="SequenceBlock"
           id="1"
           style="border-color: #ffe81a;"
         />
-        <div
+        <figure
           class="SequenceBlock"
           id="2"
           style="border-color: #fd4d3a;"
         />
-        <div
+        <figure
           class="SequenceBlock"
           id="3"
           style="border-color: #4d4f5e;"
         />
-      </div>
-      <div
+      </section>
+      <aside
         class="Sequence-reset"
       >
-        <div
+        <figure
           class="Icon"
         >
           <img
             alt=""
             style="height: 48px; width: 48px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1rem;"
           >
             Reset Sequence
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
 </DocumentFragment>
 `;

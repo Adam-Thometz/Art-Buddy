@@ -2,7 +2,7 @@
 
 exports[`SequenceControls component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="SequenceControls"
   >
     <div
@@ -122,6 +122,6 @@ exports[`SequenceControls component matches snapshot 1`] = `
         </p>
       </div>
     </div>
-  </div>
+  </section>
 </DocumentFragment>
 `;

@@ -8,7 +8,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
     <div
       class="LearnFamilyPage-header"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -16,17 +16,17 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           THE BRASS FAMILY
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     </div>
     <div
       class="LearnFamilyPage-options"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -34,13 +34,13 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1.75rem;"
         >
           TRUMPET
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -48,13 +48,13 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1.75rem;"
         >
           FRENCH HORN
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -62,13 +62,13 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 250px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1.75rem;"
         >
           TROMBONE
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -76,12 +76,12 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1.75rem;"
         >
           TUBA
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </DocumentFragment>

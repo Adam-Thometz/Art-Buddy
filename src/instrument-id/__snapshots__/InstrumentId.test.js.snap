@@ -10,11 +10,11 @@ exports[`InstrumentId component matches snapshot 1`] = `
     >
       Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills
     </p>
-    <div
+    <section
       class="Options"
       style="width: 50%;"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -22,13 +22,13 @@ exports[`InstrumentId component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           LEARN
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -36,13 +36,13 @@ exports[`InstrumentId component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           PLAY
-        </p>
-      </div>
-    </div>
+        </figcaption>
+      </figure>
+    </section>
   </div>
 </DocumentFragment>
 `;

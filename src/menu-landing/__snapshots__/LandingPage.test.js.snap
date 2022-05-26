@@ -2,11 +2,11 @@
 
 exports[`LandingPage component matches the snapshot of the landing page displaying the games page 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Window"
     style="width: 75%;"
   >
-    <div
+    <header
       class="WindowNavbar-games"
     >
       <h1
@@ -14,11 +14,11 @@ exports[`LandingPage component matches the snapshot of the landing page displayi
       >
         WELCOME TO ART BUDDY!
       </h1>
-    </div>
-    <div
+    </header>
+    <section
       class="Welcome"
     >
-      <div
+      <article
         class="Welcome-description"
       >
         <p>
@@ -27,14 +27,14 @@ exports[`LandingPage component matches the snapshot of the landing page displayi
         <p>
           Click below to get started
         </p>
-      </div>
+      </article>
       <button
         class="Button regular"
         style="border-color: #89eb0a;"
       >
         LET'S GO!
       </button>
-    </div>
-  </div>
+    </section>
+  </main>
 </DocumentFragment>
 `;

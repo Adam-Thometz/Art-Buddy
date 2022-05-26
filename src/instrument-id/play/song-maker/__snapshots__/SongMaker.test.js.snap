@@ -241,7 +241,7 @@ exports[`SongMaker component matches snapshot 1`] = `
             </div>
           </div>
         </div>
-        <div
+        <figure
           class="Icon"
           id="1"
         >
@@ -250,13 +250,13 @@ exports[`SongMaker component matches snapshot 1`] = `
             src="file"
             style="height: 69px; width: 69px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT
-          </p>
-        </div>
-        <div
+          </figcaption>
+        </figure>
+        <figure
           class="Icon"
           id="2"
         >
@@ -265,13 +265,13 @@ exports[`SongMaker component matches snapshot 1`] = `
             src="file"
             style="height: 69px; width: 69px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT
-          </p>
-        </div>
-        <div
+          </figcaption>
+        </figure>
+        <figure
           class="Icon"
           id="3"
         >
@@ -280,12 +280,12 @@ exports[`SongMaker component matches snapshot 1`] = `
             src="file"
             style="height: 69px; width: 69px; cursor: pointer;"
           />
-          <p
+          <figcaption
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT
-          </p>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>

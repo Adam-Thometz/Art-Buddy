@@ -9,7 +9,7 @@ exports[`Choice component matches snapshot 1`] = `
       class="Choice-wrapper"
       data-testid="isCorrect"
     />
-    <div
+    <figure
       class="Icon"
     >
       <img
@@ -17,25 +17,25 @@ exports[`Choice component matches snapshot 1`] = `
         src="file"
         style="height: 250px; width: 250px; cursor: pointer;"
       />
-      <p
+      <figcaption
         style="font-size: 1.75rem;"
       >
         THEREMIN
-      </p>
-    </div>
-    <div
+      </figcaption>
+    </figure>
+    <figure
       class="Icon"
     >
       <img
         alt=""
         style="height: 30px; width: 30px; cursor: pointer;"
       />
-      <p
+      <figcaption
         style="font-size: 1rem;"
       >
         SWAP
-      </p>
-    </div>
+      </figcaption>
+    </figure>
   </div>
 </DocumentFragment>
 `;

@@ -2,7 +2,7 @@
 
 exports[`Options component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="Options"
     style="width: 100%;"
   />
@@ -11,7 +11,7 @@ exports[`Options component matches snapshot 1`] = `
 
 exports[`Options component matches snapshot of smaller window 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="Options"
     style="width: 65%;"
   />

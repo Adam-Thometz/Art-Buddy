@@ -2,7 +2,7 @@
 
 exports[`WindowNavbar component matches the snapshot of the WindowNavbar 1`] = `
 <DocumentFragment>
-  <div
+  <header
     class="WindowNavbar-main"
   >
     <span
@@ -15,6 +15,6 @@ exports[`WindowNavbar component matches the snapshot of the WindowNavbar 1`] = `
     >
       TOOLS
     </span>
-  </div>
+  </header>
 </DocumentFragment>
 `;

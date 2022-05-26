@@ -2,7 +2,7 @@
 
 exports[`SequenceBlock component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <figure
     class="SequenceBlock"
   />
 </DocumentFragment>

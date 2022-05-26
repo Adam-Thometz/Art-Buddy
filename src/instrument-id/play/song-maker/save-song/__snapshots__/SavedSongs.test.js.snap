@@ -8,7 +8,7 @@ exports[`SavedSongs component matches snapshot 1`] = `
     <div
       class="SavedSongs-options"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -16,13 +16,13 @@ exports[`SavedSongs component matches snapshot 1`] = `
           src="file"
           style="height: 49px; width: 49px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1rem;"
         >
           Play
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -30,12 +30,12 @@ exports[`SavedSongs component matches snapshot 1`] = `
           src="file"
           style="height: 49px; width: 49px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 1rem;"
         >
           Delete
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     </div>
     <div
       class="SavedSongs-song-list"

@@ -2,11 +2,11 @@
 
 exports[`Window component matches the snapshot of the window 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Window"
     style="width: 90%;"
   >
-    <div
+    <header
       class="WindowNavbar-main"
     >
       <span
@@ -19,7 +19,7 @@ exports[`Window component matches the snapshot of the window 1`] = `
       >
         TOOLS
       </span>
-    </div>
-  </div>
+    </header>
+  </main>
 </DocumentFragment>
 `;

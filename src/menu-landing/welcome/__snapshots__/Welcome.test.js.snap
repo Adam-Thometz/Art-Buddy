@@ -2,10 +2,10 @@
 
 exports[`Welcome component matches the snapshot of the welcome page 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="Welcome"
   >
-    <div
+    <article
       class="Welcome-description"
     >
       <p>
@@ -14,13 +14,13 @@ exports[`Welcome component matches the snapshot of the welcome page 1`] = `
       <p>
         Click below to get started
       </p>
-    </div>
+    </article>
     <button
       class="Button regular"
       style="border-color: #89eb0a;"
     >
       LET'S GO!
     </button>
-  </div>
+  </section>
 </DocumentFragment>
 `;

@@ -8,7 +8,7 @@ exports[`Instrument component matches snapshot 1`] = `
     <div
       class="Instrument-name"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -16,12 +16,12 @@ exports[`Instrument component matches snapshot 1`] = `
           src="file"
           style="height: 250px; width: 250px;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           TRUMPET
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     </div>
     <div
       class="Instrument-information"

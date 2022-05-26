@@ -24,7 +24,7 @@ exports[`SaveSong component matches snapshot 1`] = `
       <div
         class="Input-keyboard"
       >
-        <div
+        <figure
           class="Icon"
         >
           <img
@@ -32,12 +32,12 @@ exports[`SaveSong component matches snapshot 1`] = `
             src="file"
             style="height: 40px; width: 40px;"
           />
-          <p
+          <figcaption
             style="font-size: 1rem;"
           >
             OPEN KEYBOARD
-          </p>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <button

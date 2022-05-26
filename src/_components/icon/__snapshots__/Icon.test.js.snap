@@ -2,16 +2,16 @@
 
 exports[`Icon component matches the snapshot of the icon 1`] = `
 <DocumentFragment>
-  <div
+  <figure
     class="Icon"
   >
     <img
       alt=""
       style="height: 250px; width: 250px;"
     />
-    <p
+    <figcaption
       style="font-size: 1.75rem;"
     />
-  </div>
+  </figure>
 </DocumentFragment>
 `;

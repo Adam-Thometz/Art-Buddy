@@ -2,11 +2,11 @@
 
 exports[`Art Buddy Routes matches snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Window"
     style="width: 75%;"
   >
-    <div
+    <header
       class="WindowNavbar-games"
     >
       <h1
@@ -14,11 +14,11 @@ exports[`Art Buddy Routes matches snapshot 1`] = `
       >
         WELCOME TO ART BUDDY!
       </h1>
-    </div>
-    <div
+    </header>
+    <section
       class="Welcome"
     >
-      <div
+      <article
         class="Welcome-description"
       >
         <p>
@@ -27,14 +27,14 @@ exports[`Art Buddy Routes matches snapshot 1`] = `
         <p>
           Click below to get started
         </p>
-      </div>
+      </article>
       <button
         class="Button regular"
         style="border-color: #89eb0a;"
       >
         LET'S GO!
       </button>
-    </div>
-  </div>
+    </section>
+  </main>
 </DocumentFragment>
 `;

@@ -15,7 +15,7 @@ exports[`Learn component matches snapshot 1`] = `
     <div
       class="Learn-options"
     >
-      <div
+      <figure
         class="Icon"
       >
         <img
@@ -23,13 +23,13 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           BRASS
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -37,13 +37,13 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           ELECTRONIC
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -51,13 +51,13 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           PERCUSSION
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -65,13 +65,13 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           STRINGS
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -79,13 +79,13 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           WOODWIND
-        </p>
-      </div>
-      <div
+        </figcaption>
+      </figure>
+      <figure
         class="Icon"
       >
         <img
@@ -93,12 +93,12 @@ exports[`Learn component matches snapshot 1`] = `
           src="file"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
-        <p
+        <figcaption
           style="font-size: 2.5rem;"
         >
           VOICE
-        </p>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </DocumentFragment>
