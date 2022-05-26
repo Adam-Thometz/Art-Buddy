@@ -6,9 +6,9 @@ import './Navbar.css';
 const Navbar = () => {
   const navigate = useNavigate()
   return (
-    <div className="Navbar">
+    <nav className="Navbar">
       <span className="Navbar-header" onClick={() => navigate('/')}>ARTBUDDY</span>
-    </div>
+    </nav>
   );
 };
 
