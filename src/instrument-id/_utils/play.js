@@ -1,8 +1,8 @@
 import { now, Time } from 'tone';
 import sample from '../../_utils/sample';
 
-import * as melodies from '../play/song-maker/playback/melodies';
-import * as rhythms from '../play/song-maker/playback/rhythms';
+import * as melodies from '../play/song-maker/_melodies-rhythms/melodies';
+import * as rhythms from '../play/song-maker/_melodies-rhythms/rhythms';
 
 export function playScale(instrumentId) {
   const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
@@ -49,7 +49,7 @@ export function play({ melodyId, buffers, isRhythm }) {
       const instrumentToPlay = isRhythm ? instrument[note] : instrument;
       const noteToPlay = isRhythm ? 'C3' : note;
       instrumentToPlay.triggerAttackRelease(noteToPlay, duration, start + seconds);
-    }
+    };
     seconds += Time(duration).toSeconds();
-  }
-}
+  };
+};
