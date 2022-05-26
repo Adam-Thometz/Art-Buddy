@@ -15,10 +15,10 @@ const ListeningSkills = () => {
   const navigate = useNavigate();
 
   const popupTrigger = (
-    <div className="ListeningSkills-report-card">
+    <>
       <img src={reportCardIcon} alt='' />
       <p>Report Card</p>
-    </div>
+    </>
   );
 
   const levels = [1,2].map(level => (

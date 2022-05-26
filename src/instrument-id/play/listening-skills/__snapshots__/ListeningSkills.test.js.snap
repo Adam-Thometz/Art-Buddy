@@ -41,17 +41,13 @@ exports[`ListeningSkills component matches snapshot 1`] = `
         <div
           class="ListeningSkills-report-card"
         >
-          <div
-            class="ListeningSkills-report-card"
-          >
-            <img
-              alt=""
-              src="file"
-            />
-            <p>
-              Report Card
-            </p>
-          </div>
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
         </div>
       </div>
       <div
@@ -66,17 +62,13 @@ exports[`ListeningSkills component matches snapshot 1`] = `
         <div
           class="ListeningSkills-report-card"
         >
-          <div
-            class="ListeningSkills-report-card"
-          >
-            <img
-              alt=""
-              src="file"
-            />
-            <p>
-              Report Card
-            </p>
-          </div>
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
         </div>
       </div>
     </div>
