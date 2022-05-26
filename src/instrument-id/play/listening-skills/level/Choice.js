@@ -13,7 +13,7 @@ import useReportCard from "../../../../_hooks/useReportCard";
 const Choice = ({ id, level, choice }) => {
   const answer = useSelector(state => state.instrumentId.answer);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [savedReportCard, setSavedReportCard] = useReportCard(`instrument-id-level-${level}-report-card`);
+  const [savedReportCard, setSavedReportCard] = useReportCard(level);
   const dispatch = useDispatch();
 
   const checkAnswer = () => {

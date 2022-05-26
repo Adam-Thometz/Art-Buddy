@@ -1,8 +1,5 @@
 import useLocalStorage from './useLocalStorage';
 import { act, renderHook } from '@testing-library/react-hooks';
-import { cleanup } from '@testing-library/react'
-
-afterEach(cleanup)
 
 describe('useLocalStorage hook', () => {
   it('returns null if no default value is set', () => {

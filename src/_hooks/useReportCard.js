@@ -9,7 +9,8 @@ export const INITIAL_REPORT_CARD = {
   voice: []
 }
 
-const useReportCard = (key) => {
+const useReportCard = (level) => {
+  const key = `instrument-id-level-${level}-report-card`;
   const initialValue = localStorage.getItem(key) || JSON.stringify(INITIAL_REPORT_CARD);
   const [state, setState] = useState(initialValue);
 
