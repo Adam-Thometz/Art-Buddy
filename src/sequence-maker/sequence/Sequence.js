@@ -58,7 +58,7 @@ const Sequence = () => {
       </aside>
       <section className="Sequence-display">
         {sequence.map((block, i) => (
-          <SequenceBlock id={i} block={block} borderColor={colors[i%4]} />
+          <SequenceBlock key={i} id={i} block={block} borderColor={colors[i%4]} />
         ))}
       </section>
       <aside className="Sequence-reset">
