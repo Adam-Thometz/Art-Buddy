@@ -2,27 +2,26 @@
 
 exports[`SaveSong component matches snapshot 1`] = `
 <DocumentFragment>
-  <section
+  <form
     class="SaveSong"
   >
     <div
-      class="Input"
+      class="SaveSong-control"
     >
       <label
-        class="Input-label"
-        for="title"
+        class="SaveSong-label"
       >
         Song Title
       </label>
       <input
-        class="Input-input"
+        class="SaveSong-input"
         id="title"
         name="title"
         type="text"
         value=""
       />
       <div
-        class="Input-keyboard"
+        class="Keyboard"
       >
         <figure
           class="Icon"
@@ -30,13 +29,11 @@ exports[`SaveSong component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
-            style="height: 40px; width: 40px;"
+            style="height: 43px; width: 65px;"
           />
           <figcaption
             style="font-size: 1rem;"
-          >
-            OPEN KEYBOARD
-          </figcaption>
+          />
         </figure>
       </div>
     </div>
@@ -51,6 +48,6 @@ exports[`SaveSong component matches snapshot 1`] = `
     >
       Song Saved!
     </span>
-  </section>
+  </form>
 </DocumentFragment>
 `;
