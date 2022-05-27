@@ -17,6 +17,7 @@ const LearnFamilyPage = () => {
 
   const options = instruments.map(instrument => (
     <Icon
+      key={instrument.name}
       icon={instrument.icon}
       size='200px'
       width={instrument.name === 'TROMBONE' ? '250px' : null}

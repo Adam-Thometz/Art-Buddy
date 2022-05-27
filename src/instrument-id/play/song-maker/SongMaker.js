@@ -67,6 +67,7 @@ const SongMaker = () => {
     if (!instrument) {
       return (
         <Icon
+          key={i}
           icon={addInstrumentIcon}
           text='ADD INSTRUMENT'
           size='69px'
@@ -77,14 +78,17 @@ const SongMaker = () => {
     } else {
       const instrumentDropdown = (
         <Dropdown
-        id={i}
-        labelText='INSTRUMENT'
-        options={instrumentOptions}
-        onClick={handleSelectInstrument}
+          key={`instrument${i}`}
+          id={i}
+          labelText='INSTRUMENT'
+          options={instrumentOptions}
+          onClick={handleSelectInstrument}
         />
       );
-      const melodyDropdown = (!instrument || !instrument.instrumentId) ? null : (
+      const melodyDropdown = (
+        !instrument || !instrument.instrumentId) ? null : (
         <Dropdown
+          key={`melody${i}`}
           id={i}
           labelText={instrument.isRhythm ? 'RHYTHM' : 'MELODY'}
           options={instrument.isRhythm ? rhythmOptions : melodyOptions}

@@ -12,6 +12,7 @@ const Learn = () => {
 
   const options = learnMenuOptions.map(option => (
     <Icon
+      key={option.name}
       onClick={() => navigate(option.url)}
       icon={option.icon}
       text={option.name}

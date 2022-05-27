@@ -45,7 +45,7 @@ const Instrument = () => {
         <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>
         <ul>
           {instrumentInfo.madeFrom.map(material => (
-            <li>{material}</li>
+            <li key={material}>{material}</li>
           ))}
         </ul>
         <h2>THE {instrumentInfo.name} IS PLAYED BY...</h2>

@@ -22,7 +22,7 @@ const ListeningSkills = () => {
   );
 
   const levels = [1,2].map(level => (
-    <div className="ListeningSkills-level">
+    <div key={level} className="ListeningSkills-level">
       <Button
         small
         colorId={level-1}

@@ -14,7 +14,7 @@ const ReportCard = ({ level }) => {
     const score = savedReportCard[family].length;
     const maxScore = 4;
     return (
-      <section className='ReportCard-score-display'>
+      <section key={family} className='ReportCard-score-display'>
         <span>{family.toUpperCase()} FAMILY</span>
         <div className='ReportCard-visual-score'>
           <img src={score >= 1 ? fullFirst : emptyFirst} alt='' />
