@@ -10,7 +10,8 @@ const Dropdown = ({ id = null, labelText, onClick, options, borderColor }) => {
     setDisplayLabelText(e.target.textContent);
   };
 
-  const downArrow = <img src={downArrowIcon} alt='' />
+  const downArrow = <img src={downArrowIcon} alt='' />;
+  
   return (
     <div className="Dropdown">
       <span className='Dropdown-label' style={borderColor}>{displayLabelText} {downArrow}</span>
