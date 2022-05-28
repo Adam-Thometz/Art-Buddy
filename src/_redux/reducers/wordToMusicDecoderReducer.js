@@ -1,32 +1,44 @@
-import { addWord, changeScale, createWord, fillLetter, playMelody, playNote, clearGame } from "../actions/wordToMusicActions";
+import { changeScale, createWords, fillLetter, clearGame } from "../actions/wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import play from "../../music-decoder/_utils/synth";
+import hasValidWords from "../helpers/hasValidWords";
 import searchLetter from "../helpers/searchLetter";
 
 export const INITIAL_STATE = {
-  wordDisplay: [
-    {
-      scale: 0,
-      word: []
-    }
-  ],
+  wordDisplay: [[]],
+  scale: 0,
+  sound: null,
+  formError: null
 };
 
 const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
-    .addCase(addWord, (state) => {
-      state.wordDisplay.push({ scale: 0, word: [] })
-    })
-    .addCase(createWord, (state, action) => {
-      const { input, id } = action.payload;
-      const newWord = input.toUpperCase().split('').map(letter => ({
-        letter,
-        note: null
-      }));
-      state.wordDisplay[id].word = newWord.length ?
-        newWord :
-        [];
+    .addCase(createWords, (state, action) => {
+      const words = action.payload;
+      if (words.length === 0) {
+        state.wordDisplay = INITIAL_STATE.wordDisplay;
+        return;
+      };
+      const check = hasValidWords(words);
+      if (!check.success) {
+        state.formError = check.error;
+        return;
+      };
+
+      const newWords = words.toUpperCase().split(' ');
+      const newWordDisplay = [];
+      for (let i = 0; i < newWords.length; i++) {
+        const wordToTurn = newWords[i].split('');
+        const result = wordToTurn.map(letter => ({
+          letter,
+          note: null
+        }));
+        newWordDisplay.push(result);
+      };
+      state.wordDisplay = newWordDisplay.length ?
+        newWordDisplay :
+        INITIAL_STATE.wordDisplay;
+      state.formError = null;
     })
     .addCase(fillLetter, (state, action) => {
       const { letter, note } = action.payload;
@@ -35,32 +47,20 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
 
       const wordIdx = letterLocation[0];
       const letterIdx = letterLocation[1];
-      state.wordDisplay[wordIdx].word[letterIdx].note = note;
+      state.wordDisplay[wordIdx][letterIdx].note = note;
       if (process.env.NODE_ENV !== 'test') {
-        play(note);
-      };
-    })
-    .addCase(playNote, (state, action) => {
-      const { note, id } = action.payload;
-      const scale = state.wordDisplay[id].scale;
-      if (process.env.NODE_ENV !== 'test') play(note, scale);
-    })
-    .addCase(playMelody, (state, action) => {
-      const word = action.payload.word.map(char => char.note)
-      const scale = action.payload.scale;
-      if (process.env.NODE_ENV !== 'test') play(word, scale);
+        const sound = window.wordToMusicSound;
+        sound.triggerAttackRelease(`${note}3`, '4n');
+      }
     })
     .addCase(changeScale, (state, action) => {
-      const { scaleId, wordId } = action.payload;
-      state.wordDisplay[wordId].scale = scaleId;
+      state.scale = action.payload;
     })
     .addCase(clearGame, (state) => {
-      state.wordDisplay = [
-        {
-          scale: 0,
-          word: []
-        }
-      ]
+      state.wordDisplay = [[]];
+      state.scale = 0;
+      state.sound = null;
+      state.formError = null;
     });
 })
 

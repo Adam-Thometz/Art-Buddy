@@ -1,31 +1,35 @@
-import React from "react";
+// import React from "react";
+import useFormFields from "../../_hooks/useFormFields";
 
-import { useSelector, useDispatch } from "react-redux";
-import { addWord } from "../../_redux/actions/wordToMusicActions";
+import { useDispatch, useSelector } from "react-redux";
+import { createWords } from "../../_redux/actions/wordToMusicActions";
 
 import './WordForm.css';
 
-import WordInput from "./WordInput";
-import Button from "../../_components/button/Button";
-
 const WordForm = () => {
-  const wordDisplay = useSelector(state => state.wordToMusic.wordDisplay);
+  const error = useSelector(state => state.wordToMusic.formError);
+  const [input, handleChange] = useFormFields({ words: '' });
   const dispatch = useDispatch();
 
-  const add = () => {
-    dispatch(addWord());
-  }
+  const updateWord = e => {
+    const { name, value } = e.target;
+    handleChange({ name, value });
+    dispatch(createWords(value));
+  };
 
   return (
-    <div className="WordForm">
-      <div className="WordForm-form-group">
-        <label className="WordForm-label" htmlFor="word">TYPE WORDS HERE</label>
-        {wordDisplay.map((word, id) => (
-          <WordInput word={word} id={id} />
-        ))}
-        <Button small colorId={0} onClick={add}>ADD WORD</Button>
-      </div>
-    </div>
+    <form className="WordForm">
+      <label className="WordForm-label" htmlFor="words">WORDS</label>
+      <span className="WordForm-error">{error}</span>
+      <input
+        className="WordForm-input"
+        type="text"
+        id="words"
+        name="words"
+        value={input.words}
+        onChange={updateWord}
+      />
+    </form>
   );
 };
 

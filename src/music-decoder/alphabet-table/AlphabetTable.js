@@ -5,9 +5,8 @@ import { fillLetter } from "../../_redux/actions/wordToMusicActions";
 
 import './AlphabetTable.css';
 
+import { LETTERS, NOTES } from '../_utils/musicAlphabetData';
 import AlphabetCell from "./AlphabetCell";
-
-import { rows, notes } from '../_utils/musicAlphabetData';
 
 const AlphabetTable = () => {
   const dispatch = useDispatch();
@@ -16,20 +15,15 @@ const AlphabetTable = () => {
     const letter = e.target.innerText;
     const note = e.target.classList[1];
     dispatch(fillLetter({letter, note}));
+    
   }
   
   return (
-    <table className="AlphabetTable">
-      <tbody onClick={colorLetter}>
-        {rows.map(row => (
-          <tr>
-            {row.map((char, i) => (
-              <AlphabetCell letter={char} note={notes[i]} />
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <section className="AlphabetTable" onClick={colorLetter}>
+      {LETTERS.map((char, i) => (
+        <AlphabetCell letter={char} note={NOTES[i%NOTES.length]} />
+      ))}
+    </section>
   );
 };
 

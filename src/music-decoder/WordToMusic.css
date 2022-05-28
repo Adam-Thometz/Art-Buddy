@@ -1,3 +1,7 @@
+.WordToMusic {
+  color: black;
+}
+
 .WordToMusic-form-chart-wrapper {
   display: flex;
   justify-content: space-evenly;

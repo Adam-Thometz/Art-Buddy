@@ -8,31 +8,35 @@ import './WordToMusic.css';
 import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 import WordList from './word/WordList';
-import { Synth } from 'tone';
+import DecoderControls from './decoder-controls/DecoderControls';
+
+import createSound from './_utils/createSound';
 
 const WordToMusic = () => {
   const dispatch = useDispatch();
 
-  const loadSynth = () => {
-    const synth = new Synth().toDestination();
-    window.synth = synth;
+  const onLoad = () => {
+    if (process.env.NODE_ENV !== 'test') createSound();
   }
 
   useEffect(() => {
     return () => {
       dispatch(clearGame());
-      delete window.synth;
+      delete window.wordToMusicSound;
     }
   }, [dispatch]);
 
   return (
-    <div className="WordToMusic" onLoad={loadSynth}>
-      <div className='WordToMusic-form-chart-wrapper'>
-        <AlphabetTable />
-        <WordForm />
-      </div>
+    <main className="WordToMusic" onLoad={onLoad}>
+      <header>
+        <p>HULLO IM WORD TO MUSIC DECODER. TYPE SOME WORDS TO MAKE MUSIC PLZ</p>
+      </header>
+      <hr/>
+      <WordForm />
+      <DecoderControls />
+      <AlphabetTable />
       <WordList />
-    </div>
+    </main>
   );
 };
 

@@ -1,0 +1,12 @@
+.DecoderControls {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1% auto;
+}
+
+.DecoderControls-dropdowns {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}

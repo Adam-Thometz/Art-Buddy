@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordForm component matches snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="WordForm"
+  >
+    <label
+      class="WordForm-label"
+      for="words"
+    >
+      WORDS
+    </label>
+    <span
+      class="WordForm-error"
+    />
+    <input
+      class="WordForm-input"
+      id="words"
+      name="words"
+      type="text"
+      value=""
+    />
+  </form>
+</DocumentFragment>
+`;

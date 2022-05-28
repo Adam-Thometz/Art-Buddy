@@ -1,7 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const addWord = createAction('addWord');
-export const createWord = createAction('createWord');
+export const createWords = createAction('createWords');
 export const fillLetter = createAction('fillLetter');
 export const playNote = createAction('playNote');
 export const playMelody = createAction('playMelody');

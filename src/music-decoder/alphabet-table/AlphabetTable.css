@@ -1,6 +1,6 @@
 .AlphabetTable {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  width: 60%;
-  padding: 0 50px;
 }
