@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import HelpIcon from "./corner-icons/help/HelpIcon";
 import ReportCardIcon from "./corner-icons/report-card/ReportCardIcon";
 import SavedSongsIcon from "./corner-icons/saved-songs/SavedSongsIcon";
+import ToggleUpperCase from "./corner-icons/toggle-uppercase/ToggleUpperCase";
 
 import Window from "../_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
@@ -45,7 +46,7 @@ const ArtBuddyRoutes = () => {
 
       {/* Word To Music Decoder */}
       <Route path={urls.wordToMusicUrl} element={
-        <Window page='Word-To-Music Decoder'>
+        <Window cornerIcon={<ToggleUpperCase />} page='Word-To-Music Decoder'>
           <WordToMusic />
         </Window>} />
 
