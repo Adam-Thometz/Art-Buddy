@@ -20,8 +20,8 @@ const Instrument = () => {
   const playInstrument = () => {
     const { sound, id } = instrumentInfo;
     isRhythmicInstrument(instrumentInfo) ?
-      playBeat(id, sound) :
-      playScale(id);
+      playBeat({id, sound}) :
+      playScale({id});
   }
 
   useEffect(() => {

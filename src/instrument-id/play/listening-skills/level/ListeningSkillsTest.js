@@ -47,7 +47,9 @@ const ListeningSkillsTest = () => {
   
   const playSound = () => {
     const { id, sound } = answer;
-    isRhythmicInstrument(answer) ? playBeat(id, sound) : playScale(id);
+    isRhythmicInstrument(answer) ? 
+      playBeat({id, sound, isTest: true}) :
+      playScale({id, isTest: true});
   };
 
   const dropdown = (id) => (<Dropdown
