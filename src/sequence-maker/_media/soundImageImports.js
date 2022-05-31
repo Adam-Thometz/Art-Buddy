@@ -34,10 +34,10 @@ const tweet = 'https://download1490.mediafire.com/vrtj3xigrqwg/mpf34upqr2yk2zl/b
 
 const sounds = {
   clappingContinuous,
-  clappingOnce,
   stompingContinuous,
-  stompingOnce,
   yeahContinuous,
+  clappingOnce,
+  stompingOnce,
   yeahOnce,
   bark,
   meow,
