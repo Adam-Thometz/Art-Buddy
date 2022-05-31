@@ -1,0 +1,50 @@
+.Toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 65px;
+}
+
+.Toggle-switch {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: .75rem;
+  color: white;
+  height: 80px;
+  border-radius: 100px;
+  width: 80%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.Toggle-button {
+  position: absolute;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.Toggle-label {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.on {
+  background-color: #17255A;
+}
+
+.on .Toggle-button {
+  right: 15px;
+}
+
+.off {
+  background-color: #D4D2D5;
+}
+
+.off .Toggle-button {
+  left: 15px;
+}
