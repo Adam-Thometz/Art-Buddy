@@ -5,7 +5,6 @@ import * as melodies from '../play/song-maker/_melodies-rhythms/melodies';
 import * as rhythms from '../play/song-maker/_melodies-rhythms/rhythms';
 
 export function playScale({id, isTest = false}) {
-  debugger
   const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
   const bufferId = `${id}Buffer`
   if (!window[bufferId]) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
