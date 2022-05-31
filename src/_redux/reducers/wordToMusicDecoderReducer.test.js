@@ -1,5 +1,5 @@
 import wordToMusicDecoderReducer, { INITIAL_STATE } from './wordToMusicDecoderReducer';
-import { createWords, fillLetter, changeScale, clearGame } from '../actions/wordToMusicActions';
+import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase } from '../actions/wordToMusicActions';
 
 import {
   testWordDisplayOneWord,
@@ -41,6 +41,13 @@ describe('Word To Music reducer', () => {
   it('should change the scale', () => {
     const result = wordToMusicDecoderReducer(testState, changeScale(5))
     expect(result.scale).toBe(5);
+  });
+
+  it('should toggle between uppercase and lowercase', () => {
+    const result = wordToMusicDecoderReducer(undefined, toggleUpperCase());
+    expect(result.isUpperCase).toBe(false);
+    const result2 = wordToMusicDecoderReducer(result, toggleUpperCase());
+    expect(result2.isUpperCase).toBe(true);
   })
 
   it('should handle resetting the game', () => {
