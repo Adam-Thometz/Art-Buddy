@@ -31,10 +31,10 @@
 .WordForm-input {
   width: 95%;
   margin: 1% auto;
-  padding: 5px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  font-size: larger;
+  font-size: 2.5rem;
   box-shadow: 0px 4px 4px 2px #00000040 inset;
   height: 4vh;
 }
