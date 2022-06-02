@@ -26,15 +26,15 @@ const Instrument = () => {
 
   useEffect(() => {
     return () => removeBuffers();
-  })
+  }, []);
 
   const openVideo = () => {
     window.open(instrumentInfo.videoUrl);
-  }
+  };
 
   const handleCreateBuffers = () => {
     createBuffers(instrumentInfo.id);
-  }
+  };
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>

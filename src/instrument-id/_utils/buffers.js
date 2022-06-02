@@ -35,7 +35,7 @@ export function getBuffers(instrumentId) {
   };
 };
 
-export function removeBuffers() { 
+export function removeBuffers() {
   const bufferKeys = Object.keys(window).filter(key => key.includes('Buffer'));
   for (let key of bufferKeys) {
     delete window[key];

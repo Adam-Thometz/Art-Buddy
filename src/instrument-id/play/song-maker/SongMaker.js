@@ -53,7 +53,7 @@ const SongMaker = () => {
 
   useEffect(() => {
     return () => removeBuffers();
-  })
+  }, []);
 
   const savePopup = (
     <Popup
