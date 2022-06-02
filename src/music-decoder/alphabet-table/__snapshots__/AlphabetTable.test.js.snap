@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlphabetTable component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="AlphabetTable"
+  >
+    <div
+      class="AlphabetCell A"
+    >
+      A
+    </div>
+    <div
+      class="AlphabetCell B"
+    >
+      B
+    </div>
+    <div
+      class="AlphabetCell C"
+    >
+      C
+    </div>
+    <div
+      class="AlphabetCell D"
+    >
+      D
+    </div>
+    <div
+      class="AlphabetCell E"
+    >
+      E
+    </div>
+    <div
+      class="AlphabetCell F"
+    >
+      F
+    </div>
+    <div
+      class="AlphabetCell G"
+    >
+      G
+    </div>
+    <div
+      class="AlphabetCell A"
+    >
+      H
+    </div>
+    <div
+      class="AlphabetCell B"
+    >
+      I
+    </div>
+    <div
+      class="AlphabetCell C"
+    >
+      J
+    </div>
+    <div
+      class="AlphabetCell D"
+    >
+      K
+    </div>
+    <div
+      class="AlphabetCell E"
+    >
+      L
+    </div>
+    <div
+      class="AlphabetCell F"
+    >
+      M
+    </div>
+    <div
+      class="AlphabetCell G"
+    >
+      N
+    </div>
+    <div
+      class="AlphabetCell A"
+    >
+      O
+    </div>
+    <div
+      class="AlphabetCell B"
+    >
+      P
+    </div>
+    <div
+      class="AlphabetCell C"
+    >
+      Q
+    </div>
+    <div
+      class="AlphabetCell D"
+    >
+      R
+    </div>
+    <div
+      class="AlphabetCell E"
+    >
+      S
+    </div>
+    <div
+      class="AlphabetCell F"
+    >
+      T
+    </div>
+    <div
+      class="AlphabetCell G"
+    >
+      U
+    </div>
+    <div
+      class="AlphabetCell A"
+    >
+      V
+    </div>
+    <div
+      class="AlphabetCell B"
+    >
+      W
+    </div>
+    <div
+      class="AlphabetCell C"
+    >
+      X
+    </div>
+    <div
+      class="AlphabetCell D"
+    >
+      Y
+    </div>
+    <div
+      class="AlphabetCell E"
+    >
+      Z
+    </div>
+  </section>
+</DocumentFragment>
+`;
