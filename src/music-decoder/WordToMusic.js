@@ -7,7 +7,6 @@ import './WordToMusic.css';
 
 import WordForm from './word-form/WordForm';
 import AlphabetTable from './alphabet-table/AlphabetTable';
-// import WordList from './word/WordList';
 import DecoderControls from './decoder-controls/DecoderControls';
 
 import createSound from './_utils/createSound';
@@ -35,7 +34,6 @@ const WordToMusic = () => {
       <WordForm />
       <DecoderControls />
       <AlphabetTable />
-      {/* <WordList /> */}
     </main>
   );
 };
