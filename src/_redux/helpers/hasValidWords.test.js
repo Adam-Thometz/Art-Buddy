@@ -11,18 +11,23 @@ describe('hasValidWords function', () => {
     expect(result).toEqual({ success: true });
   });
 
+  it('should return false when given an input of over 20 characters', () => {
+    const result = hasValidWords('this submarine has sharks');
+    expect(result).toEqual({ success: false, error: 'Input can only have 20 characters' });
+  })
+
   it('should return false when given a word with non-alphabetic characters', () => {
     const result = hasValidWords('he110');
-    expect(result).toEqual({ success: false, error: 'Only letters are allowed!' });
+    expect(result).toEqual({ success: false, error: 'Only letters are allowed' });
   });
   
   it('should return false when given more than 4 valid words', () => {
-    const result = hasValidWords('hello will you decode me pretty please');
-    expect(result).toEqual({ success: false, error: 'Only four words at a time!' });
+    const result = hasValidWords('i am a weird cup');
+    expect(result).toEqual({ success: false, error: 'Only four words at a time' });
   });
   
   it('should return false if one of the words is over 12 characters', () => {
-    const result = hasValidWords('supercalifragilisticexpialidocious');
-    expect(result).toEqual({ success: false, error: 'Words can only have 12 characters at a time!' });
+    const result = hasValidWords('uncopyrightable');
+    expect(result).toEqual({ success: false, error: 'Words can only have 12 characters at a time' });
   });
 });

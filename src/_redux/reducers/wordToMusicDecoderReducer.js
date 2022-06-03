@@ -5,7 +5,8 @@ import hasValidWords from "../helpers/hasValidWords";
 import searchLetter from "../helpers/searchLetter";
 
 export const INITIAL_STATE = {
-  wordDisplay: [[]],
+  words: [],
+  filledLetters: [],
   scale: 0,
   sound: null,
   isUpperCase: true,
@@ -17,7 +18,7 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(createWords, (state, action) => {
       const words = action.payload;
       if (words.length === 0) {
-        state.wordDisplay = INITIAL_STATE.wordDisplay;
+        state.words = INITIAL_STATE.words;
         return;
       };
       const check = hasValidWords(words);
@@ -26,42 +27,32 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
         return;
       };
 
-      const newWords = words.toUpperCase().split(' ');
-      const newWordDisplay = [];
+      const newWords = words.split(' ');
+      const result = [];
       for (let i = 0; i < newWords.length; i++) {
-        const wordToTurn = newWords[i].split('');
-        const result = wordToTurn.map(letter => ({
-          letter,
-          note: null
-        }));
-        newWordDisplay.push(result);
+        if (newWords[i].length > 0) result.push(newWords[i]);
       };
-      state.wordDisplay = newWordDisplay.length ?
-        newWordDisplay :
-        INITIAL_STATE.wordDisplay;
+      state.words = result.length ?
+        result :
+        INITIAL_STATE.words;
       state.formError = null;
     })
     .addCase(fillLetter, (state, action) => {
-      const { letter, note } = action.payload;
-      const letterLocation = searchLetter(state.wordDisplay, letter);
-      if (!letterLocation.length) return;
+      const letter = action.payload;
+      const hasLetter = searchLetter(state.words, letter);
+      if (!hasLetter) return;
 
-      const wordIdx = letterLocation[0];
-      const letterIdx = letterLocation[1];
-      state.wordDisplay[wordIdx][letterIdx].note = note;
-      if (process.env.NODE_ENV !== 'test') {
-        const sound = window.wordToMusicSound;
-        sound.triggerAttackRelease(`${note}3`, '4n');
-      }
+      state.filledLetters.push(letter);
     })
     .addCase(changeScale, (state, action) => {
       state.scale = action.payload;
     })
     .addCase(toggleUpperCase, (state) => {
-      state.isUpperCase = !state.isUpperCase
+      state.isUpperCase = !state.isUpperCase;
     })
     .addCase(clearGame, (state) => {
-      state.wordDisplay = [[]];
+      state.words = [];
+      state.filledLetters = [];
       state.scale = 0;
       state.sound = null;
       state.isUpperCase = true;

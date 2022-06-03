@@ -12,11 +12,13 @@ import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';
 import play from '../_utils/play';
 import createSound from '../_utils/createSound';
+import convertLettersToNotes from '../_utils/convertLettersToNotes';
 
 const DecoderControls = () => {
-  const wordDisplay = useSelector(state => state.wordToMusic.wordDisplay);
+  const words = useSelector(state => state.wordToMusic.words);
   const scale = useSelector(state => state.wordToMusic.scale);
   const sound = useSelector(state => state.wordToMusic.sound);
+  const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
   const dispatch = useDispatch();
   
   const handleChangeScale = e => {
@@ -26,10 +28,8 @@ const DecoderControls = () => {
   };
 
   const handlePlayMelody = () => {
-    const wordsToPlay = wordDisplay.map(word => {
-      return word.map(char => char.note);
-    });
-    for (let word of wordsToPlay) play(word, scale);
+    const notesToPlay = convertLettersToNotes(words, filledLetters);
+    play(notesToPlay, scale);
   };
   
   return (

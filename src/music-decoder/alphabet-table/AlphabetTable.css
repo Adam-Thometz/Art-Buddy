@@ -4,3 +4,42 @@
   grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
 }
+
+.AlphabetTable-cell {
+  font-size: 3rem;
+  text-align: center;
+  padding: 5px 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.C {
+  background-color: red;
+  color: white;
+}
+
+.D {
+  background-color: rgb(238, 169, 41);
+}
+
+.E {
+  background-color: yellow;
+}
+
+.F {
+  background-color: green;
+}
+
+.G {
+  background-color: rgb(99, 196, 228);
+}
+
+.A {
+  background-color: rgb(0, 0, 172);
+  color: white;
+}
+
+.B {
+  background-color: purple;
+  color: white;
+}

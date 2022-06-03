@@ -1,58 +1,8 @@
-const testWordDisplayOneWord = [
-  [
-    {
-      letter: 'H',
-      note: null
-    },
-    {
-      letter: 'I',
-      note: null
-    }
-  ]
-];
-
-const testWordDisplayTwoWords = [
-  [
-    {
-      letter: 'H',
-      note: null
-    },
-    {
-      letter: 'I',
-      note: null
-    }
-  ],
-  [
-    {
-      letter: 'H',
-      note: null
-    },
-    {
-      letter: 'E',
-      note: null
-    },
-    {
-      letter: 'L',
-      note: null
-    },
-    {
-      letter: 'L',
-      note: null
-    },
-    {
-      letter: 'O',
-      note: null
-    }
-  ]
-];
+import { INITIAL_STATE } from "../../_redux/reducers/wordToMusicDecoderReducer";
 
 const testState = {
-  wordDisplay: testWordDisplayOneWord,
-  scale: 0
+  ...INITIAL_STATE,
+  words: ['HI']
 };
 
-export {
-  testWordDisplayOneWord,
-  testWordDisplayTwoWords,
-  testState
-};
+export { testState };

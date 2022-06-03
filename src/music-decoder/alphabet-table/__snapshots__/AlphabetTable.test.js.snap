@@ -6,132 +6,132 @@ exports[`AlphabetTable component matches snapshot 1`] = `
     class="AlphabetTable"
   >
     <div
-      class="AlphabetCell A"
+      class="AlphabetTable-cell"
     >
       A
     </div>
     <div
-      class="AlphabetCell B"
+      class="AlphabetTable-cell"
     >
       B
     </div>
     <div
-      class="AlphabetCell C"
+      class="AlphabetTable-cell"
     >
       C
     </div>
     <div
-      class="AlphabetCell D"
+      class="AlphabetTable-cell"
     >
       D
     </div>
     <div
-      class="AlphabetCell E"
+      class="AlphabetTable-cell"
     >
       E
     </div>
     <div
-      class="AlphabetCell F"
+      class="AlphabetTable-cell"
     >
       F
     </div>
     <div
-      class="AlphabetCell G"
+      class="AlphabetTable-cell"
     >
       G
     </div>
     <div
-      class="AlphabetCell A"
+      class="AlphabetTable-cell"
     >
       H
     </div>
     <div
-      class="AlphabetCell B"
+      class="AlphabetTable-cell"
     >
       I
     </div>
     <div
-      class="AlphabetCell C"
+      class="AlphabetTable-cell"
     >
       J
     </div>
     <div
-      class="AlphabetCell D"
+      class="AlphabetTable-cell"
     >
       K
     </div>
     <div
-      class="AlphabetCell E"
+      class="AlphabetTable-cell"
     >
       L
     </div>
     <div
-      class="AlphabetCell F"
+      class="AlphabetTable-cell"
     >
       M
     </div>
     <div
-      class="AlphabetCell G"
+      class="AlphabetTable-cell"
     >
       N
     </div>
     <div
-      class="AlphabetCell A"
+      class="AlphabetTable-cell"
     >
       O
     </div>
     <div
-      class="AlphabetCell B"
+      class="AlphabetTable-cell"
     >
       P
     </div>
     <div
-      class="AlphabetCell C"
+      class="AlphabetTable-cell"
     >
       Q
     </div>
     <div
-      class="AlphabetCell D"
+      class="AlphabetTable-cell"
     >
       R
     </div>
     <div
-      class="AlphabetCell E"
+      class="AlphabetTable-cell"
     >
       S
     </div>
     <div
-      class="AlphabetCell F"
+      class="AlphabetTable-cell"
     >
       T
     </div>
     <div
-      class="AlphabetCell G"
+      class="AlphabetTable-cell"
     >
       U
     </div>
     <div
-      class="AlphabetCell A"
+      class="AlphabetTable-cell"
     >
       V
     </div>
     <div
-      class="AlphabetCell B"
+      class="AlphabetTable-cell"
     >
       W
     </div>
     <div
-      class="AlphabetCell C"
+      class="AlphabetTable-cell"
     >
       X
     </div>
     <div
-      class="AlphabetCell D"
+      class="AlphabetTable-cell"
     >
       Y
     </div>
     <div
-      class="AlphabetCell E"
+      class="AlphabetTable-cell"
     >
       Z
     </div>

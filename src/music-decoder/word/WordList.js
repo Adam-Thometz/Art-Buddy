@@ -7,11 +7,11 @@ import './WordList.css';
 import Word from "./Word";
 
 const WordList = () => {
-  const wordDisplay = useSelector(state => state.wordToMusic.wordDisplay);
-  if (wordDisplay.every(word => word.length === 0)) return null;
+  const words = useSelector(state => state.wordToMusic.words);
+  if (words.every(word => word.length === 0)) return null;
   return (
     <section className="WordList">
-      {wordDisplay.map((word, id) => (
+      {words.map((word, id) => (
         <Word word={word} id={id} />
       ))}
     </section>
