@@ -1,17 +1,18 @@
-import { PitchShift, Sampler, Synth } from "tone";
+import { PitchShift, Synth } from "tone";
+import sample from '../../_utils/sample';
 
-export default function createSound(scale = 0, sample = null) {
+import getInstrument from "../../instrument-id/_utils/getInstrument";
+
+export default function createSound(scale = 0, sampleId = null) {
+  if (process.env.NODE_ENV !== 'test') return;
   let sound;
-  if (sample) {
-    sound = new Sampler({
-      urls: {
-        C3: sample
-      }
-    })
+  if (sampleId) {
+    const soundUrl = getInstrument(sampleId).sound;
+    sound = sample(soundUrl);
   } else {
     sound = new Synth();
   }
   const pitchShift = new PitchShift({pitch: scale}).toDestination();
   sound.connect(pitchShift);
   window.wordToMusicSound = sound;
-}
+};

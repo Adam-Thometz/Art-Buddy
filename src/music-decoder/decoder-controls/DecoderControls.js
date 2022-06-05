@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale } from '../../_redux/actions/wordToMusicActions';
+import { changeScale, changeSound } from '../../_redux/actions/wordToMusicActions';
 
 import './DecoderControls.css';
 
@@ -27,6 +27,12 @@ const DecoderControls = () => {
     dispatch(changeScale(newScale));
   };
 
+  const handleChangeSound = e => {
+    const newSound = e.target.id === 'synth' ? null : e.target.id;
+    createSound(scale, newSound);
+    dispatch(changeSound(newSound));
+  }
+
   const handlePlayMelody = () => {
     const notesToPlay = convertLettersToNotes(words, filledLetters);
     play(notesToPlay, scale);
@@ -42,7 +48,7 @@ const DecoderControls = () => {
         />
         <Dropdown
           labelText='SOUND'
-          onClick={handleChangeScale}
+          onClick={handleChangeSound}
           options={instruments}
         />
       </aside>

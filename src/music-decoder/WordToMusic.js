@@ -6,8 +6,8 @@ import { clearGame } from '../_redux/actions/wordToMusicActions';
 import './WordToMusic.css';
 
 import WordForm from './word-form/WordForm';
-import AlphabetTable from './alphabet-table/AlphabetTable';
 import DecoderControls from './decoder-controls/DecoderControls';
+import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from './_utils/createSound';
 
@@ -15,7 +15,7 @@ const WordToMusic = () => {
   const dispatch = useDispatch();
 
   const onLoad = () => {
-    if (process.env.NODE_ENV !== 'test') createSound();
+    createSound();
   }
 
   useEffect(() => {

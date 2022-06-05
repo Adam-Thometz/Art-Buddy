@@ -1,4 +1,4 @@
-import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase } from "../actions/wordToMusicActions";
+import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, changeSound } from "../actions/wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import hasValidWords from "../helpers/hasValidWords";
@@ -46,6 +46,9 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(changeScale, (state, action) => {
       state.scale = action.payload;
+    })
+    .addCase(changeSound, (state, action) => {
+      state.sound = action.payload;
     })
     .addCase(toggleUpperCase, (state) => {
       state.isUpperCase = !state.isUpperCase;
