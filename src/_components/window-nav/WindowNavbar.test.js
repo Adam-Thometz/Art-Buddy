@@ -2,7 +2,7 @@ import React from "react";
 import renderWithProvider from '../../_testUtils/renderWithProvider';
 import { screen } from "@testing-library/react";
 import WindowNavbar from './WindowNavbar';
-import ReportCardIcon from '../../_routes/corner-icons/report-card/ReportCardIcon';
+import ReportCardIcon from '../../instrument-id/play/report-card/ReportCardIcon';
 
 describe('WindowNavbar component', () => {
   it('renders without crashing', () => {

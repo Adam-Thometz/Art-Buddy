@@ -2,7 +2,7 @@ import React from 'react';
 
 import './HelpIcon.css';
 
-import help from '../_icons/help.png';
+import help from './help.png';
 
 const HelpIcon = () => {
   return (

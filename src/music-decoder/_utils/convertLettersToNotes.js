@@ -14,4 +14,4 @@ export default function convertLettersToNotes(words, filledLetters) {
   };
 
   return result;
-}
+};

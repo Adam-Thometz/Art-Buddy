@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import HelpIcon from "./corner-icons/help/HelpIcon";
-import ReportCardIcon from "./corner-icons/report-card/ReportCardIcon";
-import SavedSongsIcon from "./corner-icons/saved-songs/SavedSongsIcon";
-import ToggleUpperCase from "./corner-icons/toggle-uppercase/ToggleUpperCase";
+import HelpIcon from "../_components/help/HelpIcon";
+import ReportCardIcon from "../instrument-id/play/report-card/ReportCardIcon";
+import SavedSongsIcon from "../instrument-id/play/song-maker/save-song/SavedSongsIcon";
+import ToggleUpperCase from "../music-decoder/ToggleUpperCase";
 
 import Window from "../_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
