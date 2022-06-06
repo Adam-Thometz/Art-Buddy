@@ -24,7 +24,7 @@ const AlphabetTable = () => {
     };
   };
 
-  const fillCell = (char) => {
+  const fillCell = char => {
     const hasLetter = filledLetters.includes(char);
     if (hasLetter) {
       return ` ${LETTER_NOTES[char]}`;
@@ -33,18 +33,17 @@ const AlphabetTable = () => {
     };
   };
 
-  const displayLetters = Object.keys(LETTER_NOTES).filter(char => (
-    isUpperCase ? char === char.toUpperCase() : char === char.toLowerCase()
-  ));
+  const displayLetters = isUpperCase ?
+    Object.keys(LETTER_NOTES).slice(0, 26) :
+    Object.keys(LETTER_NOTES).slice(26);
 
   return (
     <section className="AlphabetTable" onClick={handleLetter}>
       {displayLetters.map((char) => (
-        <div className={`AlphabetTable-cell${fillCell(char)}`}>{char}</div>
+        <div key={char} className={`AlphabetTable-cell${fillCell(char)}`}>{char}</div>
       ))}
     </section>
   );
 };
-
 
 export default AlphabetTable;
