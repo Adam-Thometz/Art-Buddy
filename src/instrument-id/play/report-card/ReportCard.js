@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../../_components/button/Button';
 import useReportCard from '../../../_hooks/useReportCard';
 
 import './ReportCard.css';
@@ -33,8 +32,10 @@ const ReportCard = ({ level }) => {
 
   return (
     <main className='ReportCard'>
-      {scoreDisplay}
-      <Button colorId={2} onClick={handleClearReportCard}>CLEAR</Button>
+      <section className='ReportCard-scores'>
+        {scoreDisplay}
+      </section>
+      <p className='ReportCard-clear' onClick={handleClearReportCard}>clear report card</p>
     </main>
   );
 }
