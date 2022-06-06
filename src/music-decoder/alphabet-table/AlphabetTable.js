@@ -15,11 +15,11 @@ const AlphabetTable = () => {
   
   const handleLetter = e => {
     const letter = e.target.innerText;
-    const note = LETTER_NOTES[letter];
-    const haveLetter = filledLetters.includes(letter);
-    if (!haveLetter) {
+    const hasLetter = filledLetters.includes(letter);
+    if (!hasLetter) {
       dispatch(fillLetter(letter));
     } else {
+      const note = LETTER_NOTES[letter];
       play(note);
     };
   };

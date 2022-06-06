@@ -16,13 +16,13 @@ const WordToMusic = () => {
 
   const onLoad = () => {
     createSound();
-  }
+  };
 
   useEffect(() => {
     return () => {
       dispatch(clearGame());
       delete window.wordToMusicSound;
-    }
+    };
   }, [dispatch]);
 
   return (
