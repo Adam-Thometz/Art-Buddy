@@ -3,6 +3,8 @@ import { createReducer } from "@reduxjs/toolkit";
 
 import hasValidWords from "../helpers/hasValidWords";
 import searchLetter from "../helpers/searchLetter";
+import play from "../../music-decoder/_utils/play";
+import { LETTER_NOTES } from "../../music-decoder/_utils/letterNotes";
 
 export const INITIAL_STATE = {
   words: [],
@@ -43,6 +45,7 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       if (!hasLetter) return;
 
       state.filledLetters.push(letter);
+      play(LETTER_NOTES[letter]);
     })
     .addCase(changeScale, (state, action) => {
       state.scale = action.payload;
