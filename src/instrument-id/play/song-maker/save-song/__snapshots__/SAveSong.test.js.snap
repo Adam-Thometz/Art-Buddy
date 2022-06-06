@@ -32,6 +32,7 @@ exports[`SaveSong component matches snapshot 1`] = `
             style="height: 43px; width: 65px;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1rem;"
           />
         </figure>

@@ -10,6 +10,7 @@ exports[`Icon component matches the snapshot of the icon 1`] = `
       style="height: 250px; width: 250px;"
     />
     <figcaption
+      class="Icon-text"
       style="font-size: 1.75rem;"
     />
   </figure>

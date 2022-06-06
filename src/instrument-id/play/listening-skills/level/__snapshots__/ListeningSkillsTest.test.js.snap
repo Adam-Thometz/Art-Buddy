@@ -28,22 +28,27 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
         Listening Skills Test
       </h1>
       <div
-        class="ReportCardIcon"
+        class="WindowNavbar-corner-icon"
       >
-        <figure
-          class="Icon"
+        <div
+          class="ReportCardIcon"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 50px; width: 34px;"
-          />
-          <figcaption
-            style="font-size: 1rem;"
+          <figure
+            class="Icon"
           >
-            REPORT CARD
-          </figcaption>
-        </figure>
+            <img
+              alt=""
+              src="file"
+              style="height: 50px; width: 34px;"
+            />
+            <figcaption
+              class="Icon-text"
+              style="font-size: 1rem;"
+            >
+              REPORT CARD
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </header>
     <header>

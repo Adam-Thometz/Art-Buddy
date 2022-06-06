@@ -27,11 +27,15 @@ exports[`Learn component matches snapshot 1`] = `
       >
         INSTRUMENT ID: LEARN
       </h1>
-      <img
-        alt="Help"
-        class="HelpIcon"
-        src="file"
-      />
+      <div
+        class="WindowNavbar-corner-icon"
+      >
+        <img
+          alt="Help"
+          class="HelpIcon"
+          src="file"
+        />
+      </div>
     </header>
     <div
       class="Learn-main"
@@ -55,6 +59,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             BRASS
@@ -69,6 +74,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             ELECTRONIC
@@ -83,6 +89,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             PERCUSSION
@@ -97,6 +104,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             STRINGS
@@ -111,6 +119,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             WOODWIND
@@ -125,6 +134,7 @@ exports[`Learn component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             VOICE

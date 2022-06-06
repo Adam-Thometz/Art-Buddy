@@ -28,22 +28,27 @@ exports[`SongMaker component matches snapshot 1`] = `
         Song Maker
       </h1>
       <div
-        class="SavedSongsIcon"
+        class="WindowNavbar-corner-icon"
       >
-        <figure
-          class="Icon"
+        <div
+          class="SavedSongsIcon"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 49px; width: 49px;"
-          />
-          <figcaption
-            style="font-size: 1rem;"
+          <figure
+            class="Icon"
           >
-            SAVED SONGS
-          </figcaption>
-        </figure>
+            <img
+              alt=""
+              src="file"
+              style="height: 49px; width: 49px;"
+            />
+            <figcaption
+              class="Icon-text"
+              style="font-size: 1rem;"
+            >
+              SAVED SONGS
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </header>
     <header>
@@ -294,6 +299,7 @@ exports[`SongMaker component matches snapshot 1`] = `
             style="height: 69px; width: 69px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT
@@ -309,6 +315,7 @@ exports[`SongMaker component matches snapshot 1`] = `
             style="height: 69px; width: 69px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT
@@ -324,6 +331,7 @@ exports[`SongMaker component matches snapshot 1`] = `
             style="height: 69px; width: 69px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             ADD INSTRUMENT

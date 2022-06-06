@@ -27,11 +27,15 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
       >
         INSTRUMENT ID: LEARN
       </h1>
-      <img
-        alt="Help"
-        class="HelpIcon"
-        src="file"
-      />
+      <div
+        class="WindowNavbar-corner-icon"
+      >
+        <img
+          alt="Help"
+          class="HelpIcon"
+          src="file"
+        />
+      </div>
     </header>
     <div
       class="LearnFamilyPage-main"
@@ -48,6 +52,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
             style="height: 250px; width: 250px;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 2.5rem;"
           >
             THE BRASS FAMILY
@@ -66,6 +71,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             TRUMPET
@@ -80,6 +86,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             FRENCH HORN
@@ -94,6 +101,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
             style="height: 200px; width: 250px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             TROMBONE
@@ -108,6 +116,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
             style="height: 200px; width: 200px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1.75rem;"
           >
             TUBA

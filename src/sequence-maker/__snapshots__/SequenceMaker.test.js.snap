@@ -173,6 +173,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             style="height: 48px; width: 48px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1rem;"
           >
             Play
@@ -187,6 +188,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             style="height: 48px; width: 48px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1rem;"
           >
             Play All
@@ -228,6 +230,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             style="height: 48px; width: 48px; cursor: pointer;"
           />
           <figcaption
+            class="Icon-text"
             style="font-size: 1rem;"
           >
             Reset Sequence
