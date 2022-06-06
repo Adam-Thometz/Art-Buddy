@@ -16,7 +16,7 @@ const Icon = ({ icon, text, onClick = null, size = "250px", width = null, largeF
   return (
     <figure className="Icon" onClick={onClick} id={id ? id : null}>
       <img style={imgStyles} src={icon} alt="" />
-      <figcaption style={textStyles}>{text}</figcaption>
+      <figcaption className="Icon-text" style={textStyles}>{text}</figcaption>
     </figure>
   );
 };

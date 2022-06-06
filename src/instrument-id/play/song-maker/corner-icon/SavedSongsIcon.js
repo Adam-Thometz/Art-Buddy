@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './SavedSongsIcon.css';
-
 import Icon from '../../../../_components/icon/Icon';
 import Popup from '../../../../_components/popup/Popup';
 import SavedSongs from '../save-song/SavedSongs';

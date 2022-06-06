@@ -24,4 +24,4 @@ describe('WindowNavbar component', () => {
     expect(screen.getByText('Listening Skills Test')).toBeInTheDocument();
     expect(screen.getByText('REPORT CARD')).toBeInTheDocument();
   });
-})
+});

@@ -1,8 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import './ReportCardIcon.css';
-
 import Icon from '../../../../../_components/icon/Icon';
 import Popup from '../../../../../_components/popup/Popup';
 import ReportCard from '../../../report-card/ReportCard';
