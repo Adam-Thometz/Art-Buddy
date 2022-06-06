@@ -7,6 +7,7 @@ import NewStudentForm from './students/NewStudentForm';
 import Students from './students/Students';
 import Winners from './winners/Winners';
 import Button from '../_components/button/Button';
+import WindowNavbar from '../_components/window-nav/WindowNavbar';
 
 const ScoreKeeper = () => { 
   const dispatch = useDispatch()
@@ -26,6 +27,7 @@ const ScoreKeeper = () => {
 
   return (
     <div className="ScoreKeeper">
+      <WindowNavbar page='SCORE KEEPER' />
       {!gameOver ? (
         <>
           <NewStudentForm />

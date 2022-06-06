@@ -1,11 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import HelpIcon from "../_components/help/HelpIcon";
-import ReportCardIcon from "../instrument-id/play/report-card/ReportCardIcon";
-import SavedSongsIcon from "../instrument-id/play/song-maker/save-song/SavedSongsIcon";
-import ToggleUpperCase from "../music-decoder/ToggleUpperCase";
-
 import Window from "../_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
 import Menu from "../menu-landing/menu/Menu";
@@ -27,18 +22,22 @@ import urls, { instrumentIdUrls } from "./routeUrls";
 const ArtBuddyRoutes = () => {
   return (
     <Routes>
-      <Route index element={<LandingPage />} />
+      <Route index element={
+        <Window small>
+          <LandingPage />
+        </Window>
+      } />
       {/* MENUS */}
       <Route path={urls.artGames} element={
-        <Window small page='ART GAMES'>
+        <Window small>
           <Menu type={'art'} />
         </Window>} />
       <Route path={urls.musicGames} element={
-        <Window small page='MUSIC GAMES'>
+        <Window small>
           <Menu type={'music'} />
         </Window>} />
       <Route path={urls.allGames} element={
-        <Window small page='ALL GAMES'>
+        <Window small>
           <Menu type={'all'} />
         </Window>} />
 
@@ -46,56 +45,56 @@ const ArtBuddyRoutes = () => {
 
       {/* Word To Music Decoder */}
       <Route path={urls.wordToMusicUrl} element={
-        <Window cornerIcon={<ToggleUpperCase />} page='Word-To-Music Decoder'>
+        <Window>
           <WordToMusic />
         </Window>} />
 
       {/* Sequence Maker */}
       <Route path={urls.sequencerUrl} element={
-        <Window page='Sequence Maker'>
+        <Window>
           <SequenceMaker />
         </Window>} />
 
       {/* What's That Instrument? */}
       <Route path={urls.instrumentIdUrl} element={
-        <Window cornerIcon={<HelpIcon />} page="What's That Instrument?">
+        <Window>
           <InstrumentId />
         </Window>} />
 
         {/* Learn */}
         <Route path={instrumentIdUrls.learnUrl} element={
-          <Window cornerIcon={<HelpIcon />} page="What's That Instrument?: Learn">
+          <Window>
             <Learn />
           </Window>}/>
 
         <Route path={instrumentIdUrls.learnFamilyUrl} element={
-          <Window page="What's That Instrument?: Learn">
+          <Window>
             <LearnFamilyPage />
           </Window>}/>
 
         <Route path={instrumentIdUrls.learnInstrumentUrl} element={
-          <Window page="What's That Instrument?: Learn">
+          <Window>
             <Instrument />
           </Window>}/>
 
         {/* Play */}
         <Route path={instrumentIdUrls.playUrl} element={
-          <Window cornerIcon={<HelpIcon />} page="What's That Instrument: Play">
+          <Window>
             <Play />
           </Window>} />
 
         <Route path={instrumentIdUrls.playListeningUrl} element={
-          <Window cornerIcon={<HelpIcon />} page="What's That Instrument: Play">
+          <Window>
             <ListeningSkills />
           </Window>} />
 
         <Route path={instrumentIdUrls.playListeningLevelUrl} element={
-          <Window cornerIcon={<ReportCardIcon />} page='Listening Skills Test'>
+          <Window>
             <ListeningSkillsTest />
           </Window>} />
         
         <Route path={instrumentIdUrls.playSongMakerUrl} element={
-          <Window cornerIcon={<SavedSongsIcon />} page='Song Maker'>
+          <Window>
             <SongMaker />
           </Window>
         } />
@@ -103,13 +102,13 @@ const ArtBuddyRoutes = () => {
       {/* TOOLS */}
       {/* Score Keeper */}
       <Route path={urls.scoreKeeperUrl} element={
-        <Window page='Score Keeper'>
+        <Window>
           <ScoreKeeper />
         </Window>} />
       
       {/* GENERAL 404 HANDLER */}
       <Route path="*" element={
-        <Window small page="UH OH!">
+        <Window small>
           <NotFound />
         </Window>}/>
     </Routes>

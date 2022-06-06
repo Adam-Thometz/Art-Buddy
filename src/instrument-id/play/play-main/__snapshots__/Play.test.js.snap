@@ -5,6 +5,34 @@ exports[`Play component matches snapshot 1`] = `
   <main
     class="Play"
   >
+    <header
+      class="WindowNavbar-games"
+    >
+      <button
+        class="BackArrow"
+      >
+        <img
+          alt=""
+          class="BackArrow-img"
+          src="file"
+        />
+        <span
+          class="BackArrow-text"
+        >
+          BACK
+        </span>
+      </button>
+      <h1
+        class="WindowNavbar-label"
+      >
+        INSTRUMENT ID: PLAY
+      </h1>
+      <img
+        alt="Help"
+        class="HelpIcon"
+        src="file"
+      />
+    </header>
     <header>
       <p>
         Master skills in Listening Skills to unlock instruments for the Song Maker!

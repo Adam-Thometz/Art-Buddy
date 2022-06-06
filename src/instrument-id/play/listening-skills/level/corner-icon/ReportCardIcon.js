@@ -1,11 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import Icon from '../../../_components/icon/Icon';
-import Popup from '../../../_components/popup/Popup';
-import ReportCard from '../../../instrument-id/play/report-card/ReportCard';
+import './ReportCardIcon.css';
 
-import { reportCardIcon } from '../../../instrument-id/_icons/iconImports';
+import Icon from '../../../../../_components/icon/Icon';
+import Popup from '../../../../../_components/popup/Popup';
+import ReportCard from '../../../report-card/ReportCard';
+
+import { reportCardIcon } from '../../../../_icons/iconImports';
 
 const ReportCardIcon = () => {
   const { level } = useParams();
@@ -14,7 +16,7 @@ const ReportCardIcon = () => {
     <Popup
       title='REPORT CARD'
       trigger={popupTrigger}
-      triggerClass='report-card'
+      triggerClass='ReportCardIcon'
       popup={<ReportCard level={level} />}
     />
   );

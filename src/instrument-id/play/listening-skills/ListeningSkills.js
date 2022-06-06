@@ -7,6 +7,8 @@ import Button from "../../../_components/button/Button";
 import Icon from "../../../_components/icon/Icon";
 import Popup from "../../../_components/popup/Popup";
 import ReportCard from "../report-card/ReportCard";
+import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
+import HelpIcon from "../../../_components/help/HelpIcon";
 
 import { listeningSkills, reportCardIcon } from "../../_icons/iconImports";
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
@@ -39,17 +41,20 @@ const ListeningSkills = () => {
 
   return (
     <main className="ListeningSkills">
-      <header className="ListeningSkills-icon">
-        <Icon
-          largeFont
-          icon={listeningSkills}
-          text='Listening Skills Test'
-        />
-      </header>
-      <section className="ListeningSkills-levels-report-cards">
-        <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
-        {levels}
-      </section>
+      <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<HelpIcon />} />
+      <div className="ListeningSkills-main">
+        <header className="ListeningSkills-icon">
+          <Icon
+            largeFont
+            icon={listeningSkills}
+            text='Listening Skills Test'
+          />
+        </header>
+        <section className="ListeningSkills-levels-report-cards">
+          <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
+          {levels}
+        </section>
+      </div>
     </main>
   );
 };

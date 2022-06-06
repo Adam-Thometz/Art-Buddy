@@ -9,7 +9,7 @@ const LandingPage = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited');
 
   return !hasVisited ? 
-    <Window small page='WELCOME TO ART BUDDY!'>
+    <Window small>
       <Welcome setHasVisited={setHasVisited} />
     </Window>
     :

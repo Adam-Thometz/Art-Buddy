@@ -1,4 +1,4 @@
-.Menu {
+.Menu-options {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 50%);

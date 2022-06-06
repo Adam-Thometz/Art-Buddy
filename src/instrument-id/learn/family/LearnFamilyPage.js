@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import './LearnFamilyPage.css'
 
 import Icon from "../../../_components/icon/Icon";
+import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
+import HelpIcon from "../../../_components/help/HelpIcon";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
@@ -28,16 +30,19 @@ const LearnFamilyPage = () => {
   
   return (
     <main className="LearnFamilyPage">
-      <header className="LearnFamilyPage-header">
-        <Icon
-          icon={instrumentFamily.main}
-          text={`THE ${family.toUpperCase()} FAMILY`}
-          largeFont
-        />
-      </header>
-      <section className="LearnFamilyPage-options">
-        {options}
-      </section>
+      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<HelpIcon />} />
+      <div className="LearnFamilyPage-main">
+        <header className="LearnFamilyPage-header">
+          <Icon
+            icon={instrumentFamily.main}
+            text={`THE ${family.toUpperCase()} FAMILY`}
+            largeFont
+          />
+        </header>
+        <section className="LearnFamilyPage-options">
+          {options}
+        </section>
+      </div>
     </main>
   );
 };

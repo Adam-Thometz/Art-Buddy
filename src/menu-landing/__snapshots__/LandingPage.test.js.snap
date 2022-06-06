@@ -6,18 +6,18 @@ exports[`LandingPage component matches the snapshot of the landing page displayi
     class="Window"
     style="width: 75%;"
   >
-    <header
-      class="WindowNavbar-games"
-    >
-      <h1
-        class="WindowNavbar-label"
-      >
-        WELCOME TO ART BUDDY!
-      </h1>
-    </header>
     <section
       class="Welcome"
     >
+      <header
+        class="WindowNavbar-games"
+      >
+        <h1
+          class="WindowNavbar-label"
+        >
+          WELCOME TO ART BUDDY!
+        </h1>
+      </header>
       <article
         class="Welcome-description"
       >

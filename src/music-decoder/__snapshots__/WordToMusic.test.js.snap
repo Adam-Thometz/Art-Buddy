@@ -5,6 +5,51 @@ exports[`WordToMusic component matches snapshot 1`] = `
   <main
     class="WordToMusic"
   >
+    <header
+      class="WindowNavbar-games"
+    >
+      <button
+        class="BackArrow"
+      >
+        <img
+          alt=""
+          class="BackArrow-img"
+          src="file"
+        />
+        <span
+          class="BackArrow-text"
+        >
+          BACK
+        </span>
+      </button>
+      <h1
+        class="WindowNavbar-label"
+      >
+        WORD-TO-MUSIC DECODER
+      </h1>
+      <div
+        class="Toggle"
+      >
+        <div
+          class="Toggle-switch on"
+        >
+          <div
+            class="Toggle-button"
+          />
+          <span>
+            ON
+          </span>
+          <span>
+            OFF
+          </span>
+        </div>
+        <span
+          class="Toggle-label"
+        >
+          UPPER CASE
+        </span>
+      </div>
+    </header>
     <header>
       <p>
         HULLO IM WORD TO MUSIC DECODER. TYPE SOME WORDS TO MAKE MUSIC PLZ

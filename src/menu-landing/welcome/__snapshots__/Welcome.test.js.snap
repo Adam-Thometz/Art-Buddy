@@ -5,6 +5,15 @@ exports[`Welcome component matches the snapshot of the welcome page 1`] = `
   <section
     class="Welcome"
   >
+    <header
+      class="WindowNavbar-games"
+    >
+      <h1
+        class="WindowNavbar-label"
+      >
+        WELCOME TO ART BUDDY!
+      </h1>
+    </header>
     <article
       class="Welcome-description"
     >

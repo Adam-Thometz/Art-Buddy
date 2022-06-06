@@ -5,6 +5,34 @@ exports[`InstrumentId component matches snapshot 1`] = `
   <main
     class="InstrumentId"
   >
+    <header
+      class="WindowNavbar-games"
+    >
+      <button
+        class="BackArrow"
+      >
+        <img
+          alt=""
+          class="BackArrow-img"
+          src="file"
+        />
+        <span
+          class="BackArrow-text"
+        >
+          BACK
+        </span>
+      </button>
+      <h1
+        class="WindowNavbar-label"
+      >
+        INSTRUMENT ID
+      </h1>
+      <img
+        alt="Help"
+        class="HelpIcon"
+        src="file"
+      />
+    </header>
     <p
       class="InstrumentId-instructions"
     >

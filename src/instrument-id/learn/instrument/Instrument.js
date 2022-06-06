@@ -10,6 +10,8 @@ import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "../../_utils/buffers";
 import { isRhythmicInstrument } from "../../_utils/getInstrument";
 import { playBeat, playScale } from "../../_utils/play";
+import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
+import HelpIcon from "../../../_components/help/HelpIcon";
 
 const Instrument = () => {
   const { family, instrument } = useParams();
@@ -38,23 +40,26 @@ const Instrument = () => {
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>
-      <header className="Instrument-name">
-        <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />
-      </header>
-      <article className="Instrument-information">
-        <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>
-        <ul>
-          {instrumentInfo.madeFrom.map(material => (
-            <li key={material}>{material}</li>
-          ))}
-        </ul>
-        <h2>THE {instrumentInfo.name} IS PLAYED BY...</h2>
-        <p>{instrumentInfo.howToPlay}</p>
-        <section className="Instrument-buttons">
-          <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
-          <Button colorId={2} onClick={openVideo}>Watch Video</Button>
-        </section>
-      </article>
+      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<HelpIcon />} />
+      <div className="Instrument-main">
+        <header className="Instrument-name">
+          <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />
+        </header>
+        <article className="Instrument-information">
+          <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>
+          <ul>
+            {instrumentInfo.madeFrom.map(material => (
+              <li key={material}>{material}</li>
+            ))}
+          </ul>
+          <h2>THE {instrumentInfo.name} IS PLAYED BY...</h2>
+          <p>{instrumentInfo.howToPlay}</p>
+          <section className="Instrument-buttons">
+            <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
+            <Button colorId={2} onClick={openVideo}>Watch Video</Button>
+          </section>
+        </article>
+      </div>
     </main>
   );
 };

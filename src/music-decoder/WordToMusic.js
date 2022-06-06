@@ -5,6 +5,8 @@ import { clearGame } from '../_redux/actions/wordToMusicActions';
 
 import './WordToMusic.css';
 
+import WindowNavbar from '../_components/window-nav/WindowNavbar';
+import ToggleUpperCase from './ToggleUpperCase';
 import WordForm from './word-form/WordForm';
 import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
@@ -27,6 +29,7 @@ const WordToMusic = () => {
 
   return (
     <main className="WordToMusic" onLoad={onLoad}>
+      <WindowNavbar page='WORD-TO-MUSIC DECODER' cornerIcon={<ToggleUpperCase />} />
       <header>
         <p>HULLO IM WORD TO MUSIC DECODER. TYPE SOME WORDS TO MAKE MUSIC PLZ</p>
       </header>

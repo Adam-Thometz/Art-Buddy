@@ -4,11 +4,13 @@
   justify-content: space-around;
   width: 50%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .WindowNavbar-games {
   display: flex;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .WindowNavbar-button {

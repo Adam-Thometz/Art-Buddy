@@ -5,21 +5,6 @@ exports[`Window component matches the snapshot of the window 1`] = `
   <main
     class="Window"
     style="width: 90%;"
-  >
-    <header
-      class="WindowNavbar-main"
-    >
-      <span
-        class="WindowNavbar-button underlined"
-      >
-        GAMES
-      </span>
-      <span
-        class="WindowNavbar-button"
-      >
-        TOOLS
-      </span>
-    </header>
-  </main>
+  />
 </DocumentFragment>
 `;

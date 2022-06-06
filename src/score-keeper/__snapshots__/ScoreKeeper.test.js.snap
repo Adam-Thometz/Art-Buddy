@@ -5,6 +5,29 @@ exports[`Score Keeper matches snapshot 1`] = `
   <div
     class="ScoreKeeper"
   >
+    <header
+      class="WindowNavbar-games"
+    >
+      <button
+        class="BackArrow"
+      >
+        <img
+          alt=""
+          class="BackArrow-img"
+          src="file"
+        />
+        <span
+          class="BackArrow-text"
+        >
+          BACK
+        </span>
+      </button>
+      <h1
+        class="WindowNavbar-label"
+      >
+        SCORE KEEPER
+      </h1>
+    </header>
     <div
       class="NewStudentForm"
     >

@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './SavedSongsIcon.css';
+
 import Icon from '../../../../_components/icon/Icon';
 import Popup from '../../../../_components/popup/Popup';
-import SavedSongs from './SavedSongs';
+import SavedSongs from '../save-song/SavedSongs';
 
 import savedSongsIcon from '../_icons/saved-songs.png';
 
@@ -12,7 +14,7 @@ const SavedSongsIcon = () => {
     <Popup
       title='SAVED SONGS'
       trigger={popupTrigger}
-      triggerClass='saved-songs'
+      triggerClass='SavedSongsIcon'
       popup={<SavedSongs />}
     />
   );

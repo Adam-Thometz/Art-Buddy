@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "../../../../_redux/actions/insturmentIdActions";
+import { selectChoice } from "../../../../../_redux/actions/insturmentIdActions";
 
 import './Choice.css';
 
-import Icon from "../../../../_components/icon/Icon";
+import Icon from "../../../../../_components/icon/Icon";
 
-import { correctIcon, incorrectIcon } from "../../../_icons/iconImports";
-import useReportCard from "../../../../_hooks/useReportCard";
+import { correctIcon, incorrectIcon } from "../../../../_icons/iconImports";
+import useReportCard from "../../../../../_hooks/useReportCard";
 
 const Choice = ({ id, level, choice }) => {
   const answer = useSelector(state => state.instrumentId.answer);

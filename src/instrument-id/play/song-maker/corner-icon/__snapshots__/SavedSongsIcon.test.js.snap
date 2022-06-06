@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedSongsIcon component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="SavedSongsIcon"
+  >
+    <figure
+      class="Icon"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 49px; width: 49px;"
+      />
+      <figcaption
+        style="font-size: 1rem;"
+      >
+        SAVED SONGS
+      </figcaption>
+    </figure>
+  </div>
+</DocumentFragment>
+`;

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 import './Menu.css';
 
+import WindowNavbar from "../../_components/window-nav/WindowNavbar";
 import Button from "../../_components/button/Button";
 
 import menuOptions from "./menuOptions";
@@ -33,7 +34,10 @@ const Menu = ({ type = null }) => {
 
   return (
     <main className="Menu">
-      {optionDisplay}
+      <WindowNavbar page={type ? `${type.toUpperCase()} GAMES` : null} />
+      <div className="Menu-options">
+        {optionDisplay}
+      </div>
     </main>
   );
 };

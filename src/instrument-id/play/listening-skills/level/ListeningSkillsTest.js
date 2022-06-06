@@ -6,9 +6,11 @@ import { selectChoice, generateAnswer, clearChoices } from "../../../../_redux/a
 
 import './ListeningSkillsTest.css';
 
-import Choice from "./Choice";
+import Choice from "./choice/Choice";
 import Button from "../../../../_components/button/Button";
 import Dropdown from "../../../../_components/dropdown/Dropdown";
+import WindowNavbar from "../../../../_components/window-nav/WindowNavbar";
+import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
 import { createBuffers, removeBuffers } from "../../../_utils/buffers";
@@ -63,6 +65,7 @@ const ListeningSkillsTest = () => {
 
   return (
     <main className="ListeningSkillsTest">
+      <WindowNavbar page='Listening Skills Test' cornerIcon={<ReportCardIcon />} />
       <header>
         <h2>LEVEL {level}</h2>
         <p>This is instruction text for later</p>

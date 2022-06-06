@@ -6,57 +6,89 @@ exports[`Instrument component matches snapshot 1`] = `
     class="Instrument"
   >
     <header
-      class="Instrument-name"
+      class="WindowNavbar-games"
     >
-      <figure
-        class="Icon"
+      <button
+        class="BackArrow"
       >
         <img
           alt=""
+          class="BackArrow-img"
           src="file"
-          style="height: 250px; width: 250px;"
         />
-        <figcaption
-          style="font-size: 2.5rem;"
+        <span
+          class="BackArrow-text"
         >
-          TRUMPET
-        </figcaption>
-      </figure>
-    </header>
-    <article
-      class="Instrument-information"
-    >
-      <h2>
-        WHAT IS THE TRUMPET MADE OUT OF?
-      </h2>
-      <ul>
-        <li>
-          BRASS
-        </li>
-      </ul>
-      <h2>
-        THE TRUMPET IS PLAYED BY...
-      </h2>
-      <p>
-        blowing into the mouthpiece and pressing on the valves
-      </p>
-      <section
-        class="Instrument-buttons"
+          BACK
+        </span>
+      </button>
+      <h1
+        class="WindowNavbar-label"
       >
-        <button
-          class="Button regular"
-          style="border-color: #89eb0a;"
+        INSTRUMENT ID: LEARN
+      </h1>
+      <img
+        alt="Help"
+        class="HelpIcon"
+        src="file"
+      />
+    </header>
+    <div
+      class="Instrument-main"
+    >
+      <header
+        class="Instrument-name"
+      >
+        <figure
+          class="Icon"
         >
-          Play Sound
-        </button>
-        <button
-          class="Button regular"
-          style="border-color: #fd4d3a;"
+          <img
+            alt=""
+            src="file"
+            style="height: 250px; width: 250px;"
+          />
+          <figcaption
+            style="font-size: 2.5rem;"
+          >
+            TRUMPET
+          </figcaption>
+        </figure>
+      </header>
+      <article
+        class="Instrument-information"
+      >
+        <h2>
+          WHAT IS THE TRUMPET MADE OUT OF?
+        </h2>
+        <ul>
+          <li>
+            BRASS
+          </li>
+        </ul>
+        <h2>
+          THE TRUMPET IS PLAYED BY...
+        </h2>
+        <p>
+          blowing into the mouthpiece and pressing on the valves
+        </p>
+        <section
+          class="Instrument-buttons"
         >
-          Watch Video
-        </button>
-      </section>
-    </article>
+          <button
+            class="Button regular"
+            style="border-color: #89eb0a;"
+          >
+            Play Sound
+          </button>
+          <button
+            class="Button regular"
+            style="border-color: #fd4d3a;"
+          >
+            Watch Video
+          </button>
+        </section>
+      </article>
+    </div>
   </main>
 </DocumentFragment>
 `;

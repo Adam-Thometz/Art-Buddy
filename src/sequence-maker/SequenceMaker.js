@@ -8,6 +8,7 @@ import SequenceControls from "./controls/SequenceControls";
 
 import SoundOptions from "./sound-options/SoundOptions";
 import { Transport } from "tone";
+import WindowNavbar from "../_components/window-nav/WindowNavbar";
 
 const SequenceMaker = () => {;
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const SequenceMaker = () => {;
 
   return (
     <main className="SequenceMaker" onLoad={setTempo}>
+      <WindowNavbar page='SEQUENCE MAKER' />
       <header>
         <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
       </header>

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import './Learn.css';
 
 import Icon from "../../../_components/icon/Icon";
+import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
+import HelpIcon from "../../../_components/help/HelpIcon";
 
 import learnMenuOptions from "./learnMenuOptions";
 
@@ -23,12 +25,15 @@ const Learn = () => {
 
   return (
     <main className="Learn">
-      <header className="Learn-header">
-        <p>To begin, choose an instrument family</p>
-      </header>
-      <section className="Learn-options">
-        {options}
-      </section>
+      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<HelpIcon />} />
+      <div className="Learn-main">
+        <header className="Learn-header">
+          <p>To begin, choose an instrument family</p>
+        </header>
+        <section className="Learn-options">
+          {options}
+        </section>
+      </div>
     </main>
   );
 };

@@ -10,6 +10,8 @@ import Dropdown from '../../../_components/dropdown/Dropdown';
 import Icon from '../../../_components/icon/Icon';
 import Popup from '../../../_components/popup/Popup';
 import SaveSong from './save-song/SaveSong';
+import SavedSongsIcon from './corner-icon/SavedSongsIcon';
+import WindowNavbar from '../../../_components/window-nav/WindowNavbar';
 
 import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
@@ -106,6 +108,7 @@ const SongMaker = () => {
 
   return (
     <main className='SongMaker'>
+      <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
       <header>
         <p>HULLO IM SONG MAKER MAKE A SONG PLZ</p>
       </header>
