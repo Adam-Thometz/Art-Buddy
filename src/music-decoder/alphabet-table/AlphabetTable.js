@@ -38,11 +38,11 @@ const AlphabetTable = () => {
     Object.keys(LETTER_NOTES).slice(26);
 
   return (
-    <section className="AlphabetTable" onClick={handleLetter}>
+    <table className="AlphabetTable">
       {displayLetters.map((char) => (
-        <div key={char} className={`AlphabetTable-cell${fillCell(char)}`}>{char}</div>
+        <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
       ))}
-    </section>
+    </table>
   );
 };
 
