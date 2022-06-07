@@ -1,8 +1,6 @@
 import { now } from "tone";
 
 export default function play(notes) {
-  if (process.env.NODE_ENV === 'test') return;
-
   const sound = window.wordToMusicSound;
   const start = now();
   if (!Array.isArray(notes)) {
