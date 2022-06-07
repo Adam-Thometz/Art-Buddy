@@ -72,6 +72,8 @@ exports[`AlphabetTable component matches snapshot 1`] = `
         >
           M
         </td>
+      </tr>
+      <tr>
         <td
           class="AlphabetTable-cell"
         >

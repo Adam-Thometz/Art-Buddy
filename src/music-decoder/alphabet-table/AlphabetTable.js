@@ -39,9 +39,16 @@ const AlphabetTable = () => {
 
   return (
     <table className="AlphabetTable">
-      {displayLetters.map((char) => (
-        <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
-      ))}
+      <tr>
+        {displayLetters.slice(0, 13).map((char) => (
+          <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
+        ))}
+      </tr>
+      <tr>
+        {displayLetters.slice(13).map((char) => (
+          <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
+        ))}
+      </tr>
     </table>
   );
 };

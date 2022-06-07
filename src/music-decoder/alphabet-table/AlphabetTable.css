@@ -1,8 +1,9 @@
 .AlphabetTable {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(13, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
   margin: 0 auto;
+  width: 100%;
 }
 
 .AlphabetTable-cell {
