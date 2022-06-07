@@ -5,4 +5,4 @@ export function createBuffer({category, soundId}) {
   const sound = soundInfo[category][soundId].sound;
   const buffer = new Buffer(sound);
   window[`${soundId}Buffer`] = buffer;
-}
+};

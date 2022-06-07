@@ -9,7 +9,7 @@ import Options from '../../_components/option/Options';
 import Icon from '../../_components/icon/Icon';
 
 import soundInfo from '../_media/soundInfo';
-import { createBuffer } from '../_utils/buffer';
+import { createBuffer } from '../_utils/createBuffer';
 
 const SoundOptions = () => {
   const category = useSelector(state => state.sequenceMaker.category);
@@ -24,7 +24,7 @@ const SoundOptions = () => {
     };
   };
 
-  const sounds = soundInfo[category]
+  const sounds = soundInfo[category];
 
   return (
     <section className='SoundOptions'>

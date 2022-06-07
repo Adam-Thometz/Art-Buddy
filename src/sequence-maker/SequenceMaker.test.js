@@ -6,6 +6,15 @@ import userEvent from "@testing-library/user-event";
 
 import SequenceMaker from './SequenceMaker';
 
+jest.mock('./_utils/createBuffer');
+
+function setupChoices() {
+  const categoryDropdown = screen.getByText('SOUND CATEGORY');
+  userEvent.hover(categoryDropdown);
+  const option = screen.getByText('ANIMALS');
+  userEvent.click(option);
+};
+
 describe('SequenceMaker component', () => {
   it('renders without crashing', () => {
     renderWithProvider(<SequenceMaker />);
@@ -18,10 +27,15 @@ describe('SequenceMaker component', () => {
 
   it('adds sounds to the sound options component', () => {
     renderWithProvider(<SequenceMaker />);
-    const categoryDropdown = screen.getByText('SOUND CATEGORY');
-    userEvent.hover(categoryDropdown);
-    const option = screen.getByText('ANIMALS');
-    userEvent.click(option);
+    setupChoices();
     expect(screen.getByText('DOG')).toBeInTheDocument();
   });
+
+  it('adds a choice to the sequence', () => {
+    renderWithProvider(<SequenceMaker />);
+    setupChoices();
+    const choice = screen.getByText('CAT');
+    userEvent.click(choice);
+    expect(screen.getByText('REMOVE')).toBeInTheDocument();
+  })
 });
