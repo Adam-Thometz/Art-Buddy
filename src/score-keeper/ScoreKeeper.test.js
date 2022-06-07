@@ -17,13 +17,14 @@ describe('Score Keeper', () => {
   });
 
   it('inputs a student name and selects a color', () => {
-    renderWithProvider(<ScoreKeeper />)
+    renderWithProvider(<ScoreKeeper />);
     const input = screen.getByRole('textbox');
     const dropdown = screen.getByText('PICK A COLOR');
     const btn = screen.getByText('ADD STUDENT');
     userEvent.type(input, 'Eddie');
     expect(screen.getByDisplayValue('Eddie')).toBeInTheDocument();
-    userEvent.hover(dropdown)
+    
+    userEvent.hover(dropdown);
     const option = screen.getByText('Red');
     userEvent.click(option);
     userEvent.click(btn);
