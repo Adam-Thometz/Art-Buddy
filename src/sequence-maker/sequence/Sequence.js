@@ -6,12 +6,12 @@ import { useSelector, useDispatch } from "react-redux";
 
 import './Sequence.css';
 
-import SequenceBlock from "./SequenceBlock";
+import SequenceBlock from "./sequence-block/SequenceBlock";
 import Icon from "../../_components/icon/Icon";
 
 import colors from "../../_components/button/colorOrder";
-import play from '../_media/_icons/play.png'
-import playAll from '../_media/_icons/play-all.png'
+import play from '../_media/_icons/play.png';
+import playAll from '../_media/_icons/play-all.png';
 
 const Sequence = () => {
   const sequence = useSelector(state => state.sequenceMaker.sequence);
@@ -32,7 +32,7 @@ const Sequence = () => {
         clearTimeout(end);
       }, (duration * 1000) + ((duration * 1000) * i));
     };
-  }
+  };
   
   const handlePlayAll = () => {
     playSequence({ sequence, pitch, duration, playAll: true });
@@ -48,7 +48,7 @@ const Sequence = () => {
 
   const handleReset = () => {
     dispatch(resetSequence());
-  }
+  };
 
   return (
     <section className="Sequence">
