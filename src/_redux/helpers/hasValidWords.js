@@ -1,6 +1,6 @@
 export default function hasValidWords(words) {
   const fullInput = words.replace(/ /g, '');
-  if (fullInput.length > 20) return { success: false, error: 'Input can only have 20 characters' };
+  if (fullInput.length > 26) return { success: false, error: 'Input can only have 26 characters' };
   const wordsArr = words.split(' ');
   if (wordsArr.length > 4) {
     return { success: false, error: 'Only four words at a time' };

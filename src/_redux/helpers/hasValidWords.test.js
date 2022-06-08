@@ -11,9 +11,9 @@ describe('hasValidWords function', () => {
     expect(result).toEqual({ success: true });
   });
 
-  it('should return false when given an input of over 20 characters', () => {
-    const result = hasValidWords('this submarine has sharks');
-    expect(result).toEqual({ success: false, error: 'Input can only have 20 characters' });
+  it('should return false when given an input of over 26 characters', () => {
+    const result = hasValidWords('those submarines have whalesharks');
+    expect(result).toEqual({ success: false, error: 'Input can only have 26 characters' });
   })
 
   it('should return false when given a word with non-alphabetic characters', () => {
