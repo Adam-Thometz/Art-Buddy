@@ -1,5 +1,5 @@
 import wordToMusicDecoderReducer, { INITIAL_STATE } from './wordToMusicDecoderReducer';
-import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase } from '../actions/wordToMusicActions';
+import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from '../actions/wordToMusicActions';
 
 import { testState } from '../../_testUtils/test-states/wordToMusicReducerTestState';
 
@@ -41,6 +41,11 @@ describe('Word To Music reducer', () => {
     expect(result.isUpperCase).toBe(false);
     const result2 = wordToMusicDecoderReducer(result, toggleUpperCase());
     expect(result2.isUpperCase).toBe(true);
+  });
+
+  it('should toggle a note on and off', () => {
+    const result = wordToMusicDecoderReducer(testState, toggleNote('H'));
+    expect(result.currPlaying).toBe('H');
   })
 
   it('should handle resetting', () => {
