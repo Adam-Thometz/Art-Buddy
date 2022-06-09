@@ -3,6 +3,8 @@ import { createReducer } from "@reduxjs/toolkit";
 
 import hasValidWords from "../helpers/hasValidWords";
 import searchLetter from "../helpers/searchLetter";
+import findLettersToRemove from "../helpers/findLettersToRemove";
+
 import play from "../../music-decoder/_utils/play";
 import { LETTER_NOTES } from "../../music-decoder/_utils/letterNotes";
 
@@ -22,21 +24,33 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       const words = action.payload;
       if (words.length === 0) {
         state.words = INITIAL_STATE.words;
+        state.filledLetters = INITIAL_STATE.filledLetters;
         return;
       };
+      
       const check = hasValidWords(words);
       if (!check.success) {
         state.formError = check.error;
         return;
       };
 
-      const newWords = words.split(' ');
-      const result = [];
-      for (let i = 0; i < newWords.length; i++) {
-        if (newWords[i].length > 0) result.push(newWords[i]);
+      const splitWords = words.split(' ');
+      const newWords = [];
+      for (let i = 0; i < splitWords.length; i++) {
+        if (splitWords[i].length > 0) newWords.push(splitWords[i]);
       };
-      state.words = result.length ?
-        result :
+
+      if (words.length < state.words.join(' ').length) {
+        const lettersToUnfill = findLettersToRemove({
+          newWords,
+          currWords: state.words
+        });
+
+        const newFilledLetters = state.filledLetters.filter(letter => !lettersToUnfill.includes(letter));
+        state.filledLetters = newFilledLetters;
+      };
+      state.words = newWords.length ?
+        newWords :
         INITIAL_STATE.words;
       state.formError = null;
     })
