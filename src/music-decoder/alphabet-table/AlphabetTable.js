@@ -10,6 +10,7 @@ import play from "../_utils/play";
 
 const AlphabetTable = () => {
   const isUpperCase = useSelector(state => state.wordToMusic.isUpperCase);
+  const currPlaying = useSelector(state => state.wordToMusic.currPlaying);
   const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
   const dispatch = useDispatch();
   
@@ -33,6 +34,8 @@ const AlphabetTable = () => {
     };
   };
 
+  const isPlaying = char => char === currPlaying ? ' playNote' : '';
+
   const displayLetters = isUpperCase ?
     Object.keys(LETTER_NOTES).slice(0, 26) :
     Object.keys(LETTER_NOTES).slice(26);
@@ -41,12 +44,12 @@ const AlphabetTable = () => {
     <table className="AlphabetTable">
       <tr>
         {displayLetters.slice(0, 13).map((char) => (
-          <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
+          <td key={char} className={`AlphabetTable-cell${fillCell(char)}${isPlaying(char)}`} onClick={handleLetter}>{char}</td>
         ))}
       </tr>
       <tr>
         {displayLetters.slice(13).map((char) => (
-          <td key={char} className={`AlphabetTable-cell${fillCell(char)}`} onClick={handleLetter}>{char}</td>
+          <td key={char} className={`AlphabetTable-cell${fillCell(char)}${isPlaying(char)}`} onClick={handleLetter}>{char}</td>
         ))}
       </tr>
     </table>

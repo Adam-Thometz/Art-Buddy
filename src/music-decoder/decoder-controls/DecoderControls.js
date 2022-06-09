@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale, changeSound } from '../../_redux/actions/wordToMusicActions';
+import { changeScale, changeSound, toggleNote } from '../../_redux/actions/wordToMusicActions';
 
 import './DecoderControls.css';
 
@@ -18,6 +18,7 @@ const DecoderControls = () => {
   const words = useSelector(state => state.wordToMusic.words);
   const scale = useSelector(state => state.wordToMusic.scale);
   const sound = useSelector(state => state.wordToMusic.sound);
+  const currPlaying = useSelector(state => state.wordToMusic.currPlaying);
   const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
   const dispatch = useDispatch();
   
@@ -34,8 +35,22 @@ const DecoderControls = () => {
   }
 
   const handlePlayMelody = () => {
-    const notesToPlay = convertLettersToNotes(words, filledLetters);
+    if (currPlaying) return;
+    
+    const { notesToPlay, lettersToToggle } = convertLettersToNotes(words, filledLetters);
+    for (let i = 0; i < lettersToToggle.length; i++) {
+      const letter = lettersToToggle[i];
+      if (!letter) continue;
+      const start = setTimeout(() => {
+        dispatch(toggleNote(letter));
+        clearTimeout(start);
+      }, (500 * i));
+    };
     play(notesToPlay, scale);
+    const end = setTimeout(() => {
+      dispatch(toggleNote(null));
+      clearTimeout(end);
+    }, 500 * lettersToToggle.length)
   };
   
   return (
