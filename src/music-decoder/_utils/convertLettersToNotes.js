@@ -1,17 +1,22 @@
 import { LETTER_NOTES } from "./letterNotes";
 
 export default function convertLettersToNotes(words, filledLetters) {
-  const result = [];
+  const notesToPlay = [];
+  const lettersToToggle = [];
 
-  for (let word of words) {
-    for (let char of word) {
+  for (let i = 0; i < words.length; i++) {
+    for (let char of words[i]) {
       if (!filledLetters.includes(char)) continue;
       
       const note = LETTER_NOTES[char];
-      result.push(note);
+      notesToPlay.push(note);
+      lettersToToggle.push(char)
     };
-    result.push('');
+    if (i < words.length - 1) {
+      notesToPlay.push('');
+      lettersToToggle.push('');
+    };
   };
 
-  return result;
+  return { notesToPlay, lettersToToggle };
 };
