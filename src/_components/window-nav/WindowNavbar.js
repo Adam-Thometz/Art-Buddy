@@ -30,11 +30,7 @@ const WindowNavbar = ({ cornerIcon = null, page = null }) => {
     <header className="WindowNavbar-games">
       {page === 'WELCOME TO ART BUDDY!' ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
-      {cornerIcon ? (
-        <div className="WindowNavbar-corner-icon">
-          {cornerIcon}
-        </div>
-      ) : null}
+      {cornerIcon ? cornerIcon : null}
     </header>
   );
 
