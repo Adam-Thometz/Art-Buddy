@@ -15,7 +15,7 @@ const AlphabetTable = () => {
   const dispatch = useDispatch();
   
   const handleLetter = e => {
-    const letter = e.target.innerText;
+    const letter = e.target.textContent;
     const hasLetter = filledLetters.includes(letter);
     if (!hasLetter) {
       dispatch(fillLetter(letter));

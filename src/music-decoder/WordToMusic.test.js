@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import WordToMusic from './WordToMusic';
 
-// jest.mock('./_utils/play');
+jest.mock('./_utils/play');
 
 describe('WordToMusic component', () => {
   it('renders without crashing', () => {
@@ -22,7 +22,7 @@ describe('WordToMusic component', () => {
     renderWithProvider(<WordToMusic />);
     const toggle = screen.getByText('ON');
     userEvent.click(toggle);
-    expect(screen.getByText('a')).toBeInTheDocument();
+    expect(screen.getByText('z')).toBeInTheDocument();
   });
 
   it('colors a letter in the word input if found', () => {
@@ -35,8 +35,8 @@ describe('WordToMusic component', () => {
     userEvent.click(wrongLetter);
     expect(wrongLetter).toHaveClass('AlphabetTable-cell');
     
-    // const rightLetter = screen.getByText('L');
-    // userEvent.click(rightLetter);
-    // expect(rightLetter).toHaveClass('AlphabetTable-cell E');
+    const rightLetter = screen.getByText('L');
+    userEvent.click(rightLetter);
+    expect(rightLetter).toHaveClass('AlphabetTable-cell E');
   });
 });
