@@ -33,15 +33,37 @@ describe('SongMaker component', () => {
     const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT')
     userEvent.click(addInstrumentBtns[0])
     expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
+
     const instrumentDropdown = screen.getAllByText('INSTRUMENT')[1];
     userEvent.hover(instrumentDropdown);
     const instrumentOption = screen.getAllByText('DRUM SET')[1];
     userEvent.click(instrumentOption);
     expect(screen.getByText('RHYTHM')).toBeInTheDocument();
+
     const rhythmDropdown = screen.getByText('RHYTHM');
     userEvent.hover(rhythmDropdown);
     const rhythmOption = screen.getByText('REGULAR');
     userEvent.click(rhythmOption);
     expect(screen.queryByText('RHYTHM')).not.toBeInTheDocument();
+  });
+  
+  it('saves a song', async () => {
+    renderWithProvider(<SongMaker />);
+    const saveBtn = screen.getAllByText('SAVE')[0];
+    userEvent.click(saveBtn);
+    expect(screen.getByText('SAVE SONG')).toBeInTheDocument();
+
+    const input = screen.getByLabelText('Song Title');
+    userEvent.type(input, 'Regular Baby');
+    console.log(input)
+    const submit = screen.getAllByText('SAVE')[1];
+    userEvent.click(submit);
+    expect(screen.getByText('Song Saved!')).toBeInTheDocument();
+
+    const close = screen.getByText('CLOSE');
+    userEvent.click(close);
+    const savedSongs = screen.getByText('SAVED SONGS');
+    userEvent.click(savedSongs);
+    expect(screen.getByText('Regular Baby')).toBeInTheDocument();
   });
 });
