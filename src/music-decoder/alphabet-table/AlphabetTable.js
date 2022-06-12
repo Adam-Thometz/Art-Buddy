@@ -13,6 +13,24 @@ const AlphabetTable = () => {
   const currPlaying = useSelector(state => state.wordToMusic.currPlaying);
   const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
   const dispatch = useDispatch();
+
+  const displayLetters = isUpperCase ?
+    Object.keys(LETTER_NOTES).slice(0, 26) :
+    Object.keys(LETTER_NOTES).slice(26);
+
+  const createCell = char => {
+    let className = 'AlphabetTable-cell';
+    if (filledLetters.includes(char)) className += ` ${LETTER_NOTES[char]}`;
+    if (char === currPlaying) className += ' playNote';
+
+    return (
+      <td 
+        key={char}
+        className={className}
+        onClick={handleLetter}
+      >{char}</td>
+    );
+  };
   
   const handleLetter = e => {
     const letter = e.target.textContent;
@@ -25,32 +43,13 @@ const AlphabetTable = () => {
     };
   };
 
-  const fillCell = char => {
-    const hasLetter = filledLetters.includes(char);
-    if (hasLetter) {
-      return ` ${LETTER_NOTES[char]}`;
-    } else {
-      return '';
-    };
-  };
-
-  const isPlaying = char => char === currPlaying ? ' playNote' : '';
-
-  const displayLetters = isUpperCase ?
-    Object.keys(LETTER_NOTES).slice(0, 26) :
-    Object.keys(LETTER_NOTES).slice(26);
-
   return (
     <table className="AlphabetTable">
       <tr>
-        {displayLetters.slice(0, 13).map((char) => (
-          <td key={char} className={`AlphabetTable-cell${fillCell(char)}${isPlaying(char)}`} onClick={handleLetter}>{char}</td>
-        ))}
+        {displayLetters.slice(0, 13).map(char => createCell(char))}
       </tr>
       <tr>
-        {displayLetters.slice(13).map((char) => (
-          <td key={char} className={`AlphabetTable-cell${fillCell(char)}${isPlaying(char)}`} onClick={handleLetter}>{char}</td>
-        ))}
+        {displayLetters.slice(13).map(char => createCell(char))}
       </tr>
     </table>
   );
