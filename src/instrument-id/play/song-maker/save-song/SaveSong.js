@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useLocalStorage from '../../../../_hooks/useLocalStorage';
 import useFormFields from '../../../../_hooks/useFormFields';
 
@@ -14,9 +14,15 @@ const SaveSong = () => {
   const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');
   const [showMessage, setShowMessage] = useState(false);
   const [input, setInput, resetInput] = useFormFields({ title: '' });
+  const inputRef = useRef();
 
-  const handleSave = e => {
-    const title = e.target.previousSibling.children[1].value;
+  const handleSetInput = e => {
+    const { name, value } = e.target;
+    setInput({ name, value });
+  };
+
+  const handleSave = () => {
+    const title = inputRef.current.value;
     const newSavedSongs = new Map(JSON.parse(savedSongs));
     newSavedSongs.set(title, song);
 
@@ -36,11 +42,12 @@ const SaveSong = () => {
         <label className='SaveSong-label' htmlFor='title'>Song Title</label>
         <input
           className='SaveSong-input'
+          ref={inputRef}
           type='text'
           id='title'
           name='title'
           value={input.title}
-          onChange={setInput}
+          onChange={handleSetInput}
         />
         <Keyboard />
       </section>
