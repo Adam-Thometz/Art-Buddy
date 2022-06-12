@@ -28,27 +28,23 @@ exports[`SongMaker component matches snapshot 1`] = `
         Song Maker
       </h1>
       <div
-        class="WindowNavbar-corner-icon"
+        class="SavedSongsIcon"
       >
-        <div
-          class="SavedSongsIcon"
+        <figure
+          class="Icon"
         >
-          <figure
-            class="Icon"
+          <img
+            alt=""
+            src="file"
+            style="height: 49px; width: 49px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
           >
-            <img
-              alt=""
-              src="file"
-              style="height: 49px; width: 49px;"
-            />
-            <figcaption
-              class="Icon-text"
-              style="font-size: 1rem;"
-            >
-              SAVED SONGS
-            </figcaption>
-          </figure>
-        </div>
+            SAVED SONGS
+          </figcaption>
+        </figure>
       </div>
     </header>
     <header>
