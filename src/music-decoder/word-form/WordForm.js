@@ -12,8 +12,8 @@ const WordForm = () => {
   const dispatch = useDispatch();
 
   const updateWord = e => {
-    const { name, value } = e.target;
-    setInput({ name, value });
+    const { value } = e.target;
+    setInput(e);
     dispatch(createWords(value));
   };
 

@@ -3,7 +3,8 @@ import { useState } from "react";
 const useFormFields = (initialState) => {
   const [formData, setFormData] = useState(initialState);
   
-  const handleChange = ({name, value}) => {
+  const handleChange = e => {
+    const { name, value } = e.target;
     setFormData(formData => ({
       ...formData,
       [name]: value

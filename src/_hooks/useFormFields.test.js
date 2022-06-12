@@ -13,7 +13,7 @@ describe('useFormFields hook', () => {
     const { result } = renderHook(() => useFormFields(testInitValue));
     act(() => {
       const setForm = result.current[1];
-      setForm({ name: 'testInput', value: 'goodbye' });
+      setForm({ target: { name: 'testInput', value: 'goodbye' } });
     });
     expect(result.current[0]).toEqual({ testInput: 'goodbye' });
   });
@@ -22,7 +22,7 @@ describe('useFormFields hook', () => {
     const { result } = renderHook(() => useFormFields(testInitValue));
     act(() => {
       const setForm = result.current[1];
-      setForm({ name: 'testInput', value: 'goodbye' });
+      setForm({ target: { name: 'testInput', value: 'goodbye' } });
     });
     expect(result.current[0]).toEqual({ testInput: 'goodbye' });
     act(() => {

@@ -55,7 +55,6 @@ describe('SongMaker component', () => {
 
     const input = screen.getByLabelText('Song Title');
     userEvent.type(input, 'Regular Baby');
-    console.log(input)
     const submit = screen.getAllByText('SAVE')[1];
     userEvent.click(submit);
     expect(screen.getByText('Song Saved!')).toBeInTheDocument();
