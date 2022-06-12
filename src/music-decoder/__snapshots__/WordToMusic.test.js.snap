@@ -28,30 +28,26 @@ exports[`WordToMusic component matches snapshot 1`] = `
         WORD-TO-MUSIC DECODER
       </h1>
       <div
-        class="WindowNavbar-corner-icon"
+        class="Toggle"
       >
         <div
-          class="Toggle"
+          class="Toggle-switch on"
         >
           <div
-            class="Toggle-switch on"
-          >
-            <div
-              class="Toggle-button"
-            />
-            <span>
-              ON
-            </span>
-            <span>
-              OFF
-            </span>
-          </div>
-          <span
-            class="Toggle-label"
-          >
-            UPPER CASE
+            class="Toggle-button"
+          />
+          <span>
+            ON
+          </span>
+          <span>
+            OFF
           </span>
         </div>
+        <span
+          class="Toggle-label"
+        >
+          UPPER CASE
+        </span>
       </div>
     </header>
     <header>
