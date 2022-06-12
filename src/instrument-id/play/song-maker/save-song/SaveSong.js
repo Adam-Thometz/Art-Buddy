@@ -16,11 +16,6 @@ const SaveSong = () => {
   const [input, setInput, resetInput] = useFormFields({ title: '' });
   const inputRef = useRef();
 
-  // const handleSetInput = e => {
-  //   const { name, value } = e.target;
-  //   setInput({ name, value });
-  // };
-
   const handleSave = () => {
     const title = inputRef.current.value;
     const newSavedSongs = new Map(JSON.parse(savedSongs));
