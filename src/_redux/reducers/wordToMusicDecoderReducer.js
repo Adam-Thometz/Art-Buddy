@@ -33,7 +33,7 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
         state.formError = check.error;
         return;
       };
-
+      
       const splitWords = words.split(' ');
       const newWords = [];
       for (let i = 0; i < splitWords.length; i++) {

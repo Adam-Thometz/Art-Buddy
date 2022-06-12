@@ -1,7 +1,7 @@
 export default function findLettersToRemove({ newWords, currWords }) {
   const oldLetterCounter = makeFrequencyCounter(currWords);
   const newLetterCounter = makeFrequencyCounter(newWords);
-  const lettersToRemove = []
+  const lettersToRemove = [];
   for (let char of Object.keys(oldLetterCounter)) {
     if (!newLetterCounter[char]) lettersToRemove.push(char);
   };
@@ -18,4 +18,4 @@ export function makeFrequencyCounter(words) {
     };
   };
   return freqCounter;
-}
+};
