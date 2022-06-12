@@ -32,8 +32,8 @@ const SaveSong = () => {
 
   return (
     <form className='SaveSong'>
-      <div className='SaveSong-control'>
-        <label className='SaveSong-label'>Song Title</label>
+      <section className='SaveSong-control'>
+        <label className='SaveSong-label' htmlFor='title'>Song Title</label>
         <input
           className='SaveSong-input'
           type='text'
@@ -43,7 +43,7 @@ const SaveSong = () => {
           onChange={setInput}
         />
         <Keyboard />
-      </div>
+      </section>
       <Button colorId={0} onClick={handleSave}>SAVE</Button>
       <span className={`SaveSong-message ${showMessage ? 'show' : 'hide'}`}>Song Saved!</span>
     </form>

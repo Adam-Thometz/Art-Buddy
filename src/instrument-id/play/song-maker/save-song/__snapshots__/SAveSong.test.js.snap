@@ -5,11 +5,12 @@ exports[`SaveSong component matches snapshot 1`] = `
   <form
     class="SaveSong"
   >
-    <div
+    <section
       class="SaveSong-control"
     >
       <label
         class="SaveSong-label"
+        for="title"
       >
         Song Title
       </label>
@@ -37,7 +38,7 @@ exports[`SaveSong component matches snapshot 1`] = `
           />
         </figure>
       </div>
-    </div>
+    </section>
     <button
       class="Button regular"
       style="border-color: #89eb0a;"
