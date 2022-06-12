@@ -23,5 +23,6 @@ describe('SaveSong component', () => {
     const submit = screen.getByText('SAVE');
     userEvent.click(submit);
     expect(screen.getByText('Song Saved!')).toBeInTheDocument();
+    expect(screen.queryByDisplayValue('My super awesome song!')).not.toBeInTheDocument();
   });
 });
