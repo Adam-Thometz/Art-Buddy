@@ -27,15 +27,11 @@ exports[`InstrumentId component matches snapshot 1`] = `
       >
         INSTRUMENT ID
       </h1>
-      <div
-        class="WindowNavbar-corner-icon"
-      >
-        <img
-          alt="Help"
-          class="HelpIcon"
-          src="file"
-        />
-      </div>
+      <img
+        alt="Help"
+        class="HelpIcon"
+        src="file"
+      />
     </header>
     <p
       class="InstrumentId-instructions"
