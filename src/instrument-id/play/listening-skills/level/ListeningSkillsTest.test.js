@@ -37,7 +37,7 @@ describe('ListeningSkillsTest component', () => {
     expect(btn).toBeEnabled();
   });
 
-  it('flashes corrent and incorrect for answers', () => {
+  it('flashes correct and incorrect for answers', () => {
     renderWithProvider(<ListeningSkillsTest />);
     setupChoices();
 
