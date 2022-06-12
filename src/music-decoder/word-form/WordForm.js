@@ -8,12 +8,12 @@ import './WordForm.css';
 
 const WordForm = () => {
   const error = useSelector(state => state.wordToMusic.formError);
-  const [input, handleChange] = useFormFields({ words: '' });
+  const [input, setInput] = useFormFields({ words: '' });
   const dispatch = useDispatch();
 
   const updateWord = e => {
     const { name, value } = e.target;
-    handleChange({ name, value });
+    setInput({ name, value });
     dispatch(createWords(value));
   };
 
