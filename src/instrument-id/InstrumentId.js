@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './InstrumentId.css';
 
 import WindowNavbar from "../_components/window-nav/WindowNavbar";
-import HelpIcon from '../_components/help/HelpIcon'
+import HelpIcon from '../_components/help/HelpIcon';
 import Icon from "../_components/icon/Icon";
 import Options from "../_components/option/Options";
 

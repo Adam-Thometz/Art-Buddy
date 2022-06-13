@@ -20,7 +20,7 @@ const SequenceBlock = ({ id, block, borderColor }) => {
   };
 
   const play = () => {
-    playOne({ id: block.id, pitch, duration });
+    playOne({ soundId: block.soundId, pitch, duration });
     dispatch(togglePlaying(id));
     const timer = setTimeout(() => {
       dispatch(togglePlaying(id));

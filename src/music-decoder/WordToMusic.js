@@ -14,9 +14,7 @@ import createSound from './_utils/createSound';
 const WordToMusic = () => {
   const dispatch = useDispatch();
 
-  const loadSound = () => {
-    createSound();
-  };
+  const loadSound = () => createSound();
 
   useEffect(() => {
     return () => {

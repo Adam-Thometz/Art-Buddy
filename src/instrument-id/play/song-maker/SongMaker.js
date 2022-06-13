@@ -20,19 +20,19 @@ import { createBuffers, getBuffers, removeBuffers } from '../../_utils/buffers';
 
 const SongMaker = () => {
   const song = useSelector(state => state.instrumentId.song);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   
   const handleAddInstrument = e => {
     const id = e.currentTarget.id;
     dispatch(addInstrument(id));
-  }
+  };
   
   const handleSelectInstrument = e => {
     const id = +e.currentTarget.id;
     const instrumentId = e.target.id;
     dispatch(selectInstrument({ id, instrumentId }));
     if (process.env.NODE_ENV !== 'test') createBuffers(instrumentId);
-  }
+  };
 
   const handleSelectMelody = e => {
     const id = e.currentTarget.id;
@@ -50,8 +50,8 @@ const SongMaker = () => {
 
       const { buffers } = getBuffers(instrumentId);
       play({ melodyId, buffers, isRhythm });
-    }
-  }
+    };
+  };
 
   useEffect(() => {
     return () => removeBuffers();
@@ -96,7 +96,7 @@ const SongMaker = () => {
           options={instrument.isRhythm ? rhythmOptions : melodyOptions}
           onClick={handleSelectMelody}
         />
-      )
+      );
       return (
         <div className='SongMaker-options'>
           {instrumentDropdown}

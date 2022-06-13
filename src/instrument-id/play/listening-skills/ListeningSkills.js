@@ -23,21 +23,24 @@ const ListeningSkills = () => {
     </>
   );
 
-  const levels = [1,2].map(level => (
-    <div key={level} className="ListeningSkills-level">
-      <Button
-        small
-        colorId={level-1}
-        onClick={() => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`)}
-      >Level {level}</Button>
-      <Popup
-        title='REPORT CARD'
-        trigger={popupTrigger}
-        triggerClass='ListeningSkills-report-card'
-        popup={<ReportCard level={level} />}
-      />
-    </div>
-  ));
+  const levels = [1,2].map(level => {
+    const handleNavigate = () => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`);
+    return (
+      <div key={level} className="ListeningSkills-level">
+        <Button
+          small
+          colorId={level-1}
+          onClick={handleNavigate}
+        >Level {level}</Button>
+        <Popup
+          title='REPORT CARD'
+          trigger={popupTrigger}
+          triggerClass='ListeningSkills-report-card'
+          popup={<ReportCard level={level} />}
+        />
+      </div>
+    );
+  });
 
   return (
     <main className="ListeningSkills">

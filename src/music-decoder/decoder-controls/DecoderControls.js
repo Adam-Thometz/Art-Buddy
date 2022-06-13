@@ -32,7 +32,7 @@ const DecoderControls = () => {
     const newSound = e.target.id === 'synth' ? null : e.target.id;
     createSound(scale, newSound);
     dispatch(changeSound(newSound));
-  }
+  };
 
   const handlePlayMelody = () => {
     if (currPlaying) return;
@@ -50,7 +50,7 @@ const DecoderControls = () => {
     const end = setTimeout(() => {
       dispatch(toggleNote(null));
       clearTimeout(end);
-    }, 500 * lettersToToggle.length)
+    }, 500 * lettersToToggle.length);
   };
   
   return (

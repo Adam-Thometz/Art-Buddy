@@ -8,7 +8,8 @@ import Button from "../../_components/button/Button";
 const Welcome = ({ setHasVisited }) => {
   const handleVisited = () => {
     setHasVisited(true);
-  }
+  };
+  
   return (
     <section className="Welcome">
       <WindowNavbar page='WELCOME TO ART BUDDY!' />

@@ -26,9 +26,7 @@ const ReportCard = ({ level }) => {
     );
   });
 
-  const handleClearReportCard = () => {
-    setSavedReportCard(JSON.stringify(INITIAL_REPORT_CARD));
-  };
+  const handleClearReportCard = () => setSavedReportCard(JSON.stringify(INITIAL_REPORT_CARD));
 
   return (
     <main className='ReportCard'>

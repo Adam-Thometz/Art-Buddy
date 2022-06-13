@@ -9,7 +9,7 @@ const LandingPage = () => {
 
   return !hasVisited ?
     <Welcome setHasVisited={setHasVisited} /> :
-    <Menu category='games' />
+    <Menu />
 };
 
 export default LandingPage;

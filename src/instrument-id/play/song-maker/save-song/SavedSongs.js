@@ -21,8 +21,8 @@ const SavedSongs = () => {
     for (let instrument of song) {
       if (!instrument) continue;
       createBuffers(instrument.instrumentId);
-    }
-  }
+    };
+  };
 
   const handlePlay = () => {
     const song = songs.get(selectedSong);
@@ -34,8 +34,8 @@ const SavedSongs = () => {
       
       const { buffers } = getBuffers(instrumentId);
       play({ melodyId, buffers, isRhythm });
-    }
-  }
+    };
+  };
 
   const handleDelete = () => {
     if (!selectedSong) return;

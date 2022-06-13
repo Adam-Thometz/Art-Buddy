@@ -24,19 +24,15 @@ const Instrument = () => {
     isRhythmicInstrument(instrumentInfo) ?
       playBeat({id, sound}) :
       playScale({id});
-  }
+  };
 
   useEffect(() => {
     return () => removeBuffers();
   }, []);
 
-  const openVideo = () => {
-    window.open(instrumentInfo.videoUrl);
-  };
+  const openVideo = () => window.open(instrumentInfo.videoUrl);
 
-  const handleCreateBuffers = () => {
-    createBuffers(instrumentInfo.id);
-  };
+  const handleCreateBuffers = () => createBuffers(instrumentInfo.id);
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>

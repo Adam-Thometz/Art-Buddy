@@ -42,7 +42,8 @@ const sounds = {
   bark,
   meow,
   tweet
-}
+};
+
 const images = {
   stop,
   clapping,
@@ -51,6 +52,6 @@ const images = {
   cat,
   dog,
   bird
-}
+};
 
 export { sounds, images };

@@ -46,9 +46,7 @@ const Sequence = () => {
     };
   };
 
-  const handleReset = () => {
-    dispatch(resetSequence());
-  };
+  const handleReset = () => dispatch(resetSequence());
 
   return (
     <section className="Sequence">

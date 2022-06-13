@@ -45,12 +45,8 @@ const AlphabetTable = () => {
 
   return (
     <table className="AlphabetTable">
-      <tr>
-        {displayLetters.slice(0, 13).map(char => createCell(char))}
-      </tr>
-      <tr>
-        {displayLetters.slice(13).map(char => createCell(char))}
-      </tr>
+      <tr>{displayLetters.slice(0, 13).map(char => createCell(char))}</tr>
+      <tr>{displayLetters.slice(13).map(char => createCell(char))}</tr>
     </table>
   );
 };

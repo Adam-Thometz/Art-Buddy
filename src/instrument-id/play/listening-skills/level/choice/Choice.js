@@ -27,20 +27,18 @@ const Choice = ({ id, level, choice }) => {
           [choice.family]: [...savedReportCard[choice.family], choice.name]
         };
         setSavedReportCard(JSON.stringify(newReportCard));
-      }
-    }
+      };
+    };
     const timer = setTimeout(() => {
       if (choice.name === answer.name) {
         dispatch(selectChoice({ id, level, choice: choice.family }));
-      }
+      };
       setIsCorrect(null);
       clearTimeout(timer);
     }, 2000);
   };
 
-  const swapInstrument = () => {
-    dispatch(selectChoice({ id, level, choice: choice.family }));
-  }
+  const swapInstrument = () => dispatch(selectChoice({ id, level, choice: choice.family }));  
 
   const isCorrectClass = isCorrect !== null
     ? (isCorrect ? ' correct' : ' incorrect')

@@ -32,6 +32,7 @@ const SoundOptions = () => {
         <Options width='50%'>
           {Object.keys(sounds).map(sound => (
             <Icon
+              key={sound}
               icon={sounds[sound].image}
               size='150px'
               text={sounds[sound].alt}

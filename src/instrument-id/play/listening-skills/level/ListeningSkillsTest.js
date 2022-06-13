@@ -36,7 +36,7 @@ const ListeningSkillsTest = () => {
       if (process.env.NODE_ENV !== 'test') {
         createBuffers(choice1.id);
         createBuffers(choice2.id);
-      }
+      };
     };
   }, [dispatch, choice1, choice2]);
 

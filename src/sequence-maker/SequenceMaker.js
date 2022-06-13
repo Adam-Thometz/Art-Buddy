@@ -13,11 +13,13 @@ import { Transport } from "tone";
 const SequenceMaker = () => {;
   const dispatch = useDispatch();
 
+  // set tempo to 240 bpm to make duration easier to work with
   const setTempo = () => Transport.bpm.value = 240;
 
   useEffect(() => {
     return () => {
       dispatch(clearGame());
+      // set tempo back to normal when finished with game
       Transport.bpm.value = 120;
     };
   }, [dispatch]);

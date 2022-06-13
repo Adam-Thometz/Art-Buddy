@@ -1,6 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const changeCategory = createAction('changeCategory');
+export const setCategory = createAction('setCategory');
 export const addToSequence = createAction('addToSequence');
 export const removeFromSequence = createAction('removeFromSequence');
 export const resetSequence = createAction('resetSequence');

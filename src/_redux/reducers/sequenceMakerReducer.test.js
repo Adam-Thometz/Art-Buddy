@@ -1,5 +1,5 @@
 import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import { addToSequence, changeCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "../actions/sequenceMakerActions";
+import { addToSequence, setCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "../actions/sequenceMakerActions";
 
 import { withCategory } from '../../_testUtils/test-states/sequenceMakerReducerTestState'
 
@@ -9,7 +9,7 @@ describe('Sequence Maker reducer', () => {
   });
 
   it('should handle changing category', () => {
-    expect(sequenceMakerReducer(undefined, changeCategory('animals'))).toEqual({
+    expect(sequenceMakerReducer(undefined, setCategory('animals'))).toEqual({
       ...INITIAL_STATE,
       category: 'animals'
     });

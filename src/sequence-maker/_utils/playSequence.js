@@ -12,7 +12,7 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
     const buffer = window[`${id}Buffer`];
     const sound = sample(buffer);
     const length = `${duration}m`;
-    const pitchToPlay = `C${pitch}`
+    const pitchToPlay = `C${pitch}`;
     if (playAll) {
       sound.triggerAttackRelease(pitchToPlay, length, start);
     } else {
@@ -22,9 +22,9 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
   };
 };
 
-export function playOne({ id, pitch, duration }) {
-  if (id === 'stop') return;
-  const buffer = window[`${id}Buffer`];
+export function playOne({ soundId, pitch, duration }) {
+  if (soundId === 'stop') return;
+  const buffer = window[`${soundId}Buffer`];
   const sound = sample(buffer);
   sound.triggerAttackRelease(`C${pitch}`, `${duration}m`);
 };

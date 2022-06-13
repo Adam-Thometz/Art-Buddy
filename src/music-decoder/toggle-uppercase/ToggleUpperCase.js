@@ -14,6 +14,6 @@ const ToggleUpperCase = () => {
   };
 
   return <Toggle label='UPPER CASE' currToggle={isUpperCase} toggleFn={handleToggle} />;
-}
+};
 
 export default ToggleUpperCase;

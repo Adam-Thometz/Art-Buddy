@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { changeCategory, setDuration, setPitch } from "../../_redux/actions/sequenceMakerActions";
+import { setCategory, setDuration, setPitch } from "../../_redux/actions/sequenceMakerActions";
 
 import './SequenceControls.css'
 
@@ -14,8 +14,8 @@ import durations from './dropdown-options/durations';
 const SequenceControls = () => {
   const dispatch = useDispatch();
 
-  const handleChangeCategory = e => {
-    dispatch(changeCategory(e.target.id));
+  const handleSetCategory = e => {
+    dispatch(setCategory(e.target.id));
   };
 
   const handleSetPitch = e => {
@@ -32,7 +32,7 @@ const SequenceControls = () => {
     <section className='SequenceControls'>
       <Dropdown
         labelText="SOUND CATEGORY"
-        onClick={handleChangeCategory}
+        onClick={handleSetCategory}
         options={categories}
       />
       <Dropdown
