@@ -13,7 +13,7 @@ export function setupChoices() {
 };
 
 export function setupInstrument({ id, isRhythm, withMelody = undefined }) {
-  const instrumentId = isRhythm ? 'drumSet' : 'acousticGuitar'
+  const instrumentId = isRhythm ? 'drumSet' : 'acousticGuitar';
   const result = instrumentIdReducer(withMelody, selectInstrument({
     id,
     instrumentId

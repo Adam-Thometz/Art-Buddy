@@ -41,17 +41,12 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       };
 
       if (words.length < state.words.join(' ').length) {
-        const lettersToUnfill = findLettersToRemove({
-          newWords,
-          currWords: state.words
-        });
-
+        const lettersToUnfill = findLettersToRemove({ newWords, currWords: state.words });
         const newFilledLetters = state.filledLetters.filter(letter => !lettersToUnfill.includes(letter));
         state.filledLetters = newFilledLetters;
       };
-      state.words = newWords.length ?
-        newWords :
-        INITIAL_STATE.words;
+      
+      state.words = newWords.length ? newWords : INITIAL_STATE.words;
       state.formError = null;
     })
     .addCase(fillLetter, (state, action) => {
