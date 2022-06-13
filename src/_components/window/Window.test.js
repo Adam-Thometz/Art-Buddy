@@ -5,10 +5,10 @@ import Window from './Window';
 describe('Window component', () => {
   it('renders without crashing', () => {
     renderWithProvider(<Window />);
-  })
+  });
 
   it('matches the snapshot of the window', () => {
     const { asFragment } = renderWithProvider(<Window />);
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});

@@ -11,7 +11,7 @@ import { createBuffers, removeBuffers } from "../../_utils/buffers";
 import { isRhythmicInstrument } from "../../_utils/getInstrument";
 import { playBeat, playScale } from "../../_utils/play";
 import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import HelpIcon from "../../../_components/help/HelpIcon";
+import Help from "../../../_components/help/Help";
 
 const Instrument = () => {
   const { family, instrument } = useParams();
@@ -36,7 +36,7 @@ const Instrument = () => {
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>
-      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<HelpIcon />} />
+      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
       <div className="Instrument-main">
         <header className="Instrument-name">
           <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />

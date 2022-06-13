@@ -8,7 +8,7 @@ import Icon from "../../../_components/icon/Icon";
 import Popup from "../../../_components/popup/Popup";
 import ReportCard from "../report-card/ReportCard";
 import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import HelpIcon from "../../../_components/help/HelpIcon";
+import Help from "../../../_components/help/Help";
 
 import { listeningSkills, reportCardIcon } from "../../_icons/iconImports";
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
@@ -44,7 +44,7 @@ const ListeningSkills = () => {
 
   return (
     <main className="ListeningSkills">
-      <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<HelpIcon />} />
+      <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<Help />} />
       <div className="ListeningSkills-main">
         <header className="ListeningSkills-icon">
           <Icon

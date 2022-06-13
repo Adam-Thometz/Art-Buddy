@@ -6,7 +6,7 @@ import './LearnFamilyPage.css';
 
 import Icon from "../../../_components/icon/Icon";
 import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import HelpIcon from "../../../_components/help/HelpIcon";
+import Help from "../../../_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { instrumentIdUrls } from "../../../_routes/routeUrls";
@@ -34,7 +34,7 @@ const LearnFamilyPage = () => {
   
   return (
     <main className="LearnFamilyPage">
-      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<HelpIcon />} />
+      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
       <div className="LearnFamilyPage-main">
         <header className="LearnFamilyPage-header">
           <Icon

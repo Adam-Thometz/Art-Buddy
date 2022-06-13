@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keyboard component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Keyboard"
+  >
+    <figure
+      class="Icon"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 43px; width: 65px;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1rem;"
+      />
+    </figure>
+  </div>
+</DocumentFragment>
+`;

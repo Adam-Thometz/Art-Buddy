@@ -7,9 +7,7 @@ import arrow from './arrow.png';
 
 const BackArrow = () => {
   const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  }
+  const goBack = () => navigate(-1);
   return (
     <button className="BackArrow" onClick={goBack}>
       <img className="BackArrow-img" src={arrow} alt="" />

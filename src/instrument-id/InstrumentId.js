@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './InstrumentId.css';
 
 import WindowNavbar from "../_components/window-nav/WindowNavbar";
-import HelpIcon from '../_components/help/HelpIcon';
+import Help from '../_components/help/Help';
 import Icon from "../_components/icon/Icon";
 import Options from "../_components/option/Options";
 
@@ -15,7 +15,7 @@ const InstrumentId = () => {
   const navigate = useNavigate();
   return (
     <main className="InstrumentId">
-      <WindowNavbar page='INSTRUMENT ID' cornerIcon={<HelpIcon />} />
+      <WindowNavbar page='INSTRUMENT ID' cornerIcon={<Help />} />
       <p className="InstrumentId-instructions">Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills</p>
       <Options width="50%">
         <Icon largeFont icon={learnIcon} text="LEARN" onClick={() => navigate(instrumentIdUrls.learnUrl)} />

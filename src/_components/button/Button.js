@@ -14,7 +14,7 @@ const Button = ({
   icon = null,
   otherStyles = {}
 }) => {
-  const borderColor = colors[colorId]
+  const borderColor = colors[colorId];
   return (
     <button
       disabled={disabled}

@@ -16,4 +16,4 @@ describe('Options component', () => {
     const { asFragment } = renderWithProvider(<Options width="65%" />);
     expect(asFragment()).toMatchSnapshot();
   });
-})
+});

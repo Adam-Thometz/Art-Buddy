@@ -7,7 +7,7 @@ export const INITIAL_REPORT_CARD = {
   strings: [],
   woodwind: [],
   voice: []
-}
+};
 
 const useReportCard = (level) => {
   const key = `instrument-id-level-${level}-report-card`;

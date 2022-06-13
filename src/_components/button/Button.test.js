@@ -23,7 +23,7 @@ describe('Button component', () => {
       <Button colorId={1}>HOLA</Button>
       <Button selected colorId={2}>AHLAN</Button>
       <Button small colorId={3}>TRUMP'S HAND SIZE</Button>
-    </div>)
+    </div>);
     const buttons = screen.getAllByRole('button');
     expect(buttons[0]).toHaveTextContent('HELLO');
     expect(buttons[0]).toHaveStyle({borderColor: colors[0]});
@@ -38,5 +38,5 @@ describe('Button component', () => {
     expect(buttons[3]).toHaveTextContent("TRUMP'S HAND SIZE");
     expect(buttons[3]).toHaveStyle({borderColor: colors[3]});
     expect(buttons[3]).toHaveClass('small');
-  })
-})
+  });
+});

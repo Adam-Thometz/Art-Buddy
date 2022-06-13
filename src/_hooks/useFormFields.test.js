@@ -30,5 +30,5 @@ describe('useFormFields hook', () => {
       resetForm();
     });
     expect(result.current[0]).toEqual(testInitValue);
-  })
+  });
 });

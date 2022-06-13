@@ -5,27 +5,27 @@ import './Popup.css';
 import close from './_icons/close.png';
 
 const Popup = ({ title, trigger, triggerClass, popup }) => {
-  const [popupTrigger, setPopupTrigger] = useState(false);
+  const [isShowingPopup, setIsShowingPopup] = useState(false);
   
   const handleSetTrigger = e => {
-    if (popupTrigger) {
+    if (isShowingPopup) {
       const correctBounds =
         e.currentTarget.classList[0] === 'Popup-close' ||
         e.target.classList[0] === 'Popup';
       if (correctBounds) {
-        setPopupTrigger(trigger => !trigger);
+        setIsShowingPopup(trigger => !trigger);
       }
     } else {
-      setPopupTrigger(trigger => !trigger);
+      setIsShowingPopup(trigger => !trigger);
     };
-  }
+  };
 
   return (
     <>
       <div className={triggerClass} onClick={handleSetTrigger}>
         {trigger}
       </div>
-      {popupTrigger ? (
+      {isShowingPopup ? (
         <main className='Popup' onClick={handleSetTrigger}>
           <section className='Popup-box'>
             <header className='Popup-header'>
@@ -40,9 +40,7 @@ const Popup = ({ title, trigger, triggerClass, popup }) => {
         </main>
       ) : ''}
     </>
-  )
-  // return trigger ? (
-  // ) : '';
+  );
 };
 
 export default Popup;
