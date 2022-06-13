@@ -17,6 +17,4 @@ const addedStudents = {
   winners: [{ name: 'Jake', color: 'blue' }]
 };
 
-export {
-  addedStudents
-};
+export { addedStudents };
