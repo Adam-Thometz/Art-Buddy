@@ -29,7 +29,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
       </h1>
       <img
         alt="Help"
-        class="HelpIcon"
+        class="Help"
         src="file"
       />
     </header>
