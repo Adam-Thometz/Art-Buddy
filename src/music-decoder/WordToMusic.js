@@ -3,8 +3,6 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { clearGame } from '../_redux/actions/wordToMusicActions';
 
-import './WordToMusic.css';
-
 import WindowNavbar from '../_components/window-nav/WindowNavbar';
 import ToggleUpperCase from './toggle-uppercase/ToggleUpperCase';
 import WordForm from './word-form/WordForm';
