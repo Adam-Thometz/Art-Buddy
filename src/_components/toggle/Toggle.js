@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Toggle.css';
 
-const Toggle = ({ label, currToggle, toggleFn }) => {
+const Toggle = ({ label = null, currToggle, toggleFn }) => {
   return (
     <div className='Toggle'>
       <div className={`Toggle-switch ${currToggle ? 'on' : 'off'}`} onClick={toggleFn}>
@@ -10,7 +10,7 @@ const Toggle = ({ label, currToggle, toggleFn }) => {
         <span>ON</span>
         <span>OFF</span>
       </div>
-      <span className='Toggle-label'>{label}</span>
+      {label ? <span className='Toggle-label'>{label}</span> : null}
     </div>
   );
 };

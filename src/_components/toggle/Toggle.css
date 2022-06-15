@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100px;
   height: 65px;
 }
@@ -21,7 +22,6 @@
 
 .Toggle-button {
   position: absolute;
-  top: 5px;
   width: 30px;
   height: 30px;
   background-color: white;
