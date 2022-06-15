@@ -68,14 +68,7 @@ const SongMaker = () => {
   const instrumentDisplay = song.map((instrument, i) => {
     if (!instrument) {
       return (
-        <Icon
-          key={i}
-          icon={addInstrumentIcon}
-          text='ADD INSTRUMENT'
-          size='69px'
-          id={i}
-          onClick={handleAddInstrument}
-        />
+        <Icon key={i} icon={addInstrumentIcon} text='ADD INSTRUMENT' size='69px' id={i} onClick={handleAddInstrument}/>
       );
     } else {
       const instrumentDropdown = (

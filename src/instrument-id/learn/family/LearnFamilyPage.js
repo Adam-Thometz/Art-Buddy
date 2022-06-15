@@ -1,6 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import './LearnFamilyPage.css';
 
@@ -18,9 +17,16 @@ const LearnFamilyPage = () => {
   const { instruments } = instrumentFamily;
 
   const options = instruments.map(instrument => {
-    const handleNavigate = () => (
-      navigate(`${instrumentIdUrls.learnUrl}/${family}/${instrument.name.toLowerCase().replace(' ', '-')}`)
-    );
+    const handleNavigate = () => {
+      const url = `${
+        instrumentIdUrls.learnUrl
+      }/${
+        family
+      }/${
+        instrument.name.toLowerCase().replace(' ', '-')
+      }`;
+      navigate(url);
+    };
 
     return (<Icon
       key={instrument.name}
@@ -29,7 +35,7 @@ const LearnFamilyPage = () => {
       width={instrument.name === 'TROMBONE' ? '250px' : null}
       text={instrument.name.toUpperCase()}
       onClick={handleNavigate}
-    />)
+    />);
   });
   
   return (

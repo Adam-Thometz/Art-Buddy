@@ -21,4 +21,4 @@ describe('Points component', () => {
     const points = within(pointContainer).getAllByTestId('point');
     expect(points.length).toBe(4);
   });
-})
+});

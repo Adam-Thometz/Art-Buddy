@@ -10,11 +10,11 @@ const Points = ({ points, color }) => {
 
   return (
     <div data-testid='points'>
-      {pointDisplay.map((num, i) => (
-        <Point key={i} num={num} color={color} />
+      {pointDisplay.map(num => (
+        <Point key={num} num={num} color={color} />
       ))}
     </div>
   );
 };
 
-export default Points
+export default Points;

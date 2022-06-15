@@ -13,4 +13,4 @@ describe('Play component', () => {
     const { asFragment } = renderWithProvider(<Play />);
     expect(asFragment()).toMatchSnapshot();
   });
-})
+});

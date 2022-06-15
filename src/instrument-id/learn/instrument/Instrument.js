@@ -5,13 +5,13 @@ import './Instrument.css';
 
 import Icon from "../../../_components/icon/Icon";
 import Button from "../../../_components/button/Button";
+import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
+import Help from "../../../_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "../../_utils/buffers";
 import { isRhythmicInstrument } from "../../_utils/getInstrument";
 import { playBeat, playScale } from "../../_utils/play";
-import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import Help from "../../../_components/help/Help";
 
 const Instrument = () => {
   const { family, instrument } = useParams();

@@ -14,9 +14,11 @@ import play from '../_media/_icons/play.png';
 import playAll from '../_media/_icons/play-all.png';
 
 const Sequence = () => {
-  const sequence = useSelector(state => state.sequenceMaker.sequence);
-  const pitch = useSelector(state => state.sequenceMaker.pitch);
-  const duration = useSelector(state => state.sequenceMaker.duration);
+  const {
+    sequence,
+    pitch,
+    duration
+  } = useSelector(state => state.sequenceMaker);
   const dispatch = useDispatch(); 
 
   const handlePlay = () => {

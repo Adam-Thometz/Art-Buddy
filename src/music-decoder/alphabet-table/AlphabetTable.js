@@ -9,9 +9,11 @@ import { LETTER_NOTES } from '../_utils/letterNotes';
 import play from "../_utils/play";
 
 const AlphabetTable = () => {
-  const isUpperCase = useSelector(state => state.wordToMusic.isUpperCase);
-  const currPlaying = useSelector(state => state.wordToMusic.currPlaying);
-  const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
+  const {
+    isUpperCase,
+    currPlaying,
+    filledLetters
+  } = useSelector(state => state.wordToMusic);
   const dispatch = useDispatch();
 
   const displayLetters = isUpperCase ?

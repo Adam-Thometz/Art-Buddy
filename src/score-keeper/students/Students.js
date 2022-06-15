@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 
-import './Students.css'
+import './Students.css';
 
 import Student from "./Student";
 

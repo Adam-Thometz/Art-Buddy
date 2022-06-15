@@ -10,8 +10,7 @@ import Button from "../../../_components/button/Button";
 import { playOne } from "../../_utils/playSequence";
 
 const SequenceBlock = ({ id, block, borderColor }) => {
-  const pitch = useSelector(state => state.sequenceMaker.pitch);
-  const duration = useSelector(state => state.sequenceMaker.duration);
+  const { pitch, duration } = useSelector(state => state.sequenceMaker);
   const dispatch = useDispatch();
   
   const remove = e => {

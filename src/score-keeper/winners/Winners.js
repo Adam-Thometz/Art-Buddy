@@ -8,13 +8,13 @@ import './Winners.css';
 import Button from "../../_components/button/Button";
 
 const Winners = () => {
-  const dispatch = useDispatch()
   const winners = useSelector(state => state.scoreKeeper.winners);
+  const dispatch = useDispatch();
 
   const handleReset = () => {
     dispatch(resetScores());
     dispatch(toggleGameOver(false));
-  }
+  };
 
   return (
     <div className="Winners">

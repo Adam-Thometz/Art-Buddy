@@ -15,11 +15,13 @@ import createSound from '../_utils/createSound';
 import convertLettersToNotes from '../_utils/convertLettersToNotes';
 
 const DecoderControls = () => {
-  const words = useSelector(state => state.wordToMusic.words);
-  const scale = useSelector(state => state.wordToMusic.scale);
-  const sound = useSelector(state => state.wordToMusic.sound);
-  const currPlaying = useSelector(state => state.wordToMusic.currPlaying);
-  const filledLetters = useSelector(state => state.wordToMusic.filledLetters);
+  const {
+    words,
+    scale,
+    sound,
+    currPlaying,
+    filledLetters
+  } = useSelector(state => state.wordToMusic);
   const dispatch = useDispatch();
   
   const handleChangeScale = e => {

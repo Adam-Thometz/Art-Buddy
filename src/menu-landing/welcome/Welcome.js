@@ -6,9 +6,7 @@ import WindowNavbar from "../../_components/window-nav/WindowNavbar";
 import Button from "../../_components/button/Button";
 
 const Welcome = ({ setHasVisited }) => {
-  const handleVisited = () => {
-    setHasVisited(true);
-  };
+  const handleVisited = () => setHasVisited(true);
   
   return (
     <section className="Welcome">

@@ -12,8 +12,7 @@ import soundInfo from '../_media/soundInfo';
 import { createBuffer } from '../_utils/createBuffer';
 
 const SoundOptions = () => {
-  const category = useSelector(state => state.sequenceMaker.category);
-  const sequence = useSelector(state => state.sequenceMaker.sequence);
+  const { category, sequence } = useSelector(state => state.sequenceMaker);
   const dispatch = useDispatch();
 
   const handleAddToSequence = e => {

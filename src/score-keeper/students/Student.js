@@ -13,7 +13,7 @@ const Student = ({ name, color, points }) => {
 
   const remove = () => {
     dispatch(removeStudent(name));
-  }
+  };
 
   const plus = () => {
     dispatch(addPoint(name));
@@ -28,7 +28,7 @@ const Student = ({ name, color, points }) => {
   const pointButtonStyles = {
     fontSize: '1.5rem',
     width: '30%'
-  }
+  };
 
   return (
     <div className="Student">
