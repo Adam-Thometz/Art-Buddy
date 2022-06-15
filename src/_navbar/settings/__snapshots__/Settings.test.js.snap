@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings component matches the snapshot of the Settings 1`] = `
+<DocumentFragment>
+  <div
+    class="Settings"
+  >
+    <span
+      class="Settings-text"
+    >
+      Volume
+    </span>
+    <div
+      class="Settings-icons-volume"
+    >
+      <figure
+        class="Icon"
+        id="low"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 40px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          LOW
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+        id="medium"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 50px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          MEDIUM
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+        id="high"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 60px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          HIGH
+        </figcaption>
+      </figure>
+    </div>
+    <span
+      class="Settings-text"
+    >
+      Text to Speech
+    </span>
+    <span
+      class="Settings-toggle"
+    >
+      <div
+        class="Toggle"
+      >
+        <div
+          class="Toggle-switch off"
+        >
+          <div
+            class="Toggle-button"
+          />
+          <span>
+            ON
+          </span>
+          <span>
+            OFF
+          </span>
+        </div>
+      </div>
+    </span>
+    <span
+      class="Settings-text"
+    >
+      Color Blind
+    </span>
+    <span
+      class="Settings-toggle"
+    >
+      <div
+        class="Toggle"
+      >
+        <div
+          class="Toggle-switch off"
+        >
+          <div
+            class="Toggle-button"
+          />
+          <span>
+            ON
+          </span>
+          <span>
+            OFF
+          </span>
+        </div>
+      </div>
+    </span>
+    <span
+      class="Settings-text"
+    >
+      Roster
+    </span>
+    <div
+      class="Settings-icons-roster"
+    >
+      <span
+        class="Settings-add-roster"
+      >
+        +
+      </span>
+      <div
+        class="Dropdown"
+      >
+        <span
+          class="Dropdown-label"
+        >
+          SELECT ROSTER 
+          <img
+            alt=""
+            src="file"
+          />
+        </span>
+        <div
+          class="Dropdown-options"
+        />
+      </div>
+    </div>
+    <div
+      class="Settings-icons"
+    />
+  </div>
+</DocumentFragment>
+`;

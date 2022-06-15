@@ -13,3 +13,12 @@
   font-size: 2rem;
   color: #0D0709;
 }
+
+.Navbar-settings {
+  cursor: pointer;
+}
+
+.Navbar-settings img {
+  height: 35px;
+  width: 35px;
+}

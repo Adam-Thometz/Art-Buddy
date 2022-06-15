@@ -10,6 +10,14 @@ exports[`Navbar component matches the snapshot of the navbar 1`] = `
     >
       ARTBUDDY
     </span>
+    <div
+      class="Navbar-settings"
+    >
+      <img
+        alt="settings"
+        src="file"
+      />
+    </div>
   </nav>
 </DocumentFragment>
 `;
