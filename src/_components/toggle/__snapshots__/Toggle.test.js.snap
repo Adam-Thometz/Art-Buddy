@@ -18,9 +18,6 @@ exports[`Toggle component matches snapshot 1`] = `
         OFF
       </span>
     </div>
-    <span
-      class="Toggle-label"
-    />
   </div>
 </DocumentFragment>
 `;
