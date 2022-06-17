@@ -49,28 +49,6 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             src="file"
           />
         </span>
-        <div
-          class="Dropdown-options"
-        >
-          <p
-            class="Dropdown-option"
-            id="bodySoundsContinuous"
-          >
-            BODY SOUNDS
-          </p>
-          <p
-            class="Dropdown-option"
-            id="bodySoundsOnce"
-          >
-            BODY SOUNDS (once)
-          </p>
-          <p
-            class="Dropdown-option"
-            id="animals"
-          >
-            ANIMALS
-          </p>
-        </div>
       </div>
       <div
         class="Dropdown"
@@ -84,28 +62,6 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             src="file"
           />
         </span>
-        <div
-          class="Dropdown-options"
-        >
-          <p
-            class="Dropdown-option"
-            id="2"
-          >
-            LOW
-          </p>
-          <p
-            class="Dropdown-option"
-            id="3"
-          >
-            MEDIUM
-          </p>
-          <p
-            class="Dropdown-option"
-            id="4"
-          >
-            HIGH
-          </p>
-        </div>
       </div>
       <div
         class="Dropdown"
@@ -119,40 +75,6 @@ exports[`SequenceMaker component matches snapshot 1`] = `
             src="file"
           />
         </span>
-        <div
-          class="Dropdown-options"
-        >
-          <p
-            class="Dropdown-option"
-            id="1"
-          >
-            1 SECOND
-          </p>
-          <p
-            class="Dropdown-option"
-            id="2"
-          >
-            2 SECONDS
-          </p>
-          <p
-            class="Dropdown-option"
-            id="3"
-          >
-            3 SECONDS
-          </p>
-          <p
-            class="Dropdown-option"
-            id="4"
-          >
-            4 SECONDS
-          </p>
-          <p
-            class="Dropdown-option"
-            id="5"
-          >
-            5 SECONDS
-          </p>
-        </div>
       </div>
     </section>
     <section

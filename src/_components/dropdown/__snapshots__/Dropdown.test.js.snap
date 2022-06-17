@@ -14,22 +14,6 @@ exports[`Dropdown component matches the snapshot 1`] = `
         src="file"
       />
     </span>
-    <div
-      class="Dropdown-options"
-    >
-      <p
-        class="Dropdown-option"
-        id="test"
-      >
-        test option
-      </p>
-      <p
-        class="Dropdown-option"
-        id="test2"
-      >
-        another test option
-      </p>
-    </div>
   </div>
 </DocumentFragment>
 `;

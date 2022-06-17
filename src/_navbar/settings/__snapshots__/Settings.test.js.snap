@@ -139,9 +139,6 @@ exports[`Settings component matches the snapshot of the Settings 1`] = `
             src="file"
           />
         </span>
-        <div
-          class="Dropdown-options"
-        />
       </div>
     </div>
     <div

@@ -34,64 +34,6 @@ exports[`New Student Form matches the snapshot 1`] = `
           src="file"
         />
       </span>
-      <div
-        class="Dropdown-options"
-      >
-        <p
-          class="Dropdown-option"
-          id="hex000000"
-        >
-          Black
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hexE60026"
-        >
-          Red
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hexFF8B3D"
-        >
-          Orange
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hexFFE81A"
-        >
-          Yellow
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hex89EB0A"
-        >
-          Green
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hex3783FF"
-        >
-          Blue
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hex00C5CD"
-        >
-          Turquoise
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hex4B0082"
-        >
-          Purple
-        </p>
-        <p
-          class="Dropdown-option"
-          id="hexEE82EE"
-        >
-          Pink
-        </p>
-      </div>
     </div>
     <button
       class="Button small"

@@ -24,7 +24,7 @@ describe('Score Keeper', () => {
     userEvent.type(input, 'Eddie');
     expect(screen.getByDisplayValue('Eddie')).toBeInTheDocument();
     
-    userEvent.hover(dropdown);
+    userEvent.click(dropdown);
     const option = screen.getByText('Red');
     userEvent.click(option);
     userEvent.click(btn);

@@ -7,7 +7,7 @@ import { createWords } from "../../_redux/actions/wordToMusicActions";
 import './WordForm.css';
 
 const WordForm = () => {
-  const error = useSelector(state => state.wordToMusic.formError);
+  const { formError } = useSelector(state => state.wordToMusic);
   const [input, setInput] = useFormFields({ words: '' });
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ const WordForm = () => {
   return (
     <form className="WordForm">
       <label className="WordForm-label" htmlFor="words">WORDS</label>
-      <span className="WordForm-error">{error}</span>
+      <span className="WordForm-error">{formError}</span>
       <input
         className="WordForm-input"
         type="text"

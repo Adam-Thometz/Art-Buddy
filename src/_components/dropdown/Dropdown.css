@@ -36,7 +36,7 @@
   font-size: 1rem;
 }
 
-.Dropdown:hover .Dropdown-options {
+.Dropdown-options {
   position: absolute;
   top: 47px;
   display: block;

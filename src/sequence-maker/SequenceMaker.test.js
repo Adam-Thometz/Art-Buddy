@@ -10,7 +10,7 @@ jest.mock('./_utils/createBuffer');
 
 function setupChoices() {
   const categoryDropdown = screen.getByText('SOUND CATEGORY');
-  userEvent.hover(categoryDropdown);
+  userEvent.click(categoryDropdown);
   const option = screen.getByText('ANIMALS');
   userEvent.click(option);
 };

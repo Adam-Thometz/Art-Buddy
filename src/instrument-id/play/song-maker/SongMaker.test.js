@@ -17,12 +17,12 @@ describe('SongMaker component', () => {
   it('selects melodies', () => {
     renderWithProvider(<SongMaker />);
     const instrumentDropdown = screen.getByText('INSTRUMENT');
-    userEvent.hover(instrumentDropdown);
+    userEvent.click(instrumentDropdown);
     const instrumentOption = screen.getByText('VIOLIN');
     userEvent.click(instrumentOption);
     expect(screen.getByText('MELODY')).toBeInTheDocument();
     const melodyDropdown = screen.getByText('MELODY');
-    userEvent.hover(melodyDropdown);
+    userEvent.click(melodyDropdown);
     const melodyOption = screen.getByText('BABY SHARK');
     userEvent.click(melodyOption);
     expect(screen.queryByText('MELODY')).not.toBeInTheDocument();
@@ -35,13 +35,13 @@ describe('SongMaker component', () => {
     expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
 
     const instrumentDropdown = screen.getAllByText('INSTRUMENT')[1];
-    userEvent.hover(instrumentDropdown);
-    const instrumentOption = screen.getAllByText('DRUM SET')[1];
+    userEvent.click(instrumentDropdown);
+    const instrumentOption = screen.getByText('DRUM SET');
     userEvent.click(instrumentOption);
     expect(screen.getByText('RHYTHM')).toBeInTheDocument();
 
     const rhythmDropdown = screen.getByText('RHYTHM');
-    userEvent.hover(rhythmDropdown);
+    userEvent.click(rhythmDropdown);
     const rhythmOption = screen.getByText('REGULAR');
     userEvent.click(rhythmOption);
     expect(screen.queryByText('RHYTHM')).not.toBeInTheDocument();

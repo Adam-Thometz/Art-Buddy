@@ -84,47 +84,6 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
                 src="file"
               />
             </span>
-            <div
-              class="Dropdown-options"
-              id="1"
-            >
-              <p
-                class="Dropdown-option"
-                id="brass"
-              >
-                BRASS
-              </p>
-              <p
-                class="Dropdown-option"
-                id="electronic"
-              >
-                ELECTRONIC
-              </p>
-              <p
-                class="Dropdown-option"
-                id="percussion"
-              >
-                PERCUSSION
-              </p>
-              <p
-                class="Dropdown-option"
-                id="strings"
-              >
-                STRINGS
-              </p>
-              <p
-                class="Dropdown-option"
-                id="woodwind"
-              >
-                WOODWIND
-              </p>
-              <p
-                class="Dropdown-option"
-                id="voice"
-              >
-                VOICE
-              </p>
-            </div>
           </div>
         </div>
         <div
