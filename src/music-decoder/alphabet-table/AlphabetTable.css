@@ -1,47 +1,48 @@
 .AlphabetTable {
   margin: 0 auto;
   width: 100%;
+  font-size: 3rem;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
 }
 
 .AlphabetTable-cell {
-  font-size: 3rem;
   text-align: center;
   padding: 5px 20px;
   cursor: pointer;
   margin: 5px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 5vw;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .C {
-  background-color: red;
-  color: white;
+  color: #EB3323;
 }
 
 .D {
-  background-color: rgb(238, 169, 41);
+  color: #E99E0E;
 }
 
 .E {
-  background-color: yellow;
+  color: #FFFD54;
 }
 
 .F {
-  background-color: green;
+  color: #377D22;
 }
 
 .G {
-  background-color: rgb(99, 196, 228);
+  color: #7BC2E0;
 }
 
 .A {
-  background-color: rgb(0, 0, 172);
-  color: white;
+  color: #5768FF;
 }
 
 .B {
-  background-color: purple;
-  color: white;
+  color: #751A7C;
 }
 
 .playNote {
