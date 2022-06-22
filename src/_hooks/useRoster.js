@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useRoster = (roster = null) => { 
+const useRoster = () => { 
   const allRosters = JSON.parse(localStorage.getItem('rosters')) || {};
   const [rosters, setRosters] = useState(allRosters);
   
@@ -8,11 +8,7 @@ const useRoster = (roster = null) => {
     localStorage.setItem('rosters', JSON.stringify(rosters));
   }, [rosters]);
 
-  const getRoster = () => {
-    return rosters[roster];
-  };
-
-  return [rosters, setRosters, getRoster];
+  return [rosters, setRosters];
 };
 
 export default useRoster;
