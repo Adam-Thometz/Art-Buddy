@@ -1,4 +1,4 @@
-import { changeMenuGames, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
+import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
@@ -22,6 +22,9 @@ const mainSettingsReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(toggleColorBlind, (state) => {
       state.colorBlind = !state.colorBlind;
+    })
+    .addCase(setRoster, (state, action) => {
+      state.roster = action.payload;
     })
 });
 

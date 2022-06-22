@@ -2,7 +2,7 @@
 
 exports[`Settings component matches the snapshot of the Settings 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="Settings"
   >
     <span
@@ -122,28 +122,15 @@ exports[`Settings component matches the snapshot of the Settings 1`] = `
     <div
       class="Settings-icons-roster"
     >
-      <span
+      <div
         class="Settings-add-roster"
       >
         +
-      </span>
-      <div
-        class="Dropdown"
-      >
-        <span
-          class="Dropdown-label"
-        >
-          SELECT ROSTER 
-          <img
-            alt=""
-            src="file"
-          />
-        </span>
       </div>
     </div>
     <div
       class="Settings-icons"
     />
-  </div>
+  </main>
 </DocumentFragment>
 `;

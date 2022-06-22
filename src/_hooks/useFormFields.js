@@ -13,7 +13,14 @@ const useFormFields = (initialState) => {
 
   const resetFormData = () => setFormData(initialState);
 
-  return [formData, handleChange, resetFormData];
+  const addInput = (newInput, defaultValue = '') => {
+    setFormData(formData => ({
+      ...formData,
+      [newInput]: defaultValue
+    }));
+  };
+
+  return [formData, handleChange, resetFormData, addInput];
 };
 
 export default useFormFields;
