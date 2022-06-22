@@ -69,8 +69,6 @@ const Settings = () => {
           <Dropdown labelText={roster.name ? roster.name : 'SELECT ROSTER'} onClick={handleSetRoster} options={createRosterSelection()} />
         ) : null}
       </div>
-      <div className='Settings-icons'>
-      </div>
     </main>
   );
 };

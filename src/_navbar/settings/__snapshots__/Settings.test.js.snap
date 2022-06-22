@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Settings component matches the snapshot of the Settings 1`] = `
+exports[`Settings component matches the snapshot of Settings 1`] = `
 <DocumentFragment>
   <main
     class="Settings"
@@ -128,9 +128,6 @@ exports[`Settings component matches the snapshot of the Settings 1`] = `
         +
       </div>
     </div>
-    <div
-      class="Settings-icons"
-    />
   </main>
 </DocumentFragment>
 `;

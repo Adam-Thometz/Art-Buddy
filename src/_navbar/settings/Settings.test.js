@@ -7,7 +7,7 @@ describe('Settings component', () => {
     renderWithProvider(<Settings />);
   });
 
-  it('matches the snapshot of the Settings', () => {
+  it('matches the snapshot of Settings', () => {
     const { asFragment } = renderWithProvider(<Settings />);
     expect(asFragment()).toMatchSnapshot();
   });
