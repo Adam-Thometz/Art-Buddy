@@ -1,5 +1,5 @@
 import mainSettingsReducer, { INITIAL_STATE } from "./mainSettingsReducer";
-import { changeMenuGames, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
+import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
@@ -34,7 +34,16 @@ describe('Main Menu & Settings Reducer', () => {
     const init = mainSettingsReducer(undefined, {});
     expect(init.colorBlind).toBeFalsy();
 
-    const result = mainSettingsReducer(undefined, toggleColorBlind());
+    const result = mainSettingsReducer(init, toggleColorBlind());
     expect(result.colorBlind).toBeTruthy();
+  });
+
+  it('should handle updating the global roster', () => {
+    const init = mainSettingsReducer(undefined, {});
+    expect(init.roster).toEqual({});
+
+    const sampleRoster = { name: 'Demo Class', students: ['Hello', 'Goodbye'] }
+    const result = mainSettingsReducer(init, setRoster(sampleRoster));
+    expect(result.roster).toEqual(sampleRoster);
   });
 });
