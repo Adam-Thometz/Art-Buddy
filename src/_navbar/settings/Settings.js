@@ -9,12 +9,12 @@ import './Settings.css';
 import Icon from '../../_components/icon/Icon';
 import Toggle from '../../_components/toggle/Toggle';
 import Dropdown from '../../_components/dropdown/Dropdown';
+import Popup from '../../_components/popup/Popup';
+import NewRoster from './rosters/NewRoster';
 
 import volumeHigh from './_icons/volume/volume-high.png';
 import volumeMid from './_icons/volume/volume-medium.png';
 import volumeLow from './_icons/volume/volume-low.png';
-import Popup from '../../_components/popup/Popup';
-import NewRoster from './rosters/NewRoster';
 
 const Settings = () => {
   const { 
@@ -26,23 +26,17 @@ const Settings = () => {
   const dispatch = useDispatch();
   
   const createRosterSelection = () => {
-    const rosterSelection = {}
+    const rosterSelection = {};
     for (let rosterId in rosters) {
       rosterSelection[rosterId] = rosters[rosterId].name;
-    }
-
-    console.log(rosterSelection);
-    return rosterSelection
-  }
+    };
+    return rosterSelection;
+  };
   
   const handleVolume = e => dispatch(setVolume(e.target.id));
   const handleTextToSpeech = () => dispatch(toggleTextToSpeech());
   const handleColorBlind = () => dispatch(toggleColorBlind());
-  const handleSetRoster = e => {
-    const selectedRosterId = e.target.id;
-    const rosterToSet = rosters[selectedRosterId];
-    dispatch(setRoster(rosterToSet))
-  };
+  const handleSetRoster = e => dispatch(setRoster(rosters[e.target.id]));
 
   return (
     <main className='Settings'>
