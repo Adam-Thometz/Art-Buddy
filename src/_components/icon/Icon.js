@@ -2,7 +2,15 @@ import React from "react";
 
 import './Icon.css';
 
-const Icon = ({ icon, text, onClick = null, size = "250px", width = null, largeFont = false,  id = null }) => {
+const Icon = ({ 
+  id = null,
+  icon,
+  largeFont = false,
+  onClick = null,
+  size = "250px",
+  text,
+  width = null
+}) => {
   const imgStyles = {
     height: size,
     width: width ? width : size,
