@@ -22,7 +22,9 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
     <div
       class="NewRoster-students"
     >
-      <div>
+      <div
+        class="NewRoster-form-control"
+      >
         <label
           for="student1"
         >

@@ -13,7 +13,7 @@ const NewRoster = () => {
   const studentInputs = Object.keys(input)
     .filter(field => field.includes('student'))
     .map((field, i) => (
-      <div>
+      <div className='NewRoster-form-control'>
         <label htmlFor={field}>Student {i+1}</label>
         <input
           type='text'
@@ -26,8 +26,8 @@ const NewRoster = () => {
     ));
 
   const addStudent = () => {
-    const newStudent = `student${Object.keys(input).length}`
-    addInput(newStudent);
+    const newStudentInput = `student${Object.keys(input).length}`
+    addInput(newStudentInput);
   };
 
   const updateInput = e => {

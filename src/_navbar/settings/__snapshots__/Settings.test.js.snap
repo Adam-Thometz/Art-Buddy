@@ -15,7 +15,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
     >
       <figure
         class="Icon"
-        id="low"
+        id="-12"
       >
         <img
           alt=""
@@ -31,7 +31,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
       </figure>
       <figure
         class="Icon"
-        id="medium"
+        id="0"
       >
         <img
           alt=""
@@ -47,7 +47,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
       </figure>
       <figure
         class="Icon"
-        id="high"
+        id="12"
       >
         <img
           alt=""

@@ -33,7 +33,7 @@ const Settings = () => {
     return rosterSelection;
   };
   
-  const handleVolume = e => dispatch(setVolume(e.target.id));
+  const handleVolume = e => dispatch(setVolume(+e.currentTarget.id));
   const handleTextToSpeech = () => dispatch(toggleTextToSpeech());
   const handleColorBlind = () => dispatch(toggleColorBlind());
   const handleSetRoster = e => dispatch(setRoster(rosters[e.target.id]));
@@ -42,9 +42,9 @@ const Settings = () => {
     <main className='Settings'>
       <span className='Settings-text'>Volume</span>
       <div className='Settings-icons-volume'>
-        <Icon icon={volumeLow} text='LOW' onClick={handleVolume} id='low' size='50px' width='40px' />
-        <Icon icon={volumeMid} text='MEDIUM' onClick={handleVolume} id='medium' size='50px' />
-        <Icon icon={volumeHigh} text='HIGH' onClick={handleVolume} id='high' size='50px' width='60px' />
+        <Icon icon={volumeLow} text='LOW' onClick={handleVolume} id='-12' size='50px' width='40px' />
+        <Icon icon={volumeMid} text='MEDIUM' onClick={handleVolume} id='0' size='50px' />
+        <Icon icon={volumeHigh} text='HIGH' onClick={handleVolume} id='12' size='50px' width='60px' />
       </div>
 
       <span className='Settings-text'>Text to Speech</span>
