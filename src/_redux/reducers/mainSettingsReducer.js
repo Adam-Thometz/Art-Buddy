@@ -3,7 +3,7 @@ import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
   menu: 'games',
-  volume: 'medium',
+  volume: 0,
   textToSpeech: false,
   colorBlind: false,
   roster: {}

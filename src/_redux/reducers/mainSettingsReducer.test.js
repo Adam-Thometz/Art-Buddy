@@ -7,19 +7,19 @@ describe('Main Menu & Settings Reducer', () => {
   });
 
   it('should handle changing menu category', () => {
-    const result = mainSettingsReducer(undefined, changeMenuGames('tools'));
-    expect(result.menu).toBe('tools');
+    const init = mainSettingsReducer(undefined, {});
+    expect(init.menu).toBe('games');
 
-    const result2 = mainSettingsReducer(result, changeMenuGames('games'));
-    expect(result2.menu).toBe('games');
+    const result2 = mainSettingsReducer(init, changeMenuGames('tools'));
+    expect(result2.menu).toBe('tools');
   });
 
   it('should handle changing the volume', () => {
     const init = mainSettingsReducer(undefined, {});
-    expect(init.volume).toBe('medium');
+    expect(init.volume).toBe(0);
 
-    const result = mainSettingsReducer(init, setVolume('low'));
-    expect(result.volume).toBe('low');
+    const result = mainSettingsReducer(init, setVolume(-12));
+    expect(result.volume).toBe(-12);
   });
 
   it('should handle toggling text-to-speech feature', () => {
