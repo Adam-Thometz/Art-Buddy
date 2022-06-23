@@ -22,7 +22,7 @@
   margin: 0 auto;
 }
 
-.WindowNavbar-corner-icon {
+.WindowNavbar-corner {
   position: absolute;
   right: 5%;
   cursor: pointer;
