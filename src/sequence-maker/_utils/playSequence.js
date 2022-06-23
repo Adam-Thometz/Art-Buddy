@@ -6,10 +6,10 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
   for (let i = 0; i < sequence.length; i++) {
     if (!sequence[i]) continue;
 
-    const { id } = sequence[i];
-    if (id === 'stop') continue;
+    const { soundId } = sequence[i];
+    if (soundId === 'stop') continue;
 
-    const buffer = window[`${id}Buffer`];
+    const buffer = window[`${soundId}Buffer`];
     const sound = sample(buffer);
     const length = `${duration}m`;
     const pitchToPlay = `C${pitch}`;
