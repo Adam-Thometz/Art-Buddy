@@ -1,7 +1,7 @@
 import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong } from "../actions/insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import getInstrument, { isRhythmicInstrument } from "../../instrument-id/_utils/getInstrument";
+import getInstrument from "../../instrument-id/_utils/getInstrument";
 import getChoices from "../helpers/getChoice";
 
 export const defaultInstrument = {
@@ -48,10 +48,9 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.song[id] = defaultInstrument;
     })
     .addCase(selectInstrument, (state, action) => {
-      // debugger
       const { id, instrumentId } = action.payload;
       const instrument = getInstrument(instrumentId);
-      const isRhythm = isRhythmicInstrument(instrument);
+      const { isRhythm } = instrument;
       const currInstrument = state.song[id];
       const isCurrInstrumentRhythm = currInstrument ? currInstrument.isRhythm : !isRhythm;
       const melodyId = (isCurrInstrumentRhythm === isRhythm) ?

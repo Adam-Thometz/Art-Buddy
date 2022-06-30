@@ -14,7 +14,6 @@ import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
 import { createBuffers, removeBuffers } from "../../../_utils/buffers";
-import { isRhythmicInstrument } from "../../../_utils/getInstrument";
 import { playBeat, playScale } from "../../../_utils/play";
 
 const ListeningSkillsTest = () => {
@@ -48,10 +47,8 @@ const ListeningSkillsTest = () => {
   }, [dispatch]);
   
   const playSound = () => {
-    const { id, sound } = answer;
-    isRhythmicInstrument(answer) ? 
-      playBeat({id, sound, isTest: true}) :
-      playScale({id, isTest: true});
+    const { id, sound, isRhythm } = answer;
+    isRhythm ? playBeat({ id, sound, isTest: true }) : playScale({ id, isTest: true });
   };
 
   const dropdown = (id) => (<Dropdown

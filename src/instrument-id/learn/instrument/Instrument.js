@@ -10,7 +10,6 @@ import Help from "../../../_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "../../_utils/buffers";
-import { isRhythmicInstrument } from "../../_utils/getInstrument";
 import { playBeat, playScale } from "../../_utils/play";
 
 const Instrument = () => {
@@ -20,10 +19,8 @@ const Instrument = () => {
     .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
   
   const playInstrument = () => {
-    const { sound, id } = instrumentInfo;
-    isRhythmicInstrument(instrumentInfo) ?
-      playBeat({id, sound}) :
-      playScale({id});
+    const { sound, id, isRhythm } = instrumentInfo;
+    isRhythm ? playBeat({id, sound}) : playScale({id});
   };
 
   useEffect(() => {

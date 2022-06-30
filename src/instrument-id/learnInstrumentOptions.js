@@ -12,6 +12,7 @@ const learnInstrumentOptions = {
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sounds.trumpet,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=ALPgvs5CT60'
       },
       {
@@ -21,6 +22,7 @@ const learnInstrumentOptions = {
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sounds.frenchHorn,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=qiUXnaGfnhg'
       },
       {
@@ -30,6 +32,7 @@ const learnInstrumentOptions = {
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sounds.trombone,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=u5gj43Nnwzk'
       },
       {
@@ -39,6 +42,7 @@ const learnInstrumentOptions = {
         madeFrom: ['BRASS'],
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sounds.tuba,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=qlXdCvKGdBE'
       },
     ]
@@ -53,6 +57,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.electricGuitar,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=QkzN1d6h8hE'
       },
       {
@@ -62,6 +67,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick or fingers',
         sound: sounds.electricBass,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=I5PboLxAkIg'
       },
       {
@@ -71,6 +77,7 @@ const learnInstrumentOptions = {
         madeFrom: ['METAL'],
         howToPlay: 'adjusting knobs and/or pressing keys',
         sound: sounds.synthesizer,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=WBcUk0kGoBw'
       },
       {
@@ -80,6 +87,7 @@ const learnInstrumentOptions = {
         madeFrom: ['METAL'],
         howToPlay: 'pressing buttons on the instrument',
         sound: sounds.sampler,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=0K2aynMMBpo'
       },
       {
@@ -89,6 +97,7 @@ const learnInstrumentOptions = {
         madeFrom: ['METAL'],
         howToPlay: 'waving your hands back and forth from the antenna',
         sound: sounds.theremin,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=nE_sAnSkW-Q'
       },
     ]
@@ -103,6 +112,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
         sound: sounds.djembe,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=FMs3LTtgwY8'
       },
       {
@@ -112,6 +122,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'using drum sticks to hit different parts of the set',
         sound: sounds.drumSet,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=fu8Iq1q73gY'
       },
       {
@@ -121,6 +132,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: 'shaking it!',
         sound: sounds.tambourine,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=nz3vhCspy_I'
       },
       {
@@ -130,6 +142,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'hitting different blocks with a mallet',
         sound: sounds.xylophone,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=nd9xha3vk58'
       },
       {
@@ -139,6 +152,7 @@ const learnInstrumentOptions = {
         madeFrom: ['METAL'],
         howToPlay: 'hitting it with a metal stick',
         sound: sounds.triangle,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=chg1ILZwMBI'
       },
       {
@@ -148,6 +162,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'hitting the animal skin',
         sound: sounds.conga,
+        isRhythm: true,
         videoUrl: 'https://www.youtube.com/watch?v=Dy9-P4MauuM'
       },
     ]
@@ -162,6 +177,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.acousticGuitar,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=VOMipc60JvA'
       },
       {
@@ -171,6 +187,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'ANIMAL SKIN'],
         howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
         sound: sounds.banjo,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=fnMhUPewk6c'
       },
       {
@@ -180,6 +197,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'plucking the strings',
         sound: sounds.harp,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=WEK4hw7hMgI'
       },
       {
@@ -189,6 +207,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'pressing the keys, which activate hammers that bang on strings',
         sound: sounds.piano,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=HCDygl0pttM'
       },
       {
@@ -198,6 +217,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: 'putting your fingers on the fretboard and bowing the strings using a bow',
         sound: sounds.violin,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=0jXXWBt5URw'
       },
     ]
@@ -212,6 +232,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sounds.clarinet,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=0srzSEPeHrk'
       },
       {
@@ -221,6 +242,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sounds.bassoon,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=XghEYA-edZA'
       },
       {
@@ -230,6 +252,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD', 'METAL'],
         howToPlay: '',
         sound: sounds.flute,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=QAiwlq3aP2U'
       },
       {
@@ -239,6 +262,7 @@ const learnInstrumentOptions = {
         madeFrom: ['BRASS'],
         howToPlay: '',
         sound: sounds.saxophone,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=XBWyE1v8--I'
       },
       {
@@ -248,6 +272,7 @@ const learnInstrumentOptions = {
         madeFrom: ['WOOD'],
         howToPlay: '',
         sound: sounds.panFlute,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=nrTp7u6KD3U'
       },
     ]
@@ -262,6 +287,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'singing really high!',
         sound: sounds.soprano,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=3ZSyAcIS4fo'
       },
       {
@@ -271,6 +297,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'singing high!',
         sound: sounds.mezzoSoprano,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=6m1T1BsB9rg'
       },
       {
@@ -280,6 +307,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'siinging a little high!',
         sound: sounds.alto,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=wrCxfWVuDXU'
       },
       {
@@ -289,6 +317,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'singing a little low!',
         sound: sounds.tenor,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=cWc7vYjgnTs'
       },
       {
@@ -298,6 +327,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'singing low!',
         sound: sounds.baritone,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=d-m1JtnZbEQ'
       },
       {
@@ -307,6 +337,7 @@ const learnInstrumentOptions = {
         madeFrom: ['HUMANS!'],
         howToPlay: 'singing really low!',
         sound: sounds.bass,
+        isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=wJv0jMLLRcw'
       }
     ]

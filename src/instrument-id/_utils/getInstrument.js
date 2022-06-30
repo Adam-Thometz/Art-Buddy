@@ -11,7 +11,3 @@ export default function getInstrument(instrumentId) {
     };
   };
 }
-
-export function isRhythmicInstrument(instrument) {
-  return (typeof instrument.sound === 'object') ? true : false;
-};

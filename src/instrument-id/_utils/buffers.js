@@ -1,10 +1,10 @@
 import * as sounds from '../_sounds/soundImports';
-import getInstrument, { isRhythmicInstrument } from './getInstrument';
+import getInstrument from './getInstrument';
 import { Buffer } from 'tone';
 
 export function createBuffers(instrumentId) {
   const instrument = getInstrument(instrumentId);
-  if (isRhythmicInstrument(instrument)) {
+  if (instrument.isRhythm) {
     const sounds = Object.keys(instrument.sound);
     for (let i = 0; i < sounds.length; i++) {
       const currBufferId = `${instrumentId}Buffer${i+1}`;
@@ -19,7 +19,7 @@ export function createBuffers(instrumentId) {
 
 export function getBuffers(instrumentId) {
   const instrument = getInstrument(instrumentId);
-  if (isRhythmicInstrument(instrument)) {
+  if (instrument.isRhythm) {
     const sounds = Object.keys(instrument.sound);
     const buffers = [];
     for (let i = 0; i < sounds.length; i++) {
