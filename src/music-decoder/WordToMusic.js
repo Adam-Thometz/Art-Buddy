@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearGame } from '../_redux/actions/wordToMusicActions';
 
 import WindowNavbar from '../_components/window-nav/WindowNavbar';
@@ -12,9 +12,13 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import createSound from './_utils/createSound';
 
 const WordToMusic = () => {
+  const { scale, sound } = useSelector(state => state.wordToMusic);
+  const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
 
-  const loadSound = () => createSound();
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'test') createSound({ volume, scale, sampleId: sound });
+  }, [volume, scale, sound])
 
   useEffect(() => {
     return () => {
@@ -24,7 +28,7 @@ const WordToMusic = () => {
   }, [dispatch]);
 
   return (
-    <main className="WordToMusic" onLoad={loadSound}>
+    <main className="WordToMusic">
       <WindowNavbar page='WORD-TO-MUSIC DECODER' cornerIcon={<ToggleUpperCase />} />
       <header>
         <p>HULLO IM WORD TO MUSIC DECODER. TYPE SOME WORDS TO MAKE MUSIC PLZ</p>

@@ -22,17 +22,18 @@ const DecoderControls = () => {
     currPlaying,
     filledLetters
   } = useSelector(state => state.wordToMusic);
+  const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   
   const handleChangeScale = e => {
     const newScale = +e.target.id;
-    createSound(newScale, sound);
+    createSound({ volume, scale: newScale, sampleId: sound });
     dispatch(changeScale(newScale));
   };
 
   const handleChangeSound = e => {
     const newSound = e.target.id === 'synth' ? null : e.target.id;
-    createSound(scale, newSound);
+    createSound({ volume, scale, sampleId: newSound });
     dispatch(changeSound(newSound));
   };
 

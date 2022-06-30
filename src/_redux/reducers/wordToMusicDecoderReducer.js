@@ -12,7 +12,7 @@ export const INITIAL_STATE = {
   words: [],
   filledLetters: [],
   scale: 0,
-  sound: null,
+  sound: 'synth',
   isUpperCase: true,
   currPlaying: null,
   formError: null
@@ -73,7 +73,7 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.words = [];
       state.filledLetters = [];
       state.scale = 0;
-      state.sound = null;
+      state.sound = 'synth';
       state.isUpperCase = true;
       state.formError = null;
     });
