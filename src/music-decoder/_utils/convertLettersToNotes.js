@@ -6,11 +6,13 @@ export default function convertLettersToNotes(words, filledLetters) {
 
   for (let i = 0; i < words.length; i++) {
     for (let char of words[i]) {
-      if (!filledLetters.includes(char)) continue;
-      
-      const note = LETTER_NOTES[char];
-      notesToPlay.push(note);
-      lettersToToggle.push(char)
+      if (!filledLetters.includes(char)) {
+        continue;
+      } else {
+        const note = LETTER_NOTES[char];
+        notesToPlay.push(note);
+        lettersToToggle.push(char);
+      };
     };
     if (i < words.length - 1) {
       notesToPlay.push('');
