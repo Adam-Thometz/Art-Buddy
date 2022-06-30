@@ -40,6 +40,7 @@ const DecoderControls = () => {
     if (currPlaying) return;
     
     const { notesToPlay, lettersToToggle } = convertLettersToNotes(words, filledLetters);
+
     for (let i = 0; i < lettersToToggle.length; i++) {
       const letter = lettersToToggle[i];
       if (!letter) continue;
@@ -48,11 +49,13 @@ const DecoderControls = () => {
         clearTimeout(start);
       }, (500 * i));
     };
-    play(notesToPlay, scale);
+    
     const end = setTimeout(() => {
       dispatch(toggleNote(null));
       clearTimeout(end);
     }, 500 * lettersToToggle.length);
+    
+    play(notesToPlay, scale);
   };
   
   return (

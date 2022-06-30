@@ -25,13 +25,7 @@ const AlphabetTable = () => {
     if (filledLetters.includes(char)) className += ` ${LETTER_NOTES[char]}`;
     if (char === currPlaying) className += ' playNote';
 
-    return (
-      <td 
-        key={char}
-        className={className}
-        onClick={handleLetter}
-      >{char}</td>
-    );
+    return <td key={char} className={className} onClick={handleLetter}>{char}</td>;
   };
   
   const handleLetter = e => {

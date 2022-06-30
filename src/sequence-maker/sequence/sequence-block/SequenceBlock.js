@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromSequence, togglePlaying } from "../../../_redux/actions/sequenceMakerActions";
@@ -32,10 +32,10 @@ const SequenceBlock = ({ id, block, borderColor }) => {
   return (
     <figure className={`SequenceBlock${playing}`} style={{borderColor}} id={id}>
       {block !== null ? (
-        <Fragment>
+        <>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
           <Button small colorId={2} onClick={remove}>REMOVE</Button>
-        </Fragment>
+        </>
       ) : null}
     </figure>
   );
