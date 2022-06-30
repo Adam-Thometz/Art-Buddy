@@ -7,6 +7,7 @@ const Icon = ({
   icon,
   largeFont = false,
   onClick = null,
+  otherImgStyles = {},
   size = "250px",
   text,
   width = null
@@ -14,7 +15,8 @@ const Icon = ({
   const imgStyles = {
     height: size,
     width: width ? width : size,
-    cursor: onClick ? 'pointer' : null
+    cursor: onClick ? 'pointer' : null,
+    ...otherImgStyles
   };
 
   const textStyles = {
