@@ -4,11 +4,11 @@ import sample from '../../_utils/sample';
 import * as melodies from '../play/song-maker/_melodies-rhythms/melodies';
 import * as rhythms from '../play/song-maker/_melodies-rhythms/rhythms';
 
-export function playScale({id, isTest = false}) {
+export function playScale({id, volume, isTest = false}) {
   const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
-  const bufferId = `${id}Buffer`
+  const bufferId = `${id}Buffer`;
   if (!window[bufferId]) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
-  const instrument = sample(window[bufferId]);
+  const instrument = sample(window[bufferId], volume);
   const numNotes = isTest ? 5 : scale.length;
 
   const start = now();
@@ -19,7 +19,7 @@ export function playScale({id, isTest = false}) {
   };
 };
 
-export function playBeat({id, sound, isTest = false}) {
+export function playBeat({id, volume, sound, isTest = false}) {
   const soundsLength = Object.keys(sound).length;
   const hits = [];
   const upperLimit = soundsLength*(isTest ? 1 : 2);
@@ -27,7 +27,7 @@ export function playBeat({id, sound, isTest = false}) {
     const bufferId = `${id}Buffer${(i % soundsLength) + 1}`;
     if (!window[bufferId]) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
     const buffer = window[bufferId];
-    hits.push(sample(buffer));
+    hits.push(sample(buffer, volume));
   };
   const start = now()
   for (let i = 0; i < hits.length; i++) {
@@ -37,10 +37,10 @@ export function playBeat({id, sound, isTest = false}) {
   };
 };
 
-export function play({ melodyId, buffers, isRhythm }) {
+export function play({ melodyId, volume, buffers, isRhythm }) {
   const instrument = isRhythm ?
-    buffers.map(b => sample(b)) :
-    sample(buffers);
+    buffers.map(b => sample(b, volume)) :
+    sample(buffers, volume);
   const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
   const start = now();
   let seconds = 0;

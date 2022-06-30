@@ -17,12 +17,15 @@ import { createBuffers, removeBuffers } from "../../../_utils/buffers";
 import { playBeat, playScale } from "../../../_utils/play";
 
 const ListeningSkillsTest = () => {
-  const { level } = useParams();
-  const choice1 = useSelector(state => state.instrumentId.choice1);
-  const choice2 = useSelector(state => state.instrumentId.choice2);
-  const answer = useSelector(state => state.instrumentId.answer);
+  const {
+    choice1,
+    choice2,
+    answer
+  } = useSelector(state => state.instrumentId);
+  const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
-
+  const { level } = useParams();
+  
   const setInstruments = e => {
     const id = e.currentTarget.id;
     const choice = e.target.id;
@@ -48,7 +51,7 @@ const ListeningSkillsTest = () => {
   
   const playSound = () => {
     const { id, sound, isRhythm } = answer;
-    isRhythm ? playBeat({ id, sound, isTest: true }) : playScale({ id, isTest: true });
+    isRhythm ? playBeat({ id, volume, sound, isTest: true }) : playScale({ id, volume, isTest: true });
   };
 
   const dropdown = (id) => (<Dropdown

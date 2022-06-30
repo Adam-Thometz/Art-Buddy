@@ -19,7 +19,8 @@ import { play } from '../../_utils/play';
 import { createBuffers, getBuffers, removeBuffers } from '../../_utils/buffers';
 
 const SongMaker = () => {
-  const song = useSelector(state => state.instrumentId.song);
+  const { song } = useSelector(state => state.instrumentId);
+  const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   
   const handleAddInstrument = e => {
@@ -49,7 +50,7 @@ const SongMaker = () => {
       if (!melodyId) continue;
 
       const { buffers } = getBuffers(instrumentId);
-      play({ melodyId, buffers, isRhythm });
+      play({ melodyId, volume, buffers, isRhythm });
     };
   };
 

@@ -11,8 +11,10 @@ import Help from "../../../_components/help/Help";
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "../../_utils/buffers";
 import { playBeat, playScale } from "../../_utils/play";
+import { useSelector } from "react-redux";
 
 const Instrument = () => {
+  const { volume } = useSelector(state => state.mainSettings);
   const { family, instrument } = useParams();
   const instrumentInfo = learnInstrumentOptions[family]
     .instruments
@@ -20,7 +22,7 @@ const Instrument = () => {
   
   const playInstrument = () => {
     const { sound, id, isRhythm } = instrumentInfo;
-    isRhythm ? playBeat({id, sound}) : playScale({id});
+    isRhythm ? playBeat({ id, sound, volume }) : playScale({ id, volume });
   };
 
   useEffect(() => {
