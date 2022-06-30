@@ -17,7 +17,8 @@ import volumeMid from './_icons/volume/volume-medium.png';
 import volumeLow from './_icons/volume/volume-low.png';
 
 const Settings = () => {
-  const { 
+  const {
+    volume,
     textToSpeech,
     colorBlind,
     roster
