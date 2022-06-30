@@ -8,9 +8,7 @@ const Dropdown = ({ id = null, labelText, onClick, options, borderColor }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [displayLabelText, setDisplayLabelText] = useState(labelText);
 
-  const handleShowOptions = () => {
-    setShowOptions(show => !show);
-  };
+  const handleShowOptions = () => setShowOptions(show => !show);
   
   const handleChangeLabel = e => {
     setDisplayLabelText(e.target.textContent);
