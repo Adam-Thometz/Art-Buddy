@@ -19,10 +19,11 @@ const Sequence = () => {
     pitch,
     duration
   } = useSelector(state => state.sequenceMaker);
+  const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch(); 
 
   const handlePlay = () => {
-    playSequence({ sequence, pitch, duration, playAll: false });
+    playSequence({ sequence, pitch, duration, volume, playAll: false });
     for (let i = 0; i < sequence.length; i++) {
       if (!sequence[i]) continue;
       const start = setTimeout(() => {
@@ -37,7 +38,7 @@ const Sequence = () => {
   };
   
   const handlePlayAll = () => {
-    playSequence({ sequence, pitch, duration, playAll: true });
+    playSequence({ sequence, pitch, duration, volume, playAll: true });
     for (let i = 0; i < sequence.length; i++) {
       if (!sequence[i]) continue;
       dispatch(togglePlaying(i));

@@ -1,11 +1,12 @@
-import { Sampler } from "tone";
+import { Sampler, Volume } from "tone";
 
-const sample = (sound) => (
-  new Sampler({
+const sample = (sound, volume) => {
+  const vol = new Volume(volume).toDestination()
+  return new Sampler({
     urls: {
       C3: sound
     }
-  }).toDestination()
-);
+  }).connect(vol);
+};
 
 export default sample;

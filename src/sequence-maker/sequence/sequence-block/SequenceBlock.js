@@ -11,6 +11,7 @@ import { playOne } from "../../_utils/playSequence";
 
 const SequenceBlock = ({ id, block, borderColor }) => {
   const { pitch, duration } = useSelector(state => state.sequenceMaker);
+  const { volume } = useSelector(state => state.mainSettings)
   const dispatch = useDispatch();
   
   const remove = e => {
@@ -19,7 +20,8 @@ const SequenceBlock = ({ id, block, borderColor }) => {
   };
 
   const play = () => {
-    playOne({ soundId: block.soundId, pitch, duration });
+    const { soundId } = block
+    playOne({ soundId, pitch, duration, volume });
     dispatch(togglePlaying(id));
     const timer = setTimeout(() => {
       dispatch(togglePlaying(id));

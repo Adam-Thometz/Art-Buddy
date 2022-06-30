@@ -1,7 +1,7 @@
 import { now } from "tone";
 import sample from "../../_utils/sample";
 
-export function playSequence({ sequence, pitch, duration, playAll }) {
+export function playSequence({ sequence, pitch, duration, playAll, volume }) {
   const start = now();
   for (let i = 0; i < sequence.length; i++) {
     if (!sequence[i]) continue;
@@ -10,7 +10,7 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
     if (soundId === 'stop') continue;
 
     const buffer = window[`${soundId}Buffer`];
-    const sound = sample(buffer);
+    const sound = sample(buffer, volume);
     const length = `${duration}m`;
     const pitchToPlay = `C${pitch}`;
     if (playAll) {
@@ -22,9 +22,9 @@ export function playSequence({ sequence, pitch, duration, playAll }) {
   };
 };
 
-export function playOne({ soundId, pitch, duration }) {
+export function playOne({ soundId, pitch, duration, volume }) {
   if (soundId === 'stop') return;
   const buffer = window[`${soundId}Buffer`];
-  const sound = sample(buffer);
+  const sound = sample(buffer, volume);
   sound.triggerAttackRelease(`C${pitch}`, `${duration}m`);
 };
