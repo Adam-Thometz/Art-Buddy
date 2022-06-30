@@ -1,7 +1,7 @@
 import { PitchShift, Synth } from "tone";
 import sample from '../../_utils/sample';
 
-import getInstrument from "../../instrument-id/_utils/getInstrument";
+import getInstrument from "../../_utils/getInstrument";
 
 export default function createSound(scale = 0, sampleId = null) {
   let sound;
