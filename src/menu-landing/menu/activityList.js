@@ -14,7 +14,7 @@ const activities = [
   {
     name: 'WORD TO MUSIC DECODER',
     icon: wordToMusicIcon,
-    url: urls.wordToMusicUrl,
+    url: urls.wordToMusic,
     activityType: types[0],
     genre: genres[0],
     description: 'Turn words into music!'
@@ -22,7 +22,7 @@ const activities = [
   {
     name: "WHAT'S THAT INSTRUMENT?",
     icon: instrumentIdIcon,
-    url: urls.instrumentIdUrl,
+    url: urls.instrumentId,
     activityType: types[0],
     genre: genres[0],
     description: 'Learn about instruments while practicing listening skills!'
@@ -30,7 +30,7 @@ const activities = [
   {
     name: 'JUMP INTO RHYTHM',
     icon: jumpIntoRhythmIcon,
-    url: null,
+    url: urls.jumpIntoRhythm,
     activityType: types[0],
     genre: genres[0],
     description: 'Jump with a frog to different rhythms!'
@@ -38,7 +38,7 @@ const activities = [
   {
     name: 'SEQUENCE MAKER',
     icon: sequenceMakerIcon,
-    url: urls.sequencerUrl,
+    url: urls.sequenceMaker,
     activityType: types[0],
     genre: genres[0],
     description: 'Put sounds together and hear what you get!'
@@ -78,7 +78,7 @@ const activities = [
   {
     name: 'SCORE KEEPER',
     icon: '',
-    url: urls.scoreKeeperUrl,
+    url: urls.scoreKeeper,
     activityType: types[1],
     genre: genres[2],
     description: 'An all-purpose score keeper.'
