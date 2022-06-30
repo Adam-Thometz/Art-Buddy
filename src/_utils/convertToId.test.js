@@ -7,11 +7,11 @@ describe('convertToId function', () => {
   });
 
   it('should convert a two-word name into an id for an object', () => {
-    const result = convertToId('Mr Thometz');
-    expect(result).toBe('mrThometz');
+    const result = convertToId('demo class');
+    expect(result).toBe('demoClass');
   });
 
-  it('should convert a number into an id', () => {
+  it('should convert input with a number into an id', () => {
     const result = convertToId('5662 Thometz');
     expect(result).toBe('5662Thometz');
   });
