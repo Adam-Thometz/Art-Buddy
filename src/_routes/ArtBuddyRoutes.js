@@ -4,8 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import Window from "../_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
 import Menu from "../menu-landing/menu/Menu";
+
 import WordToMusic from '../music-decoder/WordToMusic';
 import SequenceMaker from '../sequence-maker/SequenceMaker';
+import JumpIntoRhythm from "../jump-into-rhythm/JumpIntoRhythm";
 import InstrumentId from "../instrument-id/InstrumentId";
   import Learn from "../instrument-id/learn/learn-main/Learn";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
@@ -14,6 +16,7 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
   import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
   import SongMaker from "../instrument-id/play/song-maker/SongMaker";
+
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
 import NotFound from "./NotFound";
 
@@ -44,56 +47,63 @@ const ArtBuddyRoutes = () => {
       {/* MUSIC GAMES */}
 
       {/* Word To Music Decoder */}
-      <Route path={urls.wordToMusicUrl} element={
+      <Route path={urls.wordToMusic} element={
         <Window>
           <WordToMusic />
         </Window>} />
 
       {/* Sequence Maker */}
-      <Route path={urls.sequencerUrl} element={
+      <Route path={urls.sequenceMaker} element={
         <Window>
           <SequenceMaker />
         </Window>} />
+      
+      {/* Jump Into Rhythm */}
+      <Route path={urls.jumpIntoRhythm} element={
+        <Window>
+          <JumpIntoRhythm />
+        </Window>
+      } />
 
       {/* What's That Instrument? */}
-      <Route path={urls.instrumentIdUrl} element={
+      <Route path={urls.instrumentId} element={
         <Window>
           <InstrumentId />
         </Window>} />
 
         {/* Learn */}
-        <Route path={instrumentIdUrls.learnUrl} element={
+        <Route path={instrumentIdUrls.learn} element={
           <Window>
             <Learn />
           </Window>}/>
 
-        <Route path={instrumentIdUrls.learnFamilyUrl} element={
+        <Route path={instrumentIdUrls.learnFamily} element={
           <Window>
             <LearnFamilyPage />
           </Window>}/>
 
-        <Route path={instrumentIdUrls.learnInstrumentUrl} element={
+        <Route path={instrumentIdUrls.learnInstrument} element={
           <Window>
             <Instrument />
           </Window>}/>
 
         {/* Play */}
-        <Route path={instrumentIdUrls.playUrl} element={
+        <Route path={instrumentIdUrls.play} element={
           <Window>
             <Play />
           </Window>} />
 
-        <Route path={instrumentIdUrls.playListeningUrl} element={
+        <Route path={instrumentIdUrls.playListening} element={
           <Window>
             <ListeningSkills />
           </Window>} />
 
-        <Route path={instrumentIdUrls.playListeningLevelUrl} element={
+        <Route path={instrumentIdUrls.playListeningLevel} element={
           <Window>
             <ListeningSkillsTest />
           </Window>} />
         
-        <Route path={instrumentIdUrls.playSongMakerUrl} element={
+        <Route path={instrumentIdUrls.playSongMaker} element={
           <Window>
             <SongMaker />
           </Window>
@@ -101,7 +111,7 @@ const ArtBuddyRoutes = () => {
       
       {/* TOOLS */}
       {/* Score Keeper */}
-      <Route path={urls.scoreKeeperUrl} element={
+      <Route path={urls.scoreKeeper} element={
         <Window>
           <ScoreKeeper />
         </Window>} />
