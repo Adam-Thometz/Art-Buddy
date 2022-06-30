@@ -8,43 +8,33 @@ exports[`SongMaker component matches snapshot 1`] = `
     <header
       class="WindowNavbar-games"
     >
-      <button
-        class="BackArrow"
-      >
-        <img
-          alt=""
-          class="BackArrow-img"
-          src="file"
-        />
-        <span
-          class="BackArrow-text"
-        >
-          BACK
-        </span>
-      </button>
       <h1
         class="WindowNavbar-label"
       >
         Song Maker
       </h1>
       <div
-        class="SavedSongsIcon"
+        class="WindowNavbar-corner"
       >
-        <figure
-          class="Icon"
+        <div
+          class="SavedSongsIcon"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 49px; width: 49px;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
+          <figure
+            class="Icon"
           >
-            SAVED SONGS
-          </figcaption>
-        </figure>
+            <img
+              alt=""
+              src="file"
+              style="height: 49px; width: 49px;"
+            />
+            <figcaption
+              class="Icon-text"
+              style="font-size: 1rem;"
+            >
+              SAVED SONGS
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </header>
     <header>
