@@ -36,7 +36,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 50px; width: 50px; cursor: pointer;"
+          style="height: 50px; width: 50px; cursor: pointer; filter: invert(55%) sepia(55%) saturate(5241%) hue-rotate(163deg) brightness(97%) contrast(102%);"
         />
         <figcaption
           class="Icon-text"
@@ -65,7 +65,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
     <span
       class="Settings-text"
     >
-      Text to Speech
+      Text-to-Speech
     </span>
     <span
       class="Settings-toggle"
@@ -91,7 +91,7 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
     <span
       class="Settings-text"
     >
-      Color Blind
+      Color Blind Mode
     </span>
     <span
       class="Settings-toggle"

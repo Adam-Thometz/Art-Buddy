@@ -39,21 +39,46 @@ const Settings = () => {
   const handleColorBlind = () => dispatch(toggleColorBlind());
   const handleSetRoster = e => dispatch(setRoster(rosters[e.target.id]));
 
+  const selectedVolume = { 
+    filter: 'invert(55%) sepia(55%) saturate(5241%) hue-rotate(163deg) brightness(97%) contrast(102%)'
+  };
+
   return (
     <main className='Settings'>
       <span className='Settings-text'>Volume</span>
       <div className='Settings-icons-volume'>
-        <Icon icon={volumeLow} text='LOW' onClick={handleVolume} id='-12' size='50px' width='40px' />
-        <Icon icon={volumeMid} text='MEDIUM' onClick={handleVolume} id='0' size='50px' />
-        <Icon icon={volumeHigh} text='HIGH' onClick={handleVolume} id='12' size='50px' width='60px' />
+        <Icon
+          icon={volumeLow}
+          otherImgStyles={volume === -12 ? selectedVolume : {}}
+          text='LOW'
+          onClick={handleVolume}
+          id='-12'
+          size='50px' width='40px'
+        />
+        <Icon
+          icon={volumeMid}
+          otherImgStyles={volume === 0 ? selectedVolume : {}}
+          text='MEDIUM'
+          onClick={handleVolume}
+          id='0'
+          size='50px'
+        />
+        <Icon
+          icon={volumeHigh}
+          otherImgStyles={volume === 12 ? selectedVolume : {}}
+          text='HIGH'
+          onClick={handleVolume}
+          id='12'
+          size='50px' width='60px'
+        />
       </div>
 
-      <span className='Settings-text'>Text to Speech</span>
+      <span className='Settings-text'>Text-to-Speech</span>
       <span className='Settings-toggle'>
         <Toggle currToggle={textToSpeech} toggleFn={handleTextToSpeech} />
       </span>
 
-      <span className='Settings-text'>Color Blind</span>
+      <span className='Settings-text'>Color Blind Mode</span>
       <span className='Settings-toggle'>
         <Toggle currToggle={colorBlind} toggleFn={handleColorBlind} />
       </span>
