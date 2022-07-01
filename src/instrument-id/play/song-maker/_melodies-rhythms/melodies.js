@@ -1,4 +1,3 @@
-// Seven Nation Army
 export const sevenNationArmyMelody = [
   { time: 0, notes: ['E3'], duration: '4n.' },
   { time: '0:1:2', notes: ['E3'], duration: '8n' },
@@ -18,7 +17,6 @@ export const sevenNationArmyMelody = [
   { time: '3:2', notes: ['B2'], duration: '2n' },
 ];
 
-// Baby Shark
 export const babySharkMelody = [
   { notes: ['G3'], duration: '8n' },
   { notes: ['G3'], duration: '8n' },

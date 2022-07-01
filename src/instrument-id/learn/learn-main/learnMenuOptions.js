@@ -6,32 +6,32 @@ const learnMenuOptions = [
   {
     name: 'BRASS',
     icon: trumpetIcon,
-    url: `${instrumentIdUrls.learnUrl}/brass`
+    url: `${instrumentIdUrls.learn}/brass`
   },
   {
     name: 'ELECTRONIC',
     icon: synthIcon,
-    url: `${instrumentIdUrls.learnUrl}/electronic`
+    url: `${instrumentIdUrls.learn}/electronic`
   },
   {
     name: 'PERCUSSION',
     icon: drumSetIcon,
-    url: `${instrumentIdUrls.learnUrl}/percussion`
+    url: `${instrumentIdUrls.learn}/percussion`
   },
   {
     name: 'STRINGS',
     icon: harpIcon,
-    url: `${instrumentIdUrls.learnUrl}/strings`
+    url: `${instrumentIdUrls.learn}/strings`
   },
   {
     name: 'WOODWIND',
     icon: clarinetIcon,
-    url: `${instrumentIdUrls.learnUrl}/woodwind`
+    url: `${instrumentIdUrls.learn}/woodwind`
   },
   {
     name: 'VOICE',
     icon: voiceMainIcon,
-    url: `${instrumentIdUrls.learnUrl}/voice`
+    url: `${instrumentIdUrls.learn}/voice`
   }
 ]
 

@@ -19,7 +19,9 @@ const Instrument = () => {
   const instrumentInfo = learnInstrumentOptions[family]
     .instruments
     .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
-  
+    
+  const handleCreateBuffers = () => createBuffers(instrumentInfo.id);
+
   const playInstrument = () => {
     const { sound, id, isRhythm } = instrumentInfo;
     isRhythm ? playBeat({ id, sound, volume }) : playScale({ id, volume });
@@ -30,8 +32,6 @@ const Instrument = () => {
   }, []);
 
   const openVideo = () => window.open(instrumentInfo.videoUrl);
-
-  const handleCreateBuffers = () => createBuffers(instrumentInfo.id);
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>

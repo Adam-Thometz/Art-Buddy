@@ -24,13 +24,13 @@ const ListeningSkills = () => {
   );
 
   const levels = [1,2].map(level => {
-    const handleNavigate = () => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`);
+    const goToTest = () => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`);
     return (
       <div key={level} className="ListeningSkills-level">
         <Button
           small
           colorId={level-1}
-          onClick={handleNavigate}
+          onClick={goToTest}
         >Level {level}</Button>
         <Popup
           title='REPORT CARD'

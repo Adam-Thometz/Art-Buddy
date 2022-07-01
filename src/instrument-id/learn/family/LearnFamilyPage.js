@@ -17,7 +17,7 @@ const LearnFamilyPage = () => {
   const { instruments } = instrumentFamily;
 
   const options = instruments.map(instrument => {
-    const handleNavigate = () => {
+    const goToInstrument = () => {
       const url = `${
         instrumentIdUrls.learnUrl
       }/${
@@ -34,7 +34,7 @@ const LearnFamilyPage = () => {
       size='200px'
       width={instrument.name === 'TROMBONE' ? '250px' : null}
       text={instrument.name.toUpperCase()}
-      onClick={handleNavigate}
+      onClick={goToInstrument}
     />);
   });
   

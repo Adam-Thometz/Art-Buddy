@@ -12,16 +12,19 @@ import learnMenuOptions from "./learnMenuOptions";
 const Learn = () => {
   const navigate = useNavigate();
 
-  const options = learnMenuOptions.map(option => (
-    <Icon
-      key={option.name}
-      onClick={() => navigate(option.url)}
-      icon={option.icon}
-      text={option.name}
-      size="200px"
-      largeFont
-    />
-  ));
+  const options = learnMenuOptions.map(option => {
+    const goToFamily = () => navigate(option.url);
+    return (
+      <Icon
+        key={option.name}
+        onClick={goToFamily}
+        icon={option.icon}
+        text={option.name}
+        size="200px"
+        largeFont
+      />
+    );
+  });
 
   return (
     <main className="Learn">
