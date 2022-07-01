@@ -34,7 +34,7 @@ const menuOptions = {
   tools: [
     {
       name: "SCORE KEEPER",
-      url: urls.scoreKeeperUrl,
+      url: urls.scoreKeeper,
       icon: scoreKeeperIcon
     },
     {

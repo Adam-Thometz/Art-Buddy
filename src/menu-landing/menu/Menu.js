@@ -23,6 +23,8 @@ const Menu = ({ type = null }) => {
 
   const options = !type ? menuOptions[menu] : getGames(type);
 
+  console.log(options)
+
   const optionDisplay = options.map((option, i) => (
     <Button
       key={i}
