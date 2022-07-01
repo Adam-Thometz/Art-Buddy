@@ -125,7 +125,21 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
       <div
         class="Settings-add-roster"
       >
-        +
+        <figure
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 42px; width: 42px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            ADD
+          </figcaption>
+        </figure>
       </div>
     </div>
   </main>
