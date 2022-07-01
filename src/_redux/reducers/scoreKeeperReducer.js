@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame } from "../actions/scoreKeeperActions";
+import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame, loadStudents } from "../actions/scoreKeeperActions";
 
 import updateWinners from "../helpers/updateWinners";
 
@@ -12,6 +12,14 @@ export const INITIAL_STATE = {
 
 const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
+    .addCase(loadStudents, (state, action) => {
+      const students = action.payload.map(student => ({
+        name: student,
+        color: '#000000',
+        points: 0
+      }))
+      state.students = students;
+    })
     .addCase(addStudent, (state, action) => {
       const { name, color } = action.payload;
       const duplicateStudent = state.students.find(student => student.name === name);

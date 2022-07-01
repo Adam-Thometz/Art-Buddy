@@ -1,5 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
+export const loadStudents = createAction('loadStudents');
 export const addStudent = createAction('addStudent');
 export const removeStudent = createAction('removeStudent');
 export const addPoint = createAction('addPoint');
