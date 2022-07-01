@@ -1,5 +1,5 @@
 import scoreKeeperReducer, { INITIAL_STATE } from './scoreKeeperReducer';
-import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores, clearGame } from '../actions/scoreKeeperActions';
+import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores, clearGame, loadStudents } from '../actions/scoreKeeperActions';
 import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
 
 describe('Score Keeper reducer', () => {
@@ -7,8 +7,26 @@ describe('Score Keeper reducer', () => {
     expect(scoreKeeperReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
 
+  it('should handle loading a roster', () => {
+    const result = scoreKeeperReducer(undefined, loadStudents(['Jake', 'Jane']));
+    expect(result).toEqual({
+      ...INITIAL_STATE,
+      students: [{
+        name: 'Jake',
+        color: '#000000',
+        points: 0
+      },
+      {
+        name: 'Jane',
+        color: '#000000',
+        points: 0
+      }]
+    });
+  });
+
   it('should handle adding a student', () => {
-    expect(scoreKeeperReducer(undefined, addStudent({name: 'Jake', color: 'blue'}))).toEqual({
+    const result = scoreKeeperReducer(undefined, addStudent({name: 'Jake', color: 'blue'}));
+    expect(result).toEqual({
       ...INITIAL_STATE,
       students: [{
         name: 'Jake',
@@ -19,14 +37,16 @@ describe('Score Keeper reducer', () => {
   });
 
   it('should throw an error if adding a duplicate student', () => {
-    expect(scoreKeeperReducer(addedStudents, addStudent({name: 'Jake', color: 'blue'}))).toEqual({
+    const result = scoreKeeperReducer(addedStudents, addStudent({name: 'Jake', color: 'blue'}));
+    expect(result).toEqual({
       ...addedStudents,
       error: 'Student already in play!'
     });
   });
 
   it('should handle removing a student', () => {
-    expect(scoreKeeperReducer(addedStudents, removeStudent('Jane'))).toEqual({
+    const result = scoreKeeperReducer(addedStudents, removeStudent('Jane'));
+    expect(result).toEqual({
       ...addedStudents,
       students: [{
         name: 'Jake',
