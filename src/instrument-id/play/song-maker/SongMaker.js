@@ -7,16 +7,15 @@ import './SongMaker.css';
 
 import Button from '../../../_components/button/Button';
 import Dropdown from '../../../_components/dropdown/Dropdown';
-import Icon from '../../../_components/icon/Icon';
 import Popup from '../../../_components/popup/Popup';
 import SaveSong from './save-song/SaveSong';
 import SavedSongsIcon from './corner-icon/SavedSongsIcon';
 import WindowNavbar from '../../../_components/window-nav/WindowNavbar';
 
-import { addInstrumentIcon } from '../../_icons/iconImports';
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers, removeBuffers } from '../../_utils/buffers';
+import AddIcon from '../../../_components/icon/add-icon/AddIcon';
 
 const SongMaker = () => {
   const { song } = useSelector(state => state.instrumentId);
@@ -69,7 +68,7 @@ const SongMaker = () => {
   const instrumentDisplay = song.map((instrument, i) => {
     if (!instrument) {
       return (
-        <Icon key={i} icon={addInstrumentIcon} text='ADD INSTRUMENT' size='69px' id={i} onClick={handleAddInstrument}/>
+        <AddIcon key={i} text='ADD INSTRUMENT' size='69px' id={i} onClick={handleAddInstrument} />
       );
     } else {
       const instrumentDropdown = (

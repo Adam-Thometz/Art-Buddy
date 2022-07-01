@@ -8,7 +8,6 @@ import listeningSkills from './play/listening-skills.png';
 import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
-import addInstrumentIcon from './play/add-instrument.png'
 import smallPlayIcon from './play/play.png'
 import deleteIcon from './play/delete.png'
 
@@ -66,7 +65,6 @@ export {
   incorrectIcon,
   smallPlayIcon,
   deleteIcon,
-  addInstrumentIcon,
   trumpetIcon,
   frenchHornIcon,
   tromboneIcon,

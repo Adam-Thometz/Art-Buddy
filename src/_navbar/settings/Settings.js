@@ -15,6 +15,7 @@ import NewRoster from './rosters/NewRoster';
 import volumeHigh from './_icons/volume/volume-high.png';
 import volumeMid from './_icons/volume/volume-medium.png';
 import volumeLow from './_icons/volume/volume-low.png';
+import AddIcon from '../../_components/icon/add-icon/AddIcon';
 
 const Settings = () => {
   const {
@@ -87,7 +88,7 @@ const Settings = () => {
       <div className='Settings-icons-roster'>
         <Popup
           title='NEW ROSTER'
-          trigger='+'
+          trigger={<AddIcon text='ADD' size='42px' />}
           triggerClass='Settings-add-roster'
           popup={<NewRoster />}
         />
