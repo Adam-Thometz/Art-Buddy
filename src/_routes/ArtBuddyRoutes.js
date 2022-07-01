@@ -12,7 +12,7 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import Learn from "../instrument-id/learn/learn-main/Learn";
   import LearnFamilyPage from "../instrument-id/learn/family/LearnFamilyPage";
   import Instrument from "../instrument-id/learn/instrument/Instrument";
-  import Play from '../instrument-id/play/play-main/Play';
+  import Play from '../instrument-id/play/Play';
   import ListeningSkills from "../instrument-id/play/listening-skills/ListeningSkills";
   import ListeningSkillsTest from "../instrument-id/play/listening-skills/level/ListeningSkillsTest";
   import SongMaker from "../instrument-id/play/song-maker/SongMaker";
