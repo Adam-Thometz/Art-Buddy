@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale, changeSound, toggleNote } from '../../_redux/actions/wordToMusicActions';
+import { changeScale, changeSound, toggleNote } from '_redux/actions/wordToMusicActions';
 
 import './DecoderControls.css';
 
-import Dropdown from '../../_components/dropdown/Dropdown';
-import Button from '../../_components/button/Button';
+import Dropdown from '_components/dropdown/Dropdown';
+import Button from '_components/button/Button';
 
 import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';

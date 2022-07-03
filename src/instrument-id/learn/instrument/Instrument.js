@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 
 import './Instrument.css';
 
-import Icon from "../../../_components/icon/Icon";
-import Button from "../../../_components/button/Button";
-import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import Help from "../../../_components/help/Help";
+import Icon from "_components/icon/Icon";
+import Button from "_components/button/Button";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Help from "_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "../../_utils/buffers";

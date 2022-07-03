@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 import './Learn.css';
 
-import Icon from "../../../_components/icon/Icon";
-import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import Help from "../../../_components/help/Help";
+import Icon from "_components/icon/Icon";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Help from "_components/help/Help";
 
 import learnMenuOptions from "./learnMenuOptions";
 

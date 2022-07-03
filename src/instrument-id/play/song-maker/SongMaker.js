@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addInstrument, selectInstrument, selectMelody } from '../../../_redux/actions/insturmentIdActions';
+import { addInstrument, selectInstrument, selectMelody } from '_redux/actions/insturmentIdActions';
 
 import './SongMaker.css';
 
-import Button from '../../../_components/button/Button';
-import Dropdown from '../../../_components/dropdown/Dropdown';
-import Popup from '../../../_components/popup/Popup';
+import Button from '_components/button/Button';
+import Dropdown from '_components/dropdown/Dropdown';
+import Popup from '_components/popup/Popup';
+import WindowNavbar from '_components/window-nav/WindowNavbar';
+import AddIcon from '_components/icon/add-icon/AddIcon';
 import SaveSong from './save-song/SaveSong';
 import SavedSongsIcon from './corner-icon/SavedSongsIcon';
-import WindowNavbar from '../../../_components/window-nav/WindowNavbar';
 
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
 import { play } from '../../_utils/play';
 import { createBuffers, getBuffers, removeBuffers } from '../../_utils/buffers';
-import AddIcon from '../../../_components/icon/add-icon/AddIcon';
 
 const SongMaker = () => {
   const { song } = useSelector(state => state.instrumentId);

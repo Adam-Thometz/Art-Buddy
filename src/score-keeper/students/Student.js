@@ -1,12 +1,12 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { addPoint, removePoint, removeStudent } from "../../_redux/actions/scoreKeeperActions";
+import { addPoint, removePoint, removeStudent } from "_redux/actions/scoreKeeperActions";
 
 import './Student.css';
 
 import Points from "../points/Points";
-import Button from "../../_components/button/Button";
+import Button from "_components/button/Button";
 
 const Student = ({ name, color, points }) => {
   const dispatch = useDispatch();

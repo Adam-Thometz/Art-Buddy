@@ -1,11 +1,11 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { resetScores, toggleGameOver } from "../../_redux/actions/scoreKeeperActions";
+import { resetScores, toggleGameOver } from "_redux/actions/scoreKeeperActions";
 
 import './Winners.css';
 
-import Button from "../../_components/button/Button";
+import Button from "_components/button/Button";
 
 const Winners = () => {
   const winners = useSelector(state => state.scoreKeeper.winners);

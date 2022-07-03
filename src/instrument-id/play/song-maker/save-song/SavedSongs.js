@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import useLocalStorage from '../../../../_hooks/useLocalStorage';
+import useLocalStorage from '_hooks/useLocalStorage';
 
 import './SavedSongs.css';
 
-import Icon from '../../../../_components/icon/Icon';
+import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '../../../_icons/iconImports';
 import { createBuffers, getBuffers } from '../../../_utils/buffers';

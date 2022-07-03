@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { addStudent } from "../../_redux/actions/scoreKeeperActions";
+import { addStudent } from "_redux/actions/scoreKeeperActions";
 
 import './NewStudentForm.css';
 
-import Dropdown from "../../_components/dropdown/Dropdown";
-import Button from "../../_components/button/Button";
+import Dropdown from "_components/dropdown/Dropdown";
+import Button from "_components/button/Button";
 
 import colorOptions from "../_utils/colorOptions";
 

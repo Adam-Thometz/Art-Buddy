@@ -1,5 +1,5 @@
 import React from "react";
-import useLocalStorage from "../_hooks/useLocalStorage";
+import useLocalStorage from "_hooks/useLocalStorage";
 
 import Welcome from "./welcome/Welcome";
 import Menu from "./menu/Menu";

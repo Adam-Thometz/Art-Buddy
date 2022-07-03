@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import './InstrumentId.css';
 
 import WindowNavbar from "../_components/window-nav/WindowNavbar";
-import Help from '../_components/help/Help';
-import Icon from "../_components/icon/Icon";
-import Options from "../_components/option/Options";
+import Help from "_components/help/Help";
+import Icon from "_components/icon/Icon";
+import Options from "_components/option/Options";
 
 import { playIcon, learnIcon } from "./_icons/iconImports";
 import { instrumentIdUrls } from "../_routes/routeUrls";

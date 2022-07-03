@@ -1,6 +1,6 @@
 import React from "react";
 
-import renderWithProvider from '../../_testUtils/renderWithProvider';
+import renderWithProvider from '_testUtils/renderWithProvider';
 import { screen, within } from "@testing-library/react";
 
 import Points from './Points';

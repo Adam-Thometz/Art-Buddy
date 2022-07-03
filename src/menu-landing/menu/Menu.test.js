@@ -1,7 +1,7 @@
 import React from "react";
-import renderWithProvider from '../../_testUtils/renderWithProvider';
+import renderWithProvider from '_testUtils/renderWithProvider';
 import { screen } from "@testing-library/react";
-import Menu from "./Menu";;
+import Menu from "./Menu";
 
 describe('Menu component', () => {
   it('renders without crashing', () => {

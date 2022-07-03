@@ -1,21 +1,21 @@
 import React from 'react';
-import useRoster from '../../_hooks/useRoster';
+import useRoster from '_hooks/useRoster';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from '../../_redux/actions/mainSettingsActions';
+import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from '_redux/actions/mainSettingsActions';
 
 import './Settings.css';
 
-import Icon from '../../_components/icon/Icon';
-import Toggle from '../../_components/toggle/Toggle';
-import Dropdown from '../../_components/dropdown/Dropdown';
-import Popup from '../../_components/popup/Popup';
+import Icon from '_components/icon/Icon';
+import Toggle from '_components/toggle/Toggle';
+import Dropdown from '_components/dropdown/Dropdown';
+import Popup from '_components/popup/Popup';
+import AddIcon from '_components/icon/add-icon/AddIcon';
 import NewRoster from './rosters/NewRoster';
 
 import volumeHigh from './_icons/volume/volume-high.png';
 import volumeMid from './_icons/volume/volume-medium.png';
 import volumeLow from './_icons/volume/volume-low.png';
-import AddIcon from '../../_components/icon/add-icon/AddIcon';
 
 const Settings = () => {
   const {

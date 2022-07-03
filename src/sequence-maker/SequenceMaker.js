@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 import { useDispatch } from "react-redux";
-import { clearGame } from "../_redux/actions/sequenceMakerActions";
+import { clearGame } from "_redux/actions/sequenceMakerActions";
 
-import WindowNavbar from "../_components/window-nav/WindowNavbar";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
 import SequenceControls from "./controls/SequenceControls";
 import SoundOptions from "./sound-options/SoundOptions";
 import Sequence from "./sequence/Sequence";

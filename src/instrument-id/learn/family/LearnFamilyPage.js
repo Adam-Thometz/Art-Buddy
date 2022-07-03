@@ -3,12 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import './LearnFamilyPage.css';
 
-import Icon from "../../../_components/icon/Icon";
-import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import Help from "../../../_components/help/Help";
+import Icon from "_components/icon/Icon";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Help from "_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
-import { instrumentIdUrls } from "../../../_routes/routeUrls";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 const LearnFamilyPage = () => {
   const navigate = useNavigate();

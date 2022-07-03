@@ -1,8 +1,10 @@
 import React from "react";
-import renderWithProvider from '../_testUtils/renderWithProvider';
+
+import renderWithProvider from '_testUtils/renderWithProvider';
+import LocalStorageMock from '_testUtils/mocks/localStorageMock';
 import { screen } from "@testing-library/react";
-import LandingPage from './LandingPage'
-import LocalStorageMock from '../_testUtils/mocks/localStorageMock';
+
+import LandingPage from './LandingPage';
 
 describe('LandingPage component', () => {
   it('renders without crashing', () => {

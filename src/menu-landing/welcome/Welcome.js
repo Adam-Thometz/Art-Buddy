@@ -2,8 +2,8 @@ import React from "react";
 
 import './Welcome.css';
 
-import WindowNavbar from "../../_components/window-nav/WindowNavbar";
-import Button from "../../_components/button/Button";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Button from "_components/button/Button";
 
 const Welcome = ({ setHasVisited }) => {
   const handleVisited = () => setHasVisited(true);

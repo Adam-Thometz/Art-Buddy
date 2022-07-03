@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Window from "../_components/window/Window";
+import Window from "_components/window/Window";
 import LandingPage from "../menu-landing/LandingPage";
 import Menu from "../menu-landing/menu/Menu";
 

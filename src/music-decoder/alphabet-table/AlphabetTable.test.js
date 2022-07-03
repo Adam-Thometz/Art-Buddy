@@ -1,5 +1,5 @@
 import React from "react";
-import renderWithProvider from '../../_testUtils/renderWithProvider';
+import renderWithProvider from '_testUtils/renderWithProvider';
 import AlphabetTable from './AlphabetTable';
 
 describe('AlphabetTable component', () => {

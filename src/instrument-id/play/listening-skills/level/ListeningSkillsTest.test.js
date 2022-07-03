@@ -1,9 +1,9 @@
 import React from "react";
 
-import renderWithProvider from "../../../../_testUtils/renderWithProvider";
+import renderWithProvider from "_testUtils/renderWithProvider";
+import { setupChoices } from "_testUtils/setup-functions/ListeningSkillsTestSetup";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { setupChoices } from "../../../../_testUtils/setup-functions/ListeningSkillsTestSetup";
 
 import ListeningSkillsTest from "./ListeningSkillsTest";
 

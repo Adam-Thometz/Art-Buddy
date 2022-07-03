@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addToSequence } from '../../_redux/actions/sequenceMakerActions';
+import { addToSequence } from '_redux/actions/sequenceMakerActions';
 
 import './SoundOptions.css';
 
-import Options from '../../_components/option/Options';
-import Icon from '../../_components/icon/Icon';
+import Options from '_components/option/Options';
+import Icon from '_components/icon/Icon';
 
 import soundInfo from '../_media/soundInfo';
 import { createBuffer } from '../_utils/createBuffer';

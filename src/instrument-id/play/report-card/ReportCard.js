@@ -1,5 +1,5 @@
 import React from 'react';
-import useReportCard from '../../../_hooks/useReportCard';
+import useReportCard from '_hooks/useReportCard';
 
 import './ReportCard.css';
 

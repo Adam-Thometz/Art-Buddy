@@ -1,13 +1,13 @@
 import React, { useState, useRef } from 'react';
-import useLocalStorage from '../../../../_hooks/useLocalStorage';
-import useFormFields from '../../../../_hooks/useFormFields';
+import useLocalStorage from '_hooks/useLocalStorage';
+import useFormFields from '_hooks/useFormFields';
 
 import { useSelector } from 'react-redux';
 
 import './SaveSong.css';
 
-import Button from '../../../../_components/button/Button';
-import Keyboard from '../../../../_components/keyboard/Keyboard';
+import Button from '_components/button/Button';
+import Keyboard from '_components/keyboard/Keyboard';
 
 const SaveSong = () => {
   const song = useSelector(state => state.instrumentId.song);

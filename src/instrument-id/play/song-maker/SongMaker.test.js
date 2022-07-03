@@ -1,5 +1,5 @@
 import React from "react";
-import renderWithProvider from "../../../_testUtils/renderWithProvider";
+import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SongMaker from "./SongMaker";

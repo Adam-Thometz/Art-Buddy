@@ -1,7 +1,7 @@
 import React from 'react'
 
-import WindowNavbar from '../_components/window-nav/WindowNavbar';
-import Help from '../_components/help/Help';
+import WindowNavbar from '_components/window-nav/WindowNavbar';
+import Help from '_components/help/Help';
 
 const JumpIntoRhythm = () => {
   return (

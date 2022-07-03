@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeMenuGames } from "../../_redux/actions/mainSettingsActions";
+import { changeMenuGames } from "_redux/actions/mainSettingsActions";
 
 import './WindowNavbar.css';
 

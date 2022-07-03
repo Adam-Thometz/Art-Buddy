@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 import './ListeningSkills.css';
 
-import Button from "../../../_components/button/Button";
-import Icon from "../../../_components/icon/Icon";
-import Popup from "../../../_components/popup/Popup";
+import Button from "_components/button/Button";
+import Icon from "_components/icon/Icon";
+import Popup from "_components/popup/Popup";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Help from "_components/help/Help";
 import ReportCard from "../report-card/ReportCard";
-import WindowNavbar from "../../../_components/window-nav/WindowNavbar";
-import Help from "../../../_components/help/Help";
 
 import { listeningSkills, reportCardIcon } from "../../_icons/iconImports";
-import { instrumentIdUrls } from "../../../_routes/routeUrls";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();

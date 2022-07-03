@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import './Navbar.css';
 
-import Popup from '../_components/popup/Popup';
+import Popup from '_components/popup/Popup';
 import Settings from "./settings/Settings";
 
 import settingsIcon from './settings/_icons/settings.png';

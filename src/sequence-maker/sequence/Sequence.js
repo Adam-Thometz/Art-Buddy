@@ -1,15 +1,15 @@
 import React from "react";
 
-import { resetSequence, togglePlaying } from "../../_redux/actions/sequenceMakerActions";
+import { resetSequence, togglePlaying } from "_redux/actions/sequenceMakerActions";
 import { playSequence } from "../_utils/playSequence";
 import { useSelector, useDispatch } from "react-redux";
 
 import './Sequence.css';
 
 import SequenceBlock from "./sequence-block/SequenceBlock";
-import Icon from "../../_components/icon/Icon";
+import Icon from "_components/icon/Icon";
 
-import colors from "../../_components/button/colorOrder";
+import colors from "_components/button/colorOrder";
 import play from '../_media/_icons/play.png';
 import playAll from '../_media/_icons/play-all.png';
 

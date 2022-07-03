@@ -1,7 +1,9 @@
 import React from "react";
-import renderWithProvider from '../../_testUtils/renderWithProvider';
+
+import renderWithProvider from '_testUtils/renderWithProvider';
 import { screen } from "@testing-library/react";
 import WindowNavbar from './WindowNavbar';
+
 import ReportCardIcon from '../../instrument-id/play/listening-skills/level/corner-icon/ReportCardIcon';
 
 describe('WindowNavbar component', () => {

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import useFormFields from '../../../_hooks/useFormFields';
+import useFormFields from '_hooks/useFormFields';
+import useRoster from '_hooks/useRoster';
 
-import Button from '../../../_components/button/Button';
-import useRoster from '../../../_hooks/useRoster';
-import convertToId from '../../../_utils/convertToId';
+import Button from '_components/button/Button';
+
+import convertToId from '_utils/convertToId';
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({ name: '', student1: '' });
