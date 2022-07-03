@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
+<DocumentFragment>
+  <form
+    class="NewRoster"
+  >
+    <label
+      for="name"
+    >
+      Roster Name: 
+    </label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      value=""
+    />
+    <p>
+      Enter student names:
+    </p>
+    <div
+      class="NewRoster-students"
+    >
+      <div
+        class="NewRoster-form-control"
+      >
+        <label
+          for="student1"
+        >
+          Student 1
+        </label>
+        <input
+          id="student1"
+          name="student1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <span>
+      Add another student
+    </span>
+    <div
+      class="NewRoster-buttons"
+    >
+      <button
+        class="Button small"
+        style="border-color: #fd4d3a;"
+      >
+        RESET
+      </button>
+      <button
+        class="Button small"
+        style="border-color: #89eb0a;"
+      >
+        CREATE
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
