@@ -8,11 +8,11 @@ import colorTheoryIcon from './_icons/activity-icons/color-theory.png'
 import paintingTimeIcon from './_icons/activity-icons/painting-time.png'
 
 const types = ['games', 'tools'];
-const genres = ['music', 'art', 'other'];
+const genres = ['music', 'art'];
 
 const activities = [
   {
-    name: 'WORD TO MUSIC DECODER',
+    name: 'WORD-TO-MUSIC DECODER',
     icon: wordToMusicIcon,
     url: urls.wordToMusic,
     activityType: types[0],
@@ -41,7 +41,7 @@ const activities = [
     url: urls.sequenceMaker,
     activityType: types[0],
     genre: genres[0],
-    description: 'Put sounds together and hear what you get!'
+    description: 'Put different sounds together and hear what you get!'
   },
   {
     name: 'COLOR THEORY',
@@ -74,22 +74,6 @@ const activities = [
     activityType: types[0],
     genre: genres[1],
     description: ''
-  },
-  {
-    name: 'SCORE KEEPER',
-    icon: '',
-    url: urls.scoreKeeper,
-    activityType: types[1],
-    genre: genres[2],
-    description: 'An all-purpose score keeper.'
-  },
-  {
-    name: 'TIME KEEPER',
-    icon: '',
-    url: null,
-    activityType: types[1],
-    genre: genres[2],
-    description: 'An all-purpose time keeper.'
   }
 ];
 

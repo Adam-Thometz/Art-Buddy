@@ -53,6 +53,6 @@ const menuOptions = {
       icon: null
     }
   ]
-}
+};
 
 export default menuOptions;
