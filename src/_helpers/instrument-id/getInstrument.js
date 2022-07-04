@@ -1,4 +1,4 @@
-import learnInstrumentOptions from "../instrument-id/learnInstrumentOptions";
+import learnInstrumentOptions from "../../instrument-id/learnInstrumentOptions";
 
 export default function getInstrument(instrumentId) {
   const families = Object.keys(learnInstrumentOptions);

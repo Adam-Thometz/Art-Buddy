@@ -1,5 +1,5 @@
-import * as sounds from '../_sounds/soundImports';
-import getInstrument from '../../_utils/getInstrument';
+import * as sounds from '../../instrument-id/_sounds/soundImports';
+import getInstrument from './getInstrument';
 import { Buffer } from 'tone';
 
 export function createBuffers(instrumentId) {

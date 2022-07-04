@@ -1,13 +1,13 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromSequence, togglePlaying } from "../../../_redux/actions/sequenceMakerActions";
+import { removeFromSequence, togglePlaying } from "_redux/actions/sequenceMakerActions";
 
 import './SequenceBlock.css';
 
-import Button from "../../../_components/button/Button";
+import Button from "_components/button/Button";
 
-import { playOne } from "../../_utils/playSequence";
+import { playOne } from "_helpers/sequence-maker/playSequence";
 
 const SequenceBlock = ({ id, block, borderColor }) => {
   const { pitch, duration } = useSelector(state => state.sequenceMaker);

@@ -1,6 +1,6 @@
 import scoreKeeperReducer, { INITIAL_STATE } from './scoreKeeperReducer';
 import { addStudent, removeStudent, addPoint, removePoint, toggleGameOver, resetScores, clearGame, loadStudents } from '../actions/scoreKeeperActions';
-import { addedStudents } from '../../_testUtils/test-states/scoreKeeperReducerTestState'
+import { addedStudents } from '_testUtils/test-states/scoreKeeperReducerTestState';
 
 describe('Score Keeper reducer', () => {
   it('should return the initial state', () => {

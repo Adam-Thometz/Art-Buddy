@@ -5,8 +5,8 @@ import { fillLetter } from "_redux/actions/wordToMusicActions";
 
 import './AlphabetTable.css';
 
-import { LETTER_NOTES } from '../_utils/letterNotes';
-import play from "../_utils/play";
+import { LETTER_NOTES } from '_helpers/music-decoder/letterNotes';
+import play from "_helpers/music-decoder/play";
 
 const AlphabetTable = () => {
   const {

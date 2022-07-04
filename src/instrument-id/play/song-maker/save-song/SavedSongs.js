@@ -6,8 +6,8 @@ import './SavedSongs.css';
 import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '../../../_icons/iconImports';
-import { createBuffers, getBuffers } from '../../../_utils/buffers';
-import { play } from '../../../_utils/play';
+import { createBuffers, getBuffers } from '_helpers/instrument-id/buffers';
+import { play } from '_helpers/instrument-id/play';
 
 const SavedSongs = () => {
   const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');

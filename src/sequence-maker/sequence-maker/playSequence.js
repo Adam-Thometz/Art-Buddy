@@ -1,5 +1,5 @@
 import { now } from "tone";
-import sample from "../../_utils/sample";
+import sample from "../../_helpers/sample";
 
 export function playSequence({ sequence, pitch, duration, playAll, volume }) {
   const start = now();

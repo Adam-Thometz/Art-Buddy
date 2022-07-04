@@ -1,9 +1,9 @@
 import wordToMusicDecoderReducer, { INITIAL_STATE } from './wordToMusicDecoderReducer';
 import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from '../actions/wordToMusicActions';
 
-import { testState } from '../../_testUtils/test-states/wordToMusicReducerTestState';
+import { testState } from '_testUtils/test-states/wordToMusicReducerTestState';
 
-jest.mock('../../music-decoder/_utils/play');
+jest.mock('_helpers/music-decoder/play');
 
 describe('Word To Music reducer', () => {
   it('should return the initial state', () => {

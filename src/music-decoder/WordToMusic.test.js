@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import WordToMusic from './WordToMusic';
 
-jest.mock('./_utils/play');
+jest.mock('_helpers/music-decoder/play');
 
 describe('WordToMusic component', () => {
   it('renders without crashing', () => {

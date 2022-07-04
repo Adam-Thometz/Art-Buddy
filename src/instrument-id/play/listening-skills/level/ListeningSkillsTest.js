@@ -13,8 +13,8 @@ import Choice from "./choice/Choice";
 import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
-import { createBuffers, removeBuffers } from "../../../_utils/buffers";
-import { playBeat, playScale } from "../../../_utils/play";
+import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
+import { playBeat, playScale } from "_helpers/instrument-id/play";
 
 const ListeningSkillsTest = () => {
   const {

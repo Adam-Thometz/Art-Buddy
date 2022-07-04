@@ -9,8 +9,8 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
 import learnInstrumentOptions from "../../learnInstrumentOptions";
-import { createBuffers, removeBuffers } from "../../_utils/buffers";
-import { playBeat, playScale } from "../../_utils/play";
+import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
+import { playBeat, playScale } from "_helpers/instrument-id/play";
 import { useSelector } from "react-redux";
 
 const Instrument = () => {

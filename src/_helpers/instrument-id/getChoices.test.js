@@ -1,4 +1,4 @@
-import getChoices from "./getChoice";
+import getChoices from "./getChoices";
 
 describe('getChoices function', () => {
   it('should return one choice for level 1', () => {

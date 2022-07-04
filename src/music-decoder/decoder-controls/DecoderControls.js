@@ -10,9 +10,9 @@ import Button from '_components/button/Button';
 
 import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';
-import play from '../_utils/play';
-import createSound from '../_utils/createSound';
-import convertLettersToNotes from '../_utils/convertLettersToNotes';
+import play from '_helpers/music-decoder/play';
+import createSound from '_helpers/music-decoder/createSound';
+import convertLettersToNotes from '_helpers/music-decoder/convertLettersToNotes';
 
 const DecoderControls = () => {
   const {

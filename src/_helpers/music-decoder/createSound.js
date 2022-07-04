@@ -1,7 +1,7 @@
 import { PitchShift, Synth, Volume } from "tone";
-import sample from '../../_utils/sample';
+import sample from '../sample';
 
-import getInstrument from "../../_utils/getInstrument";
+import getInstrument from "../instrument-id/getInstrument";
 
 export default function createSound({ volume, scale = 0, sampleId = 'synth' }) {
   let sound;

@@ -8,7 +8,7 @@ import './NewStudentForm.css';
 import Dropdown from "_components/dropdown/Dropdown";
 import Button from "_components/button/Button";
 
-import colorOptions from "../_utils/colorOptions";
+import colorOptions from "./colorOptions";
 
 const NewStudentForm = () => {
   const error = useSelector(state => state.scoreKeeper.error);

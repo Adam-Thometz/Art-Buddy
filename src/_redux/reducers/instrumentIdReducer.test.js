@@ -1,7 +1,7 @@
 import instrumentIdReducer, { INITIAL_STATE, defaultInstrument } from "./instrumentIdReducer";
 import { selectChoice, generateAnswer, clearChoices, addInstrument, selectMelody } from "../actions/insturmentIdActions";
 
-import { setupChoices, setupInstrument } from '../../_testUtils/setup-functions/instrumentIdReducerTestSetup';
+import { setupChoices, setupInstrument } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
 describe("What's That Instrument? reducer", () => {
   it('should return the initial state', () => {
@@ -14,7 +14,7 @@ describe("What's That Instrument? reducer", () => {
       id: 1,
       level: '1',
       choice: 'percussion'
-    }))
+    }));
     expect(result.choice1.id).toBe('xylophone');
     const result2 = instrumentIdReducer(undefined, selectChoice({
       id: 2,
@@ -61,7 +61,6 @@ describe("What's That Instrument? reducer", () => {
     expect(result2.song[1].instrumentId).toBe('drumSet');
     expect(result2.song[1].isRhythm).toBeTruthy();
   });
-  
   
   it('should handle selecting a melody or rhythm', () => {
     const withInstrument = setupInstrument({ id: 0, isRhythm: false });

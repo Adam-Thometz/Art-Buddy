@@ -9,7 +9,7 @@ import WordForm from './word-form/WordForm';
 import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
-import createSound from './_utils/createSound';
+import createSound from '_helpers/music-decoder/createSound';
 
 const WordToMusic = () => {
   const { scale, sound } = useSelector(state => state.wordToMusic);

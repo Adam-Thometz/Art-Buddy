@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame, loadStudents } from "../actions/scoreKeeperActions";
 
-import updateWinners from "../helpers/updateWinners";
+import updateWinners from "_helpers/score-keeper/updateWinners";
 
 export const INITIAL_STATE = {
   students: [],

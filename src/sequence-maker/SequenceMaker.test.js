@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import SequenceMaker from './SequenceMaker';
 
-jest.mock('./_utils/createBuffer');
+jest.mock('_helpers/sequence-maker/createBuffer');
 
 function setupChoices() {
   const categoryDropdown = screen.getByText('SOUND CATEGORY');

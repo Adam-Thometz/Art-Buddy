@@ -14,20 +14,9 @@ import durations from './dropdown-options/durations';
 const SequenceControls = () => {
   const dispatch = useDispatch();
 
-  const handleSetCategory = e => {
-    const category = e.target.id;
-    dispatch(setCategory(category));
-  };
-
-  const handleSetPitch = e => {
-    const pitch = e.target.id;
-    dispatch(setPitch(pitch));
-  };
-
-  const handleSetDuration = e => {
-    const duration = +e.target.id;
-    dispatch(setDuration(duration));
-  };
+  const handleSetCategory = e => dispatch(setCategory(e.target.id));
+  const handleSetPitch = e => dispatch(setPitch(e.target.id));
+  const handleSetDuration = e => dispatch(setDuration(+e.target.id));
 
   return (
     <section className='SequenceControls'>
