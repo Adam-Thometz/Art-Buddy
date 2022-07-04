@@ -13,19 +13,3 @@
 .SongMaker-buttons button {
   width: 50%;
 }
-
-.SongMaker-instruments {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
-  width: 67%;
-  height: 80%;
-}
-
-.SongMaker-options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}

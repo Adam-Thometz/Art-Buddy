@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstrumentDisplay component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="InstrumentDisplay"
+  >
+    <div
+      class="InstrumentDisplay-options"
+    >
+      <div
+        class="Dropdown"
+      >
+        <span
+          class="Dropdown-label"
+        >
+          INSTRUMENT 
+          <img
+            alt=""
+            src="file"
+          />
+        </span>
+      </div>
+    </div>
+    <figure
+      class="Icon"
+      id="1"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 69px; width: 69px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1.75rem;"
+      >
+        ADD INSTRUMENT
+      </figcaption>
+    </figure>
+    <figure
+      class="Icon"
+      id="2"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 69px; width: 69px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1.75rem;"
+      >
+        ADD INSTRUMENT
+      </figcaption>
+    </figure>
+    <figure
+      class="Icon"
+      id="3"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 69px; width: 69px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1.75rem;"
+      >
+        ADD INSTRUMENT
+      </figcaption>
+    </figure>
+  </div>
+</DocumentFragment>
+`;

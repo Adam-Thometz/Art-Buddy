@@ -65,10 +65,10 @@ exports[`SongMaker component matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="SongMaker-instruments"
+        class="InstrumentDisplay"
       >
         <div
-          class="SongMaker-options"
+          class="InstrumentDisplay-options"
         >
           <div
             class="Dropdown"
