@@ -65,6 +65,7 @@ const SongMaker = () => {
     />
   );
 
+  // TODO: Turn this into a separate component, InsturmentDisplay
   const instrumentDisplay = song.map((instrument, i) => {
     if (!instrument) {
       return (
