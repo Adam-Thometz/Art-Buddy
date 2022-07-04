@@ -30,8 +30,8 @@ describe('SongMaker component', () => {
   
   it('selects rhythms', () => {
     renderWithProvider(<SongMaker />);
-    const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT')
-    userEvent.click(addInstrumentBtns[0])
+    const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT');
+    userEvent.click(addInstrumentBtns[0]);
     expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
 
     const instrumentDropdown = screen.getAllByText('INSTRUMENT')[1];
