@@ -1,10 +1,9 @@
 import React from 'react';
-import useReportCard from '_hooks/useReportCard';
+import useReportCard, { INITIAL_REPORT_CARD } from '_hooks/useReportCard';
 
 import './ReportCard.css';
 
-import { INITIAL_REPORT_CARD } from '../../../_hooks/useReportCard';
-import { emptyFirst, emptyMid, emptyLast, fullFirst, fullMid, fullLast } from './_icons/iconImports';
+import { emptyFirst, emptyMid, emptyLast, fullFirst, fullMid, fullLast } from '_media/instrument-id/_icons/iconImports';
 
 const ReportCard = ({ level }) => {
   const [savedReportCard, setSavedReportCard] = useReportCard(level);
@@ -36,6 +35,6 @@ const ReportCard = ({ level }) => {
       <p className='ReportCard-clear' onClick={handleClearReportCard}>clear report card</p>
     </main>
   );
-}
+};
 
 export default ReportCard;

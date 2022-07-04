@@ -6,7 +6,7 @@ import './Navbar.css';
 import Popup from '_components/popup/Popup';
 import Settings from "./settings/Settings";
 
-import settingsIcon from './settings/_icons/settings.png';
+import settingsIcon from '_media/settings/settings.png';
 
 const Navbar = () => {
   const navigate = useNavigate();

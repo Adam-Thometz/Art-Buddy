@@ -6,7 +6,7 @@ import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
-import { songMaker, listeningSkills } from "../_icons/iconImports";
+import { songMaker, listeningSkills } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from '_routes/routeUrls';
 
 const Play = () => {

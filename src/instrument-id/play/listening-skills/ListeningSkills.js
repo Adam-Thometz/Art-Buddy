@@ -10,7 +10,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 import ReportCard from "../report-card/ReportCard";
 
-import { listeningSkills, reportCardIcon } from "../../_icons/iconImports";
+import { listeningSkills, reportCardIcon } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const ListeningSkills = () => {

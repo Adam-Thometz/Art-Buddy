@@ -1,5 +1,5 @@
-import * as icons from './_icons/iconImports';
-import * as sounds from './_sounds/soundImports';
+import * as icons from '_media/instrument-id/_icons/iconImports';
+import * as sounds from '_media/instrument-id/_sounds/soundImports';
 
 const learnInstrumentOptions = {
   brass: {

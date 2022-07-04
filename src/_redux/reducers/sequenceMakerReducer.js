@@ -1,7 +1,7 @@
 import { addToSequence, setCategory, removeFromSequence, resetSequence, setPitch, clearGame, setDuration, togglePlaying } from "../actions/sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import soundInfo from "../../sequence-maker/_media/soundInfo";
+import soundInfo from "_media/sequence-maker/soundInfo";
 
 export const INITIAL_STATE = {
   category: '',

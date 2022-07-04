@@ -1,4 +1,4 @@
-import soundInfo from "../../sequence-maker/_media/soundInfo";
+import soundInfo from "_media/sequence-maker/soundInfo";
 import { Buffer } from "tone";
 
 export default function createBuffer({category, soundId}) {

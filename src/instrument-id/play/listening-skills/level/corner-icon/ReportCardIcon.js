@@ -5,7 +5,7 @@ import Icon from '_components/icon/Icon';
 import Popup from '_components/popup/Popup';
 import ReportCard from '../../../report-card/ReportCard';
 
-import { reportCardIcon } from '../../../../_icons/iconImports';
+import { reportCardIcon } from '_media/instrument-id/_icons/iconImports';
 
 const ReportCardIcon = () => {
   const { level } = useParams();

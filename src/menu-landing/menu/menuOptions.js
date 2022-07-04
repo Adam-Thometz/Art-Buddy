@@ -1,12 +1,12 @@
-import urls from "../../_routes/routeUrls";
+import urls from "_routes/routeUrls";
 
-import artIcon from './_icons/option-icons/art-icon.png';
-import musicIcon from './_icons/option-icons/music-icon.png';
-import allIcon from './_icons/option-icons/all-icon.png';
-import iepIcon from './_icons/option-icons/iep-icon.png';
+import artIcon from '_media/menu/option-icons/art-icon.png';
+import musicIcon from '_media/menu/option-icons/music-icon.png';
+import allIcon from '_media/menu/option-icons/all-icon.png';
+import iepIcon from '_media/menu/option-icons/iep-icon.png';
 
-import scoreKeeperIcon from './_icons/option-icons/score-keeper.png'
-import timeKeeperIcon from './_icons/option-icons/time-keeper.png'
+import scoreKeeperIcon from '_media/menu/option-icons/score-keeper.png';
+import timeKeeperIcon from '_media/menu/option-icons/time-keeper.png';
 
 const menuOptions = {
   games: [

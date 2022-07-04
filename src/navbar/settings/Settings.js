@@ -13,9 +13,9 @@ import Popup from '_components/popup/Popup';
 import AddIcon from '_components/icon/add-icon/AddIcon';
 import NewRoster from './rosters/NewRoster';
 
-import volumeHigh from './_icons/volume/volume-high.png';
-import volumeMid from './_icons/volume/volume-medium.png';
-import volumeLow from './_icons/volume/volume-low.png';
+import volumeHigh from '_media/settings/volume/volume-high.png';
+import volumeMid from '_media/settings/volume/volume-medium.png';
+import volumeLow from '_media/settings/volume/volume-low.png';
 
 const Settings = () => {
   const {

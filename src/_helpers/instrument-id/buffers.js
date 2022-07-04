@@ -1,4 +1,4 @@
-import * as sounds from '../../instrument-id/_sounds/soundImports';
+import * as sounds from '_media/instrument-id/_sounds/soundImports';
 import getInstrument from './getInstrument';
 import { Buffer } from 'tone';
 

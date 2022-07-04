@@ -13,8 +13,8 @@ import './index.css';
 import App from './App';
 // Everything else
 import reportWebVitals from './reportWebVitals';
-import leftLines from './_background/LL.png';
-import rightLines from './_background/RL.png';
+import leftLines from '_media/background/LL.png';
+import rightLines from '_media/background/RL.png';
 
 ReactDOM.render(
   <Provider store={rootReducer}>

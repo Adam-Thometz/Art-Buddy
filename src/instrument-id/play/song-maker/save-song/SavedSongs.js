@@ -5,7 +5,7 @@ import './SavedSongs.css';
 
 import Icon from '_components/icon/Icon';
 
-import { smallPlayIcon, deleteIcon } from '../../../_icons/iconImports';
+import { smallPlayIcon, deleteIcon } from '_media/instrument-id/_icons/iconImports';
 import { createBuffers, getBuffers } from '_helpers/instrument-id/buffers';
 import { play } from '_helpers/instrument-id/play';
 

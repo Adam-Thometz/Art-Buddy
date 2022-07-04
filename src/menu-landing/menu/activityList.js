@@ -1,11 +1,11 @@
 import urls from "../../_routes/routeUrls";
 
-import wordToMusicIcon from './_icons/activity-icons/word-to-music.png'
-import sequenceMakerIcon from './_icons/activity-icons/sequence-maker.png'
-import instrumentIdIcon from './_icons/activity-icons/instrument-id.png'
-import jumpIntoRhythmIcon from './_icons/activity-icons/jump-into-rhythm.png'
-import colorTheoryIcon from './_icons/activity-icons/color-theory.png'
-import paintingTimeIcon from './_icons/activity-icons/painting-time.png'
+import wordToMusicIcon from '_media/menu/activity-icons/word-to-music.png'
+import sequenceMakerIcon from '_media/menu/activity-icons/sequence-maker.png'
+import instrumentIdIcon from '_media/menu/activity-icons/instrument-id.png'
+import jumpIntoRhythmIcon from '_media/menu/activity-icons/jump-into-rhythm.png'
+import colorTheoryIcon from '_media/menu/activity-icons/color-theory.png'
+import paintingTimeIcon from '_media/menu/activity-icons/painting-time.png'
 
 const types = ['games', 'tools'];
 const genres = ['music', 'art'];

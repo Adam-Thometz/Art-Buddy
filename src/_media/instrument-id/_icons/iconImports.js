@@ -8,8 +8,17 @@ import listeningSkills from './play/listening-skills.png';
 import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
-import smallPlayIcon from './play/play.png'
-import deleteIcon from './play/delete.png'
+import smallPlayIcon from './play/play.png';
+import deleteIcon from './play/delete.png';
+import savedSongsIcon from './play/saved-songs.png';
+
+// Report card bar
+import emptyFirst from '_media/instrument-id/_icons/report-card-bar/empty-first.png';
+import emptyMid from '_media/instrument-id/_icons/report-card-bar/empty-mid.png';
+import emptyLast from '_media/instrument-id/_icons/report-card-bar/empty-last.png';
+import fullFirst from '_media/instrument-id/_icons/report-card-bar/full-first.png';
+import fullMid from '_media/instrument-id/_icons/report-card-bar/full-mid.png';
+import fullLast from '_media/instrument-id/_icons/report-card-bar/full-last.png';
 
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
@@ -58,6 +67,7 @@ import bassIcon from './instruments/voice/bass.png'
 export {
   playIcon,
   learnIcon,
+
   songMaker,
   listeningSkills,
   reportCardIcon,
@@ -65,6 +75,15 @@ export {
   incorrectIcon,
   smallPlayIcon,
   deleteIcon,
+  savedSongsIcon,
+
+  emptyFirst,
+  emptyMid,
+  emptyLast,
+  fullFirst,
+  fullMid,
+  fullLast,
+
   trumpetIcon,
   frenchHornIcon,
   tromboneIcon,

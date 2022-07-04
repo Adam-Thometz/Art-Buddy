@@ -8,7 +8,7 @@ import './Choice.css';
 
 import Icon from "_components/icon/Icon";
 
-import { correctIcon, incorrectIcon } from "../../../../_icons/iconImports";
+import { correctIcon, incorrectIcon } from "_media/instrument-id/_icons/iconImports";
 
 const Choice = ({ id, level, choice }) => {
   const answer = useSelector(state => state.instrumentId.answer);
