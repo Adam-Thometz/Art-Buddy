@@ -32,13 +32,12 @@ const InstrumentDisplay = () => {
     const melodyId = e.target.id;
     dispatch(selectMelody({ id, melodyId }));
   };
+
   return (
     <div className='InstrumentDisplay'>
       {song.map((instrument, i) => {
         if (!instrument) {
-          return (
-            <AddIcon key={i} text='ADD INSTRUMENT' size='69px' id={i} onClick={handleAddInstrument} />
-          );
+          return <AddIcon key={i} text='ADD INSTRUMENT' size='69px' id={i} onClick={handleAddInstrument} />;
         } else {
           const instrumentDropdown = (
             <Dropdown
@@ -49,8 +48,7 @@ const InstrumentDisplay = () => {
               onClick={handleSelectInstrument}
             />
           );
-          const melodyDropdown = (
-            !instrument || !instrument.instrumentId) ? null : (
+          const melodyDropdown = !instrument.instrumentId ? null : (
             <Dropdown
               key={`melody${i}`}
               id={i}

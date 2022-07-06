@@ -31,9 +31,7 @@ const SongMaker = () => {
     };
   };
 
-  useEffect(() => {
-    return () => removeBuffers();
-  }, []);
+  useEffect(() => () => removeBuffers(), []);
 
   const savePopup = (
     <Popup
