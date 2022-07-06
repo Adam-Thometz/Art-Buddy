@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromSequence, togglePlaying } from "_redux/actions/sequenceMakerActions";
+import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";
 
 import './SequenceBlock.css';
 

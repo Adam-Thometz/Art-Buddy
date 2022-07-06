@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleGameOver, clearGame, loadStudents } from '_redux/actions/scoreKeeperActions';
+import { toggleGameOver, clearGame, loadStudents } from '_redux/score-keeper/scoreKeeperActions';
 
 import Button from '_components/button/Button';
 import WindowNavbar from '_components/window-nav/WindowNavbar';

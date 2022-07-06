@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { addStudent } from "_redux/actions/scoreKeeperActions";
+import { addStudent } from "_redux/score-keeper/scoreKeeperActions";
 
 import './NewStudentForm.css';
 

@@ -1,4 +1,4 @@
-import { addToSequence, setCategory, removeFromSequence, resetSequence, setPitch, clearGame, setDuration, togglePlaying } from "../actions/sequenceMakerActions";
+import { addToSequence, setCategory, removeFromSequence, resetSequence, setPitch, clearGame, setDuration, togglePlaying } from "./sequenceMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import soundInfo from "_media/sequence-maker/soundInfo";

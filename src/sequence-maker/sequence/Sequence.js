@@ -1,6 +1,6 @@
 import React from "react";
 
-import { resetSequence, togglePlaying } from "_redux/actions/sequenceMakerActions";
+import { resetSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";
 import { playSequence } from "_helpers/sequence-maker/playSequence";
 import { useSelector, useDispatch } from "react-redux";
 

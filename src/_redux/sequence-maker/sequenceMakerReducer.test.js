@@ -1,5 +1,5 @@
 import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import { addToSequence, setCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "../actions/sequenceMakerActions";
+import { addToSequence, setCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "./sequenceMakerActions";
 
 import { withCategory } from '_testUtils/test-states/sequenceMakerReducerTestState';
 

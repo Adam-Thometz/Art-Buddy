@@ -1,4 +1,4 @@
-import { INITIAL_STATE } from "_redux/reducers/scoreKeeperReducer";
+import { INITIAL_STATE } from "_redux/score-keeper/scoreKeeperReducer";
 
 const addedStudents = {
   ...INITIAL_STATE,

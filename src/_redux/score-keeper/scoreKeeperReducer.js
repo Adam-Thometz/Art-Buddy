@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame, loadStudents } from "../actions/scoreKeeperActions";
+import { addPoint, addStudent, removePoint, removeStudent, resetScores, toggleGameOver, clearGame, loadStudents } from "./scoreKeeperActions";
 
 import updateWinners from "_helpers/score-keeper/updateWinners";
 

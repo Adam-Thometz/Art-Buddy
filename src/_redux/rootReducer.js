@@ -2,8 +2,8 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import mainSettingsReducer from './settings/mainSettingsReducer';
 import wordToMusicDecoderReducer from './music-decoder/wordToMusicDecoderReducer';
-import sequenceMakerReducer from './reducers/sequenceMakerReducer';
-import scoreKeeperReducer from './reducers/scoreKeeperReducer';
+import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
+import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
 import instrumentIdReducer from './instrument-id/instrumentIdReducer';
 
 const rootReducer = configureStore({

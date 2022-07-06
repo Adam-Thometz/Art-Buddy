@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { resetScores, toggleGameOver } from "_redux/actions/scoreKeeperActions";
+import { resetScores, toggleGameOver } from "_redux/score-keeper/scoreKeeperActions";
 
 import './Winners.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addToSequence } from '_redux/actions/sequenceMakerActions';
+import { addToSequence } from '_redux/sequence-maker/sequenceMakerActions';
 
 import './SoundOptions.css';
 
