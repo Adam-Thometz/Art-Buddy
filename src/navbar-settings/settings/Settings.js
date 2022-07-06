@@ -41,7 +41,13 @@ const Settings = () => {
   const handleSetRoster = e => dispatch(setRoster(rosters[e.target.id]));
 
   const selectedVolume = { 
-    filter: 'invert(55%) sepia(55%) saturate(5241%) hue-rotate(163deg) brightness(97%) contrast(102%)'
+    // Space Cadet
+    filter: 'invert(9%) sepia(31%) saturate(5353%) hue-rotate(221deg) brightness(100%) contrast(94%)'
+  };
+
+  const unselectedVolume = {
+    // Light Grey
+    filter: 'invert(71%) sepia(83%) saturate(6%) hue-rotate(236deg) brightness(103%) contrast(89%)'
   };
 
   return (
@@ -50,7 +56,7 @@ const Settings = () => {
       <div className='Settings-icons-volume'>
         <Icon
           icon={volumeLow}
-          otherImgStyles={volume === -12 ? selectedVolume : {}}
+          otherImgStyles={volume === -12 ? selectedVolume : unselectedVolume}
           text='LOW'
           onClick={handleVolume}
           id='-12'
@@ -58,7 +64,7 @@ const Settings = () => {
         />
         <Icon
           icon={volumeMid}
-          otherImgStyles={volume === 0 ? selectedVolume : {}}
+          otherImgStyles={volume === 0 ? selectedVolume : unselectedVolume}
           text='MEDIUM'
           onClick={handleVolume}
           id='0'
@@ -66,7 +72,7 @@ const Settings = () => {
         />
         <Icon
           icon={volumeHigh}
-          otherImgStyles={volume === 12 ? selectedVolume : {}}
+          otherImgStyles={volume === 12 ? selectedVolume : unselectedVolume}
           text='HIGH'
           onClick={handleVolume}
           id='12'
