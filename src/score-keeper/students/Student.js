@@ -11,19 +11,9 @@ import Button from "_components/button/Button";
 const Student = ({ name, color, points }) => {
   const dispatch = useDispatch();
 
-  const remove = () => {
-    dispatch(removeStudent(name));
-  };
-
-  const plus = () => {
-    dispatch(addPoint(name));
-  };
-
-  const minus = () => {
-    if (points > 0) {
-      dispatch(removePoint(name));
-    };
-  };
+  const remove = () => dispatch(removeStudent(name));
+  const plus = () => dispatch(addPoint(name));
+  const minus = () => dispatch(removePoint(name));
 
   const pointButtonStyles = {
     fontSize: '1.5rem',

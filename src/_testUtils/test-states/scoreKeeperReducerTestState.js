@@ -13,6 +13,11 @@ const addedStudents = {
       color: 'red',
       points: 3
     },
+    {
+      name: 'Bob',
+      color: 'green',
+      points: 0
+    },
   ],
   winners: [{ name: 'Jake', color: 'blue' }]
 };

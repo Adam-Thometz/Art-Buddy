@@ -45,6 +45,7 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(removePoint, (state, action) => {
       const targetName = action.payload;
       const targetIdx = state.students.findIndex(student => student.name === targetName);
+      if (!state.students[targetIdx].points) return;
       state.students[targetIdx].points--;
       state.winners = updateWinners(state.students);
     })

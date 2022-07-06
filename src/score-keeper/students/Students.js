@@ -7,7 +7,7 @@ import './Students.css';
 import Student from "./Student";
 
 const Students = () => {
-  const students = useSelector(state => state.scoreKeeper.students);
+  const { students } = useSelector(state => state.scoreKeeper);
   return (
     <div className="Students">
       {students.map((s, i) => (

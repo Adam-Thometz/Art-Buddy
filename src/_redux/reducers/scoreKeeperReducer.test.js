@@ -52,6 +52,11 @@ describe('Score Keeper reducer', () => {
         name: 'Jake',
         color: 'blue',
         points: 4
+      },
+      {
+        name: 'Bob',
+        color: 'green',
+        points: 0
       }]
     });
   });
@@ -66,6 +71,12 @@ describe('Score Keeper reducer', () => {
     const result = scoreKeeperReducer(addedStudents, removePoint('Jake'));
     const testStudent = result.students.find(student => student.name === 'Jake');
     expect(testStudent.points).toEqual(3);
+  });
+  
+  it('should not remove a point if student points are 0', () => {
+    const result = scoreKeeperReducer(addedStudents, removePoint('Bob'));
+    const testStudent = result.students.find(student => student.name === 'Bob');
+    expect(testStudent.points).toEqual(0);
   });
 
   it('should handle toggling game over', () => {
