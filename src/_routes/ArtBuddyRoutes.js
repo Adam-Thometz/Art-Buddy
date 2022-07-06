@@ -18,7 +18,7 @@ import InstrumentId from "../instrument-id/InstrumentId";
   import SongMaker from "../instrument-id/play/song-maker/SongMaker";
 
 import ScoreKeeper from '../score-keeper/ScoreKeeper';
-import NotFound from "./NotFound";
+import NotFound from "./not-found/NotFound";
 
 import urls, { instrumentIdUrls } from "./routeUrls";
 

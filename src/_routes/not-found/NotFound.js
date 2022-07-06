@@ -6,9 +6,8 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 
 const NotFound = () => {
   const navigate = useNavigate();
-  const goHome = () => {
-    navigate('/');
-  }
+  const goHome = () => navigate('/');
+
   return (
     <div className="NotFound">
       <WindowNavbar page='UH OH!' />
