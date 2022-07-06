@@ -6,7 +6,7 @@ import searchLetter from "_helpers/music-decoder/searchLetter";
 import findLettersToRemove from "_helpers/music-decoder/findLettersToRemove";
 
 import play from "_helpers/music-decoder/play";
-import { LETTER_NOTES } from "_helpers/music-decoder/letterNotes";
+import LETTER_NOTES from "_helpers/music-decoder/letterNotes";
 
 export const INITIAL_STATE = {
   words: [],

@@ -1,4 +1,4 @@
-import { LETTER_NOTES } from "./letterNotes";
+import LETTER_NOTES from "./letterNotes";
 
 export default function convertLettersToNotes(words, filledLetters) {
   const notesToPlay = [];
