@@ -1,4 +1,4 @@
-import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong } from "../actions/insturmentIdActions";
+import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong } from "./insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_helpers/instrument-id/getInstrument";

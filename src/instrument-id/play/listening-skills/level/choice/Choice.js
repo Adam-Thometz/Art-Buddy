@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "_redux/actions/insturmentIdActions";
+import { selectChoice } from "_redux/instrument-id/insturmentIdActions";
 
 import './Choice.css';
 

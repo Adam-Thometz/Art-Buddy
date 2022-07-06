@@ -1,5 +1,5 @@
-import instrumentIdReducer from "../../_redux/reducers/instrumentIdReducer";
-import { selectChoice, selectInstrument } from "../../_redux/actions/insturmentIdActions";
+import instrumentIdReducer from "_redux/instrument-id/instrumentIdReducer";
+import { selectChoice, selectInstrument } from "_redux/instrument-id/insturmentIdActions";
 
 export function setupChoices() {
   Math.random = jest.fn();

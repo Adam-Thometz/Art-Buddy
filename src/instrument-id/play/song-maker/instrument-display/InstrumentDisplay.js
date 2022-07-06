@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addInstrument, selectInstrument, selectMelody } from '_redux/actions/insturmentIdActions';
+import { addInstrument, selectInstrument, selectMelody } from '_redux/instrument-id/insturmentIdActions';
 
 import './InstrumentDisplay.css';
 
