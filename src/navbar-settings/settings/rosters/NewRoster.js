@@ -4,7 +4,7 @@ import useRoster from '_hooks/useRoster';
 
 import Button from '_components/button/Button';
 
-import convertToId from '_helpers/convertToId';
+import convertToId from '_helpers/settings/convertToId';
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({ name: '', student1: '' });
