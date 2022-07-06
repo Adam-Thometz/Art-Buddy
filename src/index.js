@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 // Redux imports
 import { Provider } from 'react-redux';
-import rootReducer from './_redux/reducers/rootReducer';
+import rootReducer from './_redux/rootReducer';
 // CSS imports
 import './index.css';
 // Component imports

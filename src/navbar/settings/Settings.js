@@ -2,7 +2,7 @@ import React from 'react';
 import useRoster from '_hooks/useRoster';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from '_redux/actions/mainSettingsActions';
+import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from '_redux/settings/mainSettingsActions';
 
 import './Settings.css';
 

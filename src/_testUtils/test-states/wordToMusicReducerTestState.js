@@ -1,4 +1,4 @@
-import { INITIAL_STATE } from "../../_redux/reducers/wordToMusicDecoderReducer";
+import { INITIAL_STATE } from "_redux/music-decoder/wordToMusicDecoderReducer";
 
 const testState = {
   ...INITIAL_STATE,

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { clearGame } from '../_redux/actions/wordToMusicActions';
+import { clearGame } from '_redux/music-decoder/wordToMusicActions';
 
-import WindowNavbar from '../_components/window-nav/WindowNavbar';
+import WindowNavbar from '_components/window-nav/WindowNavbar';
 import ToggleUpperCase from './toggle-uppercase/ToggleUpperCase';
 import WordForm from './word-form/WordForm';
 import DecoderControls from './decoder-controls/DecoderControls';

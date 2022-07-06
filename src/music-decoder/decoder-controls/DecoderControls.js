@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale, changeSound, toggleNote } from '_redux/actions/wordToMusicActions';
+import { changeScale, changeSound, toggleNote } from '_redux/music-decoder/wordToMusicActions';
 
 import './DecoderControls.css';
 

@@ -1,5 +1,5 @@
 import mainSettingsReducer, { INITIAL_STATE } from "./mainSettingsReducer";
-import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
+import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {

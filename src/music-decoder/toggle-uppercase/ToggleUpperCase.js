@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleUpperCase } from '_redux/actions/wordToMusicActions';
+import { toggleUpperCase } from '_redux/music-decoder/wordToMusicActions';
 
 import Toggle from '_components/toggle/Toggle';
 

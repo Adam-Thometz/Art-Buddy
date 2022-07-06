@@ -1,4 +1,4 @@
-import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "../actions/wordToMusicActions";
+import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "./wordToMusicActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import hasValidWords from "_helpers/music-decoder/hasValidWords";

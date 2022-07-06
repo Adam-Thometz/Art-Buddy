@@ -1,4 +1,4 @@
-import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "../actions/mainSettingsActions";
+import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {

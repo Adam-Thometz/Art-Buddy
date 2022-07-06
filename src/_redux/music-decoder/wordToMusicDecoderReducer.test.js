@@ -1,5 +1,5 @@
 import wordToMusicDecoderReducer, { INITIAL_STATE } from './wordToMusicDecoderReducer';
-import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from '../actions/wordToMusicActions';
+import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from './wordToMusicActions';
 
 import { testState } from '_testUtils/test-states/wordToMusicReducerTestState';
 
