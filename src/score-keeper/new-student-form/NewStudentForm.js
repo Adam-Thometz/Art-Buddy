@@ -16,14 +16,8 @@ const NewStudentForm = () => {
   const [name, setName] = useState('');
   const [color, setColor] = useState('');
 
-  const handleChangeName = e => {
-    setName(e.target.value);
-  };
-
-  const handleChangeColor = e => {
-    setColor(e.target.id.replace('hex', '#'));
-  };
-
+  const handleChangeName = e => setName(e.target.value);
+  const handleChangeColor = e => setColor(e.target.id.replace('hex', '#'));
   const handleSubmit = () => {
     dispatch(addStudent({name, color}));
     setName('');
