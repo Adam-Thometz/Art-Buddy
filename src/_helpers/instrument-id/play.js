@@ -4,7 +4,12 @@ import sample from '../sample';
 import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
 import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
 
-export function playScale({id, volume, isTest = false}) {
+/** playScale: 
+ * Purpose: plays a scale for non-rhythmic instruments. isTest is true if the function is called in the context of the listening skills test.
+ * Found in: ListeningSkillsTest.js
+ */
+
+export function playScale({ id, volume, isTest = false }) {
   const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
   const bufferId = `${id}Buffer`;
   if (!window[bufferId]) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
@@ -19,7 +24,12 @@ export function playScale({id, volume, isTest = false}) {
   };
 };
 
-export function playBeat({id, volume, sound, isTest = false}) {
+/** playBeat: 
+ * Purpose: plays a beat for rhythmic instruments. isTest is true if the function is called in the context of the listening skills test.
+ * Found in: ListeningSkillsTest.js
+ */
+
+export function playBeat({ id, volume, sound, isTest = false }) {
   const soundsLength = Object.keys(sound).length;
   const hits = [];
   const upperLimit = soundsLength*(isTest ? 1 : 2);
@@ -36,6 +46,11 @@ export function playBeat({id, volume, sound, isTest = false}) {
     hit.triggerAttackRelease('C3', '2n', start + seconds);
   };
 };
+
+/** play:
+ * Purpose: used for Song Maker feature. Plays a melody/rhythm using a passed in buffer (or buffers if rhythm)
+ * Found in: SongMaker.js, SavedSongs.js
+ */
 
 export function play({ melodyId, volume, buffers, isRhythm }) {
   const instrument = isRhythm ?

@@ -1,5 +1,10 @@
 import learnInstrumentOptions from "instrument-id/learnInstrumentOptions";
 
+/** getChoices: 
+ * Purpose: generate random choice (or choices depending on level) from learnInstrumentOptions for listening skills test
+ * Found in: instrumentIdReducer.js
+ */
+
 function getChoices({ level, choice }) {
   const choices = learnInstrumentOptions[choice].instruments;
   const instrumentIdx = Math.floor(Math.random() * choices.length);
