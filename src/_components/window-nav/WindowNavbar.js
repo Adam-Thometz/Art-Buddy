@@ -6,7 +6,7 @@ import { changeMenuGames } from "_redux/settings/mainSettingsActions";
 
 import './WindowNavbar.css';
 
-import BackArrow from "../back-arrow/BackArrow";
+import BackArrow from "./back-arrow/BackArrow";
 
 const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   const { menu } = useSelector(state => state.mainSettings);
