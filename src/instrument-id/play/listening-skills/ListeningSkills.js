@@ -24,7 +24,7 @@ const ListeningSkills = () => {
   );
 
   const levels = [1,2].map(level => {
-    const goToTest = () => navigate(`${instrumentIdUrls.playListeningUrl}/${level}`);
+    const goToTest = () => navigate(`${instrumentIdUrls.playListening}/${level}`);
     return (
       <div key={level} className="ListeningSkills-level">
         <Button
