@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddIcon component matches snapshot 1`] = `
+<DocumentFragment>
+  <figure
+    class="Icon"
+  >
+    <img
+      alt=""
+      src="file"
+      style="height: 250px; width: 250px;"
+    />
+    <figcaption
+      class="Icon-text"
+      style="font-size: 1.75rem;"
+    />
+  </figure>
+</DocumentFragment>
+`;
