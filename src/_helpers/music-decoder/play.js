@@ -1,5 +1,10 @@
 import { now } from "tone";
 
+/** play
+ * Purpose: Takes a note or an array of notes and 'plays' them in the browser.
+ * Found in: wordToMusicDecoderReducer.js, AlphabetTable.js, DecoderControls.js
+ */
+
 export default function play(notes) {
   const sound = window.wordToMusicSound;
   const start = now();

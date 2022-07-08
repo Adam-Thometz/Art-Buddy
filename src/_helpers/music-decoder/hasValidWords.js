@@ -1,3 +1,13 @@
+/** hasValidWords
+ * Purpose: takes an array of words and checks for inputs that fit the following constraints:
+ * - no more than 4 words
+ * - no more than 26 characters, not including spaces
+ * - only letters. No numbers, symbols, etc.
+ * - each word can only have up to 12 characters
+ * 
+ * Found in: wordsToMusicDecoderReducer.js
+ */
+
 export default function hasValidWords(words) {
   const fullInput = words.replace(/ /g, '');
   if (fullInput.length > 26) return { success: false, error: 'Input can only have 26 characters' };

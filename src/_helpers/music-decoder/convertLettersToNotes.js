@@ -1,5 +1,10 @@
 import LETTER_NOTES from "./letterNotes";
 
+/** convertLettersToNotes
+ * Purpose: takes the input and filledLetters array, converts the letters to notes using the LETTERS_NOTES object, and returns an array of notes to play and an array of notes to toggle
+ * Found in: DecoderControls.js
+ */
+
 export default function convertLettersToNotes(words, filledLetters) {
   const notesToPlay = [];
   const lettersToToggle = [];

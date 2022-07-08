@@ -1,3 +1,8 @@
+/** findLettersToRemove
+ * Purpose: compares the old input with the updated input to see if any letters need to be removed from the filledLetters array in the Redux state
+ * Found in: wordsToMusicDecoderReducer.js
+ */
+
 export default function findLettersToRemove({ oldInput, newInput }) {
   const oldLetters = lettersInInput(oldInput);
   const newLetters = lettersInInput(newInput);
