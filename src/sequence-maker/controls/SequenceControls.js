@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setCategory, setDuration, setPitch } from "_redux/sequence-maker/sequenceMakerActions";
 
-import './SequenceControls.css'
+import './SequenceControls.css';
 
 import Dropdown from '_components/dropdown/Dropdown';
 

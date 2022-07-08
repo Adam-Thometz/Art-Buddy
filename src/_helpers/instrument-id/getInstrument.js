@@ -2,7 +2,7 @@ import learnInstrumentOptions from "instrument-id/learnInstrumentOptions";
 
 /** getInstrument
  * Purpose: get information about an instrument from learnInstrumentOptions based on the passed id
- * Found in: buffers.js, instrumentIdReducer.js
+ * Found in: buffers.js, instrumentIdReducer.js, Instrument.js
  */
 
 export default function getInstrument(instrumentId) {
