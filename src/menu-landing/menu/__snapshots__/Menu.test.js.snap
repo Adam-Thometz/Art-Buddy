@@ -10,11 +10,13 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     >
       <span
         class="WindowNavbar-button underlined"
+        id="games"
       >
         GAMES
       </span>
       <span
         class="WindowNavbar-button"
+        id="tools"
       >
         TOOLS
       </span>

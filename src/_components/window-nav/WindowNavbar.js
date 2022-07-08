@@ -9,32 +9,30 @@ import './WindowNavbar.css';
 import BackArrow from "../back-arrow/BackArrow";
 
 const WindowNavbar = ({ cornerIcon = null, page = null }) => {
+  const { menu } = useSelector(state => state.mainSettings);
+
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const menuCategory = useSelector(state => state.mainSettings.menu);
+  const handleChange = e => dispatch(changeMenuGames(e.target.id));
+  const underline = target => menu === target ? ' underlined' : '';
 
-  const handleChange = label => dispatch(changeMenuGames(label));
-  const underline = target => menuCategory === target ? ' underlined' : '';
-
-  const menuPage = () => (
+  const menuPage = (
     <header className="WindowNavbar-main">
-      <span onClick={() => handleChange('games')} className={`WindowNavbar-button${underline('games')}`}>GAMES</span>
-      <span onClick={() => handleChange('tools')} className={`WindowNavbar-button${underline('tools')}`}>TOOLS</span>
+      <span onClick={handleChange} id="games" className={`WindowNavbar-button${underline('games')}`}>GAMES</span>
+      <span onClick={handleChange} id="tools" className={`WindowNavbar-button${underline('tools')}`}>TOOLS</span>
     </header>
   );
 
-  const regularPage = () => (
+  const regularPage = (
     <header className="WindowNavbar-games">
       {location.pathname.length === 1 ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
-      {cornerIcon ? (
-        <div className="WindowNavbar-corner">{cornerIcon}</div>
-      ) : null}
+      {cornerIcon ? <div className="WindowNavbar-corner">{cornerIcon}</div> : null}
     </header>
   );
 
-  return page ? regularPage() : menuPage();
+  return page ? regularPage : menuPage;
 };
 
 export default WindowNavbar;

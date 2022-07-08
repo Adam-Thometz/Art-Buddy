@@ -34,7 +34,7 @@
 }
 
 .underlined {
-  background-image: url(_icons/underline.png);
+  background-image: url(underline.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;

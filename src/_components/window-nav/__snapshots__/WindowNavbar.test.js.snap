@@ -7,11 +7,13 @@ exports[`WindowNavbar component matches the snapshot of the WindowNavbar 1`] = `
   >
     <span
       class="WindowNavbar-button underlined"
+      id="games"
     >
       GAMES
     </span>
     <span
       class="WindowNavbar-button"
+      id="tools"
     >
       TOOLS
     </span>
