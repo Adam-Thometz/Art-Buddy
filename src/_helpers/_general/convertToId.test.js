@@ -15,4 +15,9 @@ describe('convertToId function', () => {
     const result = convertToId('5662 Thometz');
     expect(result).toBe('5662Thometz');
   });
+
+  it('should convert an instrument into camel case', () => {
+    const result = convertToId('french horn');
+    expect(result).toBe('frenchHorn');
+  });
 });

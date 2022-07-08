@@ -10,16 +10,16 @@ import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
-import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
 import { playBeat, playScale } from "_helpers/instrument-id/play";
+import getInstrument from "_helpers/instrument-id/getInstrument";
+import convertToId from "_helpers/_general/convertToId";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);
-  const { family, instrument } = useParams();
-  const instrumentInfo = learnInstrumentOptions[family]
-    .instruments
-    .find(i => i.name === instrument.replace('-', ' ').toUpperCase());
+  const { instrument } = useParams();
+  
+  const instrumentInfo = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
     
   const handleCreateBuffers = () => createBuffers(instrumentInfo.id);
 
