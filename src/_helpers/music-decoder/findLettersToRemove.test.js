@@ -5,15 +5,15 @@ const awGeez = ['aw', 'geez'];
 const awGee = ['aw', 'gee'];
 const awGe = ['aw', 'ge'];
 
-describe('makeFrequencyCounter function', () => {
-  it('should create a frequencyCounter for one word', () => {
+describe('lettersInInput function', () => {
+  it('should create a set for one word', () => {
     const result = lettersInInput(geez);
-    expect(result).toEqual({ g: true, e: true, z: true });
+    expect(result).toEqual(new Set(['g', 'e', 'z']));
   });
 
-  it('should create a frequencyCounter for two words', () => {
+  it('should create a set for two words', () => {
     const result = lettersInInput(awGeez);
-    expect(result).toEqual({ a: true, w: true, g: true, e: true, z: true });
+    expect(result).toEqual(new Set(['a', 'w', 'g', 'e', 'z']));
   });
 });
 
