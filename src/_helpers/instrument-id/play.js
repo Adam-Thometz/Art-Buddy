@@ -1,5 +1,5 @@
 import { now, Time } from 'tone';
-import sample from '../sample';
+import sample from '../_utils/sample';
 
 import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
 import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';

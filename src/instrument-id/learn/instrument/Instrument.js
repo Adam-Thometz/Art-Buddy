@@ -13,7 +13,7 @@ import Help from "_components/help/Help";
 import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
 import { playBeat, playScale } from "_helpers/instrument-id/play";
 import getInstrument from "_helpers/instrument-id/getInstrument";
-import convertToId from "_helpers/_general/convertToId";
+import convertToId from "_helpers/_utils/convertToId";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);

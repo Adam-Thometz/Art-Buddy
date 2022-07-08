@@ -1,5 +1,5 @@
 import { PitchShift, Synth, Volume } from "tone";
-import sample from '../sample';
+import sample from '../_utils/sample';
 
 import getInstrument from "../instrument-id/getInstrument";
 
