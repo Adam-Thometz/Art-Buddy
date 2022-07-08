@@ -1,6 +1,5 @@
 /** convertToId
  * Purpose: takes a string and converts it into an id in camel case
- * Found in: 
  */
 
 export default function convertToId(name) {
