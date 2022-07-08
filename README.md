@@ -1,7 +1,7 @@
 # Art Buddy
 
 Developer: Adam Thometz  
-UX designer: Mattie Becker
+UX designer: Mattie Becker  
 See deployment: https://art-buddy.surge.sh/
 
 ## What is Art Buddy?
