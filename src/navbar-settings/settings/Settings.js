@@ -41,12 +41,12 @@ const Settings = () => {
   const handleSetRoster = e => dispatch(setRoster(rosters[e.target.id]));
 
   const selectedVolume = { 
-    // Space Cadet
+    // Space Cadet (not completely accurate)
     filter: 'invert(9%) sepia(31%) saturate(5353%) hue-rotate(221deg) brightness(100%) contrast(94%)'
   };
 
   const unselectedVolume = {
-    // Light Grey
+    // Light Grey (not completely accurate)
     filter: 'invert(71%) sepia(83%) saturate(6%) hue-rotate(236deg) brightness(103%) contrast(89%)'
   };
 

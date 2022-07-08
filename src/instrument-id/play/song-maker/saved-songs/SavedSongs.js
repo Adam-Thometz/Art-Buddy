@@ -41,7 +41,7 @@ const SavedSongs = () => {
     if (!selectedSong) return;
     songs.delete(selectedSong);
     setSavedSongs(JSON.stringify(Array.from(songs.entries())));
-  }
+  };
 
   const songDisplay = Array.from(songs.keys()).map((key) => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>

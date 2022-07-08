@@ -12,7 +12,7 @@ import menuOptions from "./menuOptions";
 import activities from "./activityList";
 
 const Menu = ({ type = null }) => {
-  const menu = useSelector(state => state.mainSettings.menu);
+  const { menu } = useSelector(state => state.mainSettings);
   const navigate = useNavigate();
 
   const getGames = (category) => (

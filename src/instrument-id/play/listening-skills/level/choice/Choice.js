@@ -11,7 +11,7 @@ import Icon from "_components/icon/Icon";
 import { correctIcon, incorrectIcon } from "_media/instrument-id/_icons/iconImports";
 
 const Choice = ({ id, level, choice }) => {
-  const answer = useSelector(state => state.instrumentId.answer);
+  const { answer } = useSelector(state => state.instrumentId);
   const [isCorrect, setIsCorrect] = useState(null);
   const [savedReportCard, setSavedReportCard] = useReportCard(level);
   const dispatch = useDispatch();

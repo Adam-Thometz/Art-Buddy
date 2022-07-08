@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
+import { useSelector } from "react-redux";
+
 import './Instrument.css';
 
 import Icon from "_components/icon/Icon";
@@ -11,7 +13,6 @@ import Help from "_components/help/Help";
 import learnInstrumentOptions from "../../learnInstrumentOptions";
 import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
 import { playBeat, playScale } from "_helpers/instrument-id/play";
-import { useSelector } from "react-redux";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);

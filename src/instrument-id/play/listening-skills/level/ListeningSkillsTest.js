@@ -54,7 +54,7 @@ const ListeningSkillsTest = () => {
     isRhythm ? playBeat({ id, volume, sound, isTest: true }) : playScale({ id, volume, isTest: true });
   };
 
-  const dropdown = (id) => (<Dropdown
+  const dropdown = id => (<Dropdown
     id={id}
     labelText='CHOOSE FAMILY'
     onClick={setInstruments}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icon from '_components/icon/Icon';
 import Popup from '_components/popup/Popup';
-import SavedSongs from '../save-song/SavedSongs';
+import SavedSongs from '../saved-songs/SavedSongs';
 
 import { savedSongsIcon } from '_media/instrument-id/_icons/iconImports';
 

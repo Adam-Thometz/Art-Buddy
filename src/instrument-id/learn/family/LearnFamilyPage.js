@@ -43,11 +43,7 @@ const LearnFamilyPage = () => {
       <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
       <div className="LearnFamilyPage-main">
         <header className="LearnFamilyPage-header">
-          <Icon
-            icon={instrumentFamily.main}
-            text={`THE ${family.toUpperCase()} FAMILY`}
-            largeFont
-          />
+          <Icon icon={instrumentFamily.main} text={`THE ${family.toUpperCase()} FAMILY`} largeFont />
         </header>
         <section className="LearnFamilyPage-options">
           {options}

@@ -11,7 +11,7 @@ import Button from "_components/button/Button";
 import colorOptions from "./colorOptions";
 
 const NewStudentForm = () => {
-  const error = useSelector(state => state.scoreKeeper.error);
+  const { error } = useSelector(state => state.scoreKeeper);
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [color, setColor] = useState('');

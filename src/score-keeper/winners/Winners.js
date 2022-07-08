@@ -8,7 +8,7 @@ import './Winners.css';
 import Button from "_components/button/Button";
 
 const Winners = () => {
-  const winners = useSelector(state => state.scoreKeeper.winners);
+  const { winners } = useSelector(state => state.scoreKeeper);
   const dispatch = useDispatch();
 
   const handleReset = () => {
