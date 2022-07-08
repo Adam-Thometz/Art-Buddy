@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Dropdown.css';
 
-import downArrowIcon from './_icons/down-arrow.png';
+import downArrowIcon from './down-arrow.png';
 
 const Dropdown = ({ id = null, labelText, onClick, options, borderColor }) => {
   const [showOptions, setShowOptions] = useState(false);
