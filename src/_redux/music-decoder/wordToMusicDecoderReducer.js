@@ -35,18 +35,18 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       };
       
       const splitWords = words.split(' ');
-      const newWords = [];
+      const newInput = [];
       for (let i = 0; i < splitWords.length; i++) {
-        if (splitWords[i].length > 0) newWords.push(splitWords[i]);
+        if (splitWords[i].length > 0) newInput.push(splitWords[i]);
       };
 
       if (words.length < state.words.join(' ').length) {
-        const lettersToUnfill = findLettersToRemove({ newWords, currWords: state.words });
+        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput });
         const newFilledLetters = state.filledLetters.filter(letter => !lettersToUnfill.includes(letter));
         state.filledLetters = newFilledLetters;
       };
       
-      state.words = newWords.length ? newWords : INITIAL_STATE.words;
+      state.words = newInput.length ? newInput : INITIAL_STATE.words;
       state.formError = null;
     })
     .addCase(fillLetter, (state, action) => {
