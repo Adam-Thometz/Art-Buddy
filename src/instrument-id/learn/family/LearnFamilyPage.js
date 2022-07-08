@@ -19,7 +19,7 @@ const LearnFamilyPage = () => {
   const options = instruments.map(instrument => {
     const goToInstrument = () => {
       const url = `${
-        instrumentIdUrls.learnUrl
+        instrumentIdUrls.learn
       }/${
         family
       }/${
