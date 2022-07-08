@@ -31,4 +31,16 @@ describe('useFormFields hook', () => {
     });
     expect(result.current[0]).toEqual(testInitValue);
   });
+
+  it('handles adding another input', () => {
+    const { result } = renderHook(() => useFormFields(testInitValue));
+    act(() => {
+      const addInput = result.current[3];
+      addInput('testInput2', 'did i work?');
+    });
+    expect(result.current[0]).toEqual({
+      ...testInitValue,
+      testInput2: 'did i work?'
+    });
+  });
 });
