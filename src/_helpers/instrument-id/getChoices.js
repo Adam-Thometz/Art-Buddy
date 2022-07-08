@@ -1,4 +1,4 @@
-import learnInstrumentOptions from "../../instrument-id/learnInstrumentOptions";
+import learnInstrumentOptions from "instrument-id/learnInstrumentOptions";
 
 function getChoices({ level, choice }) {
   const choices = learnInstrumentOptions[choice].instruments;
