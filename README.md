@@ -10,9 +10,9 @@ Created by two educators, Art Buddy is a collection of arts-based multisensory g
 
 ### Teaching Terminology Needed to Understand the Purpose of Art Buddy
 
-**IEP (Individualized Education Plan):** a document written by a special education teacher that outlines a student's learning profile and goals in detail. Goals from an IEP could be academic - such as 'identify all lowercase letters in the alphabet' and 'compare numbers and identify the larger/smaller number' - or social - such as 'engage in play with peers' and 'respond to their name'. Other professionals who work with the student, such as speech therapists, occupational therapists, and counselors, usually contribute their own goals for the student to the IEP as well.
+**IEP (Individualized Education Plan):** a lengthy document written by a special education teacher that outlines a student's learning profile and goals in detail. IEP goals could be academic - such as 'identify all lowercase letters in the alphabet' and 'compare numbers and identify the larger/smaller number' - or social - such as 'engage in play with peers' and 'respond to their name'. Other school workers who work with the student, such as speech therapists, occupational therapists, etc. may contribute their own goals for the student as well.
 
-**Multisensory Instruction:** a style of teaching in which a teacher taps into multiple senses, giving students multiple ways of engaging in a lesson. This style stands in contrast to traditional instruction, which involves a teacher lecturing to a room of (presumably) listening students. This has significance for students with various learning challenges, such as ADHD, autism, dyslexia, and other neurodivergent conditions. Educational research points to the effectiveness of mutlisensory instruction for all students and the arts has been recognized as a good way of introducing it to lessons, hence the existence of Art Buddy.
+**Multisensory Instruction:** a style of teaching in which a teacher taps into multiple senses, giving students multiple ways of engaging in a lesson. This style stands in contrast to traditional instruction, which involves a teacher lecturing to a room of (presumably) listening students. Educational research suggests that mutlisensory instruction is highly effective for all students, especially those with learning challenges such as ADHD, autism, dyslexia, and other neurodivergent conditions, and the arts has been recognized as a natural vehicle for multisensory instruction, hence Art Buddy.
 
 ## The Apps
 
@@ -30,7 +30,7 @@ This app allows students to learn about different instruments based on category.
 
 ### Score Keeper
 
-This app is a basic score keeper. Extra features include assigning a color to a player and visualizing how many points each player has. When the game ends, user can press the End Game button to show the winner or winners. If you have a roster saved on the app, you can automatically populate the score keeper with the students on your roster. Good for recognizing and comparing quantity.
+This app is a basic score keeper. As points are added or subtracted, students are sorted based on who's winning. If you have a roster saved on the app, you can automatically populate the score keeper with the students on your roster. Good for recognizing and comparing quantity.
 
 ## Technical Information
 
