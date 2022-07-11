@@ -4,6 +4,12 @@ exports[`Students component matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="Students"
-  />
+  >
+    <p
+      class="Students-warning"
+    >
+      Load students by picking a roster in Settings (or creating one if you haven't)
+    </p>
+  </div>
 </DocumentFragment>
 `;

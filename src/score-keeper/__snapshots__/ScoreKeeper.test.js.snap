@@ -13,50 +13,31 @@ exports[`Score Keeper matches snapshot 1`] = `
       >
         SCORE KEEPER
       </h1>
-    </header>
-    <div
-      class="NewStudentForm"
-    >
       <div
-        class="NewStudentForm-student-name"
+        class="WindowNavbar-corner"
       >
-        <label
-          class="NewStudentForm-label"
-          for="newStudent"
-        >
-          ADD A STUDENT: 
-        </label>
-        <input
-          class="NewStudentForm-input"
-          id="newStudent"
-          name="newStudent"
-          type="text"
-          value=""
+        <img
+          alt="Help"
+          class="Help"
+          src="file"
         />
       </div>
-      <div
-        class="Dropdown"
-      >
-        <span
-          class="Dropdown-label"
-        >
-          PICK A COLOR 
-          <img
-            alt=""
-            src="file"
-          />
-        </span>
-      </div>
-      <button
-        class="Button small"
-        style="border-color: #4d4f5e;"
-      >
-        ADD STUDENT
-      </button>
-    </div>
+    </header>
+    <header>
+      <p>
+        HULLO IM SCORE KEEPER. I CAN KEEP TRACK OF UR SCORE. LOAD STUDENTS FROM UR ROSTER
+      </p>
+    </header>
+    <hr />
     <div
       class="Students"
-    />
+    >
+      <p
+        class="Students-warning"
+      >
+        Load students by picking a roster in Settings (or creating one if you haven't)
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -7,7 +7,6 @@ exports[`Student component matches the snapshot 1`] = `
   >
     <p
       class="Student-name"
-      style="color: rgb(0, 0, 0);"
     >
       Eddie
     </p>
@@ -15,27 +14,23 @@ exports[`Student component matches the snapshot 1`] = `
       class="Student-point-control"
     >
       <button
-        class="Button small"
-        style="border-color: #fd4d3a; font-size: 1.5rem; width: 30%;"
-      >
-        -
-      </button>
-      <button
-        class="Button small"
-        style="border-color: #89eb0a; font-size: 1.5rem; width: 30%;"
+        class="Button regular"
+        style="border-color: #89eb0a;"
       >
         +
       </button>
+      <p
+        class="Student-points"
+      >
+        0
+      </p>
+      <button
+        class="Button regular"
+        style="border-color: #fd4d3a;"
+      >
+        -
+      </button>
     </div>
-    <div
-      data-testid="points"
-    />
-    <button
-      class="Button small"
-      style="border-color: #fd4d3a;"
-    >
-      REMOVE FROM GAME
-    </button>
   </div>
 </DocumentFragment>
 `;
