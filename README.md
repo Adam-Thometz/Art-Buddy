@@ -6,7 +6,7 @@ See deployment: https://art-buddy.surge.sh/
 
 ## What is Art Buddy?
 
-Created by two educators, Art Buddy is a collection of arts-based multisensory games and teaching tools that are designed for students with special needs. The games in this collection are either based on real IEP goals that we've seen in our teaching careers or taken from Everyday Arts for Special Education (EASE), an experimental curriculum designed to supplement instruction with arts activities. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills.
+Created by two educators, Art Buddy is a collection of arts-based multisensory games and teaching tools that are designed for students with special needs. The games in this collection are either based on real IEP goals that we've seen in our teaching careers or taken from Everyday Arts for Special Education (EASE), an experimental curriculum designed to supplement instruction with arts activities. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills. This collection is not meant to replace teachers, it is meant to help teachers by giving them easy access to arts-based multisensory instruction and bring their own creativity into their craft.
 
 ### Teaching Terminology Needed to Understand the Purpose of Art Buddy
 
