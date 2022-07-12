@@ -2,12 +2,12 @@ import React from "react";
 import useFormFields from "_hooks/useFormFields";
 
 import { useDispatch, useSelector } from "react-redux";
-import { createWords } from "_redux/music-decoder/wordToMusicActions";
+import { createWords } from "_redux/music-decoder/musicDecoderActions";
 
 import './WordForm.css';
 
 const WordForm = () => {
-  const { formError } = useSelector(state => state.wordToMusic);
+  const { formError } = useSelector(state => state.musicDecoder);
   const [input, setInput] = useFormFields({ words: '' });
   const dispatch = useDispatch();
 

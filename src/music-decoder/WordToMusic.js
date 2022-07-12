@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { clearGame } from '_redux/music-decoder/wordToMusicActions';
+import { clearGame } from '_redux/music-decoder/musicDecoderActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import ToggleUpperCase from './toggle-uppercase/ToggleUpperCase';
@@ -12,7 +12,7 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import createSound from '_helpers/music-decoder/createSound';
 
 const WordToMusic = () => {
-  const { scale, sound } = useSelector(state => state.wordToMusic);
+  const { scale, sound } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
 

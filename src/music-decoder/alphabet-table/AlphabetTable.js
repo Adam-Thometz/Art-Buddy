@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { fillLetter } from "_redux/music-decoder/wordToMusicActions";
+import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
 
 import './AlphabetTable.css';
 
@@ -13,7 +13,7 @@ const AlphabetTable = () => {
     isUpperCase,
     currPlaying,
     filledLetters
-  } = useSelector(state => state.wordToMusic);
+  } = useSelector(state => state.musicDecoder);
   const dispatch = useDispatch();
 
   const displayLetters = isUpperCase ?

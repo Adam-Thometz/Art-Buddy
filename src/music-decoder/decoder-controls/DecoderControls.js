@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale, changeSound, toggleNote } from '_redux/music-decoder/wordToMusicActions';
+import { changeScale, changeSound, toggleNote } from '_redux/music-decoder/musicDecoderActions';
 
 import './DecoderControls.css';
 
@@ -21,7 +21,7 @@ const DecoderControls = () => {
     sound,
     currPlaying,
     filledLetters
-  } = useSelector(state => state.wordToMusic);
+  } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   

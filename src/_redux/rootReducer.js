@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import mainSettingsReducer from './settings/mainSettingsReducer';
-import wordToMusicDecoderReducer from './music-decoder/wordToMusicDecoderReducer';
+import musicDecoderReducer from './music-decoder/musicDecoderReducer';
 import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
 import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
 import instrumentIdReducer from './instrument-id/instrumentIdReducer';
@@ -9,7 +9,7 @@ import instrumentIdReducer from './instrument-id/instrumentIdReducer';
 const rootReducer = configureStore({
   reducer: {
     mainSettings: mainSettingsReducer,
-    wordToMusic: wordToMusicDecoderReducer,
+    musicDecoder: musicDecoderReducer,
     sequenceMaker: sequenceMakerReducer,
     scoreKeeper: scoreKeeperReducer,
     instrumentId: instrumentIdReducer
