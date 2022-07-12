@@ -5,6 +5,7 @@ import musicDecoderReducer from './music-decoder/musicDecoderReducer';
 import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
 import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
 import instrumentIdReducer from './instrument-id/instrumentIdReducer';
+import jumpIntoRhythmReducer from './jump-into-rhythm/jumpIntoRhythmReducer';
 
 const rootReducer = configureStore({
   reducer: {
@@ -12,7 +13,8 @@ const rootReducer = configureStore({
     musicDecoder: musicDecoderReducer,
     sequenceMaker: sequenceMakerReducer,
     scoreKeeper: scoreKeeperReducer,
-    instrumentId: instrumentIdReducer
+    instrumentId: instrumentIdReducer,
+    jumpIntoRhythm: jumpIntoRhythmReducer
   }
 });
 
