@@ -11,7 +11,7 @@ export default function convertLettersToNotes(words, filledLetters) {
 
   for (let i = 0; i < words.length; i++) {
     for (let char of words[i]) {
-      if (!filledLetters.includes(char)) {
+      if (!filledLetters[char]) {
         continue;
       } else {
         const note = LETTER_NOTES[char];

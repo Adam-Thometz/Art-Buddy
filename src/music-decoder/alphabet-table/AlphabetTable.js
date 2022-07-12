@@ -22,7 +22,7 @@ const AlphabetTable = () => {
 
   const createCell = char => {
     let className = 'AlphabetTable-cell';
-    if (filledLetters.includes(char)) className += ` ${LETTER_NOTES[char]}`;
+    if (filledLetters[char]) className += ` ${LETTER_NOTES[char]}`;
     if (char === currPlaying) className += ' playNote';
 
     return <td key={char} className={className} onClick={handleLetter}>{char}</td>;
@@ -30,7 +30,7 @@ const AlphabetTable = () => {
   
   const handleLetter = e => {
     const letter = e.target.textContent;
-    const hasLetter = filledLetters.includes(letter);
+    const hasLetter = filledLetters[letter];
     if (!hasLetter) {
       dispatch(fillLetter(letter));
     } else {

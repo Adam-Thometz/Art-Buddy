@@ -18,17 +18,17 @@ describe('Word To Music reducer', () => {
   
   it('should throw an error if a word is invalid', () => {
     const result = wordToMusicDecoderReducer(undefined, createWords('he110'));
-    expect(result.formError).toBe('Only letters are allowed')
-  })
+    expect(result.formError).toBe('Only letters are allowed');
+  });
 
   it('should fill a letter with a note', () => {
     const result = wordToMusicDecoderReducer(testState, fillLetter('H'));
-    expect(result.filledLetters[0]).toEqual('H');
+    expect(result.filledLetters['H']).toBe(true);
   });
   
   it('should not work if fill letter is called with a letter not in words', () => {
     const result = wordToMusicDecoderReducer(testState, fillLetter('B'));
-    expect(result.filledLetters.length).toEqual(0);
+    expect(Object.keys(result.filledLetters).length).toBe(0);
   });
 
   it('should change the scale', () => {

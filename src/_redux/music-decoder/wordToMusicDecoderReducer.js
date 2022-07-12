@@ -4,13 +4,13 @@ import { createReducer } from "@reduxjs/toolkit";
 import hasValidWords from "_helpers/music-decoder/hasValidWords";
 import searchLetter from "_helpers/music-decoder/searchLetter";
 import findLettersToRemove from "_helpers/music-decoder/findLettersToRemove";
-
 import play from "_helpers/music-decoder/play";
 import LETTER_NOTES from "_helpers/music-decoder/letterNotes";
 
 export const INITIAL_STATE = {
   words: [],
-  filledLetters: [],
+  // TODO: Turn filledLetter into object for faster searching
+  filledLetters: {},
   scale: 0,
   sound: 'synth',
   isUpperCase: true,
@@ -21,28 +21,26 @@ export const INITIAL_STATE = {
 const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(createWords, (state, action) => {
-      const words = action.payload;
-      if (words.length === 0) {
+      const newWords = action.payload;
+      if (newWords.length === 0) {
         state.words = INITIAL_STATE.words;
         state.filledLetters = INITIAL_STATE.filledLetters;
         return;
       };
       
-      const check = hasValidWords(words);
-      if (!check.success) {
-        state.formError = check.error;
-        return;
-      };
+      const check = hasValidWords(newWords);
+      if (!check.success) { state.formError = check.error; return; };
       
-      const splitWords = words.split(' ');
+      const splitWords = newWords.split(' ');
       const newInput = [];
       for (let i = 0; i < splitWords.length; i++) {
         if (splitWords[i].length > 0) newInput.push(splitWords[i]);
       };
 
-      if (words.length < state.words.join(' ').length) {
+      if (newWords.length < state.words.join(' ').length) {
+        const newFilledLetters = { ...state.filledLetters }
         const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput });
-        const newFilledLetters = state.filledLetters.filter(letter => !lettersToUnfill.includes(letter));
+        for (let letter of lettersToUnfill) newFilledLetters[letter] = false
         state.filledLetters = newFilledLetters;
       };
       
@@ -54,7 +52,8 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       const hasLetter = searchLetter(state.words, letter);
       if (!hasLetter) return;
 
-      state.filledLetters.push(letter);
+      const newFilledLetters = { ...state.filledLetters, [letter]: true };
+      state.filledLetters = newFilledLetters;
       play(LETTER_NOTES[letter]);
     })
     .addCase(changeScale, (state, action) => {
@@ -71,7 +70,7 @@ const wordToMusicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(clearGame, (state) => {
       state.words = [];
-      state.filledLetters = [];
+      state.filledLetters = {};
       state.scale = 0;
       state.sound = 'synth';
       state.isUpperCase = true;
