@@ -2,7 +2,7 @@ import React from "react";
 
 import './Button.css';
 
-import colors from "./colorOrder";
+import colors from "_helpers/_utils/colorOrder";
 
 const Button = ({
   children,

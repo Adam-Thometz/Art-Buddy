@@ -5,7 +5,7 @@ import { screen } from "@testing-library/react";
 
 import Button from './Button'
 
-import colors from './colorOrder'
+import colors from '../../_helpers/_utils/colorOrder'
 
 describe('Button component', () => {
   it('renders without crashing', () => {

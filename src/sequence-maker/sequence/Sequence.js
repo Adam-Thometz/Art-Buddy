@@ -9,7 +9,7 @@ import './Sequence.css';
 import SequenceBlock from "./sequence-block/SequenceBlock";
 import Icon from "_components/icon/Icon";
 
-import colors from "_components/button/colorOrder";
+import colors from "_helpers/_utils/colorOrder";
 import play from '_media/sequence-maker/_icons/play.png';
 import playAll from '_media/sequence-maker/_icons/play-all.png';
 
