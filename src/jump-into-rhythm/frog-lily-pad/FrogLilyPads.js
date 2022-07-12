@@ -7,10 +7,10 @@ import LilyPadDisplay from './lily-pad-display/LilyPadDisplay';
 
 const FrogLilyPad = () => {
   return (
-    <div className='FrogLilyPads'>
+    <section className='FrogLilyPads'>
       <Frog />
       <LilyPadDisplay />
-    </div>
+    </section>
   )
 }
 

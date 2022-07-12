@@ -4,6 +4,7 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Help from '_components/help/Help';
 import FrogLilyPads from './frog-lily-pad/FrogLilyPads';
 import NoteDisplay from './note-display/NoteDisplay';
+import NoteOptions from './note-options/NoteOptions';
 
 const JumpIntoRhythm = () => {
   return (
@@ -14,6 +15,7 @@ const JumpIntoRhythm = () => {
       </header>
       <FrogLilyPads />
       <NoteDisplay />
+      <NoteOptions />
     </main>
   );
 };

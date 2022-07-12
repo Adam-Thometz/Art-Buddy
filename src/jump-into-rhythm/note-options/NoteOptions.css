@@ -1,0 +1,14 @@
+.NoteOptions {
+  background-color: #F4F4F5;
+  height: 24vh;
+  width: 94vw;
+  border-top: 1px solid #D4D2D5;
+  margin-left: -2%;
+  display: flex;
+  align-items: center;
+}
+
+.NoteOptions-notes {
+  font-size: 24px;
+  width: 80%;
+}
