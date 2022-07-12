@@ -62,19 +62,11 @@ const DecoderControls = () => {
   return (
     <section className='DecoderControls'>
       <aside className='DecoderControls-dropdowns'>
-        <Dropdown
-          labelText='SCALE'
-          onClick={handleChangeScale}
-          options={scales}
-        />
-        <Dropdown
-          labelText='SOUND'
-          onClick={handleChangeSound}
-          options={instruments}
-        />
+        <Dropdown labelText='SCALE' onClick={handleChangeScale} options={scales} />
+        <Dropdown labelText='SOUND' onClick={handleChangeSound} options={instruments} />
       </aside>
       <aside className='DecoderControls-play'>
-        <Button small colorId={0} onClick={handlePlayMelody} otherStyles={{width: '10vw', padding: '3%'}}>PLAY</Button>
+        <Button small colorId={0} onClick={handlePlayMelody} otherStyles={{ width: '10vw', padding: '3%' }}>PLAY</Button>
       </aside>
     </section>
   );
