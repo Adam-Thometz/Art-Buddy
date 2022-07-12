@@ -70,6 +70,7 @@ For now, this app is purely front end:
 - Redux for state management
 - CSS for styling
 - Jest/React Testing Library for testing
+- Tone.js for music-related functionality
 
 ### How to run app
 
