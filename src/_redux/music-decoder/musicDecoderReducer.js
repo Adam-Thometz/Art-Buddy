@@ -75,6 +75,6 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.isUpperCase = true;
       state.formError = null;
     });
-})
+});
 
 export default musicDecoderReducer;
