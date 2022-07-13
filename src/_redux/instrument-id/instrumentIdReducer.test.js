@@ -1,5 +1,5 @@
 import instrumentIdReducer, { INITIAL_STATE, defaultInstrument } from "./instrumentIdReducer";
-import { selectChoice, generateAnswer, clearChoices, addInstrument, selectMelody } from "./insturmentIdActions";
+import { selectChoice, generateAnswer, clearChoices, addInstrument, removeInstrument, selectMelody } from "./insturmentIdActions";
 
 import { setupChoices, setupInstrument } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
@@ -51,6 +51,14 @@ describe("What's That Instrument? reducer", () => {
     expect(result.song[3]).toBe(null);
     const result2 = instrumentIdReducer(result, addInstrument(3));
     expect(result2.song[3]).toEqual(defaultInstrument);
+  });
+
+  it('should handle removing an instrument from a song', () => {
+    const result = instrumentIdReducer(undefined, addInstrument(1));
+    expect(result.song[1]).toEqual(defaultInstrument);
+    expect(result.song[0]).toEqual(defaultInstrument);
+    const result2 = instrumentIdReducer(result, removeInstrument(0));
+    expect(result2.song[0]).toBe(null);
   });
 
   it('should handle selecting an instrument', () => {

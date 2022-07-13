@@ -13,7 +13,7 @@ import { createBuffers } from '_helpers/instrument-id/buffers';
 
 const InstrumentDisplay = () => {
   const { song } = useSelector(state => state.instrumentId);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleAddInstrument = e => {
     const id = +e.currentTarget.id;
