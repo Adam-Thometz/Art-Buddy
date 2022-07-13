@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addInstrument, selectInstrument, selectMelody } from '_redux/instrument-id/insturmentIdActions';
+import { addInstrument, removeInstrument, selectInstrument, selectMelody } from '_redux/instrument-id/insturmentIdActions';
 
 import './InstrumentDisplay.css';
 
@@ -16,8 +16,13 @@ const InstrumentDisplay = () => {
   const dispatch = useDispatch()
 
   const handleAddInstrument = e => {
-    const id = e.currentTarget.id;
+    const id = +e.currentTarget.id;
     dispatch(addInstrument(id));
+  };
+
+  const handleRemoveInstrument = e => {
+    const id = +e.currentTarget.id;
+    dispatch(removeInstrument(id));
   };
   
   const handleSelectInstrument = e => {
@@ -28,7 +33,7 @@ const InstrumentDisplay = () => {
   };
 
   const handleSelectMelody = e => {
-    const id = e.currentTarget.id;
+    const id = +e.currentTarget.id;
     const melodyId = e.target.id;
     dispatch(selectMelody({ id, melodyId }));
   };
@@ -61,6 +66,7 @@ const InstrumentDisplay = () => {
             <div className='InstrumentDisplay-options'>
               {instrumentDropdown}
               {melodyDropdown}
+              <span className='InstrumentDisplay-remove' id={i} onClick={handleRemoveInstrument}>remove</span>
             </div>
           );
         };

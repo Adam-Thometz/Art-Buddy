@@ -10,17 +10,21 @@ See deployment: https://art-buddy.surge.sh/
 
 Created by two former educators, Art Buddy is a collection of arts-based multisensory games and teaching tools designed for students with special needs. The games in this collection are either based on real IEP goals that we've seen in our teaching careers or taken from Everyday Arts for Special Education (EASE), an experimental curriculum designed to supplement instruction with arts activities that the developer trained in during his teaching career. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills.  
 
-This app is not meant to replace teachers. It is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft while giving students a fun and neurodiverse-friendly way to reach their goals.
+This app is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft and gives students a fun and neurodiverse-friendly way to reach their goals.
 
 ### Glossary of Terms Related to Art Buddy
 
-**IEP (Individualized Education Plan):** a lengthy, student-focused document written primarily by a special education teacher that outlines a student's learning profile and goals in detail. IEP goals could be academic - such as 'identify lowercase letters' and 'compare numbers to identify the larger/smaller number' - or social - such as 'engage in play with peers' and 'express their needs'.
+**IEP (Individualized Education Plan):** a lengthy, student-focused document written primarily by a special education teacher that outlines a student's learning profile and goals in detail. IEP goals could be academic - such as 'identify lowercase letters' and 'compare numbers to identify the larger/smaller number' - or social - such as 'engage in play with peers' and 'express their needs'. The games in Art Buddy are designed for such goals.
 
-**Multisensory Instruction:** a style of teaching in which a teacher taps into multiple senses, giving students multiple ways of engaging in a lesson. Educational research suggests that mutlisensory instruction is highly effective for all students, especially those with learning challenges such as ADHD, autism, dyslexia, and other neurodivergent conditions. Given that all the major arts disciplines engage different human senses, Art Buddy turns the arts into a vehicle for multisensory instruction.
+**Multisensory Instruction:** a style of teaching in which a teacher taps into multiple senses, giving students multiple ways of engaging in a lesson. Educational research suggests that mutlisensory instruction is highly effective for all students, especially those with learning challenges and other neurodivergent conditions. Given that all the major arts disciplines engage different human senses, Art Buddy turns the arts into a vehicle for multisensory instruction.
 
-**Neurodiversity:** the idea that how someone's brain works and processes information is simply a reflection of natural human diversity, like gender, ethnicity, and sexuality. Autism, ADHD, dyslexia, and bipolar disorder are considered 'neurodiverse' conditions and people without such conditions are 'neurotypical.' This principle is the lifeblood of Art Buddy; this app was made specifically for neurodiverse children but all children could benefit.
+**Neurodiversity:** the idea that how someone's brain works and processes information is simply a reflection of natural human diversity, like gender, ethnicity, and sexuality. Autism, ADHD, dyslexia, and bipolar disorder are examples of 'neurodiverse' conditions and people without such conditions are 'neurotypical.' Neurodiversity is the lifeblood of Art Buddy; it was made specifically for neurodiverse children.
 
-## The Apps
+## The App
+
+### Settings
+
+The settings menu, which you can access via the navbar, allows the user to control volume, toggle the text-to-speech feature (under construction), toggle the color-blind setting (under construction), and set a roster for games that require the use of a roster.
 
 ### Music Games
 
@@ -34,7 +38,7 @@ This app allows students to create a sequence of sounds. They pick sounds from d
 
 #### What's That Instrument?
 
-This app allows students to learn about different instruments based on category. Students can also test their instrument knowledge in the Listening Skills test and unlock instruments for the Song Maker. Good for listening and reading comprehension.
+This app is divided into two sections: Learn and Play. The Learn section allows students to learn about different instruments. In the Play section, students can test their instrument knowledge in the Listening Skills test and unlock instruments for the Song Maker, a mini-sequencer where students can select instruments and melodies for them to play. Good for listening and reading comprehension.
 
 #### Jump Into Rhythm (under construction)
 
@@ -44,7 +48,7 @@ This app is a movement-based game in which students can create unique rhythms an
 
 #### Time Keeper (under construction)
 
-This tool is a musical timer that allows users to use samples of varying lengths (15, 30, and 60 seconds) to create a timer and the music plays as the timer counts down. Can be used to create full-length songs. Good for learning about time or fractions or just as a timer for a break.  
+This tool is a musical timer that allows users to use samples of varying lengths (15, 30, and 60 seconds) to create a timer and the music plays as the timer counts down. Can be used to create full-length songs. Comes with options to create a 5- or 10-minute timer, which creates random sequences of available samples at the selected length. Good for learning about time or just as a timer for a break.  
 
 Samples for Time Keeper were composed by the developer.
 

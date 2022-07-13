@@ -1,4 +1,4 @@
-import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong } from "./insturmentIdActions";
+import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument } from "./insturmentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_helpers/instrument-id/getInstrument";
@@ -46,6 +46,10 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
       state.song[id] = defaultInstrument;
+    })
+    .addCase(removeInstrument, (state, action) => {
+      const id = action.payload;
+      state.song[id] = null;
     })
     .addCase(selectInstrument, (state, action) => {
       const { id, instrumentId } = action.payload;
