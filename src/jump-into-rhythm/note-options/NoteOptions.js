@@ -10,7 +10,7 @@ import './NoteOptions.css';
 const NoteOptions = () => {
   const notes = Object.keys(noteInfo).map(note => {
     const { altText, img, id } = noteInfo[note];
-    return <Icon icon={img} text={altText} size='100px' width='5%' id={id} />;
+    return <Icon icon={img} text={altText} size='100px' width='30%' id={id} />;
   });
 
   return (

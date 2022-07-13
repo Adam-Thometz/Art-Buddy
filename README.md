@@ -70,7 +70,7 @@ This tool monitors noise in a room. Good for training noisy classes.
 
 For now, this app is purely front end:
 
-- React for client-side rendering
+- React and React Router for client-side rendering
 - Redux for state management
 - CSS for styling
 - Jest/React Testing Library for testing
