@@ -1,4 +1,4 @@
-import LETTER_NOTES from "./letterNotes";
+import LETTER_NOTES from "../../_data/music-decoder/letterNotes";
 
 /** convertLettersToNotes
  * Purpose: takes the input and filledLetters array, converts the letters to notes using the LETTERS_NOTES object, and returns an array of notes to play and an array of notes to toggle

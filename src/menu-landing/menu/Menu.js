@@ -8,8 +8,8 @@ import './Menu.css';
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 
-import menuOptions from "./menuOptions";
-import activities from "./activityList";
+import menuOptions from "../../_data/menu/menuOptions";
+import activities from "../../_data/menu/activityList";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector(state => state.mainSettings);

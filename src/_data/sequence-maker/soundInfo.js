@@ -1,4 +1,4 @@
-import { images, sounds } from './soundImageImports';
+import { images, sounds } from '../../_media/sequence-maker/soundImageImports';
 
 const stop = {
   image: images.stop,

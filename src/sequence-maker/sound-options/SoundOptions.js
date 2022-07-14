@@ -8,7 +8,7 @@ import './SoundOptions.css';
 import Options from '_components/option/Options';
 import Icon from '_components/icon/Icon';
 
-import soundInfo from '_media/sequence-maker/soundInfo';
+import soundInfo from '_data/sequence-maker/soundInfo';
 import createBuffer from '_helpers/sequence-maker/createBuffer';
 
 const SoundOptions = () => {

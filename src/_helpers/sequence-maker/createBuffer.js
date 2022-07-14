@@ -1,4 +1,4 @@
-import soundInfo from "_media/sequence-maker/soundInfo";
+import soundInfo from "_data/sequence-maker/soundInfo";
 import { Buffer } from "tone";
 
 /** createBuffer

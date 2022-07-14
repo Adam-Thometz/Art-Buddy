@@ -7,7 +7,7 @@ import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
-import learnInstrumentOptions from "../../learnInstrumentOptions";
+import learnInstrumentOptions from "../../../_data/instrument-id/learnInstrumentOptions";
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const LearnFamilyPage = () => {

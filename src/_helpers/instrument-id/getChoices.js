@@ -1,4 +1,4 @@
-import learnInstrumentOptions from "instrument-id/learnInstrumentOptions";
+import learnInstrumentOptions from "_data/instrument-id/learnInstrumentOptions";
 
 /** getChoices: 
  * Purpose: generate random choice (or choices depending on level) from learnInstrumentOptions for listening skills test

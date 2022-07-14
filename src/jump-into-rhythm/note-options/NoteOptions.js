@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';
 
-import noteInfo from '_helpers/jump-into-rhythm/noteInfo';
+import noteInfo from '_data/jump-into-rhythm/noteInfo';
 import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './NoteOptions.css';

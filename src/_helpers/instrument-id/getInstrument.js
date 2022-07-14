@@ -1,4 +1,4 @@
-import learnInstrumentOptions from "instrument-id/learnInstrumentOptions";
+import learnInstrumentOptions from "_data/instrument-id/learnInstrumentOptions";
 
 /** getInstrument
  * Purpose: get information about an instrument from learnInstrumentOptions based on the passed id
