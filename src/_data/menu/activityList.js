@@ -1,4 +1,4 @@
-import urls from "../../_routes/routeUrls";
+import urls from "_routes/routeUrls";
 
 import wordToMusicIcon from '_media/menu/activity-icons/word-to-music.png'
 import sequenceMakerIcon from '_media/menu/activity-icons/sequence-maker.png'

@@ -1,14 +1,16 @@
-import { Sampler, Volume } from "tone";
+import { Sampler } from "tone";
 
 /** sample
- * Purpose: takes a sound and a number for volume and returns a sample to play notes with. Used mainly in play-related function
+ * Purpose: takes a sound and a number for volume and returns a sample to play notes with. Used mainly in play-related functions
  */
 
-const sample = (sound, volume) => {
-  const vol = new Volume(volume).toDestination();
-  return new Sampler({
+const sample = ({ sound, volume, toDestination = true }) => {
+  const sample = new Sampler({
     urls: { C3: sound }
-  }).connect(vol);
+  });
+  sample.volume.value = volume;
+
+  return toDestination ? sample.toDestination() : sample;
 };
 
 export default sample;

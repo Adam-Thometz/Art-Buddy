@@ -12,10 +12,9 @@ export default function play(notes) {
     sound.triggerAttackRelease(`${notes}3`, '4n', start);
   } else {
     let seconds = 0;
-    for (let i = 0; i < notes.length; i++) {
-      const note = notes[i];
+    notes.forEach(note => {
       if (note !== '') sound.triggerAttackRelease(`${note}3`, '8n', start + seconds);
       seconds += 0.5;
-    };
+    })
   };
 };

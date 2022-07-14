@@ -1,4 +1,4 @@
-import { PitchShift, Synth, Volume } from "tone";
+import { PitchShift, Synth } from "tone";
 import sample from '../_utils/sample';
 
 import getInstrument from "../instrument-id/getInstrument";
@@ -9,16 +9,16 @@ import getInstrument from "../instrument-id/getInstrument";
  */
 
 export default function createSound({ volume, scale = 0, sampleId = 'synth' }) {
-  let sound;
+  const pitchShift = new PitchShift(scale).toDestination();
+  let instrument;
+
   if (sampleId !== 'synth') {
-    const soundUrl = getInstrument(sampleId).sound;
-    sound = sample(soundUrl);
+    const { sound } = getInstrument(sampleId);
+    instrument = sample({ sound, volume, toDestination: false }).connect(pitchShift);
   } else {
-    sound = new Synth();
-  }
-  const pitchShift = new PitchShift({pitch: scale});
-  const vol = new Volume(volume).toDestination();
-  pitchShift.connect(vol);
-  sound.connect(pitchShift);
-  window.wordToMusicSound = sound;
+    instrument = new Synth().connect(pitchShift);
+    instrument.volume.value = volume;
+  };
+
+  window.wordToMusicSound = instrument;
 };
