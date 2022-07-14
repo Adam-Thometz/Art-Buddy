@@ -25,7 +25,7 @@ const mainSettingsReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(setRoster, (state, action) => {
       state.roster = action.payload;
-    })
+    });
 });
 
 export default mainSettingsReducer;
