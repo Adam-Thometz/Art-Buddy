@@ -8,7 +8,13 @@ export const INITIAL_STATE = {
 const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(addToRhythm, (state, action) => {
-
+      const nextIdx = state.rhythm.findIndex(note => note === null);
+      if (nextIdx === -1) return;
+      
+      const { id, img, duration } = action.payload;
+      const newRhythm = [ ...state.rhythm ];
+      newRhythm[nextIdx] = { id, img, duration };
+      state.rhythm = newRhythm;
     })
 });
 

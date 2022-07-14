@@ -1,16 +1,27 @@
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';
 
 import noteInfo from '_helpers/jump-into-rhythm/noteInfo';
+import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './NoteOptions.css';
 
 const NoteOptions = () => {
-  const notes = Object.keys(noteInfo).map(note => {
-    const { altText, img, id } = noteInfo[note];
-    return <Icon icon={img} text={altText} size='100px' width='30%' id={id} />;
+  const dispatch = useDispatch();
+
+  const handleAddNotes = e => {
+    const { id } = e.currentTarget;
+    const { img, duration } = noteInfo[id];
+    dispatch(addToRhythm({ id, img, duration }));
+  }
+
+  const notes = Object.keys(noteInfo).map(noteId => {
+    const { altText, img } = noteInfo[noteId];
+    return <Icon icon={img} text={altText} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
   });
 
   return (
