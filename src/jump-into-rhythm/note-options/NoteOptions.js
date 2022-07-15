@@ -20,8 +20,8 @@ const NoteOptions = () => {
   }
 
   const notes = Object.keys(noteInfo).map(noteId => {
-    const { altText, img } = noteInfo[noteId];
-    return <Icon icon={img} text={altText} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
+    const { text, img } = noteInfo[noteId];
+    return <Icon icon={img} text={text} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
   });
 
   return (
