@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 
 import Navbar from './navbar-settings/Navbar';
-import ArtBuddyRoutes from './_routes/ArtBuddyRoutes';
+import ArtBuddyRoutes from '_routes/ArtBuddyRoutes';
 
 const App = () => {
   return (
