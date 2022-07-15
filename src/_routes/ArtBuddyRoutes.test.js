@@ -30,7 +30,7 @@ describe('Art Buddy Routes', () => {
     renderWithProvider(<ArtBuddyRoutes />, { initialRoutes: [urls.allGames] });
     expect(screen.getByText('ALL GAMES')).toBeInTheDocument();
   });
-  
+
   it('renders the word-to-music decoder', () => {
     renderWithProvider(<ArtBuddyRoutes />, { initialRoutes: [urls.wordToMusic] });
     expect(screen.getByText('WORD-TO-MUSIC DECODER')).toBeInTheDocument();
@@ -50,14 +50,14 @@ describe('Art Buddy Routes', () => {
     renderWithProvider(<ArtBuddyRoutes />, { initialRoutes: [urls.instrumentId] });
     expect(screen.getByText("INSTRUMENT ID")).toBeInTheDocument();
   });
-  
+
   it('renders the score keeper', () => {
     renderWithProvider(<ArtBuddyRoutes />, { initialRoutes: [urls.scoreKeeper] });
     expect(screen.getByText('SCORE KEEPER')).toBeInTheDocument();
   });
-  
+
   it('renders the 404 page', () => {
     renderWithProvider(<ArtBuddyRoutes />, { initialRoutes: ['/gregwerg'] });
     expect(screen.getByText('UH OH!')).toBeInTheDocument();
   });
-})
+});

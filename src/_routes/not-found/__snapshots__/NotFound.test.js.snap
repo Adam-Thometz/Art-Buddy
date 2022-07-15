@@ -5,15 +5,9 @@ exports[`NotFound component matches the snapshot of the not found page 1`] = `
   <div
     class="NotFound"
   >
-    <header
-      class="WindowNavbar-games"
-    >
-      <h1
-        class="WindowNavbar-label"
-      >
-        UH OH!
-      </h1>
-    </header>
+    <h1>
+      UH OH!
+    </h1>
     <p>
       Are you lost? We couldn't find the page you were looking for
     </p>
