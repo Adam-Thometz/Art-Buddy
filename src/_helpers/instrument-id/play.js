@@ -10,19 +10,17 @@ import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
  */
 
 export function playScale({ id, volume, isTest = false }) {
-  const scale = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4'];
-  const bufferId = `${id}Buffer`;
-  if (!window[bufferId]) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
+  const scale = ['C3', 'D3', 'E3', 'F3', 'G3'];
+  if (!isTest) scale.push('A3', 'B3', 'C4');
 
-  const instrument = sample({ sound: window[bufferId], volume });
-  
-  const numNotes = isTest ? 5 : scale.length;
+  const sound = window[`${id}Buffer`];
+
+  const instrument = sample({ sound, volume });
   const start = now();
-  for (let i = 0; i < numNotes; i++) {
-    const note = scale[i];
+  scale.forEach((note, i) => {
     const seconds = i / 2;
     instrument.triggerAttackRelease(note, '4n', start + seconds);
-  };
+  });
 };
 
 /** playBeat: 
@@ -32,17 +30,8 @@ export function playScale({ id, volume, isTest = false }) {
 
 export function playBeat({ id, volume, sound, isTest = false }) {
   const soundsLength = Object.keys(sound).length;
-  const hits = [];
   const upperLimit = soundsLength*(isTest ? 1 : 2);
-
-  for (let i = 0; i < upperLimit; i++) {
-    const bufferId = `${id}Buffer${(i % soundsLength) + 1}`;
-    const buffer = window[bufferId];
-    if (!buffer) throw new Error('Whoops! Something went wrong! Reload the page and try again!');
-    
-    const sound = sample({ sound: buffer, volume });
-    hits.push(sound);
-  };
+  const hits = getHits({ id, upperLimit, soundsLength, volume });
 
   const start = now();
   hits.forEach((hit, i) => {
@@ -57,23 +46,32 @@ export function playBeat({ id, volume, sound, isTest = false }) {
  */
 
 export function play({ melodyId, volume, buffers, isRhythm }) {
-  let instrument;
-  if (isRhythm) {
-    instrument = buffers.map(b => sample({ sound: b, volume }));
-  } else {
-    instrument = sample({ sound: buffers, volume });
-  }
+  const instrument = isRhythm ?
+    buffers.map(b => sample({ sound: b, volume })) :
+    sample({ sound: buffers, volume });
   const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
+  
   const start = now();
-
   let seconds = 0;
-  for (let i = 0; i < melody.length; i++) {
-    const { notes, duration } = melody[i];
-    for (let note of notes) {
+  melody.forEach(beat => {
+    const { notes, duration } = beat;
+    notes.forEach(note => {
       const instrumentToPlay = isRhythm ? instrument[note] : instrument;
       const noteToPlay = isRhythm ? 'C3' : note;
       instrumentToPlay.triggerAttackRelease(noteToPlay, duration, start + seconds);
-    };
+    });
     seconds += Time(duration).toSeconds();
+  });
+};
+
+function getHits({ id, upperLimit, soundsLength, volume }) {
+  const hits = [];
+  for (let i = 0; i < upperLimit; i++) {
+    const bufferId = `${id}Buffer${(i % soundsLength) + 1}`;
+    const buffer = window[bufferId];
+    
+    const sound = sample({ sound: buffer, volume });
+    hits.push(sound);
   };
+  return hits;
 };
