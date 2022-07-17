@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Window from "_components/window/Window";
-
 import MenuRoutes from "./menu/MenuRoutes";
 import MusicRoutes from "./music/MusicRoutes";
 import ToolsRoutes from "./tools/ToolsRoutes";
+
+import Window from "_components/window/Window";
 import NotFound from "./_not-found/NotFound";
 
 import getRoutes from "_helpers/_utils/getRoutes";
