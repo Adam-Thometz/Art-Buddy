@@ -7,8 +7,9 @@ const urls = {
   sequenceMaker: '/sequence-maker',
   jumpIntoRhythm: '/jump-into-rhythm',
   instrumentId: '/instrument-id',
-  scoreKeeper: '/score-keeper'
-}
+  scoreKeeper: '/score-keeper',
+  timeKeeper: '/time-keeper'
+};
 
 export const instrumentIdUrls = {
   learn: '/instrument-id/learn',
@@ -18,6 +19,6 @@ export const instrumentIdUrls = {
   playListening: '/instrument-id/play/listening-skills',
   playListeningLevel: '/instrument-id/play/listening-skills/:level',
   playSongMaker: '/instrument-id/play/song-maker',
-}
+};
 
 export default urls;

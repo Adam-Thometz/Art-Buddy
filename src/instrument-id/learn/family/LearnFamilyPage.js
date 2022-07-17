@@ -8,7 +8,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
 import learnInstrumentOptions from "../../../_data/instrument-id/learnInstrumentOptions";
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { instrumentIdUrls } from "_data/_routes/routeUrls";
 
 const LearnFamilyPage = () => {
   const navigate = useNavigate();

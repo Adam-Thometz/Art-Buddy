@@ -11,7 +11,7 @@ import Help from "_components/help/Help";
 import ReportCard from "../report-card/ReportCard";
 
 import { listeningSkills, reportCardIcon } from "_media/instrument-id/_icons/iconImports";
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { instrumentIdUrls } from "_data/_routes/routeUrls";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();

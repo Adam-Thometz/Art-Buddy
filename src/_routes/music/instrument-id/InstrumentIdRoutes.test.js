@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import InstrumentIdRoutes from "./InstrumentIdRoutes";
-import { instrumentIdUrls } from '_routes/routeUrls';
+import { instrumentIdUrls } from '_data/_routes/routeUrls';
 
 describe('Instrument Id Routes', () => {
   it('renders without crashing', () => {

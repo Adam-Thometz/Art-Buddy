@@ -9,7 +9,7 @@ import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 
 import { playIcon, learnIcon } from "_media/instrument-id/_icons/iconImports";
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { instrumentIdUrls } from "_data/_routes/routeUrls";
 
 const InstrumentId = () => {
   const navigate = useNavigate();

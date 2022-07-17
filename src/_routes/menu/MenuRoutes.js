@@ -6,7 +6,7 @@ import Window from "_components/window/Window";
 import LandingPage from "home/Home";
 import Menu from "home/menu/Menu";
 
-import urls from "../routeUrls";
+import urls from "../../_data/_routes/routeUrls";
 
 const MenuRoutes = () => {
   return (

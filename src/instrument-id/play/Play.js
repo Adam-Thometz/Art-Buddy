@@ -7,7 +7,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
 import { songMaker, listeningSkills } from "_media/instrument-id/_icons/iconImports";
-import { instrumentIdUrls } from '_routes/routeUrls';
+import { instrumentIdUrls } from '_data/_routes/routeUrls';
 
 const Play = () => {
   const navigate = useNavigate();

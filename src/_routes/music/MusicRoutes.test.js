@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import MusicRoutes from "./MusicRoutes";
-import urls from '../routeUrls';
+import urls from '../../_data/_routes/routeUrls';
 
 describe('Music Game Routes', () => {
   it('renders without crashing', () => {
