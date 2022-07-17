@@ -6,7 +6,7 @@ import Window from "_components/window/Window";
 import MenuRoutes from "./menu/MenuRoutes";
 import MusicRoutes from "./music/MusicRoutes";
 import ToolsRoutes from "./tools/ToolsRoutes";
-import NotFound from "./not-found/NotFound";
+import NotFound from "./_not-found/NotFound";
 
 import getRoutes from "_helpers/_utils/getRoutes";
 
