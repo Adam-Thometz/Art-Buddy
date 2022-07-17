@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrogLilyPads component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="FrogLilyPads"
+  >
+    <img
+      alt="frog"
+      class="Frog"
+      src="file"
+    />
+    <div
+      class="LilyPadDisplay"
+    >
+      <div
+        class="LilyPad"
+      />
+      <div
+        class="LilyPad"
+      />
+      <div
+        class="LilyPad"
+      />
+      <div
+        class="LilyPad"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;
