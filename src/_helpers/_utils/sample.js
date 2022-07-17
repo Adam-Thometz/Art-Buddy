@@ -4,7 +4,7 @@ import { Sampler } from "tone";
  * Purpose: takes a sound and a number for volume and returns a sample to play notes with. Used mainly in play-related functions
  */
 
-const sample = ({ sound, volume, toDestination = true }) => {
+export default function sample({ sound, volume, toDestination = true }) {
   const sample = new Sampler({
     urls: { C3: sound }
   });
@@ -12,5 +12,3 @@ const sample = ({ sound, volume, toDestination = true }) => {
 
   return toDestination ? sample.toDestination() : sample;
 };
-
-export default sample;
