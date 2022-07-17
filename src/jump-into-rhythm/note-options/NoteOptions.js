@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
+import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
+
+import './NoteOptions.css';
 
 import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';
 
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
-import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
-
-import './NoteOptions.css';
 
 const NoteOptions = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const NoteOptions = () => {
     const { id } = e.currentTarget;
     const { img, duration } = noteInfo[id];
     dispatch(addToRhythm({ id, img, duration }));
-  }
+  };
 
   const notes = Object.keys(noteInfo).map(noteId => {
     const { text, img } = noteInfo[noteId];

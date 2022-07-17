@@ -10,9 +10,7 @@ const LilyPadDisplay = () => {
   const { rhythm } = useSelector(state => state.jumpIntoRhythm);
   return (
     <div className='LilyPadDisplay'>
-      {rhythm.map(beat => (
-        <LilyPad beat={beat} />
-      ))}
+      {rhythm.map(beat => <LilyPad beat={beat} />)}
     </div>
   );
 };
