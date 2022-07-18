@@ -7,6 +7,7 @@ const urls = {
   sequenceMaker: '/sequence-maker',
   jumpIntoRhythm: '/jump-into-rhythm',
   instrumentId: '/instrument-id',
+  freePaint: '/free-paint',
   scoreKeeper: '/score-keeper',
   timeKeeper: '/time-keeper'
 };

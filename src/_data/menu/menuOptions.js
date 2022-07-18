@@ -39,7 +39,7 @@ const menuOptions = {
     },
     {
       name: 'TIME KEEPER',
-      url: null,
+      url: urls.timeKeeper,
       icon: timeKeeperIcon
     },
     {

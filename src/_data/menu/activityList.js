@@ -5,16 +5,18 @@ import sequenceMakerIcon from '_media/menu/activity-icons/sequence-maker.png'
 import instrumentIdIcon from '_media/menu/activity-icons/instrument-id.png'
 import jumpIntoRhythmIcon from '_media/menu/activity-icons/jump-into-rhythm.png'
 import colorTheoryIcon from '_media/menu/activity-icons/color-theory.png'
-import paintingTimeIcon from '_media/menu/activity-icons/painting-time.png'
+import freePaintIcon from '_media/menu/activity-icons/free-paint.png'
 
 const types = ['games', 'tools'];
 const genres = ['music', 'art'];
+
+const { wordToMusic, instrumentId, jumpIntoRhythm, sequenceMaker, freePaint } = urls;
 
 const activities = [
   {
     name: 'WORD-TO-MUSIC DECODER',
     icon: wordToMusicIcon,
-    url: urls.wordToMusic,
+    url: wordToMusic,
     activityType: types[0],
     genre: genres[0],
     description: 'Turn words into music!'
@@ -22,7 +24,7 @@ const activities = [
   {
     name: "WHAT'S THAT INSTRUMENT?",
     icon: instrumentIdIcon,
-    url: urls.instrumentId,
+    url: instrumentId,
     activityType: types[0],
     genre: genres[0],
     description: 'Learn about instruments while practicing listening skills!'
@@ -30,7 +32,7 @@ const activities = [
   {
     name: 'JUMP INTO RHYTHM',
     icon: jumpIntoRhythmIcon,
-    url: urls.jumpIntoRhythm,
+    url: jumpIntoRhythm,
     activityType: types[0],
     genre: genres[0],
     description: 'Jump with a frog to different rhythms!'
@@ -38,7 +40,7 @@ const activities = [
   {
     name: 'SEQUENCE MAKER',
     icon: sequenceMakerIcon,
-    url: urls.sequenceMaker,
+    url: sequenceMaker,
     activityType: types[0],
     genre: genres[0],
     description: 'Put different sounds together and hear what you get!'
@@ -52,9 +54,9 @@ const activities = [
     description: 'Learn about the colors with mixing and matching!'
   },
   {
-    name: 'PAINTING TIME',
-    icon: paintingTimeIcon,
-    url: null,
+    name: 'FREE PAINT',
+    icon: freePaintIcon,
+    url: freePaint,
     activityType: types[0],
     genre: genres[1],
     description: 'Draw different things like letters and shapes!'
