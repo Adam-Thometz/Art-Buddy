@@ -56,7 +56,7 @@ This app is a movement-based game in which students can create unique rhythms an
 
 This tool is a musical timer that allows users to use samples of varying lengths (15, 30, and 60 seconds) and purposes (focus or relax) to create a timer and the music plays as the timer counts down. Can be used to create full-length songs. Comes with options to create a 5- or 10-minute timer, which creates random sequences of available samples at the selected length. Good for learning about time or just as a timer for a break.  
 
-Samples for Time Keeper were composed by the developer.
+Samples for Time Keeper to be composed by the developer.
 
 #### Score Keeper
 
