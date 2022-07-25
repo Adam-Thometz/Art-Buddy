@@ -39,7 +39,7 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       if (newWords.length < state.words.join(' ').length) {
         const newFilledLetters = { ...state.filledLetters }
         const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput });
-        for (let letter of lettersToUnfill) newFilledLetters[letter] = false
+        for (let letter of lettersToUnfill) newFilledLetters[letter] = false;
         state.filledLetters = newFilledLetters;
       };
       

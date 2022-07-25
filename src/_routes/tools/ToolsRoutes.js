@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
-
 import ScoreKeeper from "score-keeper/ScoreKeeper";
 import TimeKeeper from "time-keeper/TimeKeeper";
 
