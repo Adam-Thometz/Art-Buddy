@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import useLocalStorage from '_hooks/useLocalStorage';
 
+import { useSelector } from 'react-redux';
+
 import './SavedSongs.css';
 
 import Icon from '_components/icon/Icon';
@@ -10,6 +12,7 @@ import { createBuffers, getBuffers } from '_helpers/instrument-id/buffers';
 import { play } from '_helpers/instrument-id/play';
 
 const SavedSongs = () => {
+  const { volume } = useSelector(state => state.mainSettings);
   const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');
   const [selectedSong, setSelectedSong] = useState(null);
   const songs = new Map(JSON.parse(savedSongs));
@@ -33,7 +36,7 @@ const SavedSongs = () => {
       if (!melodyId) continue;
       
       const { buffers } = getBuffers(instrumentId);
-      play({ melodyId, buffers, isRhythm });
+      play({ melodyId, volume, buffers, isRhythm });
     };
   };
 
