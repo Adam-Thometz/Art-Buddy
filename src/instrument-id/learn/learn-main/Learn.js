@@ -7,7 +7,7 @@ import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
-import learnMenuOptions from "./learnMenuOptions";
+import learnMenuOptions from "../../../_data/instrument-id/learnMenuOptions";
 
 const Learn = () => {
   const navigate = useNavigate();

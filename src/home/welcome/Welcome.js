@@ -12,7 +12,7 @@ const Welcome = ({ setHasVisited }) => {
     <section className="Welcome">
       <WindowNavbar page='WELCOME TO ART BUDDY!' />
       <article className="Welcome-description">
-        <p>ARTBUDDY is a collection of fun and interactive fine arts games designed specifically with special education goals in mind</p>
+        <p>ART BUDDY is a collection of fun and interactive fine arts games designed specifically with academic goals in mind</p>
         <p>Click below to get started</p>
       </article>
       <Button colorId={0} onClick={handleVisited}>LET'S GO!</Button>

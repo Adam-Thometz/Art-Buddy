@@ -30,13 +30,7 @@ const AlphabetTable = () => {
   
   const handleLetter = e => {
     const letter = e.target.textContent;
-    const hasLetter = filledLetters[letter];
-    if (!hasLetter) {
-      dispatch(fillLetter(letter));
-    } else {
-      const note = LETTER_NOTES[letter];
-      play(note);
-    };
+    filledLetters[letter] ? dispatch(fillLetter(letter)) : play(LETTER_NOTES[letter])
   };
 
   return (

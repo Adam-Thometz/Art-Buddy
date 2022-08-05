@@ -13,9 +13,9 @@ import { instrumentIdUrls } from "_data/_routes/routeUrls";
 const LearnFamilyPage = () => {
   const navigate = useNavigate();
   const { family } = useParams();
+
   const instrumentFamily = learnInstrumentOptions[family];
   const { instruments } = instrumentFamily;
-
   const options = instruments.map(instrument => {
     const goToInstrument = () => {
       const url = `${
@@ -28,14 +28,14 @@ const LearnFamilyPage = () => {
       navigate(url);
     };
 
-    return (<Icon
+    return <Icon
       key={instrument.name}
       icon={instrument.icon}
       size='200px'
       width={instrument.name === 'TROMBONE' ? '250px' : null}
       text={instrument.name.toUpperCase()}
       onClick={goToInstrument}
-    />);
+    />;
   });
   
   return (

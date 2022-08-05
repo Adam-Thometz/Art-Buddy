@@ -32,9 +32,9 @@ const DecoderControls = () => {
   };
 
   const handleChangeSound = e => {
-    const newSound = e.target.id;
-    createSound({ volume, scale, sampleId: newSound });
-    dispatch(changeSound(newSound));
+    const sampleId = e.target.id;
+    createSound({ volume, scale, sampleId });
+    dispatch(changeSound(sampleId));
   };
 
   const handlePlayMelody = () => {

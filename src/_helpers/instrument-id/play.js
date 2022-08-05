@@ -36,7 +36,7 @@ export function playBeat({ id, volume, sound, isTest = false }) {
   const start = now();
   hits.forEach((hit, i) => {
     const seconds = i / 2;
-    hit.triggerAttackRelease('C3', '2n', start + seconds)
+    hit.triggerAttackRelease('C3', '2n', start + seconds);
   });
 };
 
@@ -63,6 +63,10 @@ export function play({ melodyId, volume, buffers, isRhythm }) {
     seconds += Time(duration).toSeconds();
   });
 };
+
+/** getHits:
+ * Purpose: abstract functionality in playBeat to make readable
+ */
 
 function getHits({ id, upperLimit, soundsLength, volume }) {
   const hits = [];
