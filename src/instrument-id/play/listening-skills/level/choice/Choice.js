@@ -56,7 +56,7 @@ const Choice = ({ id, level, choice }) => {
         {isCorrectWrapper}
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />
-      <Icon icon={swap} text='SWAP' size="30px" onClick={swapInstrument} />
+      <Icon icon={swap} text='SWAP' size="30px" onClick={swapInstrument} otherImgStyles={{ marginTop: '24px' }} />
     </div>
   );
 };
