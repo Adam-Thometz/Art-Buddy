@@ -8,7 +8,7 @@ import './Choice.css';
 
 import Icon from "_components/icon/Icon";
 
-import { correctIcon, incorrectIcon } from "_media/instrument-id/_icons/iconImports";
+import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/iconImports";
 
 const Choice = ({ id, level, choice }) => {
   const { answer } = useSelector(state => state.instrumentId);
@@ -56,7 +56,7 @@ const Choice = ({ id, level, choice }) => {
         {isCorrectWrapper}
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />
-      <Icon text='SWAP' size="30px" onClick={swapInstrument}/>
+      <Icon icon={swap} text='SWAP' size="30px" onClick={swapInstrument} />
     </div>
   );
 };

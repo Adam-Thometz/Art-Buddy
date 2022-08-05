@@ -4,6 +4,7 @@ import learnIcon from './main/learn.png';
 
 // Play icons
 import songMaker from './play/song-maker.png';
+import swap from './play/swap.png';
 import listeningSkills from './play/listening-skills.png';
 import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
@@ -69,6 +70,7 @@ export {
   learnIcon,
 
   songMaker,
+  swap,
   listeningSkills,
   reportCardIcon,
   correctIcon,

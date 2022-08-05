@@ -29,6 +29,7 @@ exports[`Choice component matches snapshot 1`] = `
     >
       <img
         alt=""
+        src="file"
         style="height: 30px; width: 30px; cursor: pointer;"
       />
       <figcaption
