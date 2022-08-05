@@ -12,6 +12,7 @@ import Icon from "_components/icon/Icon";
 import colors from "_helpers/_utils/colorOrder";
 import play from '_media/sequence-maker/_icons/play.png';
 import playAll from '_media/sequence-maker/_icons/play-all.png';
+import reset from '_media/sequence-maker/_icons/reset.png';
 
 const Sequence = () => {
   const {
@@ -63,7 +64,7 @@ const Sequence = () => {
         ))}
       </section>
       <aside className="Sequence-reset">
-        <Icon text='Reset Sequence' size="48px" onClick={handleReset} />
+        <Icon icon={reset} text='Reset Sequence' size="48px" onClick={handleReset} />
       </aside>
     </section>
   );
