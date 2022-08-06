@@ -20,21 +20,9 @@ const SequenceControls = () => {
 
   return (
     <section className='SequenceControls'>
-      <Dropdown
-        labelText="SOUND CATEGORY"
-        onClick={handleSetCategory}
-        options={categories}
-      />
-      <Dropdown
-        labelText="PITCH"
-        onClick={handleSetPitch}
-        options={pitches}
-      />
-      <Dropdown
-        labelText="DURATION"
-        onClick={handleSetDuration}
-        options={durations}
-      />
+      <Dropdown labelText="SOUND CATEGORY" onClick={handleSetCategory} options={categories} />
+      <Dropdown labelText="PITCH" onClick={handleSetPitch} options={pitches} />
+      <Dropdown labelText="DURATION" onClick={handleSetDuration} options={durations} />
     </section>
   );
 };
