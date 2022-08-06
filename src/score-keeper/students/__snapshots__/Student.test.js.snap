@@ -13,23 +13,19 @@ exports[`Student component matches the snapshot 1`] = `
     <div
       class="Student-point-control"
     >
-      <button
-        class="Button regular"
-        style="border-color: #89eb0a;"
-      >
-        +
-      </button>
+      <img
+        alt="add"
+        src="file"
+      />
       <p
         class="Student-points"
       >
         0
       </p>
-      <button
-        class="Button regular"
-        style="border-color: #fd4d3a;"
-      >
-        -
-      </button>
+      <img
+        alt="minus"
+        src="file"
+      />
     </div>
   </div>
 </DocumentFragment>
