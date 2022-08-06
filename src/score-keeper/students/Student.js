@@ -5,21 +5,22 @@ import { addPoint, removePoint } from "_redux/score-keeper/scoreKeeperActions";
 
 import './Student.css';
 
-import Button from "_components/button/Button";
+import addIcon from '_media/score-keeper/add.png';
+import minusIcon from '_media/score-keeper/minus.png';
 
 const Student = ({ name, points }) => {
   const dispatch = useDispatch();
 
-  const plus = () => dispatch(addPoint(name));
+  const add = () => dispatch(addPoint(name));
   const minus = () => dispatch(removePoint(name));
 
   return (
     <div className="Student">
       <p className="Student-name">{name}</p>
       <div className="Student-point-control">
-        <Button colorId={0} onClick={plus}>+</Button>
+        <img src={addIcon} alt="add" onClick={add} />
         <p className="Student-points">{points}</p>
-        <Button colorId={2} onClick={minus}>-</Button>
+        <img src={minusIcon} alt="minus" onClick={minus} />
       </div>
     </div>
   );
