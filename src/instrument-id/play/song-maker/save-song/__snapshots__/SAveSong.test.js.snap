@@ -46,10 +46,8 @@ exports[`SaveSong component matches snapshot 1`] = `
       SAVE
     </button>
     <span
-      class="SaveSong-message hide"
-    >
-      Song Saved!
-    </span>
+      class="SaveSong-message"
+    />
   </form>
 </DocumentFragment>
 `;

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import useLocalStorage from '_hooks/useLocalStorage';
 import useFormFields from '_hooks/useFormFields';
 
@@ -12,21 +12,22 @@ import Keyboard from '_components/keyboard/Keyboard';
 const SaveSong = () => {
   const song = useSelector(state => state.instrumentId.song);
   const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');
-  const [showMessage, setShowMessage] = useState(false);
   const [input, setInput, resetInput] = useFormFields({ title: '' });
   const inputRef = useRef();
+  const savedRef = useRef();
 
-  const handleSave = () => {
+  const handleSave = e => {
+    e.preventDefault();
     const title = inputRef.current.value;
     const newSavedSongs = new Map(JSON.parse(savedSongs));
     newSavedSongs.set(title, song);
 
     setSavedSongs(Array.from(newSavedSongs.entries()));
-    setShowMessage(true);
+    savedRef.current.textContent = 'Song Saved!';
     resetInput();
 
     const timer = setTimeout(() => {
-      setShowMessage(false);
+      savedRef.current.textContent = '';
       clearTimeout(timer);
     }, 5000);
   };
@@ -47,7 +48,7 @@ const SaveSong = () => {
         <Keyboard />
       </section>
       <Button colorId={0} onClick={handleSave}>SAVE</Button>
-      <span className={`SaveSong-message ${showMessage ? 'show' : 'hide'}`}>Song Saved!</span>
+      <span ref={savedRef} className='SaveSong-message'></span>
     </form>
   );
 };

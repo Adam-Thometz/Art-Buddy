@@ -30,19 +30,12 @@
 }
 
 .SaveSong button {
-  width: 25%;
+  width: 20%;
+  height: 25%;
 }
 
 .SaveSong-message {
   position: absolute;
-  bottom: 10%;
-  right: 20%;
-}
-
-.show {
-  display: inline-block;
-}
-
-.hide {
-  display: none;
+  bottom: 30%;
+  right: 25%;
 }
