@@ -28,6 +28,7 @@ const SavedSongs = () => {
   };
 
   const handlePlay = () => {
+    if (!selectedSong) return;
     const song = songs.get(selectedSong);
     for (let instrument of song) {
       if (!instrument) continue;
@@ -46,7 +47,7 @@ const SavedSongs = () => {
     setSavedSongs(JSON.stringify(Array.from(songs.entries())));
   };
 
-  const songDisplay = Array.from(songs.keys()).map((key) => (
+  const songDisplay = Array.from(songs.keys()).map(key => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
   ));
 
