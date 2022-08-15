@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import useFormFields from '_hooks/useFormFields';
 import useRoster from '_hooks/useRoster';
 
+import './NewRoster.css';
+
 import Button from '_components/button/Button';
 
 import convertToId from '_helpers/_utils/convertToId';
@@ -20,7 +22,8 @@ const NewRoster = () => {
       </div>
     ));
 
-  const addStudent = () => {
+  const addStudent = e => {
+    e.preventDefault();
     const newStudentInput = `student${Object.keys(input).length}`
     addInput(newStudentInput);
   };
@@ -54,14 +57,14 @@ const NewRoster = () => {
     <form className='NewRoster'>
       <label htmlFor='name'>Roster Name: </label>
       <input type='text' name='name' id='name' value={input.name} onChange={updateInput} />
+      <p className='NewRoster-error' ref={errorRef}></p>
 
       <p>Enter student names:</p>
       <div className='NewRoster-students'>
         {studentInputs}
-        <Button small colorId={4} onClick={addStudent}>Add student</Button>
       </div>
       <div className='NewRoster-buttons'>
-        <span ref={errorRef}></span>
+        <Button small colorId={4} onClick={addStudent}>ADD</Button>
         <Button small colorId={2} onClick={reset}>RESET</Button>
         <Button small colorId={0} onClick={addRoster}>CREATE</Button>
       </div>

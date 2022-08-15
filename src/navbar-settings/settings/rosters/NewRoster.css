@@ -1,0 +1,23 @@
+.NewRoster {
+  font-size: 32px;
+}
+
+.NewRoster-students {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.NewRoster-form-control {
+  padding: 16px;
+}
+
+.NewRoster-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 0;
+}
+
+.NewRoster-error {
+  color: red;
+  font-size: 16px;
+}
