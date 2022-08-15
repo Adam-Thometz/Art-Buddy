@@ -16,6 +16,9 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
       type="text"
       value=""
     />
+    <p
+      class="NewRoster-error"
+    />
     <p>
       Enter student names:
     </p>
@@ -37,17 +40,16 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
           value=""
         />
       </div>
-      <button
-        class="Button small"
-        style="border-color: #17255a;"
-      >
-        Add student
-      </button>
     </div>
     <div
       class="NewRoster-buttons"
     >
-      <span />
+      <button
+        class="Button small"
+        style="border-color: #17255a;"
+      >
+        ADD
+      </button>
       <button
         class="Button small"
         style="border-color: #fd4d3a;"
