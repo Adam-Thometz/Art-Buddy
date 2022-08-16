@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextToSpeech component matches the snapshot of TextToSpeech 1`] = `
+<DocumentFragment>
+  <div
+    class="TextToSpeech"
+  >
+    <div
+      class="Toggle"
+    >
+      <div
+        class="Toggle-switch off"
+      >
+        <div
+          class="Toggle-button"
+        />
+        <span>
+          ON
+        </span>
+        <span>
+          OFF
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

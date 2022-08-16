@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Volume component matches the snapshot of Volume 1`] = `
+<DocumentFragment>
+  <section
+    class="Volume"
+  >
+    <figure
+      class="Icon"
+      id="-12"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 50px; width: 40px; cursor: pointer; filter: invert(71%) sepia(83%) saturate(6%) hue-rotate(236deg) brightness(103%) contrast(89%);"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1rem;"
+      >
+        LOW
+      </figcaption>
+    </figure>
+    <figure
+      class="Icon"
+      id="0"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 50px; width: 50px; cursor: pointer; filter: invert(9%) sepia(31%) saturate(5353%) hue-rotate(221deg) brightness(100%) contrast(94%);"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1rem;"
+      >
+        MEDIUM
+      </figcaption>
+    </figure>
+    <figure
+      class="Icon"
+      id="12"
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 50px; width: 60px; cursor: pointer; filter: invert(71%) sepia(83%) saturate(6%) hue-rotate(236deg) brightness(103%) contrast(89%);"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1rem;"
+      >
+        HIGH
+      </figcaption>
+    </figure>
+  </section>
+</DocumentFragment>
+`;

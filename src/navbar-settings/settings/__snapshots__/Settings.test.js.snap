@@ -5,13 +5,13 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
   <main
     class="Settings"
   >
-    <span
+    <p
       class="Settings-text"
     >
       Volume
-    </span>
-    <div
-      class="Settings-icons-volume"
+    </p>
+    <section
+      class="Volume"
     >
       <figure
         class="Icon"
@@ -61,14 +61,14 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
           HIGH
         </figcaption>
       </figure>
-    </div>
-    <span
+    </section>
+    <p
       class="Settings-text"
     >
       Text-to-Speech
-    </span>
-    <span
-      class="Settings-toggle"
+    </p>
+    <div
+      class="TextToSpeech"
     >
       <div
         class="Toggle"
@@ -87,14 +87,14 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
           </span>
         </div>
       </div>
-    </span>
-    <span
+    </div>
+    <p
       class="Settings-text"
     >
       Color Blind Mode
-    </span>
-    <span
-      class="Settings-toggle"
+    </p>
+    <div
+      class="ColorBlind"
     >
       <div
         class="Toggle"
@@ -113,14 +113,14 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
           </span>
         </div>
       </div>
-    </span>
-    <span
+    </div>
+    <p
       class="Settings-text"
     >
       Roster
-    </span>
+    </p>
     <div
-      class="Settings-icons-roster"
+      class="Rosters"
     >
       <div
         class="Settings-add-roster"
