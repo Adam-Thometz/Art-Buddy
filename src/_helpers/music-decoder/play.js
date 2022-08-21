@@ -15,6 +15,6 @@ export default function play(notes) {
     notes.forEach(note => {
       if (note !== '') sound.triggerAttackRelease(`${note}3`, '8n', start + seconds);
       seconds += 0.5;
-    })
+    });
   };
 };
