@@ -7,7 +7,7 @@ import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Help from "_components/help/Help";
 
-import learnInstrumentOptions from "../../../_data/instrument-id/learnInstrumentOptions";
+import learnInstrumentOptions from "_data/instrument-id/learnInstrumentOptions";
 import { instrumentIdUrls } from "_data/_routes/routeUrls";
 
 const LearnFamilyPage = () => {
@@ -17,25 +17,19 @@ const LearnFamilyPage = () => {
   const instrumentFamily = learnInstrumentOptions[family];
   const { instruments } = instrumentFamily;
   const options = instruments.map(instrument => {
+    const { name, width, icon } = instrument;
     const goToInstrument = () => {
       const url = `${
         instrumentIdUrls.learn
       }/${
         family
       }/${
-        instrument.name.toLowerCase().replace(' ', '-')
+        name.toLowerCase().replace(' ', '-')
       }`;
       navigate(url);
     };
 
-    return <Icon
-      key={instrument.name}
-      icon={instrument.icon}
-      size='200px'
-      width={instrument.name === 'TROMBONE' ? '250px' : null}
-      text={instrument.name.toUpperCase()}
-      onClick={goToInstrument}
-    />;
+    return <Icon key={name} icon={icon} size='200px' width={width} text={name.toUpperCase()} onClick={goToInstrument} />;
   });
   
   return (

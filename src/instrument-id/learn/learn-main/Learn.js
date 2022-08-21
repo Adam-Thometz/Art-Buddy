@@ -13,10 +13,9 @@ const Learn = () => {
   const navigate = useNavigate();
 
   const options = learnMenuOptions.map(option => {
-    const goToFamily = () => navigate(option.url);
-    return (
-      <Icon key={option.name} onClick={goToFamily} icon={option.icon} text={option.name} size="200px" largeFont />
-    );
+    const { name, url, icon } = option;
+    const goToFamily = () => navigate(url);
+    return <Icon key={name} onClick={goToFamily} icon={icon} text={name} size="200px" largeFont />;
   });
 
   return (

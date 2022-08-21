@@ -27,11 +27,7 @@ const ListeningSkills = () => {
     const goToTest = () => navigate(`${instrumentIdUrls.playListening}/${level}`);
     return (
       <div key={level} className="ListeningSkills-level">
-        <Button
-          small
-          colorId={level-1}
-          onClick={goToTest}
-        >Level {level}</Button>
+        <Button small colorId={level-1} onClick={goToTest}>Level {level}</Button>
         <Popup
           title='REPORT CARD'
           trigger={popupTrigger}
@@ -47,11 +43,7 @@ const ListeningSkills = () => {
       <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<Help />} />
       <div className="ListeningSkills-main">
         <header className="ListeningSkills-icon">
-          <Icon
-            largeFont
-            icon={listeningSkills}
-            text='Listening Skills Test'
-          />
+          <Icon largeFont icon={listeningSkills} text='Listening Skills Test' />
         </header>
         <section className="ListeningSkills-levels-report-cards">
           <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>

@@ -18,38 +18,44 @@ import convertToId from "_helpers/_utils/convertToId";
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);
   const { instrument } = useParams();
-  
-  const instrumentInfo = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
+  const {
+    id,
+    name,
+    icon,
+    madeFrom,
+    howToPlay,
+    sound,
+    isRhythm,
+    width,
+    videoUrl
+  } = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
     
-  const handleCreateBuffers = () => createBuffers(instrumentInfo.id);
+  const handleCreateBuffers = () => createBuffers(id);
 
-  const playInstrument = () => {
-    const { sound, id, isRhythm } = instrumentInfo;
-    isRhythm ? playBeat({ id, sound, volume }) : playScale({ id, volume });
-  };
+  const playInstrument = () => isRhythm ?
+    playBeat({ id, sound, volume }) :
+    playScale({ id, volume });
 
   useEffect(() => {
     return () => removeBuffers();
   }, []);
 
-  const openVideo = () => window.open(instrumentInfo.videoUrl);
+  const openVideo = () => window.open(videoUrl);
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>
       <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
       <div className="Instrument-main">
         <header className="Instrument-name">
-          <Icon largeFont icon={instrumentInfo.icon} text={instrumentInfo.name} />
+          <Icon largeFont icon={icon} text={name} width={width} />
         </header>
         <article className="Instrument-information">
-          <h2>WHAT IS THE {instrumentInfo.name} MADE OUT OF?</h2>
+          <h2>WHAT IS THE {name} MADE OUT OF?</h2>
           <ul>
-            {instrumentInfo.madeFrom.map(material => (
-              <li key={material}>{material}</li>
-            ))}
+            {madeFrom.map(material => <li key={material}>{material}</li>)}
           </ul>
-          <h2>THE {instrumentInfo.name} IS PLAYED BY...</h2>
-          <p>{instrumentInfo.howToPlay}</p>
+          <h2>THE {name} IS PLAYED BY...</h2>
+          <p>{howToPlay}</p>
           <section className="Instrument-buttons">
             <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
             <Button colorId={2} onClick={openVideo}>Watch Video</Button>

@@ -40,9 +40,7 @@ const Choice = ({ id, level, choice }) => {
 
   const swapInstrument = () => dispatch(selectChoice({ id, level, choice: choice.family }));  
 
-  const isCorrectClass = isCorrect !== null
-    ? (isCorrect ? ' correct' : ' incorrect')
-    : '';
+  const isCorrectClass = isCorrect !== null ? (isCorrect ? ' correct' : ' incorrect') : '';
 
   const isCorrectWrapper = isCorrect !== null ? (
     isCorrect ?
