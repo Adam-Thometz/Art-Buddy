@@ -11,9 +11,7 @@ const TextToSpeech = () => {
   const { textToSpeech } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   
-  const handleTextToSpeech = () => {
-    dispatch(toggleTextToSpeech());
-  };
+  const handleTextToSpeech = () => dispatch(toggleTextToSpeech());
 
   return (
     <div className='TextToSpeech'>

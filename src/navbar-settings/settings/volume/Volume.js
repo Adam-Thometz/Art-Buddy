@@ -25,9 +25,7 @@ const Volume = () => {
     filter: 'invert(71%) sepia(83%) saturate(6%) hue-rotate(236deg) brightness(103%) contrast(89%)'
   };
 
-  const handleVolume = e => {
-    dispatch(setVolume(+e.currentTarget.id));
-  };
+  const handleVolume = e => dispatch(setVolume(+e.currentTarget.id));
 
   return (
     <section className='Volume'>

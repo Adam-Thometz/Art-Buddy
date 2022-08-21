@@ -11,9 +11,7 @@ const ColorBlind = () => {
   const { colorBlind } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
 
-  const handleColorBlind = () => {
-    dispatch(toggleColorBlind());
-  };
+  const handleColorBlind = () => dispatch(toggleColorBlind());
 
   return (
     <div className='ColorBlind'>
