@@ -25,18 +25,16 @@ const SoundOptions = () => {
 
   const sounds = soundInfo[category];
 
-  const optionDisplay = () => Object.keys(sounds).map(sound => {
+  const optionDisplay = !sounds ? null : Object.keys(sounds).map(sound => {
     const { alt, image } = sounds[sound];
     return <Icon key={sound} icon={image} size='150px' text={alt} id={sound} onClick={handleAddToSequence} />;
   });
 
   return (
     <section className='SoundOptions'>
-      {!category ? null : (
-        <Options width='50%'>
-          {optionDisplay()}
-        </Options>
-      )}
+      <Options width='50%'>
+        {optionDisplay}
+      </Options>
     </section>
   );
 };
