@@ -33,6 +33,7 @@ const learnInstrumentOptions = {
         howToPlay: 'blowing into the mouthpiece and pressing on the valves',
         sound: sounds.trombone,
         isRhythm: false,
+        width: '250px',
         videoUrl: 'https://www.youtube.com/watch?v=u5gj43Nnwzk'
       },
       {
