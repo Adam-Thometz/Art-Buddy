@@ -10,7 +10,13 @@ See current deployment: https://art-buddy.surge.sh/
 
 Created by two former educators, Art Buddy is a collection of arts-based multisensory games and teaching tools designed for students with special needs. The games in this collection are either based on real IEP goals that we've seen in our teaching careers or taken from Everyday Arts for Special Education (EASE), an experimental curriculum designed to supplement instruction with arts activities that the developer trained in during his teaching career. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills.  
 
-This app is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft and gives students a fun and neurodiverse-friendly way to reach their academic and social goals.
+This app is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft while giving students a fun and neurodiverse-friendly way to reach their academic and social goals.  
+
+This app is a work in progress. Currently functioning games include...  
+- *Word-To-Music Decoder*
+- *What's That Instrument?*
+- *Sequence Maker*
+- *Score Keeper*
 
 ### Glossary of Terms Related to Art Buddy
 
