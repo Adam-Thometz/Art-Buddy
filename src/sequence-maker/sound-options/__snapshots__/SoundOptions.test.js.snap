@@ -4,6 +4,11 @@ exports[`SoundOptions component matches snapshot 1`] = `
 <DocumentFragment>
   <section
     class="SoundOptions"
-  />
+  >
+    <section
+      class="Options"
+      style="width: 50%;"
+    />
+  </section>
 </DocumentFragment>
 `;

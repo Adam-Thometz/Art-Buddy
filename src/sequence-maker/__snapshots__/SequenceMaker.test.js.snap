@@ -65,7 +65,12 @@ exports[`SequenceMaker component matches snapshot 1`] = `
     </section>
     <section
       class="SoundOptions"
-    />
+    >
+      <section
+        class="Options"
+        style="width: 50%;"
+      />
+    </section>
     <section
       class="Sequence"
     >
