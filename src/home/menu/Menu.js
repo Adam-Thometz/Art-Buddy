@@ -8,8 +8,8 @@ import './Menu.css';
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 
-import menuOptions from "../../_data/menu/menuOptions";
-import activities from "../../_data/menu/activityList";
+import menuOptions from "_data/menu/menuOptions";
+import activities from "_data/menu/activityList";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector(state => state.mainSettings);
@@ -29,6 +29,7 @@ const Menu = ({ type = null }) => {
       colorId={i%4}
       onClick={() => navigate(option.url)}
       icon={option.icon}
+      disabled={!option.active}
     >{option.name}</Button>
   ));
 

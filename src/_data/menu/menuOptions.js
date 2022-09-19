@@ -13,44 +13,52 @@ const menuOptions = {
     {
       name: "ART GAMES",
       url: urls.artGames,
-      icon: artIcon
+      icon: artIcon,
+      active: true
     },
     {
       name: "MUSIC GAMES",
       url: urls.musicGames,
-      icon: musicIcon
+      icon: musicIcon,
+      active: true
     },
     {
       name: "ALL GAMES",
       url: urls.allGames,
-      icon: allIcon
+      icon: allIcon,
+      active: true
     },
     {
       name: "IEP GOALS",
       url: urls.byIEPGoals,
-      icon: iepIcon
+      icon: iepIcon,
+      active: false
     }
   ],
   tools: [
     {
       name: "SCORE KEEPER",
       url: urls.scoreKeeper,
-      icon: scoreKeeperIcon
+      icon: scoreKeeperIcon,
+      active: true
     },
     {
       name: 'TIME KEEPER',
       url: urls.timeKeeper,
-      icon: timeKeeperIcon
+      icon: timeKeeperIcon,
+      active: true
     },
     {
       name: 'MOOD METER',
       url: null,
-      icon: null
+      icon: null,
+      active: false
     },
     {
       name: 'NOISE METER',
       url: null,
-      icon: null
+      icon: null,
+      active: false
     }
   ]
 };
