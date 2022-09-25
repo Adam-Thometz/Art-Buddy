@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooSmall component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="TooSmall"
+  >
+    <h1>
+      Welcome to Art Buddy
+    </h1>
+    <p>
+      For the best experience, we recommend using a bigger screen, at least 1000 pixels wide.
+    </p>
+  </div>
+</DocumentFragment>
+`;
