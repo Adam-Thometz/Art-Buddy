@@ -3,9 +3,9 @@ import React from "react";
 import renderWithProvider from '_testUtils/renderWithProvider';
 import { screen } from "@testing-library/react";
 
-import Button from './Button'
+import Button from './Button';
 
-import colors from '../../_helpers/_utils/colorOrder'
+import colors from '_helpers/_utils/colorOrder';
 
 describe('Button component', () => {
   it('renders without crashing', () => {

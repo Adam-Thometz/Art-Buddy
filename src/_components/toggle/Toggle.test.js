@@ -1,6 +1,6 @@
 import React from "react";
 import renderWithProvider from '_testUtils/renderWithProvider';
-import Toggle from './Toggle'
+import Toggle from './Toggle';
 
 describe('Toggle component', () => {
   it('renders without crashing', () => {
