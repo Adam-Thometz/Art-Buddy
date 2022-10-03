@@ -2,29 +2,75 @@
 
 exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
 <DocumentFragment>
-  <form
+  <section
     class="NewRoster"
   >
-    <label
-      for="name"
+    <aside
+      class="NewRoster-options"
     >
-      Roster Name: 
-    </label>
-    <input
-      id="name"
-      name="name"
-      type="text"
-      value=""
-    />
-    <p
-      class="NewRoster-error"
-    />
-    <p>
-      Enter student names:
-    </p>
-    <div
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 50px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Name
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 50px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Delete
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 50px; width: 50px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Done
+        </figcaption>
+      </figure>
+    </aside>
+    <aside
       class="NewRoster-students"
     >
+      <label
+        for="name"
+      >
+        Roster Name: 
+      </label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        value=""
+      />
+      <p
+        class="NewRoster-error"
+      />
       <div
         class="NewRoster-form-control"
       >
@@ -40,29 +86,7 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
           value=""
         />
       </div>
-    </div>
-    <div
-      class="NewRoster-buttons"
-    >
-      <button
-        class="Button small"
-        style="border-color: #17255a;"
-      >
-        ADD
-      </button>
-      <button
-        class="Button small"
-        style="border-color: #fd4d3a;"
-      >
-        RESET
-      </button>
-      <button
-        class="Button small"
-        style="border-color: #89eb0a;"
-      >
-        CREATE
-      </button>
-    </div>
-  </form>
+    </aside>
+  </section>
 </DocumentFragment>
 `;

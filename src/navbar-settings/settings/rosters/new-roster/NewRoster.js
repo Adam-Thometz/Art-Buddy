@@ -4,9 +4,12 @@ import useRoster from '_hooks/useRoster';
 
 import './NewRoster.css';
 
-import Button from '_components/button/Button';
+import AddIcon from '_components/icon/add-icon/AddIcon';
+import Icon from '_components/icon/Icon';
 
 import convertToId from '_helpers/_utils/convertToId';
+import deleteIcon from '_media/instrument-id/_icons/play/delete.png';
+import check from '_media/settings/check.png';
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({ name: '', student1: '' });
@@ -54,21 +57,31 @@ const NewRoster = () => {
   };
 
   return (
-    <form className='NewRoster'>
-      <label htmlFor='name'>Roster Name: </label>
-      <input type='text' name='name' id='name' value={input.name} onChange={updateInput} />
-      <p className='NewRoster-error' ref={errorRef}></p>
-
-      <p>Enter student names:</p>
-      <div className='NewRoster-students'>
+    <section className='NewRoster'>
+      <aside className='NewRoster-options'>
+        <AddIcon text='Name' size='50px' onClick={addStudent} />
+        <Icon icon={deleteIcon} text="Delete" size='50px' onClick={reset} />
+        <Icon icon={check} text="Done" size='50px' onClick={addRoster} />
+      </aside>
+      <aside className='NewRoster-students'>
+        <label htmlFor='name'>Roster Name: </label>
+        <input type='text' name='name' id='name' value={input.name} onChange={updateInput} />
+        <p className='NewRoster-error' ref={errorRef}></p>
         {studentInputs}
-      </div>
-      <div className='NewRoster-buttons'>
-        <Button small colorId={4} onClick={addStudent}>ADD</Button>
-        <Button small colorId={2} onClick={reset}>RESET</Button>
-        <Button small colorId={0} onClick={addRoster}>CREATE</Button>
-      </div>
-    </form>
+      </aside>
+    </section>
+    // <form className='NewRoster'>
+
+    //   <p>Enter student names:</p>
+    //   <div className='NewRoster-students'>
+    //     {studentInputs}
+    //   </div>
+    //   <div className='NewRoster-buttons'>
+    //     <Button small colorId={4} onClick={addStudent}>ADD</Button>
+    //     <Button small colorId={2} onClick={reset}>RESET</Button>
+    //     <Button small colorId={0} onClick={addRoster}>CREATE</Button>
+    //   </div>
+    // </form>
   );
 };
 
