@@ -35,9 +35,7 @@ const NewRoster = () => {
     e.preventDefault();
     setInput(e);
     const { value } = e.target;
-    console.log(value)
     const hasError = value && !value.match(/^[A-Za-z0-9\s]+$/);
-    console.log(hasError)
     errorRef.current.textContent = hasError ? "Only alphanumeric characters are allowed" : "";
   };
 
@@ -51,10 +49,7 @@ const NewRoster = () => {
     setRosters({ ...rosters, [rosterId]: { name, students } });
   };
 
-  const reset = e => {
-    e.preventDefault();
-    resetInput();
-  };
+  const reset = () => resetInput();
 
   return (
     <section className='NewRoster'>
@@ -70,18 +65,6 @@ const NewRoster = () => {
         {studentInputs}
       </aside>
     </section>
-    // <form className='NewRoster'>
-
-    //   <p>Enter student names:</p>
-    //   <div className='NewRoster-students'>
-    //     {studentInputs}
-    //   </div>
-    //   <div className='NewRoster-buttons'>
-    //     <Button small colorId={4} onClick={addStudent}>ADD</Button>
-    //     <Button small colorId={2} onClick={reset}>RESET</Button>
-    //     <Button small colorId={0} onClick={addRoster}>CREATE</Button>
-    //   </div>
-    // </form>
   );
 };
 
