@@ -18,9 +18,9 @@ const Learn = () => {
   });
 
   return (
-    <main className="Learn">
+    <>
       <WindowNavbar page='INSTRUMENT ID: LEARN' />
-      <div className="Learn-main">
+      <div className="Learn">
         <header className="Learn-header">
           <p>To begin, choose an instrument family</p>
         </header>
@@ -28,7 +28,7 @@ const Learn = () => {
           {options}
         </section>
       </div>
-    </main>
+    </>
   );
 };
 

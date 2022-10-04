@@ -2,128 +2,124 @@
 
 exports[`Learn component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      INSTRUMENT ID: LEARN
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <div
     class="Learn"
   >
     <header
-      class="WindowNavbar-games"
+      class="Learn-header"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        INSTRUMENT ID: LEARN
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
+      <p>
+        To begin, choose an instrument family
+      </p>
     </header>
-    <div
-      class="Learn-main"
+    <section
+      class="Learn-options"
     >
-      <header
-        class="Learn-header"
+      <figure
+        class="Icon"
       >
-        <p>
-          To begin, choose an instrument family
-        </p>
-      </header>
-      <section
-        class="Learn-options"
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
+        >
+          BRASS
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
       >
-        <figure
-          class="Icon"
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            BRASS
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
+          ELECTRONIC
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            ELECTRONIC
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
+          PERCUSSION
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            PERCUSSION
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
+          STRINGS
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            STRINGS
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
+          WOODWIND
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 200px; width: 200px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            WOODWIND
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 200px; width: 200px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            VOICE
-          </figcaption>
-        </figure>
-      </section>
-    </div>
-  </main>
+          VOICE
+        </figcaption>
+      </figure>
+    </section>
+  </div>
 </DocumentFragment>
 `;

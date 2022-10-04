@@ -4,9 +4,9 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 
 const FreePaint = () => {
   return (
-    <div className='FreePaint'>
+    <>
       <WindowNavbar page='FREE PAINT' />
-    </div>
+    </>
   );
 };
 

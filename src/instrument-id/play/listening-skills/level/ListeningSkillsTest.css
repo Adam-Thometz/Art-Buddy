@@ -1,11 +1,3 @@
-.ListeningSkillsTest h2 {
-  margin-bottom: 5px;
-}
-
-.ListeningSkillsTest header {
-  padding: 0;
-}
-
 .ListeningSkillsTest-game {
   display: flex;
   justify-content: space-between;

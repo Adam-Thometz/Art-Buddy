@@ -2,32 +2,28 @@
 
 exports[`Score Keeper matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="ScoreKeeper"
+  <header
+    class="WindowNavbar-games"
   >
-    <header
-      class="WindowNavbar-games"
+    <h1
+      class="WindowNavbar-label"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        SCORE KEEPER
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
-    </header>
-    <div
-      class="Students"
+      SCORE KEEPER
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <div
+    class="Students"
+  >
+    <p
+      class="Students-warning"
     >
-      <p
-        class="Students-warning"
-      >
-        Load students by picking a roster in Settings (or creating one if you haven't)
-      </p>
-    </div>
+      Load students by picking a roster in Settings (or creating one if you haven't)
+    </p>
   </div>
 </DocumentFragment>
 `;

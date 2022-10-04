@@ -7,12 +7,12 @@ import NoteOptions from './note-options/NoteOptions';
 
 const JumpIntoRhythm = () => {
   return (
-    <main className='JumpIntoRhythm'>
+    <>
       <WindowNavbar page='JUMP INTO RHYTHM' />
       <FrogLilyPads />
       <NoteDisplay />
       <NoteOptions />
-    </main>
+    </>
   );
 };
 

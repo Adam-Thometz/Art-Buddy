@@ -2,80 +2,76 @@
 
 exports[`Instrument component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
-    class="Instrument"
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      INSTRUMENT ID: LEARN
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <div
+    class="Instrument-main"
   >
     <header
-      class="WindowNavbar-games"
+      class="Instrument-name"
     >
-      <h1
-        class="WindowNavbar-label"
+      <figure
+        class="Icon"
       >
-        INSTRUMENT ID: LEARN
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
+        <img
+          alt=""
+          src="file"
+          style="height: 250px; width: 250px;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
+        >
+          TRUMPET
+        </figcaption>
+      </figure>
     </header>
-    <div
-      class="Instrument-main"
+    <article
+      class="Instrument-information"
     >
-      <header
-        class="Instrument-name"
+      <h2>
+        WHAT IS THE TRUMPET MADE OUT OF?
+      </h2>
+      <ul>
+        <li>
+          BRASS
+        </li>
+      </ul>
+      <h2>
+        THE TRUMPET IS PLAYED BY...
+      </h2>
+      <p>
+        blowing into the mouthpiece and pressing on the valves
+      </p>
+      <section
+        class="Instrument-buttons"
       >
-        <figure
-          class="Icon"
+        <button
+          class="Button regular"
+          style="border-color: #89eb0a;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 250px; width: 250px;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            TRUMPET
-          </figcaption>
-        </figure>
-      </header>
-      <article
-        class="Instrument-information"
-      >
-        <h2>
-          WHAT IS THE TRUMPET MADE OUT OF?
-        </h2>
-        <ul>
-          <li>
-            BRASS
-          </li>
-        </ul>
-        <h2>
-          THE TRUMPET IS PLAYED BY...
-        </h2>
-        <p>
-          blowing into the mouthpiece and pressing on the valves
-        </p>
-        <section
-          class="Instrument-buttons"
+          Play Sound
+        </button>
+        <button
+          class="Button regular"
+          style="border-color: #fd4d3a;"
         >
-          <button
-            class="Button regular"
-            style="border-color: #89eb0a;"
-          >
-            Play Sound
-          </button>
-          <button
-            class="Button regular"
-            style="border-color: #fd4d3a;"
-          >
-            Watch Video
-          </button>
-        </section>
-      </article>
-    </div>
-  </main>
+          Watch Video
+        </button>
+      </section>
+    </article>
+  </div>
 </DocumentFragment>
 `;

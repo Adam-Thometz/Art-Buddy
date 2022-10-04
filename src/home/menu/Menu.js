@@ -34,12 +34,12 @@ const Menu = ({ type = null }) => {
   ));
 
   return (
-    <main className="Menu">
+    <>
       <WindowNavbar page={type ? `${type.toUpperCase()} GAMES` : null} />
       <div className="Menu-options">
         {optionDisplay}
       </div>
-    </main>
+    </>
   );
 };
 

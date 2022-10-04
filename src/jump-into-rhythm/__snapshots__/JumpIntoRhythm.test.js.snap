@@ -2,122 +2,118 @@
 
 exports[`JumpIntoRhythm component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
-    class="JumpIntoRhythm"
+  <header
+    class="WindowNavbar-games"
   >
-    <header
-      class="WindowNavbar-games"
+    <h1
+      class="WindowNavbar-label"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        JUMP INTO RHYTHM
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
-    </header>
-    <section
-      class="FrogLilyPads"
+      JUMP INTO RHYTHM
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <section
+    class="FrogLilyPads"
+  >
+    <img
+      alt="frog"
+      class="Frog"
+      src="file"
+    />
+    <div
+      class="LilyPadDisplay"
     >
-      <img
-        alt="frog"
-        class="Frog"
-        src="file"
+      <div
+        class="LilyPad"
       />
       <div
-        class="LilyPadDisplay"
-      >
-        <div
-          class="LilyPad"
-        />
-        <div
-          class="LilyPad"
-        />
-        <div
-          class="LilyPad"
-        />
-        <div
-          class="LilyPad"
-        />
-      </div>
-    </section>
-    <section
-      class="NoteDisplay"
-    >
-      <img
-        alt="Treble clef"
-        src="file"
+        class="LilyPad"
       />
-      <section
-        class="NoteDisplay-blocks"
-      >
-        <div
-          class="NoteBlock"
-          style="border-color: #fd4d3a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #ffe81a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #89eb0a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #17255a;"
-        />
-      </section>
-    </section>
+      <div
+        class="LilyPad"
+      />
+      <div
+        class="LilyPad"
+      />
+    </div>
+  </section>
+  <section
+    class="NoteDisplay"
+  >
+    <img
+      alt="Treble clef"
+      src="file"
+    />
     <section
-      class="NoteOptions"
+      class="NoteDisplay-blocks"
     >
-      <section
-        class="NoteOptions-notes"
-      >
-        <figure
-          class="Icon"
-          id="quarterNote"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 100px; width: 30%; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1.75rem;"
-          >
-            Quarter Note
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
-          id="eighthNotes"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 100px; width: 30%; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1.75rem;"
-          >
-            Eighth Notes
-          </figcaption>
-        </figure>
-      </section>
-      <button
-        class="Button regular"
-        style="border-color: #89eb0a; margin: 0px; height: 10vh;"
-      >
-        PLAY
-      </button>
+      <div
+        class="NoteBlock"
+        style="border-color: #fd4d3a;"
+      />
+      <div
+        class="NoteBlock"
+        style="border-color: #ffe81a;"
+      />
+      <div
+        class="NoteBlock"
+        style="border-color: #89eb0a;"
+      />
+      <div
+        class="NoteBlock"
+        style="border-color: #17255a;"
+      />
     </section>
-  </main>
+  </section>
+  <section
+    class="NoteOptions"
+  >
+    <section
+      class="NoteOptions-notes"
+    >
+      <figure
+        class="Icon"
+        id="quarterNote"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 100px; width: 30%; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1.75rem;"
+        >
+          Quarter Note
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+        id="eighthNotes"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 100px; width: 30%; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1.75rem;"
+        >
+          Eighth Notes
+        </figcaption>
+      </figure>
+    </section>
+    <button
+      class="Button regular"
+      style="border-color: #89eb0a; margin: 0px; height: 10vh;"
+    >
+      PLAY
+    </button>
+  </section>
 </DocumentFragment>
 `;

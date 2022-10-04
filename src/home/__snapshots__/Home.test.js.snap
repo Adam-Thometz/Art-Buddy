@@ -2,71 +2,67 @@
 
 exports[`Home component matches the snapshot of the landing page displaying the games page 1`] = `
 <DocumentFragment>
-  <main
-    class="Menu"
+  <header
+    class="WindowNavbar-main"
   >
-    <header
-      class="WindowNavbar-main"
+    <span
+      class="WindowNavbar-button underlined"
+      id="games"
     >
-      <span
-        class="WindowNavbar-button underlined"
-        id="games"
-      >
-        GAMES
-      </span>
-      <span
-        class="WindowNavbar-button"
-        id="tools"
-      >
-        TOOLS
-      </span>
-    </header>
-    <div
-      class="Menu-options"
+      GAMES
+    </span>
+    <span
+      class="WindowNavbar-button"
+      id="tools"
     >
-      <button
-        class="Button regular"
-        style="border-color: #89eb0a;"
-      >
-        <img
-          alt=""
-          src="file"
-        />
-        ART GAMES
-      </button>
-      <button
-        class="Button regular"
-        style="border-color: #ffe81a;"
-      >
-        <img
-          alt=""
-          src="file"
-        />
-        MUSIC GAMES
-      </button>
-      <button
-        class="Button regular"
-        style="border-color: #fd4d3a;"
-      >
-        <img
-          alt=""
-          src="file"
-        />
-        ALL GAMES
-      </button>
-      <button
-        class="Button regular"
-        disabled=""
-        style="border-color: #4d4f5e; background-color: grey;"
-      >
-        <img
-          alt=""
-          src="file"
-        />
-        IEP GOALS
-      </button>
-    </div>
-  </main>
+      TOOLS
+    </span>
+  </header>
+  <div
+    class="Menu-options"
+  >
+    <button
+      class="Button regular"
+      style="border-color: #89eb0a;"
+    >
+      <img
+        alt=""
+        src="file"
+      />
+      ART GAMES
+    </button>
+    <button
+      class="Button regular"
+      style="border-color: #ffe81a;"
+    >
+      <img
+        alt=""
+        src="file"
+      />
+      MUSIC GAMES
+    </button>
+    <button
+      class="Button regular"
+      style="border-color: #fd4d3a;"
+    >
+      <img
+        alt=""
+        src="file"
+      />
+      ALL GAMES
+    </button>
+    <button
+      class="Button regular"
+      disabled=""
+      style="border-color: #4d4f5e; background-color: grey;"
+    >
+      <img
+        alt=""
+        src="file"
+      />
+      IEP GOALS
+    </button>
+  </div>
 </DocumentFragment>
 `;
 

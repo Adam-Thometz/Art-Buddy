@@ -30,12 +30,12 @@ const WordToMusic = () => {
   }, [dispatch]);
 
   return !hasVisited ? <Instructions setHasVisited={setHasVisited} /> : (
-    <main className="WordToMusic">
+    <>
       <WindowNavbar page='WORD-TO-MUSIC DECODER' />
       <WordForm />
       <DecoderControls />
       <AlphabetTable />
-    </main>
+    </>
   );
 };
 

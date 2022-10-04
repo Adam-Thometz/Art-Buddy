@@ -2,95 +2,91 @@
 
 exports[`ListeningSkills component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      INSTRUMENT ID: PLAY
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <div
     class="ListeningSkills"
   >
     <header
-      class="WindowNavbar-games"
+      class="ListeningSkills-icon"
     >
-      <h1
-        class="WindowNavbar-label"
+      <figure
+        class="Icon"
       >
-        INSTRUMENT ID: PLAY
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
+        <img
+          alt=""
+          src="file"
+          style="height: 250px; width: 250px;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
+        >
+          Listening Skills Test
+        </figcaption>
+      </figure>
     </header>
-    <div
-      class="ListeningSkills-main"
+    <section
+      class="ListeningSkills-levels-report-cards"
     >
-      <header
-        class="ListeningSkills-icon"
+      <p>
+        Practice your listening skills to unlock instruments that you can play later on the Song Maker section!
+      </p>
+      <div
+        class="ListeningSkills-level"
       >
-        <figure
-          class="Icon"
+        <button
+          class="Button small"
+          style="border-color: #89eb0a;"
+        >
+          Level 1
+        </button>
+        <div
+          class="ListeningSkills-report-card"
         >
           <img
             alt=""
             src="file"
-            style="height: 250px; width: 250px;"
           />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 2.5rem;"
-          >
-            Listening Skills Test
-          </figcaption>
-        </figure>
-      </header>
-      <section
-        class="ListeningSkills-levels-report-cards"
+          <p>
+            Report Card
+          </p>
+        </div>
+      </div>
+      <div
+        class="ListeningSkills-level"
       >
-        <p>
-          Practice your listening skills to unlock instruments that you can play later on the Song Maker section!
-        </p>
-        <div
-          class="ListeningSkills-level"
+        <button
+          class="Button small"
+          style="border-color: #ffe81a;"
         >
-          <button
-            class="Button small"
-            style="border-color: #89eb0a;"
-          >
-            Level 1
-          </button>
-          <div
-            class="ListeningSkills-report-card"
-          >
-            <img
-              alt=""
-              src="file"
-            />
-            <p>
-              Report Card
-            </p>
-          </div>
-        </div>
+          Level 2
+        </button>
         <div
-          class="ListeningSkills-level"
+          class="ListeningSkills-report-card"
         >
-          <button
-            class="Button small"
-            style="border-color: #ffe81a;"
-          >
-            Level 2
-          </button>
-          <div
-            class="ListeningSkills-report-card"
-          >
-            <img
-              alt=""
-              src="file"
-            />
-            <p>
-              Report Card
-            </p>
-          </div>
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
         </div>
-      </section>
-    </div>
-  </main>
+      </div>
+    </section>
+  </div>
 </DocumentFragment>
 `;

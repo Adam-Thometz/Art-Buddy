@@ -2,63 +2,59 @@
 
 exports[`Play component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
-    class="Play"
+  <header
+    class="WindowNavbar-games"
   >
-    <header
-      class="WindowNavbar-games"
+    <h1
+      class="WindowNavbar-label"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        INSTRUMENT ID: PLAY
-      </h1>
+      INSTRUMENT ID: PLAY
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <header>
+    <p>
+      Master skills in Listening Skills to unlock instruments for the Song Maker!
+    </p>
+  </header>
+  <section
+    class="Options"
+    style="width: 50%;"
+  >
+    <figure
+      class="Icon"
+    >
       <img
-        alt="Help"
-        class="Help"
+        alt=""
         src="file"
+        style="height: 250px; width: 250px; cursor: pointer;"
       />
-    </header>
-    <header>
-      <p>
-        Master skills in Listening Skills to unlock instruments for the Song Maker!
-      </p>
-    </header>
-    <section
-      class="Options"
-      style="width: 50%;"
+      <figcaption
+        class="Icon-text"
+        style="font-size: 2.5rem;"
+      >
+        Listening Skills Test
+      </figcaption>
+    </figure>
+    <figure
+      class="Icon"
     >
-      <figure
-        class="Icon"
+      <img
+        alt=""
+        src="file"
+        style="height: 250px; width: 250px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 2.5rem;"
       >
-        <img
-          alt=""
-          src="file"
-          style="height: 250px; width: 250px; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 2.5rem;"
-        >
-          Listening Skills Test
-        </figcaption>
-      </figure>
-      <figure
-        class="Icon"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 250px; width: 250px; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 2.5rem;"
-        >
-          Song Maker
-        </figcaption>
-      </figure>
-    </section>
-  </main>
+        Song Maker
+      </figcaption>
+    </figure>
+  </section>
 </DocumentFragment>
 `;

@@ -64,13 +64,8 @@ const ListeningSkillsTest = () => {
   const isDisabled = !(choice1 && choice2)
 
   return (
-    <main className="ListeningSkillsTest">
-      <WindowNavbar page='Listening Skills Test' cornerIcon={<ReportCardIcon />} />
-      <header>
-        <h2>LEVEL {level}</h2>
-        <p>This is instruction text for later</p>
-      </header>
-      <hr/>
+    <>
+      <WindowNavbar page={`Listening Skills Test: Level ${level}`} cornerIcon={<ReportCardIcon />} />
       <section className="ListeningSkillsTest-game">
         <Button small disabled={isDisabled} colorId={0} onClick={playSound}>START</Button>
         <div className="ListeningSkillsTest-choice-container">
@@ -85,7 +80,7 @@ const ListeningSkillsTest = () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 

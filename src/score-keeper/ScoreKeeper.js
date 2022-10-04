@@ -19,10 +19,10 @@ const ScoreKeeper = () => {
   }, [dispatch]);
 
   return (
-    <div className="ScoreKeeper">
+    <>
       <WindowNavbar page='SCORE KEEPER' />
       <Students />
-    </div>
+    </>
   );
 };
 

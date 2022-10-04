@@ -42,9 +42,9 @@ const Instrument = () => {
   const openVideo = () => window.open(videoUrl);
 
   return (
-    <main className="Instrument" onLoad={handleCreateBuffers}>
+    <>
       <WindowNavbar page='INSTRUMENT ID: LEARN' />
-      <div className="Instrument-main">
+      <div className="Instrument-main" onLoad={handleCreateBuffers}>
         <header className="Instrument-name">
           <Icon largeFont icon={icon} text={name} width={width} />
         </header>
@@ -61,7 +61,7 @@ const Instrument = () => {
           </section>
         </article>
       </div>
-    </main>
+    </>
   );
 };
 

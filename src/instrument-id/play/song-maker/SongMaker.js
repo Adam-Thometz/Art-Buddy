@@ -44,12 +44,8 @@ const SongMaker = () => {
   );
 
   return (
-    <main className='SongMaker'>
+    <>
       <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
-      <header>
-        <p>HULLO IM SONG MAKER MAKE A SONG PLZ</p>
-      </header>
-      <hr/>
       <section className='SongMaker-button-instrument-wrapper'>
         <div className='SongMaker-buttons'>
           <Button colorId={0} onClick={playInstruments}>PLAY</Button>
@@ -57,7 +53,7 @@ const SongMaker = () => {
         </div>
         <InstrumentDisplay />
       </section>
-    </main>
+    </>
   );
 };
 

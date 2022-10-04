@@ -2,155 +2,151 @@
 
 exports[`SequenceMaker component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
-    class="SequenceMaker"
+  <header
+    class="WindowNavbar-games"
   >
-    <header
-      class="WindowNavbar-games"
+    <h1
+      class="WindowNavbar-label"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        SEQUENCE MAKER
-      </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
-    </header>
-    <section
-      class="SequenceControls"
+      SEQUENCE MAKER
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <section
+    class="SequenceControls"
+  >
+    <div
+      class="Dropdown"
     >
-      <div
-        class="Dropdown"
+      <span
+        class="Dropdown-label"
       >
-        <span
-          class="Dropdown-label"
-        >
-          SOUND CATEGORY 
-          <img
-            alt=""
-            src="file"
-          />
-        </span>
-      </div>
-      <div
-        class="Dropdown"
-      >
-        <span
-          class="Dropdown-label"
-        >
-          PITCH 
-          <img
-            alt=""
-            src="file"
-          />
-        </span>
-      </div>
-      <div
-        class="Dropdown"
-      >
-        <span
-          class="Dropdown-label"
-        >
-          DURATION 
-          <img
-            alt=""
-            src="file"
-          />
-        </span>
-      </div>
-    </section>
-    <section
-      class="SoundOptions"
+        SOUND CATEGORY 
+        <img
+          alt=""
+          src="file"
+        />
+      </span>
+    </div>
+    <div
+      class="Dropdown"
     >
-      <section
-        class="Options"
-        style="width: 50%;"
-      />
-    </section>
+      <span
+        class="Dropdown-label"
+      >
+        PITCH 
+        <img
+          alt=""
+          src="file"
+        />
+      </span>
+    </div>
+    <div
+      class="Dropdown"
+    >
+      <span
+        class="Dropdown-label"
+      >
+        DURATION 
+        <img
+          alt=""
+          src="file"
+        />
+      </span>
+    </div>
+  </section>
+  <section
+    class="SoundOptions"
+  >
     <section
-      class="Sequence"
+      class="Options"
+      style="width: 50%;"
+    />
+  </section>
+  <section
+    class="Sequence"
+  >
+    <figure
+      class="SequenceBlock"
+      id="0"
+      style="border-color: #89eb0a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="1"
+      style="border-color: #ffe81a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="2"
+      style="border-color: #fd4d3a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="3"
+      style="border-color: #4d4f5e;"
+    />
+  </section>
+  <section
+    class="SequencePlayReset"
+  >
+    <aside
+      class="SequencePlayReset-play"
     >
       <figure
-        class="SequenceBlock"
-        id="0"
-        style="border-color: #89eb0a;"
-      />
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Play
+        </figcaption>
+      </figure>
       <figure
-        class="SequenceBlock"
-        id="1"
-        style="border-color: #ffe81a;"
-      />
-      <figure
-        class="SequenceBlock"
-        id="2"
-        style="border-color: #fd4d3a;"
-      />
-      <figure
-        class="SequenceBlock"
-        id="3"
-        style="border-color: #4d4f5e;"
-      />
-    </section>
-    <section
-      class="SequencePlayReset"
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Play All
+        </figcaption>
+      </figure>
+    </aside>
+    <aside
+      class="SequencePlayReset-reset"
     >
-      <aside
-        class="SequencePlayReset-play"
+      <figure
+        class="Icon"
       >
-        <figure
-          class="Icon"
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 48px; width: 48px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            Play
-          </figcaption>
-        </figure>
-        <figure
-          class="Icon"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 48px; width: 48px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            Play All
-          </figcaption>
-        </figure>
-      </aside>
-      <aside
-        class="SequencePlayReset-reset"
-      >
-        <figure
-          class="Icon"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 48px; width: 48px; cursor: pointer;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            Reset Sequence
-          </figcaption>
-        </figure>
-      </aside>
-    </section>
-  </main>
+          Reset Sequence
+        </figcaption>
+      </figure>
+    </aside>
+  </section>
 </DocumentFragment>
 `;

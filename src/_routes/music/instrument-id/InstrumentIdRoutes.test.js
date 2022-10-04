@@ -38,7 +38,7 @@ describe('Instrument Id Routes', () => {
 
   it('renders a level for listening skills', () => {
     renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.playListening}/1`] });
-    expect(screen.getByText('LEVEL 1')).toBeInTheDocument();
+    expect(screen.getByText('Listening Skills Test: Level 1')).toBeInTheDocument();
   });
 
   it('renders the song maker', () => {

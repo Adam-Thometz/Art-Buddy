@@ -15,7 +15,7 @@ const Play = () => {
   const goToSongMaker = () => navigate(instrumentIdUrls.playSongMaker);
   
   return (
-    <main className="Play">
+    <>
       <WindowNavbar page='INSTRUMENT ID: PLAY' />
       <header>
         <p>Master skills in Listening Skills to unlock instruments for the Song Maker!</p>
@@ -24,7 +24,7 @@ const Play = () => {
         <Icon largeFont icon={listeningSkills} text="Listening Skills Test" onClick={goToListeningTest} />
         <Icon largeFont icon={songMaker} text="Song Maker" onClick={goToSongMaker} />
       </Options>
-    </main>
+    </>
   );
 };
 

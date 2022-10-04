@@ -2,92 +2,79 @@
 
 exports[`ListeningSkillsTest component matches snapshot 1`] = `
 <DocumentFragment>
-  <main
-    class="ListeningSkillsTest"
+  <header
+    class="WindowNavbar-games"
   >
-    <header
-      class="WindowNavbar-games"
+    <h1
+      class="WindowNavbar-label"
     >
-      <h1
-        class="WindowNavbar-label"
-      >
-        Listening Skills Test
-      </h1>
+      Listening Skills Test: Level 2
+    </h1>
+    <div
+      class="WindowNavbar-corner"
+    >
       <div
-        class="WindowNavbar-corner"
+        class="ReportCardIcon"
+      >
+        <figure
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 50px; width: 34px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            REPORT CARD
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <section
+    class="ListeningSkillsTest-game"
+  >
+    <button
+      class="Button small"
+      disabled=""
+      style="border-color: #89eb0a; background-color: grey;"
+    >
+      START
+    </button>
+    <div
+      class="ListeningSkillsTest-choice-container"
+    >
+      <div
+        class="ListeningSkillsTest-options"
       >
         <div
-          class="ReportCardIcon"
+          class="Dropdown"
         >
-          <figure
-            class="Icon"
+          <span
+            class="Dropdown-label"
           >
+            CHOOSE FAMILY 
             <img
               alt=""
               src="file"
-              style="height: 50px; width: 34px;"
             />
-            <figcaption
-              class="Icon-text"
-              style="font-size: 1rem;"
-            >
-              REPORT CARD
-            </figcaption>
-          </figure>
+          </span>
         </div>
       </div>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
-    </header>
-    <header>
-      <h2>
-        LEVEL 2
-      </h2>
-      <p>
-        This is instruction text for later
-      </p>
-    </header>
-    <hr />
-    <section
-      class="ListeningSkillsTest-game"
-    >
-      <button
-        class="Button small"
-        disabled=""
-        style="border-color: #89eb0a; background-color: grey;"
-      >
-        START
-      </button>
       <div
-        class="ListeningSkillsTest-choice-container"
+        class="ListeningSkillsTest-choices"
       >
-        <div
-          class="ListeningSkillsTest-options"
-        >
-          <div
-            class="Dropdown"
-          >
-            <span
-              class="Dropdown-label"
-            >
-              CHOOSE FAMILY 
-              <img
-                alt=""
-                src="file"
-              />
-            </span>
-          </div>
-        </div>
-        <div
-          class="ListeningSkillsTest-choices"
-        >
-          <p />
-        </div>
+        <p />
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </DocumentFragment>
 `;

@@ -38,9 +38,9 @@ const ListeningSkills = () => {
   });
 
   return (
-    <main className="ListeningSkills">
+    <>
       <WindowNavbar page='INSTRUMENT ID: PLAY' />
-      <div className="ListeningSkills-main">
+      <div className="ListeningSkills">
         <header className="ListeningSkills-icon">
           <Icon largeFont icon={listeningSkills} text='Listening Skills Test' />
         </header>
@@ -49,7 +49,7 @@ const ListeningSkills = () => {
           {levels}
         </section>
       </div>
-    </main>
+    </>
   );
 };
 
