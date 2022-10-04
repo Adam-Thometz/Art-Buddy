@@ -1,0 +1,16 @@
+.SequencePlayReset {
+  display: flex;
+  justify-content: center;
+}
+
+.SequencePlayReset-play {
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+}
+
+.SequencePlayReset-reset {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+}

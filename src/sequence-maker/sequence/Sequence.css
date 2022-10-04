@@ -1,24 +1,7 @@
 .Sequence {
-  display: flex;
-}
-
-.Sequence-play-options {
-  margin: 2% 0;
-  width: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.Sequence-display {
   display: grid;
   grid-template-columns: repeat(4, 23%);
   gap: 2%;
   margin: 0 auto;
   width: 90%;
-}
-
-.Sequence-reset {
-  margin: 5% 0;
-  width: 5%;
 }

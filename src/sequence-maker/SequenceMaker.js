@@ -9,6 +9,7 @@ import SoundOptions from "./sound-options/SoundOptions";
 import Sequence from "./sequence/Sequence";
 
 import { Transport } from "tone";
+import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 const SequenceMaker = () => {;
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const SequenceMaker = () => {;
       <SequenceControls />
       <SoundOptions />
       <Sequence />
+      <SequencePlayReset />
     </main>
   );
 };
