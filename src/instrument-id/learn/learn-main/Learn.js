@@ -5,9 +5,8 @@ import './Learn.css';
 
 import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Help from "_components/help/Help";
 
-import learnMenuOptions from "../../../_data/instrument-id/learnMenuOptions";
+import learnMenuOptions from "_data/instrument-id/learnMenuOptions";
 
 const Learn = () => {
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ const Learn = () => {
 
   return (
     <main className="Learn">
-      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
+      <WindowNavbar page='INSTRUMENT ID: LEARN' />
       <div className="Learn-main">
         <header className="Learn-header">
           <p>To begin, choose an instrument family</p>

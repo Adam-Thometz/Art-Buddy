@@ -7,6 +7,7 @@ import { changeMenuGames } from "_redux/settings/mainSettingsActions";
 import './WindowNavbar.css';
 
 import BackArrow from "./back-arrow/BackArrow";
+import Help from "_components/help/Help";
 
 const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   const { menu } = useSelector(state => state.mainSettings);
@@ -29,6 +30,7 @@ const WindowNavbar = ({ cornerIcon = null, page = null }) => {
       {location.pathname.length === 1 ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
       {cornerIcon ? <div className="WindowNavbar-corner">{cornerIcon}</div> : null}
+      <Help />
     </header>
   );
 

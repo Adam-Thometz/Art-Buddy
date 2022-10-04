@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeScale, changeSound, toggleNote } from '_redux/music-decoder/musicDecoderActions';
+import { changeScale, changeSound, toggleUpperCase, toggleNote } from '_redux/music-decoder/musicDecoderActions';
 
 import './DecoderControls.css';
 
@@ -13,6 +13,7 @@ import instruments from './dropdown-options/instruments';
 import play from '_helpers/music-decoder/play';
 import createSound from '_helpers/music-decoder/createSound';
 import convertLettersToNotes from '_helpers/music-decoder/convertLettersToNotes';
+import Toggle from '_components/toggle/Toggle';
 
 const DecoderControls = () => {
   const {
@@ -20,7 +21,8 @@ const DecoderControls = () => {
     scale,
     sound,
     currPlaying,
-    filledLetters
+    filledLetters,
+    isUpperCase
   } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
@@ -36,6 +38,8 @@ const DecoderControls = () => {
     createSound({ volume, scale, sampleId });
     dispatch(changeSound(sampleId));
   };
+
+  const handleToggle = () => dispatch(toggleUpperCase());
 
   const handlePlayMelody = () => {
     if (currPlaying) return;
@@ -66,6 +70,7 @@ const DecoderControls = () => {
         <Dropdown labelText='SOUND' onClick={handleChangeSound} options={instruments} />
       </aside>
       <aside className='DecoderControls-play'>
+        <Toggle label="UPPER CASE" currToggle={isUpperCase} toggleFn={handleToggle} />
         <Button small colorId={0} onClick={handlePlayMelody} otherStyles={{ width: '10vw', padding: '3%' }}>PLAY</Button>
       </aside>
     </section>

@@ -7,7 +7,6 @@ import Button from "_components/button/Button";
 import Icon from "_components/icon/Icon";
 import Popup from "_components/popup/Popup";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Help from "_components/help/Help";
 import ReportCard from "../report-card/ReportCard";
 
 import { listeningSkills, reportCardIcon } from "_media/instrument-id/_icons/iconImports";
@@ -40,7 +39,7 @@ const ListeningSkills = () => {
 
   return (
     <main className="ListeningSkills">
-      <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<Help />} />
+      <WindowNavbar page='INSTRUMENT ID: PLAY' />
       <div className="ListeningSkills-main">
         <header className="ListeningSkills-icon">
           <Icon largeFont icon={listeningSkills} text='Listening Skills Test' />

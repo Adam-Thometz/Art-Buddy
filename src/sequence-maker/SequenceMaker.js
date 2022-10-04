@@ -27,10 +27,6 @@ const SequenceMaker = () => {;
   return (
     <main className="SequenceMaker" onLoad={setTempo}>
       <WindowNavbar page='SEQUENCE MAKER' />
-      <header>
-        <p>HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ</p>
-      </header>
-      <hr/>
       <SequenceControls />
       <SoundOptions />
       <Sequence />

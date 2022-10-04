@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Help from "_components/help/Help";
 
 import { songMaker, listeningSkills } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from '_data/_routes/routeUrls';
@@ -17,7 +16,7 @@ const Play = () => {
   
   return (
     <main className="Play">
-      <WindowNavbar page='INSTRUMENT ID: PLAY' cornerIcon={<Help />} />
+      <WindowNavbar page='INSTRUMENT ID: PLAY' />
       <header>
         <p>Master skills in Listening Skills to unlock instruments for the Song Maker!</p>
       </header>

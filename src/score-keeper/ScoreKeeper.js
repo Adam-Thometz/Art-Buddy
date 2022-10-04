@@ -5,7 +5,6 @@ import { clearGame, loadStudents } from '_redux/score-keeper/scoreKeeperActions'
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Students from './students/Students';
-import Help from '_components/help/Help';
 
 const ScoreKeeper = () => {
   const { roster } = useSelector(state => state.mainSettings);
@@ -21,11 +20,7 @@ const ScoreKeeper = () => {
 
   return (
     <div className="ScoreKeeper">
-      <WindowNavbar page='SCORE KEEPER' cornerIcon={<Help />} />
-      <header>
-        <p>HULLO IM SCORE KEEPER. I CAN KEEP TRACK OF UR SCORE. LOAD STUDENTS FROM UR ROSTER</p>
-      </header>
-      <hr />
+      <WindowNavbar page='SCORE KEEPER' />
       <Students />
     </div>
   );

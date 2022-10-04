@@ -8,7 +8,6 @@ import './Instrument.css';
 import Icon from "_components/icon/Icon";
 import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Help from "_components/help/Help";
 
 import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
 import { playBeat, playScale } from "_helpers/instrument-id/play";
@@ -44,7 +43,7 @@ const Instrument = () => {
 
   return (
     <main className="Instrument" onLoad={handleCreateBuffers}>
-      <WindowNavbar page='INSTRUMENT ID: LEARN' cornerIcon={<Help />} />
+      <WindowNavbar page='INSTRUMENT ID: LEARN' />
       <div className="Instrument-main">
         <header className="Instrument-name">
           <Icon largeFont icon={icon} text={name} width={width} />
