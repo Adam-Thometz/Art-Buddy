@@ -13,13 +13,12 @@ exports[`SequenceMaker component matches snapshot 1`] = `
       >
         SEQUENCE MAKER
       </h1>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
-    <header>
-      <p>
-        HULLO IM SEQUENCE MAKER MAKE A SEQUENCE PLZ
-      </p>
-    </header>
-    <hr />
     <section
       class="SequenceControls"
     >
@@ -74,8 +73,32 @@ exports[`SequenceMaker component matches snapshot 1`] = `
     <section
       class="Sequence"
     >
+      <figure
+        class="SequenceBlock"
+        id="0"
+        style="border-color: #89eb0a;"
+      />
+      <figure
+        class="SequenceBlock"
+        id="1"
+        style="border-color: #ffe81a;"
+      />
+      <figure
+        class="SequenceBlock"
+        id="2"
+        style="border-color: #fd4d3a;"
+      />
+      <figure
+        class="SequenceBlock"
+        id="3"
+        style="border-color: #4d4f5e;"
+      />
+    </section>
+    <section
+      class="SequencePlayReset"
+    >
       <aside
-        class="Sequence-play-options"
+        class="SequencePlayReset-play"
       >
         <figure
           class="Icon"
@@ -108,32 +131,8 @@ exports[`SequenceMaker component matches snapshot 1`] = `
           </figcaption>
         </figure>
       </aside>
-      <section
-        class="Sequence-display"
-      >
-        <figure
-          class="SequenceBlock"
-          id="0"
-          style="border-color: #89eb0a;"
-        />
-        <figure
-          class="SequenceBlock"
-          id="1"
-          style="border-color: #ffe81a;"
-        />
-        <figure
-          class="SequenceBlock"
-          id="2"
-          style="border-color: #fd4d3a;"
-        />
-        <figure
-          class="SequenceBlock"
-          id="3"
-          style="border-color: #4d4f5e;"
-        />
-      </section>
       <aside
-        class="Sequence-reset"
+        class="SequencePlayReset-reset"
       >
         <figure
           class="Icon"

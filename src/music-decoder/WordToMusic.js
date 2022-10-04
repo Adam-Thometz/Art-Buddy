@@ -9,8 +9,11 @@ import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from '_helpers/music-decoder/createSound';
+import useLocalStorage from '_hooks/useLocalStorage';
+import Instructions from '_components/instructions/Instructions';
 
 const WordToMusic = () => {
+  const [hasVisited, setHasVisited] = useLocalStorage('visited-wtm');
   const { scale, sound } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
@@ -26,7 +29,7 @@ const WordToMusic = () => {
     };
   }, [dispatch]);
 
-  return (
+  return !hasVisited ? <Instructions setHasVisited={setHasVisited} /> : (
     <main className="WordToMusic">
       <WindowNavbar page='WORD-TO-MUSIC DECODER' />
       <WordForm />

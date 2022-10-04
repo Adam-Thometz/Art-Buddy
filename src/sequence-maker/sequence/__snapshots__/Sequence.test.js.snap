@@ -5,83 +5,26 @@ exports[`Sequence component matches snapshot 1`] = `
   <section
     class="Sequence"
   >
-    <aside
-      class="Sequence-play-options"
-    >
-      <figure
-        class="Icon"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 48px; width: 48px; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1rem;"
-        >
-          Play
-        </figcaption>
-      </figure>
-      <figure
-        class="Icon"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 48px; width: 48px; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1rem;"
-        >
-          Play All
-        </figcaption>
-      </figure>
-    </aside>
-    <section
-      class="Sequence-display"
-    >
-      <figure
-        class="SequenceBlock"
-        id="0"
-        style="border-color: #89eb0a;"
-      />
-      <figure
-        class="SequenceBlock"
-        id="1"
-        style="border-color: #ffe81a;"
-      />
-      <figure
-        class="SequenceBlock"
-        id="2"
-        style="border-color: #fd4d3a;"
-      />
-      <figure
-        class="SequenceBlock"
-        id="3"
-        style="border-color: #4d4f5e;"
-      />
-    </section>
-    <aside
-      class="Sequence-reset"
-    >
-      <figure
-        class="Icon"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 48px; width: 48px; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1rem;"
-        >
-          Reset Sequence
-        </figcaption>
-      </figure>
-    </aside>
+    <figure
+      class="SequenceBlock"
+      id="0"
+      style="border-color: #89eb0a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="1"
+      style="border-color: #ffe81a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="2"
+      style="border-color: #fd4d3a;"
+    />
+    <figure
+      class="SequenceBlock"
+      id="3"
+      style="border-color: #4d4f5e;"
+    />
   </section>
 </DocumentFragment>
 `;

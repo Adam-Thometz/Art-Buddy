@@ -12,6 +12,7 @@ describe('Music Game Routes', () => {
   });
 
   it('renders the word-to-music decoder', () => {
+    window.localStorage.setItem('visited-wtm', true);
     renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.wordToMusic] });
     expect(screen.getByText('WORD-TO-MUSIC DECODER')).toBeInTheDocument();
   });

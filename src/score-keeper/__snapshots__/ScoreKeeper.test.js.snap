@@ -13,22 +13,12 @@ exports[`Score Keeper matches snapshot 1`] = `
       >
         SCORE KEEPER
       </h1>
-      <div
-        class="WindowNavbar-corner"
-      >
-        <img
-          alt="Help"
-          class="Help"
-          src="file"
-        />
-      </div>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
-    <header>
-      <p>
-        HULLO IM SCORE KEEPER. I CAN KEEP TRACK OF UR SCORE. LOAD STUDENTS FROM UR ROSTER
-      </p>
-    </header>
-    <hr />
     <div
       class="Students"
     >

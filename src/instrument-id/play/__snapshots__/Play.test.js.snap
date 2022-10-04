@@ -13,15 +13,11 @@ exports[`Play component matches snapshot 1`] = `
       >
         INSTRUMENT ID: PLAY
       </h1>
-      <div
-        class="WindowNavbar-corner"
-      >
-        <img
-          alt="Help"
-          class="Help"
-          src="file"
-        />
-      </div>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
     <header>
       <p>

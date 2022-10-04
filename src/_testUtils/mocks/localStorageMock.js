@@ -1,23 +1,27 @@
-class LocalStorageMock {
-  constructor() {
-    this.store = {};
-  }
+const localStorageMock = (function () {
+  let store = {};
 
-  clear() {
-    this.store = {};
-  }
+  return {
+    getItem(key) {
+      return store[key];
+    },
 
-  getItem(key) {
-    return this.store[key] || null;
-  }
+    setItem(key, value) {
+      store[key] = value;
+    },
 
-  setItem(key, val) {
-    this.store[key] = JSON.stringify(val);
-  }
+    clear() {
+      store = {};
+    },
 
-  removeItem(key) {
-    delete this.store[key];
-  }
-}
+    removeItem(key) {
+      delete store[key];
+    },
 
-export default LocalStorageMock;
+    getAll() {
+      return store;
+    },
+  };
+})();
+
+Object.defineProperty(window, "localStorage", { value: localStorageMock });

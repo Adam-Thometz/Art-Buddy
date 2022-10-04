@@ -9,6 +9,7 @@ import WordToMusic from './WordToMusic';
 jest.mock('_helpers/music-decoder/play');
 
 describe('WordToMusic component', () => {
+  window.localStorage.setItem('visited-wtm', true);
   it('renders without crashing', () => {
     renderWithProvider(<WordToMusic />);
   });

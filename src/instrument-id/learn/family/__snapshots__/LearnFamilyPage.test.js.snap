@@ -13,15 +13,11 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
       >
         INSTRUMENT ID: LEARN
       </h1>
-      <div
-        class="WindowNavbar-corner"
-      >
-        <img
-          alt="Help"
-          class="Help"
-          src="file"
-        />
-      </div>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
     <div
       class="LearnFamilyPage-main"

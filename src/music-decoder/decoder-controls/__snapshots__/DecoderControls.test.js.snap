@@ -38,6 +38,28 @@ exports[`DecoderControls component matches snapshot 1`] = `
     <aside
       class="DecoderControls-play"
     >
+      <div
+        class="Toggle"
+      >
+        <div
+          class="Toggle-switch on"
+        >
+          <div
+            class="Toggle-button"
+          />
+          <span>
+            ON
+          </span>
+          <span>
+            OFF
+          </span>
+        </div>
+        <span
+          class="Toggle-label"
+        >
+          UPPER CASE
+        </span>
+      </div>
       <button
         class="Button small"
         style="border-color: #89eb0a; width: 10vw; padding: 3%;"

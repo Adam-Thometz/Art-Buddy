@@ -13,20 +13,11 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       >
         JUMP INTO RHYTHM
       </h1>
-      <div
-        class="WindowNavbar-corner"
-      >
-        <img
-          alt="Help"
-          class="Help"
-          src="file"
-        />
-      </div>
-    </header>
-    <header>
-      <p>
-        HULLO IM JUMP INTO RHYTHM. MAKE SOME RHYTHMS TO MAKE THE FROGGY JUMP PLZ
-      </p>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
     <section
       class="FrogLilyPads"

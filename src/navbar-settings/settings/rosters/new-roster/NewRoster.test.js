@@ -3,6 +3,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import NewRoster from './NewRoster';
 
 describe('NewRoster component', () => {
+  window.localStorage.setItem('rosters', '{}');
   it('renders without crashing', () => {
     renderWithProvider(<NewRoster />);
   });

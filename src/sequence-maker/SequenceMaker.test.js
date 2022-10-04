@@ -36,6 +36,6 @@ describe('SequenceMaker component', () => {
     setupChoices();
     const choice = screen.getByText('CAT');
     userEvent.click(choice);
-    expect(screen.getByText('REMOVE')).toBeInTheDocument();
+    expect(screen.getByText('X')).toBeInTheDocument();
   })
 });

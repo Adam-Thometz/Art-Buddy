@@ -13,39 +13,12 @@ exports[`WordToMusic component matches snapshot 1`] = `
       >
         WORD-TO-MUSIC DECODER
       </h1>
-      <div
-        class="WindowNavbar-corner"
-      >
-        <div
-          class="Toggle"
-        >
-          <div
-            class="Toggle-switch on"
-          >
-            <div
-              class="Toggle-button"
-            />
-            <span>
-              ON
-            </span>
-            <span>
-              OFF
-            </span>
-          </div>
-          <span
-            class="Toggle-label"
-          >
-            UPPER CASE
-          </span>
-        </div>
-      </div>
+      <img
+        alt="Help"
+        class="Help"
+        src="file"
+      />
     </header>
-    <header>
-      <p>
-        HULLO IM WORD TO MUSIC DECODER. TYPE SOME WORDS TO MAKE MUSIC PLZ
-      </p>
-    </header>
-    <hr />
     <form
       class="WordForm"
     >
@@ -102,6 +75,28 @@ exports[`WordToMusic component matches snapshot 1`] = `
       <aside
         class="DecoderControls-play"
       >
+        <div
+          class="Toggle"
+        >
+          <div
+            class="Toggle-switch on"
+          >
+            <div
+              class="Toggle-button"
+            />
+            <span>
+              ON
+            </span>
+            <span>
+              OFF
+            </span>
+          </div>
+          <span
+            class="Toggle-label"
+          >
+            UPPER CASE
+          </span>
+        </div>
         <button
           class="Button small"
           style="border-color: #89eb0a; width: 10vw; padding: 3%;"
