@@ -1,21 +1,23 @@
 import React, { useEffect } from 'react';
+import useLocalStorage from '_hooks/useLocalStorage';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { clearGame } from '_redux/music-decoder/musicDecoderActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
+import Instructions from '_components/instructions/Instructions';
 import WordForm from './word-form/WordForm';
 import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from '_helpers/music-decoder/createSound';
-import useLocalStorage from '_hooks/useLocalStorage';
-import Instructions from '_components/instructions/Instructions';
+import activities from '_data/menu/activityList';
 
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited-wtm');
   const { scale, sound } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
+  const gameInfo = activities.find(game => game.name === 'WORD-TO-MUSIC DECODER');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,12 +31,14 @@ const WordToMusic = () => {
     };
   }, [dispatch]);
 
-  return !hasVisited ? <Instructions setHasVisited={setHasVisited} /> : (
+  return (
     <>
-      <WindowNavbar page='WORD-TO-MUSIC DECODER' />
-      <WordForm />
-      <DecoderControls />
-      <AlphabetTable />
+      <WindowNavbar page={gameInfo.name} />
+      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : (<>
+        <WordForm />
+        <DecoderControls />
+        <AlphabetTable />
+      </>)}
     </>
   );
 };

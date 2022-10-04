@@ -16,6 +16,7 @@ function setupChoices() {
 };
 
 describe('SequenceMaker component', () => {
+  window.localStorage.setItem('visited-sm', true);
   it('renders without crashing', () => {
     renderWithProvider(<SequenceMaker />);
   });

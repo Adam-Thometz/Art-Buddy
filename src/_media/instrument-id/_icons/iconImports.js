@@ -1,6 +1,6 @@
 // Main icons
-import playIcon from './main/play.png';
-import learnIcon from './main/learn.png';
+import playIcon from '_media/general-icons/play.png';
+import learnIcon from './learn.png';
 
 // Play icons
 import songMaker from './play/song-maker.png';

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import useLocalStorage from '_hooks/useLocalStorage';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { clearGame, loadStudents } from '_redux/score-keeper/scoreKeeperActions';
@@ -6,8 +7,13 @@ import { clearGame, loadStudents } from '_redux/score-keeper/scoreKeeperActions'
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Students from './students/Students';
 
+import activities from '_data/menu/activityList';
+import Instructions from '_components/instructions/Instructions';
+
 const ScoreKeeper = () => {
+  const [hasVisited, setHasVisited] = useLocalStorage('visited-sk');
   const { roster } = useSelector(state => state.mainSettings);
+  const gameInfo = activities.find(game => game.name === 'SCORE KEEPER');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,8 +26,8 @@ const ScoreKeeper = () => {
 
   return (
     <>
-      <WindowNavbar page='SCORE KEEPER' />
-      <Students />
+      <WindowNavbar page={gameInfo.name} />
+      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <Students />}
     </>
   );
 };
