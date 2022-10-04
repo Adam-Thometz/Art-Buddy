@@ -1,5 +1,6 @@
 .SequenceBlock {
   display: inline-block;
+  position: relative;
   border: 10px solid;
   border-radius: 25px;
   margin: 10px;
@@ -23,9 +24,13 @@
 }
 
 .SequenceBlock button {
-  width: 35%;
+  width: 15%;
   margin: 5px auto;
   font-size: 1rem;
+  border-width: 2px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .playing {

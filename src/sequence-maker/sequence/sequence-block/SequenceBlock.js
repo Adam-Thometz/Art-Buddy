@@ -35,8 +35,8 @@ const SequenceBlock = ({ id, block, borderColor }) => {
     <figure className={`SequenceBlock${playing}`} style={{borderColor}} id={id}>
       {block !== null ? (
         <>
+          <Button small colorId={2} onClick={remove}>X</Button>
           <img className="SequenceBlock-img" src={block.image} alt={block.alt} onClick={play} />
-          <Button small colorId={2} onClick={remove}>REMOVE</Button>
         </>
       ) : null}
     </figure>
