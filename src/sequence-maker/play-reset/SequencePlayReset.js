@@ -49,6 +49,7 @@ const SequencePlayReset = () => {
   };
 
   const handleReset = () => dispatch(resetSequence());
+  
   return (
     <section className='SequencePlayReset'>
       <aside className="SequencePlayReset-play">
