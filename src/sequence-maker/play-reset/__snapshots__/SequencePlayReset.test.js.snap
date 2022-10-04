@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SequencePlayReset component matches the snapshot of SequencePlayReset 1`] = `
+<DocumentFragment>
+  <section
+    class="SequencePlayReset"
+  >
+    <aside
+      class="SequencePlayReset-play"
+    >
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Play
+        </figcaption>
+      </figure>
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Play All
+        </figcaption>
+      </figure>
+    </aside>
+    <aside
+      class="SequencePlayReset-reset"
+    >
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 48px; width: 48px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Reset Sequence
+        </figcaption>
+      </figure>
+    </aside>
+  </section>
+</DocumentFragment>
+`;
