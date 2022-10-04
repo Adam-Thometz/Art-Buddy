@@ -17,13 +17,12 @@ export function playSequence({ sequence, pitch, duration, playAll, volume }) {
     const buffer = window[`${soundId}Buffer`];
     const sound = sample({ sound: buffer, volume });
     const pitchToPlay = `C${pitch}`;
-    const length = `${duration}m`;
 
     if (playAll) {
-      sound.triggerAttackRelease(pitchToPlay, length, start);
+      sound.triggerAttackRelease(pitchToPlay, duration, start);
     } else {
       const seconds = i * duration;
-      sound.triggerAttackRelease(pitchToPlay, length, start + seconds);
+      sound.triggerAttackRelease(pitchToPlay, duration, start + seconds);
     };
   });
 };
@@ -37,5 +36,5 @@ export function playOne({ soundId, pitch, duration, volume }) {
   if (soundId === 'stop') return;
   const buffer = window[`${soundId}Buffer`];
   const sound = sample({ sound: buffer, volume });
-  sound.triggerAttackRelease(`C${pitch}`, `${duration}m`);
+  sound.triggerAttackRelease(`C${pitch}`, duration);
 };
