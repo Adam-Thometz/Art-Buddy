@@ -36,12 +36,12 @@ const Options = () => {
   const pencilColor = { filter: colorsToFilter[color] };
 
   return (
-    <div className='Options'>
+    <div className='ControlBar'>
       <Button otherStyles={buttonStyle} colorId={4}>ABC</Button>
       <Button otherStyles={buttonStyle} colorId={0}>abc</Button>
       <Button otherStyles={buttonStyle} colorId={1}>123</Button>
       <Button otherStyles={buttonStyle} colorId={2}><img
-        className='Options-shape-button'
+        className='ControlBar-shape-button'
         src={square}
         alt="Shapes"
       /></Button>
