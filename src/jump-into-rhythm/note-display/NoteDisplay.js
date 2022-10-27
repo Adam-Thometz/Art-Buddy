@@ -6,7 +6,7 @@ import './NoteDisplay.css';
 
 import NoteBlock from './note-block/NoteBlock';
 
-import colors from '_helpers/_utils/colorOrder';
+import colors from '_data/_utils/colorOrder';
 import trebleClef from '_media/jump-into-rhythm/_icons/treble-clef.png';
 
 const NoteDisplay = () => {

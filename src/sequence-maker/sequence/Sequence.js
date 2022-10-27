@@ -6,7 +6,7 @@ import './Sequence.css';
 
 import SequenceBlock from "./sequence-block/SequenceBlock";
 
-import colors from "_helpers/_utils/colorOrder";
+import colors from "_data/_utils/colorOrder";
 
 const Sequence = () => {
   const { sequence } = useSelector(state => state.sequenceMaker);
