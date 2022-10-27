@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import './Options.css';
+import './ControlBar.css';
 
 import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';

@@ -1,9 +1,9 @@
-.Options {
+.ControlBar {
   display: flex;
   flex-direction: column;
 }
 
-.Options-shape-button {
+.ControlBar-shape-button {
   width: 45px;
   height: 45px;
 }
