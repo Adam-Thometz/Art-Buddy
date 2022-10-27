@@ -6,6 +6,7 @@ import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
 import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
 import instrumentIdReducer from './instrument-id/instrumentIdReducer';
 import jumpIntoRhythmReducer from './jump-into-rhythm/jumpIntoRhythmReducer';
+import freePaintReducer from './free-paint/freePaintReducer';
 
 const rootReducer = configureStore({
   reducer: {
@@ -14,7 +15,8 @@ const rootReducer = configureStore({
     sequenceMaker: sequenceMakerReducer,
     scoreKeeper: scoreKeeperReducer,
     instrumentId: instrumentIdReducer,
-    jumpIntoRhythm: jumpIntoRhythmReducer
+    jumpIntoRhythm: jumpIntoRhythmReducer,
+    freePaint: freePaintReducer
   }
 });
 
