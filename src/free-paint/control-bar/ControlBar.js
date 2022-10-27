@@ -36,20 +36,40 @@ const Options = () => {
   const pencilColor = { filter: colorsToFilter[color] };
 
   return (
-    <div className='ControlBar'>
-      <Button otherStyles={buttonStyle} colorId={4}>ABC</Button>
-      <Button otherStyles={buttonStyle} colorId={0}>abc</Button>
-      <Button otherStyles={buttonStyle} colorId={1}>123</Button>
-      <Button otherStyles={buttonStyle} colorId={2}><img
-        className='ControlBar-shape-button'
-        src={square}
-        alt="Shapes"
-      /></Button>
+    <section className='ControlBar'>
+      <div className='ControlBar-button-wrapper'>
+        <Button otherStyles={buttonStyle} colorId={4}>ABC</Button>
+        <div className='ControlBar-options'>
+          {options.upperCase.map(o => <span className='ControlBar-option'>{o}</span>)}
+        </div>
+      </div>
+      <div className='ControlBar-button-wrapper'>
+        <Button otherStyles={buttonStyle} colorId={0}>abc</Button>
+        <div className='ControlBar-options'>
+          {options.lowerCase.map(o => <span className='ControlBar-option'>{o}</span>)}
+        </div>
+      </div>
+      <div className='ControlBar-button-wrapper'>
+        <Button otherStyles={buttonStyle} colorId={1}>123</Button>
+        <div className='ControlBar-options'>
+          {options.numbers.map(o => <span className='ControlBar-option'>{o}</span>)}
+        </div>
+      </div>
+      <div className='ControlBar-button-wrapper'>
+        <Button otherStyles={buttonStyle} colorId={2}><img
+          className='ControlBar-shape-button'
+          src={square}
+          alt="Shapes"
+        /></Button>
+        <div className='ControlBar-options'>
+          {options.shapes.map(o => <img className='ControlBar-option' src={o[0]} alt={o[1]} />)}
+        </div>
+      </div>
       <Button 
         otherStyles={{ ...buttonStyle, ...pencilColor }}
       ><Icon size='45px' text="Pencil" icon={pencil} /></Button>
       <Button otherStyles={buttonStyle}><Icon size='45px' text="Eraser" icon={eraser} /></Button>
-    </div>
+    </section>
   );
 };
 

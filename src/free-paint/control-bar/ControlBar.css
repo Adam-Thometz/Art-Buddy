@@ -3,6 +3,20 @@
   flex-direction: column;
 }
 
+.ControlBar-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ControlBar-options {
+  background-color: white;
+
+}
+
+.ControlBar-option {
+  padding: 10px;
+}
+
 .ControlBar-shape-button {
   width: 45px;
   height: 45px;
