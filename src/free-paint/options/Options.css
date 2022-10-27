@@ -1,0 +1,9 @@
+.Options {
+  display: flex;
+  flex-direction: column;
+}
+
+.Options-shape-button {
+  width: 45px;
+  height: 45px;
+}

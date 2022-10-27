@@ -5,6 +5,7 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 
 import activities from '_data/menu/activityList';
+import Options from './options/Options';
 
 const FreePaint = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited-fp');
@@ -12,7 +13,9 @@ const FreePaint = () => {
   return (
     <>
       <WindowNavbar page={gameInfo.name} />
-      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <></>}
+      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <>
+        <Options />
+      </>}
     </>
   );
 };
