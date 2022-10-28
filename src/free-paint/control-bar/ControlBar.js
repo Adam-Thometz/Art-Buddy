@@ -11,7 +11,7 @@ import square from '_media/free-paint/shapes/square.png';
 import pencil from '_media/free-paint/pencil.png';
 import eraser from '_media/free-paint/eraser.png';
 import options from '_data/free-paint/freePaintOptions';
-import colorsToFilter from '_data/free-paint/colorToFilter';
+import colorsToFilter from '_data/free-paint/colorsToFilter';
 
 const Options = () => {
   const { color, display } = useSelector(state => state.freePaint);
