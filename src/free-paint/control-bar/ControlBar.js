@@ -15,7 +15,7 @@ import colorsToFilter from '_data/free-paint/colorsToFilter';
 
 const Options = () => {
   const { color, display } = useSelector(state => state.freePaint);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChangeColor = e => {
 
@@ -33,7 +33,7 @@ const Options = () => {
     padding: '3%'
   };
 
-  const pencilColor = { filter: colorsToFilter[color] };
+  const pencilColor = { filter: colorsToFilter.get(color) };
 
   return (
     <section className='ControlBar'>
@@ -66,8 +66,8 @@ const Options = () => {
         </div>
       </div>
       <Button 
-        otherStyles={{ ...buttonStyle, ...pencilColor }}
-      ><Icon size='45px' text="Pencil" icon={pencil} /></Button>
+        otherStyles={buttonStyle}
+      ><Icon size='45px' text="Pencil" icon={pencil} otherImgStyles={pencilColor} /></Button>
       <Button otherStyles={buttonStyle}><Icon size='45px' text="Eraser" icon={eraser} /></Button>
     </section>
   );

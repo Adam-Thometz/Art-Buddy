@@ -8,13 +8,26 @@
   align-items: center;
 }
 
+.ControlBar-button-wrapper button {
+  z-index: 5;
+}
+
 .ControlBar-options {
   background-color: white;
+  border-radius: 20px;
+  padding-left: 50px;
+  transform: translateX(-50px);
+  box-shadow: 0 5px 5px rgb(177, 177, 177);
+  z-index: 4;
+}
 
+.ControlBar-options img {
+  padding: 30px 10px;
 }
 
 .ControlBar-option {
   padding: 10px;
+  line-height: 100px;
 }
 
 .ControlBar-shape-button {
