@@ -5,6 +5,5 @@ module.exports = {
     'src(.*)$': "<rootDir>/src$1"
   },
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: '<rootDir>/src/setupTests.js',
-  setupTestFrameworkScriptFile: '<rootDir>/src/_testUtils/mocks/localStorageMock.js'
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js', '<rootDir>/src/_testUtils/mocks/localStorageMock.js'],
 }
