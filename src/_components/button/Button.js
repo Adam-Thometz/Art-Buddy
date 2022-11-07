@@ -7,16 +7,18 @@ import colors from "_data/_utils/colorOrder";
 const Button = ({
   children,
   colorId,
+  disabled = false,
+  id = null,
+  icon = null,
   onClick,
+  otherStyles = {},
   small = false,
   selected = false,
-  disabled = false,
-  icon = null,
-  otherStyles = {}
 }) => {
   const borderColor = colors[colorId];
   return (
     <button
+      id={id}
       disabled={disabled}
       className={`Button ${small ? 'small' : 'regular'}${selected ? ' selected' : ''}`}
       onClick={onClick}
