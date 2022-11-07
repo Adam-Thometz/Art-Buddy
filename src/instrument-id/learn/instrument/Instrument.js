@@ -50,9 +50,9 @@ const Instrument = () => {
         </header>
         <article className="Instrument-information">
           <h2>WHAT IS THE {name} MADE OUT OF?</h2>
-          <ul>
-            {madeFrom.map(material => <li key={material}>{material}</li>)}
-          </ul>
+          <section className="Instrument-materials">
+            {madeFrom}
+          </section>
           <h2>THE {name} IS PLAYED BY...</h2>
           <p>{howToPlay}</p>
           <section className="Instrument-buttons">

@@ -44,11 +44,25 @@ exports[`Instrument component matches snapshot 1`] = `
       <h2>
         WHAT IS THE TRUMPET MADE OUT OF?
       </h2>
-      <ul>
-        <li>
-          BRASS
-        </li>
-      </ul>
+      <section
+        class="Instrument-materials"
+      >
+        <figure
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 100px; width: 100px; margin: 0px 20px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1.75rem;"
+          >
+            BRASS
+          </figcaption>
+        </figure>
+      </section>
       <h2>
         THE TRUMPET IS PLAYED BY...
       </h2>

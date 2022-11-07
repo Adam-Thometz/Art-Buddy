@@ -58,12 +58,18 @@ import panFluteIcon from './instruments/woodwind/pan-flute.png';
 
 // Voice icons
 import voiceMainIcon from './instruments/voice/main.png';
-import sopranoIcon from './instruments/voice/soprano.png'
-import mezzoSopranoIcon from './instruments/voice/mezzo-soprano.png'
-import altoIcon from './instruments/voice/alto.png'
-import tenorIcon from './instruments/voice/tenor.png'
-import baritoneIcon from './instruments/voice/baritone.png'
-import bassIcon from './instruments/voice/bass.png'
+import sopranoIcon from './instruments/voice/soprano.png';
+import mezzoSopranoIcon from './instruments/voice/mezzo-soprano.png';
+import altoIcon from './instruments/voice/alto.png';
+import tenorIcon from './instruments/voice/tenor.png';
+import baritoneIcon from './instruments/voice/baritone.png';
+import bassIcon from './instruments/voice/bass.png';
+
+// Materials icons
+import brass from './materials/brass.png';
+import silver from './materials/silver.png';
+import wood from './materials/wood.png';
+import leather from './materials/leather.png';
 
 export {
   playIcon,
@@ -117,5 +123,10 @@ export {
   altoIcon,
   tenorIcon,
   baritoneIcon,
-  bassIcon
-}
+  bassIcon,
+
+  brass,
+  silver,
+  wood,
+  leather
+};

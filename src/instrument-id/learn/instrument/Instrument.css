@@ -1,9 +1,8 @@
 .Instrument-main {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90%;
+  height: 80%;
 }
 
 .Instrument-name {
@@ -14,6 +13,11 @@
 .Instrument-information {
   width: 60%;
   border-left: 1px solid #4D4F5E;
+}
+
+.Instrument-materials {
+  display: flex;
+  justify-content: center;
 }
 
 .Instrument-buttons {
