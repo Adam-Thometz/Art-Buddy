@@ -2,12 +2,12 @@ import Icon from '_components/icon/Icon';
 import * as icons from '_media/instrument-id/_icons/iconImports';
 import * as sounds from '_media/instrument-id/_sounds/soundImports';
 
-const iconStyle = { margin: '0 20px' }
+const iconStyle = { margin: '0 20px' };
 
-const brass = <Icon icon={icons.brass} text="BRASS" size='100px' otherImgStyles={iconStyle} />
-const silver = <Icon icon={icons.silver} text="SILVER" size='100px' otherImgStyles={iconStyle} />
-const wood = <Icon icon={icons.wood} text="WOOD" size='100px' otherImgStyles={iconStyle} />
-const leather = <Icon icon={icons.leather} text="LEATHER" size='100px' otherImgStyles={iconStyle} />
+const brass = <Icon icon={icons.brass} text="BRASS" size='100px' otherImgStyles={iconStyle} />;
+const silver = <Icon icon={icons.silver} text="SILVER" size='100px' otherImgStyles={iconStyle} />;
+const wood = <Icon icon={icons.wood} text="WOOD" size='100px' otherImgStyles={iconStyle} />;
+const leather = <Icon icon={icons.leather} text="LEATHER" size='100px' otherImgStyles={iconStyle} />;
 
 const learnInstrumentOptions = {
   brass: {
