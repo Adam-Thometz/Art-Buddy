@@ -1,7 +1,7 @@
 import LETTER_NOTES from "_data/music-decoder/letterNotes";
 
 /** convertLettersToNotes
- * Purpose: takes the input and filledLetters object, converts the letters to notes using the LETTERS_NOTES object, and returns an array of notes to play and an array of notes to toggle
+ * Purpose: takes an array of words from user input and filledLetters object, converts the letters to notes using the LETTERS_NOTES object, and returns an object containing array of notes to play and an array of letters to toggle
  * Found in: DecoderControls.js
  */
 

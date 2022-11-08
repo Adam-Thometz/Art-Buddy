@@ -1,6 +1,6 @@
 /** LETTER_NOTES
  * Purpose: an object that maps letters to different pitches
- * Found in: wordToMusicDecoderReducer.js, AlphabetTable.js
+ * Found in: wordToMusicDecoderReducer.js, AlphabetTable.js, converLettersToNotes.js
  */
 
 const LETTER_NOTES = {
