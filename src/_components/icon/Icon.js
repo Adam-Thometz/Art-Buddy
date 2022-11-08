@@ -24,7 +24,7 @@ const Icon = ({
   };
 
   return (
-    <figure className="Icon" onClick={onClick} id={id ? id : null}>
+    <figure className="Icon" onClick={onClick} id={id}>
       <img style={imgStyles} src={icon} alt="" />
       <figcaption className="Icon-text" style={textStyles}>{text}</figcaption>
     </figure>
