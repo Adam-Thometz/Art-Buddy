@@ -7,13 +7,13 @@ import './DecoderControls.css';
 
 import Dropdown from '_components/dropdown/Dropdown';
 import Button from '_components/button/Button';
+import Toggle from '_components/toggle/Toggle';
 
 import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';
 import play from '_helpers/music-decoder/play';
 import createSound from '_helpers/music-decoder/createSound';
 import convertLettersToNotes from '_helpers/music-decoder/convertLettersToNotes';
-import Toggle from '_components/toggle/Toggle';
 
 const DecoderControls = () => {
   const {
