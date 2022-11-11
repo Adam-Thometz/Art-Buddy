@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FreePaint component matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      FREE PAINT
+    </h1>
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </header>
+  <section
+    class="ControlBar"
+  >
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="upperCase"
+        style="border-color: #17255a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+      >
+        ABC
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="lowerCase"
+        style="border-color: #89eb0a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+      >
+        abc
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="numbers"
+        style="border-color: #ffe81a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+      >
+        123
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="shapes"
+        style="border-color: #fd4d3a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+      >
+        <img
+          alt="Shapes"
+          class="ControlBar-shape-button"
+          src="file"
+        />
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="colors"
+        style="border-color: #000000; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%; color: rgb(0, 0, 0);"
+      >
+        <figure
+          class="Icon"
+          id="colors"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            Pencil
+          </figcaption>
+        </figure>
+      </button>
+    </div>
+    <button
+      class="Button regular"
+      style="width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+    >
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 45px; width: 45px;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
+        >
+          Eraser
+        </figcaption>
+      </figure>
+    </button>
+  </section>
+</DocumentFragment>
+`;
