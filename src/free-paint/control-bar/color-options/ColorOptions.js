@@ -5,12 +5,15 @@ import { setColor } from '_redux/free-paint/freePaintActions';
 
 import './ColorOptions.css';
 
-import paintColors from '_data/free-paint/colorsToFilter';
+import paintColors from '_data/free-paint/colors';
 
 const ColorOptions = () => {
   const dispatch = useDispatch();
 
-  const handleChangeColor = e => dispatch(setColor(e.target.id));
+  const handleChangeColor = e => {
+    console.log(e.target.id);
+    dispatch(setColor(e.target.id));
+  }
 
   return (
     <div className='ColorOptions'>

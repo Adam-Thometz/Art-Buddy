@@ -12,7 +12,7 @@ import ColorOptions from './color-options/ColorOptions';
 import square from '_media/free-paint/shapes/square.png';
 import pencil from '_media/free-paint/pencil.png';
 import eraser from '_media/free-paint/eraser.png';
-import { colorsToFilter } from '_data/free-paint/colorsToFilter';
+import { colorsToFilter } from '_data/free-paint/colors';
 
 const ControlBar = () => {
   const [shownOptions, setShownOptions] = useState(null);
@@ -56,7 +56,7 @@ const ControlBar = () => {
         {shownOptions === 'shapes' ? <StencilOptions id='shapes' /> : null}
       </div>
       <div className='ControlBar-button-wrapper'>
-        <Button id='colors' otherStyles={buttonStyle} onClick={handleSetShownOptions}>
+        <Button id='colors' otherStyles={{ ...buttonStyle, borderColor: color }} onClick={handleSetShownOptions}>
           <Icon id='colors' size='45px' text="Pencil" icon={pencil} otherImgStyles={pencilColor} onClick={handleSetShownOptions} />
         </Button>
         {shownOptions === 'colors' ? <ColorOptions /> : null}
