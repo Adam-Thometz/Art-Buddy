@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StencilOptions component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="StencilOptions"
+    data-testid="stencilOptions-numbers"
+  >
+    <span
+      class="StencilOptions-option"
+    >
+      0
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      1
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      2
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      3
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      4
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      5
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      6
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      7
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      8
+    </span>
+    <span
+      class="StencilOptions-option"
+    >
+      9
+    </span>
+  </div>
+</DocumentFragment>
+`;

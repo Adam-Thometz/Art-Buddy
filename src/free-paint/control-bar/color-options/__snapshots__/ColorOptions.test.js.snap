@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorOptions component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ColorOptions"
+  >
+    <div
+      class="ColorOptions-option"
+      id="#000000"
+      style="background-color: rgb(0, 0, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#FF69B4"
+      style="background-color: rgb(255, 105, 180);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#FF0000"
+      style="background-color: rgb(255, 0, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#FFA500"
+      style="background-color: rgb(255, 165, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#FFFF00"
+      style="background-color: rgb(255, 255, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#00FF00"
+      style="background-color: rgb(0, 255, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#0000FF"
+      style="background-color: rgb(0, 0, 255);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#A020F0"
+      style="background-color: rgb(160, 32, 240);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#964B00"
+      style="background-color: rgb(150, 75, 0);"
+    />
+    <div
+      class="ColorOptions-option"
+      id="#808080"
+      style="background-color: rgb(128, 128, 128);"
+    />
+  </div>
+</DocumentFragment>
+`;
