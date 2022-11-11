@@ -2,7 +2,7 @@ import { setColor, setDisplay } from "./freePaintActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
-  color: "#FFFFFF",
+  color: "#000000",
   display: null
 };
 
