@@ -9,15 +9,14 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import Stencil from "./Stencil";
 
 describe('Stencil component', () => {
+  const store = configureStore({ reducer: { freePaint: freePaintReducer } });
+  store.dispatch(setDisplay('A'));
+
   it('renders without crashing', () => {
-    renderWithProvider(<Stencil />);
+    renderWithProvider(<Stencil />, { store });
   });
 
   it('matches snapshot', () => {
-    const store = configureStore({
-      reducer: { freePaint: freePaintReducer }
-    })
-    store.dispatch(setDisplay('A'));
     const { asFragment } = renderWithProvider(<Stencil />, { store });
     expect(asFragment()).toMatchSnapshot();
   });
