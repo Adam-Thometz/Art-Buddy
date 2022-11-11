@@ -2,7 +2,6 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-// import renderWithRouter from './renderWithRouter';
 import rootReducer from '_redux/rootReducer';
 
 function withProvider({ children, store, initialRoutes }) {
