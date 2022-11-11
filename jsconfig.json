@@ -1,3 +1,4 @@
+// Used for relative imports
 {
   "compilerOptions": {
     "baseUrl": "src"
