@@ -1,29 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import './ControlBar.css';
 
 import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';
+import StencilOptions from './stencil-options/StencilOptions';
+import ColorOptions from './color-options/ColorOptions';
 
 import square from '_media/free-paint/shapes/square.png';
 import pencil from '_media/free-paint/pencil.png';
 import eraser from '_media/free-paint/eraser.png';
-import options from '_data/free-paint/freePaintOptions';
-import colorsToFilter from '_data/free-paint/colorsToFilter';
+import { colorsToFilter } from '_data/free-paint/colorsToFilter';
 
-const Options = () => {
-  const { color, display } = useSelector(state => state.freePaint);
-  const dispatch = useDispatch();
+const ControlBar = () => {
+  const [shownOptions, setShownOptions] = useState(null);
+  const { color } = useSelector(state => state.freePaint);
 
-  const handleChangeColor = e => {
-
-  }
-  
-  const handleChangeDisplay = e => {
-
-  }
+  const handleSetShownOptions = e => {
+    const { tagName, id, parentElement } = e.target;
+    const currId = tagName === 'BUTTON' ? id : parentElement.id;
+    setShownOptions(currId === shownOptions ? null : currId);
+  };
 
   const buttonStyle = {
     width: '105px',
@@ -37,40 +36,36 @@ const Options = () => {
 
   return (
     <section className='ControlBar'>
+      {/* <ButtonWrapper id='uppercase' colorId={4}  /> */}
       <div className='ControlBar-button-wrapper'>
-        <Button otherStyles={buttonStyle} colorId={4}>ABC</Button>
-        <div className='ControlBar-options'>
-          {options.upperCase.map(o => <span className='ControlBar-option'>{o}</span>)}
-        </div>
+        <Button id='upperCase' otherStyles={buttonStyle} colorId={4} onClick={handleSetShownOptions}>ABC</Button>
+        {shownOptions === 'upperCase' ? <StencilOptions id='upperCase' /> : null}
       </div>
       <div className='ControlBar-button-wrapper'>
-        <Button otherStyles={buttonStyle} colorId={0}>abc</Button>
-        <div className='ControlBar-options'>
-          {options.lowerCase.map(o => <span className='ControlBar-option'>{o}</span>)}
-        </div>
+        <Button id='lowerCase' otherStyles={buttonStyle} colorId={0} onClick={handleSetShownOptions}>abc</Button>
+        {shownOptions === 'lowerCase' ? <StencilOptions id='lowerCase' /> : null}
       </div>
       <div className='ControlBar-button-wrapper'>
-        <Button otherStyles={buttonStyle} colorId={1}>123</Button>
-        <div className='ControlBar-options'>
-          {options.numbers.map(o => <span className='ControlBar-option'>{o}</span>)}
-        </div>
+        <Button id='numbers' otherStyles={buttonStyle} colorId={1} onClick={handleSetShownOptions}>123</Button>
+        {shownOptions === 'numbers' ? <StencilOptions id='numbers' /> : null}
       </div>
       <div className='ControlBar-button-wrapper'>
-        <Button otherStyles={buttonStyle} colorId={2}><img
-          className='ControlBar-shape-button'
-          src={square}
-          alt="Shapes"
-        /></Button>
-        <div className='ControlBar-options'>
-          {options.shapes.map(o => <img className='ControlBar-option' src={o[0]} alt={o[1]} />)}
-        </div>
+        <Button id='shapes' otherStyles={buttonStyle} colorId={2} onClick={handleSetShownOptions}>
+          <img className='ControlBar-shape-button' src={square} alt="Shapes"/>
+        </Button>
+        {shownOptions === 'shapes' ? <StencilOptions id='shapes' /> : null}
       </div>
-      <Button 
-        otherStyles={buttonStyle}
-      ><Icon size='45px' text="Pencil" icon={pencil} otherImgStyles={pencilColor} /></Button>
-      <Button otherStyles={buttonStyle}><Icon size='45px' text="Eraser" icon={eraser} /></Button>
+      <div className='ControlBar-button-wrapper'>
+        <Button id='colors' otherStyles={buttonStyle} onClick={handleSetShownOptions}>
+          <Icon id='colors' size='45px' text="Pencil" icon={pencil} otherImgStyles={pencilColor} onClick={handleSetShownOptions} />
+        </Button>
+        {shownOptions === 'colors' ? <ColorOptions /> : null}
+      </div>
+      <Button otherStyles={buttonStyle}>
+        <Icon size='45px' text="Eraser" icon={eraser} />
+      </Button>
     </section>
   );
 };
 
-export default Options;
+export default ControlBar;

@@ -1,10 +1,33 @@
-const colorsToFilter = new Map([
+const paintColors = [
+  // black
+  '#000000',
+  // pink
+  '#FF69B4',
+  // red
+  '#FF0000',
+  // orange
+  '#FFA500',
+  // yellow
+  '#FFFF00',
+  // green
+  '#00FF00',
+  // blue
+  '#0000FF',
+  // purple
+  '#A020F0',
+  // brown
+  '#964B00',
+  // grey
+  '#808080',
+]
+
+export const colorsToFilter = new Map([
   // black
   ['#000000', 'invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%)'],
   // pink
   ['#FF69B4', "invert(69%) sepia(45%) saturate(4705%) hue-rotate(296deg) brightness(103%) contrast(101%)"],
   // red
-  ['#FF69B4', "invert(69%) sepia(45%) saturate(4705%) hue-rotate(296deg) brightness(103%) contrast(101%)"],
+  ['#FF0000', "invert(13%) sepia(98%) saturate(6803%) hue-rotate(5deg) brightness(102%) contrast(116%);"],
   // orange
   ['#FFA500', "invert(67%) sepia(37%) saturate(3043%) hue-rotate(359deg) brightness(101%) contrast(107%)"],
   // yellow
@@ -21,4 +44,4 @@ const colorsToFilter = new Map([
   ['#808080', "invert(56%) sepia(0%) saturate(0%) hue-rotate(19deg) brightness(91%) contrast(92%)"]
 ]);
 
-export default colorsToFilter;
+export default paintColors;
