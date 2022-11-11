@@ -18,7 +18,7 @@ const StencilOptions = ({ id }) => {
   };
 
   return (
-    <div className='StencilOptions' data-testId={`stencilOptions-${id}`}>
+    <div className='StencilOptions' data-testid={`stencilOptions-${id}`}>
       {options[id].map(o => id === 'shapes'
         ? <img onClick={handleChangeDisplay} className='StencilOptions-option' src={o[0]} alt={o[1]} />
         : <span onClick={handleChangeDisplay} className='StencilOptions-option'>{o}</span>)}
