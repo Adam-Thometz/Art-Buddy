@@ -18,6 +18,7 @@
   color: white;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #000000;
+  /* To be used for scaling */
   /* -webkit-transform:scale(2,1); Safari and Chrome */
   /* -moz-transform:scale(2,1); Firefox */
   /* -ms-transform:scale(2,1); IE 9 */
