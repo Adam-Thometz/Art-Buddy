@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Popup.css';
 
-import close from './close.png';
+import close from '_media/general-icons/close.png';
 
 const Popup = ({ title, trigger, triggerClass, popup }) => {
   const [isShowingPopup, setIsShowingPopup] = useState(false);
