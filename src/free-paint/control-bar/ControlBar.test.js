@@ -44,5 +44,6 @@ describe('ControlBar component', () => {
     userEvent.click(red);
     const style = window.getComputedStyle(pencilBtn);
     expect(style.color).toBe('rgb(255, 0, 0)')
+    expect(style.borderColor).toBe('#ff0000')
   })
 });
