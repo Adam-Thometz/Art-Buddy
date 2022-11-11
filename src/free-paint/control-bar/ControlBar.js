@@ -29,7 +29,7 @@ const ControlBar = () => {
     height: '90px',
     borderWidth: '6px',
     margin: '2px',
-    padding: '3%'
+    padding: '3%',
   };
 
   const pencilColor = { filter: colorsToFilter.get(color) };
@@ -56,7 +56,7 @@ const ControlBar = () => {
         {shownOptions === 'shapes' ? <StencilOptions id='shapes' /> : null}
       </div>
       <div className='ControlBar-button-wrapper'>
-        <Button id='colors' otherStyles={{ ...buttonStyle, borderColor: color }} onClick={handleSetShownOptions}>
+        <Button id='colors' otherStyles={{ ...buttonStyle, borderColor: color, color }} onClick={handleSetShownOptions}>
           <Icon id='colors' size='45px' text="Pencil" icon={pencil} otherImgStyles={pencilColor} onClick={handleSetShownOptions} />
         </Button>
         {shownOptions === 'colors' ? <ColorOptions /> : null}
