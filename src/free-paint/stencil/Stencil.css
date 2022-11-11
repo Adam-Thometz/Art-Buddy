@@ -25,7 +25,16 @@
   /* transform:scale(2,1); W3C */
 }
 
-.Stencil img {
+.Stencil-clear {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.Stencil-shape {
   height: 80%;
   width: 80%;
 }
