@@ -14,8 +14,14 @@ const ColorOptions = () => {
 
   return (
     <div className='ColorOptions'>
-      {paintColors.map(backgroundColor => (
-        <div className='ColorOptions-option' id={backgroundColor} style={{ backgroundColor }} onClick={handleChangeColor}></div>
+      {paintColors.map(color => (
+        <div
+          className='ColorOptions-option'
+          data-testid={`color-option-${color}`}
+          id={color}
+          style={{ backgroundColor: color }}
+          onClick={handleChangeColor}
+        ></div>
       ))}
     </div>
   );
