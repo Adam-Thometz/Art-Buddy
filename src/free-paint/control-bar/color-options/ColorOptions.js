@@ -10,10 +10,7 @@ import paintColors from '_data/free-paint/colors';
 const ColorOptions = () => {
   const dispatch = useDispatch();
 
-  const handleChangeColor = e => {
-    console.log(e.target.id);
-    dispatch(setColor(e.target.id));
-  }
+  const handleChangeColor = e => dispatch(setColor(e.target.id));
 
   return (
     <div className='ColorOptions'>
