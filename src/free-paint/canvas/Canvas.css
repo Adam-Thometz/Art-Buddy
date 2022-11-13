@@ -1,0 +1,10 @@
+.Canvas {
+  position: absolute;
+  top: 10%;
+  left: 175px;
+  height: 85%;
+  width: 85%;
+  cursor: auto;
+  background-color: #00000000;
+  z-index: 4;
+}

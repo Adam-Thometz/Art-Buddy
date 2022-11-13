@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canvas component matches snapshot 1`] = `
+<DocumentFragment>
+  <canvas
+    class="Canvas"
+    height="0"
+    style="width: 85%; height: 85%;"
+    width="0"
+  />
+</DocumentFragment>
+`;

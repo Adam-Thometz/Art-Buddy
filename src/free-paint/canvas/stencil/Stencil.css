@@ -1,0 +1,43 @@
+.Stencil {
+  position: absolute;
+  background-color: #F8F8F8;
+  top: 12%;
+  right: 6%;
+  border: 1px solid #000000;
+  border-radius: 10%;
+  width: 40%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.Stencil-text {
+  font-family: Arial;
+  font-size: 35rem;
+  color: white;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #000000;
+  /* To be used for scaling */
+  /* -webkit-transform: scale(2,1); Safari and Chrome */
+  /* -moz-transform: scale(2,1); Firefox */
+  /* -ms-transform: scale(2,1); IE 9 */
+  /* -o-transform: scale(2,1); Opera */
+  /* transform: scale(2,1); W3C */
+}
+
+.Stencil-clear {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.Stencil-shape {
+  height: 80%;
+  width: 80%;
+}
