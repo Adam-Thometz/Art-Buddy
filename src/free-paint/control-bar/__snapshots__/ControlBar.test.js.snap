@@ -11,7 +11,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       <button
         class="Button regular"
         id="upperCase"
-        style="border-color: #17255a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+        style="border-color: #17255a;"
       >
         ABC
       </button>
@@ -22,7 +22,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       <button
         class="Button regular"
         id="lowerCase"
-        style="border-color: #89eb0a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+        style="border-color: #89eb0a;"
       >
         abc
       </button>
@@ -33,7 +33,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       <button
         class="Button regular"
         id="numbers"
-        style="border-color: #ffe81a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+        style="border-color: #ffe81a;"
       >
         123
       </button>
@@ -44,7 +44,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       <button
         class="Button regular"
         id="shapes"
-        style="border-color: #fd4d3a; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+        style="border-color: #fd4d3a;"
       >
         <img
           alt="Shapes"
@@ -59,7 +59,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       <button
         class="Button regular"
         id="colors"
-        style="border-color: #000000; width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%; color: rgb(0, 0, 0);"
+        style="border-color: #000000; color: rgb(0, 0, 0);"
       >
         <figure
           class="Icon"
@@ -79,26 +79,29 @@ exports[`ControlBar component matches snapshot 1`] = `
         </figure>
       </button>
     </div>
-    <button
-      class="Button regular"
-      style="width: 105px; height: 90px; border-width: 6px; margin: 2px; padding: 3%;"
+    <div
+      class="ControlBar-button-wrapper"
     >
-      <figure
-        class="Icon"
+      <button
+        class="Button regular"
       >
-        <img
-          alt=""
-          src="file"
-          style="height: 45px; width: 45px;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1rem;"
+        <figure
+          class="Icon"
         >
-          Eraser
-        </figcaption>
-      </figure>
-    </button>
+          <img
+            alt=""
+            src="file"
+            style="height: 45px; width: 45px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            Eraser
+          </figcaption>
+        </figure>
+      </button>
+    </div>
   </section>
 </DocumentFragment>
 `;
