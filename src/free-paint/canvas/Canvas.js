@@ -30,14 +30,11 @@ const Canvas = () => {
   }, [color]);
 
   useEffect(() => {
-    console.log('inside use effect');
     const context = canvasRef.current.getContext('2d');
     if (isErasing) {
-      console.log('is erasing');
       context.globalCompositeOperation = 'destination-out';
       context.strokeStyle = 'rgba(255,255,255,1)';
     } else {
-      console.log('is not erasing');
       context.globalCompositeOperation = 'source-over';
       context.strokeStyle = color;
     }
