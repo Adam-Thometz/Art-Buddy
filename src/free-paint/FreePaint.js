@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useLocalStorage from '_hooks/useLocalStorage';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { clearGame } from '_redux/free-paint/freePaintActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 import ControlBar from './control-bar/ControlBar';
-import Stencil from './stencil/Stencil';
+import Canvas from './canvas/Canvas';
+import Stencil from './canvas/stencil/Stencil';
 
 import activities from '_data/menu/activityList';
 
 const FreePaint = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited-fp');
+  const { display } = useSelector(state => state.freePaint);
   const gameInfo = activities.find(game => game.name === 'FREE PAINT');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => dispatch(clearGame())
+  }, [dispatch]);
+
   return (
     <>
       <WindowNavbar page={gameInfo.name} />
       {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <>
         <ControlBar />
-        <Stencil />
+        <Canvas />
+        {display ? <Stencil /> : null}
       </>}
     </>
   );
