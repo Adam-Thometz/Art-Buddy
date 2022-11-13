@@ -8,9 +8,10 @@ import NoteDisplay from './note-display/NoteDisplay';
 import NoteOptions from './note-options/NoteOptions';
 
 import activities from '_data/menu/activityList';
+import { visitedJIR } from '_data/_utils/localStorageKeys';
 
 const JumpIntoRhythm = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage('visited-jir');
+  const [hasVisited, setHasVisited] = useLocalStorage(visitedJIR);
   const gameInfo = activities.find(game => game.name === 'JUMP INTO RHYTHM');
   return (
     <>

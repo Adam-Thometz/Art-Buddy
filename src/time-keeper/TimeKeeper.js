@@ -5,9 +5,10 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 
 import activities from '_data/menu/activityList';
+import { visitedTK } from '_data/_utils/localStorageKeys';
 
 const TimeKeeper = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage('visited-tk');
+  const [hasVisited, setHasVisited] = useLocalStorage(visitedTK);
   const gameInfo = activities.find(game => game.name === 'TIME KEEPER');
   return (
     <>

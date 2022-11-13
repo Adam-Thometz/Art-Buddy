@@ -12,9 +12,10 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from '_helpers/music-decoder/createSound';
 import activities from '_data/menu/activityList';
+import { visitedWTM } from '_data/_utils/localStorageKeys';
 
 const WordToMusic = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage('visited-wtm');
+  const [hasVisited, setHasVisited] = useLocalStorage(visitedWTM);
   const { scale, sound } = useSelector(state => state.musicDecoder);
   const { volume } = useSelector(state => state.mainSettings);
   const gameInfo = activities.find(game => game.name === 'WORD-TO-MUSIC DECODER');

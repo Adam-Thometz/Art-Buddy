@@ -9,9 +9,10 @@ import Students from './students/Students';
 
 import activities from '_data/menu/activityList';
 import Instructions from '_components/instructions/Instructions';
+import { visitedSK } from '_data/_utils/localStorageKeys';
 
 const ScoreKeeper = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage('visited-sk');
+  const [hasVisited, setHasVisited] = useLocalStorage(visitedSK);
   const { roster } = useSelector(state => state.mainSettings);
   const gameInfo = activities.find(game => game.name === 'SCORE KEEPER');
   const dispatch = useDispatch();
