@@ -1,3 +1,6 @@
+// visited state for entire app
+export const visited = 'visited';
+
 // visited state for Word-To-Music Decoder
 export const visitedWTM = 'visited-wtm';
 // visited state for Jump Into Rhythm
