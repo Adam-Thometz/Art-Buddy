@@ -4,7 +4,7 @@
   padding-left: 50px;
   transform: translateX(-50px);
   box-shadow: 0 5px 5px rgb(177, 177, 177);
-  z-index: 4;
+  z-index: 5;
   height: 90px;
   display: flex;
   align-items: center;
