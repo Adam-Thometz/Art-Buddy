@@ -52,13 +52,13 @@ describe('SongMaker component', () => {
     const saveBtn = screen.getAllByText('SAVE')[0];
     userEvent.click(saveBtn);
     expect(screen.getByText('SAVE SONG')).toBeInTheDocument();
-
+    
     const input = screen.getByLabelText('Song Title');
     userEvent.type(input, 'Regular Baby');
     const submit = screen.getAllByText('SAVE')[1];
     userEvent.click(submit);
     expect(screen.getByText('Song Saved!')).toBeInTheDocument();
-
+    
     const close = screen.getByText('CLOSE');
     userEvent.click(close);
     const savedSongs = screen.getByText('SAVED SONGS');
