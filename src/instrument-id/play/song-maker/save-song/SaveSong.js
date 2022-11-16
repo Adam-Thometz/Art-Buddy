@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useLocalStorage from '_hooks/useLocalStorage';
+import useSavedSongs from '_hooks/useSavedSongs';
 import useFormFields from '_hooks/useFormFields';
 
 import { useSelector } from 'react-redux';
@@ -10,8 +10,8 @@ import Button from '_components/button/Button';
 import Keyboard from '_components/keyboard/Keyboard';
 
 const SaveSong = () => {
-  const song = useSelector(state => state.instrumentId.song);
-  const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');
+  const { song } = useSelector(state => state.instrumentId);
+  const [savedSongs, setSavedSongs] = useSavedSongs();
   const [input, setInput, resetInput] = useFormFields({ title: '' });
   const inputRef = useRef();
   const savedRef = useRef();
@@ -19,10 +19,10 @@ const SaveSong = () => {
   const handleSave = e => {
     e.preventDefault();
     const title = inputRef.current.value;
-    const newSavedSongs = new Map(JSON.parse(savedSongs));
+    const newSavedSongs = new Map(savedSongs.entries());
     newSavedSongs.set(title, song);
 
-    setSavedSongs(Array.from(newSavedSongs.entries()));
+    setSavedSongs(newSavedSongs);
     savedRef.current.textContent = 'Song Saved!';
     resetInput();
 

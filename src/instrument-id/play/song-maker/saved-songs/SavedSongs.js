@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import useLocalStorage from '_hooks/useLocalStorage';
+import useSavedSongs from '_hooks/useSavedSongs';
+// import useLocalStorage from '_hooks/useLocalStorage';
 
 import { useSelector } from 'react-redux';
 
@@ -13,14 +14,13 @@ import { play } from '_helpers/instrument-id/play';
 
 const SavedSongs = () => {
   const { volume } = useSelector(state => state.mainSettings);
-  const [savedSongs, setSavedSongs] = useLocalStorage('instrument-id-saved-songs');
+  const [savedSongs, setSavedSongs] = useSavedSongs();
   const [selectedSong, setSelectedSong] = useState(null);
-  const songs = new Map(JSON.parse(savedSongs));
 
   const handleSelect = e => {
     const songName = e.target.innerText;
     setSelectedSong(songName);
-    const song = songs.get(songName);
+    const song = savedSongs.get(songName);
     for (let instrument of song) {
       if (!instrument) continue;
       createBuffers(instrument.instrumentId);
@@ -29,7 +29,7 @@ const SavedSongs = () => {
 
   const handlePlay = () => {
     if (!selectedSong) return;
-    const song = songs.get(selectedSong);
+    const song = savedSongs.get(selectedSong);
     for (let instrument of song) {
       if (!instrument) continue;
 
@@ -43,11 +43,13 @@ const SavedSongs = () => {
 
   const handleDelete = () => {
     if (!selectedSong) return;
-    songs.delete(selectedSong);
-    setSavedSongs(JSON.stringify(Array.from(songs.entries())));
+    savedSongs.delete(selectedSong);
+    setSavedSongs(JSON.stringify(Array.from(savedSongs.entries())));
   };
 
-  const songDisplay = Array.from(songs.keys()).map(key => (
+  
+
+  const songDisplay = Array.from(savedSongs.keys()).map(key => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
   ));
 
