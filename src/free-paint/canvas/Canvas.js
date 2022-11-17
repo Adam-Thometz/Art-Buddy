@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setDisplay } from '_redux/free-paint/freePaintActions';
 
 import './Canvas.css';
 
 const Canvas = () => {
   const { color, isErasing } = useSelector(state => state.freePaint);
+  const dispatch = useDispatch();
   const [isDrawing, setIsDrawing] = useState(false)
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -59,6 +61,13 @@ const Canvas = () => {
     contextRef.current.stroke();
   };
 
+  const handleClearCanvas = () => {
+    const canvas = canvasRef.current
+    const context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  const handleClearStencil = () => dispatch(setDisplay(null));
+
   return (
     <>
       <canvas
@@ -68,6 +77,10 @@ const Canvas = () => {
         onMouseMove={draw}
         ref={canvasRef}
       />
+      <div className='Canvas-bottom-options'>
+        <span onClick={handleClearCanvas}>clear canvas</span>
+        <span onClick={handleClearStencil}>clear stencil</span>
+      </div>
     </>
   );
 };
