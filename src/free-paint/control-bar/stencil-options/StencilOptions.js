@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { setDisplay } from '_redux/free-paint/freePaintActions';
+import { setStencil } from '_redux/free-paint/freePaintActions';
 
 import './StencilOptions.css';
 
@@ -11,7 +11,7 @@ const StencilOptions = ({ id }) => {
   const dispatch = useDispatch();
 
   const handleChangeDisplay = e => {
-    dispatch(setDisplay(id === 'shapes'
+    dispatch(setStencil(id === 'shapes'
       ? e.target.src
       : e.target.textContent
     ));

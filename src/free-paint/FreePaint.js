@@ -14,7 +14,7 @@ import activities from '_data/menu/activityList';
 
 const FreePaint = () => {
   const [hasVisited, setHasVisited] = useLocalStorage('visited-fp');
-  const { display } = useSelector(state => state.freePaint);
+  const { stencil } = useSelector(state => state.freePaint);
   const gameInfo = activities.find(game => game.name === 'FREE PAINT');
   const dispatch = useDispatch();
 
@@ -28,7 +28,7 @@ const FreePaint = () => {
       {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <>
         <ControlBar />
         <Canvas />
-        {display ? <Stencil /> : null}
+        {stencil ? <Stencil /> : null}
       </>}
     </>
   );

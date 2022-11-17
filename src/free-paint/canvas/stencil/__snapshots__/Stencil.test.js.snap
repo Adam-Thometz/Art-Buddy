@@ -5,12 +5,6 @@ exports[`Stencil component matches snapshot 1`] = `
   <div
     class="Stencil"
   >
-    <img
-      alt=""
-      aria-label="Clear the stencil"
-      class="Stencil-clear"
-      src="file"
-    />
     <span
       class="Stencil-text"
     >

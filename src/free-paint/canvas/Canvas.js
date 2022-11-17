@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setDisplay } from '_redux/free-paint/freePaintActions';
+import { setStencil } from '_redux/free-paint/freePaintActions';
 
 import './Canvas.css';
 
@@ -66,7 +66,7 @@ const Canvas = () => {
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
   }
-  const handleClearStencil = () => dispatch(setDisplay(null));
+  const handleClearStencil = () => dispatch(setStencil(null));
 
   return (
     <>

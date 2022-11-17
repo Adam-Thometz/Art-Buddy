@@ -1,6 +1,6 @@
 import freePaintReducer, { INITIAL_STATE } from "./freePaintReducer";
 
-import { setColor, setDisplay, setIsErasing, clearGame } from "./freePaintActions";
+import { setColor, setStencil, setIsErasing, clearGame } from "./freePaintActions";
 
 describe("Free Paint reducer", () => {
   it('should return the initial state', () => {
@@ -13,8 +13,8 @@ describe("Free Paint reducer", () => {
   });
   
   it('should change the display icon', () => {
-    const result = freePaintReducer(undefined, setDisplay('A'));
-    expect(result.display).toBe('A');
+    const result = freePaintReducer(undefined, setStencil('A'));
+    expect(result.stencil).toBe('A');
   });
 
   it('should change the erasing state', () => {
