@@ -123,5 +123,15 @@ exports[`FreePaint component matches snapshot 1`] = `
     style="width: 85%; height: 85%;"
     width="0"
   />
+  <div
+    class="Canvas-bottom-options"
+  >
+    <span>
+      clear canvas
+    </span>
+    <span>
+      clear stencil
+    </span>
+  </div>
 </DocumentFragment>
 `;
