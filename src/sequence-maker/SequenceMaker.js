@@ -13,7 +13,7 @@ import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 import { SM } from "_data/_utils/localStorageKeys";
 import { changeCurrGame } from "_redux/settings/mainSettingsActions";
-import activities from "_data/menu/activityList";
+import activities from "_data/_activities/activityList";
 
 const SequenceMaker = () => {
   const { currGame } = useSelector(state => state.mainSettings)

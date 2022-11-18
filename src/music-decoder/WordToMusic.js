@@ -13,7 +13,7 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import createSound from '_helpers/music-decoder/createSound';
 import { WTM } from '_data/_utils/localStorageKeys';
 import { changeCurrGame } from '_redux/settings/mainSettingsActions';
-import activities from '_data/menu/activityList';
+import activities from '_data/_activities/activityList';
 
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useVisited(WTM);

@@ -1,7 +1,7 @@
 import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./mainSettingsReducer";
 import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 
-import activities from '_data/menu/activityList';
+import activities from '_data/_activities/activityList';
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
