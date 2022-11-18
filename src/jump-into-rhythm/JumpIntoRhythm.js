@@ -20,6 +20,9 @@ const JumpIntoRhythm = () => {
   useEffect(() => {
     const game = activities.find(a => a.name === 'JUMP INTO RHYTHM');
     dispatch(changeCurrGame(game));
+    return () => {
+      dispatch(changeCurrGame({}));
+    }
   }, [dispatch]);
 
   const [hasVisited, setHasVisited] = useVisited(JIR);

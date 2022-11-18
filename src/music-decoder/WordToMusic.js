@@ -30,6 +30,7 @@ const WordToMusic = () => {
     dispatch(changeCurrGame(game));
     return () => {
       dispatch(clearGame());
+      dispatch(changeCurrGame({}));
       delete window.wordToMusicSound;
     };
   }, [dispatch]);
