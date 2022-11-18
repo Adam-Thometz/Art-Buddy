@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import './Students.css';
 
-import Student from "./Student";
+import Student from "./student/Student";
 
 const Students = () => {
   const { students } = useSelector(state => state.scoreKeeper);

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Student component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Student"
+  >
+    <p
+      class="Student-name"
+    >
+      Eddie
+    </p>
+    <div
+      class="Student-point-control"
+    >
+      <img
+        alt="add"
+        src="file"
+      />
+      <p
+        class="Student-points"
+      >
+        0
+      </p>
+      <img
+        alt="minus"
+        src="file"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
