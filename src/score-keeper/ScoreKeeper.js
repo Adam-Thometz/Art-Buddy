@@ -18,7 +18,7 @@ const ScoreKeeper = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (roster.students) dispatch(loadStudents(roster.students));
+    dispatch(loadStudents(roster.students));
   }, [dispatch, roster]);
 
   useEffect(() => {

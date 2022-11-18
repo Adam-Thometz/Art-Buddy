@@ -11,9 +11,7 @@ const Students = () => {
 
   return (
     <div className="Students">
-      {!students.length ? (
-        <p className="Students-warning">Load students by picking a roster in Settings (or creating one if you haven't)</p>
-      ) : students.map((s) => <Student key={s.name} name={s.name} points={s.points} />)}
+      {students.map(s => <Student key={s.name} name={s.name} points={s.points} />)}
     </div>
   );
 };
