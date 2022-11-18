@@ -1,5 +1,5 @@
 import React from 'react';
-import useLocalStorage from '_hooks/useLocalStorage';
+import useVisited from '_hooks/useVisited';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
@@ -8,10 +8,10 @@ import NoteDisplay from './note-display/NoteDisplay';
 import NoteOptions from './note-options/NoteOptions';
 
 import activities from '_data/menu/activityList';
-import { visitedJIR } from '_data/_utils/localStorageKeys';
+import { JIR } from '_data/_utils/localStorageKeys';
 
 const JumpIntoRhythm = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage(visitedJIR);
+  const [hasVisited, setHasVisited] = useVisited(JIR);
   const gameInfo = activities.find(game => game.name === 'JUMP INTO RHYTHM');
   return (
     <>

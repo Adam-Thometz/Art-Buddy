@@ -4,8 +4,10 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 
 import JumpIntoRhythm from "./JumpIntoRhythm";
 
+import { JIR } from '_data/_utils/localStorageKeys';
+
 describe('JumpIntoRhythm component', () => {
-  window.localStorage.setItem('visited-jir', true);
+  window.localStorage.setItem(`visited-${JIR}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<JumpIntoRhythm />);
   });

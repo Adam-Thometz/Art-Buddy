@@ -1,14 +1,14 @@
 import React from 'react';
-import useLocalStorage from '_hooks/useLocalStorage';
+import useVisited from '_hooks/useVisited';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 
 import activities from '_data/menu/activityList';
-import { visitedTK } from '_data/_utils/localStorageKeys';
+import { TK } from '_data/_utils/localStorageKeys';
 
 const TimeKeeper = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage(visitedTK);
+  const [hasVisited, setHasVisited] = useVisited(TK);
   const gameInfo = activities.find(game => game.name === 'TIME KEEPER');
   return (
     <>

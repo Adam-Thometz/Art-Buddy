@@ -4,8 +4,10 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 
 import ScoreKeeper from "./ScoreKeeper";
 
+import { SK } from '_data/_utils/localStorageKeys';
+
 describe('Score Keeper', () => {
-  window.localStorage.setItem('visited-sk', true);
+  window.localStorage.setItem(`visited-${SK}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<ScoreKeeper />);
   });

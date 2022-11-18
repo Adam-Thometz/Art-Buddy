@@ -1,13 +1,11 @@
 import React from "react";
-import useLocalStorage from "_hooks/useLocalStorage";
+import useVisited from "_hooks/useVisited";
 
 import Welcome from "./welcome/Welcome";
 import Menu from "./menu/Menu";
 
-import { visited } from "_data/_utils/localStorageKeys";
-
 const Home = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage(visited);
+  const [hasVisited, setHasVisited] = useVisited();
   return !hasVisited ? <Welcome setHasVisited={setHasVisited} /> : <Menu />
 };
 

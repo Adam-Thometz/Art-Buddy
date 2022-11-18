@@ -6,6 +6,8 @@ import userEvent from "@testing-library/user-event";
 
 import SequenceMaker from './SequenceMaker';
 
+import { SM } from '_data/_utils/localStorageKeys';
+
 jest.mock('_helpers/sequence-maker/createBuffer');
 
 function setupChoices() {
@@ -16,7 +18,7 @@ function setupChoices() {
 };
 
 describe('SequenceMaker component', () => {
-  window.localStorage.setItem('visited-sm', true);
+  window.localStorage.setItem(`visited-${SM}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<SequenceMaker />);
   });

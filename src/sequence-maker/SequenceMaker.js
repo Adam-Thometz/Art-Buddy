@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useLocalStorage from "_hooks/useLocalStorage";
+import useVisited from "_hooks/useVisited";
 
 import { useDispatch } from "react-redux";
 import { clearGame } from "_redux/sequence-maker/sequenceMakerActions";
@@ -12,10 +12,10 @@ import Sequence from "./sequence/Sequence";
 import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 import activities from "_data/menu/activityList";
-import { visitedSM } from "_data/_utils/localStorageKeys";
+import { SM } from "_data/_utils/localStorageKeys";
 
 const SequenceMaker = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage(visitedSM);
+  const [hasVisited, setHasVisited] = useVisited(SM);
   const gameInfo = activities.find(game => game.name === 'SEQUENCE MAKER');
   const dispatch = useDispatch();
   

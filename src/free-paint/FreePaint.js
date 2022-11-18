@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useLocalStorage from '_hooks/useLocalStorage';
+import useLocalStorage from '_hooks/useVisited';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/free-paint/freePaintActions';
@@ -11,9 +11,10 @@ import Canvas from './canvas/Canvas';
 import Stencil from './canvas/stencil/Stencil';
 
 import activities from '_data/menu/activityList';
+import { FP } from '_data/_utils/localStorageKeys';
 
 const FreePaint = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage('visited-fp');
+  const [hasVisited, setHasVisited] = useLocalStorage(FP);
   const { stencil } = useSelector(state => state.freePaint);
   const gameInfo = activities.find(game => game.name === 'FREE PAINT');
   const dispatch = useDispatch();

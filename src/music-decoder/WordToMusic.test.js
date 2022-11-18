@@ -6,10 +6,12 @@ import userEvent from "@testing-library/user-event";
 
 import WordToMusic from './WordToMusic';
 
+import { WTM } from '_data/_utils/localStorageKeys';
+
 jest.mock('_helpers/music-decoder/play');
 
 describe('WordToMusic component', () => {
-  window.localStorage.setItem('visited-wtm', true);
+  window.localStorage.setItem(`visited-${WTM}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<WordToMusic />);
   });

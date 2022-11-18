@@ -1,17 +1,14 @@
-// visited state for entire app
-export const visited = 'visited';
-
 // visited state for Word-To-Music Decoder
-export const visitedWTM = 'visited-wtm';
+export const WTM = 'wtm';
 // visited state for Jump Into Rhythm
-export const visitedJIR = 'visited-jir';
+export const JIR = 'jir';
 // visited state for Sequence Maker
-export const visitedSM = 'visited-sm';
+export const SM = 'sm';
 
 // visited state for Free Paint
-export const visitedFP = 'visited-fp';
+export const FP = 'fp';
 
 // visited state for Score Keeper
-export const visitedSK = 'visited-sk';
+export const SK = 'sk';
 // visited state for Time Keeper
-export const visitedTK = 'visited-tk';
+export const TK = 'tk';
