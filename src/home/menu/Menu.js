@@ -15,13 +15,11 @@ const Menu = ({ type = null }) => {
   const { menu } = useSelector(state => state.mainSettings);
   const navigate = useNavigate();
 
-  const getGames = (category) => (
-    category === 'all' ?
-      activities.filter(a => a.activityType === 'games') :
-      activities.filter(a => a.genre === category)
-  );
-
-  const options = !type ? menuOptions[menu] : getGames(type);
+  const options = type ? (
+    type === 'all'
+      ? activities.filter(a => a.activityType === 'games')
+      : activities.filter(a => a.genre === type)
+  ) : menuOptions[menu];
 
   const optionDisplay = options.map((option, i) => (
     <Button
