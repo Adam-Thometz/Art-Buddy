@@ -16,8 +16,7 @@ const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(TK);
 
   useEffect(() => {
-    const game = activities.find(a => a.name === 'TIME KEEPER')
-    dispatch(changeCurrGame(game));
+    dispatch(changeCurrGame(activities.timeKeeper));
     return () => dispatch(changeCurrGame({}));
   });
 

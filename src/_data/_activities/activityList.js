@@ -12,8 +12,8 @@ const genres = ['music', 'art', 'other'];
 
 const { wordToMusic, instrumentId, jumpIntoRhythm, sequenceMaker, freePaint, scoreKeeper, timeKeeper } = urls;
 
-const activities = [
-  {
+const activities = {
+  wordToMusic: {
     name: 'WORD-TO-MUSIC DECODER',
     icon: wordToMusicIcon,
     url: wordToMusic,
@@ -22,7 +22,7 @@ const activities = [
     description: 'Turn words into music!',
     active: true
   },
-  {
+  instrumentId: {
     name: "WHAT'S THAT INSTRUMENT?",
     icon: instrumentIdIcon,
     url: instrumentId,
@@ -31,7 +31,7 @@ const activities = [
     description: 'Learn about instruments while practicing listening skills!',
     active: true
   },
-  {
+  jumpIntoRhythm: {
     name: 'JUMP INTO RHYTHM',
     icon: jumpIntoRhythmIcon,
     url: jumpIntoRhythm,
@@ -40,7 +40,7 @@ const activities = [
     description: 'Jump with a frog to different rhythms!',
     active: true
   },
-  {
+  sequenceMaker: {
     name: 'SEQUENCE MAKER',
     icon: sequenceMakerIcon,
     url: sequenceMaker,
@@ -49,7 +49,7 @@ const activities = [
     description: 'Put different sounds together and hear what you get!',
     active: true
   },
-  {
+  colorTheory: {
     name: 'COLOR THEORY',
     icon: colorTheoryIcon,
     url: null,
@@ -58,7 +58,7 @@ const activities = [
     description: 'Learn about the colors with mixing and matching!',
     active: false
   },
-  {
+  freePaint: {
     name: 'FREE PAINT',
     icon: freePaintIcon,
     url: freePaint,
@@ -67,7 +67,7 @@ const activities = [
     description: 'Draw different things like letters and shapes!',
     active: true
   },
-  {
+  placeholder: {
     name: 'PLACE HOLDER',
     icon: null,
     url: null,
@@ -76,7 +76,7 @@ const activities = [
     description: '',
     active: false
   },
-  {
+  placeholder2: {
     name: 'PLACE HOLDER',
     icon: null,
     url: null,
@@ -85,7 +85,7 @@ const activities = [
     description: '',
     active: false
   },
-  {
+  scoreKeeper: {
     name: 'SCORE KEEPER',
     icon: null,
     url: scoreKeeper,
@@ -94,7 +94,7 @@ const activities = [
     description: '',
     active: true
   },
-  {
+  timeKeeper: {
     name: 'TIME KEEPER',
     icon: null,
     url: timeKeeper,
@@ -103,6 +103,6 @@ const activities = [
     description: '',
     active: false
   }
-];
+};
 
 export default activities;

@@ -21,8 +21,7 @@ const FreePaint = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    const game = activities.find(game => game.name === 'FREE PAINT');
-    dispatch(changeCurrGame(game));
+    dispatch(changeCurrGame(activities.freePaint));
     return () => {
       dispatch(clearGame())
       dispatch(changeCurrGame({}));

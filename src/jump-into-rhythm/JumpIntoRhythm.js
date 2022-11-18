@@ -18,8 +18,7 @@ const JumpIntoRhythm = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const game = activities.find(a => a.name === 'JUMP INTO RHYTHM');
-    dispatch(changeCurrGame(game));
+    dispatch(changeCurrGame(activities.jumpIntoRhythm));
     return () => {
       dispatch(changeCurrGame({}));
     }

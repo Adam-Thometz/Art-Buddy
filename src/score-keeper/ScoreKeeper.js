@@ -18,8 +18,7 @@ const ScoreKeeper = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const game = activities.find(a => a.name === 'SCORE KEEPER')
-    dispatch(changeCurrGame(game))
+    dispatch(changeCurrGame(activities.scoreKeeper))
     dispatch(loadStudents(roster.students));
     return () => {
       dispatch(clearGame());

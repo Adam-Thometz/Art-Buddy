@@ -21,8 +21,7 @@ const SequenceMaker = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    const game = activities.find(a => a.name === 'SEQUENCE MAKER');
-    dispatch(changeCurrGame(game));
+    dispatch(changeCurrGame(activities.sequenceMaker));
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));

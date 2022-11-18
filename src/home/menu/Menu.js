@@ -17,8 +17,8 @@ const Menu = ({ type = null }) => {
 
   const options = type ? (
     type === 'all'
-      ? activities.filter(a => a.activityType === 'games')
-      : activities.filter(a => a.genre === type)
+      ? Object.values(activities).filter(a => a.activityType === 'games')
+      : Object.values(activities).filter(a => a.genre === type)
   ) : menuOptions[menu];
 
   const optionDisplay = options.map((option, i) => (
