@@ -9,7 +9,7 @@ const useVisited = (id = null) => {
     localStorage.setItem(
       key,
       hasVisited ? true : false
-    )
+    );
   }, [key, hasVisited]);
 
   return [hasVisited, setHasVisited];
