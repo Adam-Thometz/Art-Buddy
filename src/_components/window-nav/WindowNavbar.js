@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeMenuGames } from "_redux/settings/mainSettingsActions";
+import { changeMenu } from "_redux/settings/mainSettingsActions";
 
 import './WindowNavbar.css';
 
@@ -15,7 +15,7 @@ const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const handleChange = e => dispatch(changeMenuGames(e.target.id));
+  const handleChange = e => dispatch(changeMenu(e.target.id));
   const underline = target => menu === target ? ' underlined' : '';
 
   const menuPage = (
