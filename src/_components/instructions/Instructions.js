@@ -1,13 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Icon from '_components/icon/Icon';
 
 import play from '_media/general-icons/play.png';
 
-const Instructions = ({ game, setHasVisited }) => {
+const Instructions = ({ setHasVisited }) => {
+  const { currGame } = useSelector(state => state.mainSettings);
   const handleSetVisited = () => setHasVisited(true);
   return (
     <div className='Instructions'>
-      <article>{game.description}</article>
+      <article>{currGame.description}</article>
       <Icon icon={play} text="PLAY" size='250px' onClick={handleSetVisited} />
     </div>
   );

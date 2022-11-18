@@ -8,27 +8,32 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 import Students from './students/Students';
 
-import activities from '_data/menu/activityList';
 import { SK } from '_data/_utils/localStorageKeys';
+import { changeCurrGame } from '_redux/settings/mainSettingsActions';
+import activities from '_data/menu/activityList';
 
 const ScoreKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(SK);
-  const { roster } = useSelector(state => state.mainSettings);
-  const gameInfo = activities.find(game => game.name === 'SCORE KEEPER');
+  const { currGame, roster } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const game = activities.find(a => a.name === 'SCORE KEEPER')
+    dispatch(changeCurrGame(game))
     dispatch(loadStudents(roster.students));
+    return () => {
+      dispatch(clearGame());
+      dispatch(changeCurrGame({}));
+    };
   }, [dispatch, roster]);
 
   useEffect(() => {
-    return () => dispatch(clearGame());
   }, [dispatch]);
 
   return (
     <>
-      <WindowNavbar page={gameInfo.name} />
-      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <Students />}
+      <WindowNavbar page={currGame.name} />
+      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <Students />}
     </>
   );
 };

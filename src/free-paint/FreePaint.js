@@ -12,21 +12,24 @@ import Stencil from './canvas/stencil/Stencil';
 
 import activities from '_data/menu/activityList';
 import { FP } from '_data/_utils/localStorageKeys';
+import { changeCurrGame } from '_redux/settings/mainSettingsActions';
 
 const FreePaint = () => {
-  const [hasVisited, setHasVisited] = useLocalStorage(FP);
+  const { currGame } = useSelector(state => state.mainSettings);
   const { stencil } = useSelector(state => state.freePaint);
-  const gameInfo = activities.find(game => game.name === 'FREE PAINT');
+  const [hasVisited, setHasVisited] = useLocalStorage(FP);
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
-    return () => dispatch(clearGame())
+    const game = activities.find(game => game.name === 'FREE PAINT');
+    dispatch(changeCurrGame(game));
+    return () => dispatch(clearGame());
   }, [dispatch]);
 
   return (
     <>
-      <WindowNavbar page={gameInfo.name} />
-      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : <>
+      <WindowNavbar page={currGame.name} />
+      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <>
         <ControlBar />
         <Canvas />
         {stencil ? <Stencil /> : null}

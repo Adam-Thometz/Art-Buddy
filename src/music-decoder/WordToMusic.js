@@ -11,14 +11,14 @@ import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from '_helpers/music-decoder/createSound';
-import activities from '_data/menu/activityList';
 import { WTM } from '_data/_utils/localStorageKeys';
+import { changeCurrGame } from '_redux/settings/mainSettingsActions';
+import activities from '_data/menu/activityList';
 
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useVisited(WTM);
   const { scale, sound } = useSelector(state => state.musicDecoder);
-  const { volume } = useSelector(state => state.mainSettings);
-  const gameInfo = activities.find(game => game.name === 'WORD-TO-MUSIC DECODER');
+  const { currGame, volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,6 +26,8 @@ const WordToMusic = () => {
   }, [volume, scale, sound])
 
   useEffect(() => {
+    const game = activities.find(a => a.name === 'WORD-TO-MUSIC DECODER');
+    dispatch(changeCurrGame(game));
     return () => {
       dispatch(clearGame());
       delete window.wordToMusicSound;
@@ -34,8 +36,8 @@ const WordToMusic = () => {
 
   return (
     <>
-      <WindowNavbar page={gameInfo.name} />
-      {!hasVisited ? <Instructions game={gameInfo} setHasVisited={setHasVisited} /> : (<>
+      <WindowNavbar page={currGame.name} />
+      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
         <WordForm />
         <DecoderControls />
         <AlphabetTable />
