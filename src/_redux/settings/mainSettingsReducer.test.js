@@ -1,5 +1,7 @@
-import mainSettingsReducer, { INITIAL_STATE } from "./mainSettingsReducer";
-import { changeMenuGames, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
+import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./mainSettingsReducer";
+import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
+
+import activities from '_data/menu/activityList';
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
@@ -10,9 +12,17 @@ describe('Main Menu & Settings Reducer', () => {
     const init = mainSettingsReducer(undefined, {});
     expect(init.menu).toBe('games');
 
-    const result2 = mainSettingsReducer(init, changeMenuGames('tools'));
+    const result2 = mainSettingsReducer(init, changeMenu('tools'));
     expect(result2.menu).toBe('tools');
   });
+
+  it('should handle setting current game info', () => {
+    const init = mainSettingsReducer(undefined, {});
+    expect(init.currGame).toEqual({});
+
+    const result = mainSettingsReducer(init, changeCurrGame(activities[0]));
+    expect(result.currGame).toEqual(activities[0]);
+  })
 
   it('should handle changing the volume', () => {
     const init = mainSettingsReducer(undefined, {});
@@ -40,7 +50,7 @@ describe('Main Menu & Settings Reducer', () => {
 
   it('should handle updating the global roster', () => {
     const init = mainSettingsReducer(undefined, {});
-    expect(init.roster).toEqual({});
+    expect(init.roster).toEqual(demoClass);
 
     const sampleRoster = { name: 'Demo Class', students: ['Hello', 'Goodbye'] }
     const result = mainSettingsReducer(init, setRoster(sampleRoster));

@@ -1,6 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const changeMenuGames = createAction('changeMenuGames');
+export const changeMenu = createAction('changeMenu');
+export const changeCurrGame = createAction('changeCurrGame');
 export const setVolume = createAction('setVolume');
 export const toggleTextToSpeech = createAction('toggleTextToSpeech');
 export const toggleColorBlind = createAction('toggleColorBlind');
