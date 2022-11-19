@@ -1,0 +1,17 @@
+.Notes-measure {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Notes-beats {
+  width: 80%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Notes-toggle {
+  height: 40px;
+  width: 40px;
+}

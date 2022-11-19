@@ -6,8 +6,7 @@ import { changeCurrGame } from '_redux/settings/mainSettingsActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
-import FrogLilyPads from './frog-lily-pad/FrogLilyPads';
-import NoteDisplay from './note-display/NoteDisplay';
+import Notes from './notes/Notes';
 import NoteOptions from './note-options/NoteOptions';
 
 import { JIR } from '_data/_utils/localStorageKeys';
@@ -29,8 +28,7 @@ const JumpIntoRhythm = () => {
     <>
       <WindowNavbar page={currGame.name} />
       {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
-        <FrogLilyPads />
-        <NoteDisplay />
+        <Notes />
         <NoteOptions />
       </>)}
     </>

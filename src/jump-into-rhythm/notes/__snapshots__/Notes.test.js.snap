@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notes component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Notes"
+  >
+    <div
+      class="Notes-measure"
+    >
+      <img
+        alt="Treble clef"
+        src="file"
+      />
+      <section
+        class="Notes-beats"
+      >
+        <div
+          class="NoteBlock"
+          style="border-color: #fd4d3a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #ffe81a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #89eb0a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #17255a;"
+        />
+      </section>
+    </div>
+    <div
+      class="Notes-measure"
+    >
+      <img
+        alt="Add measure"
+        class="Notes-toggle"
+        src="file"
+      />
+      <section
+        class="Notes-beats"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -29,7 +29,7 @@ const NoteOptions = () => {
       <section className='NoteOptions-notes'>
         {notes}
       </section>
-      <Button colorId={0} otherStyles={{ margin: 0, height: '10vh' }}>PLAY</Button>
+      <Button colorId={0}>PLAY</Button>
     </section>
   );
 };

@@ -15,3 +15,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.NoteOptions button {
+  margin: 0;
+  height: 10vh;
+}

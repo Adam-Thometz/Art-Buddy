@@ -16,59 +16,50 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       src="file"
     />
   </header>
-  <section
-    class="FrogLilyPads"
+  <div
+    class="Notes"
   >
-    <img
-      alt="frog"
-      class="Frog"
-      src="file"
-    />
     <div
-      class="LilyPadDisplay"
+      class="Notes-measure"
     >
-      <div
-        class="LilyPad"
+      <img
+        alt="Treble clef"
+        src="file"
       />
-      <div
-        class="LilyPad"
+      <section
+        class="Notes-beats"
+      >
+        <div
+          class="NoteBlock"
+          style="border-color: #fd4d3a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #ffe81a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #89eb0a;"
+        />
+        <div
+          class="NoteBlock"
+          style="border-color: #17255a;"
+        />
+      </section>
+    </div>
+    <div
+      class="Notes-measure"
+    >
+      <img
+        alt="Add measure"
+        class="Notes-toggle"
+        src="file"
       />
-      <div
-        class="LilyPad"
-      />
-      <div
-        class="LilyPad"
+      <section
+        class="Notes-beats"
       />
     </div>
-  </section>
-  <section
-    class="NoteDisplay"
-  >
-    <img
-      alt="Treble clef"
-      src="file"
-    />
-    <section
-      class="NoteDisplay-blocks"
-    >
-      <div
-        class="NoteBlock"
-        style="border-color: #fd4d3a;"
-      />
-      <div
-        class="NoteBlock"
-        style="border-color: #ffe81a;"
-      />
-      <div
-        class="NoteBlock"
-        style="border-color: #89eb0a;"
-      />
-      <div
-        class="NoteBlock"
-        style="border-color: #17255a;"
-      />
-    </section>
-  </section>
+  </div>
   <section
     class="NoteOptions"
   >
@@ -110,7 +101,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
     </section>
     <button
       class="Button regular"
-      style="border-color: #89eb0a; margin: 0px; height: 10vh;"
+      style="border-color: #89eb0a;"
     >
       PLAY
     </button>
