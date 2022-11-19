@@ -1,5 +1,5 @@
 import jumpIntoRhythmReducer, { INITIAL_STATE } from "./jumpIntoRhythmReducer";
-import { addToRhythm } from "./jumpIntoRhythmActions";
+import { addToRhythm, toggleHasExtraMeasure } from "./jumpIntoRhythmActions";
 import { testQuarterNote } from "_testUtils/test-states/jumpIntoRhythmReducerTestState";
 
 describe('Jump Into Rhythm Reducer', () => {
@@ -12,5 +12,12 @@ describe('Jump Into Rhythm Reducer', () => {
     expect(result.rhythm[0]).toEqual(testQuarterNote);
     const result2 = jumpIntoRhythmReducer(result, addToRhythm(testQuarterNote));
     expect(result2.rhythm[1]).toEqual(testQuarterNote);
+  });
+  
+  it('should toggle an extra rhythm', () => {
+    const result = jumpIntoRhythmReducer(undefined, toggleHasExtraMeasure(true));
+    expect(result.rhythm.length).toBe(8);
+    const result2 = jumpIntoRhythmReducer(result, toggleHasExtraMeasure(false));
+    expect(result2.rhythm.length).toBe(4);
   });
 });
