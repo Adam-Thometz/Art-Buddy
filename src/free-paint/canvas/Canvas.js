@@ -27,12 +27,6 @@ const Canvas = () => {
     const context = canvasRef.current.getContext("2d");
     context.lineCap = 'round';
     context.lineWidth = 20;
-    context.strokeStyle = color;
-    contextRef.current = context;
-  }, [color]);
-
-  useEffect(() => {
-    const context = canvasRef.current.getContext('2d');
     if (isErasing) {
       context.globalCompositeOperation = 'destination-out';
       context.strokeStyle = 'rgba(255,255,255,1)';
@@ -40,7 +34,8 @@ const Canvas = () => {
       context.globalCompositeOperation = 'source-over';
       context.strokeStyle = color;
     }
-  }, [isErasing, color])
+    contextRef.current = context;
+  }, [isErasing, color]);
   
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
