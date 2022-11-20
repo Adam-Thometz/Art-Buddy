@@ -1,65 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JumpIntoRhythm component matches snapshot 1`] = `
+exports[`NoteOptions component matches snapshot 1`] = `
 <DocumentFragment>
-  <header
-    class="WindowNavbar-games"
-  >
-    <h1
-      class="WindowNavbar-label"
-    >
-      JUMP INTO RHYTHM
-    </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
-  </header>
-  <div
-    class="Notes"
-  >
-    <div
-      class="Notes-measure"
-    >
-      <img
-        alt="Treble clef"
-        src="file"
-      />
-      <section
-        class="Notes-beats"
-      >
-        <div
-          class="NoteBlock"
-          style="border-color: #fd4d3a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #ffe81a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #89eb0a;"
-        />
-        <div
-          class="NoteBlock"
-          style="border-color: #17255a;"
-        />
-      </section>
-    </div>
-    <div
-      class="Notes-measure"
-    >
-      <img
-        alt="Add measure"
-        class="Notes-toggle"
-        src="file"
-      />
-      <section
-        class="Notes-beats"
-      />
-    </div>
-  </div>
   <section
     class="NoteOptions"
   >
