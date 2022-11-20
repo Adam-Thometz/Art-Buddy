@@ -1,4 +1,4 @@
-import { addToRhythm, clearGame, toggleHasExtraMeasure } from "./jumpIntoRhythmActions";
+import { addToRhythm, clearGame, deleteFromRhythm, toggleHasExtraMeasure } from "./jumpIntoRhythmActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
@@ -14,6 +14,12 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
       const { id, img, duration } = action.payload;
       const newRhythm = [ ...state.rhythm ];
       newRhythm[nextIdx] = { id, img, duration };
+      state.rhythm = newRhythm;
+    })
+    .addCase(deleteFromRhythm, (state, action) => {
+      const newRhythm = [ ...state.rhythm ];
+      const id = action.payload;
+      newRhythm[id] = null;
       state.rhythm = newRhythm;
     })
     .addCase(toggleHasExtraMeasure, (state, action) => {
