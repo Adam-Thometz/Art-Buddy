@@ -17,27 +17,25 @@ const Notes = () => {
   const dispatch = useDispatch();
 
   const handleToggleMeasures = () => dispatch(toggleHasExtraMeasure(rhythm.length === 4));
+
+  const colorOrder = [2, 1, 0, 4];
   
   return (
     <div className='Notes'>
       <div className='Notes-measure'>
         <img src={trebleClef} alt='Treble clef' />
         <section className='Notes-beats'>
-          <NoteBlock borderColor={colors[2]} notes={rhythm[0]} />
-          <NoteBlock borderColor={colors[1]} notes={rhythm[1]} />
-          <NoteBlock borderColor={colors[0]} notes={rhythm[2]} />
-          <NoteBlock borderColor={colors[4]} notes={rhythm[3]} />
+          {rhythm.slice(0, 4).map((note, i) => (
+            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i} />
+          ))}
         </section>
       </div>
       <div className='Notes-measure'>
         <img src={rhythm.length === 8 ? minus : plus} className='Notes-toggle' alt='Add measure' onClick={handleToggleMeasures} />
         <section className='Notes-beats'>
-          {rhythm.length === 8 ? <>
-            <NoteBlock borderColor={colors[2]} notes={rhythm[4]} />
-            <NoteBlock borderColor={colors[1]} notes={rhythm[5]} />
-            <NoteBlock borderColor={colors[0]} notes={rhythm[6]} />
-            <NoteBlock borderColor={colors[4]} notes={rhythm[7]} />
-          </> : null}
+          {rhythm.length === 8 ? rhythm.slice(4).map((note, i) => (
+            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i} />
+          )) : null}
         </section>
       </div>
     </div>
