@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import useVisited from '_hooks/useVisited';
 
 import { useSelector, useDispatch } from 'react-redux';
+import { clearGame } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 import { changeCurrGame } from '_redux/settings/mainSettingsActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
@@ -19,6 +20,7 @@ const JumpIntoRhythm = () => {
   useEffect(() => {
     dispatch(changeCurrGame(activities.jumpIntoRhythm));
     return () => {
+      dispatch(clearGame());
       dispatch(changeCurrGame({}));
     }
   }, [dispatch]);
