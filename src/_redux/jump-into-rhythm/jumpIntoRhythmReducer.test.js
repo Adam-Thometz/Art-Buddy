@@ -1,5 +1,5 @@
 import jumpIntoRhythmReducer, { INITIAL_STATE } from "./jumpIntoRhythmReducer";
-import { addToRhythm, toggleHasExtraMeasure } from "./jumpIntoRhythmActions";
+import { addToRhythm, toggleHasExtraMeasure, clearGame } from "./jumpIntoRhythmActions";
 import { testQuarterNote } from "_testUtils/test-states/jumpIntoRhythmReducerTestState";
 
 describe('Jump Into Rhythm Reducer', () => {
@@ -19,5 +19,10 @@ describe('Jump Into Rhythm Reducer', () => {
     expect(result.rhythm.length).toBe(8);
     const result2 = jumpIntoRhythmReducer(result, toggleHasExtraMeasure(false));
     expect(result2.rhythm.length).toBe(4);
+  });
+
+  it('should handle resetting', () => {
+    const result = jumpIntoRhythmReducer(undefined, clearGame());
+    expect(result).toEqual(INITIAL_STATE);
   });
 });
