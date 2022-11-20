@@ -56,6 +56,12 @@ This app is divided into two sections: Learn and Play. The Learn section allows 
 
 This app is a movement-based game in which students can create unique rhythms and have the frog jump across the lily pads in the rhythm that students create. Good for recognizing quantity and representing numbers in different ways.
 
+### Art Games
+
+### Free Paint
+
+This app is a basic coloring app that comes with stencils for numbers, letters (upper and lowercase) and shapes. User can pick different colors and can unlock more by playing Color Theory. Good for basic writing activities.
+
 ### Tools
 
 #### Time Keeper (under construction)
