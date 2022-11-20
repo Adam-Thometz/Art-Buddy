@@ -4,8 +4,18 @@
   width: 10vw;
   margin-left: 8%;
   border-radius: 25px;
+  position: relative;
 }
 
-.NoteBlock img {
+.NoteBlock-note {
   margin-top: 20px;
+}
+
+.NoteBlock-delete {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
 }
