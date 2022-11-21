@@ -34,7 +34,7 @@ const Notes = () => {
         <img src={rhythm.length === 8 ? minus : plus} className='Notes-toggle' alt='Add measure' onClick={handleToggleMeasures} />
         <section className='Notes-beats'>
           {rhythm.length === 8 ? rhythm.slice(4).map((note, i) => (
-            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i} />
+            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+4} />
           )) : null}
         </section>
       </div>
