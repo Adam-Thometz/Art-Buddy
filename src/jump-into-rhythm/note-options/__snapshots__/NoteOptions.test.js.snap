@@ -91,7 +91,8 @@ exports[`NoteOptions component matches snapshot 1`] = `
     </section>
     <button
       class="Button regular"
-      style="border-color: #89eb0a;"
+      disabled=""
+      style="border-color: #89eb0a; background-color: grey;"
     >
       PLAY
     </button>
