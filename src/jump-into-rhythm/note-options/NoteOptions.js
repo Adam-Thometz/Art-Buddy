@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './NoteOptions.css';
@@ -11,6 +11,7 @@ import Icon from '_components/icon/Icon';
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
 
 const NoteOptions = () => {
+  const { rhythm } = useSelector(state => state.jumpIntoRhythm);
   const dispatch = useDispatch();
 
   const handleAddNotes = e => {
@@ -29,7 +30,7 @@ const NoteOptions = () => {
       <section className='NoteOptions-notes'>
         {notes}
       </section>
-      <Button colorId={0}>PLAY</Button>
+      <Button colorId={0} disabled={rhythm.includes(null)}>PLAY</Button>
     </section>
   );
 };
