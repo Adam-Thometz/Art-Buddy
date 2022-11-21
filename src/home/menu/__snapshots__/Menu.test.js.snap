@@ -65,30 +65,3 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
   </div>
 </DocumentFragment>
 `;
-
-exports[`Menu component renders art games 1`] = `
-<button
-  class="Button regular"
-  disabled=""
-  style="border-color: #89eb0a; background-color: grey;"
->
-  <img
-    alt=""
-    src="file"
-  />
-  COLOR THEORY
-</button>
-`;
-
-exports[`Menu component renders music games 1`] = `
-<button
-  class="Button regular"
-  style="border-color: #4d4f5e;"
->
-  <img
-    alt=""
-    src="file"
-  />
-  SEQUENCE MAKER
-</button>
-`;
