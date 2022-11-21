@@ -1,7 +1,8 @@
-import { addToRhythm, clearGame, deleteFromRhythm, toggleHasExtraMeasure } from "./jumpIntoRhythmActions";
+import { addToRhythm, clearGame, deleteFromRhythm, toggleHasExtraMeasure, toggleLilyPadDisplay } from "./jumpIntoRhythmActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
+  isDisplayingLilyPads: false,
   rhythm: [null, null, null, null]
 };
 
@@ -30,6 +31,9 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
           : newRhythm.pop();
       }
       state.rhythm = newRhythm;
+    })
+    .addCase(toggleLilyPadDisplay, (state) => {
+      state.isDisplayingLilyPads = !state.isDisplayingLilyPads;
     })
     .addCase(clearGame, (state) => {
       state.rhythm = INITIAL_STATE.rhythm;
