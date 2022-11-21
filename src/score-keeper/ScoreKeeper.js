@@ -10,7 +10,7 @@ import Instructions from '_components/instructions/Instructions';
 import Students from './students/Students';
 
 import { SK } from '_data/_utils/localStorageKeys';
-import activities from '_data/_activities/activityList';
+import { scoreKeeper } from '_data/_activities/activityList';
 
 const ScoreKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(SK);
@@ -18,7 +18,7 @@ const ScoreKeeper = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(changeCurrGame(activities.scoreKeeper))
+    dispatch(changeCurrGame(scoreKeeper))
     dispatch(loadStudents(roster.students));
     return () => {
       dispatch(clearGame());

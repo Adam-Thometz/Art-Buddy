@@ -1,7 +1,7 @@
 import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./mainSettingsReducer";
 import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 
-import activities from '_data/_activities/activityList';
+import { wordToMusic } from '_data/_activities/activityList';
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
@@ -20,8 +20,8 @@ describe('Main Menu & Settings Reducer', () => {
     const init = mainSettingsReducer(undefined, {});
     expect(init.currGame).toEqual({});
 
-    const result = mainSettingsReducer(init, changeCurrGame(activities[0]));
-    expect(result.currGame).toEqual(activities[0]);
+    const result = mainSettingsReducer(init, changeCurrGame(wordToMusic));
+    expect(result.currGame).toEqual(wordToMusic);
   })
 
   it('should handle changing the volume', () => {

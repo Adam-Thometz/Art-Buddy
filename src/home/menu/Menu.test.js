@@ -15,11 +15,11 @@ describe('Menu component', () => {
 
   it('renders music games', () => {
     renderWithProvider(<Menu type='music' />);
-    expect(screen.getByText('SEQUENCE MAKER')).toMatchSnapshot();
+    expect(screen.getByText('SEQUENCE MAKER')).toBeInTheDocument();
   });
 
   it('renders art games', () => {
     renderWithProvider(<Menu type='art' />);
-    expect(screen.getByText('COLOR THEORY')).toMatchSnapshot();
+    expect(screen.getByText('COLOR THEORY')).toBeInTheDocument();
   });
 });

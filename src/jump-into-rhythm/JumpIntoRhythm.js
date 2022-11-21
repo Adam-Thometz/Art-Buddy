@@ -12,7 +12,7 @@ import NoteOptions from './note-options/NoteOptions';
 import FrogLilyPad from './frog-lily-pad/FrogLilyPads';
 
 import { JIR } from '_data/_utils/localStorageKeys';
-import activities from '_data/_activities/activityList';
+import { jumpIntoRhythm } from '_data/_activities/activityList';
 
 const JumpIntoRhythm = () => {
   const { currGame } = useSelector(state => state.mainSettings);
@@ -20,7 +20,7 @@ const JumpIntoRhythm = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(changeCurrGame(activities.jumpIntoRhythm));
+    dispatch(changeCurrGame(jumpIntoRhythm));
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));

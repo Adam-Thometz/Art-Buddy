@@ -13,7 +13,7 @@ import Sequence from "./sequence/Sequence";
 import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 import { SM } from "_data/_utils/localStorageKeys";
-import activities from "_data/_activities/activityList";
+import { sequenceMaker } from "_data/_activities/activityList";
 
 const SequenceMaker = () => {
   const { currGame } = useSelector(state => state.mainSettings)
@@ -21,7 +21,7 @@ const SequenceMaker = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(changeCurrGame(activities.sequenceMaker));
+    dispatch(changeCurrGame(sequenceMaker));
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));

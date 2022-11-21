@@ -8,7 +8,7 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 
 import { TK } from '_data/_utils/localStorageKeys';
-import activities from '_data/_activities/activityList';
+import { timeKeeper } from '_data/_activities/activityList';
 
 const TimeKeeper = () => {
   const { currGame } = useSelector(state => state.mainSettings);
@@ -16,7 +16,7 @@ const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(TK);
 
   useEffect(() => {
-    dispatch(changeCurrGame(activities.timeKeeper));
+    dispatch(changeCurrGame(timeKeeper));
     return () => dispatch(changeCurrGame({}));
   });
 

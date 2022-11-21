@@ -11,7 +11,7 @@ import ControlBar from './control-bar/ControlBar';
 import Canvas from './canvas/Canvas';
 import Stencil from './canvas/stencil/Stencil';
 
-import activities from '_data/_activities/activityList';
+import { freePaint } from '_data/_activities/activityList';
 import { FP } from '_data/_utils/localStorageKeys';
 
 const FreePaint = () => {
@@ -21,7 +21,7 @@ const FreePaint = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(changeCurrGame(activities.freePaint));
+    dispatch(changeCurrGame(freePaint));
     return () => {
       dispatch(clearGame())
       dispatch(changeCurrGame({}));

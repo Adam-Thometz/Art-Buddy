@@ -13,7 +13,7 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import createSound from '_helpers/music-decoder/createSound';
 import { WTM } from '_data/_utils/localStorageKeys';
-import activities from '_data/_activities/activityList';
+import { wordToMusic } from '_data/_activities/activityList';
 
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useVisited(WTM);
@@ -26,7 +26,7 @@ const WordToMusic = () => {
   }, [volume, scale, sound])
 
   useEffect(() => {
-    dispatch(changeCurrGame(activities.wordToMusic));
+    dispatch(changeCurrGame(wordToMusic));
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));

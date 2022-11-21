@@ -9,7 +9,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 
 import menuOptions from "_data/menu/menuOptions";
-import activities from "_data/_activities/activityList";
+import * as activities from "_data/_activities/activityList";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector(state => state.mainSettings);
