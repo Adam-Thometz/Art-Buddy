@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addToRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
+import { addToRhythm, toggleLilyPadDisplay } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './NoteOptions.css';
 
@@ -11,7 +11,7 @@ import Icon from '_components/icon/Icon';
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
 
 const NoteOptions = () => {
-  const { rhythm } = useSelector(state => state.jumpIntoRhythm);
+  const { rhythm, isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
   const dispatch = useDispatch();
 
   const handleAddNotes = e => {
@@ -25,12 +25,22 @@ const NoteOptions = () => {
     return <Icon icon={img} text={text} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
   });
 
+  const play = () => {
+    if (rhythm.includes(null)) return;
+    dispatch(toggleLilyPadDisplay());
+  };
+
+  const back = () => dispatch(toggleLilyPadDisplay());
+
   return (
     <section className='NoteOptions'>
       <section className='NoteOptions-notes'>
         {notes}
       </section>
-      <Button colorId={0} disabled={rhythm.includes(null)}>PLAY</Button>
+      {isDisplayingLilyPads
+        ? <Button onClick={back}>BACK</Button>
+        : <Button colorId={0} disabled={rhythm.includes(null)} onClick={play}>PLAY</Button>
+      }
     </section>
   );
 };
