@@ -11,7 +11,6 @@ const useReportCard = (game, level = null) => {
     ? JSON.parse(initialValue)
     : defaultReportCard
   );
-  console.log(reportCard);
     
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(reportCard));
