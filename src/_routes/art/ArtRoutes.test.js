@@ -12,7 +12,7 @@ describe('Menu Routes', () => {
   });
   
   it('renders the music games page', () => {
-    renderWithProvider(<ArtRoutes />, { initialRoutes: [urls.freePaint] });
+    renderWithProvider(<ArtRoutes />, { initialRoutes: [urls.freePaintUrl] });
     expect(screen.getByText('FREE PAINT')).toBeInTheDocument();
   });
 });

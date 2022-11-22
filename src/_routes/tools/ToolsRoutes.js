@@ -10,8 +10,8 @@ import urls from "_data/_routes/routeUrls";
 const ToolsRoutes = () => {
   return (
     <Routes>
-      <Route path={urls.scoreKeeper} element={<Window><ScoreKeeper /></Window>} />
-      <Route path={urls.timeKeeper} element={<Window><TimeKeeper /></Window>} />
+      <Route path={urls.scoreKeeperUrl} element={<Window><ScoreKeeper /></Window>} />
+      <Route path={urls.timeKeeperUrl} element={<Window><TimeKeeper /></Window>} />
     </Routes>
   );
 };

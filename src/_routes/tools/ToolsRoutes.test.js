@@ -12,7 +12,7 @@ describe('Tools Routes', () => {
   });
 
   it('renders the score keeper', () => {
-    renderWithProvider(<ToolsRoutes />, { initialRoutes: [urls.scoreKeeper] });
+    renderWithProvider(<ToolsRoutes />, { initialRoutes: [urls.scoreKeeperUrl] });
     expect(screen.getByText('SCORE KEEPER')).toBeInTheDocument();
   });
 });

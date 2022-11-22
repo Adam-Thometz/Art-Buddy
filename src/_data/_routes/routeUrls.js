@@ -3,13 +3,13 @@ const urls = {
   artGames: '/art',
   allGames: '/all',
   byIEPGoals: '/goals',
-  wordToMusic: '/word-to-music',
-  sequenceMaker: '/sequence-maker',
-  jumpIntoRhythm: '/jump-into-rhythm',
-  instrumentId: '/instrument-id',
-  freePaint: '/free-paint',
-  scoreKeeper: '/score-keeper',
-  timeKeeper: '/time-keeper'
+  wordToMusicUrl: '/word-to-music',
+  sequenceMakerUrl: '/sequence-maker',
+  jumpIntoRhythmUrl: '/jump-into-rhythm',
+  instrumentIdUrl: '/instrument-id',
+  freePaintUrl: '/free-paint',
+  scoreKeeperUrl: '/score-keeper',
+  timeKeeperUrl: '/time-keeper'
 };
 
 export const instrumentIdUrls = {

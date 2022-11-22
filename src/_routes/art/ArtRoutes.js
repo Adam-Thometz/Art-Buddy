@@ -10,7 +10,7 @@ import urls from "_data/_routes/routeUrls";
 const ArtRoutes = () => {
   return (
     <Routes>
-      <Route path={urls.freePaint} element={<Window><FreePaint /></Window>} />
+      <Route path={urls.freePaintUrl} element={<Window><FreePaint /></Window>} />
     </Routes>
   );
 };

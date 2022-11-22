@@ -13,22 +13,22 @@ describe('Music Game Routes', () => {
 
   it('renders the word-to-music decoder', () => {
     window.localStorage.setItem('visited-wtm', true);
-    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.wordToMusic] });
+    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.wordToMusicUrl] });
     expect(screen.getByText('WORD-TO-MUSIC DECODER')).toBeInTheDocument();
   });
   
   it('renders the sequence maker', () => {
-    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.sequenceMaker] });
+    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.sequenceMakerUrl] });
     expect(screen.getByText('SEQUENCE MAKER')).toBeInTheDocument();
   });
   
   it('renders jump into rhythm', () => {
-    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.jumpIntoRhythm] });
+    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.jumpIntoRhythmUrl] });
     expect(screen.getByText('JUMP INTO RHYTHM')).toBeInTheDocument();
   });
   
   it('renders the instrument id game', () => {
-    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.instrumentId] });
+    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.instrumentIdUrl] });
     expect(screen.getByText("INSTRUMENT ID")).toBeInTheDocument();
   });
 });
