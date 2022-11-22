@@ -15,7 +15,7 @@ const ReportCardIcon = () => {
       title='REPORT CARD'
       trigger={popupTrigger}
       triggerClass='ReportCardIcon'
-      popup={<ReportCard level={level} />}
+      popup={<ReportCard game="instrumentId" level={level} />}
     />
   );
 };
