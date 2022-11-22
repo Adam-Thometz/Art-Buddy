@@ -1,18 +1,19 @@
-import useReportCard, { INITIAL_REPORT_CARD } from "./useReportCard";
+import useReportCard from "./useReportCard";
 import { act, renderHook } from '@testing-library/react-hooks';
+import { instrumentIdReportCard } from '_data/_report-cards/initialReportCards'
 
 describe('useReportCard hook', () => {
   it('returns the initial report card', () => {
-    const { result } = renderHook(() => useReportCard(1));
-    expect(result.current[0]).toEqual(INITIAL_REPORT_CARD);
+    const { result } = renderHook(() => useReportCard('instrumentId', 1));
+    expect(result.current[0]).toEqual(instrumentIdReportCard);
   });
 
   it('updates the report card', () => {
-    const { result } = renderHook(() => useReportCard(1));
-    const updatedReportCard = { ...INITIAL_REPORT_CARD, electronic: ['SYNTHESIZER'] };
+    const { result } = renderHook(() => useReportCard('instrumentId', 1));
+    const updatedReportCard = { ...instrumentIdReportCard, electronic: ['SYNTHESIZER'] };
     act(() => {
       const setReportCard = result.current[1];
-      setReportCard(JSON.stringify(updatedReportCard));
+      setReportCard(updatedReportCard);
     });
     expect(result.current[0]).toEqual(updatedReportCard);
   });

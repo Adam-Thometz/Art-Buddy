@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react';
 
-export const INITIAL_REPORT_CARD = {
-  brass: [],
-  electronic: [],
-  percussion: [],
-  strings: [],
-  woodwind: [],
-  voice: []
-};
+import * as reportCards from '_data/_report-cards/initialReportCards';
 
-const useReportCard = (level) => {
-  const key = `instrument-id-level-${level}-report-card`;
-  const initialValue = localStorage.getItem(key) || JSON.stringify(INITIAL_REPORT_CARD);
-  const [reportCard, setReportCard] = useState(initialValue);
+const useReportCard = (game, level = null) => {
+  const key = `${game}-${level ? level : 0}-report-card`;
+  const defaultReportCard = reportCards[`${game}ReportCard`];
 
+  const initialValue = localStorage.getItem(key);
+  const [reportCard, setReportCard] = useState(initialValue
+    ? JSON.parse(initialValue)
+    : defaultReportCard
+  );
+  console.log(reportCard);
+    
   useEffect(() => {
-    localStorage.setItem(key, reportCard);
+    localStorage.setItem(key, JSON.stringify(reportCard));
   }, [key, reportCard]);
 
-  return [JSON.parse(reportCard), setReportCard];
+  return [reportCard, setReportCard];
 };
 
 export default useReportCard;
