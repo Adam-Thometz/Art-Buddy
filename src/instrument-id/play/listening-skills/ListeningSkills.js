@@ -7,7 +7,7 @@ import Button from "_components/button/Button";
 import Icon from "_components/icon/Icon";
 import Popup from "_components/popup/Popup";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import ReportCard from "../report-card/ReportCard";
+import ReportCard from "_components/report-card/ReportCard";
 
 import { listeningSkills, reportCardIcon } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from "_data/_routes/routeUrls";

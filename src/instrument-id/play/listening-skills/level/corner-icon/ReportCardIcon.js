@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Icon from '_components/icon/Icon';
 import Popup from '_components/popup/Popup';
-import ReportCard from '../../../report-card/ReportCard';
+import ReportCard from '_components/report-card/ReportCard';
 
 import { reportCardIcon } from '_media/instrument-id/_icons/iconImports';
 
