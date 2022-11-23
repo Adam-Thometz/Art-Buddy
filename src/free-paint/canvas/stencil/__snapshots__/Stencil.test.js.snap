@@ -4,6 +4,7 @@ exports[`Stencil component matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="Stencil"
+    style="z-index: 3;"
   >
     <span
       class="Stencil-text"

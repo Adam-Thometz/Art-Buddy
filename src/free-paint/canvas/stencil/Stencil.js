@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux';
 import './Stencil.css';
 
 const Stencil = () => {
-  const { stencil } = useSelector(state => state.freePaint);
+  const { stencil, isEditingStencil } = useSelector(state => state.freePaint);
 
-  // const handleClearDisplay = () => dispatch(setDisplay(null));
+  const zIndex = isEditingStencil ? 5 : 3;
 
   return (
-    <div className='Stencil'>
+    <div className='Stencil' style={{ zIndex }}>
       {stencil.startsWith('data:image')
         ? <img className='Stencil-shape' src={stencil} alt='' />
         : <span className='Stencil-text'>{stencil}</span>
