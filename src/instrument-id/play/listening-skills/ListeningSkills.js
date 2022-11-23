@@ -31,7 +31,7 @@ const ListeningSkills = () => {
           title='REPORT CARD'
           trigger={popupTrigger}
           triggerClass='ListeningSkills-report-card'
-          popup={<ReportCard level={level} />}
+          popup={<ReportCard game='instrumentId' level={level} />}
         />
       </div>
     );
