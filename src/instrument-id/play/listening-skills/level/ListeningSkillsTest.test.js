@@ -13,6 +13,7 @@ jest.mock('react-router-dom', () => ({
     level: '2'
   })
 }));
+jest.mock('_helpers/instrument-id/buffers');
 
 describe('ListeningSkillsTest component', () => {
   it('renders without crashing', () => {
