@@ -8,7 +8,6 @@ import { emptyFirst, emptyMid, emptyLast, fullFirst, fullMid, fullLast } from '_
 
 const ReportCard = ({ game, level = null }) => {
   const [reportCard, setReportCard] = useReportCard(game, level);
-  console.log(reportCard)
 
   const scoreDisplay = Object.keys(reportCard).map(group => {
     const score = reportCard[group].length;
