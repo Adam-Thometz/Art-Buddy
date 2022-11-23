@@ -1,6 +1,6 @@
 import freePaintReducer, { INITIAL_STATE } from "./freePaintReducer";
 
-import { setColor, setStencil, setIsErasing, clearGame } from "./freePaintActions";
+import { setColor, setStencil, setIsErasing, clearGame, setEditStencilMode } from "./freePaintActions";
 
 describe("Free Paint reducer", () => {
   it('should return the initial state', () => {
@@ -20,6 +20,11 @@ describe("Free Paint reducer", () => {
   it('should change the erasing state', () => {
     const result = freePaintReducer(undefined, setIsErasing(true));
     expect(result.isErasing).toBe(true);
+  });
+
+  it('should set the stencil edit state', () => {
+    const result = freePaintReducer(undefined, setEditStencilMode(true));
+    expect(result.isEditingStencil).toBe(true);
   });
 
   it('should handle resetting', () => {
