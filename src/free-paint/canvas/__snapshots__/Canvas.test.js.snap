@@ -14,9 +14,6 @@ exports[`Canvas component matches snapshot 1`] = `
     <span>
       clear canvas
     </span>
-    <span>
-      clear stencil
-    </span>
   </div>
 </DocumentFragment>
 `;

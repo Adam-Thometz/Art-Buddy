@@ -1,5 +1,7 @@
 .Stencil {
   position: absolute;
+  cursor: move;
+  user-select: none;
   background-color: #F8F8F8;
   top: 12%;
   right: 6%;
