@@ -68,12 +68,12 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.currPlaying = action.payload;
     })
     .addCase(clearGame, (state) => {
-      state.words = [];
-      state.filledLetters = {};
-      state.scale = 0;
-      state.sound = 'synth';
-      state.isUpperCase = true;
-      state.formError = null;
+      state.words = INITIAL_STATE.words;
+      state.filledLetters = INITIAL_STATE.filledLetters;
+      state.scale = INITIAL_STATE.scale;
+      state.sound = INITIAL_STATE.sound;
+      state.isUpperCase = INITIAL_STATE.isUpperCase;
+      state.formError = INITIAL_STATE.formError;
     });
 });
 

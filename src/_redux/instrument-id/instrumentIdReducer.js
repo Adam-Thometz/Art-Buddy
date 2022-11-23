@@ -39,9 +39,9 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.answer = answer === 1 ? choice1 : choice2;
     })
     .addCase(clearChoices, (state) => {
-      state.choice1 = null;
-      state.choice2 = null;
-      state.answer = null;
+      state.choice1 = INITIAL_STATE.choice1;
+      state.choice2 = INITIAL_STATE.choice2;
+      state.answer = INITIAL_STATE.answer;
     })
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
@@ -76,7 +76,7 @@ const instrumentIdReducer = createReducer(INITIAL_STATE, (builder) => {
       state.song[id] = instrumentWithMelody;
     })
     .addCase(clearSong, (state) => {
-      state.song = [defaultInstrument, null, null, null];
+      state.song = INITIAL_STATE.song;
     })
 });
 

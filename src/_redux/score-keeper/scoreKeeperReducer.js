@@ -32,7 +32,7 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
       state.students = updatedStudents;
     })
     .addCase(clearGame, (state) => {
-      state.students = [];
+      state.students = INITIAL_STATE.students;
     });
 });
 

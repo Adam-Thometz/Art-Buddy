@@ -45,10 +45,10 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       state.sequence[id].isPlaying = !currIsPlaying;
     })
     .addCase(clearGame, (state) => {
-      state.category = '';
-      state.sequence = [null, null, null, null];
-      state.pitch = '3';
-      state.duration = 3;
+      state.category = INITIAL_STATE.category;
+      state.sequence = INITIAL_STATE.sequence;
+      state.pitch = INITIAL_STATE.pitch;
+      state.duration = INITIAL_STATE.duration;
     });;
 });
 
