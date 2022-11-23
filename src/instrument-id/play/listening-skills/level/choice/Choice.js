@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "_redux/instrument-id/insturmentIdActions";
+import { selectChoice } from "_redux/instrument-id/instrumentIdActions";
 
 import './Choice.css';
 
@@ -26,7 +26,7 @@ const Choice = ({ id, level, choice, save }) => {
         return { ...reportCard, [family]: updatedGrade }; 
       });
     };
-    
+
     const timer = setTimeout(() => {
       if (result) dispatch(selectChoice({ id, level, choice: family }));
       setIsCorrect(null);

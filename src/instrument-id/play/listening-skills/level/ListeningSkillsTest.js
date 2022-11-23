@@ -3,7 +3,7 @@ import useReportCard from "_hooks/useReportCard";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/insturmentIdActions";
+import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/instrumentIdActions";
 
 import './ListeningSkillsTest.css';
 

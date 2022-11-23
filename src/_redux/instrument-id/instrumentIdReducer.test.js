@@ -1,5 +1,5 @@
 import instrumentIdReducer, { INITIAL_STATE, defaultInstrument } from "./instrumentIdReducer";
-import { selectChoice, generateAnswer, clearChoices, addInstrument, removeInstrument, selectMelody } from "./insturmentIdActions";
+import { selectChoice, generateAnswer, clearChoices, addInstrument, removeInstrument, selectMelody } from "./instrumentIdActions";
 
 import { setupChoices, setupInstrument } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
