@@ -8,7 +8,7 @@ import './Stencil.css';
 
 import close from '_media/general-icons/close.png';
 import resizeIcon from '_media/free-paint/resize.png';
-// import getNewSize from '_helpers/free-paint/getNewSize';
+import getNewSize from '_helpers/free-paint/getNewSize';
 
 const Stencil = () => {
   const { stencil, isEditingStencil } = useSelector(state => state.freePaint);
@@ -16,38 +16,25 @@ const Stencil = () => {
   const stencilRef = useRef();
 
   const [resizeInfo, setResizeInfo] = useState({ active: false, x: '', y: '' });
-  const [size, setSize] = useState({ height: '', width: '' });
+  const [size, setSize] = useState({ width: '', height: '', defaultWidth: '', defaultHeight: '' });
 
   useEffect(() => {
-    const height = stencilRef.current.clientHeight;
     const width = stencilRef.current.clientWidth;
-    setSize({ height, width });
+    const height = stencilRef.current.clientHeight;
+    const defaultWidth = stencilRef.current.clientWidth;
+    const defaultHeight = stencilRef.current.clientHeight;
+    setSize({ width, height, defaultWidth, defaultHeight });
   }, [stencilRef]);
   
   const handleClearDisplay = () => dispatch(setStencil(null));
 
   const handleResize = e => {
     if (!resizeInfo.active) return;
-    console.log(resizeInfo);
-    // debugger;
     const { x, y } = resizeInfo;
-
-    // TODO: turn into a helper function that takes
-    // x, y, clientWidth, clientHeight, and size returns width and height
-    const xDiff = Math.abs(x - e.clientX);
-    const yDiff = Math.abs(y - e.clientY);
-    const newWidth = x > e.clientX
-      ? size.width + xDiff
-      : size.width - xDiff;
-    const newHeight = y > e.clientY 
-      ? size.height - yDiff
-      : size.height + yDiff;
-    // then...
-    // const { height, width } = getNewSize({ x, y, clientWidth, clientHeight, currSize: size })
-    // setSize({ height, width })
-
-    setResizeInfo({ ...resizeInfo, x: e.clientX, y: e.clientY });
-    setSize({ width: newWidth, height: newHeight });
+    const { clientX, clientY } = e;
+    const { height, width } = getNewSize({ x, y, clientX, clientY, currSize: size })
+    setResizeInfo({ ...resizeInfo, x: clientX, y: clientY });
+    setSize({ ...size, height, width });
   };
 
   const beginResize = e => setResizeInfo({ active: true, x: e.clientX, y: e.clientY });
@@ -58,6 +45,8 @@ const Stencil = () => {
     width: `${size.width}px`,
     height: `${size.height}px`,
     zIndex: isEditingStencil ? 5 : 3,
+    '--stencilX': `${size.width / size.defaultWidth}`,
+    '--stencilY': `${size.height / size.defaultHeight}`,
   };
 
   return (

@@ -1,3 +1,8 @@
+:root {
+  --stencilX: 1;
+  --stencilY: 1;
+}
+
 .Stencil {
   position: absolute;
   cursor: move;
@@ -21,11 +26,16 @@
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #000000;
   /* To be used for scaling */
-  /* -webkit-transform: scale(2,1); Safari and Chrome */
-  /* -moz-transform: scale(2,1); Firefox */
-  /* -ms-transform: scale(2,1); IE 9 */
-  /* -o-transform: scale(2,1); Opera */
-  /* transform: scale(2,1); W3C */
+  /* Safari and Chrome */
+  -webkit-transform: scale(var(--stencilX), var(--stencilY));
+  /* Firefox */
+  -moz-transform: scale(var(--stencilX), var(--stencilY));
+  /* IE 9 */
+  -ms-transform: scale(var(--stencilX), var(--stencilY));
+  /* Opera */
+  -o-transform: scale(var(--stencilX), var(--stencilY));
+  /* Other */
+  transform: scale(var(--stencilX), var(--stencilY));
 }
 
 .Stencil-clear {
