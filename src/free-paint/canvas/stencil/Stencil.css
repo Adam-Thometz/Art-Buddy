@@ -39,8 +39,8 @@
 }
 
 .Stencil-clear {
-  height: 40px;
-  width: 40px;
+  height: 7%;
+  width: 7%;
   position: absolute;
   top: 5%;
   right: 5%;
@@ -48,8 +48,8 @@
 }
 
 .Stencil-resize {
-  height: 100px;
-  width: 100px;
+  height: 14%;
+  width: 14%;
   position: absolute;
   bottom: -2%;
   left: -2%;
