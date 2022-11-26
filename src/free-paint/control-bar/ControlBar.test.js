@@ -38,14 +38,13 @@ describe('ControlBar component', () => {
 
   it('changes the pencil color when a color is picked', () => {
     renderWithProvider(<ControlBar />);
-    const pencilBtn = screen.getAllByRole('button')[4];
+    const pencilBtn = screen.getAllByRole('button')[1];
     userEvent.click(pencilBtn);
     const red = screen.getByTestId('color-option-#FF0000');
     userEvent.click(red);
     const style = window.getComputedStyle(pencilBtn);
-    // both values below refer to red.
-    // color gives result in rgb and borderColor gives result in hex
-    expect(style.color).toBe('rgb(255, 0, 0)')
-    expect(style.borderColor).toBe('#ff0000')
-  })
+    // both values below refer to red. color gives result in rgb and borderColor gives result in hex
+    expect(style.color).toBe('rgb(255, 0, 0)');
+    expect(style.borderColor).toBe('#ff0000');
+  });
 });
