@@ -24,6 +24,79 @@ exports[`FreePaint component matches snapshot 1`] = `
     >
       <button
         class="Button regular"
+      >
+        <figure
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 45px; width: 45px;"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            Stencil
+          </figcaption>
+        </figure>
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        id="colors"
+        style="border-color: #000000; color: rgb(0, 0, 0);"
+      >
+        <figure
+          class="Icon"
+          id="colors"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            Pencil
+          </figcaption>
+        </figure>
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
+        style="border-color: #000000; color: rgb(0, 0, 0);"
+      >
+        <figure
+          class="Icon"
+        >
+          <img
+            alt=""
+            src="file"
+            style="height: 45px; width: 45px; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
+          />
+          <figcaption
+            class="Icon-text"
+            style="font-size: 1rem;"
+          >
+            Eraser
+          </figcaption>
+        </figure>
+      </button>
+    </div>
+    <div
+      class="ControlBar-button-wrapper"
+    >
+      <button
+        class="Button regular"
         id="upperCase"
         style="border-color: #17255a;"
       >
@@ -65,55 +138,6 @@ exports[`FreePaint component matches snapshot 1`] = `
           class="ControlBar-shape-button"
           src="file"
         />
-      </button>
-    </div>
-    <div
-      class="ControlBar-button-wrapper"
-    >
-      <button
-        class="Button regular"
-        id="colors"
-        style="border-color: #000000; color: rgb(0, 0, 0);"
-      >
-        <figure
-          class="Icon"
-          id="colors"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            Pencil
-          </figcaption>
-        </figure>
-      </button>
-    </div>
-    <div
-      class="ControlBar-button-wrapper"
-    >
-      <button
-        class="Button regular"
-      >
-        <figure
-          class="Icon"
-        >
-          <img
-            alt=""
-            src="file"
-            style="height: 45px; width: 45px;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            Eraser
-          </figcaption>
-        </figure>
       </button>
     </div>
   </section>

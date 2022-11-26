@@ -50,27 +50,29 @@ const Stencil = () => {
   return (
     <Draggable bounds='parent' cancel='.Stencil-resize'>
       <div className='Stencil' style={style} ref={stencilRef}>
-        <img
+        {isEditingStencil ? <img
           className='Stencil-clear'
           src={close}
           alt=''
           aria-label='Clear the stencil'
+          data-testid='stencil-close'
           onClick={handleClearDisplay}
-        />
+        /> : null}
         {stencil.startsWith('data:image')
           ? <img className='Stencil-shape' src={stencil} alt='' />
           : <span className='Stencil-text'>{stencil}</span>
         }
-        <img
+        {isEditingStencil ? <img
           className='Stencil-resize'
           src={resizeIcon}
           draggable={false}
           alt=''
           aria-label='Resize the stencil'
+          data-testid='stencil-resize'
           onMouseDown={beginResize}
           onMouseUp={endResize}
           onMouseMove={handleResize}
-        />
+        /> : null}
       </div>
     </Draggable>
   );
