@@ -21,13 +21,11 @@ const Stencil = () => {
   useEffect(() => {
     const width = stencilRef.current.clientWidth;
     const height = stencilRef.current.clientHeight;
-    const defaultWidth = stencilRef.current.clientWidth;
-    const defaultHeight = stencilRef.current.clientHeight;
-    setSize({ width, height, defaultWidth, defaultHeight });
+    setSize({ width, height, defaultWidth: width, defaultHeight: height });
   }, [stencilRef]);
   
-  const handleClearDisplay = () => dispatch(setStencil(null));
-
+  const beginResize = e => setResizeInfo({ active: true, x: e.clientX, y: e.clientY });
+  
   const handleResize = e => {
     if (!resizeInfo.active) return;
     const { x, y } = resizeInfo;
@@ -36,10 +34,10 @@ const Stencil = () => {
     setResizeInfo({ ...resizeInfo, x: clientX, y: clientY });
     setSize({ ...size, height, width });
   };
-
-  const beginResize = e => setResizeInfo({ active: true, x: e.clientX, y: e.clientY });
-
+  
   const endResize = () => setResizeInfo({ ...resizeInfo, active: false });
+  
+  const handleClearDisplay = () => dispatch(setStencil(null));
 
   const style = {
     width: `${size.width}px`,
