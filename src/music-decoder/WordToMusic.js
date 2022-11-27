@@ -11,7 +11,7 @@ import WordForm from './word-form/WordForm';
 import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
-import createSound from '_helpers/music-decoder/createSound';
+import createSound from '_utils/music-decoder/createSound';
 import { WTM } from '_data/_utils/localStorageKeys';
 import { wordToMusic } from '_data/_activities/activityList';
 

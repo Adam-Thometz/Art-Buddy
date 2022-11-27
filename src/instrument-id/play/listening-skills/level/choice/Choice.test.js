@@ -1,7 +1,7 @@
 import React from "react";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
-import getInstrument from "_helpers/instrument-id/getInstrument";
+import getInstrument from "_utils/instrument-id/getInstrument";
 
 import Choice from "./Choice";
 

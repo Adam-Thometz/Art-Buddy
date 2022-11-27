@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ControlBarContext from "_helpers/free-paint/ControlBarContext"
+import ControlBarContext from "_utils/free-paint/ControlBarContext"
 
 const ControlBarContextMock = ({ children }) => {
   const [shownOptions, handleShownOptions] = useState(null);

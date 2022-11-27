@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ControlBarContext from '_helpers/free-paint/ControlBarContext';
+import ControlBarContext from '_utils/free-paint/ControlBarContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsErasing, setEditStencilMode } from '_redux/free-paint/freePaintActions';

@@ -7,7 +7,7 @@ import './SequencePlayReset.css';
 
 import Icon from "_components/icon/Icon";
 
-import { playSequence } from "_helpers/sequence-maker/playSequence";
+import { playSequence } from "_utils/sequence-maker/playSequence";
 import play from '_media/sequence-maker/_icons/play.png';
 import playAll from '_media/sequence-maker/_icons/play-all.png';
 import reset from '_media/sequence-maker/_icons/reset.png';

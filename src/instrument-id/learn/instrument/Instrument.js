@@ -9,10 +9,10 @@ import Icon from "_components/icon/Icon";
 import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
-import { playBeat, playScale } from "_helpers/instrument-id/play";
-import getInstrument from "_helpers/instrument-id/getInstrument";
-import convertToId from "_helpers/_general/convertToId";
+import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
+import { playBeat, playScale } from "_utils/instrument-id/play";
+import getInstrument from "_utils/instrument-id/getInstrument";
+import convertToId from "_utils/_general/convertToId";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);

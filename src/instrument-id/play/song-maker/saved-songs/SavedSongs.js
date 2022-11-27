@@ -9,8 +9,8 @@ import './SavedSongs.css';
 import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '_media/instrument-id/_icons/iconImports';
-import { createBuffers, getBuffers } from '_helpers/instrument-id/buffers';
-import { play } from '_helpers/instrument-id/play';
+import { createBuffers, getBuffers } from '_utils/instrument-id/buffers';
+import { play } from '_utils/instrument-id/play';
 
 const SavedSongs = () => {
   const { volume } = useSelector(state => state.mainSettings);

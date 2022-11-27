@@ -1,8 +1,8 @@
 import { clearChoices, generateAnswer, selectChoice, addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument } from "./instrumentIdActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import getInstrument from "_helpers/instrument-id/getInstrument";
-import getChoices from "_helpers/instrument-id/getChoices";
+import getInstrument from "_utils/instrument-id/getInstrument";
+import getChoices from "_utils/instrument-id/getChoices";
 
 export const defaultInstrument = {
   instrumentId: null,

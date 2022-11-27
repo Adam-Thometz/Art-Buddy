@@ -7,7 +7,7 @@ import './SequenceBlock.css';
 
 import Button from "_components/button/Button";
 
-import { playOne } from "_helpers/sequence-maker/playSequence";
+import { playOne } from "_utils/sequence-maker/playSequence";
 
 const SequenceBlock = ({ id, block, borderColor }) => {
   const { pitch, duration } = useSelector(state => state.sequenceMaker);

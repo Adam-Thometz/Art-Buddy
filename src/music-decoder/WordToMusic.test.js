@@ -8,7 +8,7 @@ import WordToMusic from './WordToMusic';
 
 import { WTM } from '_data/_utils/localStorageKeys';
 
-jest.mock('_helpers/music-decoder/play');
+jest.mock('_utils/music-decoder/play');
 
 describe('WordToMusic component', () => {
   window.localStorage.setItem(`visited-${WTM}`, true);

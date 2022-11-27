@@ -8,7 +8,7 @@ import './Choice.css';
 import Icon from "_components/icon/Icon";
 
 import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/iconImports";
-import updateReportCard from "_helpers/instrument-id/updateReportCard";
+import updateReportCard from "_utils/instrument-id/updateReportCard";
 
 const Choice = ({ id, level, choice, save }) => {
   const { answer } = useSelector(state => state.instrumentId);

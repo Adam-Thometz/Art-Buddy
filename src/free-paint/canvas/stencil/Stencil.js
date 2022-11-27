@@ -8,7 +8,7 @@ import './Stencil.css';
 
 import close from '_media/general-icons/close.png';
 import resizeIcon from '_media/free-paint/resize.png';
-import getNewSize from '_helpers/free-paint/getNewSize';
+import getNewSize from '_utils/free-paint/getNewSize';
 
 const Stencil = () => {
   const { stencil, isEditingStencil } = useSelector(state => state.freePaint);

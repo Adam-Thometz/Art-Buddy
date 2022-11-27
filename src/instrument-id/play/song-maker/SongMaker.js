@@ -11,8 +11,8 @@ import SavedSongsIcon from './corner-icon/SavedSongsIcon';
 import SaveSong from './save-song/SaveSong';
 import InstrumentDisplay from './instrument-display/InstrumentDisplay';
 
-import { play } from '_helpers/instrument-id/play';
-import { getBuffers, removeBuffers } from '_helpers/instrument-id/buffers';
+import { play } from '_utils/instrument-id/play';
+import { getBuffers, removeBuffers } from '_utils/instrument-id/buffers';
 
 const SongMaker = () => {
   const { song } = useSelector(state => state.instrumentId);

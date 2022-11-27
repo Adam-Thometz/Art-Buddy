@@ -11,9 +11,9 @@ import Toggle from '_components/toggle/Toggle';
 
 import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';
-import play from '_helpers/music-decoder/play';
-import createSound from '_helpers/music-decoder/createSound';
-import convertLettersToNotes from '_helpers/music-decoder/convertLettersToNotes';
+import play from '_utils/music-decoder/play';
+import createSound from '_utils/music-decoder/createSound';
+import convertLettersToNotes from '_utils/music-decoder/convertLettersToNotes';
 
 const DecoderControls = () => {
   const {

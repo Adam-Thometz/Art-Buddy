@@ -8,7 +8,7 @@ import SequenceMaker from './SequenceMaker';
 
 import { SM } from '_data/_utils/localStorageKeys';
 
-jest.mock('_helpers/sequence-maker/createBuffer');
+jest.mock('_utils/sequence-maker/createBuffer');
 
 function setupChoices() {
   const categoryDropdown = screen.getByText('SOUND CATEGORY');

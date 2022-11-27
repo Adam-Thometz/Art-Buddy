@@ -1,10 +1,10 @@
 import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import hasValidWords from "_helpers/music-decoder/hasValidWords";
-import searchLetter from "_helpers/music-decoder/searchLetter";
-import findLettersToRemove from "_helpers/music-decoder/findLettersToRemove";
-import play from "_helpers/music-decoder/play";
+import hasValidWords from "_utils/music-decoder/hasValidWords";
+import searchLetter from "_utils/music-decoder/searchLetter";
+import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
+import play from "_utils/music-decoder/play";
 import LETTER_NOTES from "_data/music-decoder/letterNotes";
 
 export const INITIAL_STATE = {

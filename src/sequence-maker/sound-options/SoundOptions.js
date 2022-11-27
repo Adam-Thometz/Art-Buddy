@@ -9,7 +9,7 @@ import Options from '_components/option/Options';
 import Icon from '_components/icon/Icon';
 
 import soundInfo from '_data/sequence-maker/soundInfo';
-import createBuffer from '_helpers/sequence-maker/createBuffer';
+import createBuffer from '_utils/sequence-maker/createBuffer';
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector(state => state.sequenceMaker);

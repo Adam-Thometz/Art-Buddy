@@ -9,7 +9,7 @@ import AddIcon from '_components/icon/add-icon/AddIcon';
 import Dropdown from '_components/dropdown/Dropdown';
 
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
-import { createBuffers } from '_helpers/instrument-id/buffers';
+import { createBuffers } from '_utils/instrument-id/buffers';
 
 const InstrumentDisplay = () => {
   const { song } = useSelector(state => state.instrumentId);
