@@ -7,7 +7,7 @@ import './NewRoster.css';
 import AddIcon from '_components/icon/add-icon/AddIcon';
 import Icon from '_components/icon/Icon';
 
-import convertToId from '_helpers/_utils/convertToId';
+import convertToId from '_helpers/_general/convertToId';
 import deleteIcon from '_media/instrument-id/_icons/play/delete.png';
 import check from '_media/settings/check.png';
 

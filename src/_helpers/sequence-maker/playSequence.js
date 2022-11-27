@@ -1,5 +1,5 @@
 import { now } from "tone";
-import sample from "../_utils/sample";
+import sample from "../_general/sample";
 
 /** playSequence:
  * Purpose: plays the sounds in the sequence. May play one at a time or altogether.

@@ -12,7 +12,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import { createBuffers, removeBuffers } from "_helpers/instrument-id/buffers";
 import { playBeat, playScale } from "_helpers/instrument-id/play";
 import getInstrument from "_helpers/instrument-id/getInstrument";
-import convertToId from "_helpers/_utils/convertToId";
+import convertToId from "_helpers/_general/convertToId";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);

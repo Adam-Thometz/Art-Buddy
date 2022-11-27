@@ -9,7 +9,7 @@ import InstrumentId from "instrument-id/InstrumentId";
 import InstrumentIdRoutes from "./instrument-id/InstrumentIdRoutes";
 
 import urls from "_data/_routes/routeUrls";
-import getRoutes from "_helpers/_utils/getRoutes";
+import getRoutes from "_helpers/_general/getRoutes";
 
 const MusicRoutes = () => {
   return (
