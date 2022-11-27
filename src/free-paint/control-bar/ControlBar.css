@@ -4,22 +4,3 @@
   height: 70vh;
   overflow: scroll;
 }
-
-.ControlBar-button-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.ControlBar-button-wrapper button {
-  z-index: 6;
-  width: 105px;
-  height: 90px;
-  border-width: 6px;
-  margin: 2px;
-  padding: 3%;
-}
-
-.ControlBar-shape-button {
-  width: 45px;
-  height: 45px;
-}

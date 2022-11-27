@@ -6,18 +6,20 @@ exports[`ControlBar component matches snapshot 1`] = `
     class="ControlBar"
   >
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
+        id=""
       >
         <figure
           class="Icon"
+          id=""
         >
           <img
             alt=""
             src="file"
-            style="height: 45px; width: 45px;"
+            style="height: 45px; width: 45px; cursor: pointer;"
           />
           <figcaption
             class="Icon-text"
@@ -29,7 +31,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
@@ -55,19 +57,21 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
+        id=""
         style="border-color: #000000; color: rgb(0, 0, 0);"
       >
         <figure
           class="Icon"
+          id=""
         >
           <img
             alt=""
             src="file"
-            style="height: 45px; width: 45px; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
+            style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
           />
           <figcaption
             class="Icon-text"
@@ -79,7 +83,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
@@ -90,7 +94,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
@@ -101,7 +105,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
@@ -112,18 +116,14 @@ exports[`ControlBar component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="ControlBar-button-wrapper"
+      class="ButtonWrapper"
     >
       <button
         class="Button regular"
         id="shapes"
         style="border-color: #fd4d3a;"
       >
-        <img
-          alt="Shapes"
-          class="ControlBar-shape-button"
-          src="file"
-        />
+        file
       </button>
     </div>
   </section>
