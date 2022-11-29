@@ -18,16 +18,13 @@ const ScoreKeeper = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(changeCurrGame(scoreKeeper))
+    dispatch(changeCurrGame(scoreKeeper));
     dispatch(loadStudents(roster.students));
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
     };
   }, [dispatch, roster]);
-
-  useEffect(() => {
-  }, [dispatch]);
 
   return (
     <>
