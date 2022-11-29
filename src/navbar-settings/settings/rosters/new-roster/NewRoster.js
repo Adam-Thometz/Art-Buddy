@@ -20,8 +20,15 @@ const NewRoster = () => {
     .filter(field => field.includes('student'))
     .map((field, i) => (
       <div className='NewRoster-form-control'>
-        <label htmlFor={field}>Student {i+1}: </label>
-        <input type='text' name={field} id={field} value={input[field]} onChange={setInput} />
+        <input
+          className="NewRoster-input"
+          name={field}
+          id={field}
+          placeholder='STUDENT'
+          value={input[field]}
+          onChange={setInput}
+        />
+        <label className="NewRoster-label" htmlFor={field}>Student {i+1}: </label>
       </div>
     ));
 
@@ -55,12 +62,19 @@ const NewRoster = () => {
     <section className='NewRoster'>
       <aside className='NewRoster-options'>
         <AddIcon text='Name' size='50px' onClick={addStudent} />
-        <Icon icon={deleteIcon} text="Delete" size='50px' onClick={reset} />
+        <Icon icon={deleteIcon} text="Reset" size='50px' onClick={reset} />
         <Icon icon={check} text="Done" size='50px' onClick={addRoster} />
       </aside>
       <aside className='NewRoster-students'>
-        <label htmlFor='name'>Roster Name: </label>
-        <input type='text' name='name' id='name' value={input.name} onChange={updateInput} />
+        <input
+          className="NewRoster-input"
+          name='name'
+          id='name'
+          placeholder='ROSTER NAME'
+          value={input.name}
+          onChange={updateInput}
+        />
+        <label className="NewRoster-label" htmlFor='name'>Roster Name: </label>
         <p className='NewRoster-error' ref={errorRef}></p>
         {studentInputs}
       </aside>

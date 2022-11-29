@@ -35,7 +35,7 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
           class="Icon-text"
           style="font-size: 1rem;"
         >
-          Delete
+          Reset
         </figcaption>
       </figure>
       <figure
@@ -57,34 +57,38 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
     <aside
       class="NewRoster-students"
     >
+      <input
+        class="NewRoster-input"
+        id="name"
+        name="name"
+        placeholder="ROSTER NAME"
+        value=""
+      />
       <label
+        class="NewRoster-label"
         for="name"
       >
         Roster Name: 
       </label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        value=""
-      />
       <p
         class="NewRoster-error"
       />
       <div
         class="NewRoster-form-control"
       >
+        <input
+          class="NewRoster-input"
+          id="student1"
+          name="student1"
+          placeholder="STUDENT"
+          value=""
+        />
         <label
+          class="NewRoster-label"
           for="student1"
         >
           Student 1: 
         </label>
-        <input
-          id="student1"
-          name="student1"
-          type="text"
-          value=""
-        />
       </div>
     </aside>
   </section>

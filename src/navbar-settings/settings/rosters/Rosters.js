@@ -32,11 +32,11 @@ const Rosters = () => {
   return (
     <div className='Rosters'>
       <Popup
-          title='NEW ROSTER'
-          trigger={<AddIcon text='ADD' size='42px' />}
-          triggerClass='Settings-add-roster'
-          popup={<NewRoster />}
-        />
+        title='NEW ROSTER'
+        trigger={<AddIcon text='ADD' size='42px' />}
+        triggerClass='Settings-add-roster'
+        popup={<NewRoster />}
+      />
         {Object.keys(rosters).length ? (
           <Dropdown labelText={roster.name ? roster.name : 'SELECT ROSTER'} onClick={handleSetRoster} options={createRosterSelection()} />
         ) : null}
