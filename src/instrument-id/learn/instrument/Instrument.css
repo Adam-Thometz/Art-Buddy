@@ -15,6 +15,10 @@
   border-left: 1px solid #4D4F5E;
 }
 
+.Instrument-information img {
+  margin: 0 20px;
+}
+
 .Instrument-materials {
   display: flex;
   justify-content: center;
