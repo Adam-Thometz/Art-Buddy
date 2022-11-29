@@ -9,7 +9,7 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 import ControlBar from './control-bar/ControlBar';
 import Canvas from './canvas/Canvas';
-import Stencil from './canvas/stencil/Stencil';
+import Stencil from './stencil/Stencil';
 
 import { freePaint } from '_data/_activities/activityList';
 import { FP } from '_data/_utils/localStorageKeys';
