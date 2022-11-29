@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import ControlBarContext from '_utils/free-paint/ControlBarContext';
 
 import './ButtonWrapper.css';
