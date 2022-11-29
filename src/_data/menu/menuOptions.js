@@ -38,13 +38,13 @@ const menuOptions = {
   tools: [
     {
       name: "SCORE KEEPER",
-      url: urls.scoreKeeper,
+      url: urls.scoreKeeperUrl,
       icon: scoreKeeperIcon,
       active: true
     },
     {
       name: 'TIME KEEPER',
-      url: urls.timeKeeper,
+      url: urls.timeKeeperUrl,
       icon: timeKeeperIcon,
       active: true
     },
