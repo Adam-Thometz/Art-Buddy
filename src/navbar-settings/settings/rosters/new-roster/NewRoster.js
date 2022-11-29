@@ -14,7 +14,8 @@ import check from '_media/settings/check.png';
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({ name: '', student1: '' });
   const errorRef = useRef();
-  const [rosters, setRosters] = useRoster();
+  const successRef = useRef();
+  const [, setRosters] = useRoster();
 
   const studentInputs = Object.keys(input)
     .filter(field => field.includes('student'))
@@ -53,7 +54,16 @@ const NewRoster = () => {
     const students = Object.keys(input)
       .filter(field => field.includes('student'))
       .map(student => input[student]);
-    setRosters({ ...rosters, [rosterId]: { name, students } });
+    setRosters(rosters => ({
+      ...rosters,
+      [rosterId]: { name, students }
+    }));
+    resetInput();
+    successRef.current.textContent = 'Add roster successful!';
+    const timer = setTimeout(() => {
+      successRef.current.textContent = '';
+      clearTimeout(timer);
+    }, 5000);
   };
 
   const reset = () => resetInput();
@@ -77,6 +87,7 @@ const NewRoster = () => {
         <label className="NewRoster-label" htmlFor='name'>Roster Name: </label>
         <p className='NewRoster-error' ref={errorRef}></p>
         {studentInputs}
+        <p className='NewRoster-success' ref={successRef}></p>
       </aside>
     </section>
   );

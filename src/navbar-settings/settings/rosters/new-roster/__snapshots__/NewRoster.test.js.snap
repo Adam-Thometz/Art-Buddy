@@ -90,6 +90,9 @@ exports[`NewRoster component matches the snapshot of NewRoster 1`] = `
           Student 1: 
         </label>
       </div>
+      <p
+        class="NewRoster-success"
+      />
     </aside>
   </section>
 </DocumentFragment>
