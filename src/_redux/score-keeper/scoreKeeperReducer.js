@@ -3,7 +3,9 @@ import { addPoint, removePoint, clearGame, loadStudents } from "./scoreKeeperAct
 
 import sortWinners from "_utils/score-keeper/sortWinners";
 
-export const INITIAL_STATE = { students: [] }
+export const INITIAL_STATE = {
+  students: []
+};
 
 const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
