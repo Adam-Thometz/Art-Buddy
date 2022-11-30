@@ -5,25 +5,21 @@ exports[`Rosters component matches the snapshot of Rosters 1`] = `
   <div
     class="Rosters"
   >
-    <div
-      class="Settings-add-roster"
+    <figure
+      class="Icon"
     >
-      <figure
-        class="Icon"
+      <img
+        alt=""
+        src="file"
+        style="height: 42px; width: 42px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1rem;"
       >
-        <img
-          alt=""
-          src="file"
-          style="height: 42px; width: 42px;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1rem;"
-        >
-          ADD
-        </figcaption>
-      </figure>
-    </div>
+        ADD
+      </figcaption>
+    </figure>
   </div>
 </DocumentFragment>
 `;
