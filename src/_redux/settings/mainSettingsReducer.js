@@ -2,7 +2,7 @@ import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, tog
 import { createReducer } from "@reduxjs/toolkit";
 
 export const demoClass = {
-  name: 'Mr. Thometz',
+  name: 'Demo Class',
   students: [
     'Mario',
     'Buzz Lightyear',
