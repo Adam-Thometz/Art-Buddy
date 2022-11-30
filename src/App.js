@@ -7,7 +7,7 @@ import Navbar from './navbar-settings/Navbar';
 import ArtBuddyRoutes from '_routes/ArtBuddyRoutes';
 
 const App = () => {
-  const screenIsTooSmall = window.innerWidth < 1000
+  const screenIsTooSmall = window.innerWidth < 1000;
   return (
     <div className="App">
       {screenIsTooSmall ? <TooSmall /> : <>
