@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext, useMemo } from 'react';
 import useRoster from '_hooks/useRoster';
+import PopupContext from '_utils/settings/PopupContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setRoster } from '_redux/settings/mainSettingsActions';
@@ -8,38 +9,38 @@ import './Rosters.css';
 
 import NewRoster from './new-roster/NewRoster';
 import AddIcon from '_components/icon/add-icon/AddIcon';
-import Popup from '_components/popup/Popup';
 import Dropdown from '_components/dropdown/Dropdown';
 
 const Rosters = () => {
   const { roster } = useSelector(state => state.mainSettings);
   const [rosters] = useRoster();
+  const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
+
+  const rosterSelection = useMemo(() => {
+    const result = {};
+    for (let rosterId in rosters) {
+      result[rosterId] = rosters[rosterId].name;
+    };
+    return result;
+  }, [rosters]);
 
   const handleSetRoster = e => {
     const roster = rosters[e.target.id];
+    if (!roster) return;
     dispatch(setRoster(roster));
   };
 
-  const createRosterSelection = () => {
-    const rosterSelection = {};
-    for (let rosterId in rosters) {
-      rosterSelection[rosterId] = rosters[rosterId].name;
-    };
-    return rosterSelection;
-  };
+  const openNewRosterMenu = () => setCurrPopup({ title: "NEW ROSTER", popup: <NewRoster /> });
+
+  const dropdownDisplay = roster.name === "Demo Class" ? "SELECT ROSTER" : roster.name;
 
   return (
     <div className='Rosters'>
-      <Popup
-        title='NEW ROSTER'
-        trigger={<AddIcon text='ADD' size='42px' />}
-        triggerClass='Settings-add-roster'
-        popup={<NewRoster />}
-      />
-        {Object.keys(rosters).length ? (
-          <Dropdown labelText={roster.name ? roster.name : 'SELECT ROSTER'} onClick={handleSetRoster} options={createRosterSelection()} />
-        ) : null}
+      <AddIcon text="ADD" size="42px" onClick={openNewRosterMenu} />
+      {Object.keys(rosters).length ? (
+        <Dropdown labelText={dropdownDisplay} onClick={handleSetRoster} options={rosterSelection} />
+      ) : null}
     </div>
   );
 };
