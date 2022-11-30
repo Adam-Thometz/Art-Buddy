@@ -10,7 +10,7 @@ import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
 import smallPlayIcon from './play/play.png';
-import deleteIcon from './play/delete.png';
+import deleteIcon from '_media/general-icons/delete.png';
 import savedSongsIcon from './play/saved-songs.png';
 
 // Report card bar
