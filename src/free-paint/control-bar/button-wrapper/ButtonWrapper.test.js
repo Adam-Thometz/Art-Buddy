@@ -1,7 +1,7 @@
 import React from "react";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
-import ControlBarContextMock from "_testUtils/mocks/controlBarContextMock";
+import { ControlBarContextMock } from "_testUtils/mocks/contextMocks";
 
 import ButtonWrapper from "./ButtonWrapper";
 
