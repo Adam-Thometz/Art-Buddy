@@ -13,14 +13,6 @@ import smallPlayIcon from './play/play.png';
 import deleteIcon from '_media/general-icons/delete.png';
 import savedSongsIcon from './play/saved-songs.png';
 
-// Report card bar
-import emptyFirst from '_media/instrument-id/_icons/report-card-bar/empty-first.png';
-import emptyMid from '_media/instrument-id/_icons/report-card-bar/empty-mid.png';
-import emptyLast from '_media/instrument-id/_icons/report-card-bar/empty-last.png';
-import fullFirst from '_media/instrument-id/_icons/report-card-bar/full-first.png';
-import fullMid from '_media/instrument-id/_icons/report-card-bar/full-mid.png';
-import fullLast from '_media/instrument-id/_icons/report-card-bar/full-last.png';
-
 // Brass instruments
 import trumpetIcon from './instruments/brass/trumpet.png';
 import tromboneIcon from './instruments/brass/trombone.png';
@@ -84,13 +76,6 @@ export {
   smallPlayIcon,
   deleteIcon,
   savedSongsIcon,
-
-  emptyFirst,
-  emptyMid,
-  emptyLast,
-  fullFirst,
-  fullMid,
-  fullLast,
 
   trumpetIcon,
   frenchHornIcon,
