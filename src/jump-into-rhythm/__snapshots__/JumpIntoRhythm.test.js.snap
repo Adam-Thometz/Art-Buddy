@@ -100,22 +100,6 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
-        id="eighthNote"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 100px; width: 30%; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1.75rem;"
-        >
-          Eighth Note
-        </figcaption>
-      </figure>
-      <figure
-        class="Icon"
         id="quarterRest"
       >
         <img
@@ -128,22 +112,6 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
           style="font-size: 1.75rem;"
         >
           Quarter Rest
-        </figcaption>
-      </figure>
-      <figure
-        class="Icon"
-        id="eighthRest"
-      >
-        <img
-          alt=""
-          src="file"
-          style="height: 100px; width: 30%; cursor: pointer;"
-        />
-        <figcaption
-          class="Icon-text"
-          style="font-size: 1.75rem;"
-        >
-          Eighth Rest
         </figcaption>
       </figure>
     </section>
