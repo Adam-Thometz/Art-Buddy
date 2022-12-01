@@ -3,7 +3,7 @@ import updateReportCard from "./updateReportCard";
 import { instrumentIdReportCard } from '_data/_report-cards/initialReportCards';
 
 describe('updateReportCard', () => {
-  const group = instrumentIdReportCard.brass;
+  const group = instrumentIdReportCard.brass.results;
   const name = 'TRUMPET';
   it('should update if a unique value is passed in', () => {
     expect(updateReportCard({ group, name })).toEqual(['TRUMPET'])

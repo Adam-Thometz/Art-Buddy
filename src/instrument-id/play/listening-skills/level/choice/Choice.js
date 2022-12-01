@@ -22,8 +22,14 @@ const Choice = ({ id, level, choice, save }) => {
 
     if (result) {
       save(reportCard => {
-        const updatedGrade = updateReportCard({ group: reportCard[family], name });
-        return { ...reportCard, [family]: updatedGrade }; 
+        const updatedGrade = updateReportCard({ group: reportCard[family].results, name });
+        return {
+          ...reportCard,
+          [family]: { 
+            ...reportCard[family],
+            results: updatedGrade
+          }
+        }; 
       });
     };
 
