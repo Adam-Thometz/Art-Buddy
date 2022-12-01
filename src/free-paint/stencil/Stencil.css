@@ -1,9 +1,6 @@
-:root {
+.Stencil {
   --stencilX: 1;
   --stencilY: 1;
-}
-
-.Stencil {
   position: absolute;
   cursor: move;
   user-select: none;
@@ -25,7 +22,7 @@
   color: white;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #000000;
-  /* To be used for scaling */
+  /* To be used for scaling letters */
   /* Safari and Chrome */
   -webkit-transform: scale(var(--stencilX), var(--stencilY));
   /* Firefox */
