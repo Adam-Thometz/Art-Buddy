@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useSavedSongs from '_hooks/useSavedSongs';
-// import useLocalStorage from '_hooks/useLocalStorage';
 
 import { useSelector } from 'react-redux';
 
@@ -46,8 +45,6 @@ const SavedSongs = () => {
     savedSongs.delete(selectedSong);
     setSavedSongs(JSON.stringify(Array.from(savedSongs.entries())));
   };
-
-  
 
   const songDisplay = Array.from(savedSongs.keys()).map(key => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
