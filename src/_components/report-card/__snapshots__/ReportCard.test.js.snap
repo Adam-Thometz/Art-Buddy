@@ -9,13 +9,13 @@ exports[`ReportCard component matches snapshot 1`] = `
       class="ReportCard-scores"
     >
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          BRASS
+          BRASS FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -35,19 +35,19 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>
       </section>
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          ELECTRONIC
+          ELECTRONIC FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -67,19 +67,19 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>
       </section>
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          PERCUSSION
+          PERCUSSION FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -99,19 +99,19 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>
       </section>
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          STRINGS
+          STRINGS FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -131,19 +131,19 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>
       </section>
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          WOODWIND
+          WOODWIND FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -163,19 +163,19 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>
       </section>
       <section
-        class="ReportCard-score-display"
+        class="Score"
       >
         <span>
-          VOICE
+          VOICE FAMILY
         </span>
         <div
-          class="ReportCard-visual-score"
+          class="Score-visual-score"
         >
           <img
             alt=""
@@ -195,7 +195,7 @@ exports[`ReportCard component matches snapshot 1`] = `
           />
         </div>
         <span
-          class="ReportCard-text-score"
+          class="Score-text-score"
         >
           0/4 passed
         </span>

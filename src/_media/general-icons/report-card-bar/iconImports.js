@@ -1,15 +1,9 @@
-import emptyFirst from './empty-first.png';
-import emptyMid from './empty-mid.png';
-import emptyLast from './empty-last.png';
-import fullFirst from './full-first.png';
-import fullMid from './full-mid.png';
-import fullLast from './full-last.png';
+import first from './first.png';
+import mid from './mid.png';
+import last from './last.png';
 
 export {
-  emptyFirst,
-  emptyMid,
-  emptyLast,
-  fullFirst,
-  fullMid,
-  fullLast
+  first,
+  mid,
+  last,
 }

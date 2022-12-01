@@ -1,0 +1,19 @@
+.Score {
+  font-size: 2rem;
+  margin: 5% 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.Score-visual-score img {
+  padding-right: 10px;
+  height: 50px;
+  width: 23%;
+}
+
+.Score-text-score {
+  text-align: right;
+  font-size: 1.5rem;
+  margin-right: 5%;
+}

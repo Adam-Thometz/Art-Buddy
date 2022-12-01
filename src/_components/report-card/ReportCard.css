@@ -10,26 +10,6 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-.ReportCard-score-display {
-  font-size: 2rem;
-  margin: 5% 0;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-
-.ReportCard-visual-score img {
-  padding-right: 10px;
-  height: 50px;
-  width: 23%;
-}
-
-.ReportCard-text-score {
-  text-align: right;
-  font-size: 1.5rem;
-  margin-right: 5%;
-}
-
 .ReportCard-clear {
   padding-top: 40px;
   margin: 0 auto;
