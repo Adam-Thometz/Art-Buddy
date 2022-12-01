@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Score component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="Score"
+  >
+    <span>
+      COOL FACTOR
+    </span>
+    <div
+      class="Score-visual-score"
+    >
+      <img
+        alt=""
+        src="file"
+        style="filter: invert(37%) sepia(87%) saturate(3444%) hue-rotate(343deg) brightness(119%) contrast(98%);"
+      />
+      <img
+        alt=""
+        src="file"
+        style="filter: invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%);"
+      />
+      <img
+        alt=""
+        src="file"
+      />
+      <img
+        alt=""
+        src="file"
+      />
+    </div>
+    <span
+      class="Score-text-score"
+    >
+      2/4 passed
+    </span>
+  </section>
+</DocumentFragment>
+`;
