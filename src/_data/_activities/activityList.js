@@ -66,24 +66,6 @@ const freePaint = {
   description: 'Draw different things like letters and shapes!',
   active: true
 };
-const placeholder = {
-  name: 'PLACE HOLDER',
-  icon: null,
-  url: null,
-  activityType: types[0],
-  genre: genres[1],
-  description: '',
-  active: false
-};
-const placeholder2 = {
-  name: 'PLACE HOLDER',
-  icon: null,
-  url: null,
-  activityType: types[0],
-  genre: genres[1],
-  description: '',
-  active: false
-};
 const scoreKeeper = {
   name: 'SCORE KEEPER',
   icon: null,
@@ -103,6 +85,19 @@ const timeKeeper = {
   active: false
 };
 
+const activities = {
+  wordToMusic,
+  instrumentId,
+  jumpIntoRhythm,
+  sequenceMaker,
+  colorTheory,
+  freePaint,
+  scoreKeeper,
+  timeKeeper
+};
+
+export default activities;
+
 export {
   wordToMusic,
   instrumentId,
@@ -110,8 +105,6 @@ export {
   sequenceMaker,
   colorTheory,
   freePaint,
-  placeholder,
-  placeholder2,
   scoreKeeper,
   timeKeeper
-};
+}
