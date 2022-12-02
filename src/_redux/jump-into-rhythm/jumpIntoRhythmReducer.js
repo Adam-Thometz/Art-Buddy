@@ -12,9 +12,9 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
       const nextIdx = state.rhythm.indexOf(null);
       if (nextIdx === -1) return;
       
-      const { id, img, duration } = action.payload;
+      const { id, img, duration, isRest } = action.payload;
       const newRhythm = [ ...state.rhythm ];
-      newRhythm[nextIdx] = { id, img, duration };
+      newRhythm[nextIdx] = { id, img, duration, isRest };
       state.rhythm = newRhythm;
     })
     .addCase(deleteFromRhythm, (state, action) => {
