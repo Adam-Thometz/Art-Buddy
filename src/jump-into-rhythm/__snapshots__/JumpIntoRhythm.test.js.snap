@@ -59,6 +59,20 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
         class="Notes-beats"
       />
     </div>
+    <div
+      class="Notes-measure"
+    >
+      <section
+        class="Notes-beats"
+      />
+    </div>
+    <div
+      class="Notes-measure"
+    >
+      <section
+        class="Notes-beats"
+      />
+    </div>
   </div>
   <section
     class="NoteOptions"

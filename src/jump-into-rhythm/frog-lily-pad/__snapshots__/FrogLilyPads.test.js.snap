@@ -5,26 +5,30 @@ exports[`FrogLilyPads component matches snapshot 1`] = `
   <section
     class="FrogLilyPads"
   >
-    <img
-      alt="frog"
-      class="Frog"
-      src="file"
-    />
     <div
-      class="LilyPadDisplay"
+      class="FrogLilyPads-section"
     >
-      <div
-        class="LilyPad"
+      <img
+        alt="frog"
+        class="Frog"
+        src="file"
       />
       <div
-        class="LilyPad"
-      />
-      <div
-        class="LilyPad"
-      />
-      <div
-        class="LilyPad"
-      />
+        class="LilyPadDisplay"
+      >
+        <div
+          class="LilyPad"
+        />
+        <div
+          class="LilyPad"
+        />
+        <div
+          class="LilyPad"
+        />
+        <div
+          class="LilyPad"
+        />
+      </div>
     </div>
   </section>
 </DocumentFragment>

@@ -8,11 +8,9 @@ const LilyPad = ({ beat }) => {
   return (
     <div className='LilyPad'>
       {beat ? (
-        <>
-          {beat.duration.map(note => (
-            <img src={lilyPad} alt='A lily pad' />
-          ))}
-        </>
+        beat.duration.map(note => (
+          <img src={lilyPad} alt='A lily pad' style={{ width: note === '8n' ? '45%' : '90%' }} />
+        ))
       ) : null}
     </div>
   );
