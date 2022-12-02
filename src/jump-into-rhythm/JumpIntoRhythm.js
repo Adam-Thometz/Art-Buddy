@@ -13,6 +13,8 @@ import FrogLilyPad from './frog-lily-pad/FrogLilyPads';
 
 import { JIR } from '_data/_utils/localStorageKeys';
 import { jumpIntoRhythm } from '_data/_activities/activityList';
+import { createBuffers, removeBuffers } from '_utils/jump-into-rhythm/buffers';
+import { Transport } from 'tone';
 
 const JumpIntoRhythm = () => {
   const { currGame } = useSelector(state => state.mainSettings);
@@ -21,9 +23,15 @@ const JumpIntoRhythm = () => {
 
   useEffect(() => {
     dispatch(changeCurrGame(jumpIntoRhythm));
+    if (process.env.NODE_ENV !== 'test') {
+      Transport.bpm.value = 90;
+      createBuffers();
+    };
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
+      Transport.bpm.value = 120;
+      removeBuffers();
     }
   }, [dispatch]);
 
