@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleHasExtraMeasure } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
+import { setMeasures } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './Notes.css';
 
@@ -16,12 +16,14 @@ const Notes = () => {
   const { rhythm } = useSelector(state => state.jumpIntoRhythm);
   const dispatch = useDispatch();
 
-  const handleToggleMeasures = () => dispatch(toggleHasExtraMeasure(rhythm.length === 4));
+  const addMeasure = () => dispatch(setMeasures(4));
+  const removeMeasure = () => dispatch(setMeasures(-4));
 
   const colorOrder = [2, 1, 0, 4];
   
   return (
     <div className='Notes'>
+      {/* Measure 1 */}
       <div className='Notes-measure'>
         <img src={trebleClef} alt='Treble clef' />
         <section className='Notes-beats'>
@@ -30,11 +32,44 @@ const Notes = () => {
           ))}
         </section>
       </div>
+      {/* Measure 2 */}
       <div className='Notes-measure'>
-        <img src={rhythm.length === 8 ? minus : plus} className='Notes-toggle' alt='Add measure' onClick={handleToggleMeasures} />
+        <img src={rhythm.length >= 8 ? minus : plus} className='Notes-toggle' alt='Add measure' onClick={rhythm.length === 4 ? addMeasure : removeMeasure} />
         <section className='Notes-beats'>
-          {rhythm.length === 8 ? rhythm.slice(4).map((note, i) => (
+          {rhythm.length >= 8 ? rhythm.slice(4, 8).map((note, i) => (
             <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+4} />
+          )) : null}
+        </section>
+      </div>
+      {/* Measure 3 */}
+      <div className='Notes-measure'>
+        {rhythm.length >= 8
+          ? <img
+            src={rhythm.length >= 12 ? minus : plus}
+            className='Notes-toggle'
+            alt='Add measure'
+            onClick={rhythm.length === 8 ? addMeasure : removeMeasure}
+          />
+          : null}
+        <section className='Notes-beats'>
+          {rhythm.length >= 12 ? rhythm.slice(8, 12).map((note, i) => (
+            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+8} />
+          )) : null}
+        </section>
+      </div>
+      {/* Measure 4 */}
+      <div className='Notes-measure'>
+        {rhythm.length >= 12
+          ? <img
+            src={rhythm.length >= 16 ? minus : plus}
+            className='Notes-toggle'
+            alt='Add measure'
+            onClick={rhythm.length === 12 ? addMeasure : removeMeasure}
+          />
+          : null}
+        <section className='Notes-beats'>
+          {rhythm.length >= 16 ? rhythm.slice(12).map((note, i) => (
+            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+12} />
           )) : null}
         </section>
       </div>
