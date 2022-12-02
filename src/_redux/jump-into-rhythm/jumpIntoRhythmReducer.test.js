@@ -1,5 +1,5 @@
 import jumpIntoRhythmReducer, { INITIAL_STATE } from "./jumpIntoRhythmReducer";
-import { addToRhythm, toggleHasExtraMeasure, clearGame, deleteFromRhythm, toggleLilyPadDisplay } from "./jumpIntoRhythmActions";
+import { addToRhythm, setMeasures, clearGame, deleteFromRhythm, toggleLilyPadDisplay } from "./jumpIntoRhythmActions";
 import { testQuarterNote } from "_testUtils/test-states/jumpIntoRhythmReducerTestState";
 
 describe('Jump Into Rhythm Reducer', () => {
@@ -20,11 +20,17 @@ describe('Jump Into Rhythm Reducer', () => {
     expect(result2.rhythm[0]).toBeNull();
   });
   
-  it('should toggle an extra rhythm', () => {
-    const result = jumpIntoRhythmReducer(undefined, toggleHasExtraMeasure(true));
-    expect(result.rhythm.length).toBe(8);
-    const result2 = jumpIntoRhythmReducer(result, toggleHasExtraMeasure(false));
-    expect(result2.rhythm.length).toBe(4);
+  it('should add or delete measures', () => {
+    const twoMeasures = jumpIntoRhythmReducer(undefined, setMeasures(4));
+    expect(twoMeasures.rhythm.length).toBe(8);
+    const threeMeasures = jumpIntoRhythmReducer(twoMeasures, setMeasures(4));
+    expect(threeMeasures.rhythm.length).toBe(12);
+    const fourMeasures = jumpIntoRhythmReducer(threeMeasures, setMeasures(4));
+    expect(fourMeasures.rhythm.length).toBe(16);
+    const reachedLimit = jumpIntoRhythmReducer(fourMeasures, setMeasures(4));
+    expect(reachedLimit.rhythm.length).toBe(16);
+    const removeOneMeasure = jumpIntoRhythmReducer(reachedLimit, setMeasures(-4));
+    expect(removeOneMeasure.rhythm.length).toBe(12);
   });
 
   it('should toggle lilypad display', () => {
