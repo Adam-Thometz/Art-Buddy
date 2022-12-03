@@ -42,7 +42,7 @@ exports[`Instrument component matches snapshot 1`] = `
       class="Instrument-information"
     >
       <h2>
-        WHAT IS THE TRUMPET MADE OUT OF?
+        What is the trumpet made of?
       </h2>
       <section
         class="Instrument-materials"
@@ -63,11 +63,10 @@ exports[`Instrument component matches snapshot 1`] = `
           </figcaption>
         </figure>
       </section>
-      <h2>
-        THE TRUMPET IS PLAYED BY...
-      </h2>
-      <p>
-        blowing into the mouthpiece and pressing on the valves
+      <p
+        class="Instrument-made-of"
+      >
+        The TRUMPET is played by blowing into the mouthpiece and pressing on the valves
       </p>
       <section
         class="Instrument-buttons"

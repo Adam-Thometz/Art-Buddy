@@ -49,14 +49,13 @@ const Instrument = () => {
           <Icon largeFont icon={icon} text={name} width={width} />
         </header>
         <article className="Instrument-information">
-          <h2>WHAT IS THE {name} MADE OUT OF?</h2>
+          <h2>What is the {name.toLowerCase()} made of?</h2>
           <section className="Instrument-materials">
             {madeFrom.map(material => (
               <Icon icon={material.icon} text={material.name} size='100px' />
             ))}
           </section>
-          <h2>THE {name} IS PLAYED BY...</h2>
-          <p>{howToPlay}</p>
+          <p className="Instrument-made-of">The {name} is played by {howToPlay}</p>
           <section className="Instrument-buttons">
             <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
             <Button colorId={2} onClick={openVideo}>Watch Video</Button>

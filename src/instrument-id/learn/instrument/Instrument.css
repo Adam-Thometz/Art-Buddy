@@ -10,6 +10,10 @@
   font-size: 3rem;
 }
 
+.Instrument-main h2 {
+  font-weight: 100;
+}
+
 .Instrument-information {
   width: 60%;
   border-left: 1px solid #4D4F5E;
@@ -27,4 +31,9 @@
 .Instrument-buttons {
   display: flex;
   justify-content: space-evenly;
+}
+
+.Instrument-made-of {
+  text-align: left;
+  padding: 0 10%;
 }

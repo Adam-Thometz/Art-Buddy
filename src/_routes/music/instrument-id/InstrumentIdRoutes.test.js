@@ -23,7 +23,7 @@ describe('Instrument Id Routes', () => {
 
   it('renders a page for a specific instrument', () => {
     renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.learn}/brass/trumpet`] });
-    expect(screen.getByText('WHAT IS THE TRUMPET MADE OUT OF?')).toBeInTheDocument();
+    expect(screen.getByText('What is the trumpet made of?')).toBeInTheDocument();
   });
 
   it('renders the main play page', () => {
