@@ -5,9 +5,16 @@
   border: 1px solid white;
   box-shadow: inset 0 0 15px 5px white;
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .LilyPad img {
   height: 75px;
+}
+
+.LilyPad-flower {
+  position: absolute;
+  top: 5%;
 }
