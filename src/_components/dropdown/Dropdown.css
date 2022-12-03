@@ -34,7 +34,7 @@
   border: 1px solid #D4D2D5;
   border-top: none;
   border-radius: 0 0 25px 25px;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   top: 47px;
   display: block;
