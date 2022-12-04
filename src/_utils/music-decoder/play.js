@@ -1,4 +1,4 @@
-import { now } from "tone";
+import { now, Part, Transport } from "tone";
 
 /** play
  * Purpose: Takes a note or an array of notes and 'plays' them in the browser.
@@ -7,14 +7,20 @@ import { now } from "tone";
 
 export default function play(notes) {
   const sound = window.wordToMusicSound;
-  const start = now();
   if (!Array.isArray(notes)) {
-    sound.triggerAttackRelease(`${notes}3`, '4n', start);
-  } else {
-    let seconds = 0;
-    notes.forEach(note => {
-      if (note !== '') sound.triggerAttackRelease(`${note}3`, '8n', start + seconds);
-      seconds += 0.5;
-    });
-  };
+    sound.triggerAttackRelease(`${notes}3`, '4n', now());
+    return;
+  }
+  const toPlay = notes.map((note, i) => ({ note, time: i/2 }));
+  const part = new Part(((time, value) => {
+    sound.triggerAttackRelease(`${value.note}3`, '8n', time);
+  }), toPlay);
+  Transport.start();
+  part.start(0);
+
+  const timer = setTimeout(() => {
+    part.stop();
+    Transport.stop();
+    clearTimeout(timer);
+  }, 500*(notes.length));
 };

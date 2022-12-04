@@ -14,6 +14,7 @@ import AlphabetTable from './alphabet-table/AlphabetTable';
 import createSound from '_utils/music-decoder/createSound';
 import { WTM } from '_data/_utils/localStorageKeys';
 import { wordToMusic } from '_data/_activities/activityList';
+import { Transport } from 'tone';
 
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useVisited(WTM);
@@ -31,6 +32,7 @@ const WordToMusic = () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
       delete window.wordToMusicSound;
+      Transport.stop();
     };
   }, [dispatch]);
 
