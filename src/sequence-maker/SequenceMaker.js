@@ -14,6 +14,7 @@ import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 import { SM } from "_data/_utils/localStorageKeys";
 import { sequenceMaker } from "_data/_activities/activityList";
+import { Transport } from "tone";
 
 const SequenceMaker = () => {
   const { currGame } = useSelector(state => state.mainSettings)
@@ -25,6 +26,7 @@ const SequenceMaker = () => {
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
+      Transport.stop();
     };
   }, [dispatch]);
 

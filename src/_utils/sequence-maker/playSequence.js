@@ -1,4 +1,4 @@
-import { now } from "tone";
+import { now, Part, Transport } from "tone";
 import sample from "../_general/sample";
 
 /** playSequence:
@@ -7,24 +7,25 @@ import sample from "../_general/sample";
  */
 
 export function playSequence({ sequence, pitch, duration, playAll, volume }) {
-  const start = now();
-  sequence.forEach((block, i) => {
-    if (!block) return;
+  const toPlay = sequence.map((block, i) => ({
+    note: `C${pitch}`,
+    time: playAll ? now() : i * duration,
+    sound: block.sound
+      ? sample({ sound: window[`${block.soundId}Buffer`], volume })
+      : null
+  }));
+  const part = new Part(((time, value) => {
+    if (value.sound) value.sound.triggerAttackRelease(value.note, duration, time);
+  }), toPlay);
+  Transport.start();
+  part.start(0);
 
-    const { soundId } = block;
-    if (soundId === 'stop') return;
-
-    const buffer = window[`${soundId}Buffer`];
-    const sound = sample({ sound: buffer, volume });
-    const pitchToPlay = `C${pitch}`;
-
-    if (playAll) {
-      sound.triggerAttackRelease(pitchToPlay, duration, start);
-    } else {
-      const seconds = i * duration;
-      sound.triggerAttackRelease(pitchToPlay, duration, start + seconds);
-    };
-  });
+  const timerDuration = (duration*1000) * (playAll ? 1 : sequence.length);
+  const timer = setTimeout(() => {
+    part.stop();
+    Transport.stop();
+    clearTimeout(timer);
+  }, timerDuration);
 };
 
 /** playOne:

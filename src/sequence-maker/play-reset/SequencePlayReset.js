@@ -22,7 +22,6 @@ const SequencePlayReset = () => {
   const dispatch = useDispatch(); 
 
   const handlePlay = () => {
-    playSequence({ sequence, pitch, duration, volume, playAll: false });
     for (let i = 0; i < sequence.length; i++) {
       if (!sequence[i]) continue;
       const start = setTimeout(() => {
@@ -34,6 +33,7 @@ const SequencePlayReset = () => {
         clearTimeout(end);
       }, (duration * 1000) + ((duration * 1000) * i));
     };
+    playSequence({ sequence, pitch, duration, volume, playAll: false });
   };
   
   const handlePlayAll = () => {
