@@ -1,4 +1,4 @@
-import { now, Part, Transport } from "tone";
+import { Part, Transport } from "tone";
 import sample from "../_general/sample";
 
 /** playSequence:
@@ -9,8 +9,8 @@ import sample from "../_general/sample";
 export function playSequence({ sequence, pitch, duration, playAll, volume }) {
   const toPlay = sequence.map((block, i) => ({
     note: `C${pitch}`,
-    time: playAll ? now() : i * duration,
-    sound: block.sound
+    time: playAll ? 0 : i * duration,
+    sound: block && block.sound
       ? sample({ sound: window[`${block.soundId}Buffer`], volume })
       : null
   }));
