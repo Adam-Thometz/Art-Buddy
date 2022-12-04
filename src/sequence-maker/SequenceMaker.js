@@ -28,17 +28,15 @@ const SequenceMaker = () => {
     };
   }, [dispatch]);
 
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
-        <SequenceControls />
-        <SoundOptions />
-        <Sequence />
-        <SequencePlayReset />
-      </>)}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+      <SequenceControls />
+      <SoundOptions />
+      <Sequence />
+      <SequencePlayReset />
+    </>)}
+  </>);
 };
 
 export default SequenceMaker;

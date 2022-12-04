@@ -20,12 +20,10 @@ const TimeKeeper = () => {
     return () => dispatch(changeCurrGame({}));
   });
 
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <h2>00:00:00</h2>}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <h2>00:00:00</h2>}
+  </>);
 };
 
 export default TimeKeeper;

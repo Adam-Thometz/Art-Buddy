@@ -60,14 +60,12 @@ const Canvas = () => {
     context.clearRect(0, 0, canvas.width, canvas.height);
   };
 
-  return (
-    <>
-      <canvas className='Canvas' onMouseDown={startDrawing} onMouseUp={endDrawing} onMouseMove={draw} ref={canvasRef} />
-      <div className='Canvas-bottom-options'>
-        <span onClick={handleClearCanvas}>clear canvas</span>
-      </div>
-    </>
-  );
+  return (<>
+    <canvas className='Canvas' onMouseDown={startDrawing} onMouseUp={endDrawing} onMouseMove={draw} ref={canvasRef} />
+    <div className='Canvas-bottom-options'>
+      <span onClick={handleClearCanvas}>clear canvas</span>
+    </div>
+  </>);
 };
 
 export default Canvas;

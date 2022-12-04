@@ -36,16 +36,14 @@ const WordToMusic = () => {
     };
   }, [dispatch]);
 
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
-        <WordForm />
-        <DecoderControls />
-        <AlphabetTable />
-      </>)}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+      <WordForm />
+      <DecoderControls />
+      <AlphabetTable />
+    </>)}
+  </>);
 };
 
 export default WordToMusic;

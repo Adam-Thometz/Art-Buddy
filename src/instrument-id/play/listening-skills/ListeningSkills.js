@@ -37,20 +37,18 @@ const ListeningSkills = () => {
     );
   });
 
-  return (
-    <>
-      <WindowNavbar page='INSTRUMENT ID: PLAY' />
-      <div className="ListeningSkills">
-        <header className="ListeningSkills-icon">
-          <Icon largeFont icon={listeningSkills} text='Listening Skills Test' />
-        </header>
-        <section className="ListeningSkills-levels-report-cards">
-          <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
-          {levels}
-        </section>
-      </div>
-    </>
-  );
+  return (<>
+    <WindowNavbar page='INSTRUMENT ID: PLAY' />
+    <div className="ListeningSkills">
+      <header className="ListeningSkills-icon">
+        <Icon largeFont icon={listeningSkills} text='Listening Skills Test' />
+      </header>
+      <section className="ListeningSkills-levels-report-cards">
+        <p>Practice your listening skills to unlock instruments that you can play later on the Song Maker section!</p>
+        {levels}
+      </section>
+    </div>
+  </>);
 };
 
 export default ListeningSkills;

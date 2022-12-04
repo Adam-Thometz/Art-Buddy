@@ -43,18 +43,16 @@ const SongMaker = () => {
     />
   );
 
-  return (
-    <>
-      <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
-      <section className='SongMaker-button-instrument-wrapper'>
-        <div className='SongMaker-buttons'>
-          <Button colorId={0} onClick={playInstruments}>PLAY</Button>
-          {savePopup}
-        </div>
-        <InstrumentDisplay />
-      </section>
-    </>
-  );
+  return (<>
+    <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
+    <section className='SongMaker-button-instrument-wrapper'>
+      <div className='SongMaker-buttons'>
+        <Button colorId={0} onClick={playInstruments}>PLAY</Button>
+        {savePopup}
+      </div>
+      <InstrumentDisplay />
+    </section>
+  </>);
 };
 
 export default SongMaker;

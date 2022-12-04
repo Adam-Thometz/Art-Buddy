@@ -26,12 +26,10 @@ const ScoreKeeper = () => {
     };
   }, [dispatch, roster]);
 
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <Students />}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <Students />}
+  </>);
 };
 
 export default ScoreKeeper;

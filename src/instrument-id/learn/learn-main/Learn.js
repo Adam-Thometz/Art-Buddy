@@ -17,19 +17,17 @@ const Learn = () => {
     return <Icon key={name} onClick={goToFamily} icon={icon} text={name} size="200px" largeFont />;
   });
 
-  return (
-    <>
-      <WindowNavbar page='INSTRUMENT ID: LEARN' />
-      <div className="Learn">
-        <header className="Learn-header">
-          <p>To begin, choose an instrument family</p>
-        </header>
-        <section className="Learn-options">
-          {options}
-        </section>
-      </div>
-    </>
-  );
+  return (<>
+    <WindowNavbar page='INSTRUMENT ID: LEARN' />
+    <div className="Learn">
+      <header className="Learn-header">
+        <p>To begin, choose an instrument family</p>
+      </header>
+      <section className="Learn-options">
+        {options}
+      </section>
+    </div>
+  </>);
 };
 
 export default Learn;

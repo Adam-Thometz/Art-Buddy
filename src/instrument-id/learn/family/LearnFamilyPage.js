@@ -31,19 +31,17 @@ const LearnFamilyPage = () => {
     return <Icon key={name} icon={icon} size='200px' width={width} text={name.toUpperCase()} onClick={goToInstrument} />;
   });
   
-  return (
-    <>
-      <WindowNavbar page='INSTRUMENT ID: LEARN' />
-      <div className="LearnFamilyPage">
-        <header className="LearnFamilyPage-header">
-          <Icon icon={instrumentFamily.main} text={`THE ${family.toUpperCase()} FAMILY`} largeFont />
-        </header>
-        <section className="LearnFamilyPage-options">
-          {options}
-        </section>
-      </div>
-    </>
-  );
+  return (<>
+    <WindowNavbar page='INSTRUMENT ID: LEARN' />
+    <div className="LearnFamilyPage">
+      <header className="LearnFamilyPage-header">
+        <Icon icon={instrumentFamily.main} text={`THE ${family.toUpperCase()} FAMILY`} largeFont />
+      </header>
+      <section className="LearnFamilyPage-options">
+        {options}
+      </section>
+    </div>
+  </>);
 };
 
 export default LearnFamilyPage;

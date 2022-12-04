@@ -63,25 +63,23 @@ const ListeningSkillsTest = () => {
 
   const isDisabled = !(choice1 && choice2)
 
-  return (
-    <>
-      <WindowNavbar page={`Listening Skills Test: Level ${level}`} cornerIcon={<ReportCardIcon />} />
-      <section className="ListeningSkillsTest-game">
-        <Button small disabled={isDisabled} colorId={0} onClick={playSound}>START</Button>
-        <div className="ListeningSkillsTest-choice-container">
-          <div className="ListeningSkillsTest-options">
-            {dropdown(1)}
-            {level === '1' ? dropdown(2) : null}
-          </div>
-          <div className="ListeningSkillsTest-choices">
-            {choice1 ? <Choice choice={choice1} id='1' level={level} save={setReportCard} /> : null}
-            <p>{choice1 && choice2 ? 'OR' : null}</p>
-            {choice2 ? <Choice choice={choice2} id='2' level={level} save={setReportCard} /> : null}
-          </div>
+  return (<>
+    <WindowNavbar page={`Listening Skills Test: Level ${level}`} cornerIcon={<ReportCardIcon />} />
+    <section className="ListeningSkillsTest-game">
+      <Button small disabled={isDisabled} colorId={0} onClick={playSound}>START</Button>
+      <div className="ListeningSkillsTest-choice-container">
+        <div className="ListeningSkillsTest-options">
+          {dropdown(1)}
+          {level === '1' ? dropdown(2) : null}
         </div>
-      </section>
-    </>
-  );
+        <div className="ListeningSkillsTest-choices">
+          {choice1 ? <Choice choice={choice1} id='1' level={level} save={setReportCard} /> : null}
+          <p>{choice1 && choice2 ? 'OR' : null}</p>
+          {choice2 ? <Choice choice={choice2} id='2' level={level} save={setReportCard} /> : null}
+        </div>
+      </div>
+    </section>
+  </>);
 };
 
 export default ListeningSkillsTest;

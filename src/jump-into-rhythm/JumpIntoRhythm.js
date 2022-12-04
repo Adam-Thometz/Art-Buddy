@@ -36,15 +36,13 @@ const JumpIntoRhythm = () => {
   }, [dispatch]);
 
   const [hasVisited, setHasVisited] = useVisited(JIR);
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
-        {isDisplayingLilyPads ? <FrogLilyPad /> : <Notes />}
-        <NoteOptions />
-      </>)}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+      {isDisplayingLilyPads ? <FrogLilyPad /> : <Notes />}
+      <NoteOptions />
+    </>)}
+  </>);
 };
 
 export default JumpIntoRhythm;

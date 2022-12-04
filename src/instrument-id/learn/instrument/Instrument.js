@@ -41,29 +41,27 @@ const Instrument = () => {
 
   const openVideo = () => window.open(videoUrl);
 
-  return (
-    <>
-      <WindowNavbar page='INSTRUMENT ID: LEARN' />
-      <div className="Instrument-main" onLoad={handleCreateBuffers}>
-        <header className="Instrument-name">
-          <Icon largeFont icon={icon} text={name} width={width} />
-        </header>
-        <article className="Instrument-information">
-          <h2>What is the {name.toLowerCase()} made of?</h2>
-          <section className="Instrument-materials">
-            {madeFrom.map(material => (
-              <Icon icon={material.icon} text={material.name} size='100px' />
-            ))}
-          </section>
-          <p className="Instrument-made-of">The {name} is played by {howToPlay}</p>
-          <section className="Instrument-buttons">
-            <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
-            <Button colorId={2} onClick={openVideo}>Watch Video</Button>
-          </section>
-        </article>
-      </div>
-    </>
-  );
+  return (<>
+    <WindowNavbar page='INSTRUMENT ID: LEARN' />
+    <div className="Instrument-main" onLoad={handleCreateBuffers}>
+      <header className="Instrument-name">
+        <Icon largeFont icon={icon} text={name} width={width} />
+      </header>
+      <article className="Instrument-information">
+        <h2>What is the {name.toLowerCase()} made of?</h2>
+        <section className="Instrument-materials">
+          {madeFrom.map(material => (
+            <Icon icon={material.icon} text={material.name} size='100px' />
+          ))}
+        </section>
+        <p className="Instrument-made-of">The {name} is played by {howToPlay}</p>
+        <section className="Instrument-buttons">
+          <Button colorId={0} onClick={playInstrument}>Play Sound</Button>
+          <Button colorId={2} onClick={openVideo}>Watch Video</Button>
+        </section>
+      </article>
+    </div>
+  </>);
 };
 
 export default Instrument;

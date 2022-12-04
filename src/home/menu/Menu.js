@@ -31,14 +31,12 @@ const Menu = ({ type = null }) => {
     >{option.name}</Button>
   ));
 
-  return (
-    <>
-      <WindowNavbar page={type ? `${type.toUpperCase()} GAMES` : null} />
-      <div className="Menu-options">
-        {optionDisplay}
-      </div>
-    </>
-  );
+  return (<>
+    <WindowNavbar page={type ? `${type.toUpperCase()} GAMES` : null} />
+    <div className="Menu-options">
+      {optionDisplay}
+    </div>
+  </>);
 };
 
 export default Menu;

@@ -28,16 +28,14 @@ const FreePaint = () => {
     };
   }, [dispatch]);
 
-  return (
-    <>
-      <WindowNavbar page={currGame.name} />
-      {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <>
-        <ControlBar />
-        <Canvas />
-        {stencil ? <Stencil /> : null}
-      </>}
-    </>
-  );
+  return (<>
+    <WindowNavbar page={currGame.name} />
+    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <>
+      <ControlBar />
+      <Canvas />
+      {stencil ? <Stencil /> : null}
+    </>}
+  </>);
 };
 
 export default FreePaint;
