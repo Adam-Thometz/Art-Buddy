@@ -10,6 +10,7 @@ import Icon from '_components/icon/Icon';
 
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
 import hop from '_utils/jump-into-rhythm/hop';
+import { start, Transport } from 'tone';
 
 const NoteOptions = () => {
   const { rhythm, isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
@@ -27,7 +28,8 @@ const NoteOptions = () => {
     return <Icon icon={img} text={text} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
   });
 
-  const handlePlay = () => {
+  const handlePlay = async () => {
+    if (Transport.state === 'stopped') await start();
     dispatch(toggleLilyPadDisplay());
     const beats = rhythm.map(note => ({
       duration: note.duration,

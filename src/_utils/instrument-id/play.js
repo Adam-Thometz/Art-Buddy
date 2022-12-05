@@ -1,4 +1,4 @@
-import { now, Time } from 'tone';
+import { now, Part, Time, Transport } from 'tone';
 import sample from '../_general/sample';
 
 import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
@@ -14,13 +14,20 @@ export function playScale({ id, volume, isTest = false }) {
   if (!isTest) scale.push('A3', 'B3', 'C4');
 
   const sound = window[`${id}Buffer`];
-
   const instrument = sample({ sound, volume });
-  const start = now();
-  scale.forEach((note, i) => {
-    const seconds = i / 2;
-    instrument.triggerAttackRelease(note, '4n', start + seconds);
-  });
+  const toPlay = scale.map((note, i) => ({ note, time: i/2 }));
+
+  const part = new Part(((time, value) => {
+    instrument.triggerAttackRelease(value.note, '4n', time)
+  }), toPlay);
+  Transport.start();
+  part.start(0);
+
+  const timer = setTimeout(() => {
+    part.stop();
+    Transport.stop();
+    clearTimeout(timer);
+  }, 500*(scale.length));
 };
 
 /** playBeat: 
@@ -33,11 +40,16 @@ export function playBeat({ id, volume, sound, isTest = false }) {
   const upperLimit = soundsLength*(isTest ? 1 : 2);
   const hits = getHits({ id, upperLimit, soundsLength, volume });
 
-  const start = now();
-  hits.forEach((hit, i) => {
-    const seconds = i / 2;
-    hit.triggerAttackRelease('C3', '2n', start + seconds);
-  });
+  const part = new Part(((time, value) => {
+    value.sound.triggerAttackRelease('C3', '2n', time)
+  }), hits);
+  Transport.start();
+  part.start(0);
+  const timer = setTimeout(() => {
+    part.stop();
+    Transport.stop();
+    clearTimeout(timer);
+  }, 500*(hits.length))
 };
 
 /** play:
@@ -75,7 +87,7 @@ function getHits({ id, upperLimit, soundsLength, volume }) {
     const buffer = window[bufferId];
     
     const sound = sample({ sound: buffer, volume });
-    hits.push(sound);
+    hits.push({ sound, time: i/2 });
   };
   return hits;
 };

@@ -13,6 +13,7 @@ import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
 import { playBeat, playScale } from "_utils/instrument-id/play";
 import getInstrument from "_utils/instrument-id/getInstrument";
 import convertToId from "_utils/_general/convertToId";
+import { Transport, start } from "tone";
 
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);
@@ -31,12 +32,18 @@ const Instrument = () => {
     
   const handleCreateBuffers = () => createBuffers(id);
 
-  const playInstrument = () => isRhythm ?
-    playBeat({ id, sound, volume }) :
-    playScale({ id, volume });
+  const playInstrument = async () => {
+    if (Transport.state === 'stopped') await start();
+    isRhythm
+      ? playBeat({ id, sound, volume })
+      : playScale({ id, volume });
+  }
 
   useEffect(() => {
-    return () => removeBuffers();
+    return () => {
+      Transport.stop();
+      removeBuffers();
+    };
   }, []);
 
   const openVideo = () => window.open(videoUrl);
