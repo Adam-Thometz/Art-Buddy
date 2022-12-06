@@ -62,7 +62,7 @@ const SongMaker = () => {
     />
   );
 
-  return (<>
+  return (
     <SongMakerInfoContext.Provider value={{ loop, setLoop, stopInstruments }}>
       <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
       <section className='SongMaker-button-instrument-wrapper'>
@@ -75,7 +75,7 @@ const SongMaker = () => {
         <InstrumentDisplay />
       </section>
     </SongMakerInfoContext.Provider>
-  </>);
+  );
 };
 
 export default SongMaker;
