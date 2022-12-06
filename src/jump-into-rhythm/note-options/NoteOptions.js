@@ -28,7 +28,7 @@ const NoteOptions = () => {
     return <Icon icon={img} text={text} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
   });
 
-  const handlePlay = async () => {
+  const handleHop = async () => {
     if (Transport.state === 'stopped') await start();
     dispatch(toggleLilyPadDisplay());
     const beats = rhythm.map(note => ({
@@ -47,7 +47,7 @@ const NoteOptions = () => {
       </section>
       {isDisplayingLilyPads
         ? <Button onClick={back}>BACK</Button>
-        : <Button colorId={0} disabled={rhythm.includes(null)} onClick={handlePlay}>PLAY</Button>
+        : <Button colorId={0} disabled={rhythm.includes(null)} onClick={handleHop}>PLAY</Button>
       }
     </section>
   );
