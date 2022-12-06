@@ -1,8 +1,5 @@
-import { now, Part, Time, Transport } from 'tone';
+import { Part, Transport } from 'tone';
 import sample from '../_general/sample';
-
-import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
-import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
 
 /** playScale: 
  * Purpose: plays a scale for non-rhythmic instruments. isTest is true if the function is called in the context of the listening skills test.
@@ -50,30 +47,6 @@ export function playBeat({ id, volume, sound, isTest = false }) {
     Transport.stop();
     clearTimeout(timer);
   }, 500*(hits.length))
-};
-
-/** play:
- * Purpose: used for Song Maker feature. Plays a melody/rhythm using a passed in buffer (or buffers if rhythm)
- * Found in: SongMaker.js, SavedSongs.js
- */
-
-export function play({ melodyId, volume, buffers, isRhythm }) {
-  const instrument = isRhythm ?
-    buffers.map(b => sample({ sound: b, volume })) :
-    sample({ sound: buffers, volume });
-  const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
-  
-  const start = now();
-  let seconds = 0;
-  melody.forEach(beat => {
-    const { notes, duration } = beat;
-    notes.forEach(note => {
-      const instrumentToPlay = isRhythm ? instrument[note] : instrument;
-      const noteToPlay = isRhythm ? 'C3' : note;
-      instrumentToPlay.triggerAttackRelease(noteToPlay, duration, start + seconds);
-    });
-    seconds += Time(duration).toSeconds();
-  });
 };
 
 /** getHits:
