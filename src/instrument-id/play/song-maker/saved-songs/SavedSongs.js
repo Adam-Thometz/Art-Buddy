@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import useSavedSongs from '_hooks/useSavedSongs';
+import SongMakerContext from '_utils/instrument-id/SongMakerInfoContext';
 
 import { useSelector } from 'react-redux';
 
@@ -9,10 +10,12 @@ import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '_media/instrument-id/_icons/iconImports';
 import { createBuffers, getBuffers } from '_utils/instrument-id/buffers';
-import { play } from '_utils/instrument-id/play';
+import createLoop from '_utils/instrument-id/createLoop';
+import { Transport, start } from 'tone';
 
 const SavedSongs = () => {
   const { volume } = useSelector(state => state.mainSettings);
+  const { loop, setLoop, stopInstruments } = useContext(SongMakerContext)
   const [savedSongs, setSavedSongs] = useSavedSongs();
   const [selectedSong, setSelectedSong] = useState(null);
 
@@ -26,7 +29,9 @@ const SavedSongs = () => {
     };
   };
 
-  const handlePlay = () => {
+  const handlePlay = async () => {
+    if (Transport.state === 'stopped') await start();
+    const partsToPlay = []
     if (!selectedSong) return;
     const song = savedSongs.get(selectedSong);
     for (let instrument of song) {
@@ -36,8 +41,12 @@ const SavedSongs = () => {
       if (!melodyId) continue;
       
       const { buffers } = getBuffers(instrumentId);
-      play({ melodyId, volume, buffers, isRhythm });
+      const part = createLoop({ melodyId, volume, buffers, isRhythm });
+      partsToPlay.push(part);
     };
+    setLoop(partsToPlay);
+    Transport.start();
+    partsToPlay.forEach(part => part.start(0));
   };
 
   const handleDelete = () => {
@@ -53,7 +62,7 @@ const SavedSongs = () => {
   return (
     <section className='SavedSongs'>
       <aside className='SavedSongs-options'>
-        <Icon icon={smallPlayIcon} text='Play' size='49px' onClick={handlePlay} />
+        <Icon icon={smallPlayIcon} text='Play' size='49px' onClick={loop ? stopInstruments : handlePlay} />
         <Icon icon={deleteIcon} text='Delete' size='49px' onClick={handleDelete} />
       </aside>
       <section className='SavedSongs-song-list'>
