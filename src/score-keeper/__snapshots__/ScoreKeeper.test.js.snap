@@ -10,11 +10,6 @@ exports[`Score Keeper matches snapshot 1`] = `
     >
       SCORE KEEPER
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <div
     class="Students"

@@ -10,11 +10,6 @@ exports[`FreePaint component matches snapshot 1`] = `
     >
       FREE PAINT
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <section
     class="ControlBar"

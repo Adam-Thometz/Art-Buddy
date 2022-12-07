@@ -10,11 +10,6 @@ exports[`WordToMusic component matches snapshot 1`] = `
     >
       WORD-TO-MUSIC DECODER
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <form
     class="WordForm"

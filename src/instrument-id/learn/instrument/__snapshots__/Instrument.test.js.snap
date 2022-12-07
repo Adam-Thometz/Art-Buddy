@@ -10,11 +10,6 @@ exports[`Instrument component matches snapshot 1`] = `
     >
       INSTRUMENT ID: LEARN
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <div
     class="Instrument-main"

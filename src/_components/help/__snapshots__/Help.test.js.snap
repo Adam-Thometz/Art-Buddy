@@ -2,10 +2,14 @@
 
 exports[`Help component matches snapshot 1`] = `
 <DocumentFragment>
-  <img
-    alt="Help"
+  <div
     class="Help"
-    src="file"
-  />
+  >
+    <img
+      alt="Help"
+      class="Help"
+      src="file"
+    />
+  </div>
 </DocumentFragment>
 `;

@@ -10,11 +10,6 @@ exports[`ListeningSkills component matches snapshot 1`] = `
     >
       INSTRUMENT ID: PLAY
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <div
     class="ListeningSkills"

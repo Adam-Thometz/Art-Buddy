@@ -33,11 +33,6 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
         </figure>
       </div>
     </div>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <section
     class="ListeningSkillsTest-game"

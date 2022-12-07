@@ -79,11 +79,6 @@ exports[`Home component matches the snapshot of the landing page displaying the 
       >
         WELCOME TO ART BUDDY!
       </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
     </header>
     <article
       class="Welcome-description"

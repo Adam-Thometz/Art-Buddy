@@ -13,11 +13,6 @@ exports[`Welcome component matches the snapshot of the welcome page 1`] = `
       >
         WELCOME TO ART BUDDY!
       </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
     </header>
     <article
       class="Welcome-description"

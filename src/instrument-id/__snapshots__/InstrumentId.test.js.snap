@@ -13,11 +13,6 @@ exports[`InstrumentId component matches snapshot 1`] = `
       >
         INSTRUMENT ID
       </h1>
-      <img
-        alt="Help"
-        class="Help"
-        src="file"
-      />
     </header>
     <p
       class="InstrumentId-instructions"

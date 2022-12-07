@@ -10,11 +10,6 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
     >
       JUMP INTO RHYTHM
     </h1>
-    <img
-      alt="Help"
-      class="Help"
-      src="file"
-    />
   </header>
   <div
     class="Notes"
