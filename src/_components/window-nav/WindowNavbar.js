@@ -30,7 +30,7 @@ const WindowNavbar = ({ cornerIcon = null, page = null }) => {
       {location.pathname.length === 1 ? null : <BackArrow />}
       <h1 className="WindowNavbar-label">{page}</h1>
       {cornerIcon ? <div className="WindowNavbar-corner">{cornerIcon}</div> : null}
-      <Help />
+      {location.pathname.length === 1 ? null : <Help />}
     </header>
   );
 
