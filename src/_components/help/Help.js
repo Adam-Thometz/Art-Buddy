@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 import './Help.css';
 
 import Popup from '_components/popup/Popup';
 
 import help from './help.png';
-import { useSelector } from 'react-redux';
 
 const Help = () => {
   const { currGame } = useSelector(state => state.mainSettings);
