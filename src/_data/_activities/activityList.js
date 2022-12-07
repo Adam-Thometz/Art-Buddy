@@ -18,7 +18,7 @@ const wordToMusic = {
   url: wordToMusicUrl,
   activityType: types[0],
   genre: genres[0],
-  description: 'Turn words into music!',
+  description: 'Type some words into the input box at the top, find as many letters as you can, and then listen to the resulting melody. Be sure to make note of whether the letter is upper or lower case!',
   active: true
 };
 const instrumentId = {
@@ -27,7 +27,7 @@ const instrumentId = {
   url: instrumentIdUrl,
   activityType: types[0],
   genre: genres[0],
-  description: 'Learn about instruments while practicing listening skills!',
+  description: 'Learn about different instruments in the LEARN section. You can then practice your listening skills in the PLAY section and unlock different instruments for the Song Maker.',
   active: true
 };
 const jumpIntoRhythm = {
@@ -36,7 +36,7 @@ const jumpIntoRhythm = {
   url: jumpIntoRhythmUrl,
   activityType: types[0],
   genre: genres[0],
-  description: 'Jump with a frog to different rhythms!',
+  description: 'Compose different rhythms up to 4 measures long and make our frogs jump to your rhythms. Bonus points if you can count how many times the frogs hop!',
   active: true
 };
 const sequenceMaker = {
@@ -45,7 +45,7 @@ const sequenceMaker = {
   url: sequenceMakerUrl,
   activityType: types[0],
   genre: genres[0],
-  description: 'Put different sounds together and hear what you get!',
+  description: 'Put different sounds together and hear what you get.',
   active: true
 };
 const colorTheory = {
@@ -63,7 +63,7 @@ const freePaint = {
   url: freePaintUrl,
   activityType: types[0],
   genre: genres[1],
-  description: 'Draw different things like letters and shapes!',
+  description: 'Draw different things! We also have stencils for different letters and shapes. Unlock more colors by playing Color Theory!',
   active: true
 };
 const scoreKeeper = {
@@ -72,7 +72,7 @@ const scoreKeeper = {
   url: scoreKeeperUrl,
   activityType: types[2],
   genre: genres[2],
-  description: '',
+  description: 'A simple score keeper. Just load up your class and start keeping score. Updates when you have new winners!',
   active: true
 };
 const timeKeeper = {
@@ -81,7 +81,7 @@ const timeKeeper = {
   url: timeKeeperUrl,
   activityType: types[2],
   genre: genres[2],
-  description: '',
+  description: 'Tell the time with music! Add different music blocks to create a song out of the timer',
   active: false
 };
 
