@@ -33,14 +33,14 @@ const ControlBar = () => {
   return (
     <ControlBarContext.Provider value={{ shownOptions, handleShownOptions }}>
       <section className='ControlBar'>
-        <ButtonWrapper label="Stencil" iconImg={stencil} onClick={handleEditStencilMode} />
-        <ButtonWrapper label="Pencil" id="colors" iconImg={pencil} Popout={ColorOptions} color={color} />
-        <ButtonWrapper label="Eraser" iconImg={eraser} onClick={handleSetEraser} color={isErasing ? '#FF69B4' : '#000000'} />
-
         <ButtonWrapper label="ABC" id="upperCase" Popout={StencilOptions} colorId={4} />
         <ButtonWrapper label="abc" id="lowerCase" Popout={StencilOptions} colorId={0} />
         <ButtonWrapper label="123" id="numbers" Popout={StencilOptions} colorId={1} />
         <ButtonWrapper label={square} id="shapes" Popout={StencilOptions} colorId={2} />
+
+        <ButtonWrapper label="Stencil" iconImg={stencil} onClick={handleEditStencilMode} />
+        <ButtonWrapper label="Pencil" id="colors" iconImg={pencil} Popout={ColorOptions} color={color} />
+        <ButtonWrapper label="Eraser" iconImg={eraser} onClick={handleSetEraser} color={isErasing ? '#FF69B4' : '#000000'} />
       </section>
     </ControlBarContext.Provider>
   );

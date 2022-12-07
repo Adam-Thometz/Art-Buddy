@@ -24,6 +24,50 @@ exports[`FreePaint component matches snapshot 1`] = `
     >
       <button
         class="Button regular"
+        id="upperCase"
+        style="border-color: #17255a;"
+      >
+        ABC
+      </button>
+    </div>
+    <div
+      class="ButtonWrapper"
+    >
+      <button
+        class="Button regular"
+        id="lowerCase"
+        style="border-color: #89eb0a;"
+      >
+        abc
+      </button>
+    </div>
+    <div
+      class="ButtonWrapper"
+    >
+      <button
+        class="Button regular"
+        id="numbers"
+        style="border-color: #ffe81a;"
+      >
+        123
+      </button>
+    </div>
+    <div
+      class="ButtonWrapper"
+    >
+      <button
+        class="Button regular"
+        id="shapes"
+        style="border-color: #fd4d3a;"
+      >
+        file
+      </button>
+    </div>
+    <div
+      class="ButtonWrapper"
+    >
+      <button
+        class="Button regular"
         id=""
       >
         <figure
@@ -94,50 +138,6 @@ exports[`FreePaint component matches snapshot 1`] = `
             Eraser
           </figcaption>
         </figure>
-      </button>
-    </div>
-    <div
-      class="ButtonWrapper"
-    >
-      <button
-        class="Button regular"
-        id="upperCase"
-        style="border-color: #17255a;"
-      >
-        ABC
-      </button>
-    </div>
-    <div
-      class="ButtonWrapper"
-    >
-      <button
-        class="Button regular"
-        id="lowerCase"
-        style="border-color: #89eb0a;"
-      >
-        abc
-      </button>
-    </div>
-    <div
-      class="ButtonWrapper"
-    >
-      <button
-        class="Button regular"
-        id="numbers"
-        style="border-color: #ffe81a;"
-      >
-        123
-      </button>
-    </div>
-    <div
-      class="ButtonWrapper"
-    >
-      <button
-        class="Button regular"
-        id="shapes"
-        style="border-color: #fd4d3a;"
-      >
-        file
       </button>
     </div>
   </section>

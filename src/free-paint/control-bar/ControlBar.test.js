@@ -38,7 +38,7 @@ describe('ControlBar component', () => {
 
   it('changes the pencil color when a color is picked', () => {
     renderWithProvider(<ControlBar />);
-    const pencilBtn = screen.getAllByRole('button')[1];
+    const pencilBtn = screen.getAllByRole('button')[5];
     userEvent.click(pencilBtn);
     const red = screen.getByTestId('color-option-#FF0000');
     userEvent.click(red);
