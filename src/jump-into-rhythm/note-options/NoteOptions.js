@@ -25,7 +25,8 @@ const NoteOptions = () => {
 
   const notes = Object.keys(noteInfo).map(noteId => {
     const { text, img } = noteInfo[noteId];
-    return <Icon icon={img} text={text} size='100px' width='30%' id={noteId} onClick={handleAddNotes} />;
+    const width = text === 'Eighth Notes' ? '50%' : '25%'
+    return <Icon icon={img} text={text} size='100px' width={width} id={noteId} onClick={handleAddNotes} />;
   });
 
   const handleHop = async () => {
