@@ -1,5 +1,5 @@
 import jumpIntoRhythmReducer, { INITIAL_STATE } from "./jumpIntoRhythmReducer";
-import { addToRhythm, setMeasures, clearGame, deleteFromRhythm, toggleLilyPadDisplay } from "./jumpIntoRhythmActions";
+import { addToRhythm, setMeasures, clearGame, deleteFromRhythm, toggleLilyPadDisplay, toggleAnimation } from "./jumpIntoRhythmActions";
 import { testQuarterNote } from "_testUtils/test-states/jumpIntoRhythmReducerTestState";
 
 describe('Jump Into Rhythm Reducer', () => {
@@ -38,7 +38,14 @@ describe('Jump Into Rhythm Reducer', () => {
     expect(result.isDisplayingLilyPads).toBe(true);
     const result2 = jumpIntoRhythmReducer(result, toggleLilyPadDisplay());
     expect(result2.isDisplayingLilyPads).toBe(false);
-  })
+  });
+
+  it('should toggle animation', () => {
+    const result = jumpIntoRhythmReducer(undefined, toggleAnimation());
+    expect(result.isAnimating).toBe(true);
+    const result2 = jumpIntoRhythmReducer(result, toggleAnimation());
+    expect(result2.isAnimating).toBe(false);
+  });
 
   it('should handle resetting', () => {
     const result = jumpIntoRhythmReducer(undefined, clearGame());
