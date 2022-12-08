@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addToRhythm, toggleLilyPadDisplay } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
+import { addToRhythm, toggleAnimation, toggleLilyPadDisplay } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 
 import './NoteOptions.css';
 
@@ -31,6 +31,7 @@ const NoteOptions = () => {
 
   const handleHop = async () => {
     if (Transport.state === 'stopped') await start();
+    dispatch(toggleAnimation());
     dispatch(toggleLilyPadDisplay());
     const beats = rhythm.map(note => ({
       duration: note.duration,
@@ -39,7 +40,10 @@ const NoteOptions = () => {
     hop({ beats, volume });
   };
 
-  const back = () => dispatch(toggleLilyPadDisplay());
+  const back = () => {
+    dispatch(toggleLilyPadDisplay());
+    dispatch(toggleAnimation());
+  };
 
   return (
     <section className='NoteOptions'>
