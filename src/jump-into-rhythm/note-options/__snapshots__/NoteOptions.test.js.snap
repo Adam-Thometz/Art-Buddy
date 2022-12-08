@@ -15,7 +15,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 100px; width: 30%; cursor: pointer;"
+          style="height: 100px; width: 25%; cursor: pointer;"
         />
         <figcaption
           class="Icon-text"
@@ -31,7 +31,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 100px; width: 30%; cursor: pointer;"
+          style="height: 100px; width: 50%; cursor: pointer;"
         />
         <figcaption
           class="Icon-text"
@@ -47,7 +47,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
         <img
           alt=""
           src="file"
-          style="height: 100px; width: 30%; cursor: pointer;"
+          style="height: 100px; width: 25%; cursor: pointer;"
         />
         <figcaption
           class="Icon-text"
