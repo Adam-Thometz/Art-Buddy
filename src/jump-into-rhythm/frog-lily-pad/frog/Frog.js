@@ -20,12 +20,7 @@ const Frog = ({ frog, measure, delay = 0.25 }) => {
     }
   }, [isAnimating, measure, delay]);
 
-  return <img
-    ref={frogRef}
-    className='Frog'
-    src={frog}
-    alt='frog'
-  />;
+  return <img ref={frogRef} className='Frog' src={frog} alt='frog' />;
 };
 
 export default Frog;
