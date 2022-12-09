@@ -7,7 +7,7 @@ import { Time } from "tone";
 
 const lilyPadLength = 18;
 
-export default function createAnimation(measure) {
+export default function createHoppingAnimation(measure) {
   const animation = [
     { transform: 'translate(0, 0)' },
     { transform: `translate(${lilyPadLength/2}vw, -75px)`, easing: 'ease-out', offset: (lilyPadLength/2)/100 }

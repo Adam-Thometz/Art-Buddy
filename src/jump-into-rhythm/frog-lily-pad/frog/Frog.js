@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import './Frog.css';
 
-import createAnimation from '_utils/jump-into-rhythm/createAnimation';
+import createHoppingAnimation from '_utils/jump-into-rhythm/createHoppingAnimation';
 
 const Frog = ({ frog, measure, delay = 0.25 }) => {
   const { isAnimating } = useSelector(state => state.jumpIntoRhythm);
@@ -13,7 +13,7 @@ const Frog = ({ frog, measure, delay = 0.25 }) => {
   useEffect(() => {
     if (isAnimating) {
       const ids = measure.map(note => note.id);
-      const { animation, duration } = createAnimation(ids);
+      const { animation, duration } = createHoppingAnimation(ids);
       setTimeout(() => {
         frogRef.current.animate(animation, duration);
       }, delay*1000);
