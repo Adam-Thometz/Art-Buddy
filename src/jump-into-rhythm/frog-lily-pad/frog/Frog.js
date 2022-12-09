@@ -12,7 +12,8 @@ const Frog = ({ frog, measure, delay = 0.25 }) => {
 
   useEffect(() => {
     if (isAnimating) {
-      const { animation, duration } = createAnimation(measure);
+      const ids = measure.map(note => note.id);
+      const { animation, duration } = createAnimation(ids);
       setTimeout(() => {
         frogRef.current.animate(animation, duration);
       }, delay*1000);
