@@ -10,7 +10,7 @@ import Icon from '_components/icon/Icon';
 
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
 import hop from '_utils/jump-into-rhythm/hop';
-import { start, Transport } from 'tone';
+import { start, Transport, Time } from 'tone';
 
 const NoteOptions = () => {
   const { rhythm, isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
@@ -38,11 +38,16 @@ const NoteOptions = () => {
       isRest: note.isRest
     }));
     hop({ beats, volume });
+    setTimeout(() => {
+      console.log('stopping');
+      Transport.stop();
+    }, Time(`${rhythm.length/4}:1`).toSeconds() * 1000)
   };
 
   const back = () => {
     dispatch(toggleLilyPadDisplay());
     dispatch(toggleAnimation());
+    Transport.stop();
   };
 
   return (

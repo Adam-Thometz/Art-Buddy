@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { useSelector } from 'react-redux';
 
 import './Frog.css';
 
-import { Time } from 'tone';
+import createAnimation from '_utils/jump-into-rhythm/createAnimation';
 
-const Frog = ({ frog, delay = 0 }) => {
+const Frog = ({ frog, measure, delay = 0.25 }) => {
   const { isAnimating } = useSelector(state => state.jumpIntoRhythm);
+  const frogRef = useRef(null);
+
+  useEffect(() => {
+    if (isAnimating) {
+      const { animation, duration } = createAnimation(measure);
+      setTimeout(() => {
+        frogRef.current.animate(animation, duration);
+      }, delay*1000);
+    }
+  }, [isAnimating, measure, delay]);
+
   return <img
-    className={`Frog${isAnimating ? ' animation' : ''}`}
+    ref={frogRef}
+    className='Frog'
     src={frog}
     alt='frog'
-    style={isAnimating ? {
-      '--duration': `${Time('1:1').toSeconds()}s`,
-      '--delay': `${delay}s`,
-    } : {}} />;
+  />;
 };
 
 export default Frog;

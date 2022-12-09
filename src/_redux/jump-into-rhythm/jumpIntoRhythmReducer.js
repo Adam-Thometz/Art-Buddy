@@ -47,6 +47,7 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(clearGame, (state) => {
       state.rhythm = INITIAL_STATE.rhythm;
       state.isDisplayingLilyPads = INITIAL_STATE.isDisplayingLilyPads;
+      state.isAnimating = INITIAL_STATE.isAnimating;
     });
 });
 

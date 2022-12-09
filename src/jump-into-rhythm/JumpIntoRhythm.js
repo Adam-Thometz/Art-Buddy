@@ -30,6 +30,7 @@ const JumpIntoRhythm = () => {
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
+      Transport.stop()
       Transport.bpm.value = 120;
       removeBuffers();
     }
