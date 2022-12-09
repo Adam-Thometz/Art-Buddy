@@ -8,7 +8,7 @@ See current deployment: https://art-buddy.surge.sh/
 
 ### What is Art Buddy?
 
-Created by two former educators, Art Buddy is a collection of arts-based multisensory games and teaching tools designed for students with special needs. The games in this collection are either based on real IEP goals that we've seen in our teaching careers or taken from Everyday Arts for Special Education (EASE), an experimental curriculum designed to supplement instruction with arts activities that the developer trained in during his teaching career. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills.  
+Created by two former educators, Art Buddy is a collection of arts-based multisensory games and teaching tools designed for students with special needs. All of the games in this collection are designed to help students reach specific goals, whether related to academics or life skills.  
 
 This app is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft while giving students a fun and neurodiverse-friendly way to reach their academic and social goals.  
 
@@ -16,15 +16,9 @@ This app is a work in progress. Currently functioning games include...
 - *Word-To-Music Decoder*
 - *What's That Instrument?*
 - *Sequence Maker*
+- *Jump Into Rhythm*
+- *Free Paint*
 - *Score Keeper*
-
-### Glossary of Terms Related to Art Buddy
-
-**IEP (Individualized Education Plan):** a lengthy, student-focused document written primarily by a special education teacher that outlines a student's learning profile and goals in detail. IEP goals could be academic - such as 'identify lowercase letters' and 'compare numbers to identify the larger/smaller number' - or social - such as 'engage in play with peers' and 'express their needs'. The games in Art Buddy are designed for such goals.
-
-**Multisensory Instruction:** a style of teaching in which a teacher taps into multiple senses, giving students multiple ways of engaging in a lesson. Educational research suggests that multisensory instruction is highly effective for all students<sup>[1][2]</sup>, especially neurodivergent students<sup>[3]</sup> and English language learners<sup>[4]</sup>. Given that all the major arts disciplines engage different human senses, Art Buddy turns the arts into a vehicle for multisensory instruction.
-
-**Neurodiversity:** the idea that how someone's brain works and processes information is simply a reflection of natural human diversity, like gender, ethnicity, and sexuality. Autism, ADHD, dyslexia, and bipolar disorder are examples of 'neurodiverse' conditions and people without such conditions are 'neurotypical.' Neurodiversity is the lifeblood of Art Buddy; it was made specifically for neurodiverse children.
 
 ## The App
 
@@ -42,7 +36,7 @@ The settings menu, which you can access via the navbar, allows the user to contr
 
 #### Word-to-Music Decoder
 
-This app lays out a chart of all letters with different colors that correspond to different colors. You type a word into the form and students must find the letters in the chart. You can toggle between upper and lowercase letters. As they find them, the word gets colored in and a sound is played. You can create a melody based on the notes that are already selected. Good for letter recognition and phonics-related activities.
+This app lays out a chart of all letters with different colors that correspond to different colors. You type a word into the form and students must find the letters in the chart. You can toggle between upper and lowercase letters. As they find them, the word gets colored in and a sound is played. You can create a melody based on the notes that are already selected.
 
 #### Sequence Maker
 
@@ -50,17 +44,21 @@ This app allows students to create a sequence of sounds. They pick sounds from d
 
 #### What's That Instrument?
 
-This app is divided into two sections: Learn and Play. The Learn section allows students to learn about different instruments and instrument families. In the Play section, students can test their instrument knowledge in the Listening Skills test and unlock instruments for the Song Maker, a mini-sequencer where students can select instruments and melodies to play. Good for listening and reading comprehension.
+This app is divided into two sections: Learn and Play. The Learn section allows students to learn about different instruments and instrument families. In the Play section, students can test their instrument knowledge in the Listening Skills test and unlock instruments for the Song Maker, a mini-sequencer where students can select instruments and melodies to play.
 
-#### Jump Into Rhythm (under construction)
+#### Jump Into Rhythm
 
-This app is a movement-based game in which students can create unique rhythms and have the frog jump across the lily pads in the rhythm that students create. Good for recognizing quantity and representing numbers in different ways.
+This app is a movement-based game in which students can create unique rhythms and have the frog jump across the lily pads in the rhythm that students create.
 
 ### Art Games
 
-### Free Paint
+#### Free Paint
 
 This app is a basic coloring app that comes with stencils for numbers, letters (upper and lowercase) and shapes. User can pick different colors and can unlock more by playing Color Theory. Good for basic writing activities.
+
+#### Color Theory
+
+This app is devided into two sections: Learn and Play. The Learn section allows students to learn about primary, secondary, and tertiary colors. In the Play section, students can test their color recognition skills and unlock different colors for the Free Paint app.
 
 ### Tools
 
@@ -122,13 +120,3 @@ In the `public` folder, create a file called `CNAME` and type in the full URL wh
 ```
 npm run deploy
 ```
-
-## Bibliography
-
-<sup>1</sup> Schlesinger, N.W., Gray, S. The impact of multisensory instruction on learning letter names and sounds, word reading, and spelling. Ann. of Dyslexia 67, 219–258 (2017). https://doi.org/10.1007/s11881-017-0140-z
-
-<sup>2</sup> Magulod, G. C. "Evaluation of multisensory instructional material package for elementary learners." Asia Pacific Journal of Multidisciplinary Research 5.4 (2017): 83-93.
-
-<sup>3</sup> Thorpe HW, Borden KS. The Effect of Multisensory Instruction Upon the On-Task Behaviors and Word Reading Accuracy of Learning Disabled Children. Journal of Learning Disabilities. 1985;18(5):279-286. doi:10.1177/002221948501800507
-
-<sup>4</sup>Nijakowska, Joanna. "An experiment with direct multisensory instruction in teaching word reading and spelling to Polish dyslexic learners of English." Language learners with special needs: An international perspective (2008): 130-157.
