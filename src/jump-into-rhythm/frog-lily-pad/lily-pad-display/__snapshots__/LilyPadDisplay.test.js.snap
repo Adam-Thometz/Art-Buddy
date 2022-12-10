@@ -6,23 +6,23 @@ exports[`LilyPadDisplay component matches snapshot 1`] = `
     class="LilyPadDisplay"
   >
     <div
-      class="LilyPad"
+      class="LilyPadDisplay-lily-pad"
     >
       <img
         alt="Lily pad"
-        class="LilyPad-pad"
+        class="LilyPadDisplay-pad"
         src="file"
         style="width: 90%;"
       />
     </div>
     <div
-      class="LilyPad"
+      class="LilyPadDisplay-lily-pad"
     />
     <div
-      class="LilyPad"
+      class="LilyPadDisplay-lily-pad"
     />
     <div
-      class="LilyPad"
+      class="LilyPadDisplay-lily-pad"
     />
   </div>
 </DocumentFragment>
