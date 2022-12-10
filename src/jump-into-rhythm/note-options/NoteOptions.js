@@ -39,7 +39,6 @@ const NoteOptions = () => {
     }));
     hop({ beats, volume });
     setTimeout(() => {
-      console.log('stopping');
       Transport.stop();
     }, Time(`${rhythm.length/4}:1`).toSeconds() * 1000)
   };
