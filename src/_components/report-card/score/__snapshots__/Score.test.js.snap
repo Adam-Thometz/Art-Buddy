@@ -14,12 +14,12 @@ exports[`Score component matches snapshot 1`] = `
       <img
         alt=""
         src="file"
-        style="filter: invert(37%) sepia(87%) saturate(3444%) hue-rotate(343deg) brightness(119%) contrast(98%);"
+        style="filter: brightness(0%) saturate(100%) invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) brightness(98%) contrast(104%);"
       />
       <img
         alt=""
         src="file"
-        style="filter: invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%);"
+        style="filter: brightness(0%) saturate(100%) invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%);"
       />
       <img
         alt=""
