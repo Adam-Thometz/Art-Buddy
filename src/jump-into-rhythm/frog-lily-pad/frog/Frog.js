@@ -6,7 +6,7 @@ import './Frog.css';
 
 import createHoppingAnimation from '_utils/jump-into-rhythm/createHoppingAnimation';
 
-const Frog = ({ frog, measure, delay = 0.25 }) => {
+const Frog = ({ frog, measure, delay = 0 }) => {
   const { isAnimating } = useSelector(state => state.jumpIntoRhythm);
   const frogRef = useRef(null);
 
@@ -16,7 +16,8 @@ const Frog = ({ frog, measure, delay = 0.25 }) => {
       const { animation, duration } = createHoppingAnimation(ids);
       setTimeout(() => {
         frogRef.current.animate(animation, duration);
-      }, delay*1000);
+      }, delay*1000 + 250);
+      // the 250 accounts for a slight lag between the sound and animation
     }
   }, [isAnimating, measure, delay]);
 
