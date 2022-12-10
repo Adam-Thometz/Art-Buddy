@@ -11,6 +11,7 @@ import { playSequence } from "_utils/sequence-maker/playSequence";
 import play from '_media/sequence-maker/_icons/play.png';
 import playAll from '_media/sequence-maker/_icons/play-all.png';
 import reset from '_media/sequence-maker/_icons/reset.png';
+import { start, Transport } from 'tone';
 
 const SequencePlayReset = () => {
   const {
@@ -21,7 +22,13 @@ const SequencePlayReset = () => {
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch(); 
 
-  const handlePlay = () => {
+  const handlePlay = async () => {
+    if (Transport.state === 'stopped') await start();
+    const isPlaying = sequence
+      .filter(block => block !== null)
+      .some(block => block.isPlaying)
+    if (isPlaying) return;
+
     for (let i = 0; i < sequence.length; i++) {
       if (!sequence[i]) continue;
       const start = setTimeout(() => {
@@ -36,8 +43,13 @@ const SequencePlayReset = () => {
     playSequence({ sequence, pitch, duration, volume, playAll: false });
   };
   
-  const handlePlayAll = () => {
-    playSequence({ sequence, pitch, duration, volume, playAll: true });
+  const handlePlayAll = async () => {
+    if (Transport.state === 'stopped') await start();
+    const isPlaying = sequence
+      .filter(block => block !== null)
+      .some(block => block.isPlaying)
+    if (isPlaying) return;
+
     for (let i = 0; i < sequence.length; i++) {
       if (!sequence[i]) continue;
       dispatch(togglePlaying(i));
@@ -45,10 +57,15 @@ const SequencePlayReset = () => {
         dispatch(togglePlaying(i));
         clearTimeout(timer);
       }, duration * 1000);
+      console.log(timer)
     };
+    playSequence({ sequence, pitch, duration, volume, playAll: true });
   };
 
-  const handleReset = () => dispatch(resetSequence());
+  const handleReset = () => {
+    dispatch(resetSequence());
+    Transport.stop();
+  };
   
   return (
     <section className='SequencePlayReset'>
