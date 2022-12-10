@@ -10,7 +10,7 @@ const lilyPadLength = 18;
 export default function createHoppingAnimation(measure) {
   const animation = [
     { transform: 'translate(0, 0)' },
-    { transform: `translate(${lilyPadLength/2}vw, -75px)`, easing: 'ease-out', offset: (lilyPadLength/2)/100 }
+    { transform: `translate(${lilyPadLength/2}vw, -7vh)`, easing: 'ease-out', offset: (lilyPadLength/2)/100 }
   ];
   measure.forEach((note, i) => {
     const lilyPadPosition = lilyPadLength*(i+1);
@@ -22,7 +22,7 @@ export default function createHoppingAnimation(measure) {
       animation.push(...createEighthNotesAnimation(lilyPadPosition, i));
     }
   });
-  animation.push({ transform: 'translate(95vw, -75px)' });
+  animation.push({ transform: 'translate(95vw, -7vh)' });
   const duration = Time('1:2').toSeconds() * 1000;
   return { animation, duration };
 };
@@ -34,7 +34,7 @@ function createQuarterNoteAnimation(lilyPadPosition, i) {
       offset: ((100/6) * (i+1)) / 100,
       easing: 'ease-in'
     }, {
-      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -75px)`,
+      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -7vh)`,
       offset: ((100/6) * (i+1.5)) / 100,
       easing: 'ease-out'
     }
@@ -48,7 +48,7 @@ function createEighthNotesAnimation(lilyPadPosition, i) {
       offset: ((100/6) * (i+1)) / 100,
       easing: 'ease-in'
     }, {
-      transform: `translate(${lilyPadPosition}vw, -75px)`,
+      transform: `translate(${lilyPadPosition}vw, -7vh)`,
       offset: ((100/6) * (i+1.25)) / 100,
       easing: 'ease-out'
     }, {
@@ -56,7 +56,7 @@ function createEighthNotesAnimation(lilyPadPosition, i) {
       offset: ((100/6) * (i+1.5)) / 100,
       easing: 'ease-in'
     }, {
-      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -75px)`,
+      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -7vh)`,
       offset: ((100/6) * (i+1.75)) / 100,
       easing: 'ease-out'
     }
@@ -66,8 +66,12 @@ function createEighthNotesAnimation(lilyPadPosition, i) {
 function createQuarterRestAnimation(lilyPadPosition, i) {
   return [
     {
-      transform: `translate(${lilyPadPosition}vw, -75px)`,
-      offset: ((100/6) * (i+1)) / 100
+      transform: `translate(${lilyPadPosition}vw, -7vh)`,
+      offset: ((100/6) * (i+1)) / 100,
+    },
+    {
+      transform: `translate(${lilyPadPosition + 4}vw, -7vh)`,
+      offset: ((100/6) * (i+1.75)) / 100,
     }
   ];
 };
