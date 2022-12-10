@@ -18,6 +18,10 @@ const materials = {
     icon: icons.leather,
     name: 'LEATHER'
   },
+  voice: {
+    icon: icons.voiceMainIcon,
+    name: 'HUMAN'
+  }
 };
 
 const learnInstrumentOptions = {
@@ -304,7 +308,7 @@ const learnInstrumentOptions = {
         id: 'soprano',
         name: 'SOPRANO',
         icon: icons.sopranoIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'singing really high!',
         sound: sounds.soprano,
         isRhythm: false,
@@ -314,7 +318,7 @@ const learnInstrumentOptions = {
         id: 'mezzoSoprano',
         name: 'MEZZO SOPRANO',
         icon: icons.mezzoSopranoIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'singing high!',
         sound: sounds.mezzoSoprano,
         isRhythm: false,
@@ -324,7 +328,7 @@ const learnInstrumentOptions = {
         id: 'alto',
         name: 'ALTO',
         icon: icons.altoIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'siinging a little high!',
         sound: sounds.alto,
         isRhythm: false,
@@ -334,7 +338,7 @@ const learnInstrumentOptions = {
         id: 'tenor',
         name: 'TENOR',
         icon: icons.tenorIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'singing a little low!',
         sound: sounds.tenor,
         isRhythm: false,
@@ -344,7 +348,7 @@ const learnInstrumentOptions = {
         id: 'baritone',
         name: 'BARITONE',
         icon: icons.baritoneIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'singing low!',
         sound: sounds.baritone,
         isRhythm: false,
@@ -354,7 +358,7 @@ const learnInstrumentOptions = {
         id: 'bass',
         name: 'BASS',
         icon: icons.bassIcon,
-        madeFrom: ['HUMANS!'],
+        madeFrom: [materials.voice],
         howToPlay: 'singing really low!',
         sound: sounds.bass,
         isRhythm: false,
