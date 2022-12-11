@@ -57,7 +57,6 @@ const SequencePlayReset = () => {
         dispatch(togglePlaying(i));
         clearTimeout(timer);
       }, duration * 1000);
-      console.log(timer)
     };
     playSequence({ sequence, pitch, duration, volume, playAll: true });
   };
