@@ -37,7 +37,7 @@ const Instrument = () => {
     isRhythm
       ? playBeat({ id, sound, volume })
       : playScale({ id, volume });
-  }
+  };
 
   useEffect(() => {
     return () => {
