@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
 
 import { useSelector } from 'react-redux';
 
@@ -12,18 +13,19 @@ import SaveSong from './save-song/SaveSong';
 import InstrumentDisplay from './instrument-display/InstrumentDisplay';
 
 import createLoop from '_utils/instrument-id/createLoop';
+import calculateTimeLeft from '_utils/instrument-id/calculateTimeLeft';
 import { getBuffers, removeBuffers } from '_utils/instrument-id/buffers';
 import { Transport, start } from 'tone';
-import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
 
 const SongMaker = () => {
   const { song } = useSelector(state => state.instrumentId);
   const { volume } = useSelector(state => state.mainSettings);
-  const [loop, setLoop] = useState(null);
+  const [loop, setLoop] = useState({ isPlaying: false });
+  const [currTimer, setCurrTimer] = useState(null)
 
   const playInstruments = async () => {
     if (Transport.state === 'stopped') await start();
-    const partsToPlay = []
+    const partsToPlay = [];
     for (let i = 0; i < song.length; i++) {
       const instrument = song[i];
       if (!instrument) continue;
@@ -35,16 +37,39 @@ const SongMaker = () => {
       const part = createLoop({ melodyId, volume, buffers, isRhythm });
       partsToPlay.push(part);
     };
-    setLoop(partsToPlay);
-    Transport.start();
-    partsToPlay.forEach(part => part.start(0));
+    setLoop({ isPlaying: true, partsToPlay });
   };
 
   const stopInstruments = () => {
-    if (loop) loop.forEach(part => part.stop());
-    Transport.stop();
-    setLoop(null);
-  }
+    if (loop.isPlaying) {
+      loop.partsToPlay.forEach(part => part.stop());
+      Transport.stop();
+      setLoop({ isPlaying: false });
+    };
+  };
+
+  useEffect(() => {
+    if (!loop.isPlaying) return;
+    if (currTimer) clearTimeout(currTimer);
+    const duration = calculateTimeLeft(loop.partsToPlay);
+    const timer = setTimeout(() => {
+      stopInstruments();
+      playInstruments();
+      clearTimeout(timer);
+      setCurrTimer(null);
+    }, duration);
+    setCurrTimer(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [song]);
+
+  useEffect(() => {
+    if (loop.isPlaying) {
+      Transport.start();
+      loop.partsToPlay.forEach(part => part.start(0));
+    } else {
+      Transport.stop();
+    }
+  }, [loop]);
 
   useEffect(() => {
     return () => {
@@ -67,8 +92,8 @@ const SongMaker = () => {
       <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
       <section className='SongMaker-button-instrument-wrapper'>
           <div className='SongMaker-buttons'>
-            <Button colorId={loop ? 2 : 0} onClick={loop ? stopInstruments : playInstruments}>
-              {loop ? 'STOP' : 'PLAY'}
+            <Button colorId={loop.isPlaying ? 2 : 0} onClick={loop.isPlaying ? stopInstruments : playInstruments}>
+              {loop.isPlaying ? 'STOP' : 'PLAY'}
             </Button>
             {savePopup}
           </div>
