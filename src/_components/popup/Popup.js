@@ -3,7 +3,7 @@ import PopupContext from '_utils/settings/PopupContext';
 
 import './Popup.css';
 
-import close from '_media/general-icons/close.png';
+import close from '_media/_general/close.png';
 
 const Popup = ({ title, trigger, triggerClass, popup }) => {
   const [isShowingPopup, setIsShowingPopup] = useState(false);

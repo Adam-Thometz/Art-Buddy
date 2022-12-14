@@ -8,7 +8,7 @@ import AddIcon from '_components/icon/add-icon/AddIcon';
 import Icon from '_components/icon/Icon';
 
 import convertToId from '_utils/_general/convertToId';
-import deleteIcon from '_media/general-icons/delete.png';
+import deleteIcon from '_media/_general/delete.png';
 import check from '_media/settings/check.png';
 
 const NewRoster = () => {

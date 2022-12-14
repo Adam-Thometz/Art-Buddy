@@ -1,5 +1,5 @@
 // Main icons
-import playIcon from '_media/general-icons/play.png';
+import playIcon from '_media/_general/play.png';
 import learnIcon from './learn.png';
 
 // Play icons
@@ -10,7 +10,7 @@ import reportCardIcon from './play/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
 import smallPlayIcon from './play/play.png';
-import deleteIcon from '_media/general-icons/delete.png';
+import deleteIcon from '_media/_general/delete.png';
 import savedSongsIcon from './play/saved-songs.png';
 
 // Brass instruments

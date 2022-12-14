@@ -5,8 +5,8 @@ import { addPoint, removePoint } from "_redux/score-keeper/scoreKeeperActions";
 
 import './Student.css';
 
-import addIcon from '_media/general-icons/add.png';
-import minusIcon from '_media/general-icons/minus.png';
+import addIcon from '_media/_general/add.png';
+import minusIcon from '_media/_general/minus.png';
 
 const Student = ({ name, points }) => {
   const dispatch = useDispatch();

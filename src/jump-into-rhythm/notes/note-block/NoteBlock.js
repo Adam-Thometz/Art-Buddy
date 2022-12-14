@@ -5,7 +5,7 @@ import { deleteFromRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions'
 
 import './NoteBlock.css';
 
-import deleteBtn from '_media/general-icons/close.png';
+import deleteBtn from '_media/_general/close.png';
 
 const NoteBlock = ({ borderColor, note, id }) => {
   const dispatch = useDispatch();

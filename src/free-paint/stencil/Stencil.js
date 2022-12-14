@@ -6,7 +6,7 @@ import { setStencil } from '_redux/free-paint/freePaintActions';
 
 import './Stencil.css';
 
-import close from '_media/general-icons/close.png';
+import close from '_media/_general/close.png';
 import resizeIcon from '_media/free-paint/resize.png';
 import getNewSize from '_utils/free-paint/getNewSize';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Score.css';
 
-import { first, mid, last } from '_media/general-icons/report-card-bar/iconImports';
+import { first, mid, last } from '_media/_general/report-card-bar/iconImports';
 
 const Score = ({ name, score, maxScore, colorPalette }) => {
   const createScoreDisplay = () => {

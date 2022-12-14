@@ -8,8 +8,8 @@ import './Notes.css';
 import NoteBlock from './note-block/NoteBlock';
 
 import trebleClef from '_media/jump-into-rhythm/_icons/treble-clef.png';
-import plus from '_media/general-icons/add.png';
-import minus from '_media/general-icons/minus.png';
+import plus from '_media/_general/add.png';
+import minus from '_media/_general/minus.png';
 import colors from '_data/_utils/colorOrder';
 
 const Notes = () => {
