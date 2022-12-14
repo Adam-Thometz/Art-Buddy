@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useLocalStorage from '_hooks/useVisited';
+import useVisited from '_hooks/useVisited';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/free-paint/freePaintActions';
@@ -17,7 +17,7 @@ import { FP } from '_data/_utils/localStorageKeys';
 const FreePaint = () => {
   const { currGame } = useSelector(state => state.mainSettings);
   const { stencil } = useSelector(state => state.freePaint);
-  const [hasVisited, setHasVisited] = useLocalStorage(FP);
+  const [hasVisited, setHasVisited] = useVisited(FP);
   const dispatch = useDispatch();
   
   useEffect(() => {
