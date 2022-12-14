@@ -17,21 +17,19 @@ const NewRoster = () => {
   const successRef = useRef();
   const [, setRosters] = useRoster();
 
-  const studentInputs = Object.keys(input)
-    .filter(field => field.includes('student'))
-    .map((field, i) => (
-      <div className='NewRoster-form-control'>
-        <input
-          className="NewRoster-input"
-          name={field}
-          id={field}
-          placeholder='STUDENT'
-          value={input[field]}
-          onChange={setInput}
-        />
-        <label className="NewRoster-label" htmlFor={field}>Student {i+1}: </label>
-      </div>
-    ));
+  const studentInputs = Object.keys(input).slice(1).map((field, i) => (
+    <div className='NewRoster-form-control'>
+      <input
+        className="NewRoster-input"
+        name={field}
+        id={field}
+        placeholder='STUDENT'
+        value={input[field]}
+        onChange={setInput}
+      />
+      <label className="NewRoster-label" htmlFor={field}>Student {i+1}: </label>
+    </div>
+  ));
 
   const addStudent = e => {
     e.preventDefault();
