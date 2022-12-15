@@ -6,11 +6,6 @@ import { screen } from "@testing-library/react";
 import MusicRoutes from "./MusicRoutes";
 import urls from '_data/_routes/routeUrls';
 
-jest.mock('tone', () => ({
-  ...jest.requireActual('tone'),
-  Transport: jest.fn()
-}));
-
 describe('Music Game Routes', () => {
   it('renders without crashing', () => {
     renderWithProvider(<MusicRoutes />);

@@ -4,6 +4,12 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SongMaker from "./SongMaker";
 
+jest.mock('tone', () => ({
+  ...jest.requireActual('tone'),
+  Transport: { stop: jest.fn() },
+  Time: jest.fn(() => ({ toSeconds: jest.fn() })),
+}));
+
 describe('SongMaker component', () => {
   it('renders without crashing', () => {
     renderWithProvider(<SongMaker />);

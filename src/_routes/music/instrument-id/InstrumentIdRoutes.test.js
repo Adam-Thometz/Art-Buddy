@@ -6,6 +6,11 @@ import { screen } from "@testing-library/react";
 import InstrumentIdRoutes from "./InstrumentIdRoutes";
 import { instrumentIdUrls } from '_data/_routes/routeUrls';
 
+jest.mock('tone', () => ({
+  ...jest.requireActual('tone'),
+  Transport: { stop: jest.fn() },
+}));
+
 describe('Instrument Id Routes', () => {
   it('renders without crashing', () => {
     renderWithProvider(<InstrumentIdRoutes />);
