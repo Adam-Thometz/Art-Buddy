@@ -6,13 +6,18 @@ import { screen } from "@testing-library/react";
 import ArtRoutes from "./ArtRoutes";
 import urls from '_data/_routes/routeUrls';
 
-describe('Menu Routes', () => {
+describe('Art Routes', () => {
   it('renders without crashing', () => {
     renderWithProvider(<ArtRoutes />);
   });
   
-  it('renders the music games page', () => {
+  it('renders free paint', () => {
     renderWithProvider(<ArtRoutes />, { initialRoutes: [urls.freePaintUrl] });
     expect(screen.getByText('FREE PAINT')).toBeInTheDocument();
+  });
+
+  it('renders color theory', () => {
+    renderWithProvider(<ArtRoutes />, { initialRoutes: [urls.colorTheoryUrl] });
+    expect(screen.getByText('COLOR THEORY')).toBeInTheDocument();
   });
 });

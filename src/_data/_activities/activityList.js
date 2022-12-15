@@ -10,7 +10,7 @@ import freePaintIcon from '_media/menu/activity-icons/free-paint.png'
 const types = ['games', 'tools'];
 const genres = ['music', 'art', 'other'];
 
-const { wordToMusicUrl, instrumentIdUrl, jumpIntoRhythmUrl, sequenceMakerUrl, freePaintUrl, scoreKeeperUrl, timeKeeperUrl } = urls;
+const { wordToMusicUrl, instrumentIdUrl, jumpIntoRhythmUrl, sequenceMakerUrl, freePaintUrl, colorTheoryUrl, scoreKeeperUrl, timeKeeperUrl } = urls;
 
 const wordToMusic = {
   name: 'WORD-TO-MUSIC DECODER',
@@ -51,11 +51,11 @@ const sequenceMaker = {
 const colorTheory = {
   name: 'COLOR THEORY',
   icon: colorTheoryIcon,
-  url: null,
+  url: colorTheoryUrl,
   activityType: types[0],
   genre: genres[1],
   description: 'Learn about the colors with mixing and matching!',
-  active: false
+  active: true
 };
 const freePaint = {
   name: 'FREE PAINT',

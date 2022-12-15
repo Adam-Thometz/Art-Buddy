@@ -8,6 +8,7 @@ const urls = {
   jumpIntoRhythmUrl: '/jump-into-rhythm',
   instrumentIdUrl: '/instrument-id',
   freePaintUrl: '/free-paint',
+  colorTheoryUrl: '/color-theory',
   scoreKeeperUrl: '/score-keeper',
   timeKeeperUrl: '/time-keeper'
 };
@@ -20,6 +21,12 @@ export const instrumentIdUrls = {
   playListening: '/instrument-id/play/listening-skills',
   playListeningLevel: '/instrument-id/play/listening-skills/:level',
   playSongMaker: '/instrument-id/play/song-maker',
+};
+
+export const colorTheoryUrls = {
+  learn: '/color-theory/learn',
+  learnCategory: '/color-theory/learn/:category',
+  play: '/color-theory/play'
 };
 
 export default urls;
