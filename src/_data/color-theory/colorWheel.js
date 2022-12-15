@@ -19,7 +19,7 @@ const colorWheel = {
     category: 'primary',
     position: twelveOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -28,7 +28,7 @@ const colorWheel = {
     category: 'tertiary',
     position: oneOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -37,7 +37,7 @@ const colorWheel = {
     category: 'secondary',
     position: twoOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -46,7 +46,7 @@ const colorWheel = {
     category: 'tertiary',
     position: threeOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -55,7 +55,7 @@ const colorWheel = {
     category: 'primary',
     position: fourOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -64,7 +64,7 @@ const colorWheel = {
     category: 'tertiary',
     position: fiveOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -73,7 +73,7 @@ const colorWheel = {
     category: 'secondary',
     position: sixOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -82,7 +82,7 @@ const colorWheel = {
     category: 'tertiary',
     position: sevenOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -91,7 +91,7 @@ const colorWheel = {
     category: 'primary',
     position: eightOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -100,7 +100,7 @@ const colorWheel = {
     category: 'tertiary',
     position: nineOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -109,7 +109,7 @@ const colorWheel = {
     category: 'secondary',
     position: tenOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
@@ -118,7 +118,7 @@ const colorWheel = {
     category: 'tertiary',
     position: elevenOClock,
     isShowing: {
-      name: false,
+      text: false,
       color: false
     }
   },
