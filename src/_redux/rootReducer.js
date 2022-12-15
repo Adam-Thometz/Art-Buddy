@@ -7,6 +7,7 @@ import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
 import instrumentIdReducer from './instrument-id/instrumentIdReducer';
 import jumpIntoRhythmReducer from './jump-into-rhythm/jumpIntoRhythmReducer';
 import freePaintReducer from './free-paint/freePaintReducer';
+import colorTheoryReducer from './color-theory/colorTheoryReducer';
 
 const rootReducer = configureStore({
   reducer: {
@@ -16,7 +17,8 @@ const rootReducer = configureStore({
     scoreKeeper: scoreKeeperReducer,
     instrumentId: instrumentIdReducer,
     jumpIntoRhythm: jumpIntoRhythmReducer,
-    freePaint: freePaintReducer
+    freePaint: freePaintReducer,
+    colorTheory: colorTheoryReducer
   }
 });
 
