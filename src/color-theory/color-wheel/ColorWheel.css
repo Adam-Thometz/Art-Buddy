@@ -1,0 +1,62 @@
+.ColorWheel {
+  position: relative;
+  border-radius: 50%;
+}
+
+.ColorWheel-color {
+  background-color: #D9D9D9;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 26vh;
+  left: 21vw;
+  height: calc(95vh / 8);
+  width: calc(80vw / 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.ColorWheel-color:nth-child(1) {
+  transform: translateY(-26vh);
+}
+.ColorWheel-color:nth-child(2) {
+  transform: rotate(30deg) translateY(-26vh) rotate(-30deg);
+}
+.ColorWheel-color:nth-child(3) {
+  transform: rotate(60deg) translateY(-26vh) rotate(-60deg);
+}
+.ColorWheel-color:nth-child(4) {
+  transform: rotate(90deg) translateY(-26vh) rotate(-90deg);
+}
+.ColorWheel-color:nth-child(5) {
+  transform: rotate(120deg) translateY(-26vh) rotate(-120deg);
+}
+.ColorWheel-color:nth-child(6) {
+  transform: rotate(150deg) translateY(-26vh) rotate(-150deg);
+}
+.ColorWheel-color:nth-child(7) {
+  transform: rotate(180deg) translateY(-26vh) rotate(-180deg);
+}
+.ColorWheel-color:nth-child(8) {
+  transform: rotate(210deg) translateY(-26vh) rotate(150deg);
+}
+.ColorWheel-color:nth-child(9) {
+  transform: rotate(240deg) translateY(-26vh) rotate(120deg);
+}
+.ColorWheel-color:nth-child(10) {
+  transform: rotate(270deg) translateY(-26vh) rotate(90deg);
+}
+.ColorWheel-color:nth-child(11) {
+  transform: rotate(300deg) translateY(-26vh) rotate(60deg);
+}
+.ColorWheel-color:nth-child(12) {
+  transform: rotate(330deg) translateY(-26vh) rotate(30deg);
+}
