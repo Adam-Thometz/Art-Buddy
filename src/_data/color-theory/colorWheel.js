@@ -1,23 +1,9 @@
-import colors from "./colorsToFilter";
-
-const twelveOClock = { transform: 'translate(0, 30vh)' };
-const oneOClock = { transform: 'translate(10vw, 20vh)' };
-const twoOClock = { transform: 'translate(20vw, 10vh)' };
-const threeOClock = { transform: 'translate(30vw, 0vh)' };
-const fourOClock = { transform: 'translate(20vw, -10vh)' };
-const fiveOClock = { transform: 'translate(10vw, -20vh)' };
-const sixOClock = { transform: 'translate(0vw, -30vh)' };
-const sevenOClock = { transform: 'translate(10vw, )-20vh', };
-const eightOClock = { transform: 'translate(20vw, -10vh)' };
-const nineOClock = { transform: 'translate(30vw, 0vh)' };
-const tenOClock = { transform: 'translate(-20vw, 10vh)' };
-const elevenOClock = { transform: 'translate(-10vw, 20vh)' };
+import colors from "./colors";
 
 const colorWheel = {
   yellow: {
     color: colors.yellow,
     category: 'primary',
-    position: twelveOClock,
     isShowing: {
       text: false,
       color: false
@@ -26,7 +12,6 @@ const colorWheel = {
   dandelion: {
     color: colors.dandelion,
     category: 'tertiary',
-    position: oneOClock,
     isShowing: {
       text: false,
       color: false
@@ -35,7 +20,6 @@ const colorWheel = {
   orange: {
     color: colors.orange,
     category: 'secondary',
-    position: twoOClock,
     isShowing: {
       text: false,
       color: false
@@ -44,7 +28,6 @@ const colorWheel = {
   tangelo: {
     color: colors.tangelo,
     category: 'tertiary',
-    position: threeOClock,
     isShowing: {
       text: false,
       color: false
@@ -53,7 +36,6 @@ const colorWheel = {
   red: {
     color: colors.red,
     category: 'primary',
-    position: fourOClock,
     isShowing: {
       text: false,
       color: false
@@ -62,7 +44,6 @@ const colorWheel = {
   plum: {
     color: colors.plum,
     category: 'tertiary',
-    position: fiveOClock,
     isShowing: {
       text: false,
       color: false
@@ -71,7 +52,6 @@ const colorWheel = {
   violet: {
     color: colors.violet,
     category: 'secondary',
-    position: sixOClock,
     isShowing: {
       text: false,
       color: false
@@ -80,7 +60,6 @@ const colorWheel = {
   blueberry: {
     color: colors.blueberry,
     category: 'tertiary',
-    position: sevenOClock,
     isShowing: {
       text: false,
       color: false
@@ -89,7 +68,6 @@ const colorWheel = {
   blue: {
     color: colors.blue,
     category: 'primary',
-    position: eightOClock,
     isShowing: {
       text: false,
       color: false
@@ -98,7 +76,6 @@ const colorWheel = {
   emerald: {
     color: colors.emerald,
     category: 'tertiary',
-    position: nineOClock,
     isShowing: {
       text: false,
       color: false
@@ -107,7 +84,6 @@ const colorWheel = {
   green: {
     color: colors.green,
     category: 'secondary',
-    position: tenOClock,
     isShowing: {
       text: false,
       color: false
@@ -116,7 +92,6 @@ const colorWheel = {
   pear: {
     color: colors.pear,
     category: 'tertiary',
-    position: elevenOClock,
     isShowing: {
       text: false,
       color: false

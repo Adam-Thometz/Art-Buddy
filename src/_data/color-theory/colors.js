@@ -3,11 +3,11 @@ import prependBrightnessAndSaturation from "_utils/_general/prependBrightnessAnd
 const colors = {
   // PRIMARY
   yellow: {
-    hex: '#EE2024',
+    hex: '#FEEE1D',
     filter: 'invert(87%) sepia(48%) saturate(823%) hue-rotate(343deg) brightness(107%) contrast(99%)'
   },
   red: {
-    hex: '#FEEE1D',
+    hex: '#EE2024',
     filter: 'invert(36%) sepia(91%) saturate(7216%) hue-rotate(349deg) brightness(95%) contrast(96%)'
   },
   blue: {
