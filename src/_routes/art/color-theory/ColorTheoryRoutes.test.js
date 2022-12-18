@@ -17,4 +17,11 @@ describe('Instrument Id Routes', () => {
     expect(screen.getByText('SECONDARY COLORS')).toBeInTheDocument();
     expect(screen.getByText('TERTIARY COLORS')).toBeInTheDocument();
   });
+
+  it('renders different pages for different color catregories', () => {
+    renderWithProvider(<ColorTheoryRoutes />, { initialRoutes: [`${colorTheoryUrls.learn}/primary`] });
+    expect(screen.getByText('PRIMARY COLORS')).toBeInTheDocument();
+    renderWithProvider(<ColorTheoryRoutes />, { initialRoutes: [`${colorTheoryUrls.learn}/secondary`] });
+    expect(screen.getByText('SECONDARY COLORS')).toBeInTheDocument();
+  });
 });
