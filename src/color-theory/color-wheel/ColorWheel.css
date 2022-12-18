@@ -14,7 +14,7 @@
   position: absolute;
   top: 26vh;
   left: 14vw;
-  height: calc(95vh / 8);
+  height: calc(105vh / 8);
   width: calc(80vw / 11);
   display: flex;
   justify-content: center;
