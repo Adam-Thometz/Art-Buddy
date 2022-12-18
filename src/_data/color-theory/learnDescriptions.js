@@ -17,7 +17,7 @@ const descriptions = {
     <p>Tertiary colors are made by mixing a primary and a secondary color!</p>
     <p className="LearnColor-add-color">{color('yellow')} + {color('orange')} = {color('dandelion')}</p>
     <p className="LearnColor-add-color">{color('orange')} + {color('red')} = {color('tangelo')}</p>
-    <p className="LearnColor-add-color">{color('violet')} + {color('red')} = {color('plum')}</p>
+    <p className="LearnColor-add-color">{color('red')} + {color('violet')} = {color('plum')}</p>
     <p className="LearnColor-add-color">{color('violet')} + {color('blue')} = {color('blueberry')}</p>
     <p className="LearnColor-add-color">{color('blue')} + {color('green')} = {color('emerald')}</p>
     <p className="LearnColor-add-color">{color('green')} + {color('yellow')} = {color('pear')}</p>
