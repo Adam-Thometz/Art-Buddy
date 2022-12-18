@@ -15,9 +15,9 @@ import tertiary from '_media/color-theory/tertiary.png';
 const Learn = () => {
   const navigate = useNavigate();
 
-  const goToPrimary = () => navigate(`${colorTheoryUrls.learn}/primary`)
-  const goToSecondary = () => navigate(`${colorTheoryUrls.learn}/secondary`)
-  const goToTertiary = () => navigate(`${colorTheoryUrls.learn}/tertiary`)
+  const goToPrimary = () => navigate(`${colorTheoryUrls.learn}/primary`);
+  const goToSecondary = () => navigate(`${colorTheoryUrls.learn}/secondary`);
+  const goToTertiary = () => navigate(`${colorTheoryUrls.learn}/tertiary`);
 
   return (<>
     <WindowNavbar page="COLOR THEORY" />
@@ -30,7 +30,7 @@ const Learn = () => {
         <Icon largeFont icon={tertiary} text="TERTIARY COLORS" onClick={goToTertiary} />
       </Options>
     </main>
-    </>);
+  </>);
 };
 
 export default Learn
