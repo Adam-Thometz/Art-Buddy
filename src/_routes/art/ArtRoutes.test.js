@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import ArtRoutes from "./ArtRoutes";
-import urls from '_data/_routes/routeUrls';
+import urls from '_routes/routeUrls';
 
 describe('Art Routes', () => {
   it('renders without crashing', () => {

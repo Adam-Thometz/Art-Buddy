@@ -6,7 +6,7 @@ import Learn from "color-theory/learn/Learn";
 import LearnColors from "color-theory/learn/colors/LearnColors";
 import Play from "color-theory/play/Play";
 
-import { colorTheoryUrls } from "_data/_routes/routeUrls";
+import { colorTheoryUrls } from "_routes/routeUrls";
 
 const ColorTheoryRoutes = () => {
   return (

@@ -6,7 +6,7 @@ import './Learn.css';
 import Icon from '_components/icon/Icon';
 import Options from '_components/option/Options';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
-import { colorTheoryUrls } from '_data/_routes/routeUrls';
+import { colorTheoryUrls } from '_routes/routeUrls';
 
 import primary from '_media/color-theory/primary.png';
 import secondary from '_media/color-theory/secondary.png';

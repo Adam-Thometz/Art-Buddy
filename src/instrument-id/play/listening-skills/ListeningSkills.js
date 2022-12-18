@@ -10,7 +10,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import ReportCard from "_components/report-card/ReportCard";
 
 import { listeningSkills, reportCardIcon } from "_media/instrument-id/_icons/iconImports";
-import { instrumentIdUrls } from "_data/_routes/routeUrls";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();

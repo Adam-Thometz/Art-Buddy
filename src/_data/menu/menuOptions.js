@@ -1,4 +1,4 @@
-import urls from "_data/_routes/routeUrls";
+import urls from "_routes/routeUrls";
 
 import artIcon from '_media/menu/option-icons/art-icon.png';
 import musicIcon from '_media/menu/option-icons/music-icon.png';

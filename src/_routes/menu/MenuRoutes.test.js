@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import MenuRoutes from "./MenuRoutes";
-import urls from '_data/_routes/routeUrls';
+import urls from '_routes/routeUrls';
 
 describe('Menu Routes', () => {
   it('renders without crashing', () => {

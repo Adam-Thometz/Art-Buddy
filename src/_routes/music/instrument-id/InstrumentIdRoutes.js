@@ -11,7 +11,7 @@ import ListeningSkills from "instrument-id/play/listening-skills/ListeningSkills
 import ListeningSkillsTest from "instrument-id/play/listening-skills/level/ListeningSkillsTest";
 import SongMaker from "instrument-id/play/song-maker/SongMaker";
 
-import { instrumentIdUrls } from "_data/_routes/routeUrls";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 const InstrumentIdRoutes = () => {
   return (

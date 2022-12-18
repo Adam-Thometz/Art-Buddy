@@ -6,7 +6,7 @@ import Icon from '_components/icon/Icon';
 import Options from '_components/option/Options';
 
 import { playIcon, learnIcon } from "_media/instrument-id/_icons/iconImports";
-import { colorTheoryUrls } from '_data/_routes/routeUrls';
+import { colorTheoryUrls } from '_routes/routeUrls';
 
 const ColorTheory = () => {
   const navigate = useNavigate();

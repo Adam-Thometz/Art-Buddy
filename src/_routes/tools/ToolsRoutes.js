@@ -5,7 +5,7 @@ import Window from "_components/window/Window";
 import ScoreKeeper from "score-keeper/ScoreKeeper";
 import TimeKeeper from "time-keeper/TimeKeeper";
 
-import urls from "_data/_routes/routeUrls";
+import urls from "_routes/routeUrls";
 
 const ToolsRoutes = () => {
   return (

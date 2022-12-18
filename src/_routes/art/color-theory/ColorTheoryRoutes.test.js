@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import ColorTheoryRoutes from "./ColorTheoryRoutes";
-import { colorTheoryUrls } from '_data/_routes/routeUrls';
+import { colorTheoryUrls } from '_routes/routeUrls';
 
 describe('Instrument Id Routes', () => {
   it('renders without crashing', () => {

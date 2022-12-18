@@ -6,7 +6,7 @@ import FreePaint from "free-paint/FreePaint";
 import ColorTheory from "color-theory/ColorTheory";
 import ColorTheoryRoutes from "./color-theory/ColorTheoryRoutes";
 
-import urls from "_data/_routes/routeUrls";
+import urls from "_routes/routeUrls";
 import getRoutes from "_utils/_general/getRoutes";
 
 const ArtRoutes = () => {

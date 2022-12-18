@@ -1,6 +1,6 @@
 import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon, voiceMainIcon } from "_media/instrument-id/_icons/iconImports";
 
-import { instrumentIdUrls } from "_data/_routes/routeUrls";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 const learnMenuOptions = [
   {

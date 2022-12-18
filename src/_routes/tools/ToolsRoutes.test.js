@@ -4,7 +4,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 
 import ToolsRoutes from "./ToolsRoutes";
-import urls from '_data/_routes/routeUrls';
+import urls from '_routes/routeUrls';
 
 describe('Tools Routes', () => {
   it('renders without crashing', () => {

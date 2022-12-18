@@ -8,7 +8,7 @@ import JumpIntoRhythm from "jump-into-rhythm/JumpIntoRhythm";
 import InstrumentId from "instrument-id/InstrumentId";
 import InstrumentIdRoutes from "./instrument-id/InstrumentIdRoutes";
 
-import urls from "_data/_routes/routeUrls";
+import urls from "_routes/routeUrls";
 import getRoutes from "_utils/_general/getRoutes";
 
 const MusicRoutes = () => {
