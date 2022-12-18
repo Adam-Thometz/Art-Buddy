@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LearnColors component matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      PRIMARY COLORS
+    </h1>
+  </header>
+  <main
+    class="LearnColors"
+  >
+    <div
+      class="ColorWheel"
+    >
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(254, 238, 29);"
+      >
+        yellow
+      </div>
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(238, 32, 36);"
+      >
+        red
+      </div>
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(66, 102, 180);"
+      >
+        blue
+      </div>
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+      <div
+        class="ColorWheel-color"
+        style="background-color: rgb(217, 217, 217);"
+      />
+    </div>
+    <section
+      class="LearnColors-description"
+    >
+      <p>
+        Primary colors are the three colors that cannot be made from any other colors.
+      </p>
+      <p>
+        All other colors are made from these 3 hues!
+      </p>
+    </section>
+  </main>
+</DocumentFragment>
+`;

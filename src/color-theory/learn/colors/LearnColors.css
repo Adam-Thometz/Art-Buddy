@@ -1,0 +1,60 @@
+.LearnColors {
+  display: flex;
+  align-items: center;
+}
+
+.LearnColors-description {
+  text-align: left;
+  font-size: 32px;
+  width: 50%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.yellow {
+  color: #FEEE1D;
+}
+
+.red {
+  color: #EE2024;
+}
+
+.blue {
+  color: #4266B4;
+}
+
+.orange {
+  color: #F78F20;
+}
+
+.green {
+  color: #2DB54F;
+}
+
+.violet {
+  color: #783197;
+}
+
+.dandelion {
+  color: #FDCE0E;
+}
+
+.tangelo {
+  color: #F35623;
+}
+
+.plum {
+  color: #A0409A;
+}
+
+.blueberry {
+  color: #665BAA;
+}
+
+.emerald {
+  color: #1A917E;
+}
+
+.pear {
+  color: #91C940;
+}
