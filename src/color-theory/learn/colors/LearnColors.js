@@ -9,7 +9,7 @@ import './LearnColors.css';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import ColorWheel from 'color-theory/color-wheel/ColorWheel';
 
-import descriptions from '_data/color-theory/learnDescriptions';
+import descriptions from './learnDescriptions';
 
 const LearnColors = () => {
   const { category } = useParams();
