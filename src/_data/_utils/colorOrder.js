@@ -1,4 +1,4 @@
-// Used to loop through colors for the button component
+// Color scheme for Art Buddy. Used to create borders for buttons, boxes, etc
 
 const colors = [
   '#89EB0A', // Lizard Green

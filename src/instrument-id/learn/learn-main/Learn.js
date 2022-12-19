@@ -6,7 +6,7 @@ import './Learn.css';
 import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import learnMenuOptions from "_data/instrument-id/learnMenuOptions";
+import learnMenuOptions from "./learnMenuOptions";
 
 const Learn = () => {
   const navigate = useNavigate();

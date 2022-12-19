@@ -8,7 +8,7 @@ import './Menu.css';
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 
-import menuOptions from "_data/menu/menuOptions";
+import menuOptions from "./menuOptions";
 import activities from "_data/_activities/activityList";
 
 const Menu = ({ type = null }) => {
