@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Play component matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      COLOR THEORY: PLAY
+    </h1>
+  </header>
+  <main
+    class="Play"
+  >
+    <header
+      class="Play-icon"
+    >
+      <figure
+        class="Icon"
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 250px; width: 250px;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 2.5rem;"
+        >
+          Color Theory
+        </figcaption>
+      </figure>
+    </header>
+    <section
+      class="Play-levels-report-cards"
+    >
+      <p>
+        Complete each level to unlock the next. Your report card will show you your progress. Completing levels will also unlock more colors in Free Paint!
+      </p>
+      <div
+        class="Play-level"
+      >
+        <button
+          class="Button small"
+          style="border-color: #89eb0a;"
+        >
+          Level 1
+        </button>
+        <div
+          class="Play-report-card"
+        >
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
+        </div>
+      </div>
+      <div
+        class="Play-level"
+      >
+        <button
+          class="Button small"
+          style="border-color: #ffe81a;"
+        >
+          Level 2
+        </button>
+        <div
+          class="Play-report-card"
+        >
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
+        </div>
+      </div>
+      <div
+        class="Play-level"
+      >
+        <button
+          class="Button small"
+          style="border-color: #fd4d3a;"
+        >
+          Level 3
+        </button>
+        <div
+          class="Play-report-card"
+        >
+          <img
+            alt=""
+            src="file"
+          />
+          <p>
+            Report Card
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
