@@ -1,41 +1,41 @@
-import { standardColors, primaryColors, secondaryColors, tertiaryColors } from "./colorsForProgressBar";
+import { instrumentIdColors, primaryColors, secondaryColors, tertiaryColors } from "./colorsForProgressBar";
 
 export const instrumentIdReportCard = {
   brass: {
     name: "BRASS FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   },
   electronic: {
     name: "ELECTRONIC FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   },
   percussion: {
     name: "PERCUSSION FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   },
   strings: {
     name: "STRINGS FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   },
   woodwind: {
     name: "WOODWIND FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   },
   voice: {
     name: "VOICE FAMILY",
     results: [],
     maxScore: 4,
-    colorPalette: standardColors,
+    colorPalette: instrumentIdColors,
   }
 };
 

@@ -8,8 +8,9 @@ const redStandard = 'invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) b
 const yellowStandard = 'invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%)';
 // Green: #89EB0A
 const greenStandard = 'invert(72%) sepia(68%) saturate(1545%) hue-rotate(38deg) brightness(109%) contrast(92%)';
-export const standardColors = [
+export const instrumentIdColors = [
   prependBrightnessAndSaturation(redStandard),
+  prependBrightnessAndSaturation(yellowStandard),
   prependBrightnessAndSaturation(yellowStandard),
   prependBrightnessAndSaturation(greenStandard)
 ];

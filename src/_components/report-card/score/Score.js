@@ -9,9 +9,13 @@ const Score = ({ name, score, maxScore, colorPalette }) => {
     const scoreDisplay = [];
     const width = `${100/maxScore - 2}%`;
     for (let i = 1; i <= maxScore; i++) {
-      const src = i === 1 ? first : (i === maxScore ? last : mid);
+      const src = i === 1
+        ? first 
+        : i === maxScore
+          ? last
+          : mid;
       if (i <= score) {
-        const paletteIdx = i === 1 ? 0 : (i === maxScore ? colorPalette.length-1 : 1);
+        const paletteIdx = i-1;
         const filter = colorPalette[paletteIdx];
         scoreDisplay.push(<img src={src} alt='' style={{ width, filter }} />);
       } else {
