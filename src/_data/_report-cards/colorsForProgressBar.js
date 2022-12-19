@@ -3,16 +3,16 @@ import colorWheel from "_data/color-theory/colorWheel";
 
 // Standard colors
 // Red: #FD4D3A
-const redStandard = 'invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) brightness(98%) contrast(104%)';
+const redInstrumentId = 'invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) brightness(98%) contrast(104%)';
 // Yellow: #FFE81A
-const yellowStandard = 'invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%)';
+const yellowInstrumentId = 'invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%)';
 // Green: #89EB0A
-const greenStandard = 'invert(72%) sepia(68%) saturate(1545%) hue-rotate(38deg) brightness(109%) contrast(92%)';
+const greenInstrumentId = 'invert(72%) sepia(68%) saturate(1545%) hue-rotate(38deg) brightness(109%) contrast(92%)';
 export const instrumentIdColors = [
-  prependBrightnessAndSaturation(redStandard),
-  prependBrightnessAndSaturation(yellowStandard),
-  prependBrightnessAndSaturation(yellowStandard),
-  prependBrightnessAndSaturation(greenStandard)
+  prependBrightnessAndSaturation(redInstrumentId),
+  prependBrightnessAndSaturation(yellowInstrumentId),
+  prependBrightnessAndSaturation(yellowInstrumentId),
+  prependBrightnessAndSaturation(greenInstrumentId)
 ];
 
 // COLOR THEORY COLORS
