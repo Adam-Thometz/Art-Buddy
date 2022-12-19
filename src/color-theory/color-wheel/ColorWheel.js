@@ -8,13 +8,10 @@ const ColorWheel = () => {
   const { colorWheel } = useSelector(state => state.colorTheory);
 
   const colors = Object.keys(colorWheel).map(c => {
-    const { color, transform, isShowing } = colorWheel[c];
-    const styles = {
-      backgroundColor: isShowing.color ? color.hex : '#D9D9D9',
-      transform
-    };
+    const { color, isShowing } = colorWheel[c];
+    const backgroundColor = isShowing.color ? color.hex : '#D9D9D9';
     return (
-      <div className='ColorWheel-color' style={styles}>
+      <div className='ColorWheel-color' style={{ backgroundColor }}>
         {isShowing.text ? c : null}
       </div>
     );
