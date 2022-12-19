@@ -20,18 +20,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
@@ -52,18 +56,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
@@ -84,18 +92,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
@@ -116,18 +128,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
@@ -148,18 +164,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
@@ -180,18 +200,22 @@ exports[`ReportCard component matches snapshot 1`] = `
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
           <img
             alt=""
             src="file"
+            style="width: 23%;"
           />
         </div>
         <span
