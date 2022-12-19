@@ -17,9 +17,7 @@ const LearnColors = () => {
 
   useEffect(() => {
     dispatch(learnColors(category));
-    return () => {
-      dispatch(clearWheel());
-    };
+    return () => dispatch(clearWheel());
   }, [category, dispatch]);
 
   return (<>
