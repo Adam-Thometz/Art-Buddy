@@ -6,7 +6,7 @@ import learnIcon from './learn.png';
 import songMaker from './play/song-maker.png';
 import swap from './play/swap.png';
 import listeningSkills from './play/listening-skills.png';
-import reportCardIcon from './play/report-card.png';
+import reportCardIcon from '_media/_general/report-card.png';
 import correctIcon from './play/correct.png';
 import incorrectIcon from './play/incorrect.png';
 import smallPlayIcon from './play/play.png';

@@ -1,0 +1,49 @@
+.Play {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+
+.Play-icon {
+  font-size: 3rem;
+  width: 40%;
+}
+
+.Play-levels-report-cards {
+  border-left: 1px solid #4D4F5E;
+  width: 60%;
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.Play-level {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.Play-level button {
+  width: 25%;
+}
+
+.Play-report-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Play-report-card img {
+  width: 48px;
+  height: 72px;
+}
+
+.Play-report-card p {
+  text-align: left;
+  padding-left: 10px;
+  width: 88px;
+  font-size: 1.2rem;
+}
