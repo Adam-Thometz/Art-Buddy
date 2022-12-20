@@ -1,16 +1,16 @@
-.Learn {
+.LearnInstrumentId {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80%;
 }
 
-.Learn-header {
+.LearnInstrumentId-header {
   font-size: 3rem;
   width: 40%;
 }
 
-.Learn-options {
+.LearnInstrumentId-options {
   border-left: 1px solid #4D4F5E;
   width: 60%;
   font-size: 2rem;

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
 
-import Learn from "instrument-id/learn/learn-main/Learn";
+import LearnInstrumentId from "instrument-id/learn/learn-main/LearnInstrumentId";
 import LearnFamilyPage from "instrument-id/learn/family/LearnFamilyPage";
 import Instrument from "instrument-id/learn/instrument/Instrument";
 import Play from 'instrument-id/play/Play';
@@ -17,7 +17,7 @@ const InstrumentIdRoutes = () => {
   return (
     <Routes>
       {/* Learn */}
-      <Route path={instrumentIdUrls.learn} element={<Window><Learn /></Window>}/>
+      <Route path={instrumentIdUrls.learn} element={<Window><LearnInstrumentId /></Window>}/>
       <Route path={instrumentIdUrls.learnFamily} element={<Window><LearnFamilyPage /></Window>}/>
       <Route path={instrumentIdUrls.learnInstrument} element={<Window><Instrument /></Window>}/>
       {/* Play */}

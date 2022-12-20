@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Learn component matches snapshot 1`] = `
+exports[`LearnInstrumentId component matches snapshot 1`] = `
 <DocumentFragment>
   <header
     class="WindowNavbar-games"
@@ -12,17 +12,17 @@ exports[`Learn component matches snapshot 1`] = `
     </h1>
   </header>
   <div
-    class="Learn"
+    class="LearnInstrumentId"
   >
     <header
-      class="Learn-header"
+      class="LearnInstrumentId-header"
     >
       <p>
         To begin, choose an instrument family
       </p>
     </header>
     <section
-      class="Learn-options"
+      class="LearnInstrumentId-options"
     >
       <figure
         class="Icon"

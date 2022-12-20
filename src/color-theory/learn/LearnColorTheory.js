@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './Learn.css';
+import './LearnColorTheory.css';
 
 import Icon from '_components/icon/Icon';
 import Options from '_components/option/Options';
@@ -21,7 +21,7 @@ const Learn = () => {
 
   return (<>
     <WindowNavbar page="COLOR THEORY" />
-    <main className='Learn'>
+    <main className='LearnColorTheory'>
       <span>Learn</span>
       <br />
       <Options width='80%'>

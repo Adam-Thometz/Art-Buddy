@@ -2,15 +2,15 @@ import React from "react";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
 
-import Learn from "./Learn";
+import LearnInstrumentId from "./LearnInstrumentId";
 
-describe('Learn component', () => {
+describe('LearnInstrumentId component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Learn />);
+    renderWithProvider(<LearnInstrumentId />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Learn />);
+    const { asFragment } = renderWithProvider(<LearnInstrumentId />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

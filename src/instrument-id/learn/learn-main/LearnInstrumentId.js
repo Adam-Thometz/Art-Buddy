@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import './Learn.css';
+import './LearnInstrumentId.css';
 
 import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
 import learnMenuOptions from "./learnMenuOptions";
 
-const Learn = () => {
+const LearnInstrumentId = () => {
   const navigate = useNavigate();
 
   const options = learnMenuOptions.map(option => {
@@ -19,15 +19,15 @@ const Learn = () => {
 
   return (<>
     <WindowNavbar page='INSTRUMENT ID: LEARN' />
-    <div className="Learn">
-      <header className="Learn-header">
+    <div className="LearnInstrumentId">
+      <header className="LearnInstrumentId-header">
         <p>To begin, choose an instrument family</p>
       </header>
-      <section className="Learn-options">
+      <section className="LearnInstrumentId-options">
         {options}
       </section>
     </div>
   </>);
 };
 
-export default Learn;
+export default LearnInstrumentId;
