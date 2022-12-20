@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Play component matches snapshot 1`] = `
+exports[`PlayInstrumentId component matches snapshot 1`] = `
 <DocumentFragment>
   <header
     class="WindowNavbar-games"

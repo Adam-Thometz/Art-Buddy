@@ -8,7 +8,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import { songMaker, listeningSkills } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from '_routes/routeUrls';
 
-const Play = () => {
+const PlayInstrumentId = () => {
   const navigate = useNavigate();
 
   const goToListeningTest = () => navigate(instrumentIdUrls.playListening);
@@ -26,4 +26,4 @@ const Play = () => {
   </>);
 };
 
-export default Play;
+export default PlayInstrumentId;
