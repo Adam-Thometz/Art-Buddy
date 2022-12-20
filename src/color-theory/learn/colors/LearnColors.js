@@ -28,8 +28,7 @@ const LearnColors = () => {
         {descriptions[category]}
       </section>
     </main>  
-  </>
-  );
+  </>);
 };
 
 export default LearnColors;
