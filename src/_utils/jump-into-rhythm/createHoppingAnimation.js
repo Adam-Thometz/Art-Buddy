@@ -1,19 +1,19 @@
 import { Time } from "tone";
 
-/** createAnimation
+/** createHoppingAnimation
  * Purpose: takes an array of note ids (i.e. ['quarterNote', 'quarterRest', ...]) and dynamically creates a hopping animation for a frog based on the notes. Made with one helper function for each note option
  * Found in: Frog.js
  */
 
-const lilyPadLength = 18;
+const LILY_PAD_LENGTH = 18;
 
 export default function createHoppingAnimation(measure) {
   const animation = [
     { transform: 'translate(0, 0)' },
-    { transform: `translate(${lilyPadLength/2}vw, -7vh)`, easing: 'ease-out', offset: (lilyPadLength/2)/100 }
+    { transform: `translate(${LILY_PAD_LENGTH/2}vw, -7vh)`, easing: 'ease-out', offset: (LILY_PAD_LENGTH/2)/100 }
   ];
   measure.forEach((note, i) => {
-    const lilyPadPosition = lilyPadLength*(i+1);
+    const lilyPadPosition = LILY_PAD_LENGTH*(i+1);
     if (note === 'quarterRest') {
       animation.push(...createQuarterRestAnimation(lilyPadPosition, i));
     } else if (note === 'quarterNote') {
@@ -33,8 +33,9 @@ function createQuarterNoteAnimation(lilyPadPosition, i) {
       transform: `translate(${lilyPadPosition}vw, 0)`,
       offset: ((100/6) * (i+1)) / 100,
       easing: 'ease-in'
-    }, {
-      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -7vh)`,
+    },
+    {
+      transform: `translate(${lilyPadPosition + LILY_PAD_LENGTH/2}vw, -7vh)`,
       offset: ((100/6) * (i+1.5)) / 100,
       easing: 'ease-out'
     }
@@ -47,16 +48,19 @@ function createEighthNotesAnimation(lilyPadPosition, i) {
       transform: `translate(${lilyPadPosition - 4}vw, 0)`,
       offset: ((100/6) * (i+1)) / 100,
       easing: 'ease-in'
-    }, {
+    },
+    {
       transform: `translate(${lilyPadPosition}vw, -7vh)`,
       offset: ((100/6) * (i+1.25)) / 100,
       easing: 'ease-out'
-    }, {
+    },
+    {
       transform: `translate(${lilyPadPosition + 4}vw, 0)`,
       offset: ((100/6) * (i+1.5)) / 100,
       easing: 'ease-in'
-    }, {
-      transform: `translate(${lilyPadPosition + lilyPadLength/2}vw, -7vh)`,
+    },
+    {
+      transform: `translate(${lilyPadPosition + LILY_PAD_LENGTH/2}vw, -7vh)`,
       offset: ((100/6) * (i+1.75)) / 100,
       easing: 'ease-out'
     }
