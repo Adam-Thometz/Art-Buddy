@@ -10,6 +10,7 @@ exports[`SequenceControls component matches snapshot 1`] = `
     >
       <span
         class="Dropdown-label"
+        style="z-index: 5;"
       >
         SOUND CATEGORY 
         <img
@@ -23,6 +24,7 @@ exports[`SequenceControls component matches snapshot 1`] = `
     >
       <span
         class="Dropdown-label"
+        style="z-index: 5;"
       >
         PITCH 
         <img
@@ -36,6 +38,7 @@ exports[`SequenceControls component matches snapshot 1`] = `
     >
       <span
         class="Dropdown-label"
+        style="z-index: 5;"
       >
         DURATION 
         <img

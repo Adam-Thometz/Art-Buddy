@@ -66,6 +66,7 @@ exports[`SongMaker component matches snapshot 1`] = `
         >
           <span
             class="Dropdown-label"
+            style="z-index: 5;"
           >
             INSTRUMENT 
             <img

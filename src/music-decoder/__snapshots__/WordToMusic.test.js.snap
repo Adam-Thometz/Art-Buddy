@@ -42,6 +42,7 @@ exports[`WordToMusic component matches snapshot 1`] = `
       >
         <span
           class="Dropdown-label"
+          style="z-index: 5;"
         >
           SCALE 
           <img
@@ -55,6 +56,7 @@ exports[`WordToMusic component matches snapshot 1`] = `
       >
         <span
           class="Dropdown-label"
+          style="z-index: 5;"
         >
           SOUND 
           <img
