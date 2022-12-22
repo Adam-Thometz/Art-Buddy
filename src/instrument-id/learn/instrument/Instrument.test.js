@@ -11,6 +11,9 @@ jest.mock('react-router-dom', () => ({
     instrument: 'trumpet'
   })
 }));
+jest.mock('tone', () => ({
+  Buffer: jest.fn()
+}));
 
 describe('Instrument component', () => {
   it('renders without crashing', () => {

@@ -29,8 +29,6 @@ const Instrument = () => {
     width,
     videoUrl
   } = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
-    
-  const handleCreateBuffers = () => createBuffers(id);
 
   const playInstrument = async () => {
     if (Transport.state === 'stopped') await start();
@@ -40,17 +38,18 @@ const Instrument = () => {
   };
 
   useEffect(() => {
+    createBuffers(id);
     return () => {
       Transport.stop();
       removeBuffers();
     };
-  }, []);
+  }, [id]);
 
   const openVideo = () => window.open(videoUrl);
 
   return (<>
     <WindowNavbar page='INSTRUMENT ID: LEARN' />
-    <div className="Instrument-main" onLoad={handleCreateBuffers}>
+    <div className="Instrument-main">
       <header className="Instrument-name">
         <Icon largeFont icon={icon} text={name} width={width} />
       </header>
