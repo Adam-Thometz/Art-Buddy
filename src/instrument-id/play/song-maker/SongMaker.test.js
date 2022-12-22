@@ -8,6 +8,7 @@ jest.mock('tone', () => ({
   ...jest.requireActual('tone'),
   Transport: { stop: jest.fn() },
   Time: jest.fn(() => ({ toSeconds: jest.fn() })),
+  Buffer: jest.fn(),
 }));
 
 describe('SongMaker component', () => {

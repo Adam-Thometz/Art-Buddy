@@ -29,7 +29,7 @@ const InstrumentDisplay = () => {
     const id = +e.currentTarget.id;
     const instrumentId = e.target.id;
     dispatch(selectInstrument({ id, instrumentId }));
-    if (process.env.NODE_ENV !== 'test') createBuffers(instrumentId);
+    createBuffers(instrumentId);
   };
 
   const handleSelectMelody = e => {
