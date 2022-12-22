@@ -11,8 +11,6 @@ import InstrumentIdRoutes from "./instrument-id/InstrumentIdRoutes";
 import urls from "_routes/routeUrls";
 import getRoutes from "_utils/_general/getRoutes";
 
-jest.mock('_utils/music-decoder/createSound');
-
 const MusicRoutes = () => {
   return (
     <Routes>

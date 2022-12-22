@@ -6,6 +6,17 @@ import { screen } from "@testing-library/react";
 import MusicRoutes from "./MusicRoutes";
 import urls from '_routes/routeUrls';
 
+jest.mock('_utils/music-decoder/createSound');
+jest.mock('_utils/jump-into-rhythm/buffers');
+jest.mock('tone', () => ({
+  ...jest.requireActual('tone'),
+  Transport: {
+    bpm: {
+      value: 120
+    }
+  }
+}));
+
 describe('Music Game Routes', () => {
   it('renders without crashing', () => {
     renderWithProvider(<MusicRoutes />);

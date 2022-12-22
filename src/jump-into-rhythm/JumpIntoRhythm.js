@@ -23,10 +23,8 @@ const JumpIntoRhythm = () => {
 
   useEffect(() => {
     dispatch(changeCurrGame(jumpIntoRhythm));
-    if (process.env.NODE_ENV !== 'test') {
-      Transport.bpm.value = 90;
-      createBuffers();
-    };
+    Transport.bpm.value = 90;
+    createBuffers();
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
