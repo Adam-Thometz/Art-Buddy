@@ -8,12 +8,7 @@ import { JIR } from '_data/_utils/localStorageKeys';
 
 jest.mock('_utils/jump-into-rhythm/buffers');
 jest.mock('tone', () => ({
-  ...jest.requireActual('tone'),
-  Transport: {
-    bpm: {
-      value: 90
-    }
-  }
+  Transport: { bpm: { value: 90 } }
 }));
 
 describe('JumpIntoRhythm component', () => {

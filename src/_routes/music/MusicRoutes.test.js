@@ -9,12 +9,7 @@ import urls from '_routes/routeUrls';
 jest.mock('_utils/music-decoder/createSound');
 jest.mock('_utils/jump-into-rhythm/buffers');
 jest.mock('tone', () => ({
-  ...jest.requireActual('tone'),
-  Transport: {
-    bpm: {
-      value: 120
-    }
-  }
+  Transport: { bpm: { value: 120 } }
 }));
 
 describe('Music Game Routes', () => {
