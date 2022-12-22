@@ -23,7 +23,7 @@ const WordToMusic = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'test') createSound({ volume, scale, sampleId: sound });
+    window.wordToMusicSound = createSound({ volume, scale, sampleId: sound });
   }, [volume, scale, sound])
 
   useEffect(() => {

@@ -29,7 +29,7 @@ const DecoderControls = () => {
   
   const handleChangeScale = e => {
     const newScale = +e.target.id;
-    createSound({ volume, scale: newScale, sampleId: sound });
+    window.wordToMusicSound = createSound({ volume, scale: newScale, sampleId: sound });
     dispatch(changeScale(newScale));
   };
 

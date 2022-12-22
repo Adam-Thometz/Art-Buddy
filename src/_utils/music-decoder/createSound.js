@@ -20,5 +20,5 @@ export default function createSound({ volume, scale = 0, sampleId = 'synth' }) {
     instrument.volume.value = volume;
   };
 
-  window.wordToMusicSound = instrument;
+  return instrument;
 };
