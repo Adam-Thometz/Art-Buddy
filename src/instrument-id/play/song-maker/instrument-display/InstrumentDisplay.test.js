@@ -4,7 +4,9 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 
 import InstrumentDisplay from "./InstrumentDisplay";
 
-jest.mock('_utils/instrument-id/buffers');
+jest.mock('tone', () => ({
+  Buffer: jest.fn()
+}));
 
 describe('InstrumentDisplay component', () => {
   it('renders without crashing', () => {

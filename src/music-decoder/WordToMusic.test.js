@@ -8,8 +8,19 @@ import WordToMusic from './WordToMusic';
 
 import { WTM } from '_data/_utils/localStorageKeys';
 
-jest.mock('_utils/music-decoder/play');
-jest.mock('_utils/music-decoder/createSound');
+jest.mock('tone', () => ({
+  PitchShift: jest.fn(() => ({
+    toDestination: jest.fn(),
+    triggerAttackRelease: jest.fn()
+  })),
+  Synth: jest.fn(() => ({
+    connect: jest.fn(() => ({
+      volume: { value: 0 }
+    })),
+    triggerAttackRelease: jest.fn()
+  }))
+}));
+jest.mock('_utils/music-decoder/play')
 
 describe('WordToMusic component', () => {
   window.localStorage.setItem(`visited-${WTM}`, true);

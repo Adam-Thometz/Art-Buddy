@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import SongMaker from "./SongMaker";
 
 jest.mock('tone', () => ({
-  ...jest.requireActual('tone'),
   Transport: { stop: jest.fn() },
   Time: jest.fn(() => ({ toSeconds: jest.fn() })),
   Buffer: jest.fn(),

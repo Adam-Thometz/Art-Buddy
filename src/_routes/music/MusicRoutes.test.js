@@ -6,10 +6,17 @@ import { screen } from "@testing-library/react";
 import MusicRoutes from "./MusicRoutes";
 import urls from '_routes/routeUrls';
 
-jest.mock('_utils/music-decoder/createSound');
-jest.mock('_utils/jump-into-rhythm/buffers');
 jest.mock('tone', () => ({
-  Transport: { bpm: { value: 120 } }
+  Transport: { bpm: { value: 120 } },
+  Buffer: jest.fn(),
+  PitchShift: jest.fn(() => ({
+    toDestination: jest.fn(),
+  })),
+  Synth: jest.fn(() => ({
+    connect: jest.fn(() => ({
+      volume: { value: 0 }
+    })),
+  })),
 }));
 
 describe('Music Game Routes', () => {

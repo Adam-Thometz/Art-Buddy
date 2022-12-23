@@ -7,7 +7,10 @@ import InstrumentIdRoutes from "./InstrumentIdRoutes";
 import { instrumentIdUrls } from '_routes/routeUrls';
 
 jest.mock('tone', () => ({
-  Transport: { stop: jest.fn() },
+  Transport: {
+    bpm: { value: 120 },
+    stop: jest.fn()
+  },
   Buffer: jest.fn()
 }));
 
