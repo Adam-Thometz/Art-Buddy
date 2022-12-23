@@ -1,18 +1,19 @@
-import { Part, Time, Transport } from "tone";
-import sample from "_utils/_general/sample";
+import { Part, Sampler, Time, Transport } from "tone";
+
 
 export default function hop({ beats, volume }) {
-  const boing = sample({ sound: window['boing'], volume, baseNote: 'D4' });
-  const quarterNoteTime = Time('4n').toSeconds();
+  const QUARTER_NOTE_TIME = Time('4n').toSeconds();
+  const boing = new Sampler({ urls: { D4: window['boing'] } }).toDestination();
+  boing.volume.value = volume;
 
   const toPlay = createNoteOrder(beats);
   const part = new Part(((time, value) => {
     if (!value.isRest) boing.triggerAttackRelease(value.pitch, value.duration, time);
   }), toPlay);
-  part.start(quarterNoteTime);
+  part.start(QUARTER_NOTE_TIME);
   Transport.start();
   
-  const timerDuration = (Time(`${beats.length / 4}m`).toSeconds() + quarterNoteTime) * 1000;
+  const timerDuration = (Time(`${beats.length / 4}m`).toSeconds() + QUARTER_NOTE_TIME) * 1000;
   const timer = setTimeout(() => {
     part.stop();
     Transport.stop();

@@ -1,5 +1,4 @@
-import { Part, Transport } from 'tone';
-import sample from '../_general/sample';
+import { Part, Sampler, Transport } from 'tone';
 
 /** playScale: 
  * Purpose: plays a scale for non-rhythmic instruments. isTest is true if the function is called in the context of the listening skills test.
@@ -11,7 +10,8 @@ export function playScale({ id, volume, isTest = false }) {
   if (!isTest) scale.push('A3', 'B3', 'C4');
 
   const sound = window[`${id}Buffer`];
-  const instrument = sample({ sound, volume });
+  const instrument = new Sampler({ urls: { C3: sound } }).toDestination();
+  instrument.volume.value = volume;
   const toPlay = scale.map((note, i) => ({ note, time: i/2 }));
 
   const part = new Part(((time, value) => {
@@ -46,7 +46,7 @@ export function playBeat({ id, volume, sound, isTest = false }) {
     part.stop();
     Transport.stop();
     clearTimeout(timer);
-  }, 500*(hits.length))
+  }, 500*(hits.length));
 };
 
 /** getHits:
@@ -59,7 +59,8 @@ function getHits({ id, upperLimit, soundsLength, volume }) {
     const bufferId = `${id}Buffer${(i % soundsLength) + 1}`;
     const buffer = window[bufferId];
     
-    const sound = sample({ sound: buffer, volume });
+    const sound = new Sampler({ urls: { C3: buffer } }).toDestination();
+    sound.volume.value = volume;
     hits.push({ sound, time: i/2 });
   };
   return hits;

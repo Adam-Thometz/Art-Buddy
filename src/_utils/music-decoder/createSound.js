@@ -1,5 +1,4 @@
-import { PitchShift, Synth } from "tone";
-import sample from '../_general/sample';
+import { PitchShift, Sampler, Synth } from "tone";
 
 import getInstrument from "../instrument-id/getInstrument";
 
@@ -14,11 +13,11 @@ export default function createSound({ volume, scale = 0, sampleId = 'synth' }) {
 
   if (sampleId !== 'synth') {
     const { sound } = getInstrument(sampleId);
-    instrument = sample({ sound, volume, toDestination: false }).connect(pitchShift);
+    instrument = new Sampler({ urls: { C3: sound } }).connect(pitchShift);
   } else {
     instrument = new Synth().connect(pitchShift);
-    instrument.volume.value = volume;
   };
+  instrument.volume.value = volume;
 
   return instrument;
 };

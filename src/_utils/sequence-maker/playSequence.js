@@ -1,5 +1,4 @@
-import { Part, Transport } from "tone";
-import sample from "../_general/sample";
+import { Part, Sampler, Transport } from "tone";
 
 /** playSequence:
  * Purpose: plays the sounds in the sequence. May play one at a time or altogether.
@@ -11,7 +10,10 @@ export function playSequence({ sequence, pitch, duration, playAll, volume }) {
     note: `C${pitch}`,
     time: playAll ? 0 : i * duration,
     sound: block && block.sound
-      ? sample({ sound: window[`${block.soundId}Buffer`], volume })
+      ? new Sampler({
+          urls: { C3: window[`${block.soundId}Buffer`] },
+          onload: () => this.sound.volume.value = volume
+        }).toDestination()
       : null
   }));
   const part = new Part(((time, value) => {
@@ -36,6 +38,7 @@ export function playSequence({ sequence, pitch, duration, playAll, volume }) {
 export function playOne({ soundId, pitch, duration, volume }) {
   if (soundId === 'stop') return;
   const buffer = window[`${soundId}Buffer`];
-  const sound = sample({ sound: buffer, volume });
+  const sound = new Sampler({ urls: { C3: buffer } }).toDestination();
+  sound.volume.value = volume;
   sound.triggerAttackRelease(`C${pitch}`, duration);
 };

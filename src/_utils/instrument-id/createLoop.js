@@ -1,8 +1,6 @@
 import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
 import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
-
-import sample from '_utils/_general/sample';
-import { Part } from 'tone';
+import { Part, Sampler } from 'tone';
 
 /** createLoop:
  * Purpose: used for Song Maker feature. Creates a loop for one instrument
@@ -10,9 +8,15 @@ import { Part } from 'tone';
  */
 
 export default function createLoop({ melodyId, volume, buffers, isRhythm }) {
-  const instrument = isRhythm ?
-    buffers.map(b => sample({ sound: b, volume })) :
-    sample({ sound: buffers, volume });
+  const instrument = isRhythm
+    ? buffers.map(b => new Sampler({
+      urls: { C3: b },
+      onload: () => b.volume.value = volume
+    }).toDestination())
+    : new Sampler({
+      urls: { C3: buffers },
+      onload: () => instrument.volume.value = volume
+    }).toDestination();
   const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
 
   const part = new Part(((time, value) => {
