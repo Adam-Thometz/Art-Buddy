@@ -30,9 +30,9 @@ const SavedSongs = () => {
   };
 
   const handlePlay = async () => {
+    if (!selectedSong) return;
     if (Transport.state === 'stopped') await start();
     const partsToPlay = []
-    if (!selectedSong) return;
     const song = savedSongs.get(selectedSong);
     for (let instrument of song) {
       if (!instrument) continue;
@@ -44,13 +44,13 @@ const SavedSongs = () => {
       const part = createLoop({ melodyId, volume, buffers, isRhythm });
       partsToPlay.push(part);
     };
-    setLoop(partsToPlay);
+    setLoop({ isPlaying: true, partsToPlay });
   };
 
   const handleDelete = () => {
     if (!selectedSong) return;
     savedSongs.delete(selectedSong);
-    setSavedSongs(JSON.stringify(Array.from(savedSongs.entries())));
+    setSavedSongs(savedSongs.entries());
   };
 
   const songDisplay = Array.from(savedSongs.keys()).map(key => (
@@ -60,7 +60,7 @@ const SavedSongs = () => {
   return (
     <section className='SavedSongs'>
       <aside className='SavedSongs-options'>
-        <Icon icon={smallPlayIcon} text='Play' size='49px' onClick={loop ? stopInstruments : handlePlay} />
+        <Icon icon={smallPlayIcon} text='Play' size='49px' onClick={loop.isPlaying ? stopInstruments : handlePlay} />
         <Icon icon={deleteIcon} text='Delete' size='49px' onClick={handleDelete} />
       </aside>
       <section className='SavedSongs-song-list'>
