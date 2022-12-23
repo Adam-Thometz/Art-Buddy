@@ -16,9 +16,9 @@ const AlphabetTable = () => {
   } = useSelector(state => state.musicDecoder);
   const dispatch = useDispatch();
 
-  const displayLetters = isUpperCase ?
-    Object.keys(LETTER_NOTES).slice(0, 26) :
-    Object.keys(LETTER_NOTES).slice(26);
+  const displayLetters = isUpperCase
+    ? Object.keys(LETTER_NOTES).slice(0, 26)
+    : Object.keys(LETTER_NOTES).slice(26);
 
   const createCell = char => {
     let className = 'AlphabetTable-cell';
