@@ -45,8 +45,6 @@ const SavedSongs = () => {
       partsToPlay.push(part);
     };
     setLoop(partsToPlay);
-    Transport.start();
-    partsToPlay.forEach(part => part.start(0));
   };
 
   const handleDelete = () => {
@@ -58,6 +56,8 @@ const SavedSongs = () => {
   const songDisplay = Array.from(savedSongs.keys()).map(key => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
   ));
+
+  console.log(stopInstruments)
 
   return (
     <section className='SavedSongs'>

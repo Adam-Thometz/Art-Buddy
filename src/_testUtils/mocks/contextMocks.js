@@ -23,11 +23,13 @@ export const PopupContextMock = ({ children }) => {
   );
 };
 
+// Used in PlaySave.test.js and SavedSongs.test.js
 export const SongMakerContextMock = ({ children }) => {
-  const [loop, setLoop] = useState(null);
+  const [loop, setLoop] = useState({ isPlaying: false });
+  const stopInstruments = () => {}
   return (
-    <SongMakerInfoContext.Provider value={{ loop, setLoop }}>
+    <SongMakerInfoContext.Provider value={{ loop, setLoop, stopInstruments }}>
       {children}
     </SongMakerInfoContext.Provider>
-  )
-}
+  );
+};

@@ -38,7 +38,7 @@ exports[`SongMaker component matches snapshot 1`] = `
     class="SongMaker-button-instrument-wrapper"
   >
     <div
-      class="SongMaker-buttons"
+      class="PlaySave"
     >
       <button
         class="Button regular"

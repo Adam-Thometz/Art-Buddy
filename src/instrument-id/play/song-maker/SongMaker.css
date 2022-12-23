@@ -6,10 +6,6 @@
   align-items: center;
 }
 
-.SongMaker-buttons {
-  width: 33%;
-}
-
 .SongMaker-buttons button {
   width: 50%;
 }
