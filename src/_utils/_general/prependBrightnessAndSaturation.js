@@ -1,6 +1,6 @@
-// function to convert gray block to black so the filter can work
-// takes the filter settings of a color and returns the filter with
-// brightness and saturation added at the beginning.
-export default function prependBrightnessAndSaturation(color) {
-  return `brightness(0%) saturate(100%) ${color}`
+/** prependBrightnessAndSaturation
+ * Purpose: takes a filter and prepends brightness and saturation. Used on components that are not black so the filter may work.
+ */
+export default function prependBrightnessAndSaturation(filter) {
+  return `brightness(0%) saturate(100%) ${filter}`
 };
