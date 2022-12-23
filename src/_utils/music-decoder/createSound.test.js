@@ -18,7 +18,7 @@ jest.mock('tone', () => ({
   Sampler({ urls }) {
     return {
       connect(pitch) {
-        return { sound: urls.C3, pitch, volume: { value: 0 } };
+        return { sound: urls.C3, pitch, volume: {} };
       },
     };
   },
@@ -37,6 +37,6 @@ describe('createSound function', () => {
   
   it('should create a sample out of a sound', () => {
     const instrument = createSound({ volume: 0, sampleId: 'trumpet' });
-    expect(instrument).toEqual({ pitch: 0, sound: 'file', volume: { value: 0 } })
+    expect(instrument).toEqual({ pitch: 0, sound: 'file', volume: { value: 0 } });
   });
 });
