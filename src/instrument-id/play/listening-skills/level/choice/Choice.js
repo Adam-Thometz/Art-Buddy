@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice } from "_redux/instrument-id/instrumentIdActions";
@@ -10,10 +11,11 @@ import Icon from "_components/icon/Icon";
 import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/iconImports";
 import updateReportCard from "_utils/instrument-id/updateReportCard";
 
-const Choice = ({ id, level, choice, save }) => {
+const Choice = ({ id, level, choice }) => {
   const { answer } = useSelector(state => state.instrumentId);
   const [isCorrect, setIsCorrect] = useState(null);
   const dispatch = useDispatch();
+  const [, setReportCard] = useReportCard('instrumentId', level)
 
   const checkAnswer = () => {
     const { name, family } = choice;
@@ -21,7 +23,7 @@ const Choice = ({ id, level, choice, save }) => {
     setIsCorrect(result);
 
     if (result) {
-      save(reportCard => {
+      setReportCard(reportCard => {
         const updatedGrade = updateReportCard({ group: reportCard[family].results, name });
         return {
           ...reportCard,
@@ -43,16 +45,16 @@ const Choice = ({ id, level, choice, save }) => {
   const swapInstrument = () => dispatch(selectChoice({ id, level, choice: choice.family }));  
 
   const isCorrectClass = isCorrect !== null
-    ? (isCorrect
+    ? isCorrect
       ? ' correct'
       : ' incorrect'
-    ) : '';
+    : '';
 
   const isCorrectWrapper = isCorrect !== null
-    ? (isCorrect
+    ? isCorrect
       ? <Icon size="150px" icon={correctIcon} text='CORRECT' />
       : <Icon size="150px" icon={incorrectIcon} text='INCORRECT' />
-    ) : null;
+    : null;
 
   return (
     <div className='Choice'>
