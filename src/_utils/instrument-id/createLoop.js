@@ -9,14 +9,11 @@ import { Part, Sampler } from 'tone';
 
 export default function createLoop({ melodyId, volume, buffers, isRhythm }) {
   const instrument = isRhythm
-    ? buffers.map(b => new Sampler({
-      urls: { C3: b },
-      onload: () => b.volume.value = volume
-    }).toDestination())
-    : new Sampler({
-      urls: { C3: buffers },
-      onload: () => instrument.volume.value = volume
-    }).toDestination();
+    ? buffers.map(b => new Sampler({ urls: { C3: b } }).toDestination())
+    : new Sampler({ urls: { C3: buffers } }).toDestination();
+  isRhythm
+    ? instrument.map(i => i.volume.value = volume)
+    : instrument.volume.value = volume;
   const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
 
   const part = new Part(((time, value) => {
