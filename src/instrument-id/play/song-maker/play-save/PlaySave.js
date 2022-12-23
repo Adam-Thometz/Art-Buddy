@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
 
 import { useSelector } from 'react-redux';
 
@@ -8,32 +9,19 @@ import Button from '_components/button/Button';
 import Popup from '_components/popup/Popup';
 import SaveSong from '../save-song/SaveSong';
 
-import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
-import createLoop from '_utils/instrument-id/createLoop';
 import calculateTimeLeft from '_utils/instrument-id/calculateTimeLeft';
-import { getBuffers } from '_utils/instrument-id/buffers';
-import { Transport, start } from 'tone';
 
 const PlaySave = () => {
   const { song } = useSelector(state => state.instrumentId);
-  const { volume } = useSelector(state => state.mainSettings);
-  const { loop, setLoop, currTimer, setCurrTimer, stopInstruments } = useContext(SongMakerInfoContext);
+  const {
+    loop,
+    currTimer,
+    setCurrTimer,
+    playInstruments,
+    stopInstruments
+  } = useContext(SongMakerInfoContext);
 
-  const playInstruments = async () => {
-    if (Transport.state === 'stopped') await start();
-    const partsToPlay = [];
-    for (let instrument of song) {
-      if (!instrument) continue;
-      
-      const { instrumentId, melodyId, isRhythm } = instrument;
-      if (!melodyId) continue;
-
-      const { buffers } = getBuffers(instrumentId);
-      const part = createLoop({ melodyId, volume, buffers, isRhythm });
-      partsToPlay.push(part);
-    };
-    setLoop({ isPlaying: true, partsToPlay });
-  };
+  const handlePlay = () => playInstruments(song);
 
   useEffect(() => {
     if (!loop.isPlaying) return;
@@ -41,7 +29,7 @@ const PlaySave = () => {
     const duration = calculateTimeLeft(loop.partsToPlay);
     const timer = setTimeout(() => {
       stopInstruments();
-      playInstruments();
+      playInstruments(song);
       clearTimeout(timer);
       setCurrTimer(null);
     }, duration);
@@ -51,7 +39,7 @@ const PlaySave = () => {
 
   return (
     <div className='PlaySave'>
-      <Button colorId={loop.isPlaying ? 2 : 0} onClick={loop.isPlaying ? stopInstruments : playInstruments}>
+      <Button colorId={loop.isPlaying ? 2 : 0} onClick={loop.isPlaying ? stopInstruments : handlePlay}>
         {loop.isPlaying ? 'STOP' : 'PLAY'}
       </Button>
       <Popup

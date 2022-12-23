@@ -1,21 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useSavedSongs from '_hooks/useSavedSongs';
 import SongMakerContext from '_utils/instrument-id/SongMakerInfoContext';
-
-import { useSelector } from 'react-redux';
 
 import './SavedSongs.css';
 
 import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '_media/instrument-id/_icons/iconImports';
-import { createBuffers, getBuffers } from '_utils/instrument-id/buffers';
-import createLoop from '_utils/instrument-id/createLoop';
-import { Transport, start } from 'tone';
+import { createBuffers } from '_utils/instrument-id/buffers';
 
 const SavedSongs = () => {
-  const { volume } = useSelector(state => state.mainSettings);
-  const { loop, setLoop, stopInstruments } = useContext(SongMakerContext)
+  const { loop, playInstruments, stopInstruments } = useContext(SongMakerContext);
   const [savedSongs, setSavedSongs] = useSavedSongs();
   const [selectedSong, setSelectedSong] = useState(null);
 
@@ -29,22 +24,10 @@ const SavedSongs = () => {
     };
   };
 
-  const handlePlay = async () => {
+  const handlePlay = () => {
     if (!selectedSong) return;
-    if (Transport.state === 'stopped') await start();
-    const partsToPlay = []
     const song = savedSongs.get(selectedSong);
-    for (let instrument of song) {
-      if (!instrument) continue;
-
-      const { instrumentId, melodyId, isRhythm } = instrument;
-      if (!melodyId) continue;
-      
-      const { buffers } = getBuffers(instrumentId);
-      const part = createLoop({ melodyId, volume, buffers, isRhythm });
-      partsToPlay.push(part);
-    };
-    setLoop({ isPlaying: true, partsToPlay });
+    playInstruments(song);
   };
 
   const handleDelete = () => {
@@ -52,6 +35,12 @@ const SavedSongs = () => {
     savedSongs.delete(selectedSong);
     setSavedSongs(savedSongs.entries());
   };
+
+  useEffect(() => {
+    return () => {
+      if (loop.isPlaying) stopInstruments();
+    }
+  }, [loop.isPlaying, stopInstruments]);
 
   const songDisplay = Array.from(savedSongs.keys()).map(key => (
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
