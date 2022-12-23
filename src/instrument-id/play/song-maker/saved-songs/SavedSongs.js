@@ -57,8 +57,6 @@ const SavedSongs = () => {
     <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
   ));
 
-  console.log(stopInstruments)
-
   return (
     <section className='SavedSongs'>
       <aside className='SavedSongs-options'>
