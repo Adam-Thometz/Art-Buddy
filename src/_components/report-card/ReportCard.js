@@ -16,7 +16,7 @@ const ReportCard = ({ game, level = null }) => {
     );
   });
 
-  const handleClearReportCard = () => setReportCard(reportCards[game]);
+  const handleClearReportCard = () => setReportCard(reportCards[`${game}ReportCard`]);
 
   return (
     <main className='ReportCard'>
