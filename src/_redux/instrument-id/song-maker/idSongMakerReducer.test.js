@@ -3,7 +3,7 @@ import { addInstrument, removeInstrument, selectMelody, clearSong } from "./idSo
 
 import { setupInstrument } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
-describe("What's That Instrument? reducer", () => {
+describe("Song Maker reducer", () => {
   it('should return the initial state', () => {
     expect(idSongMakerReducer(undefined, {})).toEqual(INITIAL_STATE);
   });

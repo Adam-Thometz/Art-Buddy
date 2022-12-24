@@ -3,7 +3,7 @@ import { selectChoice, generateAnswer, clearChoices } from "./idListeningSkillsA
 
 import { setupChoices } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
-describe("What's That Instrument? reducer", () => {
+describe("Listening Skills Test reducer", () => {
   it('should return the initial state', () => {
     expect(idListeningSkillsReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
