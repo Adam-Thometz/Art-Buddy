@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/instrumentIdActions";
+import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/idListeningSkillsActions";
 
 import './ListeningSkillsTest.css';
 
@@ -22,7 +22,7 @@ const ListeningSkillsTest = () => {
     choice1,
     choice2,
     answer
-  } = useSelector(state => state.instrumentId);
+  } = useSelector(state => state.listeningSkillsTest);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   const { level } = useParams();

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addInstrument, removeInstrument, selectInstrument, selectMelody } from '_redux/instrument-id/instrumentIdActions';
+import { addInstrument, removeInstrument, selectInstrument, selectMelody } from '_redux/instrument-id/song-maker/idSongMakerActions';
 
 import './InstrumentDisplay.css';
 
@@ -12,7 +12,7 @@ import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptio
 import { createBuffers } from '_utils/instrument-id/buffers';
 
 const InstrumentDisplay = () => {
-  const { song } = useSelector(state => state.instrumentId);
+  const { song } = useSelector(state => state.songMaker);
   const dispatch = useDispatch();
 
   const handleAddInstrument = e => {

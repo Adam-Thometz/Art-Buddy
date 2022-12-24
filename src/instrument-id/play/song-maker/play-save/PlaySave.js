@@ -12,7 +12,7 @@ import SaveSong from '../save-song/SaveSong';
 import calculateTimeLeft from '_utils/instrument-id/calculateTimeLeft';
 
 const PlaySave = () => {
-  const { song } = useSelector(state => state.instrumentId);
+  const { song } = useSelector(state => state.songMaker);
   const {
     loop,
     currTimer,

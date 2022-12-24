@@ -10,7 +10,7 @@ import Button from '_components/button/Button';
 import Keyboard from '_components/keyboard/Keyboard';
 
 const SaveSong = () => {
-  const { song } = useSelector(state => state.instrumentId);
+  const { song } = useSelector(state => state.songMaker);
   const [savedSongs, setSavedSongs] = useSavedSongs();
   const [input, setInput, resetInput] = useFormFields({ title: '' });
   const inputRef = useRef();

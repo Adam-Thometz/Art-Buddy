@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "_redux/instrument-id/instrumentIdActions";
+import { selectChoice } from "_redux/instrument-id/listening-skills/idListeningSkillsActions";
 
 import './Choice.css';
 
@@ -12,7 +12,7 @@ import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/ic
 import updateReportCard from "_utils/instrument-id/updateReportCard";
 
 const Choice = ({ id, level, choice }) => {
-  const { answer } = useSelector(state => state.instrumentId);
+  const { answer } = useSelector(state => state.listeningSkillsTest);
   const [isCorrect, setIsCorrect] = useState(null);
   const dispatch = useDispatch();
   const [, setReportCard] = useReportCard('instrumentId', level)
