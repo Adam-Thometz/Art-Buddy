@@ -18,7 +18,6 @@ import checkHasPassed from "_utils/_report-card/checkHasPassed";
 const ListeningSkills = () => {
   const navigate = useNavigate();
   const [reportCard1] = useReportCard('instrumentId', 1);
-  // const [reportCard2] = useReportCard('instrumentId', 2);
   const reportCardsToCheck = [null, reportCard1];
 
   const popupTrigger = (<>
