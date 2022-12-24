@@ -4,8 +4,8 @@ import mainSettingsReducer from './settings/mainSettingsReducer';
 import musicDecoderReducer from './music-decoder/musicDecoderReducer';
 import jumpIntoRhythmReducer from './jump-into-rhythm/jumpIntoRhythmReducer';
 import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
-import idListeningSkillsTestReducer from './instrument-id/listening-skills/idListeningSkillsReducer';
-import idSongMakerReducer from './instrument-id/song-maker/idSongMakerReducer';
+import listeningSkillsTestReducer from './instrument-id/listening-skills/listeningSkillsTestReducer';
+import songMakerReducer from './instrument-id/song-maker/songMakerReducer';
 import freePaintReducer from './free-paint/freePaintReducer';
 import colorTheoryReducer from './color-theory/colorTheoryReducer';
 import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
@@ -15,8 +15,8 @@ const rootReducer = configureStore({
     mainSettings: mainSettingsReducer,
     musicDecoder: musicDecoderReducer,
     sequenceMaker: sequenceMakerReducer,
-    listeningSkillsTest: idListeningSkillsTestReducer,
-    songMaker: idSongMakerReducer,
+    listeningSkillsTest: listeningSkillsTestReducer,
+    songMaker: songMakerReducer,
     scoreKeeper: scoreKeeperReducer,
     jumpIntoRhythm: jumpIntoRhythmReducer,
     freePaint: freePaintReducer,

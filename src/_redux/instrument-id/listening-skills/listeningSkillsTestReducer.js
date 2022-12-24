@@ -1,4 +1,4 @@
-import { clearChoices, generateAnswer, selectChoice } from "./idListeningSkillsActions";
+import { clearChoices, generateAnswer, selectChoice } from "./listeningSkillsTestActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getChoices from "_utils/instrument-id/getChoices";
@@ -9,7 +9,7 @@ export const INITIAL_STATE = {
   answer: null,
 };
 
-const idListeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
+const listeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(selectChoice, (state, action) => {
       const { id, level, choice } = action.payload;
@@ -35,4 +35,4 @@ const idListeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
     });
 });
 
-export default idListeningSkillsTestReducer;
+export default listeningSkillsTestReducer;

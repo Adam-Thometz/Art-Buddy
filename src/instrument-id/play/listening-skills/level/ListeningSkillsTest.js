@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/idListeningSkillsActions";
+import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
 
 import './ListeningSkillsTest.css';
 

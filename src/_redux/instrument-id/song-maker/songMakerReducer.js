@@ -1,4 +1,4 @@
-import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument } from "./idSongMakerActions";
+import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument } from "./songMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_utils/instrument-id/getInstrument";
@@ -13,7 +13,7 @@ export const INITIAL_STATE = {
   song: [defaultInstrument, null, null, null],
 };
 
-const idSongMakerReducer = createReducer(INITIAL_STATE, (builder) => {
+const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(addInstrument, (state, action) => {
       const id = action.payload;
@@ -48,4 +48,4 @@ const idSongMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     });
 });
 
-export default idSongMakerReducer;
+export default songMakerReducer;

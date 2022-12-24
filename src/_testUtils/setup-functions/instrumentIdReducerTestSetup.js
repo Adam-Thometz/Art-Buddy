@@ -1,7 +1,7 @@
-import idListeningSkillsTestReducer from "_redux/instrument-id/listening-skills/idListeningSkillsReducer";
-import idSongMakerReducer from "_redux/instrument-id/song-maker/idSongMakerReducer";
-import { selectChoice } from "_redux/instrument-id/listening-skills/idListeningSkillsActions";
-import { selectInstrument } from "_redux/instrument-id/song-maker/idSongMakerActions";
+import idListeningSkillsTestReducer from "_redux/instrument-id/listening-skills/listeningSkillsTestReducer";
+import idSongMakerReducer from "_redux/instrument-id/song-maker/songMakerReducer";
+import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
+import { selectInstrument } from "_redux/instrument-id/song-maker/songMakerActions";
 
 export function setupChoices() {
   Math.random = jest.fn();
