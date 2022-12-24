@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
@@ -11,11 +10,10 @@ import Icon from "_components/icon/Icon";
 import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/iconImports";
 import updateReportCard from "_utils/instrument-id/updateReportCard";
 
-const Choice = ({ id, level, choice }) => {
+const Choice = ({ id, level, choice, save }) => {
   const { answer } = useSelector(state => state.listeningSkillsTest);
   const [isCorrect, setIsCorrect] = useState(null);
   const dispatch = useDispatch();
-  const [, setReportCard] = useReportCard('instrumentId', level)
 
   const checkAnswer = () => {
     const { name, family } = choice;
@@ -23,15 +21,8 @@ const Choice = ({ id, level, choice }) => {
     setIsCorrect(result);
 
     if (result) {
-      setReportCard(reportCard => {
+      save(reportCard => {
         const updatedGrade = updateReportCard({ group: reportCard[family].results, name });
-        console.log({
-          ...reportCard,
-          [family]: { 
-            ...reportCard[family],
-            results: updatedGrade
-          }
-        })
         return {
           ...reportCard,
           [family]: { 

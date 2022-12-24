@@ -16,6 +16,7 @@ import instrumentOptions from "./instrumentOptions";
 import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
 import { playBeat, playScale } from "_utils/instrument-id/play";
 import { start, Transport } from "tone";
+import useReportCard from "_hooks/useReportCard";
 
 const ListeningSkillsTest = () => {
   const {
@@ -26,6 +27,7 @@ const ListeningSkillsTest = () => {
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   const { level } = useParams();
+  const [, setReportCard] = useReportCard('instrumentId', level);
   
   const setInstruments = e => {
     const id = e.currentTarget.id;
@@ -75,9 +77,9 @@ const ListeningSkillsTest = () => {
           {level === '1' ? dropdown(2) : null}
         </div>
         <div className="ListeningSkillsTest-choices">
-          {choice1 ? <Choice choice={choice1} id='1' level={level} /> : null}
+          {choice1 ? <Choice choice={choice1} id='1' level={level} save={setReportCard} /> : null}
           <p>{choice1 && choice2 ? 'OR' : null}</p>
-          {choice2 ? <Choice choice={choice2} id='2' level={level} /> : null}
+          {choice2 ? <Choice choice={choice2} id='2' level={level} save={setReportCard} /> : null}
         </div>
       </div>
     </section>
