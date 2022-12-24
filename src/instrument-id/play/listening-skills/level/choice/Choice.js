@@ -25,6 +25,13 @@ const Choice = ({ id, level, choice }) => {
     if (result) {
       setReportCard(reportCard => {
         const updatedGrade = updateReportCard({ group: reportCard[family].results, name });
+        console.log({
+          ...reportCard,
+          [family]: { 
+            ...reportCard[family],
+            results: updatedGrade
+          }
+        })
         return {
           ...reportCard,
           [family]: { 

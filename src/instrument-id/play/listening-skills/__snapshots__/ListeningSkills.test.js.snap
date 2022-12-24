@@ -46,6 +46,10 @@ exports[`ListeningSkills component matches snapshot 1`] = `
           class="Button small"
           style="border-color: #89eb0a;"
         >
+          <img
+            alt=""
+            src="file"
+          />
           Level 1
         </button>
         <div
@@ -65,8 +69,13 @@ exports[`ListeningSkills component matches snapshot 1`] = `
       >
         <button
           class="Button small"
-          style="border-color: #ffe81a;"
+          disabled=""
+          style="border-color: #ffe81a; background-color: grey;"
         >
+          <img
+            alt=""
+            src="file"
+          />
           Level 2
         </button>
         <div
