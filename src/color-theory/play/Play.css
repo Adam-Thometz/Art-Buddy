@@ -20,14 +20,22 @@
   margin: auto;
 }
 
+.Play-description {
+  width: 90%;
+  margin: 2vh auto;
+  text-align: left;
+}
+
 .Play-level {
   display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 65%;
 }
 
 .Play-level button {
-  width: 25%;
+  width: 50%;
+  height: 10vh;
 }
 
 .Play-report-card {

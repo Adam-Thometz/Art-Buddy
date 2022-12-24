@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useReportCard from '_hooks/useReportCard';
 
 import Icon from '_components/icon/Icon';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
@@ -13,28 +14,41 @@ import ReportCard from '_components/report-card/ReportCard';
 import colorTheoryIcon from '_media/menu/activity-icons/color-theory.png';
 import reportCardIcon from '_media/_general/report-card.png';
 import { colorTheoryUrls } from '_routes/routeUrls';
+import { lockIcon, unlockIcon } from "_media/_general/lock-icons/lockIconImports";
+import checkHasPassed from '_utils/_report-card/checkHasPassed';
+
+const COLOR_THEORY_GROUPS = ['primary', 'secondary', 'tertiary'];
 
 const Play = () => {
   const navigate = useNavigate();
+  const [reportCard] = useReportCard('colorTheory');
+  const rowsToCheck = COLOR_THEORY_GROUPS.map(row => ([
+    reportCard[`${row}A`], reportCard[`${row}B`]
+  ]));
+  console.log(rowsToCheck)
 
-  const popupTrigger = (
-    <>
-      <img src={reportCardIcon} alt='' />
-      <p>Report Card</p>
-    </>
-  );
+  const popupTrigger = (<>
+    <img src={reportCardIcon} alt='' />
+    <p>Report Card</p>
+  </>);
 
-  const levels = [1,2,3].map(level => {
-    const goToTest = () => navigate(`${colorTheoryUrls.play}/${level}`);
+  const levels = COLOR_THEORY_GROUPS.map((level, i) => {
+    const goToTest = () => navigate(`${colorTheoryUrls.play}/${i+1}`);
+    const unlocked = i === 0 || checkHasPassed(reportCard);
     return (
       <div key={level} className='Play-level'>
-        <Button small colorId={level-1} onClick={goToTest}>Level {level}</Button>
-        <Popup
+        <Button
+          small
+          colorId={i}
+          icon={unlocked ? unlockIcon : lockIcon}
+          disabled={!unlocked}
+          onClick={goToTest}>Level {i+1}</Button>
+        {i === 0 ? <Popup
           title='REPORT CARD'
           trigger={popupTrigger}
           triggerClass='Play-report-card'
-          popup={<ReportCard game='colorTheory' level={level} />}
-        />
+          popup={<ReportCard game='colorTheory' level={i+1} />}
+        /> : null}
       </div>
     )
   })
@@ -46,7 +60,7 @@ const Play = () => {
         <Icon largeFont icon={colorTheoryIcon} text="Color Theory" />
       </header>
       <section className='Play-levels-report-cards'>
-        <p>Complete each level to unlock the next. Your report card will show you your progress. Completing levels will also unlock more colors in Free Paint!</p>
+        <p className='Play-description'>Complete each level to unlock the next. Your report card will show you your progress. Completing levels will also unlock more colors in Free Paint!</p>
         {levels}
       </section>
     </main>
