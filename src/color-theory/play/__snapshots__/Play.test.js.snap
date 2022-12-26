@@ -36,7 +36,9 @@ exports[`Play component matches snapshot 1`] = `
     <section
       class="Play-levels-report-cards"
     >
-      <p>
+      <p
+        class="Play-description"
+      >
         Complete each level to unlock the next. Your report card will show you your progress. Completing levels will also unlock more colors in Free Paint!
       </p>
       <div
@@ -46,6 +48,10 @@ exports[`Play component matches snapshot 1`] = `
           class="Button small"
           style="border-color: #89eb0a;"
         >
+          <img
+            alt=""
+            src="file"
+          />
           Level 1
         </button>
         <div
@@ -65,42 +71,30 @@ exports[`Play component matches snapshot 1`] = `
       >
         <button
           class="Button small"
-          style="border-color: #ffe81a;"
-        >
-          Level 2
-        </button>
-        <div
-          class="Play-report-card"
+          disabled=""
+          style="border-color: #ffe81a; background-color: grey;"
         >
           <img
             alt=""
             src="file"
           />
-          <p>
-            Report Card
-          </p>
-        </div>
+          Level 2
+        </button>
       </div>
       <div
         class="Play-level"
       >
         <button
           class="Button small"
-          style="border-color: #fd4d3a;"
-        >
-          Level 3
-        </button>
-        <div
-          class="Play-report-card"
+          disabled=""
+          style="border-color: #fd4d3a; background-color: grey;"
         >
           <img
             alt=""
             src="file"
           />
-          <p>
-            Report Card
-          </p>
-        </div>
+          Level 3
+        </button>
       </div>
     </section>
   </main>
