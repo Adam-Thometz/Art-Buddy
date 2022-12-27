@@ -28,10 +28,13 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(removeFromSequence, (state, action) => {
       const id = action.payload;
-      state.sequence[id] = null;
+      const newSequence = state.sequence;
+      newSequence[id] = null;
+      state.sequence = newSequence;
     })
     .addCase(resetSequence, (state) => {
-      state.sequence.fill(null);
+      const resetSequence = Array(4).fill(null);
+      state.sequence = resetSequence;
     })
     .addCase(setPitch, (state, action) => {
       state.pitch = action.payload;
@@ -41,8 +44,9 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(togglePlaying, (state, action) => {
       const id = action.payload;
-      const currIsPlaying = state.sequence[id].isPlaying;
-      state.sequence[id].isPlaying = !currIsPlaying;
+      const newSequence = state.sequence;
+      newSequence[id].isPlaying = !newSequence[id].isPlaying;
+      state.sequence = newSequence;
     })
     .addCase(clearGame, (state) => {
       state.category = INITIAL_STATE.category;
