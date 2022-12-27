@@ -23,8 +23,8 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
       const currStudents = state.students;
       const targetIdx = currStudents.findIndex(student => student.name === name);
       const points = currStudents[targetIdx].points;
-      if (operation(points) < 0) return;
-      currStudents[targetIdx].points = operation(points);
+      const result = operation(points);
+      currStudents[targetIdx].points = result < 0 ? 0 : result;
       const updatedStudents = sortWinners(currStudents);
       state.students = updatedStudents;
     })
