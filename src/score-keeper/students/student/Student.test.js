@@ -8,7 +8,7 @@ describe('Student component', () => {
   });
 
   it('matches the snapshot', () => {
-    const { asFragment } = renderWithProvider(<Student name='Eddie' color='#000000' points={0} />);
+    const { asFragment } = renderWithProvider(<Student name='Eddie' points={0} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

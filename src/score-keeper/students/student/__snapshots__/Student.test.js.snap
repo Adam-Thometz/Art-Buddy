@@ -14,16 +14,19 @@ exports[`Student component matches the snapshot 1`] = `
       class="Student-point-control"
     >
       <img
-        alt="add"
+        alt="minus"
+        role="button"
         src="file"
       />
       <p
         class="Student-points"
+        data-testid="score"
       >
         0
       </p>
       <img
-        alt="minus"
+        alt="add"
+        role="button"
         src="file"
       />
     </div>

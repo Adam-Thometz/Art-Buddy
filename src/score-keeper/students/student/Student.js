@@ -18,9 +18,9 @@ const Student = ({ name, points }) => {
     <div className="Student">
       <p className="Student-name">{name}</p>
       <div className="Student-point-control">
-        <img src={addIcon} alt="add" onClick={add} />
-        <p className="Student-points">{points}</p>
-        <img src={subtractIcon} alt="minus" onClick={subtract} />
+        <img src={subtractIcon} alt="minus" role='button' onClick={subtract} />
+        <p className="Student-points" data-testid='score'>{points}</p>
+        <img src={addIcon} alt="add" role='button' onClick={add} />
       </div>
     </div>
   );
