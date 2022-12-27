@@ -1,7 +1,8 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addPoint, removePoint, clearGame, loadStudents } from "./scoreKeeperActions";
+import { loadStudents, updatePoints, clearGame } from "./scoreKeeperActions";
 
 import sortWinners from "_utils/score-keeper/sortWinners";
+import operations from "_data/score-keeper/operations";
 
 export const INITIAL_STATE = {
   students: []
@@ -16,20 +17,14 @@ const scoreKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
       }))
       state.students = students;
     })
-    .addCase(addPoint, (state, action) => {
-      const targetName = action.payload;
+    .addCase(updatePoints, (state, action) => {
+      const { name, instruction } = action.payload;
+      const operation = operations[instruction];
       const currStudents = state.students;
-      const targetIdx = currStudents.findIndex(student => student.name === targetName);
-      currStudents[targetIdx].points++;
-      const updatedStudents = sortWinners(currStudents);
-      state.students = updatedStudents;
-    })
-    .addCase(removePoint, (state, action) => {
-      const targetName = action.payload;
-      const currStudents = state.students;
-      const targetIdx = currStudents.findIndex(student => student.name === targetName);
-      if (!currStudents[targetIdx].points) return;
-      currStudents[targetIdx].points--;
+      const targetIdx = currStudents.findIndex(student => student.name === name);
+      const points = currStudents[targetIdx].points;
+      if (operation(points) < 0) return;
+      currStudents[targetIdx].points = operation(points);
       const updatedStudents = sortWinners(currStudents);
       state.students = updatedStudents;
     })
