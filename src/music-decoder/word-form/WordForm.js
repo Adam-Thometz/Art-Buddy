@@ -15,10 +15,10 @@ const WordForm = () => {
 
   const updateWord = e => {
     setInput(e);
-    const { value } = e.target;
-    const check = hasValidWords(value.trim());
+    const input = e.target.value.trim();
+    const check = hasValidWords(input);
     if (check.success) {
-      dispatch(createWords(value.trim()));
+      dispatch(createWords(input));
       errorRef.current.textContent = '';
     } else {
       errorRef.current.textContent = check.error;
