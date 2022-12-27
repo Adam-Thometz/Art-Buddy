@@ -13,14 +13,8 @@ describe('Word To Music reducer', () => {
   it('should create a word for the word display', () => {
     const result = musicDecoderReducer(undefined, createWords('hi'));
     expect(result.words).toEqual(['hi']);
-    expect(result.formError).toBeNull();
   });
   
-  it('should throw an error if a word is invalid', () => {
-    const result = musicDecoderReducer(undefined, createWords('he110'));
-    expect(result.formError).toBe('Only letters are allowed');
-  });
-
   it('should fill a letter with a note', () => {
     const result = musicDecoderReducer(testState, fillLetter('H'));
     expect(result.filledLetters['H']).toBe(true);

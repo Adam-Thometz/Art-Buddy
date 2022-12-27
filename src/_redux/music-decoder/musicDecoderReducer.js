@@ -1,7 +1,6 @@
 import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import hasValidWords from "_utils/music-decoder/hasValidWords";
 import searchLetter from "_utils/music-decoder/searchLetter";
 import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
 import play from "_utils/music-decoder/play";
@@ -14,37 +13,28 @@ export const INITIAL_STATE = {
   sound: 'synth',
   isUpperCase: true,
   currPlaying: null,
-  formError: null
 };
 
 const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(createWords, (state, action) => {
       const newWords = action.payload;
-      if (newWords.length === 0) {
+      if (newWords.length === 0 || newWords === '') {
         state.words = INITIAL_STATE.words;
         state.filledLetters = INITIAL_STATE.filledLetters;
         return;
       };
       
-      const check = hasValidWords(newWords);
-      if (!check.success) { state.formError = check.error; return; };
-      
       const splitWords = newWords.split(' ');
-      const newInput = [];
-      for (let i = 0; i < splitWords.length; i++) {
-        if (splitWords[i].length > 0) newInput.push(splitWords[i]);
-      };
-
+      if (splitWords[splitWords.length-1] === '') splitWords.pop();
+      
+      state.words = splitWords;
       if (newWords.length < state.words.join(' ').length) {
-        const newFilledLetters = { ...state.filledLetters }
-        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput });
+        const newFilledLetters = state.filledLetters;
+        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, splitWords });
         for (let letter of lettersToUnfill) newFilledLetters[letter] = false;
         state.filledLetters = newFilledLetters;
       };
-      
-      state.words = newInput.length ? newInput : INITIAL_STATE.words;
-      state.formError = null;
     })
     .addCase(fillLetter, (state, action) => {
       const letter = action.payload;
@@ -73,7 +63,6 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.scale = INITIAL_STATE.scale;
       state.sound = INITIAL_STATE.sound;
       state.isUpperCase = INITIAL_STATE.isUpperCase;
-      state.formError = INITIAL_STATE.formError;
     });
 });
 
