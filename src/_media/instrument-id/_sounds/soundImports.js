@@ -111,7 +111,7 @@ const drumSet = {
   hiHat: drumSetHiHat,
   crash: drumSetCrash,
   cowbell: drumSetCowbell
-}
+};
 
 export {
   trumpet,

@@ -14,7 +14,7 @@ import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
 import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
-import { playBeat, playScale } from "_utils/instrument-id/play";
+import play from "_utils/instrument-id/play";
 import { start, Transport } from "tone";
 import useReportCard from "_hooks/useReportCard";
 
@@ -52,10 +52,8 @@ const ListeningSkillsTest = () => {
   
   const playSound = async () => {
     if (Transport.state === 'stopped') await start();
-    const { id, sound, isRhythm } = answer;
-    isRhythm
-      ? playBeat({ id, volume, sound, isTest: true })
-      : playScale({ id, volume, isTest: true });
+    const { id, isRhythm } = answer;
+    play({ id, volume, isRhythm, isTest: true })
   };
 
   const dropdown = id => <Dropdown

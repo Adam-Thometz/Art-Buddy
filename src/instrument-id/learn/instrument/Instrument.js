@@ -10,7 +10,7 @@ import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
 import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
-import { playBeat, playScale } from "_utils/instrument-id/play";
+import play from "_utils/instrument-id/play";
 import getInstrument from "_utils/instrument-id/getInstrument";
 import convertToId from "_utils/_general/convertToId";
 import { Transport, start } from "tone";
@@ -24,7 +24,6 @@ const Instrument = () => {
     icon,
     madeFrom,
     howToPlay,
-    sound,
     isRhythm,
     width,
     videoUrl
@@ -32,9 +31,7 @@ const Instrument = () => {
 
   const playInstrument = async () => {
     if (Transport.state === 'stopped') await start();
-    isRhythm
-      ? playBeat({ id, sound, volume })
-      : playScale({ id, volume });
+    play({ id, volume, isRhythm });
   };
 
   useEffect(() => {
