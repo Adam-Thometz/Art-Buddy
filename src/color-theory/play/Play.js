@@ -22,10 +22,10 @@ const COLOR_THEORY_GROUPS = ['primary', 'secondary', 'tertiary'];
 const Play = () => {
   const navigate = useNavigate();
   const [reportCard] = useReportCard('colorTheory');
-  const rowsToCheck = COLOR_THEORY_GROUPS.map(row => ([
-    reportCard[`${row}A`], reportCard[`${row}B`]
-  ]));
-  console.log(rowsToCheck)
+  // const rowsToCheck = COLOR_THEORY_GROUPS.map(row => ([
+  //   reportCard[`${row}A`], reportCard[`${row}B`]
+  // ]));
+  // console.log(rowsToCheck)
 
   const popupTrigger = (<>
     <img src={reportCardIcon} alt='' />
