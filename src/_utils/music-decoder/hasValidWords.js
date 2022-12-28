@@ -5,7 +5,7 @@
  * - only letters. No numbers, symbols, etc.
  * - each word can only have up to 12 characters
  * 
- * Found in: wordsToMusicDecoderReducer.js
+ * Found in: WordForm.js
  */
 
 export default function hasValidWords(words) {
