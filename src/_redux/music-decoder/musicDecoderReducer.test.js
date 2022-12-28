@@ -12,14 +12,19 @@ describe('Word To Music reducer', () => {
     const result = musicDecoderReducer(undefined, createWords('hi'));
     expect(result.words).toEqual(['hi']);
   });
+
+  it('should create two words for the word display', () => {
+    const result = musicDecoderReducer(undefined, createWords('hi hello'));
+    expect(result.words).toEqual(['hi', 'hello']);
+  });
   
   it('should fill a letter with a note', () => {
-    const result = musicDecoderReducer(testState, fillLetter('H'));
+    const result = musicDecoderReducer(testState, fillLetter({ letter: 'H', play: jest.fn() }));
     expect(result.filledLetters['H']).toBe(true);
   });
   
   it('should not work if fill letter is called with a letter not in words', () => {
-    const result = musicDecoderReducer(testState, fillLetter('B'));
+    const result = musicDecoderReducer(testState, fillLetter({ letter: 'B', play: jest.fn() }));
     expect(Object.keys(result.filledLetters).length).toBe(0);
   });
 

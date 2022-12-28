@@ -3,6 +3,7 @@ import { createReducer } from "@reduxjs/toolkit";
 
 import searchLetter from "_utils/music-decoder/searchLetter";
 import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
+import LETTER_NOTES from "_data/music-decoder/letterNotes";
 
 export const INITIAL_STATE = {
   words: [],
@@ -33,12 +34,13 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.words = splitWords;
     })
     .addCase(fillLetter, (state, action) => {
-      const letter = action.payload;
+      const { letter, play } = action.payload;
       const hasLetter = searchLetter(state.words, letter);
-      if (!hasLetter) return;
-
-      const newFilledLetters = { ...state.filledLetters, [letter]: true };
-      state.filledLetters = newFilledLetters;
+      if (hasLetter) {
+        const newFilledLetters = { ...state.filledLetters, [letter]: true };
+        state.filledLetters = newFilledLetters;
+        play(LETTER_NOTES[letter])
+      };
     })
     .addCase(changeScale, (state, action) => {
       state.scale = action.payload;
