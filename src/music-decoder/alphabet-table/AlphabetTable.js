@@ -18,8 +18,8 @@ const AlphabetTable = () => {
   const dispatch = useDispatch();
 
   const displayLetters = isUpperCase
-    ? Object.keys(LETTER_NOTES).slice(0, 26)
-    : Object.keys(LETTER_NOTES).slice(26);
+    ? Array.from(Array(26)).map((_, i) => String.fromCharCode(i + 65))
+    : Array.from(Array(26)).map((_, i) => String.fromCharCode(i + 97));
 
   const createCell = char => {
     let className = 'AlphabetTable-cell';
@@ -35,7 +35,7 @@ const AlphabetTable = () => {
     if (hasLetter) {
       playFn(LETTER_NOTES[letter]);
     } else {
-      dispatch(fillLetter(letter));
+      dispatch(fillLetter({ letter, play: playFn }));
     };
   };
 
