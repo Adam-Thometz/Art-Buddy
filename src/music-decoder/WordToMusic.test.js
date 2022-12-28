@@ -20,7 +20,7 @@ jest.mock('tone', () => ({
     triggerAttackRelease: jest.fn()
   }))
 }));
-jest.mock('_utils/music-decoder/play')
+jest.mock('_utils/music-decoder/play');
 
 describe('WordToMusic component', () => {
   window.localStorage.setItem(`visited-${WTM}`, true);
@@ -38,6 +38,8 @@ describe('WordToMusic component', () => {
     const toggle = screen.getByText('ON');
     userEvent.click(toggle);
     expect(screen.getByText('z')).toBeInTheDocument();
+    userEvent.click(toggle);
+    expect(screen.getByText('Z')).toBeInTheDocument();
   });
 
   it('colors a letter in the word input if found', () => {
@@ -53,5 +55,18 @@ describe('WordToMusic component', () => {
     const rightLetter = screen.getByText('L');
     userEvent.click(rightLetter);
     expect(rightLetter).toHaveClass('AlphabetTable-cell E');
+  });
+  
+  it('removes color if a letter is deleted from the input', () => {
+    renderWithProvider(<WordToMusic />);
+    const input = screen.getByLabelText('WORDS');
+    userEvent.type(input, 'HELLO');
+    
+    const rightLetter = screen.getByText('L');
+    userEvent.click(rightLetter);
+    expect(rightLetter).toHaveClass('AlphabetTable-cell E');
+    
+    userEvent.type(input, '{del}');
+    expect(rightLetter).toHaveClass('AlphabetTable-cell');
   });
 });
