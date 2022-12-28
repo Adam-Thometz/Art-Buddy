@@ -15,10 +15,11 @@ jest.mock('tone', () => ({
   })),
   Synth: jest.fn(() => ({
     connect: jest.fn(() => ({
-      volume: { value: 0 }
+      volume: { value: 0 },
+      triggerAttackRelease: jest.fn()
     })),
-    triggerAttackRelease: jest.fn()
-  }))
+  })),
+  now: jest.fn()
 }));
 
 describe('WordToMusic component', () => {
