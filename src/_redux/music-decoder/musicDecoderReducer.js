@@ -26,8 +26,6 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       };
       
       const splitWords = newWords.split(' ');
-      if (splitWords[splitWords.length-1] === '') splitWords.pop();
-      
       if (newWords.length < state.words.join(' ').length) {
         const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput: splitWords });
         const newFilledLetters = state.filledLetters;
