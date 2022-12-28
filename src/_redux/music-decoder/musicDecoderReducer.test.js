@@ -3,8 +3,6 @@ import { createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggl
 
 import { testState } from '_testUtils/test-states/musicDecoderReducerTestState';
 
-jest.mock('_utils/music-decoder/play');
-
 describe('Word To Music reducer', () => {
   it('should return the initial state', () => {
     expect(musicDecoderReducer(undefined, {})).toEqual(INITIAL_STATE);

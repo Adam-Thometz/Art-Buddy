@@ -20,7 +20,6 @@ jest.mock('tone', () => ({
     triggerAttackRelease: jest.fn()
   }))
 }));
-jest.mock('_utils/music-decoder/play');
 
 describe('WordToMusic component', () => {
   window.localStorage.setItem(`visited-${WTM}`, true);

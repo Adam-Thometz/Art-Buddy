@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MusicDecoderContext from '_utils/music-decoder/MusicDecoderContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { changeScale, changeSound, toggleUpperCase, toggleNote } from '_redux/music-decoder/musicDecoderActions';
@@ -11,11 +12,11 @@ import Toggle from '_components/toggle/Toggle';
 
 import scales from './dropdown-options/scales';
 import instruments from './dropdown-options/instruments';
-import play from '_utils/music-decoder/play';
-import createSound from '_utils/music-decoder/createSound';
+import getSound from '_utils/music-decoder/getSound';
 import convertLettersToNotes from '_utils/music-decoder/convertLettersToNotes';
 
 const DecoderControls = () => {
+  const { playFn, setPlayFn } = useContext(MusicDecoderContext)
   const {
     words,
     scale,
@@ -29,13 +30,13 @@ const DecoderControls = () => {
   
   const handleChangeScale = e => {
     const newScale = +e.target.id;
-    window.wordToMusicSound = createSound({ volume, scale: newScale, sampleId: sound });
+    setPlayFn(() => getSound({ volume, scale: newScale, sampleId: sound }).playSound);
     dispatch(changeScale(newScale));
   };
 
   const handleChangeSound = e => {
     const sampleId = e.target.id;
-    createSound({ volume, scale, sampleId });
+    setPlayFn(() => getSound({ volume, scale, sampleId }).playSound);
     dispatch(changeSound(sampleId));
   };
 
@@ -60,7 +61,7 @@ const DecoderControls = () => {
       clearTimeout(end);
     }, 500 * lettersToToggle.length);
     
-    play(notesToPlay, scale);
+    playFn(notesToPlay);
   };
   
   return (

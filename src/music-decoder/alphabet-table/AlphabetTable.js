@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import MusicDecoderContext from "_utils/music-decoder/MusicDecoderContext";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
@@ -6,9 +7,9 @@ import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
 import './AlphabetTable.css';
 
 import LETTER_NOTES from '_data/music-decoder/letterNotes';
-import play from "_utils/music-decoder/play";
 
 const AlphabetTable = () => {
+  const { playFn } = useContext(MusicDecoderContext)
   const {
     isUpperCase,
     currPlaying,
@@ -31,11 +32,10 @@ const AlphabetTable = () => {
   const handleLetter = e => {
     const letter = e.target.textContent;
     const hasLetter = filledLetters[letter];
-    if (!hasLetter) {
-      dispatch(fillLetter(letter));
+    if (hasLetter) {
+      playFn(LETTER_NOTES[letter]);
     } else {
-      const note = LETTER_NOTES[letter];
-      play(note);
+      dispatch(fillLetter(letter));
     };
   };
 
