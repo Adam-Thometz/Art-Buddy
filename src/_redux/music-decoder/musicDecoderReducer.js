@@ -19,7 +19,7 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
     .addCase(createWords, (state, action) => {
       const newWords = action.payload;
-      if (newWords.length === 0 || newWords === '') {
+      if (!newWords.length) {
         state.words = INITIAL_STATE.words;
         state.filledLetters = INITIAL_STATE.filledLetters;
         return;
@@ -28,13 +28,13 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       const splitWords = newWords.split(' ');
       if (splitWords[splitWords.length-1] === '') splitWords.pop();
       
-      state.words = splitWords;
       if (newWords.length < state.words.join(' ').length) {
+        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput: splitWords });
         const newFilledLetters = state.filledLetters;
-        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, splitWords });
         for (let letter of lettersToUnfill) newFilledLetters[letter] = false;
         state.filledLetters = newFilledLetters;
       };
+      state.words = splitWords;
     })
     .addCase(fillLetter, (state, action) => {
       const letter = action.payload;
