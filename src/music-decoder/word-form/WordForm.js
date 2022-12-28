@@ -22,7 +22,7 @@ const WordForm = () => {
       errorRef.current.textContent = '';
     } else {
       errorRef.current.textContent = check.error;
-    }
+    };
   };
 
   return (
