@@ -1,4 +1,4 @@
-import { PitchShift, Sampler, Synth, Part, Transport, now } from "tone";
+import { PitchShift, Sampler, Synth, Part, Transport } from "tone";
 
 import getInstrument from "../instrument-id/getInstrument";
 
@@ -21,8 +21,7 @@ export default function sound({ volume, scale = 0, sampleId = 'synth' }) {
 
   function playSound(notes) {
     if (!Array.isArray(notes)) {
-      const start = now();
-      return instrument.triggerAttackRelease(`${notes}3`, '4n', start);
+      return instrument.triggerAttackRelease(`${notes}3`, '4n');
     } else {
       const toPlay = notes.map((note, i) => ({ note, time: i/2 }));
       const part = new Part(((time, value) => {

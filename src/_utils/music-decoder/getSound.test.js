@@ -1,58 +1,41 @@
 import createSound from "./getSound";
 
 jest.mock('tone', () => ({
-  PitchShift(pitch) {
-    return {
-      toDestination() {
-        return pitch;
-      },
-    };
-  },
-  Synth() {
-    return {
-      connect(pitch) {
-        return {
-          pitch,
-          sound: 'synth',
-          volume: {},
-          triggerAttackRelease(note, duration, time) {
-            return { note, duration, time }
-          }
-        };
-      },
-    };
-  },
-  Sampler({ urls }) {
-    return {
-      connect(pitch) {
-        return {
-          sound: urls.C3,
-          pitch,
-          volume: {},
-          triggerAttackRelease(note, duration, time) {
-            return { note, duration, time }
-          }
-        };
-      },
-    };
-  },
-  Part(_, notesToPlay) {
-    return {
-      notesToPlay,
-      start: jest.fn(),
-      stop: jest.fn(),
-    }
-  },
-  now() {
-    return 0;
-  },
+  PitchShift: jest.fn((pitch) => ({
+    toDestination: jest.fn(() => pitch),
+  })),
+  Synth: jest.fn(() => ({
+    connect: jest.fn((pitch) => ({
+      pitch,
+      sound: 'synth',
+      volume: {},
+      triggerAttackRelease: jest.fn((note, duration, time) => ({
+        note, duration, time
+      }))
+    })),
+  })),
+  Sampler: jest.fn(({ urls }) => ({
+    connect: jest.fn((pitch) => ({
+      sound: urls.C3,
+      pitch,
+      volume: {},
+      triggerAttackRelease: jest.fn((note, duration, time) => ({
+        note, duration, time
+      }))
+    })),
+  })),
+  Part: jest.fn((_, notesToPlay) => ({
+    notesToPlay,
+    start: jest.fn(),
+    stop: jest.fn(),
+  })),
   Transport: {
     start: jest.fn(),
     stop: jest.fn(),
-  }
+  },
 }));
 
-describe('createSound function', () => {
+describe('getSound function', () => {
   it('should create a synth sound by default', () => {
     const { instrument } = createSound({ volume: 0 });
     expect(instrument.pitch).toBe(0);
@@ -76,7 +59,7 @@ describe('createSound function', () => {
   
   it('should play a single note', () => {
     const { playSound } = createSound({ volume: 0 });
-    expect(playSound('A')).toEqual({ note: 'A3', duration: '4n', time: 0 });
+    expect(playSound('A')).toEqual({ note: 'A3', duration: '4n' });
   });
 
   it('should play an array of notes', () => {
