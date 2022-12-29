@@ -5,8 +5,8 @@ import { Time } from "tone";
  * Found in: Frog.js
  */
 
-const LILY_PAD_LENGTH = 18;
-const HOP_HEIGHT = 7;
+export const LILY_PAD_LENGTH = 18;
+export const HOP_HEIGHT = 7;
 
 export default function createHoppingAnimation(measure) {
   const animation = [

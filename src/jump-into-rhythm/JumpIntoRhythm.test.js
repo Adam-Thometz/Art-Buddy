@@ -8,7 +8,9 @@ import { JIR } from '_data/_utils/localStorageKeys';
 
 jest.mock('tone', () => ({
   Transport: { bpm: { value: 90 } },
-  Buffer: jest.fn()
+  Sampler: jest.fn(() => ({
+    toDestination: jest.fn()
+  })),
 }));
 
 describe('JumpIntoRhythm component', () => {

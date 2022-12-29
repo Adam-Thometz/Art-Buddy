@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PlayContext from '_utils/_general/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addToRhythm, toggleAnimation, toggleLilyPadDisplay } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
@@ -9,12 +10,12 @@ import Button from '_components/button/Button';
 import Icon from '_components/icon/Icon';
 
 import noteInfo from '_data/jump-into-rhythm/noteInfo';
-import hop from '_utils/jump-into-rhythm/hop';
 import { start, Transport, Time } from 'tone';
 
 const NoteOptions = () => {
   const { rhythm, isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
   const { volume } = useSelector(state => state.mainSettings);
+  const { playFn } = useContext(PlayContext)
   const dispatch = useDispatch();
 
   const handleAddNotes = e => {
@@ -37,7 +38,7 @@ const NoteOptions = () => {
       duration: note.duration,
       isRest: note.isRest
     }));
-    hop({ beats, volume });
+    playFn({ beats, volume });
     setTimeout(() => {
       Transport.stop();
     }, Time(`${rhythm.length/4}:1`).toSeconds() * 1000)

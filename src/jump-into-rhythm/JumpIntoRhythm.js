@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useVisited from '_hooks/useVisited';
+import PlayContext from '_utils/_general/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
@@ -11,37 +12,37 @@ import Notes from './notes/Notes';
 import NoteOptions from './note-options/NoteOptions';
 import FrogLilyPad from './frog-lily-pad/FrogLilyPads';
 
+import makeFrog from '_utils/jump-into-rhythm/makeFrog';
 import { JIR } from '_data/_utils/localStorageKeys';
 import { jumpIntoRhythm } from '_data/_activities/activityList';
-import { createBuffers, removeBuffers } from '_utils/jump-into-rhythm/buffers';
 import { Transport } from 'tone';
 
 const JumpIntoRhythm = () => {
   const { currGame } = useSelector(state => state.mainSettings);
   const { isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
+  const [playFn, setPlayFn] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeCurrGame(jumpIntoRhythm));
+    setPlayFn(() => makeFrog().hop);
     Transport.bpm.value = 90;
-    createBuffers();
     return () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
       Transport.stop()
       Transport.bpm.value = 120;
-      removeBuffers();
     }
   }, [dispatch]);
 
   const [hasVisited, setHasVisited] = useVisited(JIR);
-  return (<>
+  return (<PlayContext.Provider value={{ playFn, setPlayFn }}>
     <WindowNavbar page={currGame.name} />
     {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
       {isDisplayingLilyPads ? <FrogLilyPad /> : <Notes />}
       <NoteOptions />
     </>)}
-  </>);
+  </PlayContext.Provider>);
 };
 
 export default JumpIntoRhythm;

@@ -17,6 +17,12 @@ jest.mock('tone', () => ({
       volume: { value: 0 }
     })),
   })),
+  Sampler: jest.fn(() => ({
+    connect: jest.fn(() => ({
+      volume: { value: 0 }
+    })),
+    toDestination: jest.fn()
+  })),
 }));
 
 describe('Music Game Routes', () => {
