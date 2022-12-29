@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ControlBarContext from "_utils/free-paint/ControlBarContext"
 import SongMakerInfoContext from "_utils/instrument-id/SongMakerInfoContext";
-import MusicDecoderContext from "_utils/music-decoder/MusicDecoderContext";
+import PlayContext from "_utils/_general/PlayContext";
 import PopupContext from "_utils/settings/PopupContext";
 
 // Used in ButtonWrapper.test.js
@@ -36,11 +36,11 @@ export const SongMakerContextMock = ({ children }) => {
 };
 
 // Used in DecoderControls.test.js and AlphabetTable.test.js
-export const MusicDecoderContextMock = ({ children }) => {
+export const PlayContextMock = ({ children }) => {
   const [playFn, setPlayFn] = useState(null);
   return (
-    <MusicDecoderContext.Provider value={{ playFn, setPlayFn }}>
+    <PlayContext.Provider value={{ playFn, setPlayFn }}>
       {children}
-    </MusicDecoderContext.Provider>
+    </PlayContext.Provider>
   );
 };
