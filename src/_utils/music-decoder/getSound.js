@@ -2,12 +2,12 @@ import { PitchShift, Sampler, Synth, Part, Transport } from "tone";
 
 import getInstrument from "../instrument-id/getInstrument";
 
-/** sound
- * Purpose: create the sound that the decoder plays and add it to the window to be played later
+/** getSound
+ * Purpose: create the sound that the decoder plays and returns a function for playing it
  * Found in: WordToMusic.js, DecoderControls.js
  */
 
-export default function sound({ volume, scale = 0, sampleId = 'synth' }) {
+export default function getSound({ volume, scale = 0, sampleId = 'synth' }) {
   const pitchShift = new PitchShift(scale).toDestination();
   let instrument;
 
