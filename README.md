@@ -54,9 +54,9 @@ This app is a movement-based game in which students can create unique rhythms an
 
 #### Free Paint
 
-This app is a basic coloring app that comes with stencils for numbers, letters (upper and lowercase) and shapes. User can pick different colors and can unlock more by playing Color Theory. Good for basic writing activities.
+This app is a basic coloring app that comes with stencils for numbers, letters (upper and lowercase) and shapes. User can pick different colors and can unlock more by playing Color Theory.
 
-#### Color Theory
+#### Color Theory (Play section under construction)
 
 This app is devided into two sections: Learn and Play. The Learn section allows students to learn about primary, secondary, and tertiary colors. In the Play section, students can test their color recognition skills and unlock different colors for the Free Paint app.
 
@@ -88,7 +88,7 @@ For now, this app is purely front end:
 
 - React and React Router for client-side rendering
 - Redux for state management
-- CSS for styling
+- CSS for styling (yep, just plain CSS. No libraries or frameworks.)
 - Jest/React Testing Library for testing
 - Tone.js for music-related functionality
 

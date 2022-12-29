@@ -1,7 +1,8 @@
 import { Part, Sampler, Transport } from 'tone';
 
 /** play: 
- * Purpose: a higher-order function that can play scales or beats. isTest is true if the function is called in the context of the listening skills test.
+ * Purpose: a higher-order function that can play scales or beats.
+ * isTest is true if the function is called in the listening skills test.
  * Found in: ListeningSkillsTest.js, Instrument.js
  */
 
@@ -23,7 +24,7 @@ export default function play({ id, volume, isRhythm, isTest = false }) {
 };
 
 /** getHits:
- * Purpose: abstract functionality in playBeat to make readable
+ * Purpose: abstract functionality to make a beat
  */
 
 function getHits({ id, isTest, volume }) {
@@ -41,7 +42,7 @@ function getHits({ id, isTest, volume }) {
 };
 
 /** getNotes:
- * Purpose: abstract functionality in playScale to make readable
+ * Purpose: abstract functionality to make a scale
  */
 
 function getNotes({ id, isTest, volume }) {
