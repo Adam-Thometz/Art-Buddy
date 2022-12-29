@@ -1,5 +1,11 @@
 import { Time } from "tone";
 
+/** createNoteOrder
+ * Helper function for creating the notes to play for the play function.
+ * Takes an array of objects containing duration and isRest (i.e. [{ duration: ['4n'], isRest: false }...])
+ * Returns one object for every note that needs to be played containing pitch, duration, time, and isRest
+ */
+
 export default function createNoteOrder(beats) {
   const toPlay = [];
   let time = 0;
