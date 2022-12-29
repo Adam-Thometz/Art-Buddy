@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MusicDecoderContext from '_utils/music-decoder/MusicDecoderContext';
+import PlayContext from '_utils/_general/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { changeScale, changeSound, toggleUpperCase, toggleNote } from '_redux/music-decoder/musicDecoderActions';
@@ -16,7 +16,7 @@ import getSound from '_utils/music-decoder/getSound';
 import convertLettersToNotes from '_utils/music-decoder/convertLettersToNotes';
 
 const DecoderControls = () => {
-  const { playFn, setPlayFn } = useContext(MusicDecoderContext)
+  const { playFn, setPlayFn } = useContext(PlayContext)
   const {
     words,
     scale,

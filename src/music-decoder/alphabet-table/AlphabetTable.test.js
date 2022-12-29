@@ -1,19 +1,19 @@
 import React from "react";
-import { MusicDecoderContextMock } from "_testUtils/mocks/contextMocks";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 import renderWithProvider from '_testUtils/renderWithProvider';
 import AlphabetTable from './AlphabetTable';
 
 describe('AlphabetTable component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<MusicDecoderContextMock>
+    renderWithProvider(<PlayContextMock>
       <AlphabetTable />
-    </MusicDecoderContextMock>);
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<MusicDecoderContextMock>
+    const { asFragment } = renderWithProvider(<PlayContextMock>
       <AlphabetTable />
-    </MusicDecoderContextMock>);
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 });

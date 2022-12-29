@@ -1,5 +1,5 @@
 import React from "react";
-import { MusicDecoderContextMock } from "_testUtils/mocks/contextMocks";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 import renderWithProvider from '_testUtils/renderWithProvider';
 
@@ -7,15 +7,15 @@ import DecoderControls from './DecoderControls';
 
 describe('DecoderControls component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<MusicDecoderContextMock>
+    renderWithProvider(<PlayContextMock>
       <DecoderControls />
-    </MusicDecoderContextMock>);
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<MusicDecoderContextMock>
+    const { asFragment } = renderWithProvider(<PlayContextMock>
       <DecoderControls />
-    </MusicDecoderContextMock>);
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 });

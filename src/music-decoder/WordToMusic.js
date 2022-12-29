@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useVisited from '_hooks/useVisited';
-import MusicDecoderContext from '_utils/music-decoder/MusicDecoderContext';
+import PlayContext from '_utils/_general/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { clearGame } from '_redux/music-decoder/musicDecoderActions';
@@ -38,14 +38,14 @@ const WordToMusic = () => {
     };
   }, [dispatch]);
 
-  return (<MusicDecoderContext.Provider value={{ playFn, setPlayFn }}>
+  return (<PlayContext.Provider value={{ playFn, setPlayFn }}>
     <WindowNavbar page={currGame.name} />
     {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
       <WordForm />
       <DecoderControls />
       <AlphabetTable />
     </>)}
-  </MusicDecoderContext.Provider>);
+  </PlayContext.Provider>);
 };
 
 export default WordToMusic;
