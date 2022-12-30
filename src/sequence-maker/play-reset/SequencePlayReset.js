@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PlayContext from '_utils/_general/PlayContext';
 
 import { useSelector, useDispatch } from "react-redux";
 import { resetSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";
@@ -7,26 +8,18 @@ import './SequencePlayReset.css';
 
 import Icon from "_components/icon/Icon";
 
-import { playSequence } from "_utils/sequence-maker/playSequence";
 import play from '_media/sequence-maker/_icons/play.png';
 import playAll from '_media/sequence-maker/_icons/play-all.png';
 import reset from '_media/sequence-maker/_icons/reset.png';
 import { start, Transport } from 'tone';
 
 const SequencePlayReset = () => {
-  const {
-    sequence,
-    pitch,
-    duration
-  } = useSelector(state => state.sequenceMaker);
-  const { volume } = useSelector(state => state.mainSettings);
-  const dispatch = useDispatch(); 
+  const { sequence, pitch, duration } = useSelector(state => state.sequenceMaker);
+  const { playFn, isPlaying } = useContext(PlayContext);
+  const dispatch = useDispatch();
 
   const handlePlay = async () => {
     if (Transport.state === 'stopped') await start();
-    const isPlaying = sequence
-      .filter(block => block !== null)
-      .some(block => block.isPlaying)
     if (isPlaying) return;
 
     for (let i = 0; i < sequence.length; i++) {
@@ -40,14 +33,11 @@ const SequencePlayReset = () => {
         clearTimeout(end);
       }, (duration * 1000) + ((duration * 1000) * i));
     };
-    playSequence({ sequence, pitch, duration, volume, playAll: false });
+    playFn.playSequence({ pitch, duration, playAll: false });
   };
   
   const handlePlayAll = async () => {
     if (Transport.state === 'stopped') await start();
-    const isPlaying = sequence
-      .filter(block => block !== null)
-      .some(block => block.isPlaying)
     if (isPlaying) return;
 
     for (let i = 0; i < sequence.length; i++) {
@@ -58,7 +48,7 @@ const SequencePlayReset = () => {
         clearTimeout(timer);
       }, duration * 1000);
     };
-    playSequence({ sequence, pitch, duration, volume, playAll: true });
+    playFn.playSequence({ pitch, duration, playAll: true });
   };
 
   const handleReset = () => {

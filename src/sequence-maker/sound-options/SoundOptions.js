@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addToSequence } from '_redux/sequence-maker/sequenceMakerActions';
@@ -9,26 +9,37 @@ import Options from '_components/option/Options';
 import Icon from '_components/icon/Icon';
 
 import soundInfo from '_data/sequence-maker/soundInfo';
-import createBuffer from '_utils/sequence-maker/createBuffer';
+import { createSounds } from '_utils/sequence-maker/createSound';
+import PlayContext from '_utils/_general/PlayContext';
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector(state => state.sequenceMaker);
+  const { volume } = useSelector(state => state.mainSettings);
+  const { setPlayFn } = useContext(PlayContext)
   const dispatch = useDispatch();
 
   const handleAddToSequence = e => {
     if (sequence.some(block => !block)) {
       const soundId = e.currentTarget.id;
       dispatch(addToSequence(soundId));
-      createBuffer({ category, soundId });
+      setPlayFn(() => createSounds(sequence, volume));
     };
   };
 
   const sounds = soundInfo[category];
 
-  const optionDisplay = !sounds ? null : Object.keys(sounds).map(sound => {
-    const { alt, image } = sounds[sound];
-    return <Icon key={sound} icon={image} size='150px' text={alt} id={sound} onClick={handleAddToSequence} />;
-  });
+  const optionDisplay = sounds
+    ? Object.keys(sounds).map(sound => (
+        <Icon 
+          key={sound}
+          icon={sounds[sound].image}
+          size='150px'
+          text={sounds[sound].alt}
+          id={sound}
+          onClick={handleAddToSequence}
+        />
+      ))
+    : null;
 
   return (
     <section className='SoundOptions'>

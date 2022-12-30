@@ -1,20 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
+import PlayContext from "_utils/_general/PlayContext";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";
 
 import './Sequence.css';
 
-import SequenceBlock from "./sequence-block/SequenceBlock";
+import Button from "_components/button/Button";
 
 import colors from "_data/_utils/colorOrder";
 
 const Sequence = () => {
-  const { sequence } = useSelector(state => state.sequenceMaker);
+  const { sequence, pitch, duration } = useSelector(state => state.sequenceMaker);
+  const { playFn, isPlaying } = useContext(PlayContext);
+  const dispatch = useDispatch();
+  
+  const remove = e => {
+    const id = +e.target.parentElement.id;
+    dispatch(removeFromSequence(id));
+  };
+
+  const play = e => {
+    if (isPlaying) return;
+    const id = +e.target.parentElement.id;
+    dispatch(togglePlaying(id));
+    const timer = setTimeout(() => {
+      dispatch(togglePlaying(id));
+      clearTimeout(timer);
+    }, duration * 1000);
+    playFn.playOne({ id, pitch, duration });
+  };
 
   return (
     <section className="Sequence">
       {sequence.map((block, i) => (
-        <SequenceBlock key={i} id={i} block={block} borderColor={colors[i%4]} />
+        <figure
+          className={`Sequence-block${block && block.isPlaying ? ' playing' : ''}`}
+          style={{ borderColor: colors[i%4] }}
+          id={i}
+        >
+          {block !== null ? (<>
+            <Button small colorId={2} onClick={remove}>X</Button>
+            <img className="Sequence-block-img" src={block.image} alt={block.alt} onClick={play} />
+          </>) : null}
+        </figure>
       ))}
     </section>
   );

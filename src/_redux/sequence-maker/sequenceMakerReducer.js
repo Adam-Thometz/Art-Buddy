@@ -4,9 +4,9 @@ import { createReducer } from "@reduxjs/toolkit";
 import soundInfo from "_data/sequence-maker/soundInfo";
 
 export const INITIAL_STATE = {
-  category: '',
+  category: null,
   sequence: [null, null, null, null],
-  pitch: '3',
+  pitch: 3,
   duration: 3
 };
 

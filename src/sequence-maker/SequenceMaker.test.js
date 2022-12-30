@@ -9,7 +9,14 @@ import SequenceMaker from './SequenceMaker';
 import { SM } from '_data/_utils/localStorageKeys';
 
 jest.mock('tone', () => ({
-  Buffer: jest.fn()
+  Sampler: jest.fn(({ urls }) => ({
+    toDestination: jest.fn(() => ({
+      urls,
+      triggerAttackRelease: jest.fn((note, duration, time) => ({
+        note, duration, time
+      }))
+    }))
+  })),
 }));
 
 function setupChoices() {

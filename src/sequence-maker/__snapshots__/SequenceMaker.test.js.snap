@@ -69,22 +69,22 @@ exports[`SequenceMaker component matches snapshot 1`] = `
     class="Sequence"
   >
     <figure
-      class="SequenceBlock"
+      class="Sequence-block"
       id="0"
       style="border-color: #89eb0a;"
     />
     <figure
-      class="SequenceBlock"
+      class="Sequence-block"
       id="1"
       style="border-color: #ffe81a;"
     />
     <figure
-      class="SequenceBlock"
+      class="Sequence-block"
       id="2"
       style="border-color: #fd4d3a;"
     />
     <figure
-      class="SequenceBlock"
+      class="Sequence-block"
       id="3"
       style="border-color: #4d4f5e;"
     />
