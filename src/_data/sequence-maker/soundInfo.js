@@ -2,8 +2,8 @@ import { images, sounds } from '_media/sequence-maker/soundImageImports';
 
 const stop = {
   image: images.stop,
-  sound: null,
-  alt: 'STOP'
+  alt: 'STOP',
+  sound: null
 }
 
 const soundInfo = {
