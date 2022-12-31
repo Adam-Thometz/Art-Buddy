@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react';
-import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
+import React from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleLoop } from '_redux/instrument-id/song-maker/songMakerActions';
 
 import './PlaySave.css';
 
@@ -9,38 +9,18 @@ import Button from '_components/button/Button';
 import Popup from '_components/popup/Popup';
 import SaveSong from '../save-song/SaveSong';
 
-import calculateTimeLeft from '_utils/instrument-id/calculateTimeLeft';
-
 const PlaySave = () => {
-  const { song } = useSelector(state => state.songMaker);
-  const {
-    loop,
-    currTimer,
-    setCurrTimer,
-    playInstruments,
-    stopInstruments
-  } = useContext(SongMakerInfoContext);
+  const { song, isPlaying } = useSelector(state => state.songMaker);
+  const dispatch = useDispatch();
 
-  const handlePlay = () => playInstruments(song);
-
-  useEffect(() => {
-    if (!loop.isPlaying) return;
-    if (currTimer) clearTimeout(currTimer);
-    const duration = calculateTimeLeft(loop.partsToPlay);
-    const timer = setTimeout(() => {
-      stopInstruments();
-      playInstruments(song);
-      clearTimeout(timer);
-      setCurrTimer(null);
-    }, duration);
-    setCurrTimer(timer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [song]);
+  const handleToggle = () => {
+    if (song.some(part => part || !!part.melodyId)) dispatch(toggleLoop());
+  };
 
   return (
     <div className='PlaySave'>
-      <Button colorId={loop.isPlaying ? 2 : 0} onClick={loop.isPlaying ? stopInstruments : handlePlay}>
-        {loop.isPlaying ? 'STOP' : 'PLAY'}
+      <Button colorId={isPlaying ? 2 : 0} onClick={handleToggle}>
+        {isPlaying ? 'STOP' : 'PLAY'}
       </Button>
       <Popup
         title='SAVE SONG'

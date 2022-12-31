@@ -9,7 +9,6 @@ import AddIcon from '_components/icon/add-icon/AddIcon';
 import Dropdown from '_components/dropdown/Dropdown';
 
 import { instrumentOptions, melodyOptions, rhythmOptions } from './dropdownOptions';
-import { createBuffers } from '_utils/instrument-id/buffers';
 
 const InstrumentDisplay = () => {
   const { song } = useSelector(state => state.songMaker);
@@ -29,7 +28,6 @@ const InstrumentDisplay = () => {
     const id = +e.currentTarget.id;
     const instrumentId = e.target.id;
     dispatch(selectInstrument({ id, instrumentId }));
-    createBuffers(instrumentId);
   };
 
   const handleSelectMelody = e => {

@@ -8,6 +8,14 @@ jest.mock('tone', () => ({
   Transport: { stop: jest.fn() },
   Time: jest.fn(() => ({ toSeconds: jest.fn() })),
   Buffer: jest.fn(),
+  Sampler: jest.fn(({ urls }) => ({
+    toDestination: jest.fn(() => ({
+      urls,
+      // triggerAttackRelease: jest.fn((note, duration, time) => ({
+      //   note, duration, time
+      // }))
+    }))
+  })),
 }));
 
 describe('SongMaker component', () => {

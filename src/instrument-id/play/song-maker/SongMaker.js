@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import SongMakerInfoContext from '_utils/instrument-id/SongMakerInfoContext';
+import PlayContext from '_utils/_general/PlayContext';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrTimer } from '_redux/instrument-id/song-maker/songMakerActions';
 
 import './SongMaker.css';
 
@@ -10,71 +11,51 @@ import SavedSongsIcon from './corner-icon/SavedSongsIcon';
 import PlaySave from './play-save/PlaySave';
 import InstrumentDisplay from './instrument-display/InstrumentDisplay';
 
-import { removeBuffers, getBuffers } from '_utils/instrument-id/buffers';
-import { Transport, start } from 'tone';
 import createLoop from '_utils/instrument-id/createLoop';
 
 const SongMaker = () => {
+  const { song, isPlaying, currTimer } = useSelector(state => state.songMaker);
   const { volume } = useSelector(state => state.mainSettings);
-  const [loop, setLoop] = useState({ isPlaying: false });
-  const [currTimer, setCurrTimer] = useState(null);
-
-  const playInstruments = async (song) => {
-    if (Transport.state === 'stopped') await start();
-    const partsToPlay = [];
-    for (let instrument of song) {
-      if (!instrument) continue;
-      
-      const { instrumentId, melodyId, isRhythm } = instrument;
-      if (!melodyId) continue;
-
-      const { buffers } = getBuffers(instrumentId);
-      const part = createLoop({ melodyId, volume, buffers, isRhythm });
-      partsToPlay.push(part);
-    };
-    setLoop({ isPlaying: true, partsToPlay });
-  };
-
-  const stopInstruments = () => {
-    if (loop.isPlaying) {
-      loop.partsToPlay.forEach(part => part.stop());
-      Transport.stop();
-      setLoop({ isPlaying: false });
-    };
-  };
+  const [playFn, setPlayFn] = useState(() => createLoop(song, 0));
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (loop.isPlaying) {
-      Transport.start();
-      loop.partsToPlay.forEach(part => part.start(0));
+    if (!isPlaying) {
+      setPlayFn(() => createLoop(song, volume));
     } else {
-      Transport.stop();
+      if (currTimer) clearTimeout(currTimer);
+      const duration = playFn.getTimeLeft();
+      const timer = setTimeout(() => {
+        playFn.stopLoop();
+        setPlayFn(() => createLoop(song, volume));
+        clearTimeout(timer);
+        dispatch(setCurrTimer(null));
+      }, duration);
+      dispatch(setCurrTimer(timer));
     }
-  }, [loop]);
-
-  useEffect(() => {
-    return () => {
-      stopInstruments();
-      removeBuffers();
-    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+}, [song, volume]);
+
+useEffect(() => {
+  if (song.some(part => part || !!part.melodyId)) {
+    isPlaying ? playFn.playLoop() : playFn.stopLoop();
+  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [isPlaying]);
+
+useEffect(() => {
+  if (isPlaying) playFn.playLoop();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playFn]);
 
   return (
-    <SongMakerInfoContext.Provider value={{
-      loop,
-      setLoop,
-      currTimer,
-      setCurrTimer,
-      playInstruments,
-      stopInstruments
-    }}>
+    <PlayContext.Provider value={{ playFn, setPlayFn }}>
       <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
       <section className='SongMaker-button-instrument-wrapper'>
         <PlaySave />
         <InstrumentDisplay />
       </section>
-    </SongMakerInfoContext.Provider>
+    </PlayContext.Provider>
   );
 };
 

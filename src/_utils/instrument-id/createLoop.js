@@ -1,29 +1,68 @@
 import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
 import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
-import { Part, Sampler } from 'tone';
+import { Part, Sampler, start, Transport } from 'tone';
+import getInstrument from './getInstrument';
+import calculateTimeLeft from './calculateTimeLeft';
 
 /** createLoop:
- * Purpose: used for Song Maker feature. Creates a loop for one instrument
+ * Purpose: creates a loop for all instruments for the Song Maker
  * Found in: SongMaker.js, SavedSongs.js
  */
 
-export default function createLoop({ melodyId, volume, buffers, isRhythm }) {
-  const instrument = isRhythm
-    ? buffers.map(b => new Sampler({ urls: { C3: b } }).toDestination())
-    : new Sampler({ urls: { C3: buffers } }).toDestination();
-  isRhythm
-    ? instrument.map(i => i.volume.value = volume)
-    : instrument.volume.value = volume;
-  const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
+export default function createLoop(song, volume) {
+  const loop = [];
+  for (let instrument of song) {
+    if (!instrument) continue;
 
-  const part = new Part(((time, value) => {
-    isRhythm
-      ? value.notes.forEach(note => instrument[note].triggerAttackRelease('C3', value.duration, time))
-      : instrument.triggerAttackRelease(value.notes, value.duration, time);
-  }), melody);
+    const { instrumentId, melodyId } = instrument;
+    if (!melodyId) continue;
 
-  part.loop = true;
-  part.loopStart = 0;
-  part.loopEnd = '4m';
-  return part;
+    const { sound } = getInstrument(instrumentId);
+    const isRhythm = typeof sound === 'object';
+    const soundToPlay = isRhythm
+      ? Object.keys(sound).map((hit, i) => new Sampler({
+          urls: { C3: sound[hit] },
+          onload: () => soundToPlay[i].volume.value = volume
+        }).toDestination())
+      : new Sampler({
+          urls: { C3: sound },
+          onload: () => soundToPlay.volume.value = volume
+        }).toDestination();
+    const melody = isRhythm ? rhythms[melodyId] : melodies[melodyId];
+    loop.push({ soundToPlay, melody, isRhythm });
+  }
+
+  const parts = [];
+  async function playLoop() {
+    if (Transport.state === 'stopped') await start()
+    for (let partToPlay of loop) {
+      const { soundToPlay, melody, isRhythm } = partToPlay
+      const part = new Part(((time, value) => {
+        isRhythm
+          ? value.notes.forEach(note => soundToPlay[note].triggerAttackRelease('C3', value.duration, time))
+          : soundToPlay.triggerAttackRelease(value.notes, value.duration, time);
+      }), melody);
+      part.loop = true;
+      part.loopStart = 0;
+      part.loopEnd = '4m';
+      parts.push(part);
+    };
+    Transport.start();
+    parts.forEach(part => part.start(0));
+    
+    return parts;
+  }
+  
+  function stopLoop() {
+    parts.forEach(part => part.stop());
+    Transport.stop();
+    parts.length = 0;
+    return parts;
+  }
+
+  function getTimeLeft() {
+    return calculateTimeLeft(parts)
+  }
+
+  return { loop, playLoop, stopLoop, getTimeLeft };
 };

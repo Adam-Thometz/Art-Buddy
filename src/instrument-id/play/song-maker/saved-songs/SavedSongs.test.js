@@ -1,19 +1,19 @@
 import React from "react";
-import { SongMakerContextMock } from "_testUtils/mocks/contextMocks";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 import renderWithProvider from "_testUtils/renderWithProvider";
 import SavedSongs from "./SavedSongs";
 
 describe('SavedSongs component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SongMakerContextMock>
+    renderWithProvider(<PlayContextMock>
       <SavedSongs />
-    </SongMakerContextMock>);
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SongMakerContextMock>
+    const { asFragment } = renderWithProvider(<PlayContextMock>
       <SavedSongs />
-    </SongMakerContextMock>);
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 });

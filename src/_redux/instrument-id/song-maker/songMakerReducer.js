@@ -1,4 +1,4 @@
-import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument } from "./songMakerActions";
+import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument, toggleLoop, setCurrTimer } from "./songMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_utils/instrument-id/getInstrument";
@@ -11,6 +11,8 @@ export const defaultInstrument = {
 
 export const INITIAL_STATE = {
   song: [defaultInstrument, null, null, null],
+  isPlaying: false,
+  currTimer: null
 };
 
 const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -43,8 +45,17 @@ const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       };
       state.song[id] = instrumentWithMelody;
     })
+    .addCase(toggleLoop, (state) => {
+      state.isPlaying = !state.isPlaying;
+    })
+    .addCase(setCurrTimer, (state, action) => {
+      const timerId = action.payload;
+      state.currTimer = timerId;
+    })
     .addCase(clearSong, (state) => {
       state.song = INITIAL_STATE.song;
+      state.isPlaying = INITIAL_STATE.isPlaying;
+      state.currTimer = INITIAL_STATE.currTimer;
     });
 });
 
