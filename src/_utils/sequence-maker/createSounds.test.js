@@ -21,8 +21,9 @@ jest.mock('tone', () => ({
   },
 }));
 
+const sequence = [{ sound: 'file' }, { sound: 'file' }, { sound: 'file' }, null];
+
 describe('createSounds function', () => {
-  const sequence = [{ sound: 'file' }, { sound: 'file' }, { sound: 'file' }, null];
   it('should create an array of sounds from the sequence', () => {
     const result = createSounds(sequence);
     expect(Object.keys(result).length).toBe(3);
@@ -35,10 +36,42 @@ describe('createSounds function', () => {
   
   it('should play a single sound', () => {
     const { playOne } = createSounds(sequence);
-    const result = playOne({ id: 0, pitch: '4', duration: 3 });
+    const result = playOne({ id: 0, pitch: 4, duration: 3 });
     expect(result).toEqual({ note: 'C4', duration: 3, time: 0 });
   });
 
+  it('should play multiple sounds one at a time', () => {
+    const { playSequence } = createSounds(sequence);
+    const result = playSequence({ pitch: 4, duration: 3, playAll: false });
+    expect(result.notesToPlay).toEqual([
+      { note: 'C4', time: 0, sound: expect.any(Object) },
+      { note: 'C4', time: 3, sound: expect.any(Object) },
+      { note: 'C4', time: 6, sound: expect.any(Object) },
+      { note: 'C4', time: 9, sound: null },
+    ]);
+  });
+  
+  it('should play multiple sounds all at once', () => {
+    const { playSequence } = createSounds(sequence);
+    const result = playSequence({ pitch: 2, duration: 3, playAll: true });
+    expect(result.notesToPlay).toEqual([
+      { note: 'C2', time: 0, sound: expect.any(Object) },
+      { note: 'C2', time: 0, sound: expect.any(Object) },
+      { note: 'C2', time: 0, sound: expect.any(Object) },
+      { note: 'C2', time: 0, sound: null },
+    ]);
+  });
+});
+
+describe('playOne function', () => {
+  it('should play a single sound', () => {
+    const { playOne } = createSounds(sequence);
+    const result = playOne({ id: 0, pitch: 4, duration: 3 });
+    expect(result).toEqual({ note: 'C4', duration: 3, time: 0 });
+  });
+});
+
+describe('playSequence function', () => {
   it('should play multiple sounds one at a time', () => {
     const { playSequence } = createSounds(sequence);
     const result = playSequence({ pitch: '4', duration: 3, playAll: false });

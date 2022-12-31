@@ -56,7 +56,9 @@ describe('getSound function', () => {
     expect(instrument.sound).toBe('file');
     expect(instrument.volume.value).toBe(0);
   });
-  
+});
+
+describe('playSound function', () => {
   it('should play a single note', () => {
     const { playSound } = createSound({ volume: 0 });
     expect(playSound('A')).toEqual({ note: 'A3', duration: '4n' });

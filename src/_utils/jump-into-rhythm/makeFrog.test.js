@@ -29,7 +29,9 @@ describe('makeFrog function', () => {
     const { sound } = makeFrog();
     expect(sound.urls).toEqual({ D4: 'file' });
   });
-  
+});
+
+describe('hop function', () => {
   it('should play a sound when beats are passed in', () => {
     const { hop } = makeFrog();
     const beats = [
@@ -46,4 +48,4 @@ describe('makeFrog function', () => {
       { pitch: 'D5', duration: '4n', time: 3, isRest: false },
     ]);
   });
-});
+})
