@@ -11,9 +11,9 @@ jest.mock('tone', () => ({
   Sampler: jest.fn(({ urls }) => ({
     toDestination: jest.fn(() => ({
       urls,
-      // triggerAttackRelease: jest.fn((note, duration, time) => ({
-      //   note, duration, time
-      // }))
+      triggerAttackRelease: jest.fn((note, duration, time) => ({
+        note, duration, time
+      }))
     }))
   })),
 }));
