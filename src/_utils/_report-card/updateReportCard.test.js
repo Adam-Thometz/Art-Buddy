@@ -1,4 +1,4 @@
-import updateReportCard from "./updateReportCard";
+import updateReportCard from "../_report-card/updateReportCard";
 
 import { instrumentIdReportCard } from '_data/_report-cards/initialReportCards';
 
