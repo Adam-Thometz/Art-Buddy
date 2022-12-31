@@ -1,4 +1,4 @@
-import { createSounds } from "./createSound";
+import { createSounds } from "./createSounds";
 
 jest.mock('tone', () => ({
   Sampler: jest.fn(({ urls }) => ({

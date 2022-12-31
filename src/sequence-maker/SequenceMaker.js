@@ -16,7 +16,7 @@ import SequencePlayReset from "./play-reset/SequencePlayReset";
 import { SM } from "_data/_utils/localStorageKeys";
 import { sequenceMaker } from "_data/_activities/activityList";
 import { Transport } from "tone";
-import { createSounds } from "_utils/sequence-maker/createSound";
+import { createSounds } from "_utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
   const { currGame, volume } = useSelector(state => state.mainSettings);

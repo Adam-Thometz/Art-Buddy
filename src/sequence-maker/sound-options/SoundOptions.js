@@ -9,7 +9,7 @@ import Options from '_components/option/Options';
 import Icon from '_components/icon/Icon';
 
 import soundInfo from '_data/sequence-maker/soundInfo';
-import { createSounds } from '_utils/sequence-maker/createSound';
+import { createSounds } from '_utils/sequence-maker/createSounds';
 import PlayContext from '_utils/_general/PlayContext';
 
 const SoundOptions = () => {
