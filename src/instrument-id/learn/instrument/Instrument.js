@@ -9,7 +9,7 @@ import Icon from "_components/icon/Icon";
 import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import { loadSounds } from "_utils/instrument-id/play";
+import loadSounds from "_utils/instrument-id/loadSounds";
 import getInstrument from "_utils/instrument-id/getInstrument";
 import convertToId from "_utils/_general/convertToId";
 import { Transport, start } from "tone";

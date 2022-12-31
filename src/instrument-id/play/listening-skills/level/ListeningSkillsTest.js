@@ -13,7 +13,7 @@ import Choice from "./choice/Choice";
 import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
-import { loadSounds } from "_utils/instrument-id/play";
+import loadSounds from "_utils/instrument-id/loadSounds";
 import { start, Transport } from "tone";
 import useReportCard from "_hooks/useReportCard";
 

@@ -5,7 +5,7 @@ import getInstrument from './getInstrument';
  * takes an array of ids, stores sounds in an object and returns play functions for them
  */
 
-export function loadSounds({ ids, volume, isTest }) {
+export default function loadSounds({ ids, volume, isTest }) {
   const sounds = {};
   ids.forEach(id => {
     const { sound } = getInstrument(id);
