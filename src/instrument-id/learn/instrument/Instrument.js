@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
 import { useSelector } from "react-redux";
@@ -9,8 +9,7 @@ import Icon from "_components/icon/Icon";
 import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
-import play from "_utils/instrument-id/play";
+import { loadSounds } from "_utils/instrument-id/play";
 import getInstrument from "_utils/instrument-id/getInstrument";
 import convertToId from "_utils/_general/convertToId";
 import { Transport, start } from "tone";
@@ -18,29 +17,26 @@ import { Transport, start } from "tone";
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);
   const { instrument } = useParams();
+  const [playFn, setPlayFn] = useState(null);
   const {
     id,
     name,
     icon,
     madeFrom,
     howToPlay,
-    isRhythm,
     width,
     videoUrl
   } = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
 
   const playInstrument = async () => {
     if (Transport.state === 'stopped') await start();
-    play({ id, volume, isRhythm });
+    playFn(id);
   };
 
   useEffect(() => {
-    createBuffers(id);
-    return () => {
-      Transport.stop();
-      removeBuffers();
-    };
-  }, [id]);
+    setPlayFn(() => loadSounds({ ids: [id], volume, isTest: false }).play);
+    return () => Transport.stop();
+  }, [id, volume]);
 
   const openVideo = () => window.open(videoUrl);
 

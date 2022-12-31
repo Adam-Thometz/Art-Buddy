@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -13,17 +13,13 @@ import Choice from "./choice/Choice";
 import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
-import { createBuffers, removeBuffers } from "_utils/instrument-id/buffers";
-import play from "_utils/instrument-id/play";
+import { loadSounds } from "_utils/instrument-id/play";
 import { start, Transport } from "tone";
 import useReportCard from "_hooks/useReportCard";
 
 const ListeningSkillsTest = () => {
-  const {
-    choice1,
-    choice2,
-    answer
-  } = useSelector(state => state.listeningSkillsTest);
+  const { choice1, choice2, answer } = useSelector(state => state.listeningSkillsTest);
+  const [playFn, setPlayFn] = useState(null);
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   const { level } = useParams();
@@ -38,22 +34,19 @@ const ListeningSkillsTest = () => {
   useEffect(() => {
     if (choice1 !== null && choice2 !== null) {
       dispatch(generateAnswer({ choice1, choice2 }));
-      createBuffers(choice1.id);
-      createBuffers(choice2.id);
+      const ids = [choice1.id, choice2.id]
+      setPlayFn(() => loadSounds({ ids, volume, isTest: true }).play);
     };
-  }, [dispatch, choice1, choice2]);
+  }, [dispatch, choice1, choice2, volume]);
 
   useEffect(() => {
-    return () => {
-      dispatch(clearChoices());
-      removeBuffers();
-    };
+    return () => dispatch(clearChoices());
   }, [dispatch]);
   
   const playSound = async () => {
     if (Transport.state === 'stopped') await start();
-    const { id, isRhythm } = answer;
-    play({ id, volume, isRhythm, isTest: true })
+    const { id } = answer;
+    playFn(id);
   };
 
   const dropdown = id => <Dropdown
