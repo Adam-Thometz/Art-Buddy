@@ -1,6 +1,8 @@
 import makeFrog from "./makeFrog";
+import { Part, Sampler, Time, Transport } from "tone";
 
 jest.mock('tone', () => ({
+  __esModule: true,
   Sampler: jest.fn(({ urls }) => ({
     toDestination: jest.fn(() => ({
       urls,
@@ -28,6 +30,7 @@ describe('makeFrog function', () => {
   it('should create a sound', () => {
     const { sound } = makeFrog();
     expect(sound.urls).toEqual({ D4: 'file' });
+    expect(Sampler).toBeCalled();
   });
 });
 
@@ -47,5 +50,8 @@ describe('hop function', () => {
       { pitch: 'D5', duration: '4n', time: 2, isRest: true },
       { pitch: 'D5', duration: '4n', time: 3, isRest: false },
     ]);
+    expect(Part).toBeCalled();
+    expect(Time).toBeCalled();
+    expect(Transport.start).toBeCalled();
   });
-})
+});
