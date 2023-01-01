@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import useRoster from '_hooks/useRoster';
-import PopupContext from '_utils/settings/PopupContext';
+import PopupContext from '_utils/_general/PopupContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setRoster } from '_redux/settings/mainSettingsActions';

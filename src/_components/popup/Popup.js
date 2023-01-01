@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PopupContext from '_utils/settings/PopupContext';
+import PopupContext from '_utils/_general/PopupContext';
 
 import './Popup.css';
 

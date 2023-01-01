@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ControlBarContext from "_utils/free-paint/ControlBarContext"
 import PlayContext from "_utils/_general/PlayContext";
-import PopupContext from "_utils/settings/PopupContext";
+import PopupContext from "_utils/_general/PopupContext";
 
 // Used in ButtonWrapper.test.js
 export const ControlBarContextMock = ({ children }) => {
