@@ -52,14 +52,14 @@ export default function createLoop(song, volume) {
     Transport.start();
     playingLoop.forEach(part => part.start(0));
     return playingLoop;
-  }
+  };
   
   function stopLoop() {
     playingLoop.forEach(part => part.stop());
     Transport.stop();
     playingLoop.length = 0;
     return playingLoop;
-  }
+  };
 
   function getTimeLeft() {
     const MOST_POSSIBLE_TIME = Time('4m').toSeconds() * 1000;
