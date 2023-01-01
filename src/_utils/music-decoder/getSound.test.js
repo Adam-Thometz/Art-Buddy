@@ -1,4 +1,5 @@
 import createSound from "./getSound";
+import { PitchShift, Synth, Sampler, Part, Transport } from "tone";
 
 jest.mock('tone', () => ({
   PitchShift: jest.fn((pitch) => ({
@@ -41,6 +42,8 @@ describe('getSound function', () => {
     expect(instrument.pitch).toBe(0);
     expect(instrument.sound).toBe('synth');
     expect(instrument.volume.value).toBe(0);
+    expect(PitchShift).toBeCalled();
+    expect(Synth).toBeCalled();
   });
   
   it('should create a sound in a new scale', () => {
@@ -48,6 +51,8 @@ describe('getSound function', () => {
     expect(instrument.pitch).toBe(6);
     expect(instrument.sound).toBe('synth');
     expect(instrument.volume.value).toBe(0);
+    expect(PitchShift).toBeCalled();
+    expect(Synth).toBeCalled();
   });
   
   it('should create a sample out of a sound', () => {
@@ -55,6 +60,8 @@ describe('getSound function', () => {
     expect(instrument.pitch).toBe(0);
     expect(instrument.sound).toBe('file');
     expect(instrument.volume.value).toBe(0);
+    expect(PitchShift).toBeCalled();
+    expect(Sampler).toBeCalled();
   });
 });
 
@@ -71,5 +78,7 @@ describe('playSound function', () => {
       { note: 'G', time: 0.5 },
       { note: 'F', time: 1 },
     ]);
+    expect(Part).toBeCalled();
+    expect(Transport.start).toBeCalled();
   });
 });
