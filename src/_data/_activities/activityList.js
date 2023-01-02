@@ -10,7 +10,7 @@ import freePaintIcon from '_media/menu/activity-icons/free-paint.png'
 const types = ['games', 'tools'];
 const genres = ['music', 'art', 'other'];
 
-const { wordToMusicUrl, instrumentIdUrl, jumpIntoRhythmUrl, sequenceMakerUrl, freePaintUrl, colorTheoryUrl, scoreKeeperUrl, timeKeeperUrl } = urls;
+const { wordToMusicUrl, instrumentIdUrl, jumpIntoRhythmUrl, sequenceMakerUrl, freePaintUrl, colorTheoryUrl, scoreKeeperUrl, timeKeeperUrl, moodMeterUrl } = urls;
 
 const wordToMusic = {
   name: 'WORD-TO-MUSIC DECODER',
@@ -84,6 +84,15 @@ const timeKeeper = {
   description: 'Tell the time with music! Add different music blocks to create a song out of the timer',
   active: false
 };
+const moodMeter = {
+  name: 'MOOD METER',
+  icon: null,
+  url: moodMeterUrl,
+  activityType: types[2],
+  genre: genres[2],
+  description: 'Figure out your mood',
+  active: true
+};
 
 const activities = {
   wordToMusic,
@@ -93,7 +102,8 @@ const activities = {
   colorTheory,
   freePaint,
   scoreKeeper,
-  timeKeeper
+  timeKeeper,
+  moodMeter
 };
 
 export default activities;
@@ -106,5 +116,6 @@ export {
   colorTheory,
   freePaint,
   scoreKeeper,
-  timeKeeper
+  timeKeeper,
+  moodMeter,
 }

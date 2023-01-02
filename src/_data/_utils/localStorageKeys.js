@@ -12,3 +12,5 @@ export const FP = 'fp';
 export const SK = 'sk';
 // visited state for Time Keeper
 export const TK = 'tk';
+// visited state for Mood Meter
+export const MM = 'mm';

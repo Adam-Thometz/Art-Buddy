@@ -7,6 +7,7 @@ import iepIcon from '_media/menu/option-icons/iep-icon.png';
 
 import scoreKeeperIcon from '_media/menu/option-icons/score-keeper.png';
 import timeKeeperIcon from '_media/menu/option-icons/time-keeper.png';
+import moodMeterIcon from '_media/menu/option-icons/mood-meter.png';
 
 const menuOptions = {
   games: [
@@ -50,9 +51,9 @@ const menuOptions = {
     },
     {
       name: 'MOOD METER',
-      url: null,
-      icon: null,
-      active: false
+      url: urls.moodMeterUrl,
+      icon: moodMeterIcon,
+      active: true
     },
     {
       name: 'NOISE METER',

@@ -10,7 +10,8 @@ const urls = {
   freePaintUrl: '/free-paint',
   colorTheoryUrl: '/color-theory',
   scoreKeeperUrl: '/score-keeper',
-  timeKeeperUrl: '/time-keeper'
+  timeKeeperUrl: '/time-keeper',
+  moodMeterUrl: '/mood-meter',
 };
 
 export const instrumentIdUrls = {
