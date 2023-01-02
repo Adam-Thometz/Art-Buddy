@@ -23,9 +23,10 @@ const Valence = () => {
     <section className='Valence'>
       <p>How are you feeling today?</p>
       <div className='Valence-faces'>
-        {faces.map(face => (
-          <Face key={face.id} src={face.src} id={face.id} isSelected={face.id === valence} />
-        ))}
+        {faces.map(face => {
+          const { id, src } = face;
+          return <Face key={id} src={src} id={id} isSelected={id === valence} />
+        })}
       </div>
     </section>
   );

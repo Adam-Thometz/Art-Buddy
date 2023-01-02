@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoodMeter component matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      MOOD METER
+    </h1>
+  </header>
+  <section
+    class="Valence"
+  >
+    <p>
+      How are you feeling today?
+    </p>
+    <div
+      class="Valence-faces"
+    >
+      <div
+        class="Face"
+        id="2"
+      >
+        <img
+          alt=""
+          id="2"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="1"
+      >
+        <img
+          alt=""
+          id="1"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="0"
+      >
+        <img
+          alt=""
+          id="0"
+          src="file"
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="Energy"
+  >
+    <p>
+      How is your energy level?
+    </p>
+    <div
+      class="Energy-batteries"
+    >
+      <div
+        class="Battery"
+        id="2"
+      >
+        <img
+          alt=""
+          id="2"
+          src="file"
+        />
+        <img
+          alt=""
+          id="2"
+          src="file"
+          style="width: 89%;"
+        />
+      </div>
+      <div
+        class="Battery"
+        id="1"
+      >
+        <img
+          alt=""
+          id="1"
+          src="file"
+        />
+        <img
+          alt=""
+          id="1"
+          src="file"
+          style="width: 48%;"
+        />
+      </div>
+      <div
+        class="Battery"
+        id="0"
+      >
+        <img
+          alt=""
+          id="0"
+          src="file"
+        />
+        <img
+          alt=""
+          id="0"
+          src="file"
+          style="width: 12%;"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`MoodMeter component matches snapshot 2`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      MOOD METER
+    </h1>
+  </header>
+  <section
+    class="Valence"
+  >
+    <p>
+      How are you feeling today?
+    </p>
+    <div
+      class="Valence-faces"
+    >
+      <div
+        class="Face"
+        id="2"
+      >
+        <img
+          alt=""
+          id="2"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="1"
+      >
+        <img
+          alt=""
+          id="1"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="0"
+      >
+        <img
+          alt=""
+          id="0"
+          src="file"
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="Energy"
+  >
+    <p>
+      How is your energy level?
+    </p>
+    <div
+      class="Energy-batteries"
+    >
+      <div
+        class="Battery"
+        id="2"
+      >
+        <img
+          alt=""
+          id="2"
+          src="file"
+        />
+        <img
+          alt=""
+          id="2"
+          src="file"
+          style="width: 89%;"
+        />
+      </div>
+      <div
+        class="Battery"
+        id="1"
+      >
+        <img
+          alt=""
+          id="1"
+          src="file"
+        />
+        <img
+          alt=""
+          id="1"
+          src="file"
+          style="width: 48%;"
+        />
+      </div>
+      <div
+        class="Battery"
+        id="0"
+      >
+        <img
+          alt=""
+          id="0"
+          src="file"
+        />
+        <img
+          alt=""
+          id="0"
+          src="file"
+          style="width: 12%;"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

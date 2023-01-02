@@ -31,9 +31,10 @@ const Energy = () => {
     <section className='Energy'>
       <p>How is your energy level?</p>
       <div className='Energy-batteries'>
-        {batteries.map(battery => (
-          <Battery key={battery.id} width={battery.width} id={battery.id} filter={battery.id === energy ? battery.filter : null} />
-        ))}
+        {batteries.map(battery => {
+          const { width, id, filter } = battery;
+          return <Battery key={id} width={width} id={id} filter={id === energy ? filter : null} />
+        })}
       </div>
     </section>
   );
