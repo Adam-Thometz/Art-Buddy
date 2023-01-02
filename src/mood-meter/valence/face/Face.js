@@ -10,9 +10,9 @@ const Face = ({ src, isSelected, id }) => {
   
   const handleSelect = e => dispatch(setValence(+e.target.id))
   
-  const className = `Face${isSelected ? ' selected' : ''}`;
+  const className = `Face${isSelected ? ' selected-face' : ''}`;
   return (
-    <div className={className} id={id} onClick={handleSelect}>
+    <div className={className} id={id} onClick={handleSelect} data-testid={`face${id}`}>
       <img src={src} alt='' id={id} onClick={handleSelect} />
     </div>
   );

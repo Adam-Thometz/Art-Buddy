@@ -13,8 +13,9 @@ const Battery = ({ width, filter, id }) => {
 
   const handleSelect = e => dispatch(setEnergy(+e.target.id));
 
+  const className = `Battery${filter ? ' selected-battery' : ''}`
   return (
-    <div className='Battery' id={id} onClick={handleSelect}>
+    <div className={className} id={id} onClick={handleSelect} data-testid={`battery${id}`}>
       <img src={battery} alt='' id={id} onClick={handleSelect} />
       <img src={batteryBar} alt='' style={{ width, filter }} id={id} onClick={handleSelect} />
     </div>

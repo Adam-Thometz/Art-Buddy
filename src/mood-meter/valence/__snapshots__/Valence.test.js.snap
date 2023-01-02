@@ -13,6 +13,7 @@ exports[`Valence component matches snapshot 1`] = `
     >
       <div
         class="Face"
+        data-testid="face2"
         id="2"
       >
         <img
@@ -23,6 +24,7 @@ exports[`Valence component matches snapshot 1`] = `
       </div>
       <div
         class="Face"
+        data-testid="face1"
         id="1"
       >
         <img
@@ -33,6 +35,7 @@ exports[`Valence component matches snapshot 1`] = `
       </div>
       <div
         class="Face"
+        data-testid="face0"
         id="0"
       >
         <img
