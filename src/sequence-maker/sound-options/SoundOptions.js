@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { PlayContext } from '_utils/_general/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addToSequence } from '_redux/sequence-maker/sequenceMakerActions';
@@ -9,8 +10,7 @@ import Options from '_components/option/Options';
 import Icon from '_components/icon/Icon';
 
 import soundInfo from '_data/sequence-maker/soundInfo';
-import { createSounds } from '_utils/sequence-maker/createSounds';
-import PlayContext from '_utils/_general/PlayContext';
+import createSounds from '_utils/sequence-maker/createSounds';
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector(state => state.sequenceMaker);

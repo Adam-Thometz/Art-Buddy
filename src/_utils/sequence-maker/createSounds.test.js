@@ -1,4 +1,4 @@
-import { createSounds } from "./createSounds";
+import createSounds from "./createSounds";
 import { Part, Sampler, Transport, now } from "tone";
 
 jest.mock('tone', () => ({
