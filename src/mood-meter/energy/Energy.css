@@ -1,0 +1,12 @@
+.Energy {
+  display: flex;
+  flex-direction: column;
+}
+
+.Energy-batteries {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto;
+}

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Valence component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="Valence"
+  >
+    <p>
+      How are you feeling today?
+    </p>
+    <div
+      class="Valence-faces"
+    >
+      <div
+        class="Face"
+        id="2"
+      >
+        <img
+          alt=""
+          id="2"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="1"
+      >
+        <img
+          alt=""
+          id="1"
+          src="file"
+        />
+      </div>
+      <div
+        class="Face"
+        id="0"
+      >
+        <img
+          alt=""
+          id="0"
+          src="file"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

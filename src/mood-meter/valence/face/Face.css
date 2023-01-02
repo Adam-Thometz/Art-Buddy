@@ -1,0 +1,19 @@
+.Face {
+  border: 5px solid #0D0709;
+  border-radius: 50%;
+  background-color: #D4D2D5;
+  display: inline-block;
+  height: 14vh;
+  width: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background-color: #FFE81A;
+}
+
+.Face img {
+  width: 60%;
+}

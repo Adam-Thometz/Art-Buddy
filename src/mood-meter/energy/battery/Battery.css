@@ -1,0 +1,18 @@
+.Battery {
+  display: inline-block;
+  height: 14vh;
+  width: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Battery img {
+  position: absolute;
+}
+
+.Battery img:nth-child(2) {
+  height: 45%;
+  left: 0;
+}
