@@ -9,18 +9,20 @@ import songMakerReducer from './instrument-id/song-maker/songMakerReducer';
 import freePaintReducer from './free-paint/freePaintReducer';
 import colorTheoryReducer from './color-theory/colorTheoryReducer';
 import scoreKeeperReducer from './score-keeper/scoreKeeperReducer';
+import moodMeterReducer from './mood-meter/moodMeterReducer';
 
 const rootReducer = configureStore({
   reducer: {
     mainSettings: mainSettingsReducer,
     musicDecoder: musicDecoderReducer,
     sequenceMaker: sequenceMakerReducer,
+    jumpIntoRhythm: jumpIntoRhythmReducer,
     listeningSkillsTest: listeningSkillsTestReducer,
     songMaker: songMakerReducer,
-    scoreKeeper: scoreKeeperReducer,
-    jumpIntoRhythm: jumpIntoRhythmReducer,
     freePaint: freePaintReducer,
-    colorTheory: colorTheoryReducer
+    colorTheory: colorTheoryReducer,
+    scoreKeeper: scoreKeeperReducer,
+    moodMeter: moodMeterReducer,
   }
 });
 
