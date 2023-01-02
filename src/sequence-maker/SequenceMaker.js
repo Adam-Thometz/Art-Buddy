@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import useVisited from "_hooks/useVisited";
 import { PlayContext } from "_utils/_general/PlayContext";
 
@@ -21,7 +21,7 @@ import createSounds from "_utils/sequence-maker/createSounds";
 const SequenceMaker = () => {
   const { currGame, volume } = useSelector(state => state.mainSettings);
   const { sequence } = useSelector(state => state.sequenceMaker);
-  const [playFn, setPlayFn] = useState(null);
+  const { setPlayFn } = useContext(PlayContext)
   const [hasVisited, setHasVisited] = useVisited(SM);
   const dispatch = useDispatch();
   
@@ -35,14 +35,11 @@ const SequenceMaker = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    setPlayFn(() => createSounds(sequence, volume))
+    setPlayFn(() => createSounds(sequence, volume));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sequence, volume]);
 
-  const isPlaying = useMemo(() => (
-    sequence.filter(block => block !== null).some(block => block.isPlaying)
-  ), [sequence]);
-
-  return (<PlayContext.Provider value={{ playFn, setPlayFn, isPlaying }}>
+  return (<>
     <WindowNavbar page={currGame.name} />
     {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
       <SequenceControls />
@@ -50,7 +47,7 @@ const SequenceMaker = () => {
       <Sequence />
       <SequencePlayReset />
     </>)}
-  </PlayContext.Provider>);
+  </>);
 };
 
 export default SequenceMaker;

@@ -14,8 +14,8 @@ import reset from '_media/sequence-maker/_icons/reset.png';
 import { start, Transport } from 'tone';
 
 const SequencePlayReset = () => {
-  const { sequence, pitch, duration } = useSelector(state => state.sequenceMaker);
-  const { playFn, isPlaying } = useContext(PlayContext);
+  const { sequence, pitch, duration, isPlaying } = useSelector(state => state.sequenceMaker);
+  const { playFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 
   const handlePlay = async () => {

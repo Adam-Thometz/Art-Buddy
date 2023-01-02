@@ -7,7 +7,8 @@ export const INITIAL_STATE = {
   category: null,
   sequence: [null, null, null, null],
   pitch: 3,
-  duration: 3
+  duration: 3,
+  isPlaying: false,
 };
 
 const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -47,6 +48,7 @@ const sequenceMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       const newSequence = state.sequence;
       newSequence[id].isPlaying = !newSequence[id].isPlaying;
       state.sequence = newSequence;
+      state.isPlaying = newSequence.some(block => block && block.isPlaying);
     })
     .addCase(clearGame, (state) => {
       state.category = INITIAL_STATE.category;

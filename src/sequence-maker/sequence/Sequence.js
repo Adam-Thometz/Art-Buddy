@@ -11,8 +11,8 @@ import Button from "_components/button/Button";
 import colors from "_data/_utils/colorOrder";
 
 const Sequence = () => {
-  const { sequence, pitch, duration } = useSelector(state => state.sequenceMaker);
-  const { playFn, isPlaying } = useContext(PlayContext);
+  const { sequence, pitch, duration, isPlaying } = useSelector(state => state.sequenceMaker);
+  const { playFn } = useContext(PlayContext);
   const dispatch = useDispatch();
   
   const remove = e => {

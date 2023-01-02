@@ -48,8 +48,10 @@ describe('Sequence Maker reducer', () => {
     const before = sequenceMakerReducer(withCategory, addToSequence('dog'));
     const result = sequenceMakerReducer(before, togglePlaying(0));
     expect(result.sequence[0].isPlaying).toBeTruthy();
+    expect(result.isPlaying).toBeTruthy();
     const result2 = sequenceMakerReducer(result, togglePlaying(0));
     expect(result2.sequence[0].isPlaying).toBeFalsy();
+    expect(result2.isPlaying).toBeFalsy();
   })
 
   it('should handle resetting the game', () => {
