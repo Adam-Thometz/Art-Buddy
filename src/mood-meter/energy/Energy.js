@@ -18,13 +18,17 @@ const RED_FILTER = prependBrightnessAndSaturation(
   'invert(49%) sepia(82%) saturate(4390%) hue-rotate(339deg) brightness(101%) contrast(98%)'
 );
 
+const HIGH_BATTERY = '89%';
+const MEDIUM_BATTERY = '48%';
+const LOW_BATTERY = '12%';
+
 const Energy = () => {
   const { energy } = useSelector(state => state.moodMeter);
 
   const batteries = [
-    { width: '89%', id: 2, filter: GREEN_FILTER },
-    { width: '48%', id: 1, filter: YELLOW_FILTER },
-    { width: '12%', id: 0, filter: RED_FILTER },
+    { width: HIGH_BATTERY, id: 2, filter: GREEN_FILTER },
+    { width: MEDIUM_BATTERY, id: 1, filter: YELLOW_FILTER },
+    { width: LOW_BATTERY, id: 0, filter: RED_FILTER },
   ];
   
   return (
