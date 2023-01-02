@@ -1,4 +1,5 @@
 import React from "react";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
 
@@ -17,11 +18,15 @@ jest.mock('tone', () => ({
 
 describe('Instrument component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Instrument />);
+    renderWithProvider(<PlayContextMock>
+      <Instrument />
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Instrument />);
+    const { asFragment } = renderWithProvider(<PlayContextMock>
+      <Instrument />
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 });

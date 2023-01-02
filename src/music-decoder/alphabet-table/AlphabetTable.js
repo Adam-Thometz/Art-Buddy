@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PlayContext from "_utils/_general/PlayContext";
+import { PlayContext } from "_utils/_general/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
@@ -9,7 +9,7 @@ import './AlphabetTable.css';
 import LETTER_NOTES from '_data/music-decoder/letterNotes';
 
 const AlphabetTable = () => {
-  const { playFn } = useContext(PlayContext)
+  const { playFn } = useContext(PlayContext);
   const {
     isUpperCase,
     currPlaying,

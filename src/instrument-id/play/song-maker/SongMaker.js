@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import PlayContext from '_utils/_general/PlayContext';
+import React, { useContext, useEffect } from 'react';
+import { PlayContext } from '_utils/_general/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrTimer } from '_redux/instrument-id/song-maker/songMakerActions';
@@ -16,7 +16,7 @@ import createLoop from '_utils/instrument-id/createLoop';
 const SongMaker = () => {
   const { song, isPlaying, currTimer } = useSelector(state => state.songMaker);
   const { volume } = useSelector(state => state.mainSettings);
-  const [playFn, setPlayFn] = useState(() => createLoop(song, 0));
+  const { playFn, setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,29 +34,27 @@ const SongMaker = () => {
       dispatch(setCurrTimer(timer));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [song, volume]);
+  }, [song, volume]);
 
-useEffect(() => {
-  if (song.some(part => part || !!part.melodyId)) {
-    isPlaying ? playFn.playLoop() : playFn.stopLoop();
-  };
+  useEffect(() => {
+    if (song.some(part => part && !!part.melodyId)) {
+      isPlaying ? playFn.playLoop() : playFn.stopLoop();
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [isPlaying]);
+  }, [isPlaying]);
 
-useEffect(() => {
-  if (isPlaying) playFn.playLoop();
+  useEffect(() => {
+    if (isPlaying) playFn.playLoop();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playFn]);
 
-  return (
-    <PlayContext.Provider value={{ playFn, setPlayFn }}>
-      <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
-      <section className='SongMaker-button-instrument-wrapper'>
-        <PlaySave />
-        <InstrumentDisplay />
-      </section>
-    </PlayContext.Provider>
-  );
+  return (<>
+    <WindowNavbar page='Song Maker' cornerIcon={<SavedSongsIcon />} />
+    <section className='SongMaker-button-instrument-wrapper'>
+      <PlaySave />
+      <InstrumentDisplay />
+    </section>
+  </>);
 };
 
 export default SongMaker;

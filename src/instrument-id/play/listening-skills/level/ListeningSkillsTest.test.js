@@ -1,4 +1,5 @@
 import React from "react";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
 import { setupChoices } from "_testUtils/setup-functions/ListeningSkillsTestSetup";
@@ -19,16 +20,22 @@ jest.mock('tone', () => ({
 
 describe('ListeningSkillsTest component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    renderWithProvider(<PlayContextMock>
+      <ListeningSkillsTest />
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ListeningSkillsTest />);
+    const { asFragment } = renderWithProvider(<PlayContextMock>
+      <ListeningSkillsTest />
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders choices', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    renderWithProvider(<PlayContextMock>
+      <ListeningSkillsTest />
+    </PlayContextMock>);
     const btn = screen.getByText('START');
     expect(btn).toBeDisabled();
 
@@ -41,7 +48,9 @@ describe('ListeningSkillsTest component', () => {
   });
 
   it('flashes correct and incorrect for answers', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    renderWithProvider(<PlayContextMock>
+      <ListeningSkillsTest />
+    </PlayContextMock>);
     setupChoices();
 
     const correctWrappers = screen.getAllByTestId('isCorrect');

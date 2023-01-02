@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ControlBarContext from "_utils/free-paint/ControlBarContext"
-import PlayContext from "_utils/_general/PlayContext";
+import { PlayContext } from "_utils/_general/PlayContext";
 import PopupContext from "_utils/_general/PopupContext";
 
 // Used in ButtonWrapper.test.js
@@ -25,7 +25,7 @@ export const PopupContextMock = ({ children }) => {
 
 // Used in DecoderControls.test.js and AlphabetTable.test.js
 export const PlayContextMock = ({ children }) => {
-  const [playFn, setPlayFn] = useState(null);
+  const [playFn, setPlayFn] = useState({ playLoop: jest.fn(), stopLoop: jest.fn() });
   return (
     <PlayContext.Provider value={{ playFn, setPlayFn }}>
       {children}

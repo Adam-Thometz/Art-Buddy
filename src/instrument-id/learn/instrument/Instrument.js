@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import { PlayContext } from "_utils/_general/PlayContext";
 
 import { useSelector } from "react-redux";
 
@@ -17,7 +18,7 @@ import { Transport, start } from "tone";
 const Instrument = () => {
   const { volume } = useSelector(state => state.mainSettings);
   const { instrument } = useParams();
-  const [playFn, setPlayFn] = useState(null);
+  const { playFn, setPlayFn } = useContext(PlayContext);
   const {
     id,
     name,

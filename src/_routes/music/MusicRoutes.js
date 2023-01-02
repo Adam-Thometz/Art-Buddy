@@ -14,9 +14,9 @@ import getRoutes from "_utils/_general/getRoutes";
 const MusicRoutes = () => {
   return (
     <Routes>
-      <Route path={urls.wordToMusicUrl} element={<Window><WordToMusic /></Window>} />
-      <Route path={urls.sequenceMakerUrl} element={<Window><SequenceMaker /></Window>} />
-      <Route path={urls.jumpIntoRhythmUrl} element={<Window><JumpIntoRhythm /></Window>} />
+      <Route path={urls.wordToMusicUrl} element={<Window hasPlayContext><WordToMusic /></Window>} />
+      <Route path={urls.sequenceMakerUrl} element={<Window hasPlayContext><SequenceMaker /></Window>} />
+      <Route path={urls.jumpIntoRhythmUrl} element={<Window hasPlayContext><JumpIntoRhythm /></Window>} />
       <Route path={urls.instrumentIdUrl} element={<Window><InstrumentId /></Window>} />
       {getRoutes(InstrumentIdRoutes)}
     </Routes>

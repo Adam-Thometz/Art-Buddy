@@ -19,12 +19,12 @@ const InstrumentIdRoutes = () => {
       {/* Learn */}
       <Route path={instrumentIdUrls.learn} element={<Window><LearnInstrumentId /></Window>}/>
       <Route path={instrumentIdUrls.learnFamily} element={<Window><LearnFamilyPage /></Window>}/>
-      <Route path={instrumentIdUrls.learnInstrument} element={<Window><Instrument /></Window>}/>
+      <Route path={instrumentIdUrls.learnInstrument} element={<Window hasPlayContext><Instrument /></Window>} />
       {/* Play */}
       <Route path={instrumentIdUrls.play} element={<Window><PlayInstrumentId /></Window>} />
       <Route path={instrumentIdUrls.playListening} element={<Window><ListeningSkills /></Window>} />
-      <Route path={instrumentIdUrls.playListeningLevel} element={<Window><ListeningSkillsTest /></Window>} />
-      <Route path={instrumentIdUrls.playSongMaker} element={<Window><SongMaker /></Window>} />
+      <Route path={instrumentIdUrls.playListeningLevel} element={<Window hasPlayContext><ListeningSkillsTest /></Window>} />
+      <Route path={instrumentIdUrls.playSongMaker} element={<Window hasPlayContext><SongMaker /></Window>} />
     </Routes>
   );
 };

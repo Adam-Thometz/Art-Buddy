@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useVisited from '_hooks/useVisited';
-import PlayContext from '_utils/_general/PlayContext';
+import { PlayContext } from '_utils/_general/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
@@ -20,7 +20,7 @@ import { Transport } from 'tone';
 const JumpIntoRhythm = () => {
   const { currGame } = useSelector(state => state.mainSettings);
   const { isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
-  const [playFn, setPlayFn] = useState(null);
+  const { setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,13 +36,13 @@ const JumpIntoRhythm = () => {
   }, [dispatch]);
 
   const [hasVisited, setHasVisited] = useVisited(JIR);
-  return (<PlayContext.Provider value={{ playFn, setPlayFn }}>
+  return (<>
     <WindowNavbar page={currGame.name} />
     {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
       {isDisplayingLilyPads ? <FrogLilyPad /> : <Notes />}
       <NoteOptions />
     </>)}
-  </PlayContext.Provider>);
+  </>);
 };
 
 export default JumpIntoRhythm;

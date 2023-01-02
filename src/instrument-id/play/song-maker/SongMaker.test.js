@@ -3,6 +3,7 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SongMaker from "./SongMaker";
+import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 jest.mock('tone', () => ({
   Transport: { stop: jest.fn() },
@@ -20,21 +21,28 @@ jest.mock('tone', () => ({
 
 describe('SongMaker component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SongMaker />);
+    renderWithProvider(<PlayContextMock>
+      <SongMaker />
+    </PlayContextMock>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SongMaker />);
+    const { asFragment } = renderWithProvider(<PlayContextMock>
+      <SongMaker />
+    </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('selects melodies', () => {
-    renderWithProvider(<SongMaker />);
+    renderWithProvider(<PlayContextMock>
+      <SongMaker />
+    </PlayContextMock>);
     const instrumentDropdown = screen.getByText('INSTRUMENT');
     userEvent.click(instrumentDropdown);
     const instrumentOption = screen.getByText('VIOLIN');
     userEvent.click(instrumentOption);
     expect(screen.getByText('MELODY')).toBeInTheDocument();
+    
     const melodyDropdown = screen.getByText('MELODY');
     userEvent.click(melodyDropdown);
     const melodyOption = screen.getByText('BABY SHARK');
@@ -43,7 +51,9 @@ describe('SongMaker component', () => {
   });
   
   it('selects rhythms', () => {
-    renderWithProvider(<SongMaker />);
+    renderWithProvider(<PlayContextMock>
+      <SongMaker />
+    </PlayContextMock>);
     const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT');
     userEvent.click(addInstrumentBtns[0]);
     expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
@@ -61,8 +71,10 @@ describe('SongMaker component', () => {
     expect(screen.queryByText('RHYTHM')).not.toBeInTheDocument();
   });
   
-  it('saves a song', async () => {
-    renderWithProvider(<SongMaker />);
+  it('saves a song', () => {
+    renderWithProvider(<PlayContextMock>
+      <SongMaker />
+    </PlayContextMock>);
     const saveBtn = screen.getAllByText('SAVE')[0];
     userEvent.click(saveBtn);
     expect(screen.getByText('SAVE SONG')).toBeInTheDocument();

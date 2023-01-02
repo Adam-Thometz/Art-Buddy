@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { PlayContext } from "_utils/_general/PlayContext";
+import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
@@ -15,11 +17,10 @@ import ReportCardIcon from "./corner-icon/ReportCardIcon";
 import instrumentOptions from "./instrumentOptions";
 import loadSounds from "_utils/instrument-id/loadSounds";
 import { start, Transport } from "tone";
-import useReportCard from "_hooks/useReportCard";
 
 const ListeningSkillsTest = () => {
   const { choice1, choice2, answer } = useSelector(state => state.listeningSkillsTest);
-  const [playFn, setPlayFn] = useState(null);
+  const { playFn, setPlayFn } = useContext(PlayContext)
   const { volume } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch();
   const { level } = useParams();

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import useVisited from "_hooks/useVisited";
-import PlayContext from "_utils/_general/PlayContext";
+import { PlayContext } from "_utils/_general/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
 import { clearGame } from "_redux/sequence-maker/sequenceMakerActions";
@@ -16,7 +16,7 @@ import SequencePlayReset from "./play-reset/SequencePlayReset";
 import { SM } from "_data/_utils/localStorageKeys";
 import { sequenceMaker } from "_data/_activities/activityList";
 import { Transport } from "tone";
-import { createSounds } from "_utils/sequence-maker/createSounds";
+import createSounds from "_utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
   const { currGame, volume } = useSelector(state => state.mainSettings);

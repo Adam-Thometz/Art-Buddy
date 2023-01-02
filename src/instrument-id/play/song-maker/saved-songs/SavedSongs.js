@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { PlayContext } from '_utils/_general/PlayContext';
 import useSavedSongs from '_hooks/useSavedSongs';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,7 +10,6 @@ import './SavedSongs.css';
 import Icon from '_components/icon/Icon';
 
 import { smallPlayIcon, deleteIcon } from '_media/instrument-id/_icons/iconImports';
-import PlayContext from '_utils/_general/PlayContext';
 import createLoop from '_utils/instrument-id/createLoop';
 
 const SavedSongs = () => {

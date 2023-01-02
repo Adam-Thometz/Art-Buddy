@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PlayContext from '_utils/_general/PlayContext';
+import { PlayContext } from '_utils/_general/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { changeScale, changeSound, toggleUpperCase, toggleNote } from '_redux/music-decoder/musicDecoderActions';
