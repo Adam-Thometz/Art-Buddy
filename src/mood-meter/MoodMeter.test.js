@@ -7,6 +7,7 @@ import userEvent from "@testing-library/user-event";
 import MoodMeter from './MoodMeter';
 
 import { MM } from '_data/_utils/localStorageKeys';
+import { RED_FILTER } from "_data/mood-meter/batteryDefaults";
 
 describe('MoodMeter component', () => {
   window.localStorage.setItem(`visited-${MM}`, true);
@@ -29,6 +30,8 @@ describe('MoodMeter component', () => {
     expect(screen.getByTestId('face1')).toHaveClass('selected-face');
     expect(screen.getByTestId('face2')).not.toHaveClass('selected-face');
     userEvent.click(energyOptions[2]);
-    expect(screen.getByTestId('battery0')).toHaveClass('selected-battery');
+    const clickedBatteryBar = screen.getAllByTestId('bar')[2];
+    const style = window.getComputedStyle(clickedBatteryBar);
+    expect(style.filter).toBe(RED_FILTER);
   });
 });
