@@ -10,7 +10,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
     >
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="quarterNote"
       >
         <img
@@ -27,7 +27,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="eighthNotes"
       >
         <img
@@ -44,7 +44,7 @@ exports[`NoteOptions component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="quarterRest"
       >
         <img

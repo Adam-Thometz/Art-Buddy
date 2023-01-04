@@ -4,6 +4,7 @@ exports[`NoteBlock component matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="NoteBlock"
+    data-testid="block"
   />
 </DocumentFragment>
 `;

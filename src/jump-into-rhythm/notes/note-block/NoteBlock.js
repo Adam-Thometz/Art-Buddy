@@ -13,7 +13,7 @@ const NoteBlock = ({ borderColor, note, id }) => {
   const handleDeleteNote = () => dispatch(deleteFromRhythm(id));
 
   return (
-    <div className='NoteBlock' style={{ borderColor }}>
+    <div className='NoteBlock' style={{ borderColor }} data-testid='block'>
       {note ? <>
         <img src={deleteBtn} className='NoteBlock-delete' alt='Delete note' onClick={handleDeleteNote} />
         <img src={note.img} className='NoteBlock-note' alt='' />

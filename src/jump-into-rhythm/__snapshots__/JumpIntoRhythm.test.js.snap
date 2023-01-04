@@ -26,18 +26,22 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       >
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #fd4d3a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #ffe81a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #89eb0a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #17255a;"
         />
       </section>
@@ -77,7 +81,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
     >
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="quarterNote"
       >
         <img
@@ -94,7 +98,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="eighthNotes"
       >
         <img
@@ -111,7 +115,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
-        data-testid=""
+        data-testid="notes"
         id="quarterRest"
       >
         <img

@@ -17,18 +17,22 @@ exports[`Notes component matches snapshot 1`] = `
       >
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #fd4d3a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #ffe81a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #89eb0a;"
         />
         <div
           class="NoteBlock"
+          data-testid="block"
           style="border-color: #17255a;"
         />
       </section>

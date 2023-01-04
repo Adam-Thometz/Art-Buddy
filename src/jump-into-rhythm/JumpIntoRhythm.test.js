@@ -28,4 +28,8 @@ describe('JumpIntoRhythm component', () => {
     </PlayContextMock>);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should select a musical note', () => {
+    
+  })
 });
