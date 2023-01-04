@@ -58,6 +58,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id=""
         >
           <img
@@ -84,6 +85,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id="colors"
         >
           <img
@@ -110,6 +112,7 @@ exports[`ControlBar component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id=""
         >
           <img

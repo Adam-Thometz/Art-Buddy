@@ -31,6 +31,7 @@ exports[`InstrumentDisplay component matches snapshot 1`] = `
     </div>
     <figure
       class="Icon"
+      data-testid=""
       id="1"
     >
       <img
@@ -47,6 +48,7 @@ exports[`InstrumentDisplay component matches snapshot 1`] = `
     </figure>
     <figure
       class="Icon"
+      data-testid=""
       id="2"
     >
       <img
@@ -63,6 +65,7 @@ exports[`InstrumentDisplay component matches snapshot 1`] = `
     </figure>
     <figure
       class="Icon"
+      data-testid=""
       id="3"
     >
       <img

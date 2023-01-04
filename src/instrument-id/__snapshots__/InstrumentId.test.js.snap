@@ -25,6 +25,7 @@ exports[`InstrumentId component matches snapshot 1`] = `
     >
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""
@@ -40,6 +41,7 @@ exports[`InstrumentId component matches snapshot 1`] = `
       </figure>
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""

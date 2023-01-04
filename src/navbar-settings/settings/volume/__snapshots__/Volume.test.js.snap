@@ -7,6 +7,7 @@ exports[`Volume component matches the snapshot of Volume 1`] = `
   >
     <figure
       class="Icon"
+      data-testid=""
       id="-12"
     >
       <img
@@ -23,6 +24,7 @@ exports[`Volume component matches the snapshot of Volume 1`] = `
     </figure>
     <figure
       class="Icon"
+      data-testid=""
       id="0"
     >
       <img
@@ -39,6 +41,7 @@ exports[`Volume component matches the snapshot of Volume 1`] = `
     </figure>
     <figure
       class="Icon"
+      data-testid=""
       id="12"
     >
       <img

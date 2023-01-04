@@ -9,6 +9,7 @@ const Icon = ({
   onClick = null,
   otherImgStyles = {},
   size = "250px",
+  testId = null,
   text,
   width = null
 }) => {
@@ -24,7 +25,7 @@ const Icon = ({
   };
 
   return (
-    <figure className="Icon" onClick={onClick} id={id}>
+    <figure className="Icon" onClick={onClick} id={id} data-testid={testId ? testId : ''}>
       <img style={imgStyles} src={icon} alt="" />
       <figcaption className="Icon-text" style={textStyles}>{text}</figcaption>
     </figure>

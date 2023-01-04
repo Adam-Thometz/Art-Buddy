@@ -4,6 +4,7 @@ exports[`AddIcon component matches snapshot 1`] = `
 <DocumentFragment>
   <figure
     class="Icon"
+    data-testid=""
   >
     <img
       alt=""

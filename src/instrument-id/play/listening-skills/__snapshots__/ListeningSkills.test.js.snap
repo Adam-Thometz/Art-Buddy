@@ -19,6 +19,7 @@ exports[`ListeningSkills component matches snapshot 1`] = `
     >
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""

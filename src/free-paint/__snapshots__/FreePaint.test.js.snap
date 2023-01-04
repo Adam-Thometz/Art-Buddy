@@ -67,6 +67,7 @@ exports[`FreePaint component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id=""
         >
           <img
@@ -93,6 +94,7 @@ exports[`FreePaint component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id="colors"
         >
           <img
@@ -119,6 +121,7 @@ exports[`FreePaint component matches snapshot 1`] = `
       >
         <figure
           class="Icon"
+          data-testid=""
           id=""
         >
           <img

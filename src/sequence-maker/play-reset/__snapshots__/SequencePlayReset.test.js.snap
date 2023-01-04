@@ -10,6 +10,7 @@ exports[`SequencePlayReset component matches the snapshot of SequencePlayReset 1
     >
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""
@@ -25,6 +26,7 @@ exports[`SequencePlayReset component matches the snapshot of SequencePlayReset 1
       </figure>
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""
@@ -44,6 +46,7 @@ exports[`SequencePlayReset component matches the snapshot of SequencePlayReset 1
     >
       <figure
         class="Icon"
+        data-testid=""
       >
         <img
           alt=""
