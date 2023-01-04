@@ -14,6 +14,7 @@ exports[`Battery component matches snapshot 1`] = `
     />
     <img
       alt=""
+      data-testid="bar"
       id="0"
       src="file"
       style="width: 100%;"

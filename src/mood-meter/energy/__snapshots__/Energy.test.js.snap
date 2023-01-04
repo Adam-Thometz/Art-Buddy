@@ -23,6 +23,7 @@ exports[`Energy component matches snapshot 1`] = `
         />
         <img
           alt=""
+          data-testid="bar"
           id="2"
           src="file"
           style="width: 89%;"
@@ -40,6 +41,7 @@ exports[`Energy component matches snapshot 1`] = `
         />
         <img
           alt=""
+          data-testid="bar"
           id="1"
           src="file"
           style="width: 48%;"
@@ -57,6 +59,7 @@ exports[`Energy component matches snapshot 1`] = `
         />
         <img
           alt=""
+          data-testid="bar"
           id="0"
           src="file"
           style="width: 12%;"
