@@ -34,14 +34,10 @@ const NoteOptions = () => {
     if (Transport.state === 'stopped') await start();
     dispatch(toggleAnimation());
     dispatch(toggleLilyPadDisplay());
-    const beats = rhythm.map(note => ({
-      duration: note.duration,
-      isRest: note.isRest
-    }));
-    playFn({ beats, volume });
-    setTimeout(() => {
-      Transport.stop();
-    }, Time(`${rhythm.length/4}:1`).toSeconds() * 1000)
+    playFn({ rhythm, volume });
+    
+    const duration = Time(`${rhythm.length/4}:1`).toSeconds() * 1000;
+    setTimeout(() => Transport.stop(), duration);
   };
 
   const back = () => {

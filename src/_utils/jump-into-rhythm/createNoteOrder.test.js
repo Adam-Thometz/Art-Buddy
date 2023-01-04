@@ -1,8 +1,13 @@
 import createNoteOrder from "./createNoteOrder";
 
+const POSSIBLE_DURATIONS = {
+  '4n': 1,
+  '8n': 0.5
+};
+
 jest.mock('tone', () => ({
   Time: jest.fn((time) => ({
-    toSeconds: jest.fn(() => time === '4n' ? 1 : 0.5)
+    toSeconds: jest.fn(() => POSSIBLE_DURATIONS[time])
   }))
 }));
 

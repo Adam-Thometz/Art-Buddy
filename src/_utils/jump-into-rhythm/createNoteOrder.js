@@ -2,20 +2,21 @@ import { Time } from "tone";
 
 /** createNoteOrder
  * Helper function for creating the notes to play for the play function.
- * Takes an array of objects containing duration and isRest (i.e. [{ duration: ['4n'], isRest: false }...])
+ * Takes a rhythm, which is an array of objects containing duration and isRest (i.e. [{ duration: ['4n'], isRest: false }...])
  * Returns one object for every note that needs to be played containing pitch, duration, time, and isRest
  */
 
-export default function createNoteOrder(beats) {
+export default function createNoteOrder(rhythm) {
   const toPlay = [];
   let time = 0;
-  for (let i = 0; i < beats.length; i++) {
-    for (let note of beats[i].duration) {
+  for (let i = 0; i < rhythm.length; i++) {
+    const { duration, isRest } = rhythm[i];
+    for (let note of duration) {
       toPlay.push({
         pitch: pickNote(i),
         duration: note,
         time,
-        isRest: beats[i].isRest
+        isRest
       });
       time += Time(note).toSeconds();
     };

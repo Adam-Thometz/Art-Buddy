@@ -37,13 +37,13 @@ describe('makeFrog function', () => {
 describe('hop function', () => {
   it('should play a sound when beats are passed in', () => {
     const { hop } = makeFrog();
-    const beats = [
+    const rhythm = [
       { duration: ['4n'], isRest: false },
       { duration: ['8n', '8n'], isRest: false },
       { duration: ['4n'], isRest: true },
       { duration: ['4n'], isRest: false },
     ];
-    expect(hop({ beats, volume: 0 }).notesToPlay).toEqual([
+    expect(hop({ rhythm, volume: 0 }).notesToPlay).toEqual([
       { pitch: 'D5', duration: '4n', time: 0, isRest: false },
       { pitch: 'D5', duration: '8n', time: 1, isRest: false },
       { pitch: 'D5', duration: '8n', time: 1.5, isRest: false },
