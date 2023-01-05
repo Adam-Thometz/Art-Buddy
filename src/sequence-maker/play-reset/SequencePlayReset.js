@@ -59,11 +59,11 @@ const SequencePlayReset = () => {
   return (
     <section className='SequencePlayReset'>
       <aside className="SequencePlayReset-play">
-        <Icon icon={play} text='Play' size='48px' onClick={handlePlay} />
-        <Icon icon={playAll} text='Play All' size='48px' onClick={handlePlayAll} />
+        <Icon icon={play} text='Play' size='48px' onClick={handlePlay} testId='play' />
+        <Icon icon={playAll} text='Play All' size='48px' onClick={handlePlayAll} testId='playAll' />
       </aside>
       <aside className="SequencePlayReset-reset">
-        <Icon icon={reset} text='Reset Sequence' size="48px" onClick={handleReset} />
+        <Icon icon={reset} text='Reset Sequence' size="48px" onClick={handleReset} testId='reset' />
       </aside>
     </section>
   );

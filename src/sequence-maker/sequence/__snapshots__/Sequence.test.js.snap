@@ -7,21 +7,25 @@ exports[`Sequence component matches snapshot 1`] = `
   >
     <figure
       class="Sequence-block"
+      data-testid="block1"
       id="0"
       style="border-color: #89eb0a;"
     />
     <figure
       class="Sequence-block"
+      data-testid="block2"
       id="1"
       style="border-color: #ffe81a;"
     />
     <figure
       class="Sequence-block"
+      data-testid="block3"
       id="2"
       style="border-color: #fd4d3a;"
     />
     <figure
       class="Sequence-block"
+      data-testid="block4"
       id="3"
       style="border-color: #4d4f5e;"
     />

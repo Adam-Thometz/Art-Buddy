@@ -35,9 +35,11 @@ const Sequence = () => {
     <section className="Sequence">
       {sequence.map((block, i) => (
         <figure
+          key={block ? block.alt : i}
           className={`Sequence-block${block && block.isPlaying ? ' playing' : ''}`}
           style={{ borderColor: colors[i%4] }}
           id={i}
+          data-testid={`block${i+1}`}
         >
           {block !== null ? (<>
             <Button small colorId={2} onClick={remove}>X</Button>
