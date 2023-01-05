@@ -1,7 +1,6 @@
 import createLoop from "./createLoop";
-import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies'
-import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms'
 import { Sampler, Part, Transport } from "tone";
+import TimeMock from "_testUtils/mocks/timeMock";
 
 jest.mock('tone', () => ({
   __esModule: true,
@@ -10,13 +9,22 @@ jest.mock('tone', () => ({
   })),
   Part: jest.fn((_, notesToPlay) => ({
     notesToPlay,
-    start: jest.fn(),
+    progress: 0,
+    start: jest.fn((time) => {
+      const interval = setInterval(() => {
+        if (time > 10000) clearInterval(interval);
+        time++;
+      }, 1);
+    }),
     stop: jest.fn(),
   })),
   Transport: {
     start: jest.fn(),
     stop: jest.fn(),
   },
+  Time: jest.fn(() => ({
+    toSeconds: jest.fn(() => 10)
+  })),
 }));
 
 const song = [
@@ -46,14 +54,10 @@ describe('playLoop function', () => {
     expect(result.every(part => part.loop)).toBe(true);
     expect(result.every(part => part.loopStart === 0)).toBe(true);
     expect(result.every(part => part.loopEnd === '4m')).toBe(true);
-    expect(result[0].notesToPlay).toEqual(melodies.babySharkMelody);
-    expect(result[1].notesToPlay).toEqual(rhythms.regularRhythm);
-    expect(result[2].notesToPlay).toEqual(melodies.sevenNationArmyMelody);
+    result.forEach((part, i) => expect(part.notesToPlay).toEqual(loopParts[i].melody));
     expect(Part).toBeCalledTimes(3);
     expect(Transport.start).toBeCalled();
-    expect(result[0].start).toBeCalled();
-    expect(result[1].start).toBeCalled();
-    expect(result[2].start).toBeCalled();
+    result.forEach(part => expect(part.start).toBeCalled());
   });
 });
 
@@ -68,16 +72,14 @@ describe('stopLoop function', () => {
 
 describe('getTimeLeft function', () => {
   it('should return the correct amount of time', async () => {
-    await playLoop();
-    const timer = setTimeout(() => {
-      const result = getTimeLeft();
-      expect(result).toBe(8000);
-      clearTimeout(timer);
-    }, 2000);
-    const timer2 = setTimeout(() => {
-      const result = getTimeLeft();
-      expect(result).toBe(6000);
-      clearTimeout(timer2);
-    }, 4000);
+    const time = new TimeMock();
+    const loop = await playLoop();
+    time.loopTravel(2000, loop);
+    const result = getTimeLeft();
+    expect(result).toBe(8000);
+    time.loopTravel(2000, loop);
+    const result2 = getTimeLeft();
+    expect(result2).toBe(6000);
+    time.teardown();
   });
 });
