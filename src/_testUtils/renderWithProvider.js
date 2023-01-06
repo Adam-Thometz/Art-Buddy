@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
-import AllContexts from '_context/allContexts';
+import GlobalContext from '_context/global';
 
 import rootReducer from '_redux/rootReducer';
 
@@ -9,9 +9,9 @@ function withProvider({ children, store, initialRoutes }) {
   return (
     <Provider store={store}>
       <MemoryRouter initialEntries={initialRoutes}>
-        <AllContexts>
+        <GlobalContext>
           {children}
-        </AllContexts>
+        </GlobalContext>
       </MemoryRouter>
     </Provider>
   );

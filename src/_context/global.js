@@ -2,14 +2,14 @@ import React from "react";
 import { PlayProvider } from "./PlayContext";
 import { PopupProvider } from "./PopupContext";
 
-const AllContexts = ({ children }) => {
+const GlobalContext = ({ children }) => {
   return (
     <PlayProvider>
       <PopupProvider>
         {children}
       </PopupProvider>
     </PlayProvider>
-  )
+  );
 };
 
-export default AllContexts
+export default GlobalContext;
