@@ -7,27 +7,20 @@ import userEvent from "@testing-library/user-event";
 import FreePaint from './FreePaint';
 
 import { FP } from '_data/_utils/localStorageKeys';
-import { ControlBarProvider } from "_context/ControlBarContext";
 
 describe('FreePaint component', () => {
   window.localStorage.setItem(`visited-${FP}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<ControlBarProvider>
-      <FreePaint />
-    </ControlBarProvider>);
+    renderWithProvider(<FreePaint />);
   });
   
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ControlBarProvider>
-      <FreePaint />
-    </ControlBarProvider>);
+    const { asFragment } = renderWithProvider(<FreePaint />);
     expect(asFragment()).toMatchSnapshot();
   });
   
   it('renders a stencil when an option is picked', () => {
-    renderWithProvider(<ControlBarProvider>
-      <FreePaint />
-    </ControlBarProvider>);
+    renderWithProvider(<FreePaint />);
     const abc = screen.getByText('abc');
     userEvent.click(abc);
     const f = screen.getByText('f');

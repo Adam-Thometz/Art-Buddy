@@ -1,6 +1,6 @@
 import freePaintReducer, { INITIAL_STATE } from "./freePaintReducer";
 
-import { setColor, setStencil, setIsErasing, clearGame, setEditStencilMode } from "./freePaintActions";
+import { setColor, setStencil, setIsErasing, clearGame, setEditStencilMode, setShownOptions } from "./freePaintActions";
 
 describe("Free Paint reducer", () => {
   it('should return the initial state', () => {
@@ -10,6 +10,11 @@ describe("Free Paint reducer", () => {
   it('should change the color', () => {
     const result = freePaintReducer(undefined, setColor('blue'));
     expect(result.color).toBe('blue');
+  });
+  
+  it('should change the shown options', () => {
+    const result = freePaintReducer(undefined, setShownOptions('color'));
+    expect(result.shownOptions).toBe('color');
   });
   
   it('should change the display icon', () => {

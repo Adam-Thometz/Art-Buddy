@@ -1,5 +1,7 @@
-import React, { useContext } from 'react';
-import { ControlBarContext } from '_context/ControlBarContext';
+import React from 'react';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { setShownOptions } from '_redux/free-paint/freePaintActions';
 
 import './ButtonWrapper.css';
 
@@ -17,8 +19,8 @@ const ButtonWrapper = ({
   onClick = null,
   Popout = null
 }) => {
-  const { shownOptions, handleShownOptions } = useContext(ControlBarContext);
-
+  const { shownOptions } = useSelector(state => state.freePaint);
+  const dispatch = useDispatch()
   const buttonColor = color ? {
     color,
     borderColor: color
@@ -27,6 +29,12 @@ const ButtonWrapper = ({
   const imgFilter = color ? {
     filter: colorsToFilter.get(color)
   }: {};
+
+  const handleShownOptions = e => {
+    const { tagName, id, parentElement } = e.target;
+    const currId = tagName === 'BUTTON' ? id : parentElement.id;
+    dispatch(setShownOptions(currId === shownOptions ? null : currId));
+  };
 
   const buttonTxt = iconImg
     // having an iconImg means that an Icon should render
