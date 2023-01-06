@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useReportCard from '_hooks/useReportCard';
+import { PopupContext } from '_context/PopupContext';
 
 import Icon from '_components/icon/Icon';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
@@ -8,7 +9,6 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import './Play.css';
 
 import Button from '_components/button/Button';
-import Popup from '_components/popup/Popup';
 import ReportCard from '_components/report-card/ReportCard';
 
 import colorTheoryIcon from '_media/menu/activity-icons/color-theory.png';
@@ -21,16 +21,13 @@ const COLOR_THEORY_GROUPS = ['primary', 'secondary', 'tertiary'];
 
 const Play = () => {
   const navigate = useNavigate();
+  const { setCurrPopup } = useContext(PopupContext);
   const [reportCard] = useReportCard('colorTheory');
-  // const rowsToCheck = COLOR_THEORY_GROUPS.map(row => ([
-  //   reportCard[`${row}A`], reportCard[`${row}B`]
-  // ]));
-  // console.log(rowsToCheck)
 
-  const popupTrigger = (<>
-    <img src={reportCardIcon} alt='' />
-    <p>Report Card</p>
-  </>);
+  const openReportCard = () => setCurrPopup({
+    title: 'REPORT CARD',
+    popup: <ReportCard game='colorTheory' />
+  });
 
   const levels = COLOR_THEORY_GROUPS.map((level, i) => {
     const goToTest = () => navigate(`${colorTheoryUrls.play}/${i+1}`);
@@ -43,15 +40,15 @@ const Play = () => {
           icon={unlocked ? unlockIcon : lockIcon}
           disabled={!unlocked}
           onClick={goToTest}>Level {i+1}</Button>
-        {i === 0 ? <Popup
-          title='REPORT CARD'
-          trigger={popupTrigger}
-          triggerClass='Play-report-card'
-          popup={<ReportCard game='colorTheory' level={i+1} />}
-        /> : null}
+        {i === 0
+          ? (<div className='Play-report-card' onClick={openReportCard}>
+            <img src={reportCardIcon} alt='' />
+            <p>Report Card</p>
+          </div>)
+          : null}
       </div>
-    )
-  })
+    );
+  });
 
   return (<>
     <WindowNavbar page="COLOR THEORY: PLAY" />

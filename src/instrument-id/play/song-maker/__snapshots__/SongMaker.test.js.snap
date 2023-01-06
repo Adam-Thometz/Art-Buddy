@@ -13,26 +13,22 @@ exports[`SongMaker component matches snapshot 1`] = `
     <div
       class="WindowNavbar-corner"
     >
-      <div
-        class="SavedSongsIcon"
+      <figure
+        class="Icon"
+        data-testid=""
       >
-        <figure
-          class="Icon"
-          data-testid=""
+        <img
+          alt=""
+          src="file"
+          style="height: 49px; width: 49px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1rem;"
         >
-          <img
-            alt=""
-            src="file"
-            style="height: 49px; width: 49px;"
-          />
-          <figcaption
-            class="Icon-text"
-            style="font-size: 1rem;"
-          >
-            SAVED SONGS
-          </figcaption>
-        </figure>
-      </div>
+          SAVED SONGS
+        </figcaption>
+      </figure>
     </div>
   </header>
   <section
@@ -47,14 +43,12 @@ exports[`SongMaker component matches snapshot 1`] = `
       >
         PLAY
       </button>
-      <div>
-        <button
-          class="Button regular"
-          style="border-color: #4d4f5e;"
-        >
-          SAVE
-        </button>
-      </div>
+      <button
+        class="Button regular"
+        style="border-color: #4d4f5e;"
+      >
+        SAVE
+      </button>
     </div>
     <div
       class="InstrumentDisplay"

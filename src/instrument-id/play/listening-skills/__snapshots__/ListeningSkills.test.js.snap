@@ -58,9 +58,12 @@ exports[`ListeningSkills component matches snapshot 1`] = `
         >
           <img
             alt=""
+            id="1"
             src="file"
           />
-          <p>
+          <p
+            id="1"
+          >
             Report Card
           </p>
         </div>
@@ -84,9 +87,12 @@ exports[`ListeningSkills component matches snapshot 1`] = `
         >
           <img
             alt=""
+            id="2"
             src="file"
           />
-          <p>
+          <p
+            id="2"
+          >
             Report Card
           </p>
         </div>

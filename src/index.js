@@ -4,6 +4,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import AllContexts from '_context/allContexts';
 // Redux imports
 import { Provider } from 'react-redux';
 import rootReducer from './_redux/rootReducer';
@@ -19,13 +20,15 @@ import rightLines from '_media/_background/RL.png';
 ReactDOM.render(
   <Provider store={rootReducer}>
     <BrowserRouter>
-      <React.StrictMode>
-        <div className='lines'>
-          <img className='left' src={leftLines} alt='' />
-          <img className='right' src={rightLines} alt='' />
-        </div>
-        <App />
-      </React.StrictMode>
+      <AllContexts>
+        <React.StrictMode>
+          <div className='lines'>
+            <img className='left' src={leftLines} alt='' />
+            <img className='right' src={rightLines} alt='' />
+          </div>
+          <App />
+        </React.StrictMode>
+      </AllContexts>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

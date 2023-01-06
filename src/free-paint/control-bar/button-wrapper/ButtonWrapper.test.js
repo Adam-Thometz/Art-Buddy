@@ -1,21 +1,21 @@
 import React from "react";
 
 import renderWithProvider from "_testUtils/renderWithProvider";
-import { ControlBarContextMock } from "_testUtils/mocks/contextMocks";
+import { ControlBarProvider } from "_context/ControlBarContext";
 
 import ButtonWrapper from "./ButtonWrapper";
 
 describe('ButtonWrapper component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ControlBarContextMock>
+    renderWithProvider(<ControlBarProvider>
       <ButtonWrapper label="ABC" id="upperCase" colorId={4} />
-    </ControlBarContextMock>);
+    </ControlBarProvider>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ControlBarContextMock>
+    const { asFragment } = renderWithProvider(<ControlBarProvider>
       <ButtonWrapper label="ABC" id="upperCase" colorId={4} />
-    </ControlBarContextMock>);
+    </ControlBarProvider>);
     expect(asFragment()).toMatchSnapshot();
   });
 });

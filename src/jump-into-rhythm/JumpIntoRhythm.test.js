@@ -7,7 +7,6 @@ import userEvent from "@testing-library/user-event";
 import JumpIntoRhythm from "./JumpIntoRhythm";
 
 import { JIR } from '_data/_utils/localStorageKeys';
-import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 jest.mock('tone', () => ({
   Transport: { bpm: { value: 90 } },
@@ -19,22 +18,16 @@ jest.mock('tone', () => ({
 describe('JumpIntoRhythm component', () => {
   window.localStorage.setItem(`visited-${JIR}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<PlayContextMock>
-      <JumpIntoRhythm />
-    </PlayContextMock>);
+    renderWithProvider(<JumpIntoRhythm />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<PlayContextMock>
-      <JumpIntoRhythm />
-    </PlayContextMock>);
+    const { asFragment } = renderWithProvider(<JumpIntoRhythm />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should select a musical note', () => {
-    renderWithProvider(<PlayContextMock>
-      <JumpIntoRhythm />
-    </PlayContextMock>);
+    renderWithProvider(<JumpIntoRhythm />);
     const options = screen.getAllByTestId('notes');
     userEvent.click(options[0]);
     const blocks = screen.getAllByTestId('block');

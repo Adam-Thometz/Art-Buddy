@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PopupContext } from '_context/PopupContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleLoop } from '_redux/instrument-id/song-maker/songMakerActions';
@@ -6,29 +7,30 @@ import { toggleLoop } from '_redux/instrument-id/song-maker/songMakerActions';
 import './PlaySave.css';
 
 import Button from '_components/button/Button';
-import Popup from '_components/popup/Popup';
 import SaveSong from '../save-song/SaveSong';
 
 const PlaySave = () => {
   const { song, isPlaying } = useSelector(state => state.songMaker);
+  const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
 
   const handleToggle = () => {
     if (song.some(part => part || !!part.melodyId)) dispatch(toggleLoop());
   };
 
+  const openSavePopup = () => setCurrPopup({
+    title: 'SAVE SONG',
+    popup: <SaveSong />
+  });
+
   return (
     <div className='PlaySave'>
       <Button colorId={isPlaying ? 2 : 0} onClick={handleToggle}>
         {isPlaying ? 'STOP' : 'PLAY'}
       </Button>
-      <Popup
-        title='SAVE SONG'
-        trigger={<Button colorId={3}>SAVE</Button>}
-        popup={<SaveSong />}
-      />
+      <Button colorId={3} onClick={openSavePopup} >SAVE</Button>
     </div>
-  )
-}
+  );
+};
 
-export default PlaySave
+export default PlaySave;

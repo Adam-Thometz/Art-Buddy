@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import useVisited from '_hooks/useVisited';
-import { PlayContext } from '_utils/_general/PlayContext';
+import { PlayContext } from '_context/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { clearGame } from '_redux/music-decoder/musicDecoderActions';

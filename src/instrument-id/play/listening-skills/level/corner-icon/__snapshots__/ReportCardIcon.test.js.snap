@@ -2,25 +2,21 @@
 
 exports[`ReportCardIcon component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="ReportCardIcon"
+  <figure
+    class="Icon"
+    data-testid=""
   >
-    <figure
-      class="Icon"
-      data-testid=""
+    <img
+      alt=""
+      src="file"
+      style="height: 50px; width: 34px; cursor: pointer;"
+    />
+    <figcaption
+      class="Icon-text"
+      style="font-size: 1rem;"
     >
-      <img
-        alt=""
-        src="file"
-        style="height: 50px; width: 34px;"
-      />
-      <figcaption
-        class="Icon-text"
-        style="font-size: 1rem;"
-      >
-        REPORT CARD
-      </figcaption>
-    </figure>
-  </div>
+      REPORT CARD
+    </figcaption>
+  </figure>
 </DocumentFragment>
 `;

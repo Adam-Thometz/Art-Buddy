@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { PlayContext } from '_utils/_general/PlayContext';
+import { PlayContext } from '_context/PlayContext';
 import useSavedSongs from '_hooks/useSavedSongs';
 
 import { useSelector, useDispatch } from 'react-redux';

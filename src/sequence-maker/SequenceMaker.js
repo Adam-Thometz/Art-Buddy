@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import useVisited from "_hooks/useVisited";
-import { PlayContext } from "_utils/_general/PlayContext";
+import { PlayContext } from "_context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
 import { clearGame } from "_redux/sequence-maker/sequenceMakerActions";
@@ -21,7 +21,7 @@ import createSounds from "_utils/sequence-maker/createSounds";
 const SequenceMaker = () => {
   const { currGame, volume } = useSelector(state => state.mainSettings);
   const { sequence } = useSelector(state => state.sequenceMaker);
-  const { setPlayFn } = useContext(PlayContext)
+  const { setPlayFn } = useContext(PlayContext);
   const [hasVisited, setHasVisited] = useVisited(SM);
   const dispatch = useDispatch();
   

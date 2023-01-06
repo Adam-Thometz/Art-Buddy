@@ -1,21 +1,16 @@
 import React from "react";
 
 import renderWithProvider from '_testUtils/renderWithProvider';
-import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 import Sequence from './Sequence';
 
 describe('Sequence component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<PlayContextMock>
-      <Sequence />
-    </PlayContextMock>);
+    renderWithProvider(<Sequence />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<PlayContextMock>
-      <Sequence />
-    </PlayContextMock>);
+    const { asFragment } = renderWithProvider(<Sequence />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

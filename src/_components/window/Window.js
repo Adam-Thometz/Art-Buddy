@@ -1,14 +1,12 @@
 import React from "react";
-import { PlayProvider } from "_utils/_general/PlayContext";
 
 import './Window.css';
 
-const Window = ({ children, small = false, hasPlayContext = false }) => {
+const Window = ({ children, small = false }) => {
+  const width = small ? '75%' : '90%';
   return (
-    <main className="Window" style={{ width: small ? '75%' : '90%' }}>
-      {hasPlayContext
-        ? <PlayProvider>{children}</PlayProvider>
-        : children}
+    <main className="Window" style={{ width }}>
+      {children}
     </main>
   );
 };

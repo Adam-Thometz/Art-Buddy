@@ -16,6 +16,8 @@
 
 .Navbar-settings {
   cursor: pointer;
+  width: 2.5vw;
+  height: 4vh;
 }
 
 .Navbar-settings img {

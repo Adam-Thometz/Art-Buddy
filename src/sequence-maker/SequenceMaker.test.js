@@ -7,7 +7,6 @@ import userEvent from "@testing-library/user-event";
 import SequenceMaker from './SequenceMaker';
 
 import { SM } from '_data/_utils/localStorageKeys';
-import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 import TimeMock from "_testUtils/mocks/timeMock";
 
 jest.mock('tone', () => ({
@@ -48,30 +47,22 @@ function setupSequence() {
 describe('SequenceMaker component', () => {
   window.localStorage.setItem(`visited-${SM}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    const { asFragment } = renderWithProvider(<SequenceMaker />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('adds sounds to the sound options component', () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     setupChoices();
     expect(screen.getByText('DOG')).toBeInTheDocument();
   });
 
   it('adds a choice to the sequence', () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     setupChoices();
     let sequence = screen.getAllByTestId(/block/);
     expect(within(sequence[0]).queryByRole('button')).not.toBeInTheDocument();
@@ -84,9 +75,7 @@ describe('SequenceMaker component', () => {
   });
   
   it('plays a block of a sequence', () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     const time = new TimeMock();
     setupChoices();
     const choice = screen.getByText('CAT');
@@ -99,9 +88,7 @@ describe('SequenceMaker component', () => {
   });
 
   it('plays one block of a sequence at a time', async () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     const time = new TimeMock();
     setupChoices();
     setupSequence();
@@ -121,9 +108,7 @@ describe('SequenceMaker component', () => {
   });
   
   it('plays all blocks in a sequence at once', async () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     const time = new TimeMock();
     setupChoices();
     setupSequence();
@@ -141,9 +126,7 @@ describe('SequenceMaker component', () => {
   });
 
   it('resets the sequence', () => {
-    renderWithProvider(<PlayContextMock>
-      <SequenceMaker />
-    </PlayContextMock>);
+    renderWithProvider(<SequenceMaker />);
     setupChoices();
     setupSequence();
     const [block1, block2] = screen.getAllByTestId(/block/);

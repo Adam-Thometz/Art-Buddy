@@ -2,25 +2,21 @@
 
 exports[`SavedSongsIcon component matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="SavedSongsIcon"
+  <figure
+    class="Icon"
+    data-testid=""
   >
-    <figure
-      class="Icon"
-      data-testid=""
+    <img
+      alt=""
+      src="file"
+      style="height: 49px; width: 49px; cursor: pointer;"
+    />
+    <figcaption
+      class="Icon-text"
+      style="font-size: 1rem;"
     >
-      <img
-        alt=""
-        src="file"
-        style="height: 49px; width: 49px;"
-      />
-      <figcaption
-        class="Icon-text"
-        style="font-size: 1rem;"
-      >
-        SAVED SONGS
-      </figcaption>
-    </figure>
-  </div>
+      SAVED SONGS
+    </figcaption>
+  </figure>
 </DocumentFragment>
 `;

@@ -1,21 +1,16 @@
 import React from "react";
 
 import renderWithProvider from '_testUtils/renderWithProvider';
-import { PlayContextMock } from "_testUtils/mocks/contextMocks";
 
 import SoundOptions from './SoundOptions';
 
 describe('SoundOptions component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<PlayContextMock>
-      <SoundOptions />
-    </PlayContextMock>);
+    renderWithProvider(<SoundOptions />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<PlayContextMock>
-      <SoundOptions />
-    </PlayContextMock>);
+    const { asFragment } = renderWithProvider(<SoundOptions />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

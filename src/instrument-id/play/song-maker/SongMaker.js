@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { PlayContext } from '_utils/_general/PlayContext';
+import { PlayContext } from '_context/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrTimer } from '_redux/instrument-id/song-maker/songMakerActions';
@@ -37,7 +37,7 @@ const SongMaker = () => {
   }, [song, volume]);
 
   useEffect(() => {
-    if (song.some(part => part && !!part.melodyId)) {
+    if (playFn && song.some(part => part && !!part.melodyId)) {
       isPlaying ? playFn.playLoop() : playFn.stopLoop();
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps

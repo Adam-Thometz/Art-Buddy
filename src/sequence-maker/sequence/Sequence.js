@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PlayContext } from "_utils/_general/PlayContext";
+import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";

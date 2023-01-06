@@ -5,19 +5,26 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import ControlBar from "./ControlBar";
+import { ControlBarProvider } from "_context/ControlBarContext";
 
 describe('ControlBar component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ControlBar />);
+    renderWithProvider(<ControlBarProvider>
+      <ControlBar />
+    </ControlBarProvider>);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ControlBar />);
+    const { asFragment } = renderWithProvider(<ControlBarProvider>
+      <ControlBar />
+    </ControlBarProvider>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('shows options on click and hides when clicked again', () => {
-    renderWithProvider(<ControlBar />);
+    renderWithProvider(<ControlBarProvider>
+      <ControlBar />
+    </ControlBarProvider>);
     const abc = screen.getByText('abc');
     userEvent.click(abc);
     expect(screen.getByTestId('stencilOptions-lowerCase')).toBeInTheDocument();
@@ -26,7 +33,9 @@ describe('ControlBar component', () => {
   });
 
   it('shows options on click and hides when a different option is clicked', () => {
-    renderWithProvider(<ControlBar />);
+    renderWithProvider(<ControlBarProvider>
+      <ControlBar />
+    </ControlBarProvider>);
     const abc = screen.getByText('abc');
     userEvent.click(abc);
     expect(screen.getByTestId('stencilOptions-lowerCase')).toBeInTheDocument();
@@ -37,7 +46,9 @@ describe('ControlBar component', () => {
   });
 
   it('changes the pencil color when a color is picked', () => {
-    renderWithProvider(<ControlBar />);
+    renderWithProvider(<ControlBarProvider>
+      <ControlBar />
+    </ControlBarProvider>);
     const pencilBtn = screen.getAllByRole('button')[5];
     userEvent.click(pencilBtn);
     const red = screen.getByTestId('color-option-#FF0000');

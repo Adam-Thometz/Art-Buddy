@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import useVisited from '_hooks/useVisited';
-import { PlayContext } from '_utils/_general/PlayContext';
+import { PlayContext } from '_context/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
@@ -33,6 +33,7 @@ const JumpIntoRhythm = () => {
       Transport.stop()
       Transport.bpm.value = 120;
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   const [hasVisited, setHasVisited] = useVisited(JIR);

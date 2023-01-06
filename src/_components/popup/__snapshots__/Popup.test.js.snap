@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popup component matches snapshot 1`] = `
-<DocumentFragment>
-  <div />
-</DocumentFragment>
-`;
+exports[`Popup component matches snapshot 1`] = `<DocumentFragment />`;

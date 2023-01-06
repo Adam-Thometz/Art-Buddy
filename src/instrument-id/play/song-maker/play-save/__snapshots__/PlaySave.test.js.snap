@@ -11,14 +11,12 @@ exports[`PlaySave component matches snapshot 1`] = `
     >
       PLAY
     </button>
-    <div>
-      <button
-        class="Button regular"
-        style="border-color: #4d4f5e;"
-      >
-        SAVE
-      </button>
-    </div>
+    <button
+      class="Button regular"
+      style="border-color: #4d4f5e;"
+    >
+      SAVE
+    </button>
   </div>
 </DocumentFragment>
 `;

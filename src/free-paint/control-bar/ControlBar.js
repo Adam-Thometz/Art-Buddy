@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ControlBarContext from '_utils/free-paint/ControlBarContext';
+import React, { useContext } from 'react';
+import { ControlBarContext } from '_context/ControlBarContext';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsErasing, setEditStencilMode } from '_redux/free-paint/freePaintActions';
@@ -16,7 +16,7 @@ import pencil from '_media/free-paint/pencil.png';
 import eraser from '_media/free-paint/eraser.png';
 
 const ControlBar = () => {
-  const [shownOptions, setShownOptions] = useState(null);
+  const { shownOptions, setShownOptions } = useContext(ControlBarContext);
   const { color, isEditingStencil, isErasing } = useSelector(state => state.freePaint);
   const dispatch = useDispatch();
 

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import useReportCard from "_hooks/useReportCard";
+import { PopupContext } from "_context/PopupContext";
 
 import './ListeningSkills.css';
 
 import Button from "_components/button/Button";
 import Icon from "_components/icon/Icon";
-import Popup from "_components/popup/Popup";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import ReportCard from "_components/report-card/ReportCard";
 
@@ -19,30 +19,33 @@ const ListeningSkills = () => {
   const navigate = useNavigate();
   const [reportCard1] = useReportCard('instrumentId', 1);
   const reportCardsToCheck = [null, reportCard1];
+  const { setCurrPopup } = useContext(PopupContext);
 
-  const popupTrigger = (<>
-    <img src={reportCardIcon} alt='' />
-    <p>Report Card</p>
-  </>);
+  const openReportCard = e => {
+    const { id } = e.target;
+    setCurrPopup({
+      title: `REPORT CARD LEVEL ${id}`,
+      popup: <ReportCard game='instrumentId' level={id} />
+    });
+  };
 
   const levels = reportCardsToCheck.map((reportCard, i) => {
-    const goToTest = () => navigate(`${instrumentIdUrls.playListening}/${i+1}`);
+    const currLevel = i+1;
+    const goToTest = () => navigate(`${instrumentIdUrls.playListening}/${currLevel}`);
     const unlocked = i === 0 ? true : checkHasPassed(reportCard);
     return (
-      <div key={i+1} className="ListeningSkills-level">
+      <div key={currLevel} className="ListeningSkills-level">
         <Button
           small
           colorId={i}
           icon={unlocked ? unlockIcon : lockIcon}
           disabled={!unlocked}
           onClick={goToTest}
-        >Level {i+1}</Button>
-        <Popup
-          title='REPORT CARD'
-          trigger={popupTrigger}
-          triggerClass='ListeningSkills-report-card'
-          popup={<ReportCard game='instrumentId' level={i+1} />}
-        />
+        >Level {currLevel}</Button>
+        <div className="ListeningSkills-report-card" onClick={openReportCard}>
+          <img src={reportCardIcon} alt='' id={currLevel} />
+          <p id={currLevel}>Report Card</p>
+        </div>
       </div>
     );
   });

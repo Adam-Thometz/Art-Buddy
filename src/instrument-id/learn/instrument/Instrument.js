@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { PlayContext } from "_utils/_general/PlayContext";
+import { PlayContext } from "_context/PlayContext";
 
 import { useSelector } from "react-redux";
 
@@ -37,6 +37,7 @@ const Instrument = () => {
   useEffect(() => {
     setPlayFn(() => loadSounds({ ids: [id], volume, isTest: false }).play);
     return () => Transport.stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, volume]);
 
   const openVideo = () => window.open(videoUrl);

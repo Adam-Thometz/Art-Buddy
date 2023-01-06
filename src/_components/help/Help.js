@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PopupContext } from '_context/PopupContext';
 
 import { useSelector } from 'react-redux';
 
 import './Help.css';
 
-import Popup from '_components/popup/Popup';
-
 import help from './help.png';
 
 const Help = () => {
   const { currGame } = useSelector(state => state.mainSettings);
-  return (
-    <Popup
-      trigger={<img className='Help' src={help} alt='Help' />}
-      triggerClass="Help"
-      title={currGame.name}
-      popup={<>
-        <p>{currGame.description}</p>
-      </>}
-    />
-  );
+  const { setCurrPopup } = useContext(PopupContext);
+
+  const openHelp = () => setCurrPopup({
+    title: currGame.name,
+    popup: <p>{currGame.description}</p>
+  });
+  return <img className='Help' src={help} alt='Help' onClick={openHelp} />;
 };
 
 export default Help;

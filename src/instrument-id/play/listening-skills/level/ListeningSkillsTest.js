@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PlayContext } from "_utils/_general/PlayContext";
+import { PlayContext } from "_context/PlayContext";
 import useReportCard from "_hooks/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -38,6 +38,7 @@ const ListeningSkillsTest = () => {
       const ids = [choice1.id, choice2.id]
       setPlayFn(() => loadSounds({ ids, volume, isTest: true }).play);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, choice1, choice2, volume]);
 
   useEffect(() => {
