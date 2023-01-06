@@ -3,6 +3,8 @@ import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SongMaker from "./SongMaker";
+import App from "App";
+import { instrumentIdUrls } from "_routes/routeUrls";
 
 jest.mock('tone', () => ({
   Transport: { stop: jest.fn() },
@@ -62,23 +64,23 @@ describe('SongMaker component', () => {
     expect(screen.queryByText('RHYTHM')).not.toBeInTheDocument();
   });
   
-  // TODO: Make this test pass
-  // it('saves a song', () => {
-  //   renderWithProvider(<SongMaker />);
-  //   const saveBtn = screen.getByText('SAVE');
-  //   userEvent.click(saveBtn);
-  //   // expect(screen.getByText('SAVE SONG')).toBeInTheDocument();
+  it('saves a song', async () => {
+    // below is essentially rendering the SongMaker. This is to get the Popup
+    renderWithProvider(<App />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
+    const saveBtn = screen.getByText('SAVE');
+    userEvent.click(saveBtn);
+    expect(await screen.findByText('SAVE SONG')).toBeInTheDocument();
     
-  //   const input = screen.getByLabelText('Song Title');
-  //   userEvent.type(input, 'Regular Baby');
-  //   const submit = screen.getAllByText('SAVE')[1];
-  //   userEvent.click(submit);
-  //   expect(screen.getByText('Song Saved!')).toBeInTheDocument();
+    const input = screen.getByLabelText('Song Title');
+    userEvent.type(input, 'Regular Baby');
+    const submit = screen.getAllByText('SAVE')[0];
+    userEvent.click(submit);
+    expect(screen.getByText('Song Saved!')).toBeInTheDocument();
     
-  //   const close = screen.getByText('CLOSE');
-  //   userEvent.click(close);
-  //   const savedSongs = screen.getByText('SAVED SONGS');
-  //   userEvent.click(savedSongs);
-  //   expect(screen.getByText('Regular Baby')).toBeInTheDocument();
-  // });
+    const close = screen.getByText('CLOSE');
+    userEvent.click(close);
+    const savedSongs = screen.getByText('SAVED SONGS');
+    userEvent.click(savedSongs);
+    expect(screen.getByText('Regular Baby')).toBeInTheDocument();
+  });
 });
