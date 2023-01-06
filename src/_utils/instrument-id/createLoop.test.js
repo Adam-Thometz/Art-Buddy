@@ -10,12 +10,7 @@ jest.mock('tone', () => ({
   Part: jest.fn((_, notesToPlay) => ({
     notesToPlay,
     progress: 0,
-    start: jest.fn((time) => {
-      const interval = setInterval(() => {
-        if (time > 10000) clearInterval(interval);
-        time++;
-      }, 1);
-    }),
+    start: jest.fn(),
     stop: jest.fn(),
   })),
   Transport: {
@@ -31,7 +26,7 @@ const song = [
   { instrumentId: 'electricGuitar', melodyId: 'babySharkMelody' },
   { instrumentId: 'drumSet', melodyId: 'regularRhythm' },
   { instrumentId: 'conga' },
-  { instrumentId: 'electricBass', melodyId: 'sevenNationArmyMelody' },
+  null,
 ];
 const { loopParts, playLoop, stopLoop, getTimeLeft } = createLoop(song, 0);
 
@@ -40,11 +35,10 @@ describe('createLoop function', () => {
     expect(loopParts).toEqual([
       { soundToPlay: { C3: 'file' }, melody: expect.any(Array), isRhythm: false },
       { soundToPlay: expect.any(Array), melody: expect.any(Array), isRhythm: true },
-      { soundToPlay: { C3: 'file' }, melody: expect.any(Array), isRhythm: false },
     ]);
     expect(loopParts[1].soundToPlay.length).toBe(5);
     expect(loopParts[1].soundToPlay.every(hit => hit.C3 === 'file')).toBe(true);
-    expect(Sampler).toBeCalledTimes(7);
+    expect(Sampler).toBeCalledTimes(6);
   });
 });
 
@@ -55,7 +49,7 @@ describe('playLoop function', () => {
     expect(result.every(part => part.loopStart === 0)).toBe(true);
     expect(result.every(part => part.loopEnd === '4m')).toBe(true);
     result.forEach((part, i) => expect(part.notesToPlay).toEqual(loopParts[i].melody));
-    expect(Part).toBeCalledTimes(3);
+    expect(Part).toBeCalledTimes(2);
     expect(Transport.start).toBeCalled();
     result.forEach(part => expect(part.start).toBeCalled());
   });
