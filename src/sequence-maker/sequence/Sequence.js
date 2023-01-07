@@ -16,7 +16,7 @@ const Sequence = () => {
   const dispatch = useDispatch();
   
   const remove = e => {
-    const id = +e.target.parentElement.id;
+    const { id } = +e.target.parentElement;
     dispatch(removeFromSequence(id));
   };
 

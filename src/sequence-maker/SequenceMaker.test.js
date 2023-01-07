@@ -42,7 +42,7 @@ function setupSequence() {
   const choice2 = screen.getByText('DOG');
   userEvent.click(choice);
   userEvent.click(choice2);
-}
+};
 
 describe('SequenceMaker component', () => {
   window.localStorage.setItem(`visited-${SM}`, true);

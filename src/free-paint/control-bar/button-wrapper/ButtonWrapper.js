@@ -37,7 +37,7 @@ const ButtonWrapper = ({
   };
 
   const buttonTxt = iconImg
-    // having an iconImg means that an Icon should render
+    // tools and functions like eraser and pencil have an icon
     ? <Icon
       id={id}
       onClick={onClick ? onClick : handleShownOptions}
@@ -46,7 +46,7 @@ const ButtonWrapper = ({
       icon={iconImg}
       otherImgStyles={imgFilter} 
     />
-    // otherwise, set the label
+    // stencils are not icons
     : label.startsWith('data:image')
       ? <img src={label} alt={id} className='ButtonWrapper-shape-button' />
       : label;
