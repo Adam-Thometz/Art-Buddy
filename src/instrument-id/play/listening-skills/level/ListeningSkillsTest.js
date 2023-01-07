@@ -42,7 +42,10 @@ const ListeningSkillsTest = () => {
   }, [dispatch, choice1, choice2, volume]);
 
   useEffect(() => {
-    return () => dispatch(clearChoices());
+    return () => {
+      dispatch(clearChoices());
+      Transport.stop();
+    };
   }, [dispatch]);
   
   const playSound = async () => {
