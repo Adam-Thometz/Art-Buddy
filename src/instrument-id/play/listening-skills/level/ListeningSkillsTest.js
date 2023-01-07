@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PlayContext } from "_context/PlayContext";
-import useReportCard from "_hooks/useReportCard";
+import useReportCard from "_hooks/report-card/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";

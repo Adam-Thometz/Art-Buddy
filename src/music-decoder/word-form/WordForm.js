@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import useFormFields from "_hooks/useFormFields";
+import useFormFields from "_hooks/form-fields/useFormFields";
 
 import { useDispatch } from "react-redux";
 import { createWords } from "_redux/music-decoder/musicDecoderActions";

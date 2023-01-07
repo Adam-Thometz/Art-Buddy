@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import useFormFields from '_hooks/useFormFields';
-import useRoster from '_hooks/useRoster';
+import useFormFields from '_hooks/form-fields/useFormFields';
+import useRoster from '_hooks/roster/useRoster';
 
 import './NewRoster.css';
 

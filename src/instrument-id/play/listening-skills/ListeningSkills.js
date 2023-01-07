@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import useReportCard from "_hooks/useReportCard";
+import useReportCard from "_hooks/report-card/useReportCard";
 import { PopupContext } from "_context/PopupContext";
 
 import './ListeningSkills.css';

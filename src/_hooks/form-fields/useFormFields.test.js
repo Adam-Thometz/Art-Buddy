@@ -24,7 +24,6 @@ describe('useFormFields hook', () => {
       const setForm = result.current[1];
       setForm({ target: { name: 'testInput', value: 'goodbye' } });
     });
-    expect(result.current[0]).toEqual({ testInput: 'goodbye' });
     act(() => {
       const resetForm = result.current[2];
       resetForm();

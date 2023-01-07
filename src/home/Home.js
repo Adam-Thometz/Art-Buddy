@@ -1,5 +1,5 @@
 import React from "react";
-import useVisited from "_hooks/useVisited";
+import useVisited from "_hooks/visited/useVisited";
 
 import Welcome from "./welcome/Welcome";
 import Menu from "./menu/Menu";

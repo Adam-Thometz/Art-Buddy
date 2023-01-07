@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useVisited from '_hooks/useVisited';
+import useVisited from '_hooks/visited/useVisited';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { changeCurrGame } from '_redux/_general/generalActions';

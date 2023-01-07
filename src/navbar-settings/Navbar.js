@@ -20,12 +20,6 @@ const Navbar = () => {
     <nav className="Navbar">
       <span className="Navbar-header" onClick={goHome}>ARTBUDDY</span>
       <img src={settingsIcon} alt='settings' className='Navbar-settings' onClick={openSettings} />
-      {/* <Popup
-        title='SETTINGS'
-        trigger={<img src={settingsIcon} alt='settings' />}
-        triggerClass='Navbar-settings'
-        popup={<Settings />}
-      /> */}
     </nav>
   );
 };

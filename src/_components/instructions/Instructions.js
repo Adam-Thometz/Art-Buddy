@@ -1,5 +1,5 @@
 import React from 'react';
-import useVisited from '_hooks/useVisited';
+import useVisited from '_hooks/visited/useVisited';
 
 import { useSelector } from 'react-redux';
 

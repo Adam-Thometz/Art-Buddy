@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import useVisited from '_hooks/useVisited';
+import useVisited from '_hooks/visited/useVisited';
 import { PlayContext } from '_context/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';

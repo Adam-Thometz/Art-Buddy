@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useVisited from '_hooks/useVisited';
+import useVisited from '_hooks/visited/useVisited';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { clearGame } from '_redux/free-paint/freePaintActions';
