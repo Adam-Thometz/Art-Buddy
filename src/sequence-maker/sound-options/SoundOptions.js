@@ -14,7 +14,7 @@ import createSounds from '_utils/sequence-maker/createSounds';
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector(state => state.sequenceMaker);
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const { setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 

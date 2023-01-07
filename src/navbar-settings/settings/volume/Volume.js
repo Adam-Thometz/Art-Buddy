@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setVolume } from '_redux/settings/mainSettingsActions';
+import { setVolume } from '_redux/settings/settingsActions';
 
 import './Volume.css';
 
@@ -12,7 +12,7 @@ import volumeMid from '_media/settings/volume/volume-medium.png';
 import volumeLow from '_media/settings/volume/volume-low.png';
 
 const Volume = () => {
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const dispatch = useDispatch();
   
   const selectedVolume = { 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { PlayContext } from '_context/PlayContext';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setCurrTimer } from '_redux/settings/mainSettingsActions';
+import { setCurrTimer } from '_redux/_general/generalActions';
 
 import './SongMaker.css';
 
@@ -15,7 +15,8 @@ import createLoop from '_utils/instrument-id/createLoop';
 
 const SongMaker = () => {
   const { song, isPlaying } = useSelector(state => state.songMaker);
-  const { volume, currTimer } = useSelector(state => state.mainSettings);
+  const { currTimer } = useSelector(state => state.general);
+  const { volume } = useSelector(state => state.settings);
   const { playFn, setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 

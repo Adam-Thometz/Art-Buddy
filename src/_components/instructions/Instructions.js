@@ -5,7 +5,7 @@ import Icon from '_components/icon/Icon';
 import play from '_media/_general/play.png';
 
 const Instructions = ({ setHasVisited }) => {
-  const { currGame } = useSelector(state => state.mainSettings);
+  const { currGame } = useSelector(state => state.general);
   const handleSetVisited = () => setHasVisited(true);
   return (
     <div className='Instructions'>

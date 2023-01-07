@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import mainSettingsReducer from './settings/mainSettingsReducer';
+import generalReducer from './_general/generalReducer';
+import settingsReducer from './settings/settingsReducer';
 import musicDecoderReducer from './music-decoder/musicDecoderReducer';
 import jumpIntoRhythmReducer from './jump-into-rhythm/jumpIntoRhythmReducer';
 import sequenceMakerReducer from './sequence-maker/sequenceMakerReducer';
@@ -13,7 +14,8 @@ import moodMeterReducer from './mood-meter/moodMeterReducer';
 
 const rootReducer = configureStore({
   reducer: {
-    mainSettings: mainSettingsReducer,
+    general: generalReducer,
+    settings: settingsReducer,
     musicDecoder: musicDecoderReducer,
     sequenceMaker: sequenceMakerReducer,
     jumpIntoRhythm: jumpIntoRhythmReducer,

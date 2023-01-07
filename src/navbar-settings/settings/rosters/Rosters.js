@@ -3,7 +3,7 @@ import useRoster from '_hooks/useRoster';
 import { PopupContext } from '_context/PopupContext';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setRoster } from '_redux/settings/mainSettingsActions';
+import { setRoster } from '_redux/settings/settingsActions';
 
 import './Rosters.css';
 
@@ -12,7 +12,7 @@ import AddIcon from '_components/icon/add-icon/AddIcon';
 import Dropdown from '_components/dropdown/Dropdown';
 
 const Rosters = () => {
-  const { roster } = useSelector(state => state.mainSettings);
+  const { roster } = useSelector(state => state.settings);
   const [rosters] = useRoster();
   const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();

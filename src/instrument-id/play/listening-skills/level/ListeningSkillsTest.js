@@ -21,7 +21,7 @@ import { start, Transport } from "tone";
 const ListeningSkillsTest = () => {
   const { choice1, choice2, answer } = useSelector(state => state.listeningSkillsTest);
   const { playFn, setPlayFn } = useContext(PlayContext)
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const dispatch = useDispatch();
   const { level } = useParams();
   const [, setReportCard] = useReportCard('instrumentId', level);

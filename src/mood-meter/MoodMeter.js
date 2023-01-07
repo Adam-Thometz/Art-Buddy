@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import useVisited from '_hooks/useVisited';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { changeCurrGame } from '_redux/settings/mainSettingsActions';
+import { changeCurrGame } from '_redux/_general/generalActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
@@ -14,7 +14,7 @@ import Energy from './energy/Energy';
 
 const MoodMeter = () => {
   const [hasVisited, setHasVisited] = useVisited(MM);
-  const { currGame } = useSelector(state => state.mainSettings);
+  const { currGame } = useSelector(state => state.general);
   const dispatch = useDispatch();
 
   useEffect(() => {

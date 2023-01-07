@@ -16,7 +16,7 @@ import convertToId from "_utils/_general/convertToId";
 import { Transport, start } from "tone";
 
 const Instrument = () => {
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const { instrument } = useParams();
   const { playFn, setPlayFn } = useContext(PlayContext);
   const {

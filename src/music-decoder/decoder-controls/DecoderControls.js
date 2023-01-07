@@ -25,7 +25,7 @@ const DecoderControls = () => {
     filledLetters,
     isUpperCase
   } = useSelector(state => state.musicDecoder);
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const dispatch = useDispatch();
   
   const handleChangeScale = e => {

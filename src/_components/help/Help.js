@@ -8,7 +8,7 @@ import './Help.css';
 import help from './help.png';
 
 const Help = () => {
-  const { currGame } = useSelector(state => state.mainSettings);
+  const { currGame } = useSelector(state => state.general);
   const { setCurrPopup } = useContext(PopupContext);
 
   const openHelp = () => setCurrPopup({

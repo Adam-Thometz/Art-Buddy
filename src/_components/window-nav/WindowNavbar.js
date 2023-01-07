@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeMenu } from "_redux/settings/mainSettingsActions";
+import { changeMenu } from "_redux/_general/generalActions";
 
 import './WindowNavbar.css';
 
@@ -10,7 +10,7 @@ import BackArrow from "./back-arrow/BackArrow";
 import Help from "_components/help/Help";
 
 const WindowNavbar = ({ cornerIcon = null, page = null }) => {
-  const { menu } = useSelector(state => state.mainSettings);
+  const { menu } = useSelector(state => state.general);
 
   const dispatch = useDispatch();
   const location = useLocation();

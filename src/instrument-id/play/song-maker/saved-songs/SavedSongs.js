@@ -14,7 +14,7 @@ import createLoop from '_utils/instrument-id/createLoop';
 
 const SavedSongs = () => {
   const { setPlayFn } = useContext(PlayContext);
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const { song, isPlaying } = useSelector(state => state.songMaker);
   const [savedSongs, setSavedSongs] = useSavedSongs();
   const [selectedSong, setSelectedSong] = useState(null);

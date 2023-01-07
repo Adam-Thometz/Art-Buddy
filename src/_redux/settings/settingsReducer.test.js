@@ -1,28 +1,10 @@
-import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./mainSettingsReducer";
-import { changeCurrGame, changeMenu, setCurrTimer, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
-
-import { wordToMusic } from '_data/_activities/activityList';
+import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./settingsReducer";
+import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./settingsActions";
 
 describe('Main Menu & Settings Reducer', () => {
   it('should return the initial state', () => {
     expect(mainSettingsReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
-
-  it('should handle changing menu category', () => {
-    const init = mainSettingsReducer(undefined, {});
-    expect(init.menu).toBe('games');
-
-    const result2 = mainSettingsReducer(init, changeMenu('tools'));
-    expect(result2.menu).toBe('tools');
-  });
-
-  it('should handle setting current game info', () => {
-    const init = mainSettingsReducer(undefined, {});
-    expect(init.currGame).toEqual({});
-
-    const result = mainSettingsReducer(init, changeCurrGame(wordToMusic));
-    expect(result.currGame).toEqual(wordToMusic);
-  })
 
   it('should handle changing the volume', () => {
     const init = mainSettingsReducer(undefined, {});
@@ -47,11 +29,6 @@ describe('Main Menu & Settings Reducer', () => {
     const result = mainSettingsReducer(init, toggleColorBlind());
     expect(result.colorBlind).toBeTruthy();
   });
-
-  it('should set a timer id', () => {
-    const result = mainSettingsReducer(undefined, setCurrTimer(457457));
-    expect(result.currTimer).toBe(457457);
-  })
 
   it('should handle updating the global roster', () => {
     const init = mainSettingsReducer(undefined, {});

@@ -3,7 +3,7 @@ import renderWithProvider from '_testUtils/renderWithProvider';
 import { screen } from "@testing-library/react";
 import { default as store } from "_redux/rootReducer";
 import Menu from "./Menu";
-import { changeMenu } from "_redux/settings/mainSettingsActions";
+import { changeMenu } from "_redux/_general/generalActions";
 
 describe('Menu component', () => {
   it('renders without crashing', () => {

@@ -12,7 +12,7 @@ import menuOptions from "./menuOptions";
 import activities from "_data/_activities/activityList";
 
 const Menu = ({ type = null }) => {
-  const { menu } = useSelector(state => state.mainSettings);
+  const { menu } = useSelector(state => state.general);
   const navigate = useNavigate();
 
   const options = type ? (

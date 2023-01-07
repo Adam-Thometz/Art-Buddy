@@ -4,7 +4,7 @@ import { PlayContext } from '_context/PlayContext';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { clearGame } from '_redux/music-decoder/musicDecoderActions';
-import { changeCurrGame } from '_redux/settings/mainSettingsActions';
+import { changeCurrGame } from '_redux/_general/generalActions';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
@@ -20,7 +20,8 @@ import { Transport } from 'tone';
 const WordToMusic = () => {
   const [hasVisited, setHasVisited] = useVisited(WTM);
   const { scale, sound } = useSelector(state => state.musicDecoder);
-  const { currGame, volume } = useSelector(state => state.mainSettings);
+  const { currGame } = useSelector(state => state.general);
+  const { volume } = useSelector(state => state.settings);
   const { setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
 

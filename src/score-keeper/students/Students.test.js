@@ -2,7 +2,7 @@ import React from "react";
 
 import { default as store } from "_redux/rootReducer";
 import { loadStudents } from "_redux/score-keeper/scoreKeeperActions";
-import { demoClass } from "_redux/settings/mainSettingsReducer";
+import { demoClass } from "_redux/settings/settingsReducer";
 
 import renderWithProvider from '_testUtils/renderWithProvider';
 

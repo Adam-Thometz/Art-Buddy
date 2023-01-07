@@ -14,7 +14,7 @@ import { start, Transport, Time } from 'tone';
 
 const NoteOptions = () => {
   const { rhythm, isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
-  const { volume } = useSelector(state => state.mainSettings);
+  const { volume } = useSelector(state => state.settings);
   const { playFn } = useContext(PlayContext)
   const dispatch = useDispatch();
 
