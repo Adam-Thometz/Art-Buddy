@@ -6,11 +6,11 @@ import userEvent from "@testing-library/user-event";
 
 import MoodMeter from './MoodMeter';
 
-import { MM } from '_data/_utils/localStorageKeys';
+import { moodMeter } from "_data/_activities/activityList";
 import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteryDefaults";
 
 describe('MoodMeter component', () => {
-  window.localStorage.setItem(`visited-${MM}`, true);
+  window.localStorage.setItem(`visited-${moodMeter.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<MoodMeter />);
   });

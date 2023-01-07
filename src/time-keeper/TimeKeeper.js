@@ -7,13 +7,12 @@ import { changeCurrGame } from '_redux/_general/generalActions';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 
-import { TK } from '_data/_utils/localStorageKeys';
 import { timeKeeper } from '_data/_activities/activityList';
 
 const TimeKeeper = () => {
+  const [hasVisited] = useVisited(timeKeeper.lsKey);
   const { currGame } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch()
-  const [hasVisited, setHasVisited] = useVisited(TK);
 
   useEffect(() => {
     dispatch(changeCurrGame(timeKeeper));
@@ -22,7 +21,7 @@ const TimeKeeper = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <h2>00:00:00</h2>}
+    {!hasVisited ? <Instructions /> : <h2>00:00:00</h2>}
   </>);
 };
 

@@ -14,6 +14,7 @@ const { wordToMusicUrl, instrumentIdUrl, jumpIntoRhythmUrl, sequenceMakerUrl, fr
 
 const wordToMusic = {
   name: 'WORD-TO-MUSIC DECODER',
+  lsKey: 'wtm',
   icon: wordToMusicIcon,
   url: wordToMusicUrl,
   activityType: types[0],
@@ -23,6 +24,7 @@ const wordToMusic = {
 };
 const instrumentId = {
   name: "WHAT'S THAT INSTRUMENT?",
+  lsKey: 'wti',
   icon: instrumentIdIcon,
   url: instrumentIdUrl,
   activityType: types[0],
@@ -32,6 +34,7 @@ const instrumentId = {
 };
 const jumpIntoRhythm = {
   name: 'JUMP INTO RHYTHM',
+  lsKey: 'jir',
   icon: jumpIntoRhythmIcon,
   url: jumpIntoRhythmUrl,
   activityType: types[0],
@@ -41,6 +44,7 @@ const jumpIntoRhythm = {
 };
 const sequenceMaker = {
   name: 'SEQUENCE MAKER',
+  lsKey: 'sm',
   icon: sequenceMakerIcon,
   url: sequenceMakerUrl,
   activityType: types[0],
@@ -50,6 +54,7 @@ const sequenceMaker = {
 };
 const colorTheory = {
   name: 'COLOR THEORY',
+  lsKey: 'ct',
   icon: colorTheoryIcon,
   url: colorTheoryUrl,
   activityType: types[0],
@@ -59,6 +64,7 @@ const colorTheory = {
 };
 const freePaint = {
   name: 'FREE PAINT',
+  lsKey: 'fp',
   icon: freePaintIcon,
   url: freePaintUrl,
   activityType: types[0],
@@ -68,6 +74,7 @@ const freePaint = {
 };
 const scoreKeeper = {
   name: 'SCORE KEEPER',
+  lsKey: 'sk',
   icon: null,
   url: scoreKeeperUrl,
   activityType: types[2],
@@ -77,6 +84,7 @@ const scoreKeeper = {
 };
 const timeKeeper = {
   name: 'TIME KEEPER',
+  lsKey: 'tk',
   icon: null,
   url: timeKeeperUrl,
   activityType: types[2],
@@ -86,6 +94,7 @@ const timeKeeper = {
 };
 const moodMeter = {
   name: 'MOOD METER',
+  lsKey: 'mm',
   icon: null,
   url: moodMeterUrl,
   activityType: types[2],

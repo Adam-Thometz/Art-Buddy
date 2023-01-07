@@ -7,13 +7,12 @@ import { changeCurrGame } from '_redux/_general/generalActions';
 import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 import Valence from './valence/Valence';
-
-import { MM } from '_data/_utils/localStorageKeys';
-import { moodMeter } from '_data/_activities/activityList';
 import Energy from './energy/Energy';
 
+import { moodMeter } from '_data/_activities/activityList';
+
 const MoodMeter = () => {
-  const [hasVisited, setHasVisited] = useVisited(MM);
+  const [hasVisited] = useVisited(moodMeter.lsKey);
   const { currGame } = useSelector(state => state.general);
   const dispatch = useDispatch();
 
@@ -26,7 +25,7 @@ const MoodMeter = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <>
+    {!hasVisited ? <Instructions /> : <>
       <Valence />
       <Energy />
     </>}

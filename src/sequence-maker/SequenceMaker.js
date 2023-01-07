@@ -13,17 +13,16 @@ import SoundOptions from "./sound-options/SoundOptions";
 import Sequence from "./sequence/Sequence";
 import SequencePlayReset from "./play-reset/SequencePlayReset";
 
-import { SM } from "_data/_utils/localStorageKeys";
 import { sequenceMaker } from "_data/_activities/activityList";
 import { Transport } from "tone";
 import createSounds from "_utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
+  const [hasVisited] = useVisited(sequenceMaker.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { volume } = useSelector(state => state.settings);
   const { sequence } = useSelector(state => state.sequenceMaker);
   const { setPlayFn } = useContext(PlayContext);
-  const [hasVisited, setHasVisited] = useVisited(SM);
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -42,7 +41,7 @@ const SequenceMaker = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+    {!hasVisited ? <Instructions /> : (<>
       <SequenceControls />
       <SoundOptions />
       <Sequence />

@@ -12,12 +12,11 @@ import Canvas from './canvas/Canvas';
 import Stencil from './stencil/Stencil';
 
 import { freePaint } from '_data/_activities/activityList';
-import { FP } from '_data/_utils/localStorageKeys';
 
 const FreePaint = () => {
   const { currGame } = useSelector(state => state.general);
   const { stencil } = useSelector(state => state.freePaint);
-  const [hasVisited, setHasVisited] = useVisited(FP);
+  const [hasVisited] = useVisited(freePaint.lsKey);
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -30,7 +29,7 @@ const FreePaint = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <>
+    {!hasVisited ? <Instructions game={currGame} /> : <>
       <ControlBar />
       <Canvas />
       {stencil ? <Stencil /> : null}

@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import SequenceMaker from './SequenceMaker';
 
-import { SM } from '_data/_utils/localStorageKeys';
+import { sequenceMaker } from "_data/_activities/activityList";
 import TimeMock from "_testUtils/mocks/timeMock";
 
 jest.mock('tone', () => ({
@@ -45,7 +45,7 @@ function setupSequence() {
 };
 
 describe('SequenceMaker component', () => {
-  window.localStorage.setItem(`visited-${SM}`, true);
+  window.localStorage.setItem(`visited-${sequenceMaker.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<SequenceMaker />);
   });

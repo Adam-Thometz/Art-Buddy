@@ -6,10 +6,10 @@ import userEvent from "@testing-library/user-event";
 
 import ScoreKeeper from "./ScoreKeeper";
 
-import { SK } from '_data/_utils/localStorageKeys';
+import { scoreKeeper } from "_data/_activities/activityList";
 
 describe('Score Keeper', () => {
-  window.localStorage.setItem(`visited-${SK}`, true);
+  window.localStorage.setItem(`visited-${scoreKeeper.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<ScoreKeeper />);
   });

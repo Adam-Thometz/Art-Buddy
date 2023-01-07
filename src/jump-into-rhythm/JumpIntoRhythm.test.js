@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import JumpIntoRhythm from "./JumpIntoRhythm";
 
-import { JIR } from '_data/_utils/localStorageKeys';
+import { jumpIntoRhythm } from "_data/_activities/activityList";
 
 jest.mock('tone', () => ({
   Transport: { bpm: { value: 90 } },
@@ -16,7 +16,7 @@ jest.mock('tone', () => ({
 }));
 
 describe('JumpIntoRhythm component', () => {
-  window.localStorage.setItem(`visited-${JIR}`, true);
+  window.localStorage.setItem(`visited-${jumpIntoRhythm.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<JumpIntoRhythm />);
   });

@@ -6,10 +6,10 @@ import userEvent from "@testing-library/user-event";
 
 import FreePaint from './FreePaint';
 
-import { FP } from '_data/_utils/localStorageKeys';
+import { freePaint } from "_data/_activities/activityList";
 
 describe('FreePaint component', () => {
-  window.localStorage.setItem(`visited-${FP}`, true);
+  window.localStorage.setItem(`visited-${freePaint.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<FreePaint />);
   });

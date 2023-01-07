@@ -13,7 +13,6 @@ import NoteOptions from './note-options/NoteOptions';
 import FrogLilyPad from './frog-lily-pad/FrogLilyPads';
 
 import makeFrog from '_utils/jump-into-rhythm/makeFrog';
-import { JIR } from '_data/_utils/localStorageKeys';
 import { jumpIntoRhythm } from '_data/_activities/activityList';
 import { Transport } from 'tone';
 
@@ -21,6 +20,7 @@ const JumpIntoRhythm = () => {
   const { currGame } = useSelector(state => state.general);
   const { isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
   const { setPlayFn } = useContext(PlayContext);
+  const [hasVisited] = useVisited(jumpIntoRhythm.lsKey);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,10 +36,9 @@ const JumpIntoRhythm = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
-  const [hasVisited, setHasVisited] = useVisited(JIR);
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+    {!hasVisited ? <Instructions /> : (<>
       {isDisplayingLilyPads ? <FrogLilyPad /> : <Notes />}
       <NoteOptions />
     </>)}

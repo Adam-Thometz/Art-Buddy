@@ -13,12 +13,11 @@ import DecoderControls from './decoder-controls/DecoderControls';
 import AlphabetTable from './alphabet-table/AlphabetTable';
 
 import getSound from '_utils/music-decoder/getSound';
-import { WTM } from '_data/_utils/localStorageKeys';
 import { wordToMusic } from '_data/_activities/activityList';
 import { Transport } from 'tone';
 
 const WordToMusic = () => {
-  const [hasVisited, setHasVisited] = useVisited(WTM);
+  const [hasVisited] = useVisited(wordToMusic.lsKey);
   const { scale, sound } = useSelector(state => state.musicDecoder);
   const { currGame } = useSelector(state => state.general);
   const { volume } = useSelector(state => state.settings);
@@ -40,7 +39,7 @@ const WordToMusic = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : (<>
+    {!hasVisited ? <Instructions /> : (<>
       <WordForm />
       <DecoderControls />
       <AlphabetTable />

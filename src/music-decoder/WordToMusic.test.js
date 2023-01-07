@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 import WordToMusic from './WordToMusic';
 
-import { WTM } from '_data/_utils/localStorageKeys';
+import { wordToMusic } from "_data/_activities/activityList";
 
 jest.mock('tone', () => ({
   PitchShift: jest.fn(() => ({
@@ -23,7 +23,7 @@ jest.mock('tone', () => ({
 }));
 
 describe('WordToMusic component', () => {
-  window.localStorage.setItem(`visited-${WTM}`, true);
+  window.localStorage.setItem(`visited-${wordToMusic.lsKey}`, true);
   it('renders without crashing', () => {
     renderWithProvider(<WordToMusic />);
   });

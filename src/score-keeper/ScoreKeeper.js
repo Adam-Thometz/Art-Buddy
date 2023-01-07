@@ -9,11 +9,10 @@ import WindowNavbar from '_components/window-nav/WindowNavbar';
 import Instructions from '_components/instructions/Instructions';
 import Students from './students/Students';
 
-import { SK } from '_data/_utils/localStorageKeys';
 import { scoreKeeper } from '_data/_activities/activityList';
 
 const ScoreKeeper = () => {
-  const [hasVisited, setHasVisited] = useVisited(SK);
+  const [hasVisited] = useVisited(scoreKeeper.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { roster } = useSelector(state => state.settings);
   const dispatch = useDispatch();
@@ -29,7 +28,7 @@ const ScoreKeeper = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions game={currGame} setHasVisited={setHasVisited} /> : <Students />}
+    {!hasVisited ? <Instructions /> : <Students />}
   </>);
 };
 
