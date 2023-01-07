@@ -1,5 +1,5 @@
 import songMakerReducer, { INITIAL_STATE, defaultInstrument } from "./songMakerReducer";
-import { addInstrument, removeInstrument, selectMelody, clearSong, toggleLoop, setCurrTimer } from "./songMakerActions";
+import { addInstrument, removeInstrument, selectMelody, clearSong, toggleLoop } from "./songMakerActions";
 
 import { setupInstrument } from '_testUtils/setup-functions/instrumentIdReducerTestSetup';
 
@@ -56,11 +56,6 @@ describe("Song Maker reducer", () => {
     const result2 = songMakerReducer(result, toggleLoop());
     expect(result2.isPlaying).toBe(false);
   });
-
-  it('should set a timer id', () => {
-    const result = songMakerReducer(undefined, setCurrTimer(457457));
-    expect(result.currTimer).toBe(457457);
-  })
 
   it('should clear a song', () => {
     const setup = setupInstrument({ id: 0, isRhythm: false });

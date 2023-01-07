@@ -1,4 +1,4 @@
-import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument, toggleLoop, setCurrTimer } from "./songMakerActions";
+import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument, toggleLoop } from "./songMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_utils/instrument-id/getInstrument";
@@ -47,10 +47,6 @@ const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(toggleLoop, (state) => {
       state.isPlaying = !state.isPlaying;
-    })
-    .addCase(setCurrTimer, (state, action) => {
-      const timerId = action.payload;
-      state.currTimer = timerId;
     })
     .addCase(clearSong, (state) => {
       state.song = INITIAL_STATE.song;

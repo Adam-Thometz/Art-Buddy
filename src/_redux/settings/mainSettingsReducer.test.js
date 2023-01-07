@@ -1,5 +1,5 @@
 import mainSettingsReducer, { demoClass, INITIAL_STATE } from "./mainSettingsReducer";
-import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
+import { changeCurrGame, changeMenu, setCurrTimer, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 
 import { wordToMusic } from '_data/_activities/activityList';
 
@@ -47,6 +47,11 @@ describe('Main Menu & Settings Reducer', () => {
     const result = mainSettingsReducer(init, toggleColorBlind());
     expect(result.colorBlind).toBeTruthy();
   });
+
+  it('should set a timer id', () => {
+    const result = mainSettingsReducer(undefined, setCurrTimer(457457));
+    expect(result.currTimer).toBe(457457);
+  })
 
   it('should handle updating the global roster', () => {
     const init = mainSettingsReducer(undefined, {});

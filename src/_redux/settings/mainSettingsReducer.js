@@ -1,4 +1,4 @@
-import { changeCurrGame, changeMenu, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
+import { changeCurrGame, changeMenu, setCurrTimer, setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./mainSettingsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const demoClass = {
@@ -14,6 +14,7 @@ export const demoClass = {
 export const INITIAL_STATE = {
   menu: 'games',
   currGame: {},
+  timer: null,
   volume: 0,
   textToSpeech: false,
   colorBlind: false,
@@ -27,6 +28,9 @@ const mainSettingsReducer = createReducer(INITIAL_STATE, (builder) => {
     })
     .addCase(changeCurrGame, (state, action) => {
       state.currGame = action.payload;
+    })
+    .addCase(setCurrTimer, (state, action) => {
+      state.currTimer = action.payload;
     })
     .addCase(setVolume, (state, action) => {
       state.volume = action.payload;
