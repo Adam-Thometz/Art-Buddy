@@ -14,9 +14,9 @@ import Stencil from './stencil/Stencil';
 import { freePaint } from '_data/_activities/activityList';
 
 const FreePaint = () => {
+  const [hasVisited] = useVisited(freePaint.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { stencil } = useSelector(state => state.freePaint);
-  const [hasVisited] = useVisited(freePaint.lsKey);
   const dispatch = useDispatch();
   
   useEffect(() => {

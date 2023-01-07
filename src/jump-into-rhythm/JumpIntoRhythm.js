@@ -17,10 +17,10 @@ import { jumpIntoRhythm } from '_data/_activities/activityList';
 import { Transport } from 'tone';
 
 const JumpIntoRhythm = () => {
+  const [hasVisited] = useVisited(jumpIntoRhythm.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { isDisplayingLilyPads } = useSelector(state => state.jumpIntoRhythm);
   const { setPlayFn } = useContext(PlayContext);
-  const [hasVisited] = useVisited(jumpIntoRhythm.lsKey);
   const dispatch = useDispatch();
 
   useEffect(() => {
