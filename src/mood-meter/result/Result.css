@@ -1,0 +1,23 @@
+.Result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Result-icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.Result-text {
+  font-size: 5rem;
+  color: #17255A;
+}
+
+.Result .Button {
+  width: 30%;
+  height: 10vh;
+  margin: 0 auto;
+}
