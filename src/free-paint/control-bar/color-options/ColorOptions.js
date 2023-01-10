@@ -19,6 +19,7 @@ const ColorOptions = () => {
     <div className='ColorOptions'>
       {paintColors.map(color => (
         <div
+          key={color}
           className='ColorOptions-option'
           data-testid={`color-option-${color}`}
           id={color}

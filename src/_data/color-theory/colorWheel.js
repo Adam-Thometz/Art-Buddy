@@ -1,101 +1,70 @@
 import colors from "./colors";
 
+const isShowing = {
+  text: false,
+  color: false
+};
+
 const colorWheel = {
   yellow: {
     color: colors.yellow,
     category: 'primary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   dandelion: {
     color: colors.dandelion,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   orange: {
     color: colors.orange,
     category: 'secondary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   tangelo: {
     color: colors.tangelo,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   red: {
     color: colors.red,
     category: 'primary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   plum: {
     color: colors.plum,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   violet: {
     color: colors.violet,
     category: 'secondary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   blueberry: {
     color: colors.blueberry,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   blue: {
     color: colors.blue,
     category: 'primary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   emerald: {
     color: colors.emerald,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   green: {
     color: colors.green,
     category: 'secondary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
   pear: {
     color: colors.pear,
     category: 'tertiary',
-    isShowing: {
-      text: false,
-      color: false
-    }
+    isShowing
   },
 };
 

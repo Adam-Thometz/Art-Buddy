@@ -17,9 +17,9 @@ const Score = ({ name, score, maxScore, colorPalette }) => {
       if (i <= score) {
         const paletteIdx = i-1;
         const filter = colorPalette[paletteIdx];
-        scoreDisplay.push(<img src={src} alt='' style={{ width, filter }} />);
+        scoreDisplay.push(<img key={i} src={src} alt='' style={{ width, filter }} />);
       } else {
-        scoreDisplay.push(<img src={src} alt='' style={{ width }} />);
+        scoreDisplay.push(<img key={i} src={src} alt='' style={{ width }} />);
       };
     };
     return scoreDisplay;

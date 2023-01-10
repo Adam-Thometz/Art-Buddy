@@ -48,7 +48,11 @@ const SavedSongs = () => {
   }, []);
 
   const songDisplay = Array.from(savedSongs.keys()).map(key => (
-    <span className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`} onClick={handleSelect}>{key}</span>
+    <span
+      key={key}
+      className={`SavedSongs-title${key === selectedSong ? ' selected': ''}`}
+      onClick={handleSelect}
+    >{key}</span>
   ));
 
   return (

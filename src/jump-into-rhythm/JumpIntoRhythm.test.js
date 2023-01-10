@@ -9,7 +9,10 @@ import JumpIntoRhythm from "./JumpIntoRhythm";
 import { jumpIntoRhythm } from "_data/_activities/activityList";
 
 jest.mock('tone', () => ({
-  Transport: { bpm: { value: 90 } },
+  Transport: {
+    bpm: { value: 90 },
+    stop: jest.fn()
+  },
   Sampler: jest.fn(() => ({
     toDestination: jest.fn()
   })),

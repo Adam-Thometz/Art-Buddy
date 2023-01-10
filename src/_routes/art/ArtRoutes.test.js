@@ -8,7 +8,7 @@ import urls from '_routes/routeUrls';
 
 describe('Art Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ArtRoutes />);
+    renderWithProvider(<ArtRoutes />, { initialRoutes: [urls.freePaintUrl] });
   });
   
   it('renders free paint', () => {

@@ -13,7 +13,7 @@ describe('useRoster hook', () => {
     const sampleRoster = {
       demoClass: {
         name: 'Demo Class',
-        students: ['Hello', 'Goodbye']
+        students: ['Rick', 'Morty']
       }
     };
     act(() => {

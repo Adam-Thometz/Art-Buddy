@@ -61,7 +61,7 @@ const InstrumentDisplay = () => {
             />
           );
           return (
-            <div className='InstrumentDisplay-options'>
+            <div key={i} className='InstrumentDisplay-options'>
               {instrumentDropdown}
               {melodyDropdown}
               <span className='InstrumentDisplay-remove' id={i} onClick={handleRemoveInstrument}>remove</span>

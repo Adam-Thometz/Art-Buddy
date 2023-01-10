@@ -14,7 +14,8 @@ jest.mock('react-router-dom', () => ({
   })
 }));
 jest.mock('tone', () => ({
-  Buffer: jest.fn()
+  Buffer: jest.fn(),
+  Transport: { stop: jest.fn() }
 }));
 
 describe('ListeningSkillsTest component', () => {

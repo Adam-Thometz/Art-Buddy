@@ -11,9 +11,7 @@ const ReportCard = ({ game, level = null }) => {
   const [reportCard, setReportCard] = useReportCard(game, level);
   const scoreDisplay = Object.keys(reportCard).map(group => {
     const { name, results, maxScore, colorPalette } = reportCard[group];
-    return (
-      <Score name={name} score={results.length} maxScore={maxScore} colorPalette={colorPalette} />
-    );
+    return <Score key={name} name={name} score={results.length} maxScore={maxScore} colorPalette={colorPalette} />;
   });
 
   const handleClearReportCard = () => setReportCard(reportCards[`${game}ReportCard`]);

@@ -8,7 +8,7 @@ import urls from '_routes/routeUrls';
 
 describe('Menu Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<MenuRoutes />);
+    renderWithProvider(<MenuRoutes />, { initialRoutes: [urls.musicGames] });
   });
   
   it('renders the music games page', () => {

@@ -11,7 +11,7 @@ const ColorWheel = () => {
     const { color, isShowing } = colorWheel[c];
     const backgroundColor = isShowing.color ? color.hex : '#D9D9D9';
     return (
-      <div className='ColorWheel-color' style={{ backgroundColor }}>
+      <div key={c} className='ColorWheel-color' style={{ backgroundColor }}>
         {isShowing.text ? c : null}
       </div>
     );

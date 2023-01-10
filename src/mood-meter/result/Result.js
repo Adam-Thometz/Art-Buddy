@@ -16,10 +16,10 @@ const Result = () => {
   const { valence, energy } = useSelector(state => state.moodMeter);
 
   const face = faces.find(face => face.id === valence);
-  const valenceIcon = <Face key={face.id} src={face.src} id={face.id} isSelected={true} />;
+  const valenceIcon = <Face key='face' src={face.src} id={face.id} isSelected={true} />;
   
   const battery = batteries.find(battery => battery.id === energy);
-  const energyIcon = <Battery key={battery.id} width={battery.width} id={battery.id} filter={battery.filter} />;
+  const energyIcon = <Battery key='battery' width={battery.width} id={battery.id} filter={battery.filter} />;
   
   const mood = moods[valence][energy];
   

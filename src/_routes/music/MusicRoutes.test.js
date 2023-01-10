@@ -7,7 +7,10 @@ import MusicRoutes from "./MusicRoutes";
 import urls from '_routes/routeUrls';
 
 jest.mock('tone', () => ({
-  Transport: { bpm: { value: 120 } },
+  Transport: {
+    stop: jest.fn(),
+    bpm: { value: 120 }
+  },
   Buffer: jest.fn(),
   PitchShift: jest.fn(() => ({
     toDestination: jest.fn(),
@@ -27,7 +30,7 @@ jest.mock('tone', () => ({
 
 describe('Music Game Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<MusicRoutes />);
+    renderWithProvider(<MusicRoutes />, { initialRoutes: [urls.wordToMusicUrl] });
   });
 
   it('renders the word-to-music decoder', () => {

@@ -79,7 +79,7 @@ const learnInstrumentOptions = {
         name: 'ELECTRIC GUITAR',
         icon: icons.electricGuitarIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings',
         sound: sounds.electricGuitar,
         isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=QkzN1d6h8hE'
@@ -89,7 +89,7 @@ const learnInstrumentOptions = {
         name: 'ELECTRIC BASS',
         icon: icons.electricBassIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick or fingers',
+        howToPlay: 'putting fingers on the frets and strumming or plucking the stings',
         sound: sounds.electricBass,
         isRhythm: false,
         videoUrl: 'https://www.youtube.com/watch?v=I5PboLxAkIg'

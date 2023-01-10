@@ -28,7 +28,7 @@ const Notes = () => {
         <img src={trebleClef} alt='Treble clef' />
         <section className='Notes-beats'>
           {rhythm.slice(0, 4).map((note, i) => (
-            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i} />
+            <NoteBlock key={`measure${i}`} borderColor={colors[colorOrder[i]]} note={note} id={i} />
           ))}
         </section>
       </div>
@@ -37,7 +37,7 @@ const Notes = () => {
         <img src={rhythm.length >= 8 ? minus : plus} className='Notes-toggle' alt='Add measure' onClick={rhythm.length === 4 ? addMeasure : removeMeasure} />
         <section className='Notes-beats'>
           {rhythm.length >= 8 ? rhythm.slice(4, 8).map((note, i) => (
-            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+4} />
+            <NoteBlock key={`measure${i+4}`} borderColor={colors[colorOrder[i]]} note={note} id={i+4} />
           )) : null}
         </section>
       </div>
@@ -53,7 +53,7 @@ const Notes = () => {
           : null}
         <section className='Notes-beats'>
           {rhythm.length >= 12 ? rhythm.slice(8, 12).map((note, i) => (
-            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+8} />
+            <NoteBlock key={`measure${i+8}`} borderColor={colors[colorOrder[i]]} note={note} id={i+8} />
           )) : null}
         </section>
       </div>
@@ -69,7 +69,7 @@ const Notes = () => {
           : null}
         <section className='Notes-beats'>
           {rhythm.length >= 16 ? rhythm.slice(12).map((note, i) => (
-            <NoteBlock borderColor={colors[colorOrder[i]]} note={note} id={i+12} />
+            <NoteBlock key={`measure${i+12}`} borderColor={colors[colorOrder[i]]} note={note} id={i+12} />
           )) : null}
         </section>
       </div>

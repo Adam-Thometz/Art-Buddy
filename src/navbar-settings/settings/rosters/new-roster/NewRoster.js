@@ -18,7 +18,7 @@ const NewRoster = () => {
   const [, setRosters] = useRoster();
 
   const studentInputs = Object.keys(input).slice(1).map((field, i) => (
-    <div className='NewRoster-form-control'>
+    <div key={field} className='NewRoster-form-control'>
       <input
         className="NewRoster-input"
         name={field}

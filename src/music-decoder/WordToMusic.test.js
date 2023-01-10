@@ -19,7 +19,10 @@ jest.mock('tone', () => ({
       triggerAttackRelease: jest.fn()
     })),
   })),
-  now: jest.fn()
+  now: jest.fn(),
+  Transport: {
+    stop: jest.fn()
+  }
 }));
 
 describe('WordToMusic component', () => {

@@ -8,8 +8,8 @@ import flower from '_media/jump-into-rhythm/_icons/lily-pad-flower.png';
 const LilyPadDisplay = ({ measure }) => {
   return (
     <div className='LilyPadDisplay'>
-      {measure.map(beat => (
-        <div className='LilyPadDisplay-lily-pad'>
+      {measure.map((beat, i) => (
+        <div key={`beat${i}`} className='LilyPadDisplay-lily-pad'>
           {beat ? (
             beat.duration.map(note => (<>
               <img

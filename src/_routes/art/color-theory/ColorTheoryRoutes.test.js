@@ -6,9 +6,9 @@ import { screen } from "@testing-library/react";
 import ColorTheoryRoutes from "./ColorTheoryRoutes";
 import { colorTheoryUrls } from '_routes/routeUrls';
 
-describe('Instrument Id Routes', () => {
+describe('Color Theory Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ColorTheoryRoutes />);
+    renderWithProvider(<ColorTheoryRoutes />, { initialRoutes: [colorTheoryUrls.learn] });
   });
 
   it('renders the main learn page', () => {

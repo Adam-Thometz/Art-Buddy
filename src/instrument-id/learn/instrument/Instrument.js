@@ -52,7 +52,7 @@ const Instrument = () => {
         <h2>What is the {name.toLowerCase()} made of?</h2>
         <section className="Instrument-materials">
           {madeFrom.map(material => (
-            <Icon icon={material.icon} text={material.name} size='100px' />
+            <Icon key={material.name} icon={material.icon} text={material.name} size='100px' />
           ))}
         </section>
         <p className="Instrument-made-of">The {name} is played by {howToPlay}</p>

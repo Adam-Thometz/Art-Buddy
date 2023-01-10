@@ -16,7 +16,7 @@ jest.mock('tone', () => ({
 
 describe('Instrument Id Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<InstrumentIdRoutes />);
+    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.learn] });
   });
 
   it('renders the main learn page', () => {
