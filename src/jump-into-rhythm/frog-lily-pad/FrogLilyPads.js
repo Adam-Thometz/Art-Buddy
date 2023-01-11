@@ -34,4 +34,4 @@ const FrogLilyPad = () => {
   );
 };
 
-export default FrogLilyPad
+export default FrogLilyPad;
