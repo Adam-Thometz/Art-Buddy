@@ -15,25 +15,21 @@
  * excited song: 'Better When I'm Dancin'', Meghan
 */
 
-function generateSong(uri) {
-  return `https://www.youtube.com/watch?v=${uri}`
-}
-
 const moods = [
   [
-    { name: 'Sad', songURL: generateSong('TeQ_TTyLGMs') },
-    { name: 'Disappointed', songURL: generateSong('axySrE0Kg6k') },
-    { name: 'Angry', songURL: generateSong('fKopy74weus') }
+    { name: 'Sad', songURI: 'TeQ_TTyLGMs' },
+    { name: 'Disappointed', songURI: 'axySrE0Kg6k' },
+    { name: 'Angry', songURI: 'fKopy74weus' },
   ],
   [
-    { name: 'Tired', songURL: generateSong('cNIg45GZ_ts') },
-    { name: 'Bored', songURL: generateSong('ePao0cTGG-o') },
-    { name: 'Curious', songURL: generateSong('dCuCpVPkWDY') }
+    { name: 'Tired', songURI: 'cNIg45GZ_ts' },
+    { name: 'Bored', songURI: 'ePao0cTGG-o' },
+    { name: 'Curious', songURI: 'dCuCpVPkWDY' },
   ],
   [
-    { name: 'Relaxed', songURL: generateSong('w_DKWlrA24k') },
-    { name: 'Happy', songURL: generateSong('wvUQcnfwUUM') },
-    { name: 'Excited', songURL: generateSong('pkCyfBibIbI') }
+    { name: 'Relaxed', songURI: 'w_DKWlrA24k' },
+    { name: 'Happy', songURI: 'wvUQcnfwUUM' },
+    { name: 'Excited', songURI: 'pkCyfBibIbI' },
   ],
 ];
 
