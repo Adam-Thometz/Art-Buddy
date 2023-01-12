@@ -29,7 +29,7 @@ const Result = () => {
         {valenceIcon}
         {energyIcon}
       </div>
-      <p className='Result-text'>{mood}</p>
+      <p className='Result-text'>{mood.name}</p>
       <Button colorId={2}>Listen To Song</Button>
     </div>
   );
