@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { PopupContext } from '_context/PopupContext';
 
 import Icon from '_components/icon/Icon';
@@ -8,6 +8,11 @@ import { savedSongsIcon } from '_media/instrument-id/_icons/iconImports';
 
 const SavedSongsIcon = () => {
   const { setCurrPopup } = useContext(PopupContext);
+
+  useEffect(() => {
+    return () => setCurrPopup(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const openSavedSongs = () => setCurrPopup({
     title: 'SAVED SONGS',

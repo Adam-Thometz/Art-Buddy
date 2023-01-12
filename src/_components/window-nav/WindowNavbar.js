@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { PopupContext } from "_context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
 import { changeMenu } from "_redux/_general/generalActions";
@@ -11,9 +12,14 @@ import Help from "_components/help/Help";
 
 const WindowNavbar = ({ cornerIcon = null, page = null }) => {
   const { menu } = useSelector(state => state.general);
-
+  const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
   const location = useLocation();
+
+  useEffect(() => {
+    return () => setCurrPopup(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   const handleChange = e => dispatch(changeMenu(e.target.id));
   const underline = target => menu === target ? ' underlined' : '';

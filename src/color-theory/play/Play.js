@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useReportCard from '_hooks/report-card/useReportCard';
 import { PopupContext } from '_context/PopupContext';
@@ -23,6 +23,11 @@ const Play = () => {
   const navigate = useNavigate();
   const { setCurrPopup } = useContext(PopupContext);
   const [reportCard] = useReportCard('colorTheory');
+
+  useEffect(() => {
+    return () => setCurrPopup(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const openReportCard = () => setCurrPopup({
     title: 'REPORT CARD',

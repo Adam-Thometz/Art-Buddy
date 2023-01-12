@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useReportCard from "_hooks/report-card/useReportCard";
 import { PopupContext } from "_context/PopupContext";
@@ -20,6 +20,11 @@ const ListeningSkills = () => {
   const [reportCard1] = useReportCard('instrumentId', 1);
   const reportCardsToCheck = [null, reportCard1];
   const { setCurrPopup } = useContext(PopupContext);
+
+  useEffect(() => {
+    return () => setCurrPopup(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const openReportCard = e => {
     const { id } = e.target;

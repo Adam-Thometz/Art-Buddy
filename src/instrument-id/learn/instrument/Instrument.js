@@ -39,7 +39,10 @@ const Instrument = () => {
 
   useEffect(() => {
     setPlayFn(() => loadSounds({ ids: [id], volume, isTest: false }).play);
-    return () => Transport.stop();
+    return () => {
+      Transport.stop();
+      setCurrPopup(null);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, volume]);
 

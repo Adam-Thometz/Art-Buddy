@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { PopupContext } from '_context/PopupContext';
 
@@ -9,7 +9,12 @@ import { reportCardIcon } from '_media/instrument-id/_icons/iconImports';
 
 const ReportCardIcon = () => {
   const { level } = useParams();
-  const { setCurrPopup } = useContext(PopupContext)
+  const { setCurrPopup } = useContext(PopupContext);
+
+  useEffect(() => {
+    return () => setCurrPopup(null)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
   const openReportCard = () => setCurrPopup({
     title: 'REPORT CARD',

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { PopupContext } from '_context/PopupContext';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,6 +13,11 @@ const PlaySave = () => {
   const { song, isPlaying } = useSelector(state => state.songMaker);
   const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => setCurrPopup(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleToggle = () => {
     if (song.some(part => part || !!part.melodyId)) dispatch(toggleLoop());
