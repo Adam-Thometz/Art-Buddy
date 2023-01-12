@@ -8,7 +8,7 @@ import MoodMeter from './MoodMeter';
 import App from "App";
 
 import { moodMeter } from "_data/_activities/activityList";
-import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteryDefaults";
+import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteries";
 import urls from "_routes/routeUrls";
 
 describe('MoodMeter component', () => {
