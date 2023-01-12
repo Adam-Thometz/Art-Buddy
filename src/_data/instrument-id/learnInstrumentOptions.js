@@ -257,7 +257,7 @@ const learnInstrumentOptions = {
         howToPlay: '',
         sound: sounds.clarinet,
         isRhythm: false,
-        videoUri: '0srzSEPeHrk'
+        videoUri: '328nODWJD-M'
       },
       {
         id: 'bassoon',
