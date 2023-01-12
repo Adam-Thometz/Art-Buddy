@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import TooSmall from './TooSmall';
+
+import { render } from '_testUtils/render';
 
 describe('TooSmall component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<TooSmall />);
+    render(<TooSmall />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<TooSmall />);
+    const { asFragment } = render(<TooSmall />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

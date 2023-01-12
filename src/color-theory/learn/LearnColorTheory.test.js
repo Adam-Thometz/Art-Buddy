@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import LearnColorTheory from "./LearnColorTheory";
+
+import { render } from "_testUtils/render";
 
 describe('LearnColorTheory component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<LearnColorTheory />);
+    render(<LearnColorTheory />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<LearnColorTheory />);
+    const { asFragment } = render(<LearnColorTheory />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

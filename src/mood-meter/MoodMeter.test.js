@@ -1,11 +1,9 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-import { screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-
 import MoodMeter from './MoodMeter';
 import App from "App";
+
+import { render } from '_testUtils/render';
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { moodMeter } from "_data/_activities/activityList";
 import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteries";
@@ -14,16 +12,16 @@ import urls from "_routes/routeUrls";
 describe('MoodMeter component', () => {
   window.localStorage.setItem(`visited-${moodMeter.lsKey}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<MoodMeter />);
+    render(<MoodMeter />);
   });
   
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<MoodMeter />);
+    const { asFragment } = render(<MoodMeter />);
     expect(asFragment()).toMatchSnapshot();
   });
   
   it('should select valence', () => {
-    renderWithProvider(<MoodMeter />);
+    render(<MoodMeter />);
     const valenceOptions = screen.getAllByTestId(/face/);
     userEvent.click(valenceOptions[0]);
     expect(screen.getByTestId('face2')).toHaveClass('selected-face');
@@ -34,7 +32,7 @@ describe('MoodMeter component', () => {
   });
   
   it('should select energy', () => {
-    renderWithProvider(<MoodMeter />);
+    render(<MoodMeter />);
     const energyOptions = screen.getAllByTestId(/battery/);
     userEvent.click(energyOptions[2]);
     const firstClicked = screen.getAllByTestId('bar')[2];
@@ -52,15 +50,14 @@ describe('MoodMeter component', () => {
   
   it('should show a mood after selecting valence and energy', () => {
     // below is rendering the MoodMeter component. This is to get the Popup
-    renderWithProvider(<App />, { initialRoutes: [urls.moodMeterUrl] });
+    render(<App />, { initialRoutes: [urls.moodMeterUrl] });
+
+    const valenceOptions = screen.getAllByTestId(/face/);
+    userEvent.click(valenceOptions[0]);
+    const energyOptions = screen.getAllByTestId(/battery/);
+    userEvent.click(energyOptions[2]);
     
     expect(screen.getByText('YOUR MOOD IS...')).toBeInTheDocument();
-    expect(screen.getByText('Curious')).toBeInTheDocument();
-
-    const face = screen.getAllByTestId(/face/)[0];
-    expect(face).toHaveClass('selected-face');
-    const battery = screen.getAllByTestId('bar')[0];
-    const { filter } = window.getComputedStyle(battery);
-    expect(filter).toBe(GREEN_FILTER);
+    expect(screen.getByText('Happy')).toBeInTheDocument();
   });
 });

@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import SoundOptions from './SoundOptions';
+
+import { render } from '_testUtils/render';
 
 describe('SoundOptions component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SoundOptions />);
+    render(<SoundOptions />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SoundOptions />);
+    const { asFragment } = render(<SoundOptions />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,8 +1,6 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Dropdown from "./Dropdown";
+
+import { render } from "_testUtils/render";
 
 const testOptions = {
   test: 'test option',
@@ -11,11 +9,11 @@ const testOptions = {
 
 describe('Dropdown component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Dropdown options={testOptions} />);
+    render(<Dropdown options={testOptions} />);
   });
 
   it('matches the snapshot', () => {
-    const { asFragment } = renderWithProvider(<Dropdown options={testOptions} />);
+    const { asFragment } = render(<Dropdown options={testOptions} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,24 +1,22 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-import { screen } from "@testing-library/react";
-
 import Button from './Button';
+
+import { render } from '_testUtils/render';
+import { screen } from "@testing-library/react";
 
 import colors from '_data/_utils/colorOrder';
 
 describe('Button component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Button />);
+    render(<Button />);
   });
 
   it('matches the snapshot of the button', () => {
-    const { asFragment } = renderWithProvider(<Button/>);
+    const { asFragment } = render(<Button/>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('changes border color based on passed in color', () => {
-    renderWithProvider(<div>
+    render(<div>
       <Button colorId={0}>HELLO</Button>
       <Button colorId={1}>HOLA</Button>
       <Button selected colorId={2}>AHLAN</Button>

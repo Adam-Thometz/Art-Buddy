@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import ColorOptions from "./ColorOptions";
+
+import { render } from "_testUtils/render";
 
 describe('ColorOptions component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ColorOptions />);
+    render(<ColorOptions />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ColorOptions />);
+    const { asFragment } = render(<ColorOptions />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

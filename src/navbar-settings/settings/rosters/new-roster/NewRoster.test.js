@@ -1,15 +1,15 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import NewRoster from './NewRoster';
+
+import { render } from "_testUtils/render";
 
 describe('NewRoster component', () => {
   window.localStorage.setItem('rosters', '{}');
   it('renders without crashing', () => {
-    renderWithProvider(<NewRoster />);
+    render(<NewRoster />);
   });
 
   it('matches the snapshot of NewRoster', () => {
-    const { asFragment } = renderWithProvider(<NewRoster />);
+    const { asFragment } = render(<NewRoster />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

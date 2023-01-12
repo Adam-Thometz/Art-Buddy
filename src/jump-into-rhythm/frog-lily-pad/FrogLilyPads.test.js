@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import FrogLilyPads from "./FrogLilyPads";
+
+import { render } from "_testUtils/render";
 
 describe('FrogLilyPads component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<FrogLilyPads />);
+    render(<FrogLilyPads />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<FrogLilyPads />);
+    const { asFragment } = render(<FrogLilyPads />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,26 +1,24 @@
-import React from "react";
+import ScoreKeeper from "./ScoreKeeper";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import ScoreKeeper from "./ScoreKeeper";
 
 import { scoreKeeper } from "_data/_activities/activityList";
 
 describe('Score Keeper', () => {
   window.localStorage.setItem(`visited-${scoreKeeper.lsKey}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<ScoreKeeper />);
+    render(<ScoreKeeper />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ScoreKeeper />);
+    const { asFragment } = render(<ScoreKeeper />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should update points and sort students', () => {
-    renderWithProvider(<ScoreKeeper />);
+    render(<ScoreKeeper />);
     let buttons = screen.getAllByRole('button');
     let results = screen.getAllByTestId('score');
     for (let i = 0; i < 5; i++) {

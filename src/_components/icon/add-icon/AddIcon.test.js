@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import AddIcon from './AddIcon';
+
+import { render } from '_testUtils/render';
 
 describe('AddIcon component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<AddIcon />);
+    render(<AddIcon />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<AddIcon />);
+    const { asFragment } = render(<AddIcon />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

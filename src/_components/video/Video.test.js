@@ -1,15 +1,14 @@
-'cNIg45GZ_ts'
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import Video from './Video';
+
+import { render } from '_testUtils/render';
 
 describe('Video component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Video uri='cNIg45GZ_ts' />);
+    render(<Video uri='cNIg45GZ_ts' />);
   });
 
   it('matches the snapshot of the Video', () => {
-    const { asFragment } = renderWithProvider(<Video uri='cNIg45GZ_ts' />);
+    const { asFragment } = render(<Video uri='cNIg45GZ_ts' />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

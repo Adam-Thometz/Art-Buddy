@@ -1,23 +1,21 @@
-import React from "react";
+import SaveSong from "./SaveSong";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import SaveSong from "./SaveSong";
-
 describe('SaveSong component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SaveSong />);
+    render(<SaveSong />);
   });
   
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SaveSong />);
+    const { asFragment } = render(<SaveSong />);
     expect(asFragment()).toMatchSnapshot();
   });
   
   it('saves a song and provides feedback', () => {
-    renderWithProvider(<SaveSong />);
+    render(<SaveSong />);
     const input = screen.getByText('Song Title');
     userEvent.type(input, 'My super awesome song!');
     const submit = screen.getByText('SAVE');

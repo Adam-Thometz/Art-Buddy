@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import Window from './Window';
+
+import { render } from '_testUtils/render';
 
 describe('Window component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Window />);
+    render(<Window />);
   });
 
   it('matches the snapshot of the window', () => {
-    const { asFragment } = renderWithProvider(<Window />);
+    const { asFragment } = render(<Window />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

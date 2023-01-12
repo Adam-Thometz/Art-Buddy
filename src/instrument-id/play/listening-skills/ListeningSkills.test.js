@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import ListeningSkills from "./ListeningSkills";
+
+import { render } from "_testUtils/render";
 
 describe('ListeningSkills component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ListeningSkills />);
+    render(<ListeningSkills />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ListeningSkills />);
+    const { asFragment } = render(<ListeningSkills />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

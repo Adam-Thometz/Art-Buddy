@@ -1,10 +1,8 @@
-import React from "react";
+import JumpIntoRhythm from "./JumpIntoRhythm";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import JumpIntoRhythm from "./JumpIntoRhythm";
 
 import { jumpIntoRhythm } from "_data/_activities/activityList";
 
@@ -21,16 +19,16 @@ jest.mock('tone', () => ({
 describe('JumpIntoRhythm component', () => {
   window.localStorage.setItem(`visited-${jumpIntoRhythm.lsKey}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<JumpIntoRhythm />);
+    render(<JumpIntoRhythm />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<JumpIntoRhythm />);
+    const { asFragment } = render(<JumpIntoRhythm />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should select a musical note', () => {
-    renderWithProvider(<JumpIntoRhythm />);
+    render(<JumpIntoRhythm />);
     const options = screen.getAllByTestId('notes');
     userEvent.click(options[0]);
     const blocks = screen.getAllByTestId('block');

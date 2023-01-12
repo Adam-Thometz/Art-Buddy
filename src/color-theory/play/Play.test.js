@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Play from "./Play";
+
+import { render } from "_testUtils/render";
 
 describe('Play component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Play />);
+    render(<Play />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Play />);
+    const { asFragment } = render(<Play />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

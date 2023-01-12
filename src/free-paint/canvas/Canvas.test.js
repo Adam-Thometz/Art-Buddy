@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Canvas from "./Canvas";
+
+import { render } from "_testUtils/render";
 
 describe('Canvas component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Canvas />);
+    render(<Canvas />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Canvas />);
+    const { asFragment } = render(<Canvas />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

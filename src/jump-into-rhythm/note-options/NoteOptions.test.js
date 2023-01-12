@@ -1,23 +1,21 @@
-import React from "react";
+import NoteOptions from "./NoteOptions";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import NoteOptions from "./NoteOptions";
-
 describe('NoteOptions component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<NoteOptions />);
+    render(<NoteOptions />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<NoteOptions />);
+    const { asFragment } = render(<NoteOptions />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should enable the play button after notes are selected', () => {
-    renderWithProvider(<NoteOptions />);
+    render(<NoteOptions />);
     const playBtn = screen.getByText('PLAY');
     const options = screen.getAllByTestId('notes');
     for (let i = 0; i < 4; i++) {

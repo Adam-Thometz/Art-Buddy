@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import SequenceControls from './SequenceControls';
+
+import { render } from '_testUtils/render';
 
 describe('SequenceControls component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SequenceControls />);
+    render(<SequenceControls />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SequenceControls />);
+    const { asFragment } = render(<SequenceControls />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

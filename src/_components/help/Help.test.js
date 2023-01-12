@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import Help from "./Help";
+
+import { render } from "_testUtils/render";
 
 describe('Help component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Help />);
+    render(<Help />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Help />);
+    const { asFragment } = render(<Help />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

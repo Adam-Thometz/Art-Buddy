@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import AlphabetTable from './AlphabetTable';
+
+import { render } from "_testUtils/render";
 
 describe('AlphabetTable component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<AlphabetTable />);
+    render(<AlphabetTable />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<AlphabetTable />);
+    const { asFragment } = render(<AlphabetTable />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

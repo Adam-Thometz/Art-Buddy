@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import Navbar from './Navbar';
+
+import { render } from '_testUtils/render';
 
 describe('Navbar component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Navbar />);
+    render(<Navbar />);
   });
 
   it('matches the snapshot of the navbar', () => {
-    const { asFragment } = renderWithProvider(<Navbar />);
+    const { asFragment } = render(<Navbar />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

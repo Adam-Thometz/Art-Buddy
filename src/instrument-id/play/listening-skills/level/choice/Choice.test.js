@@ -1,18 +1,17 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-import getInstrument from "_utils/instrument-id/getInstrument";
-
 import Choice from "./Choice";
+
+import { render } from "_testUtils/render";
+
+import getInstrument from "_utils/instrument-id/getInstrument";
 
 describe('Choice component', () => {
   const choice = getInstrument('theremin');
   it('renders without crashing', () => {
-    renderWithProvider(<Choice choice={choice} />);
+    render(<Choice choice={choice} />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Choice choice={choice} />);
+    const { asFragment } = render(<Choice choice={choice} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

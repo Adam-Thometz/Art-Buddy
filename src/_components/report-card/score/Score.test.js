@@ -1,17 +1,16 @@
-import React from "react";
-import { instrumentIdColors } from "_data/_report-cards/colorsForProgressBar";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Score from "./Score";
+
+import { render } from "_testUtils/render";
+
+import { instrumentIdColors } from "_data/_report-cards/colorsForProgressBar";
 
 describe('Score component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Score name='COOL FACTOR' score={2} maxScore={4} colorPalette={instrumentIdColors} />);
+    render(<Score name='COOL FACTOR' score={2} maxScore={4} colorPalette={instrumentIdColors} />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Score name='COOL FACTOR' score={2} maxScore={4} colorPalette={instrumentIdColors} />);
+    const { asFragment } = render(<Score name='COOL FACTOR' score={2} maxScore={4} colorPalette={instrumentIdColors} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

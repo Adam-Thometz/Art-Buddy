@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import SequencePlayReset from './SequencePlayReset';
+
+import { render } from "_testUtils/render";
 
 describe('SequencePlayReset component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SequencePlayReset />);
+    render(<SequencePlayReset />);
   });
 
   it('matches the snapshot of SequencePlayReset', () => {
-    const { asFragment } = renderWithProvider(<SequencePlayReset />);
+    const { asFragment } = render(<SequencePlayReset />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

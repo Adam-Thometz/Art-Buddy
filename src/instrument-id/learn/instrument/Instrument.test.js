@@ -1,8 +1,6 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Instrument from "./Instrument";
+
+import { render } from "_testUtils/render";
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -18,11 +16,11 @@ jest.mock('tone', () => ({
 
 describe('Instrument component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Instrument />);
+    render(<Instrument />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Instrument />);
+    const { asFragment } = render(<Instrument />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import PlaySave from "./PlaySave";
+
+import { render } from "_testUtils/render";
 
 describe('PlaySave component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<PlaySave />);
+    render(<PlaySave />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<PlaySave />);
+    const { asFragment } = render(<PlaySave />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

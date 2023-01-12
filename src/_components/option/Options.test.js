@@ -1,19 +1,19 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import Options from "./Options";
+
+import { render } from "_testUtils/render";
 
 describe('Options component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Options />);
+    render(<Options />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Options />);
+    const { asFragment } = render(<Options />);
     expect(asFragment()).toMatchSnapshot();
   });
   
   it('matches snapshot of smaller window', () => {
-    const { asFragment } = renderWithProvider(<Options width="65%" />);
+    const { asFragment } = render(<Options width="65%" />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

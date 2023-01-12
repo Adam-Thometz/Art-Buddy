@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import SavedSongs from "./SavedSongs";
+
+import { render } from "_testUtils/render";
 
 describe('SavedSongs component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SavedSongs />);
+    render(<SavedSongs />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SavedSongs />);
+    const { asFragment } = render(<SavedSongs />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

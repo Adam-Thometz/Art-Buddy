@@ -1,19 +1,19 @@
-import React from "react";
+import Result from "./Result";
+
+import { render } from "_testUtils/render";
+
 import { default as store } from "_redux/rootReducer";
 import { setEnergy, setValence } from "_redux/mood-meter/moodMeterActions";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-import Result from "./Result";
 
 describe('Result component', () => {
   store.dispatch(setValence(2));
   store.dispatch(setEnergy(2));
   it('renders without crashing', () => {
-    renderWithProvider(<Result />);
+    render(<Result />, { store });
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Result />);
+    const { asFragment } = render(<Result />, { store });
     expect(asFragment()).toMatchSnapshot();
   });
 });

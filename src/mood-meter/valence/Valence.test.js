@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import Valence from './Valence';
+
+import { render } from '_testUtils/render';
 
 describe('Valence component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Valence />);
+    render(<Valence />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Valence />);
+    const { asFragment } = render(<Valence />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

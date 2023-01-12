@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import ReportCardIcon from "./ReportCardIcon";
+
+import { render } from "_testUtils/render";
 
 describe('ReportCardIcon component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ReportCardIcon />);
+    render(<ReportCardIcon />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ReportCardIcon />);
+    const { asFragment } = render(<ReportCardIcon />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

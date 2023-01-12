@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import Notes from "./Notes";
+
+import { render } from "_testUtils/render";
 
 describe('Notes component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Notes />);
+    render(<Notes />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Notes />);
+    const { asFragment } = render(<Notes />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

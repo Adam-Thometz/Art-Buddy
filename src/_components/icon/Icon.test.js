@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from '_testUtils/renderWithProvider';
 import Icon from './Icon';
+
+import { render } from '_testUtils/render';
 
 describe('Icon component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Icon />);
+    render(<Icon />);
   });
 
   it('matches the snapshot of the icon', () => {
-    const { asFragment } = renderWithProvider(<Icon />);
+    const { asFragment } = render(<Icon />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

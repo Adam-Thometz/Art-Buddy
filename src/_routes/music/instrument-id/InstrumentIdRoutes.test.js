@@ -1,9 +1,8 @@
-import React from "react";
+import InstrumentIdRoutes from "./InstrumentIdRoutes";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 
-import InstrumentIdRoutes from "./InstrumentIdRoutes";
 import { instrumentIdUrls } from '_routes/routeUrls';
 
 jest.mock('tone', () => ({
@@ -16,41 +15,41 @@ jest.mock('tone', () => ({
 
 describe('Instrument Id Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.learn] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.learn] });
   });
 
   it('renders the main learn page', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.learn] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.learn] });
     expect(screen.getByText('To begin, choose an instrument family')).toBeInTheDocument();
   });
 
   it('renders an instrument family page', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.learn}/brass`] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.learn}/brass`] });
     expect(screen.getByText('THE BRASS FAMILY')).toBeInTheDocument();
   });
 
   it('renders a page for a specific instrument', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.learn}/brass/trumpet`] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.learn}/brass/trumpet`] });
     expect(screen.getByText('What is the trumpet made of?')).toBeInTheDocument();
   });
 
   it('renders the main play page', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.play] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.play] });
     expect(screen.getByText('INSTRUMENT ID: PLAY')).toBeInTheDocument();
   });
 
   it('renders the listening skills page', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.playListening] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.playListening] });
     expect(screen.getByText('Practice your listening skills to unlock instruments that you can play later on the Song Maker section!')).toBeInTheDocument();
   });
 
   it('renders a level for listening skills', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.playListening}/1`] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [`${instrumentIdUrls.playListening}/1`] });
     expect(screen.getByText('Listening Skills Test: Level 1')).toBeInTheDocument();
   });
 
   it('renders the song maker', () => {
-    renderWithProvider(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
+    render(<InstrumentIdRoutes />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
     expect(screen.getByText('Song Maker')).toBeInTheDocument();
     expect(screen.getByText('SAVED SONGS')).toBeInTheDocument();
   });

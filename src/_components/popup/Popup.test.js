@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import Popup from "./Popup";
+
+import { render } from "_testUtils/render";
 
 describe('Popup component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Popup />);
+    render(<Popup />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Popup />);
+    const { asFragment } = render(<Popup />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

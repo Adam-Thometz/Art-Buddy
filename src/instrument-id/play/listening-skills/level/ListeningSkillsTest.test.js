@@ -1,11 +1,9 @@
-import React from "react";
+import ListeningSkillsTest from "./ListeningSkillsTest";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { setupChoices } from "_testUtils/setup-functions/ListeningSkillsTestSetup";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import ListeningSkillsTest from "./ListeningSkillsTest";
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -20,16 +18,16 @@ jest.mock('tone', () => ({
 
 describe('ListeningSkillsTest component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    render(<ListeningSkillsTest />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ListeningSkillsTest />);
+    const { asFragment } = render(<ListeningSkillsTest />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders choices', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    render(<ListeningSkillsTest />);
     const btn = screen.getByText('START');
     expect(btn).toBeDisabled();
 
@@ -42,7 +40,7 @@ describe('ListeningSkillsTest component', () => {
   });
 
   it('flashes correct and incorrect for answers', () => {
-    renderWithProvider(<ListeningSkillsTest />);
+    render(<ListeningSkillsTest />);
     setupChoices();
 
     const correctWrappers = screen.getAllByTestId('isCorrect');

@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import WordForm from './WordForm';
+
+import { render } from '_testUtils/render';
 
 describe('WordForm component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<WordForm />);
+    render(<WordForm />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<WordForm />);
+    const { asFragment } = render(<WordForm />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

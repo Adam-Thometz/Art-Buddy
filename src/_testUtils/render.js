@@ -33,4 +33,8 @@ function renderWithProvider(component, options) {
   });
 };
 
-export default renderWithProvider;
+export * from '@testing-library/react';
+
+export { renderWithProvider as render };
+
+// export default renderWithProvider;

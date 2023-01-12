@@ -1,10 +1,8 @@
-import React from "react";
+import WordToMusic from './WordToMusic';
 
-import renderWithProvider from '_testUtils/renderWithProvider';
+import { render } from '_testUtils/render';
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import WordToMusic from './WordToMusic';
 
 import { wordToMusic } from "_data/_activities/activityList";
 
@@ -28,16 +26,16 @@ jest.mock('tone', () => ({
 describe('WordToMusic component', () => {
   window.localStorage.setItem(`visited-${wordToMusic.lsKey}`, true);
   it('renders without crashing', () => {
-    renderWithProvider(<WordToMusic />);
+    render(<WordToMusic />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<WordToMusic />);
+    const { asFragment } = render(<WordToMusic />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should toggle upper and lowercase letters', () => {
-    renderWithProvider(<WordToMusic />);
+    render(<WordToMusic />);
     const toggle = screen.getByText('ON');
     userEvent.click(toggle);
     expect(screen.getByText('z')).toBeInTheDocument();
@@ -46,7 +44,7 @@ describe('WordToMusic component', () => {
   });
 
   it('colors a letter in the word input if found', () => {
-    renderWithProvider(<WordToMusic />);
+    render(<WordToMusic />);
     const input = screen.getByLabelText('WORDS');
     userEvent.type(input, 'HELLO');
     expect(input).toHaveValue('HELLO');
@@ -61,7 +59,7 @@ describe('WordToMusic component', () => {
   });
   
   it('removes color if a letter is deleted from the input', () => {
-    renderWithProvider(<WordToMusic />);
+    render(<WordToMusic />);
     const input = screen.getByLabelText('WORDS');
     userEvent.type(input, 'HELLO');
     

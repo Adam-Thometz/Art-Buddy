@@ -1,11 +1,9 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-import { screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-
 import SongMaker from "./SongMaker";
 import App from "App";
+
+import { render } from "_testUtils/render";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { instrumentIdUrls } from "_routes/routeUrls";
 
@@ -25,16 +23,16 @@ jest.mock('tone', () => ({
 
 describe('SongMaker component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SongMaker />);
+    render(<SongMaker />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SongMaker />);
+    const { asFragment } = render(<SongMaker />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('selects melodies', () => {
-    renderWithProvider(<SongMaker />);
+    render(<SongMaker />);
     const instrumentDropdown = screen.getByText('INSTRUMENT');
     userEvent.click(instrumentDropdown);
     const instrumentOption = screen.getByText('VIOLIN');
@@ -49,7 +47,7 @@ describe('SongMaker component', () => {
   });
   
   it('selects rhythms', () => {
-    renderWithProvider(<SongMaker />);
+    render(<SongMaker />);
     const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT');
     userEvent.click(addInstrumentBtns[0]);
     expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
@@ -69,7 +67,7 @@ describe('SongMaker component', () => {
   
   it('saves a song', async () => {
     // below is essentially rendering the SongMaker. This is to get the Popup
-    renderWithProvider(<App />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
+    render(<App />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
     const saveBtn = screen.getByText('SAVE');
     userEvent.click(saveBtn);
     expect(await screen.findByText('SAVE SONG')).toBeInTheDocument();

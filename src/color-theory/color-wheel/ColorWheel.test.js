@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import ColorWheel from "./ColorWheel";
+
+import { render } from "_testUtils/render";
 
 describe('ColorWheel component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ColorWheel />);
+    render(<ColorWheel />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ColorWheel />);
+    const { asFragment } = render(<ColorWheel />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

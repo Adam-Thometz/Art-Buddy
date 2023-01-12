@@ -1,8 +1,6 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import LearnColors from "./LearnColors";
+
+import { render } from "_testUtils/render";
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -13,11 +11,11 @@ jest.mock('react-router-dom', () => ({
 
 describe('LearnColors component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<LearnColors />);
+    render(<LearnColors />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<LearnColors />);
+    const { asFragment } = render(<LearnColors />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import ColorTheory from "./ColorTheory";
+
+import { render } from "_testUtils/render";
 
 describe('ColorTheory component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ColorTheory />);
+    render(<ColorTheory />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<ColorTheory />);
+    const { asFragment } = render(<ColorTheory />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

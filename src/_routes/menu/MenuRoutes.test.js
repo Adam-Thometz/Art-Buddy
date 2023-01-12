@@ -1,28 +1,27 @@
-import React from "react";
+import MenuRoutes from "./MenuRoutes";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 
-import MenuRoutes from "./MenuRoutes";
 import urls from '_routes/routeUrls';
 
 describe('Menu Routes', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<MenuRoutes />, { initialRoutes: [urls.musicGames] });
+    render(<MenuRoutes />, { initialRoutes: [urls.musicGames] });
   });
   
   it('renders the music games page', () => {
-    renderWithProvider(<MenuRoutes />, { initialRoutes: [urls.musicGames] });
+    render(<MenuRoutes />, { initialRoutes: [urls.musicGames] });
     expect(screen.getByText('MUSIC GAMES')).toBeInTheDocument();
   });
   
   it('renders the art games page', () => {
-    renderWithProvider(<MenuRoutes />, { initialRoutes: [urls.artGames] });
+    render(<MenuRoutes />, { initialRoutes: [urls.artGames] });
     expect(screen.getByText('ART GAMES')).toBeInTheDocument();
   });
   
   it('renders all games', () => {
-    renderWithProvider(<MenuRoutes />, { initialRoutes: [urls.allGames] });
+    render(<MenuRoutes />, { initialRoutes: [urls.allGames] });
     expect(screen.getByText('ALL GAMES')).toBeInTheDocument();
   });
 });

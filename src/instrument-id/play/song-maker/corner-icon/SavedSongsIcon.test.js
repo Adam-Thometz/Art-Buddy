@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import SavedSongsIcon from "./SavedSongsIcon";
+
+import { render } from "_testUtils/render";
 
 describe('SavedSongsIcon component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<SavedSongsIcon />);
+    render(<SavedSongsIcon />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<SavedSongsIcon />);
+    const { asFragment } = render(<SavedSongsIcon />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

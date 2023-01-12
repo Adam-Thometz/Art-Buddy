@@ -1,16 +1,16 @@
 import React from "react";
 
-import renderWithProvider from "_testUtils/renderWithProvider";
+import { render } from "_testUtils/render";
 
 import StencilOptions from "./StencilOptions";
 
 describe('StencilOptions component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<StencilOptions id='numbers' />);
+    render(<StencilOptions id='numbers' />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<StencilOptions id='numbers' />);
+    const { asFragment } = render(<StencilOptions id='numbers' />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

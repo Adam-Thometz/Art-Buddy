@@ -1,14 +1,14 @@
-import React from "react";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import ColorBlind from './ColorBlind';
+
+import { render } from "_testUtils/render";
 
 describe('ColorBlind component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<ColorBlind />);
+    render(<ColorBlind />);
   });
 
   it('matches the snapshot of ColorBlind', () => {
-    const { asFragment } = renderWithProvider(<ColorBlind />);
+    const { asFragment } = render(<ColorBlind />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

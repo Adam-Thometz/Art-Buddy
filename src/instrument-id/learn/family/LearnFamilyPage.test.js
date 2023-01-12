@@ -1,8 +1,6 @@
-import React from "react";
-
-import renderWithProvider from "../../../_testUtils/renderWithProvider";
-
 import LearnFamilyPage from "./LearnFamilyPage";
+
+import { render } from "_testUtils/render";
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -13,11 +11,11 @@ jest.mock('react-router-dom', () => ({
 
 describe('LearnFamilyPage component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<LearnFamilyPage />);
+    render(<LearnFamilyPage />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<LearnFamilyPage />);
+    const { asFragment } = render(<LearnFamilyPage />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

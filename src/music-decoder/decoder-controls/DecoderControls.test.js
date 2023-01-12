@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import DecoderControls from './DecoderControls';
+
+import { render } from '_testUtils/render';
 
 describe('DecoderControls component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<DecoderControls />);
+    render(<DecoderControls />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<DecoderControls />);
+    const { asFragment } = render(<DecoderControls />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

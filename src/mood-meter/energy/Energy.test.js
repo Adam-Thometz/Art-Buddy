@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from '_testUtils/renderWithProvider';
-
 import Energy from './Energy';
+
+import { render } from '_testUtils/render';
 
 describe('Energy component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<Energy />);
+    render(<Energy />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<Energy />);
+    const { asFragment } = render(<Energy />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

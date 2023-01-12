@@ -1,16 +1,14 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import InstrumentId from "./InstrumentId";
+
+import { render } from "_testUtils/render";
 
 describe('InstrumentId component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<InstrumentId />);
+    render(<InstrumentId />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<InstrumentId />);
+    const { asFragment } = render(<InstrumentId />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

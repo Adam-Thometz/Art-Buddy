@@ -1,8 +1,6 @@
-import React from "react";
-
-import renderWithProvider from "_testUtils/renderWithProvider";
-
 import InstrumentDisplay from "./InstrumentDisplay";
+
+import { render } from "_testUtils/render";
 
 jest.mock('tone', () => ({
   Buffer: jest.fn()
@@ -10,11 +8,11 @@ jest.mock('tone', () => ({
 
 describe('InstrumentDisplay component', () => {
   it('renders without crashing', () => {
-    renderWithProvider(<InstrumentDisplay />);
+    render(<InstrumentDisplay />);
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = renderWithProvider(<InstrumentDisplay />);
+    const { asFragment } = render(<InstrumentDisplay />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

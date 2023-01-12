@@ -1,16 +1,15 @@
-import React from "react";
-// import { PopupContextMock } from "_testUtils/mocks/contextMocks";
-import renderWithProvider from "_testUtils/renderWithProvider";
 import Settings from './Settings';
+
+import { render } from "_testUtils/render";
 
 describe('Settings component', () => {
   window.localStorage.setItem('rosters', '{}')
   it('renders without crashing', () => {
-    renderWithProvider(<Settings />);
+    render(<Settings />);
   });
 
   it('matches the snapshot of Settings', () => {
-    const { asFragment } = renderWithProvider(<Settings />);
+    const { asFragment } = render(<Settings />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
