@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component matches the snapshot of the Video 1`] = `
+<DocumentFragment>
+  <iframe
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    frameborder="0"
+    src="https://www.youtube.com/embed/cNIg45GZ_ts"
+    title="YouTube video player"
+  />
+</DocumentFragment>
+`;
