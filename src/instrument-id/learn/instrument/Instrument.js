@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { PlayContext } from "_context/PlayContext";
+import { PopupContext } from "_context/PopupContext";
 
 import { useSelector } from "react-redux";
 
@@ -9,6 +10,7 @@ import './Instrument.css';
 import Icon from "_components/icon/Icon";
 import Button from "_components/button/Button";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Video from "_components/video/Video";
 
 import loadSounds from "_utils/instrument-id/loadSounds";
 import getInstrument from "_utils/instrument-id/getInstrument";
@@ -19,6 +21,7 @@ const Instrument = () => {
   const { volume } = useSelector(state => state.settings);
   const { instrument } = useParams();
   const { playFn, setPlayFn } = useContext(PlayContext);
+  const { setCurrPopup } = useContext(PopupContext);
   const {
     id,
     name,
@@ -26,7 +29,7 @@ const Instrument = () => {
     madeFrom,
     howToPlay,
     width,
-    videoUrl
+    videoUri
   } = getInstrument(convertToId(instrument.replace(/-/g, ' ')));
 
   const playInstrument = async () => {
@@ -40,7 +43,10 @@ const Instrument = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, volume]);
 
-  const openVideo = () => window.open(videoUrl);
+  const openVideo = () => setCurrPopup({
+    title: name,
+    popup: <Video uri={videoUri} />
+  })
 
   return (<>
     <WindowNavbar page='INSTRUMENT ID: LEARN' />
