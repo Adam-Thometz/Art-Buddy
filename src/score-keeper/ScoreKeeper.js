@@ -12,7 +12,7 @@ import Students from './students/Students';
 import { scoreKeeper } from '_data/_activities/activityList';
 
 const ScoreKeeper = () => {
-  const [hasVisited] = useVisited(scoreKeeper.lsKey);
+  const [hasVisited, setHasVisited] = useVisited(scoreKeeper.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { roster } = useSelector(state => state.settings);
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const ScoreKeeper = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions /> : <Students />}
+    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : <Students />}
   </>);
 };
 

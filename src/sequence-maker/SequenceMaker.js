@@ -18,7 +18,7 @@ import { Transport } from "tone";
 import createSounds from "_utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
-  const [hasVisited] = useVisited(sequenceMaker.lsKey);
+  const [hasVisited, setHasVisited] = useVisited(sequenceMaker.lsKey);
   const { currGame } = useSelector(state => state.general);
   const { volume } = useSelector(state => state.settings);
   const { sequence } = useSelector(state => state.sequenceMaker);
@@ -41,7 +41,7 @@ const SequenceMaker = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions /> : (<>
+    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : (<>
       <SequenceControls />
       <SoundOptions />
       <Sequence />

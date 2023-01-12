@@ -17,7 +17,7 @@ import { wordToMusic } from '_data/_activities/activityList';
 import { Transport } from 'tone';
 
 const WordToMusic = () => {
-  const [hasVisited] = useVisited(wordToMusic.lsKey);
+  const [hasVisited, setHasVisited] = useVisited(wordToMusic.lsKey);
   const { scale, sound } = useSelector(state => state.musicDecoder);
   const { currGame } = useSelector(state => state.general);
   const { volume } = useSelector(state => state.settings);
@@ -39,7 +39,7 @@ const WordToMusic = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions /> : (<>
+    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : (<>
       <WordForm />
       <DecoderControls />
       <AlphabetTable />

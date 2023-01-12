@@ -14,7 +14,7 @@ import { moodMeter } from '_data/_activities/activityList';
 import Result from './result/Result';
 
 const MoodMeter = () => {
-  const [hasVisited] = useVisited(moodMeter.lsKey);
+  const [hasVisited, setHasVisited] = useVisited(moodMeter.lsKey);
   const { valence, energy } = useSelector(state => state.moodMeter);
   const { currGame } = useSelector(state => state.general);
   const { setCurrPopup } = useContext(PopupContext)
@@ -39,7 +39,7 @@ const MoodMeter = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions /> : <>
+    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : <>
       <Valence />
       <Energy />
     </>}

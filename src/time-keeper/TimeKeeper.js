@@ -10,7 +10,7 @@ import Instructions from '_components/instructions/Instructions';
 import { timeKeeper } from '_data/_activities/activityList';
 
 const TimeKeeper = () => {
-  const [hasVisited] = useVisited(timeKeeper.lsKey);
+  const [hasVisited, setHasVisited] = useVisited(timeKeeper.lsKey);
   const { currGame } = useSelector(state => state.mainSettings);
   const dispatch = useDispatch()
 
@@ -21,7 +21,7 @@ const TimeKeeper = () => {
 
   return (<>
     <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions /> : <h2>00:00:00</h2>}
+    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : <h2>00:00:00</h2>}
   </>);
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import useVisited from '_hooks/visited/useVisited';
 
 import { useSelector } from 'react-redux';
 
@@ -7,10 +6,9 @@ import Icon from '_components/icon/Icon';
 
 import play from '_media/_general/play.png';
 
-const Instructions = () => {
+const Instructions = ({ setVisited }) => {
   const { currGame } = useSelector(state => state.general);
-  const [, setHasVisited] = useVisited(currGame.lsKey);
-  const handleSetVisited = () => setHasVisited(true);
+  const handleSetVisited = () => setVisited(true);
   return (
     <div className='Instructions'>
       <article>{currGame.description}</article>
