@@ -15,8 +15,8 @@ const Popup = () => {
         e.target.classList[0] === 'Popup';
       if (correctBounds) {
         setCurrPopup(null);
-      }
-    }
+      };
+    };
   };
 
   return currPopup ? (
