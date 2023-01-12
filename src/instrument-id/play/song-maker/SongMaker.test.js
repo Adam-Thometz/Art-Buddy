@@ -1,9 +1,12 @@
 import React from "react";
+
 import renderWithProvider from "_testUtils/renderWithProvider";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
 import SongMaker from "./SongMaker";
 import App from "App";
+
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 jest.mock('tone', () => ({

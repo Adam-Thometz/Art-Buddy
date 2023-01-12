@@ -5,9 +5,11 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import MoodMeter from './MoodMeter';
+import App from "App";
 
 import { moodMeter } from "_data/_activities/activityList";
 import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteryDefaults";
+import urls from "_routes/routeUrls";
 
 describe('MoodMeter component', () => {
   window.localStorage.setItem(`visited-${moodMeter.lsKey}`, true);
@@ -46,5 +48,19 @@ describe('MoodMeter component', () => {
     const firstClickedAgain = screen.getAllByTestId('bar')[2];
     const firstStyleAgain = window.getComputedStyle(firstClickedAgain);
     expect(firstStyleAgain.filter).not.toBe(RED_FILTER);
+  });
+  
+  it('should show a mood after selecting valence and energy', () => {
+    // below is rendering the MoodMeter component. This is to get the Popup
+    renderWithProvider(<App />, { initialRoutes: [urls.moodMeterUrl] });
+    
+    expect(screen.getByText('YOUR MOOD IS...')).toBeInTheDocument();
+    expect(screen.getByText('Curious')).toBeInTheDocument();
+
+    const face = screen.getAllByTestId(/face/)[0];
+    expect(face).toHaveClass('selected-face');
+    const battery = screen.getAllByTestId('bar')[0];
+    const batteryStyle = window.getComputedStyle(battery);
+    expect(batteryStyle.filter).toBe(GREEN_FILTER);
   });
 });
