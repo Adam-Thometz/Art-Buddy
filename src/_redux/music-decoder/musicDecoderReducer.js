@@ -1,9 +1,7 @@
 import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderActions";
 import { createReducer } from "@reduxjs/toolkit";
 
-import searchLetter from "_utils/music-decoder/searchLetter";
 import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
-import LETTER_NOTES from "_data/music-decoder/letterNotes";
 
 export const INITIAL_STATE = {
   words: [],
@@ -34,13 +32,9 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
       state.words = splitWords;
     })
     .addCase(fillLetter, (state, action) => {
-      const { letter, play } = action.payload;
-      const hasLetter = searchLetter(state.words, letter);
-      if (hasLetter) {
-        const newFilledLetters = { ...state.filledLetters, [letter]: true };
-        state.filledLetters = newFilledLetters;
-        play(LETTER_NOTES[letter])
-      };
+      const letter = action.payload;
+      const newFilledLetters = { ...state.filledLetters, [letter]: true };
+      state.filledLetters = newFilledLetters;
     })
     .addCase(changeScale, (state, action) => {
       state.scale = action.payload;

@@ -19,13 +19,8 @@ describe('Word To Music reducer', () => {
   });
   
   it('should fill a letter with a note', () => {
-    const result = musicDecoderReducer(testState, fillLetter({ letter: 'H', play: jest.fn() }));
+    const result = musicDecoderReducer(testState, fillLetter('H'));
     expect(result.filledLetters['H']).toBe(true);
-  });
-  
-  it('should not work if fill letter is called with a letter not in words', () => {
-    const result = musicDecoderReducer(testState, fillLetter({ letter: 'B', play: jest.fn() }));
-    expect(Object.keys(result.filledLetters).length).toBe(0);
   });
 
   it('should change the scale', () => {

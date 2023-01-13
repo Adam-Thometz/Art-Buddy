@@ -7,13 +7,15 @@ import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
 import './AlphabetTable.css';
 
 import LETTER_NOTES from '_data/music-decoder/letterNotes';
+import searchLetter from "_utils/music-decoder/searchLetter";
 
 const AlphabetTable = () => {
   const { playFn } = useContext(PlayContext);
   const {
     isUpperCase,
     currPlaying,
-    filledLetters
+    filledLetters,
+    words,
   } = useSelector(state => state.musicDecoder);
   const dispatch = useDispatch();
 
@@ -31,11 +33,14 @@ const AlphabetTable = () => {
   
   const handleLetter = e => {
     const letter = e.target.textContent;
-    const hasLetter = filledLetters[letter];
-    if (hasLetter) {
+    if (filledLetters[letter]) {
       playFn(LETTER_NOTES[letter]);
     } else {
-      dispatch(fillLetter({ letter, play: playFn }));
+      const hasLetter = searchLetter(words, letter);
+      if (hasLetter) {
+        dispatch(fillLetter(letter));
+        playFn(LETTER_NOTES[letter])
+      }
     };
   };
 
