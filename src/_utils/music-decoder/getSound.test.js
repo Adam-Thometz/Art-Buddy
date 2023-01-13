@@ -1,4 +1,4 @@
-import createSound from "./getSound";
+import getSound from "./getSound";
 import { PitchShift, Synth, Sampler, Part, Transport } from "tone";
 
 jest.mock('tone', () => ({
@@ -38,7 +38,7 @@ jest.mock('tone', () => ({
 
 describe('getSound function', () => {
   it('should create a synth sound by default', () => {
-    const { instrument } = createSound({ volume: 0 });
+    const { instrument } = getSound({ volume: 0 });
     expect(instrument.pitch).toBe(0);
     expect(instrument.sound).toBe('synth');
     expect(instrument.volume.value).toBe(0);
@@ -47,7 +47,7 @@ describe('getSound function', () => {
   });
   
   it('should create a sound in a new scale', () => {
-    const { instrument } = createSound({ volume: 0, scale: 6 });
+    const { instrument } = getSound({ volume: 0, scale: 6 });
     expect(instrument.pitch).toBe(6);
     expect(instrument.sound).toBe('synth');
     expect(instrument.volume.value).toBe(0);
@@ -56,7 +56,7 @@ describe('getSound function', () => {
   });
   
   it('should create a sample out of a sound', () => {
-    const { instrument } = createSound({ volume: 0, sampleId: 'trumpet' });
+    const { instrument } = getSound({ volume: 0, sampleId: 'trumpet' });
     expect(instrument.pitch).toBe(0);
     expect(instrument.sound).toBe('file');
     expect(instrument.volume.value).toBe(0);
@@ -67,12 +67,12 @@ describe('getSound function', () => {
 
 describe('playSound function', () => {
   it('should play a single note', () => {
-    const { playSound } = createSound({ volume: 0 });
+    const { playSound } = getSound({ volume: 0 });
     expect(playSound('A')).toEqual({ note: 'A3', duration: '4n' });
   });
 
   it('should play an array of notes', () => {
-    const { playSound } = createSound({ volume: 0, sampleId: 'trumpet' });
+    const { playSound } = getSound({ volume: 0, sampleId: 'trumpet' });
     expect(playSound(['A', 'G', 'F']).notesToPlay).toEqual([
       { note: 'A', time: 0 },
       { note: 'G', time: 0.5 },

@@ -9,4 +9,4 @@ export default function getNewSize({ x, y, clientX, clientY, currSize }) {
     : currSize.height + yDiff;
 
   return { height, width };
-}
+};
