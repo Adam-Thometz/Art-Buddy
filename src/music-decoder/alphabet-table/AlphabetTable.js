@@ -39,8 +39,8 @@ const AlphabetTable = () => {
       const hasLetter = searchLetter(words, letter);
       if (hasLetter) {
         dispatch(fillLetter(letter));
-        playFn(LETTER_NOTES[letter])
-      }
+        playFn(LETTER_NOTES[letter]);
+      };
     };
   };
 
