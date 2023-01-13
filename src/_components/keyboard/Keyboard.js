@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Keyboard.css';
 
 import Icon from '../icon/Icon';

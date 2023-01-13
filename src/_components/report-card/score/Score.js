@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Score.css';
 
 import { first, mid, last } from '_media/_general/report-card-bar/iconImports';

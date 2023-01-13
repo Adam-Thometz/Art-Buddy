@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import useVisited from '_hooks/visited/useVisited';
 
 import { useDispatch, useSelector } from 'react-redux';

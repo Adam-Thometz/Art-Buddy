@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";

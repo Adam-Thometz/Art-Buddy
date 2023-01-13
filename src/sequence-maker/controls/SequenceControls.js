@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useDispatch } from 'react-redux';
 import { setCategory, setDuration, setPitch } from "_redux/sequence-maker/sequenceMakerActions";
 

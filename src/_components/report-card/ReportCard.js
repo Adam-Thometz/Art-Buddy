@@ -1,4 +1,3 @@
-import React from 'react';
 import useReportCard from '_hooks/report-card/useReportCard';
 
 import './ReportCard.css';

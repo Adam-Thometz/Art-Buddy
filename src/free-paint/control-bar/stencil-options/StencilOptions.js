@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useDispatch } from 'react-redux';
 import { setStencil } from '_redux/free-paint/freePaintActions';
 

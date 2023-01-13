@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { PlayContext } from "_context/PlayContext";
 import { PopupContext } from "_context/PopupContext";

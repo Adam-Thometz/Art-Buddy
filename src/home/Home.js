@@ -1,4 +1,3 @@
-import React from "react";
 import useVisited from "_hooks/visited/useVisited";
 
 import Welcome from "./welcome/Welcome";

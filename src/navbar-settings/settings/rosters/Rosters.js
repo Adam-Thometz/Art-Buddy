@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import { useContext, useMemo } from 'react';
 import useRoster from '_hooks/roster/useRoster';
 import { PopupContext } from '_context/PopupContext';
 

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import useFormFields from "_hooks/form-fields/useFormFields";
 
 import { useDispatch } from "react-redux";

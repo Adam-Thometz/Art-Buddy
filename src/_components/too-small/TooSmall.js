@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './TooSmall.css';
 
 const TooSmall = () => {

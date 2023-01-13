@@ -1,5 +1,3 @@
-import React from "react";
-
 import './Welcome.css';
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";

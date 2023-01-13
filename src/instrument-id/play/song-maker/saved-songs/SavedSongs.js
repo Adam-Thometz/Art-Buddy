@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { PlayContext } from '_context/PlayContext';
 import useSavedSongs from '_hooks/saved-songs/useSavedSongs';
 

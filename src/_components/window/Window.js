@@ -1,5 +1,3 @@
-import React from "react";
-
 import './Window.css';
 
 const Window = ({ children, small = false }) => {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsErasing, setEditStencilMode } from '_redux/free-paint/freePaintActions';
 

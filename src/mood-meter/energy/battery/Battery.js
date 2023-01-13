@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useDispatch } from 'react-redux';
 import { setEnergy } from '_redux/mood-meter/moodMeterActions';
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import useVisited from '_hooks/visited/useVisited';
 import { PlayContext } from '_context/PlayContext';
 

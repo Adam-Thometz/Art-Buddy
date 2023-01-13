@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Settings.css';
 
 import Volume from './volume/Volume';

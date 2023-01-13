@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useDispatch } from 'react-redux';
 import { deleteFromRhythm } from '_redux/jump-into-rhythm/jumpIntoRhythmActions';
 

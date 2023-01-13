@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import WindowNavbar from '_components/window-nav/WindowNavbar';

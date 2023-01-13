@@ -1,7 +1,7 @@
 // Recommended import order for all React components:
 
 // React/React Router imports
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import GlobalContext from '_context/global';
@@ -21,13 +21,13 @@ ReactDOM.render(
   <Provider store={rootReducer}>
     <BrowserRouter>
       <GlobalContext>
-        <React.StrictMode>
+        <StrictMode>
           <div className='lines'>
             <img className='left' src={leftLines} alt='' />
             <img className='right' src={rightLines} alt='' />
           </div>
           <App />
-        </React.StrictMode>
+        </StrictMode>
       </GlobalContext>
     </BrowserRouter>
   </Provider>,
