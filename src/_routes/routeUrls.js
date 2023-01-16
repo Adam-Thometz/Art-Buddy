@@ -27,7 +27,8 @@ export const instrumentIdUrls = {
 export const colorTheoryUrls = {
   learn: '/color-theory/learn',
   learnCategory: '/color-theory/learn/:category',
-  play: '/color-theory/play'
+  playMain: '/color-theory/play',
+  playLevel: '/color-theory/play/:level',
 };
 
 export default urls;
