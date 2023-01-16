@@ -1,0 +1,10 @@
+.PlayLevel {
+  display: flex;
+  align-items: center;
+}
+
+.PlayLevel-question {
+  text-align: left;
+  font-size: 2rem;
+  width: 50%;
+}
