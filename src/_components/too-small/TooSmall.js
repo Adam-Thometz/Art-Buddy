@@ -1,10 +1,13 @@
-import './TooSmall.css';
+import "./TooSmall.css";
 
 const TooSmall = () => {
   return (
-    <div className='TooSmall'>
+    <div className="TooSmall">
       <h1>Welcome to Art Buddy</h1>
-      <p>For the best experience, we recommend using a bigger screen, at least 1000 pixels wide.</p>
+      <p>
+        For the best experience, we recommend using a bigger screen, at least
+        1000 pixels wide.
+      </p>
     </div>
   );
 };

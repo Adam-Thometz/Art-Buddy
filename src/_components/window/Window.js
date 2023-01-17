@@ -1,7 +1,7 @@
-import './Window.css';
+import "./Window.css";
 
 const Window = ({ children, small = false }) => {
-  const width = small ? '75%' : '90%';
+  const width = small ? "75%" : "90%";
   return (
     <main className="Window" style={{ width }}>
       {children}

@@ -3,16 +3,16 @@ import Dropdown from "./Dropdown";
 import { render } from "_testUtils/render";
 
 const testOptions = {
-  test: 'test option',
-  test2: 'another test option'
+  test: "test option",
+  test2: "another test option",
 };
 
-describe('Dropdown component', () => {
-  it('renders without crashing', () => {
+describe("Dropdown component", () => {
+  it("renders without crashing", () => {
     render(<Dropdown options={testOptions} />);
   });
 
-  it('matches the snapshot', () => {
+  it("matches the snapshot", () => {
     const { asFragment } = render(<Dropdown options={testOptions} />);
     expect(asFragment()).toMatchSnapshot();
   });

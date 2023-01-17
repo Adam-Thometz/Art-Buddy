@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-import './BackArrow.css';
+import "./BackArrow.css";
 
-import arrow from './arrow.png';
+import arrow from "./arrow.png";
 
 const BackArrow = () => {
   const navigate = useNavigate();

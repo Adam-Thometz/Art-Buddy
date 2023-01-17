@@ -1,6 +1,6 @@
-import './Icon.css';
+import "./Icon.css";
 
-const Icon = ({ 
+const Icon = ({
   id = null,
   icon,
   largeFont = false,
@@ -9,23 +9,30 @@ const Icon = ({
   size = "250px",
   testId = null,
   text,
-  width = null
+  width = null,
 }) => {
   const imgStyles = {
     height: size,
     width: width ? width : size,
-    cursor: onClick ? 'pointer' : null,
-    ...otherImgStyles
+    cursor: onClick ? "pointer" : null,
+    ...otherImgStyles,
   };
 
   const textStyles = {
-    fontSize: largeFont ? '2.5rem' : (parseInt(size) <= 50 ? '1rem' : '1.75rem')
+    fontSize: largeFont ? "2.5rem" : parseInt(size) <= 50 ? "1rem" : "1.75rem",
   };
 
   return (
-    <figure className="Icon" onClick={onClick} id={id} data-testid={testId ? testId : ''}>
+    <figure
+      className="Icon"
+      onClick={onClick}
+      id={id}
+      data-testid={testId ? testId : ""}
+    >
       <img style={imgStyles} src={icon} alt="" />
-      <figcaption className="Icon-text" style={textStyles}>{text}</figcaption>
+      <figcaption className="Icon-text" style={textStyles}>
+        {text}
+      </figcaption>
     </figure>
   );
 };

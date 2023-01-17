@@ -1,8 +1,8 @@
-import './Options.css';
+import "./Options.css";
 
-const Options = ({ children, width = '100%' }) => {
+const Options = ({ children, width = "100%" }) => {
   return (
-    <section className="Options" style={{width}}>
+    <section className="Options" style={{ width }}>
       {children}
     </section>
   );

@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: white;
   height: 40px;
   border-radius: 100px;
@@ -34,7 +34,7 @@
 }
 
 .on {
-  background-color: #17255A;
+  background-color: #17255a;
 }
 
 .on .Toggle-button {
@@ -42,7 +42,7 @@
 }
 
 .off {
-  background-color: #D4D2D5;
+  background-color: #d4d2d5;
 }
 
 .off .Toggle-button {

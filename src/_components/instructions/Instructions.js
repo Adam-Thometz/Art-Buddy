@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
-import Icon from '_components/icon/Icon';
+import Icon from "_components/icon/Icon";
 
-import play from '_media/_general/play.png';
+import play from "_media/_general/play.png";
 
 const Instructions = ({ setVisited }) => {
-  const { currGame } = useSelector(state => state.general);
+  const { currGame } = useSelector((state) => state.general);
   const handleSetVisited = () => setVisited(true);
   return (
-    <div className='Instructions'>
+    <div className="Instructions">
       <article>{currGame.description}</article>
-      <Icon icon={play} text="PLAY" size='250px' onClick={handleSetVisited} />
+      <Icon icon={play} text="PLAY" size="250px" onClick={handleSetVisited} />
     </div>
   );
 };

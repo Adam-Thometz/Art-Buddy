@@ -1,4 +1,4 @@
-import './Button.css';
+import "./Button.css";
 
 import colors from "_data/_utils/colorOrder";
 
@@ -18,15 +18,17 @@ const Button = ({
     <button
       id={id}
       disabled={disabled}
-      className={`Button ${small ? 'small' : 'regular'}${selected ? ' selected' : ''}`}
+      className={`Button ${small ? "small" : "regular"}${
+        selected ? " selected" : ""
+      }`}
       onClick={onClick}
       style={{
         borderColor,
-        backgroundColor: disabled ? 'grey' : null,
-        ...otherStyles
+        backgroundColor: disabled ? "grey" : null,
+        ...otherStyles,
       }}
     >
-      {icon ? <img src={icon} alt='' /> : null}
+      {icon ? <img src={icon} alt="" /> : null}
       {children}
     </button>
   );

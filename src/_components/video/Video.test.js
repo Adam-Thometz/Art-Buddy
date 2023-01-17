@@ -1,14 +1,14 @@
-import Video from './Video';
+import Video from "./Video";
 
-import { render } from '_testUtils/render';
+import { render } from "_testUtils/render";
 
-describe('Video component', () => {
-  it('renders without crashing', () => {
-    render(<Video uri='cNIg45GZ_ts' />);
+describe("Video component", () => {
+  it("renders without crashing", () => {
+    render(<Video uri="cNIg45GZ_ts" />);
   });
 
-  it('matches the snapshot of the Video', () => {
-    const { asFragment } = render(<Video uri='cNIg45GZ_ts' />);
+  it("matches the snapshot of the Video", () => {
+    const { asFragment } = render(<Video uri="cNIg45GZ_ts" />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
