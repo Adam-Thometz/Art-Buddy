@@ -1,10 +1,10 @@
 const readingGoals = [
-  'Identify letters (upper/lower case)',
-  'Identify word fanilies',
-  'Connect objects with familiar events',
-  'Follow words read from left to right',
-  'Identify vocabulary words',
-  'Identify sight words'
+  "Identify letters (upper/lower case)",
+  "Identify word fanilies",
+  "Connect objects with familiar events",
+  "Follow words read from left to right",
+  "Identify vocabulary words",
+  "Identify sight words",
 ];
 
 const writingGoals = [
@@ -12,18 +12,14 @@ const writingGoals = [
   "Write simple words",
   "Tracing",
   "Identify and extend patterns",
-  "Sequence a story"
+  "Sequence a story",
 ];
 
 const mathGoals = [
   "Count using manipulatives",
   "Identify quantity",
   "Identify 'more' and 'less'",
-  "Identify shapes"
+  "Identify shapes",
 ];
 
-export {
-  readingGoals,
-  writingGoals,
-  mathGoals
-};
+export { readingGoals, writingGoals, mathGoals };

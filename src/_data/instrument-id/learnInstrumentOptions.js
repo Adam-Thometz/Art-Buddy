@@ -1,27 +1,27 @@
-import * as icons from '_media/instrument-id/_icons/iconImports';
-import * as sounds from '_media/instrument-id/_sounds/soundImports';
+import * as icons from "_media/instrument-id/_icons/iconImports";
+import * as sounds from "_media/instrument-id/_sounds/soundImports";
 
 const materials = {
   brass: {
     icon: icons.brass,
-    name: 'BRASS'
+    name: "BRASS",
   },
   silver: {
     icon: icons.silver,
-    name: 'SILVER'
+    name: "SILVER",
   },
   wood: {
     icon: icons.wood,
-    name: 'WOOD'
+    name: "WOOD",
   },
   leather: {
     icon: icons.leather,
-    name: 'LEATHER'
+    name: "LEATHER",
   },
   voice: {
     icon: icons.voiceMainIcon,
-    name: 'HUMAN'
-  }
+    name: "HUMAN",
+  },
 };
 
 const learnInstrumentOptions = {
@@ -29,343 +29,349 @@ const learnInstrumentOptions = {
     main: icons.trumpetIcon,
     instruments: [
       {
-        id: 'trumpet',  
-        name: 'TRUMPET',
+        id: "trumpet",
+        name: "TRUMPET",
         icon: icons.trumpetIcon,
         madeFrom: [materials.brass],
-        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
+        howToPlay: "blowing into the mouthpiece and pressing on the valves",
         sound: sounds.trumpet,
         isRhythm: false,
-        videoUri: 'ALPgvs5CT60'
+        videoUri: "ALPgvs5CT60",
       },
       {
-        id: 'frenchHorn',
-        name: 'FRENCH HORN',
+        id: "frenchHorn",
+        name: "FRENCH HORN",
         icon: icons.frenchHornIcon,
         madeFrom: [materials.brass],
-        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
+        howToPlay: "blowing into the mouthpiece and pressing on the valves",
         sound: sounds.frenchHorn,
         isRhythm: false,
-        videoUri: 'qiUXnaGfnhg'
+        videoUri: "qiUXnaGfnhg",
       },
       {
-        id: 'trombone',
-        name: 'TROMBONE',
+        id: "trombone",
+        name: "TROMBONE",
         icon: icons.tromboneIcon,
         madeFrom: [materials.brass],
-        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
+        howToPlay: "blowing into the mouthpiece and pressing on the valves",
         sound: sounds.trombone,
         isRhythm: false,
-        width: '250px',
-        videoUri: 'u5gj43Nnwzk'
+        width: "250px",
+        videoUri: "u5gj43Nnwzk",
       },
       {
-        id: 'tuba',
-        name: 'TUBA',
+        id: "tuba",
+        name: "TUBA",
         icon: icons.tubaIcon,
         madeFrom: [materials.brass],
-        howToPlay: 'blowing into the mouthpiece and pressing on the valves',
+        howToPlay: "blowing into the mouthpiece and pressing on the valves",
         sound: sounds.tuba,
         isRhythm: false,
-        videoUri: 'qlXdCvKGdBE'
+        videoUri: "qlXdCvKGdBE",
       },
-    ]
+    ],
   },
   electronic: {
     main: icons.synthIcon,
     instruments: [
       {
-        id: 'electricGuitar',
-        name: 'ELECTRIC GUITAR',
+        id: "electricGuitar",
+        name: "ELECTRIC GUITAR",
         icon: icons.electricGuitarIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings',
+        howToPlay:
+          "putting fingers on the frets and strumming or plucking the stings",
         sound: sounds.electricGuitar,
         isRhythm: false,
-        videoUri: 'ULEBSxP725w'
+        videoUri: "ULEBSxP725w",
       },
       {
-        id: 'electricBass',
-        name: 'ELECTRIC BASS',
+        id: "electricBass",
+        name: "ELECTRIC BASS",
         icon: icons.electricBassIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings',
+        howToPlay:
+          "putting fingers on the frets and strumming or plucking the stings",
         sound: sounds.electricBass,
         isRhythm: false,
-        videoUri: 'I5PboLxAkIg'
+        videoUri: "I5PboLxAkIg",
       },
       {
-        id: 'synthesizer',
-        name: 'SYNTHESIZER',
+        id: "synthesizer",
+        name: "SYNTHESIZER",
         icon: icons.synthIcon,
         madeFrom: [materials.silver],
-        howToPlay: 'adjusting knobs and/or pressing keys',
+        howToPlay: "adjusting knobs and/or pressing keys",
         sound: sounds.synthesizer,
         isRhythm: false,
-        videoUri: 'WBcUk0kGoBw'
+        videoUri: "WBcUk0kGoBw",
       },
       {
-        id: 'sampler',
-        name: 'SAMPLER',
+        id: "sampler",
+        name: "SAMPLER",
         icon: icons.samplerIcon,
         madeFrom: [materials.silver],
-        howToPlay: 'pressing buttons on the instrument',
+        howToPlay: "pressing buttons on the instrument",
         sound: sounds.sampler,
         isRhythm: true,
-        videoUri: '0K2aynMMBpo'
+        videoUri: "0K2aynMMBpo",
       },
       {
-        id: 'theremin',
-        name: 'THEREMIN',
+        id: "theremin",
+        name: "THEREMIN",
         icon: icons.thereminIcon,
         madeFrom: [materials.silver],
-        howToPlay: 'waving your hands back and forth from the antenna',
+        howToPlay: "waving your hands back and forth from the antenna",
         sound: sounds.theremin,
         isRhythm: false,
-        videoUri: 'nE_sAnSkW-Q'
+        videoUri: "nE_sAnSkW-Q",
       },
-    ]
+    ],
   },
   percussion: {
     main: icons.drumSetIcon,
     instruments: [
       {
-        id: 'djembe',
-        name: 'DJEMBE',
+        id: "djembe",
+        name: "DJEMBE",
         icon: icons.djembeIcon,
         madeFrom: [materials.wood, materials.leather],
-        howToPlay: 'hitting the animal skin',
+        howToPlay: "hitting the animal skin",
         sound: sounds.djembe,
         isRhythm: true,
-        videoUri: 'FMs3LTtgwY8'
+        videoUri: "FMs3LTtgwY8",
       },
       {
-        id: 'drumSet',
-        name: 'DRUM SET',
+        id: "drumSet",
+        name: "DRUM SET",
         icon: icons.drumSetIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'using drum sticks to hit different parts of the set',
+        howToPlay: "using drum sticks to hit different parts of the set",
         sound: sounds.drumSet,
         isRhythm: true,
-        videoUri: 'fu8Iq1q73gY'
+        videoUri: "fu8Iq1q73gY",
       },
       {
-        id: 'tambourine',
-        name: 'TAMBOURINE',
+        id: "tambourine",
+        name: "TAMBOURINE",
         icon: icons.tambourineIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: 'shaking it!',
+        howToPlay: "shaking it!",
         sound: sounds.tambourine,
         isRhythm: true,
-        videoUri: 'nz3vhCspy_I'
+        videoUri: "nz3vhCspy_I",
       },
       {
-        id: 'xylophone',
-        name: 'XYLOPHONE',
+        id: "xylophone",
+        name: "XYLOPHONE",
         icon: icons.xylophoneIcon,
         madeFrom: [materials.wood],
-        howToPlay: 'hitting different blocks with a mallet',
+        howToPlay: "hitting different blocks with a mallet",
         sound: sounds.xylophone,
         isRhythm: false,
-        videoUri: 'nd9xha3vk58'
+        videoUri: "nd9xha3vk58",
       },
       {
-        id: 'triangle',
-        name: 'TRIANGLE',
+        id: "triangle",
+        name: "TRIANGLE",
         icon: icons.triangleIcon,
         madeFrom: [materials.silver],
-        howToPlay: 'hitting it with a metal stick',
+        howToPlay: "hitting it with a metal stick",
         sound: sounds.triangle,
         isRhythm: true,
-        videoUri: 'chg1ILZwMBI'
+        videoUri: "chg1ILZwMBI",
       },
       {
-        id: 'conga',
-        name: 'CONGA',
+        id: "conga",
+        name: "CONGA",
         icon: icons.congaIcon,
         madeFrom: [materials.wood, materials.leather],
-        howToPlay: 'hitting the animal skin',
+        howToPlay: "hitting the animal skin",
         sound: sounds.conga,
         isRhythm: true,
-        videoUri: 'Dy9-P4MauuM'
+        videoUri: "Dy9-P4MauuM",
       },
-    ]
+    ],
   },
   strings: {
     main: icons.harpIcon,
     instruments: [
       {
-        id: 'acousticGuitar',
-        name: 'ACOUSTIC GUITAR',
+        id: "acousticGuitar",
+        name: "ACOUSTIC GUITAR",
         icon: icons.acousticGuitarIcon,
         madeFrom: [materials.wood],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
+        howToPlay:
+          "putting fingers on the frets and strumming or plucking the stings with a pick",
         sound: sounds.acousticGuitar,
         isRhythm: false,
-        videoUri: 'VOMipc60JvA'
+        videoUri: "VOMipc60JvA",
       },
       {
-        id: 'banjo',
-        name: 'BANJO',
+        id: "banjo",
+        name: "BANJO",
         icon: icons.banjoIcon,
         madeFrom: [materials.wood, materials.leather],
-        howToPlay: 'putting fingers on the frets and strumming or plucking the stings with a pick',
+        howToPlay:
+          "putting fingers on the frets and strumming or plucking the stings with a pick",
         sound: sounds.banjo,
         isRhythm: false,
-        videoUri: 'fnMhUPewk6c'
+        videoUri: "fnMhUPewk6c",
       },
       {
-        id: 'harp',
-        name: 'HARP',
+        id: "harp",
+        name: "HARP",
         icon: icons.harpIcon,
         madeFrom: [materials.wood],
-        howToPlay: 'plucking the strings',
+        howToPlay: "plucking the strings",
         sound: sounds.harp,
         isRhythm: false,
-        videoUri: 'WEK4hw7hMgI'
+        videoUri: "WEK4hw7hMgI",
       },
       {
-        id: 'piano',
-        name: 'PIANO',
+        id: "piano",
+        name: "PIANO",
         icon: icons.pianoIcon,
         madeFrom: [materials.wood],
-        howToPlay: 'pressing the keys, which activate hammers that bang on strings',
+        howToPlay:
+          "pressing the keys, which activate hammers that bang on strings",
         sound: sounds.piano,
         isRhythm: false,
-        videoUri: 'HCDygl0pttM'
+        videoUri: "HCDygl0pttM",
       },
       {
-        id: 'violin',
-        name: 'VIOLIN',
+        id: "violin",
+        name: "VIOLIN",
         icon: icons.violinIcon,
         madeFrom: [materials.wood],
-        howToPlay: 'putting your fingers on the fretboard and bowing the strings using a bow',
+        howToPlay:
+          "putting your fingers on the fretboard and bowing the strings using a bow",
         sound: sounds.violin,
         isRhythm: false,
-        videoUri: '0jXXWBt5URw'
+        videoUri: "0jXXWBt5URw",
       },
-    ]
+    ],
   },
   woodwind: {
     main: icons.harpIcon,
     instruments: [
       {
-        id: 'clarinet',
-        name: 'CLARINET',
+        id: "clarinet",
+        name: "CLARINET",
         icon: icons.clarinetIcon,
         madeFrom: [materials.wood],
-        howToPlay: '',
+        howToPlay: "",
         sound: sounds.clarinet,
         isRhythm: false,
-        videoUri: '328nODWJD-M'
+        videoUri: "328nODWJD-M",
       },
       {
-        id: 'bassoon',
-        name: 'BASSOON',
+        id: "bassoon",
+        name: "BASSOON",
         icon: icons.bassoonIcon,
         madeFrom: [materials.wood],
-        howToPlay: '',
+        howToPlay: "",
         sound: sounds.bassoon,
         isRhythm: false,
-        videoUri: 'XghEYA-edZA'
+        videoUri: "XghEYA-edZA",
       },
       {
-        id: 'flute',
-        name: 'FLUTE',
+        id: "flute",
+        name: "FLUTE",
         icon: icons.fluteIcon,
         madeFrom: [materials.wood, materials.silver],
-        howToPlay: '',
+        howToPlay: "",
         sound: sounds.flute,
         isRhythm: false,
-        videoUri: 'QAiwlq3aP2U'
+        videoUri: "QAiwlq3aP2U",
       },
       {
-        id: 'saxophone',
-        name: 'SAXOPHONE',
+        id: "saxophone",
+        name: "SAXOPHONE",
         icon: icons.saxophoneIcon,
         madeFrom: [materials.brass],
-        howToPlay: '',
+        howToPlay: "",
         sound: sounds.saxophone,
         isRhythm: false,
-        videoUri: 'XBWyE1v8--I'
+        videoUri: "XBWyE1v8--I",
       },
       {
-        id: 'panFlute',
-        name: 'PAN FLUTE',
+        id: "panFlute",
+        name: "PAN FLUTE",
         icon: icons.panFluteIcon,
         madeFrom: [materials.wood],
-        howToPlay: '',
+        howToPlay: "",
         sound: sounds.panFlute,
         isRhythm: false,
-        videoUri: 'nrTp7u6KD3U'
+        videoUri: "nrTp7u6KD3U",
       },
-    ]
+    ],
   },
   voice: {
     main: icons.voiceMainIcon,
     instruments: [
       {
-        id: 'soprano',
-        name: 'SOPRANO',
+        id: "soprano",
+        name: "SOPRANO",
         icon: icons.sopranoIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'singing really high!',
+        howToPlay: "singing really high!",
         sound: sounds.soprano,
         isRhythm: false,
-        videoUri: '3ZSyAcIS4fo'
+        videoUri: "3ZSyAcIS4fo",
       },
       {
-        id: 'mezzoSoprano',
-        name: 'MEZZO SOPRANO',
+        id: "mezzoSoprano",
+        name: "MEZZO SOPRANO",
         icon: icons.mezzoSopranoIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'singing high!',
+        howToPlay: "singing high!",
         sound: sounds.mezzoSoprano,
         isRhythm: false,
-        videoUri: '6m1T1BsB9rg'
+        videoUri: "6m1T1BsB9rg",
       },
       {
-        id: 'alto',
-        name: 'ALTO',
+        id: "alto",
+        name: "ALTO",
         icon: icons.altoIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'siinging a little high!',
+        howToPlay: "siinging a little high!",
         sound: sounds.alto,
         isRhythm: false,
-        videoUri: 'wrCxfWVuDXU'
+        videoUri: "wrCxfWVuDXU",
       },
       {
-        id: 'tenor',
-        name: 'TENOR',
+        id: "tenor",
+        name: "TENOR",
         icon: icons.tenorIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'singing a little low!',
+        howToPlay: "singing a little low!",
         sound: sounds.tenor,
         isRhythm: false,
-        videoUri: 'cWc7vYjgnTs'
+        videoUri: "cWc7vYjgnTs",
       },
       {
-        id: 'baritone',
-        name: 'BARITONE',
+        id: "baritone",
+        name: "BARITONE",
         icon: icons.baritoneIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'singing low!',
+        howToPlay: "singing low!",
         sound: sounds.baritone,
         isRhythm: false,
-        videoUri: 'd-m1JtnZbEQ'
+        videoUri: "d-m1JtnZbEQ",
       },
       {
-        id: 'bass',
-        name: 'BASS',
+        id: "bass",
+        name: "BASS",
         icon: icons.bassIcon,
         madeFrom: [materials.voice],
-        howToPlay: 'singing really low!',
+        howToPlay: "singing really low!",
         sound: sounds.bass,
         isRhythm: false,
-        videoUri: 'wJv0jMLLRcw'
-      }
-    ]
-  }
+        videoUri: "wJv0jMLLRcw",
+      },
+    ],
+  },
 };
 
 export default learnInstrumentOptions;

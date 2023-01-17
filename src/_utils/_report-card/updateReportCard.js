@@ -5,4 +5,4 @@
 
 export default function updateReportCard({ group, name }) {
   return [...new Set([...group, name])];
-};
+}

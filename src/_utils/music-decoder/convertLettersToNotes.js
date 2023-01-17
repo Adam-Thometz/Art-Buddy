@@ -17,13 +17,13 @@ export default function convertLettersToNotes(words, filledLetters) {
         const note = LETTER_NOTES[char];
         notesToPlay.push(note);
         lettersToToggle.push(char);
-      };
-    };
+      }
+    }
     if (i < words.length - 1) {
-      notesToPlay.push('');
-      lettersToToggle.push('');
-    };
-  };
+      notesToPlay.push("");
+      lettersToToggle.push("");
+    }
+  }
 
   return { notesToPlay, lettersToToggle };
-};
+}

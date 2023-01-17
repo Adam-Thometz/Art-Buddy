@@ -16,17 +16,17 @@ export default function createNoteOrder(rhythm) {
         pitch: pickNote(i),
         duration: note,
         time,
-        isRest
+        isRest,
       });
       time += Time(note).toSeconds();
-    };
-  };
+    }
+  }
   return toPlay;
-};
+}
 
 function pickNote(i) {
-  if (0 <= i && i < 4) return 'D5';
-  if (4 <= i && i < 8) return 'F5';
-  if (8 <= i && i < 12) return 'Bb4';
-  if (12 <= i && i < 16) return 'C5';
-};
+  if (0 <= i && i < 4) return "D5";
+  if (4 <= i && i < 8) return "F5";
+  if (8 <= i && i < 12) return "Bb4";
+  if (12 <= i && i < 16) return "C5";
+}

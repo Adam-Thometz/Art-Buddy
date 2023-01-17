@@ -1,65 +1,65 @@
-import { images, sounds } from '_media/sequence-maker/soundImageImports';
+import { images, sounds } from "_media/sequence-maker/soundImageImports";
 
 const stop = {
   image: images.stop,
-  alt: 'STOP',
-  sound: null
-}
+  alt: "STOP",
+  sound: null,
+};
 
 const soundInfo = {
   bodySoundsContinuous: {
     clappingContinuous: {
       image: images.clapping,
-      alt: 'CLAPPING',
-      sound: sounds.clappingContinuous
+      alt: "CLAPPING",
+      sound: sounds.clappingContinuous,
     },
     stompingContinuous: {
       image: images.stomping,
-      alt: 'STOMPING',
-      sound: sounds.stompingContinuous
+      alt: "STOMPING",
+      sound: sounds.stompingContinuous,
     },
     yeahContinuous: {
       image: images.yeah,
-      alt: 'SAY YEAH',
-      sound: sounds.yeahContinuous
+      alt: "SAY YEAH",
+      sound: sounds.yeahContinuous,
     },
-    stop
+    stop,
   },
   bodySoundsOnce: {
     clappingOnce: {
       image: images.clapping,
-      alt: 'CLAP',
-      sound: sounds.clappingOnce
+      alt: "CLAP",
+      sound: sounds.clappingOnce,
     },
     stompingOnce: {
       image: images.stomping,
-      alt: 'STOMP',
-      sound: sounds.stompingOnce
+      alt: "STOMP",
+      sound: sounds.stompingOnce,
     },
     yeahOnce: {
       image: images.yeah,
-      alt: 'SAY YEAH',
-      sound: sounds.yeahOnce
+      alt: "SAY YEAH",
+      sound: sounds.yeahOnce,
     },
-    stop
+    stop,
   },
   animals: {
     dog: {
       image: images.dog,
-      alt: 'DOG',
-      sound: sounds.bark
+      alt: "DOG",
+      sound: sounds.bark,
     },
     cat: {
       image: images.cat,
-      alt: 'CAT',
-      sound: sounds.meow
+      alt: "CAT",
+      sound: sounds.meow,
     },
     bird: {
       image: images.bird,
-      alt: 'BIRD',
-      sound: sounds.tweet
+      alt: "BIRD",
+      sound: sounds.tweet,
     },
-    stop
+    stop,
   },
 };
 

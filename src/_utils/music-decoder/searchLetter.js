@@ -6,6 +6,6 @@
 export default function searchLetter(input, letter) {
   for (let word of input) {
     if (word.includes(letter)) return true;
-  };
+  }
   return false;
-};
+}

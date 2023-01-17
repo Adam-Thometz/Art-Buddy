@@ -4,4 +4,4 @@
 
 export default function getRoutes(component) {
   return component().props.children;
-};
+}

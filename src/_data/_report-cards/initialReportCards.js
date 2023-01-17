@@ -1,4 +1,9 @@
-import { instrumentIdColors, primaryColors, secondaryColors, tertiaryColors } from "./colorsForProgressBar";
+import {
+  instrumentIdColors,
+  primaryColors,
+  secondaryColors,
+  tertiaryColors,
+} from "./colorsForProgressBar";
 
 export const instrumentIdReportCard = {
   brass: {
@@ -36,7 +41,7 @@ export const instrumentIdReportCard = {
     results: [],
     maxScore: 4,
     colorPalette: instrumentIdColors,
-  }
+  },
 };
 
 export const colorTheoryReportCard = {

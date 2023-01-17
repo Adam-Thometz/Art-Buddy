@@ -12,7 +12,7 @@ export default function getInstrument(instrumentId) {
     for (let instrument of instruments) {
       if (instrument.id === instrumentId) {
         return instrument;
-      };
-    };
-  };
-};
+      }
+    }
+  }
+}
