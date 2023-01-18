@@ -1,62 +1,71 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { setShownOptions } from '_redux/free-paint/freePaintActions';
+import { useSelector, useDispatch } from "react-redux";
+import { setShownOptions } from "_redux/free-paint/freePaintActions";
 
-import './ButtonWrapper.css';
+import "./ButtonWrapper.css";
 
-import Button from '_components/button/Button';
-import Icon from '_components/icon/Icon';
+import Button from "_components/button/Button";
+import Icon from "_components/icon/Icon";
 
-import { colorsToFilter } from '_data/free-paint/colors';
+import { colorsToFilter } from "_data/free-paint/colors";
 
-const ButtonWrapper = ({ 
+const ButtonWrapper = ({
   color = null,
   colorId = null,
   iconImg,
-  id = '',
-  label, 
+  id = "",
+  label,
   onClick = null,
-  Popout = null
+  Popout = null,
 }) => {
-  const { shownOptions } = useSelector(state => state.freePaint);
-  const dispatch = useDispatch()
-  const buttonColor = color ? {
-    color,
-    borderColor: color
-  } : {};
+  const { shownOptions } = useSelector((state) => state.freePaint);
+  const dispatch = useDispatch();
+  const buttonColor = color
+    ? {
+        color,
+        borderColor: color,
+      }
+    : {};
 
-  const imgFilter = color ? {
-    filter: colorsToFilter.get(color)
-  }: {};
+  const imgFilter = color
+    ? {
+        filter: colorsToFilter.get(color),
+      }
+    : {};
 
-  const handleShownOptions = e => {
+  const handleShownOptions = (e) => {
     const { tagName, id, parentElement } = e.target;
-    const currId = tagName === 'BUTTON' ? id : parentElement.id;
+    const currId = tagName === "BUTTON" ? id : parentElement.id;
     dispatch(setShownOptions(currId === shownOptions ? null : currId));
   };
 
-  const buttonTxt = iconImg
+  const buttonTxt = iconImg ? (
     // tools and functions like eraser and pencil have an icon
-    ? <Icon
+    <Icon
       id={id}
       onClick={onClick ? onClick : handleShownOptions}
       size="45px"
       text={label}
       icon={iconImg}
-      otherImgStyles={imgFilter} 
+      otherImgStyles={imgFilter}
     />
-    // stencils are not icons
-    : label.startsWith('data:image')
-      ? <img src={label} alt={id} className='ButtonWrapper-shape-button' />
-      : label;
+  ) : // stencils are not icons
+  label.startsWith("data:image") ? (
+    <img src={label} alt={id} className="ButtonWrapper-shape-button" />
+  ) : (
+    label
+  );
 
   return (
-    <div className='ButtonWrapper'>
-      <Button id={id} onClick={onClick ? onClick : handleShownOptions} colorId={colorId} otherStyles={buttonColor}>
+    <div className="ButtonWrapper">
+      <Button
+        id={id}
+        onClick={onClick ? onClick : handleShownOptions}
+        colorId={colorId}
+        otherStyles={buttonColor}
+      >
         {buttonTxt}
       </Button>
-      {Popout ? (
-        shownOptions === id ? <Popout id={id} /> : null
-      ) : null}
+      {Popout ? shownOptions === id ? <Popout id={id} /> : null : null}
     </div>
   );
 };

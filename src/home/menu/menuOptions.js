@@ -1,13 +1,13 @@
 import urls from "_routes/routeUrls";
 
-import artIcon from '_media/menu/option-icons/art-icon.png';
-import musicIcon from '_media/menu/option-icons/music-icon.png';
-import allIcon from '_media/menu/option-icons/all-icon.png';
-import iepIcon from '_media/menu/option-icons/iep-icon.png';
+import artIcon from "_media/menu/option-icons/art-icon.png";
+import musicIcon from "_media/menu/option-icons/music-icon.png";
+import allIcon from "_media/menu/option-icons/all-icon.png";
+import iepIcon from "_media/menu/option-icons/iep-icon.png";
 
-import scoreKeeperIcon from '_media/menu/option-icons/score-keeper.png';
-import timeKeeperIcon from '_media/menu/option-icons/time-keeper.png';
-import moodMeterIcon from '_media/menu/option-icons/mood-meter.png';
+import scoreKeeperIcon from "_media/menu/option-icons/score-keeper.png";
+import timeKeeperIcon from "_media/menu/option-icons/time-keeper.png";
+import moodMeterIcon from "_media/menu/option-icons/mood-meter.png";
 
 const menuOptions = {
   games: [
@@ -15,53 +15,53 @@ const menuOptions = {
       name: "ART GAMES",
       url: urls.artGames,
       icon: artIcon,
-      active: true
+      active: true,
     },
     {
       name: "MUSIC GAMES",
       url: urls.musicGames,
       icon: musicIcon,
-      active: true
+      active: true,
     },
     {
       name: "ALL GAMES",
       url: urls.allGames,
       icon: allIcon,
-      active: true
+      active: true,
     },
     {
       name: "IEP GOALS",
       url: urls.byIEPGoals,
       icon: iepIcon,
-      active: false
-    }
+      active: false,
+    },
   ],
   tools: [
     {
       name: "SCORE KEEPER",
       url: urls.scoreKeeperUrl,
       icon: scoreKeeperIcon,
-      active: true
+      active: true,
     },
     {
-      name: 'TIME KEEPER',
+      name: "TIME KEEPER",
       url: urls.timeKeeperUrl,
       icon: timeKeeperIcon,
-      active: true
+      active: true,
     },
     {
-      name: 'MOOD METER',
+      name: "MOOD METER",
       url: urls.moodMeterUrl,
       icon: moodMeterIcon,
-      active: true
+      active: true,
     },
     {
-      name: 'NOISE METER',
+      name: "NOISE METER",
       url: null,
       icon: null,
-      active: false
-    }
-  ]
+      active: false,
+    },
+  ],
 };
 
 export default menuOptions;

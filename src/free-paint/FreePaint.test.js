@@ -1,29 +1,29 @@
-import FreePaint from './FreePaint';
+import FreePaint from "./FreePaint";
 
-import { render } from '_testUtils/render';
+import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { freePaint } from "_data/_activities/activityList";
 
-describe('FreePaint component', () => {
+describe("FreePaint component", () => {
   window.localStorage.setItem(`visited-${freePaint.lsKey}`, true);
-  it('renders without crashing', () => {
+  it("renders without crashing", () => {
     render(<FreePaint />);
   });
-  
-  it('matches snapshot', () => {
+
+  it("matches snapshot", () => {
     const { asFragment } = render(<FreePaint />);
     expect(asFragment()).toMatchSnapshot();
   });
-  
-  it('renders a stencil when an option is picked', () => {
+
+  it("renders a stencil when an option is picked", () => {
     render(<FreePaint />);
-    const abc = screen.getByText('abc');
+    const abc = screen.getByText("abc");
     userEvent.click(abc);
-    const f = screen.getByText('f');
+    const f = screen.getByText("f");
     userEvent.click(f);
     userEvent.click(abc);
-    expect(screen.getByText('f')).toBeInTheDocument();
+    expect(screen.getByText("f")).toBeInTheDocument();
   });
 });
