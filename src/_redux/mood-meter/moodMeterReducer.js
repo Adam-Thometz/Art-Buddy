@@ -20,4 +20,4 @@ const moodMeterReducer = createReducer(INITIAL_STATE, (builder) => {
     });
 });
 
-export default moodMeterReducer
+export default moodMeterReducer;

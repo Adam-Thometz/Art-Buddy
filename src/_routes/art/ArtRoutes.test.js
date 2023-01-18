@@ -3,20 +3,20 @@ import ArtRoutes from "./ArtRoutes";
 import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 
-import urls from '_routes/routeUrls';
+import urls from "_routes/routeUrls";
 
-describe('Art Routes', () => {
-  it('renders without crashing', () => {
+describe("Art Routes", () => {
+  it("renders without crashing", () => {
     render(<ArtRoutes />, { initialRoutes: [urls.freePaintUrl] });
   });
-  
-  it('renders free paint', () => {
+
+  it("renders free paint", () => {
     render(<ArtRoutes />, { initialRoutes: [urls.freePaintUrl] });
-    expect(screen.getByText('FREE PAINT')).toBeInTheDocument();
+    expect(screen.getByText("FREE PAINT")).toBeInTheDocument();
   });
 
-  it('renders color theory', () => {
+  it("renders color theory", () => {
     render(<ArtRoutes />, { initialRoutes: [urls.colorTheoryUrl] });
-    expect(screen.getByText('COLOR THEORY')).toBeInTheDocument();
+    expect(screen.getByText("COLOR THEORY")).toBeInTheDocument();
   });
 });

@@ -18,7 +18,14 @@ const ArtBuddyRoutes = () => {
       {getRoutes(ArtRoutes)}
       {getRoutes(ToolsRoutes)}
       {/* GENERAL 404 HANDLER */}
-      <Route path="*" element={<Window small><NotFound /></Window>} />
+      <Route
+        path="*"
+        element={
+          <Window small>
+            <NotFound />
+          </Window>
+        }
+      />
     </Routes>
   );
 };

@@ -11,8 +11,22 @@ import getRoutes from "_utils/_general/getRoutes";
 const ArtRoutes = () => {
   return (
     <Routes>
-      <Route path={urls.freePaintUrl} element={<Window><FreePaint /></Window>} />
-      <Route path={urls.colorTheoryUrl} element={<Window><ColorTheory /></Window>} />
+      <Route
+        path={urls.freePaintUrl}
+        element={
+          <Window>
+            <FreePaint />
+          </Window>
+        }
+      />
+      <Route
+        path={urls.colorTheoryUrl}
+        element={
+          <Window>
+            <ColorTheory />
+          </Window>
+        }
+      />
       {getRoutes(ColorTheoryRoutes)}
     </Routes>
   );

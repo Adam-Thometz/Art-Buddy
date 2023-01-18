@@ -1,38 +1,45 @@
 import freePaintReducer, { INITIAL_STATE } from "./freePaintReducer";
 
-import { setColor, setStencil, setIsErasing, clearGame, setEditStencilMode, setShownOptions } from "./freePaintActions";
+import {
+  setColor,
+  setStencil,
+  setIsErasing,
+  clearGame,
+  setEditStencilMode,
+  setShownOptions,
+} from "./freePaintActions";
 
 describe("Free Paint reducer", () => {
-  it('should return the initial state', () => {
+  it("should return the initial state", () => {
     expect(freePaintReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
 
-  it('should change the color', () => {
-    const result = freePaintReducer(undefined, setColor('blue'));
-    expect(result.color).toBe('blue');
-  });
-  
-  it('should change the shown options', () => {
-    const result = freePaintReducer(undefined, setShownOptions('color'));
-    expect(result.shownOptions).toBe('color');
-  });
-  
-  it('should change the display icon', () => {
-    const result = freePaintReducer(undefined, setStencil('A'));
-    expect(result.stencil).toBe('A');
+  it("should change the color", () => {
+    const result = freePaintReducer(undefined, setColor("blue"));
+    expect(result.color).toBe("blue");
   });
 
-  it('should change the erasing state', () => {
+  it("should change the shown options", () => {
+    const result = freePaintReducer(undefined, setShownOptions("color"));
+    expect(result.shownOptions).toBe("color");
+  });
+
+  it("should change the display icon", () => {
+    const result = freePaintReducer(undefined, setStencil("A"));
+    expect(result.stencil).toBe("A");
+  });
+
+  it("should change the erasing state", () => {
     const result = freePaintReducer(undefined, setIsErasing(true));
     expect(result.isErasing).toBe(true);
   });
 
-  it('should set the stencil edit state', () => {
+  it("should set the stencil edit state", () => {
     const result = freePaintReducer(undefined, setEditStencilMode(true));
     expect(result.isEditingStencil).toBe(true);
   });
 
-  it('should handle resetting', () => {
+  it("should handle resetting", () => {
     const result = freePaintReducer(undefined, clearGame());
     expect(result).toEqual(INITIAL_STATE);
   });

@@ -1,4 +1,11 @@
-import { setColor, setStencil, setIsErasing, clearGame, setEditStencilMode, setShownOptions } from "./freePaintActions";
+import {
+  setColor,
+  setStencil,
+  setIsErasing,
+  clearGame,
+  setEditStencilMode,
+  setShownOptions,
+} from "./freePaintActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
@@ -27,8 +34,8 @@ const freePaintReducer = createReducer(INITIAL_STATE, (builder) => {
       state.isEditingStencil = action.payload;
     })
     .addCase(clearGame, (state) => {
-      state.color = INITIAL_STATE.color; 
-      state.stencil = INITIAL_STATE.stencil; 
+      state.color = INITIAL_STATE.color;
+      state.stencil = INITIAL_STATE.stencil;
       state.isErasing = INITIAL_STATE.isErasing;
       state.isEditingStencil = INITIAL_STATE.isEditingStencil;
     });

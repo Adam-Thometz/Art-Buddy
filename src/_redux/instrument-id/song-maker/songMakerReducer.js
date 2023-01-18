@@ -1,4 +1,11 @@
-import { addInstrument, selectInstrument, selectMelody, clearSong, removeInstrument, toggleLoop } from "./songMakerActions";
+import {
+  addInstrument,
+  selectInstrument,
+  selectMelody,
+  clearSong,
+  removeInstrument,
+  toggleLoop,
+} from "./songMakerActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getInstrument from "_utils/instrument-id/getInstrument";
@@ -6,13 +13,13 @@ import getInstrument from "_utils/instrument-id/getInstrument";
 export const defaultInstrument = {
   instrumentId: null,
   melodyId: null,
-  isRhythm: null
+  isRhythm: null,
 };
 
 export const INITIAL_STATE = {
   song: [defaultInstrument, null, null, null],
   isPlaying: false,
-  currTimer: null
+  currTimer: null,
 };
 
 const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
@@ -30,10 +37,11 @@ const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       const instrument = getInstrument(instrumentId);
       const { isRhythm } = instrument;
       const currInstrument = state.song[id];
-      const isCurrInstrumentRhythm = currInstrument ? currInstrument.isRhythm : !isRhythm;
-      const melodyId = (isCurrInstrumentRhythm === isRhythm)
-        ? state.song[id].melodyId
-        : null;
+      const isCurrInstrumentRhythm = currInstrument
+        ? currInstrument.isRhythm
+        : !isRhythm;
+      const melodyId =
+        isCurrInstrumentRhythm === isRhythm ? state.song[id].melodyId : null;
       const newInstrument = { instrumentId, isRhythm, melodyId };
       state.song[id] = newInstrument;
     })
@@ -41,7 +49,7 @@ const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
       const { id, melodyId } = action.payload;
       const instrumentWithMelody = {
         ...state.song[id],
-        melodyId
+        melodyId,
       };
       state.song[id] = instrumentWithMelody;
     })

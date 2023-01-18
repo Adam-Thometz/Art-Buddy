@@ -1,24 +1,24 @@
-import { setRoster, setVolume, toggleColorBlind, toggleTextToSpeech } from "./settingsActions";
+import {
+  setRoster,
+  setVolume,
+  toggleColorBlind,
+  toggleTextToSpeech,
+} from "./settingsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const demoClass = {
-  name: 'Demo Class',
-  students: [
-    'Mario',
-    'Buzz Lightyear',
-    'Spongebob',
-    'Sonic'
-  ]
+  name: "Demo Class",
+  students: ["Mario", "Buzz Lightyear", "Spongebob", "Sonic"],
 };
 
 export const INITIAL_STATE = {
-  menu: 'games',
+  menu: "games",
   currGame: {},
   timer: null,
   volume: 0,
   textToSpeech: false,
   colorBlind: false,
-  roster: demoClass
+  roster: demoClass,
 };
 
 const mainSettingsReducer = createReducer(INITIAL_STATE, (builder) => {

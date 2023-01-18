@@ -2,7 +2,7 @@ import { changeCurrGame, changeMenu, setCurrTimer } from "./generalActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 export const INITIAL_STATE = {
-  menu: 'games',
+  menu: "games",
   currGame: {},
   timer: null,
 };

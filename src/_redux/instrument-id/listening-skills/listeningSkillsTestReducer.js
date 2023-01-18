@@ -1,4 +1,8 @@
-import { clearChoices, generateAnswer, selectChoice } from "./listeningSkillsTestActions";
+import {
+  clearChoices,
+  generateAnswer,
+  selectChoice,
+} from "./listeningSkillsTestActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import getChoices from "_utils/instrument-id/getChoices";
@@ -21,7 +25,7 @@ const listeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
       } else {
         state.choice1 = instrumentChoice;
         state.choice2 = instrumentChoice2;
-      };
+      }
     })
     .addCase(generateAnswer, (state, action) => {
       const { choice1, choice2 } = action.payload;

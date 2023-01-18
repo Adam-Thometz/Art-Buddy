@@ -1,4 +1,12 @@
-import { changeScale, createWords, fillLetter, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderActions";
+import {
+  changeScale,
+  createWords,
+  fillLetter,
+  clearGame,
+  toggleUpperCase,
+  toggleNote,
+  changeSound,
+} from "./musicDecoderActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
@@ -7,7 +15,7 @@ export const INITIAL_STATE = {
   words: [],
   filledLetters: {},
   scale: 0,
-  sound: 'synth',
+  sound: "synth",
   isUpperCase: true,
   currPlaying: null,
 };
@@ -20,15 +28,18 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
         state.words = INITIAL_STATE.words;
         state.filledLetters = INITIAL_STATE.filledLetters;
         return;
-      };
-      
-      const splitWords = newWords.split(' ');
-      if (newWords.length < state.words.join(' ').length) {
-        const lettersToUnfill = findLettersToRemove({ oldInput: state.words, newInput: splitWords });
+      }
+
+      const splitWords = newWords.split(" ");
+      if (newWords.length < state.words.join(" ").length) {
+        const lettersToUnfill = findLettersToRemove({
+          oldInput: state.words,
+          newInput: splitWords,
+        });
         const newFilledLetters = state.filledLetters;
         for (let letter of lettersToUnfill) newFilledLetters[letter] = false;
         state.filledLetters = newFilledLetters;
-      };
+      }
       state.words = splitWords;
     })
     .addCase(fillLetter, (state, action) => {
