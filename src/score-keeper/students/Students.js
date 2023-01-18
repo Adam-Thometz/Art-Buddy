@@ -1,15 +1,17 @@
 import { useSelector } from "react-redux";
 
-import './Students.css';
+import "./Students.css";
 
 import Student from "./student/Student";
 
 const Students = () => {
-  const { students } = useSelector(state => state.scoreKeeper);
+  const { students } = useSelector((state) => state.scoreKeeper);
 
   return (
     <div className="Students">
-      {students.map(s => <Student key={s.name} name={s.name} points={s.points} />)}
+      {students.map((s) => (
+        <Student key={s.name} name={s.name} points={s.points} />
+      ))}
     </div>
   );
 };

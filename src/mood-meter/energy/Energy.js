@@ -1,21 +1,28 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
-import './Energy.css';
+import "./Energy.css";
 
-import Battery from './battery/Battery';
+import Battery from "./battery/Battery";
 
-import batteries from '_data/mood-meter/batteries';
+import batteries from "_data/mood-meter/batteries";
 
 const Energy = () => {
-  const { energy } = useSelector(state => state.moodMeter);
-  
+  const { energy } = useSelector((state) => state.moodMeter);
+
   return (
-    <section className='Energy'>
+    <section className="Energy">
       <p>How is your energy level?</p>
-      <div className='Energy-batteries'>
-        {batteries.map(battery => {
+      <div className="Energy-batteries">
+        {batteries.map((battery) => {
           const { width, id, filter } = battery;
-          return <Battery key={id} width={width} id={id} filter={id === energy ? filter : null} />;
+          return (
+            <Battery
+              key={id}
+              width={width}
+              id={id}
+              filter={id === energy ? filter : null}
+            />
+          );
         })}
       </div>
     </section>

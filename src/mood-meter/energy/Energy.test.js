@@ -1,13 +1,13 @@
-import Energy from './Energy';
+import Energy from "./Energy";
 
-import { render } from '_testUtils/render';
+import { render } from "_testUtils/render";
 
-describe('Energy component', () => {
-  it('renders without crashing', () => {
+describe("Energy component", () => {
+  it("renders without crashing", () => {
     render(<Energy />);
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     const { asFragment } = render(<Energy />);
     expect(asFragment()).toMatchSnapshot();
   });

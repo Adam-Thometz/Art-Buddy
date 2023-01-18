@@ -10,7 +10,7 @@
 }
 
 .NewRoster-students {
-  border-left: 1px solid #4D4F5E;
+  border-left: 1px solid #4d4f5e;
   width: 70%;
   height: 55vh;
   text-align: left;
@@ -34,9 +34,8 @@
 }
 
 .NewRoster-input::placeholder {
-  font-family: 'Chelsea Market', 'Nunito', sans-serif;
+  font-family: "Chelsea Market", "Nunito", sans-serif;
   font-size: 2.5rem;
-
 }
 
 .NewRoster-buttons {

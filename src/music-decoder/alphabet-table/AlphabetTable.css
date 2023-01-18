@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 100%;
   font-size: 3rem;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
 }
 
@@ -15,35 +15,35 @@
   width: 5vw;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .C {
-  color: #EB3323;
+  color: #eb3323;
 }
 
 .D {
-  color: #E99E0E;
+  color: #e99e0e;
 }
 
 .E {
-  color: #FFFD54;
+  color: #fffd54;
 }
 
 .F {
-  color: #377D22;
+  color: #377d22;
 }
 
 .G {
-  color: #7BC2E0;
+  color: #7bc2e0;
 }
 
 .A {
-  color: #5768FF;
+  color: #5768ff;
 }
 
 .B {
-  color: #751A7C;
+  color: #751a7c;
 }
 
 .playNote {

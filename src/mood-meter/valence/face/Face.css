@@ -1,7 +1,7 @@
 .Face {
-  border: 5px solid #0D0709;
+  border: 5px solid #0d0709;
   border-radius: 50%;
-  background-color: #D4D2D5;
+  background-color: #d4d2d5;
   display: inline-block;
   height: 14vh;
   width: 8vw;
@@ -12,7 +12,7 @@
 }
 
 .selected-face {
-  background-color: #FFE81A;
+  background-color: #ffe81a;
 }
 
 .Face img {

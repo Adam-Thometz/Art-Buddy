@@ -1,13 +1,13 @@
-import ColorBlind from './ColorBlind';
+import ColorBlind from "./ColorBlind";
 
 import { render } from "_testUtils/render";
 
-describe('ColorBlind component', () => {
-  it('renders without crashing', () => {
+describe("ColorBlind component", () => {
+  it("renders without crashing", () => {
     render(<ColorBlind />);
   });
 
-  it('matches the snapshot of ColorBlind', () => {
+  it("matches the snapshot of ColorBlind", () => {
     const { asFragment } = render(<ColorBlind />);
     expect(asFragment()).toMatchSnapshot();
   });

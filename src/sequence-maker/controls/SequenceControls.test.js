@@ -1,13 +1,13 @@
-import SequenceControls from './SequenceControls';
+import SequenceControls from "./SequenceControls";
 
-import { render } from '_testUtils/render';
+import { render } from "_testUtils/render";
 
-describe('SequenceControls component', () => {
-  it('renders without crashing', () => {
+describe("SequenceControls component", () => {
+  it("renders without crashing", () => {
     render(<SequenceControls />);
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     const { asFragment } = render(<SequenceControls />);
     expect(asFragment()).toMatchSnapshot();
   });

@@ -19,12 +19,12 @@ import createSounds from "_utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
   const [hasVisited, setHasVisited] = useVisited(sequenceMaker.lsKey);
-  const { currGame } = useSelector(state => state.general);
-  const { volume } = useSelector(state => state.settings);
-  const { sequence } = useSelector(state => state.sequenceMaker);
+  const { currGame } = useSelector((state) => state.general);
+  const { volume } = useSelector((state) => state.settings);
+  const { sequence } = useSelector((state) => state.sequenceMaker);
   const { setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(changeCurrGame(sequenceMaker));
     return () => {
@@ -36,18 +36,24 @@ const SequenceMaker = () => {
 
   useEffect(() => {
     setPlayFn(() => createSounds(sequence, volume));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sequence, volume]);
 
-  return (<>
-    <WindowNavbar page={currGame.name} />
-    {!hasVisited ? <Instructions setVisited={setHasVisited} /> : (<>
-      <SequenceControls />
-      <SoundOptions />
-      <Sequence />
-      <SequencePlayReset />
-    </>)}
-  </>);
+  return (
+    <>
+      <WindowNavbar page={currGame.name} />
+      {!hasVisited ? (
+        <Instructions setVisited={setHasVisited} />
+      ) : (
+        <>
+          <SequenceControls />
+          <SoundOptions />
+          <Sequence />
+          <SequencePlayReset />
+        </>
+      )}
+    </>
+  );
 };
 
 export default SequenceMaker;
