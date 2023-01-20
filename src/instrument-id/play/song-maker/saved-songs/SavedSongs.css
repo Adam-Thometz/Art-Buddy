@@ -10,7 +10,7 @@
 }
 
 .SavedSongs-song-list {
-  border-left: 1px solid #4D4F5E;
+  border-left: 1px solid #4d4f5e;
   width: 70%;
   text-align: left;
   padding: 0 5%;
@@ -27,5 +27,5 @@
 }
 
 .selected {
-  background-color: #4D4F5E;
+  background-color: #4d4f5e;
 }

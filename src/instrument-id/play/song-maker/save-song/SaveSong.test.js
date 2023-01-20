@@ -4,23 +4,25 @@ import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-describe('SaveSong component', () => {
-  it('renders without crashing', () => {
+describe("SaveSong component", () => {
+  it("renders without crashing", () => {
     render(<SaveSong />);
   });
-  
-  it('matches snapshot', () => {
+
+  it("matches snapshot", () => {
     const { asFragment } = render(<SaveSong />);
     expect(asFragment()).toMatchSnapshot();
   });
-  
-  it('saves a song and provides feedback', () => {
+
+  it("saves a song and provides feedback", () => {
     render(<SaveSong />);
-    const input = screen.getByText('Song Title');
-    userEvent.type(input, 'My super awesome song!');
-    const submit = screen.getByText('SAVE');
+    const input = screen.getByText("Song Title");
+    userEvent.type(input, "My super awesome song!");
+    const submit = screen.getByText("SAVE");
     userEvent.click(submit);
-    expect(screen.getByText('Song Saved!')).toBeInTheDocument();
-    expect(screen.queryByDisplayValue('My super awesome song!')).not.toBeInTheDocument();
+    expect(screen.getByText("Song Saved!")).toBeInTheDocument();
+    expect(
+      screen.queryByDisplayValue("My super awesome song!")
+    ).not.toBeInTheDocument();
   });
 });

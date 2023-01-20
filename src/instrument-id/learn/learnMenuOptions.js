@@ -1,38 +1,45 @@
-import { trumpetIcon, synthIcon, drumSetIcon, harpIcon, clarinetIcon, voiceMainIcon } from "_media/instrument-id/_icons/iconImports";
+import {
+  trumpetIcon,
+  synthIcon,
+  drumSetIcon,
+  harpIcon,
+  clarinetIcon,
+  voiceMainIcon,
+} from "_media/instrument-id/_icons/iconImports";
 
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const learnMenuOptions = [
   {
-    name: 'BRASS',
+    name: "BRASS",
     icon: trumpetIcon,
-    url: `${instrumentIdUrls.learn}/brass`
+    url: `${instrumentIdUrls.learn}/brass`,
   },
   {
-    name: 'ELECTRONIC',
+    name: "ELECTRONIC",
     icon: synthIcon,
-    url: `${instrumentIdUrls.learn}/electronic`
+    url: `${instrumentIdUrls.learn}/electronic`,
   },
   {
-    name: 'PERCUSSION',
+    name: "PERCUSSION",
     icon: drumSetIcon,
-    url: `${instrumentIdUrls.learn}/percussion`
+    url: `${instrumentIdUrls.learn}/percussion`,
   },
   {
-    name: 'STRINGS',
+    name: "STRINGS",
     icon: harpIcon,
-    url: `${instrumentIdUrls.learn}/strings`
+    url: `${instrumentIdUrls.learn}/strings`,
   },
   {
-    name: 'WOODWIND',
+    name: "WOODWIND",
     icon: clarinetIcon,
-    url: `${instrumentIdUrls.learn}/woodwind`
+    url: `${instrumentIdUrls.learn}/woodwind`,
   },
   {
-    name: 'VOICE',
+    name: "VOICE",
     icon: voiceMainIcon,
-    url: `${instrumentIdUrls.learn}/voice`
-  }
-]
+    url: `${instrumentIdUrls.learn}/voice`,
+  },
+];
 
 export default learnMenuOptions;

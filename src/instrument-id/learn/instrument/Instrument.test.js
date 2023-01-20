@@ -2,24 +2,24 @@ import Instrument from "./Instrument";
 
 import { render } from "_testUtils/render";
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
   useParams: () => ({
-    family: 'brass',
-    instrument: 'trumpet'
-  })
+    family: "brass",
+    instrument: "trumpet",
+  }),
 }));
-jest.mock('tone', () => ({
+jest.mock("tone", () => ({
   Buffer: jest.fn(),
-  Transport: { stop: jest.fn() }
+  Transport: { stop: jest.fn() },
 }));
 
-describe('Instrument component', () => {
-  it('renders without crashing', () => {
+describe("Instrument component", () => {
+  it("renders without crashing", () => {
     render(<Instrument />);
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     const { asFragment } = render(<Instrument />);
     expect(asFragment()).toMatchSnapshot();
   });

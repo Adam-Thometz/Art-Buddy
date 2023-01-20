@@ -3,15 +3,19 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
 
-import './Choice.css';
+import "./Choice.css";
 
 import Icon from "_components/icon/Icon";
 
-import { correctIcon, incorrectIcon, swap } from "_media/instrument-id/_icons/iconImports";
+import {
+  correctIcon,
+  incorrectIcon,
+  swap,
+} from "_media/instrument-id/_icons/iconImports";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
 const Choice = ({ id, level, choice, save }) => {
-  const { answer } = useSelector(state => state.listeningSkillsTest);
+  const { answer } = useSelector((state) => state.listeningSkillsTest);
   const [isCorrect, setIsCorrect] = useState(null);
   const dispatch = useDispatch();
 
@@ -21,17 +25,20 @@ const Choice = ({ id, level, choice, save }) => {
     setIsCorrect(result);
 
     if (result) {
-      save(reportCard => {
-        const updatedGrade = updateReportCard({ group: reportCard[family].results, name });
+      save((reportCard) => {
+        const updatedGrade = updateReportCard({
+          group: reportCard[family].results,
+          name,
+        });
         return {
           ...reportCard,
-          [family]: { 
+          [family]: {
             ...reportCard[family],
-            results: updatedGrade
-          }
-        }; 
+            results: updatedGrade,
+          },
+        };
       });
-    };
+    }
 
     const timer = setTimeout(() => {
       if (result) dispatch(selectChoice({ id, level, choice: family }));
@@ -40,27 +47,37 @@ const Choice = ({ id, level, choice, save }) => {
     }, 2000);
   };
 
-  const swapInstrument = () => dispatch(selectChoice({ id, level, choice: choice.family }));  
+  const swapInstrument = () =>
+    dispatch(selectChoice({ id, level, choice: choice.family }));
 
-  const isCorrectClass = isCorrect !== null
-    ? isCorrect
-      ? ' correct'
-      : ' incorrect'
-    : '';
+  const isCorrectClass =
+    isCorrect !== null ? (isCorrect ? " correct" : " incorrect") : "";
 
-  const isCorrectWrapper = isCorrect !== null
-    ? isCorrect
-      ? <Icon size="150px" icon={correctIcon} text='CORRECT' />
-      : <Icon size="150px" icon={incorrectIcon} text='INCORRECT' />
-    : null;
+  const isCorrectWrapper =
+    isCorrect !== null ? (
+      isCorrect ? (
+        <Icon size="150px" icon={correctIcon} text="CORRECT" />
+      ) : (
+        <Icon size="150px" icon={incorrectIcon} text="INCORRECT" />
+      )
+    ) : null;
 
   return (
-    <div className='Choice'>
-      <div className={`Choice-wrapper${isCorrectClass}`} data-testid='isCorrect'>
+    <div className="Choice">
+      <div
+        className={`Choice-wrapper${isCorrectClass}`}
+        data-testid="isCorrect"
+      >
         {isCorrectWrapper}
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />
-      <Icon icon={swap} text='SWAP' size="30px" onClick={swapInstrument} otherImgStyles={{ marginTop: '24px' }} />
+      <Icon
+        icon={swap}
+        text="SWAP"
+        size="30px"
+        onClick={swapInstrument}
+        otherImgStyles={{ marginTop: "24px" }}
+      />
     </div>
   );
 };

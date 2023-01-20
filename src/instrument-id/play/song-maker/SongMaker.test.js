@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 
 import { instrumentIdUrls } from "_routes/routeUrls";
 
-jest.mock('tone', () => ({
+jest.mock("tone", () => ({
   Transport: { stop: jest.fn() },
   Time: jest.fn(() => ({ toSeconds: jest.fn() })),
   Buffer: jest.fn(),
@@ -15,73 +15,75 @@ jest.mock('tone', () => ({
     toDestination: jest.fn(() => ({
       urls,
       triggerAttackRelease: jest.fn((note, duration, time) => ({
-        note, duration, time
-      }))
-    }))
+        note,
+        duration,
+        time,
+      })),
+    })),
   })),
 }));
 
-describe('SongMaker component', () => {
-  it('renders without crashing', () => {
+describe("SongMaker component", () => {
+  it("renders without crashing", () => {
     render(<SongMaker />);
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     const { asFragment } = render(<SongMaker />);
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('selects melodies', () => {
+  it("selects melodies", () => {
     render(<SongMaker />);
-    const instrumentDropdown = screen.getByText('INSTRUMENT');
+    const instrumentDropdown = screen.getByText("INSTRUMENT");
     userEvent.click(instrumentDropdown);
-    const instrumentOption = screen.getByText('VIOLIN');
+    const instrumentOption = screen.getByText("VIOLIN");
     userEvent.click(instrumentOption);
-    expect(screen.getByText('MELODY')).toBeInTheDocument();
-    
-    const melodyDropdown = screen.getByText('MELODY');
+    expect(screen.getByText("MELODY")).toBeInTheDocument();
+
+    const melodyDropdown = screen.getByText("MELODY");
     userEvent.click(melodyDropdown);
-    const melodyOption = screen.getByText('BABY SHARK');
+    const melodyOption = screen.getByText("BABY SHARK");
     userEvent.click(melodyOption);
-    expect(screen.queryByText('MELODY')).not.toBeInTheDocument();
+    expect(screen.queryByText("MELODY")).not.toBeInTheDocument();
   });
-  
-  it('selects rhythms', () => {
+
+  it("selects rhythms", () => {
     render(<SongMaker />);
-    const addInstrumentBtns = screen.getAllByText('ADD INSTRUMENT');
+    const addInstrumentBtns = screen.getAllByText("ADD INSTRUMENT");
     userEvent.click(addInstrumentBtns[0]);
-    expect(screen.getAllByText('INSTRUMENT')[1]).toBeInTheDocument();
+    expect(screen.getAllByText("INSTRUMENT")[1]).toBeInTheDocument();
 
-    const instrumentDropdown = screen.getAllByText('INSTRUMENT')[1];
+    const instrumentDropdown = screen.getAllByText("INSTRUMENT")[1];
     userEvent.click(instrumentDropdown);
-    const instrumentOption = screen.getByText('DRUM SET');
+    const instrumentOption = screen.getByText("DRUM SET");
     userEvent.click(instrumentOption);
-    expect(screen.getByText('RHYTHM')).toBeInTheDocument();
+    expect(screen.getByText("RHYTHM")).toBeInTheDocument();
 
-    const rhythmDropdown = screen.getByText('RHYTHM');
+    const rhythmDropdown = screen.getByText("RHYTHM");
     userEvent.click(rhythmDropdown);
-    const rhythmOption = screen.getByText('REGULAR');
+    const rhythmOption = screen.getByText("REGULAR");
     userEvent.click(rhythmOption);
-    expect(screen.queryByText('RHYTHM')).not.toBeInTheDocument();
+    expect(screen.queryByText("RHYTHM")).not.toBeInTheDocument();
   });
-  
-  it('saves a song', async () => {
+
+  it("saves a song", async () => {
     // below is essentially rendering the SongMaker. This is to get the Popup
     render(<App />, { initialRoutes: [instrumentIdUrls.playSongMaker] });
-    const saveBtn = screen.getByText('SAVE');
+    const saveBtn = screen.getByText("SAVE");
     userEvent.click(saveBtn);
-    expect(await screen.findByText('SAVE SONG')).toBeInTheDocument();
-    
-    const input = screen.getByLabelText('Song Title');
-    userEvent.type(input, 'Regular Baby');
-    const submit = screen.getAllByText('SAVE')[0];
+    expect(await screen.findByText("SAVE SONG")).toBeInTheDocument();
+
+    const input = screen.getByLabelText("Song Title");
+    userEvent.type(input, "Regular Baby");
+    const submit = screen.getAllByText("SAVE")[0];
     userEvent.click(submit);
-    expect(screen.getByText('Song Saved!')).toBeInTheDocument();
-    
-    const close = screen.getByText('CLOSE');
+    expect(screen.getByText("Song Saved!")).toBeInTheDocument();
+
+    const close = screen.getByText("CLOSE");
     userEvent.click(close);
-    const savedSongs = screen.getByText('SAVED SONGS');
+    const savedSongs = screen.getByText("SAVED SONGS");
     userEvent.click(savedSongs);
-    expect(screen.getByText('Regular Baby')).toBeInTheDocument();
+    expect(screen.getByText("Regular Baby")).toBeInTheDocument();
   });
 });

@@ -2,19 +2,19 @@ import LearnFamilyPage from "./LearnFamilyPage";
 
 import { render } from "_testUtils/render";
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
   useParams: () => ({
-    family: 'brass'
-  })
+    family: "brass",
+  }),
 }));
 
-describe('LearnFamilyPage component', () => {
-  it('renders without crashing', () => {
+describe("LearnFamilyPage component", () => {
+  it("renders without crashing", () => {
     render(<LearnFamilyPage />);
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     const { asFragment } = render(<LearnFamilyPage />);
     expect(asFragment()).toMatchSnapshot();
   });

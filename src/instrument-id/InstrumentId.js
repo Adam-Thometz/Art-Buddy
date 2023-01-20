@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import './InstrumentId.css';
+import "./InstrumentId.css";
 
 import WindowNavbar from "../_components/window-nav/WindowNavbar";
 import Icon from "_components/icon/Icon";
@@ -17,8 +17,11 @@ const InstrumentId = () => {
 
   return (
     <main className="InstrumentId">
-      <WindowNavbar page='INSTRUMENT ID' />
-      <p className="InstrumentId-instructions">Let's learn about instruments! Click LEARN to review your instrument knowledge. Click PLAY to test your skills</p>
+      <WindowNavbar page="INSTRUMENT ID" />
+      <p className="InstrumentId-instructions">
+        Let's learn about instruments! Click LEARN to review your instrument
+        knowledge. Click PLAY to test your skills
+      </p>
       <Options width="50%">
         <Icon largeFont icon={learnIcon} text="LEARN" onClick={goToLearn} />
         <Icon largeFont icon={playIcon} text="PLAY" onClick={goToPlay} />
