@@ -7,50 +7,62 @@ exports[`ColorWheel component matches snapshot 1`] = `
   >
     <div
       class="ColorWheel-color"
+      id="yellow"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="dandelion"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="orange"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="tangelo"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="red"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="plum"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="violet"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="blueberry"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="blue"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="emerald"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="green"
       style="background-color: rgb(217, 217, 217);"
     />
     <div
       class="ColorWheel-color"
+      id="pear"
       style="background-color: rgb(217, 217, 217);"
     />
   </div>

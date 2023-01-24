@@ -1,140 +1,192 @@
-export const COLOR_THEORY_LEVELS = ['primary', 'secondary', 'tertiary'];
+export const COLOR_THEORY_LEVELS = ["primary", "secondary", "tertiary"];
 
 const levels = {
   primary: {
-    A: {
-      stages: [
-        {
-          direction: 'Click on the three primary colors',
-          colorText: null,
-          colorsToToggle: [],
-          groupsToToggle: ['primary'],
-          toggleAll: false,
-          answers: ['yellow', 'blue', 'red'],
+    A: [
+      {
+        colorWheelState: {
+          colors: [],
+          groups: ["primary"],
         },
-      ]
-    },
-    B: {
-      stages: [
-        {
-          direction: 'Click on the three primary colors',
-          colorText: null,
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['yellow', 'blue', 'red'],
-        }
-      ]
-    }
+        task: {
+          direction: "Click on the three primary colors",
+          colorText: "",
+          answers: ["yellow", "blue", "red"],
+          showAnswers: true,
+        },
+      },
+    ],
+    B: [
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the three primary colors",
+          colorText: "",
+          answers: ["yellow", "blue", "red"],
+          showAnswers: true,
+        },
+      },
+    ],
   },
   secondary: {
-    A: {
-      stages: [
-        {
-          direction: 'Click on the three secondary colors',
-          colorText: null,
-          colorsToToggle: [],
-          groupsToToggle: ['secondary'],
-          toggleAll: false,
-          answers: ['green', 'orange', 'violet'],
-        }
-      ]
-    },
-    B: {
-      stages: [
-        {
-          direction: 'Click on the 2 primary colors that make:',
-          colorText: 'green',
-          colorsToToggle: ['green'],
-          groupsToToggle: ['secondary'],
-          toggleAll: false,
-          answers: ['yellow', 'blue'],
+    A: [
+      {
+        colorWheelState: {
+          colors: [],
+          groups: ["primary", "secondary"],
         },
-        {
-          direction: 'Click on the 2 primary colors that make:',
-          colorText: 'orange',
-          colorsToToggle: ['orange'],
-          groupsToToggle: ['secondary'],
-          toggleAll: false,
-          answers: ['yellow', 'red'],
+        task: {
+          direction: "Click on the three secondary colors",
+          colorText: "",
+          answers: ["green", "orange", "violet"],
+          showAnswers: true,
         },
-        {
-          direction: 'Click on the 2 primary colors that make:',
-          colorText: 'violet',
-          colorsToToggle: ['violet'],
-          groupsToToggle: ['secondary'],
-          toggleAll: false,
-          answers: ['blue', 'red'],
+      },
+    ],
+    B: [
+      {
+        colorWheelState: {
+          colors: ["green"],
+          groups: ["primary"],
         },
-      ]
-    },
+        task: {
+          direction: "Click on the 2 primary colors that make:",
+          colorText: "green",
+          answers: ["yellow", "blue"],
+          showAnswers: false,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: ["orange"],
+          groups: ["primary"],
+        },
+        task: {
+          direction: "Click on the 2 primary colors that make:",
+          colorText: "orange",
+          answers: ["yellow", "red"],
+          showAnswers: false,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: ["violet"],
+          groups: ["primary"],
+        },
+        task: {
+          direction: "Click on the 2 primary colors that make:",
+          colorText: "violet",
+          answers: ["blue", "red"],
+          showAnswers: false,
+        },
+      },
+    ],
   },
   tertiary: {
-    A: {
-      stages: [
-        {
-          direction: 'Click on the six tertiary colors',
-          colorText: null,
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['pear', 'emerald', 'blueberry', 'plum', 'tangelo', 'dandelion'],
-        }
-      ]
-    },
-    B: {
-      stages: [
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'pear',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['yellow', 'green'],
+    A: [
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
         },
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'emerald',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['green', 'blue'],
+        task: {
+          direction: "Click on 3 tertiary colors",
+          colorText: "",
+          answers: ["pear", "emerald", "blueberry"],
+          showAnswers: true,
         },
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'blueberry',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['green', 'violet'],
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
         },
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'plum',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['violet', 'red'],
+        task: {
+          direction: "Click on three tertiary colors",
+          colorText: "",
+          answers: ["plum", "tangelo", "dandelion"],
+          showAnswers: true,
         },
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'tangelo',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['red', 'orange'],
+      },
+    ],
+    B: [
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
         },
-        {
-          direction: 'Click on the 2 colors that make:',
-          colorText: 'dandelion',
-          colorsToToggle: [],
-          groupsToToggle: [],
-          toggleAll: true,
-          answers: ['orange', 'yellow'],
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "pear",
+          answers: ["yellow", "green"],
+          showAnswers: true,
         },
-      ]
-    },
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "emerald",
+          answers: ["green", "blue"],
+          showAnswers: true,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "blueberry",
+          answers: ["blue", "violet"],
+          showAnswers: true,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "plum",
+          answers: ["violet", "red"],
+          showAnswers: true,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "tangelo",
+          answers: ["red", "orange"],
+          showAnswers: true,
+        },
+      },
+      {
+        colorWheelState: {
+          colors: [],
+          groups: [],
+        },
+        task: {
+          direction: "Click on the two colors that make",
+          colorText: "dandelion",
+          answers: ["orange", "yellow"],
+          showAnswers: true,
+        },
+      },
+    ],
   },
-}
+};
 
 export default levels;

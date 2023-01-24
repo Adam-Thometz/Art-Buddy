@@ -19,56 +19,68 @@ exports[`LearnColors component matches snapshot 1`] = `
     >
       <div
         class="ColorWheel-color"
+        id="yellow"
         style="background-color: rgb(254, 238, 29);"
       >
         yellow
       </div>
       <div
         class="ColorWheel-color"
+        id="dandelion"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="orange"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="tangelo"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="red"
         style="background-color: rgb(238, 32, 36);"
       >
         red
       </div>
       <div
         class="ColorWheel-color"
+        id="plum"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="violet"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="blueberry"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="blue"
         style="background-color: rgb(66, 102, 180);"
       >
         blue
       </div>
       <div
         class="ColorWheel-color"
+        id="emerald"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="green"
         style="background-color: rgb(217, 217, 217);"
       />
       <div
         class="ColorWheel-color"
+        id="pear"
         style="background-color: rgb(217, 217, 217);"
       />
     </div>

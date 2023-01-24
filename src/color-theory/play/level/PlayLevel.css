@@ -5,6 +5,33 @@
 
 .PlayLevel-question {
   text-align: left;
-  font-size: 2rem;
-  width: 50%;
+  font-size: 2.5rem;
+  /* width: 50%; */
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.PlayLevel-question-color {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.75rem;
+}
+
+.PlayLevel-answer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.PlayLevel-target-color {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import {
@@ -7,34 +7,99 @@ import {
   toggleAllColors,
   toggleColor,
   toggleGroup,
+  toggleText,
 } from "_redux/color-theory/colorTheoryActions";
 
 import "./PlayLevel.css";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import ColorWheel from "color-theory/color-wheel/ColorWheel";
+import Button from "_components/button/Button";
 
-import levels, { COLOR_THEORY_LEVELS } from "_data/color-theory/levels";
+import levels from "_data/color-theory/levels";
+import correctIcon from "_media/color-theory/correct.png";
+import incorrectIcon from "_media/color-theory/incorrect.png";
+import { colorTheoryUrls } from "_routes/routeUrls";
 
 const PlayLevel = () => {
   const { level } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [subLevel, setSubLevel] = useState("A");
   const [section, setSection] = useState(0);
+  const [answerIdx, setAnswerIdx] = useState(0);
+  const [gotIncorrect, setGotIncorrect] = useState(false);
 
-  const category = COLOR_THEORY_LEVELS[level - 1];
-  const stage = levels[category][subLevel].stages[section];
+  const category = Object.keys(levels)[level - 1];
+  const { colorWheelState, task } = levels[category][subLevel][section];
 
   useEffect(() => {
-    const { colorsToToggle, groupsToToggle, toggleAll } = stage;
-    if (toggleAll) {
+    const { colors, groups } = colorWheelState;
+    if (!colors.length && !groups.length) {
       dispatch(toggleAllColors());
     } else {
-      colorsToToggle.forEach((color) => dispatch(toggleColor(color)));
-      groupsToToggle.forEach((group) => dispatch(toggleGroup(group)));
+      colors.forEach((color) => dispatch(toggleColor(color)));
+      groups.forEach((group) => dispatch(toggleGroup(group)));
     }
+
     return () => dispatch(clearWheel());
-  }, [dispatch, stage]);
+  }, [dispatch, colorWheelState, task]);
+
+  useEffect(() => {}, [subLevel]);
+
+  const update = (e) => {
+    const answer = task.answers[answerIdx];
+    const selected = e.target.id;
+    if (answer === selected) {
+      setAnswerIdx((answer) => answer + 1);
+      dispatch(toggleText(answer));
+      setGotIncorrect(false);
+    } else {
+      setGotIncorrect(true);
+    }
+  };
+
+  const goToNextLevel = () => {
+    if (section < levels[category][subLevel].length - 1) {
+      setSection((section) => section + 1);
+      setAnswerIdx(0);
+    } else if (subLevel === "A" && answerIdx === answers.length) {
+      setSubLevel("B");
+      setAnswerIdx(0);
+    } else {
+      navigate(`${colorTheoryUrls.playMain}/${+level + 1}`);
+      setSubLevel("A");
+      setSection(0);
+      setAnswerIdx(0);
+    }
+  };
+
+  const { direction, colorText, answers, showAnswers } = task;
+
+  const answerDisplay = answers
+    .slice(0, answerIdx + (showAnswers ? 1 : 0))
+    .map((answer, i) => {
+      let src;
+      let text;
+      if (i < answerIdx) {
+        src = correctIcon;
+        text = "Correct!";
+      } else if (i === answerIdx && gotIncorrect) {
+        src = incorrectIcon;
+        text = "Try again";
+      } else {
+        src = null;
+        text = null;
+      }
+      return (
+        <div className="PlayLevel-answer">
+          <span className={`PlayLevel-question-color ${answer}`}>{answer}</span>
+          <span>
+            <img src={src} alt="" /> {text}
+          </span>
+        </div>
+      );
+    });
 
   return (
     <>
@@ -44,8 +109,21 @@ const PlayLevel = () => {
         {subLevel}
       </span>
       <main className="PlayLevel">
-        <ColorWheel />
-        <section className="PlayLevel-question">{stage.direction}</section>
+        <ColorWheel update={update} />
+        <section className="PlayLevel-question">
+          <p>{direction}</p>
+          <div className="PlayLevel-target-color">
+            <span className={`PlayLevel-question-color ${colorText}`}>
+              {colorText}
+            </span>
+          </div>
+          {answerDisplay}
+          {answerIdx === answers.length && (
+            <Button colorId={0} onClick={goToNextLevel}>
+              NEXT LEVEL
+            </Button>
+          )}
+        </section>
       </main>
     </>
   );
