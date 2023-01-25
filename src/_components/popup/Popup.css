@@ -43,3 +43,8 @@
 .Popup-close span {
   font-size: 1.5rem;
 }
+
+.confetti {
+  background-image: url(../../_media/_general/confetti.png);
+  background-size: contain;
+}

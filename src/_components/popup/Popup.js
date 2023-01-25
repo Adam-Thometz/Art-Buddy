@@ -21,7 +21,9 @@ const Popup = () => {
 
   return currPopup ? (
     <main className="Popup" onClick={handleSetTrigger}>
-      <section className="Popup-box">
+      <section
+        className={`Popup-box${currPopup.showConfetti ? " confetti" : ""}`}
+      >
         <header className="Popup-header">
           <h1>{currPopup.title}</h1>
           <aside className="Popup-close" onClick={handleSetTrigger}>
