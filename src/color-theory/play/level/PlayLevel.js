@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { PopupContext } from "_context/PopupContext";
 
 import { useDispatch } from "react-redux";
 import {
@@ -13,8 +14,9 @@ import {
 import "./PlayLevel.css";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
-import ColorWheel from "color-theory/color-wheel/ColorWheel";
+import Finished from "_components/popup/finished/Finished";
 import Button from "_components/button/Button";
+import ColorWheel from "color-theory/color-wheel/ColorWheel";
 
 import levels from "_data/color-theory/levels";
 import correctIcon from "_media/color-theory/correct.png";
@@ -23,6 +25,7 @@ import { colorTheoryUrls } from "_routes/routeUrls";
 
 const PlayLevel = () => {
   const { level } = useParams();
+  const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [subLevel, setSubLevel] = useState("A");
@@ -66,6 +69,19 @@ const PlayLevel = () => {
     } else if (subLevel === "A" && answerIdx === answers.length) {
       setSubLevel("B");
       setAnswerIdx(0);
+    } else if (+level === 3) {
+      setCurrPopup({
+        title: "COLOR THEORY",
+        popup: (
+          <Finished
+            gameId="colorTheory"
+            gameName="Color Theory Game"
+            prize="colors"
+            findPrizeIn="Free Paint"
+          />
+        ),
+        showConfetti: true,
+      });
     } else {
       navigate(`${colorTheoryUrls.playMain}/${+level + 1}`);
       setSubLevel("A");
