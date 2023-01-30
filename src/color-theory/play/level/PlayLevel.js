@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { PopupContext } from "_context/PopupContext";
+import useReportCard from "_hooks/report-card/useReportCard";
 
 import { useDispatch } from "react-redux";
 import {
@@ -22,19 +23,25 @@ import levels from "_data/color-theory/levels";
 import correctIcon from "_media/color-theory/correct.png";
 import incorrectIcon from "_media/color-theory/incorrect.png";
 import { colorTheoryUrls } from "_routes/routeUrls";
+import updateReportCard from "_utils/_report-card/updateReportCard";
 
 const PlayLevel = () => {
   const { level } = useParams();
   const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [subLevel, setSubLevel] = useState("A");
-  const [section, setSection] = useState(0);
-  const [answerIdx, setAnswerIdx] = useState(0);
-  const [gotIncorrect, setGotIncorrect] = useState(false);
+  const [levelState, setLevelState] = useState({
+    subLevel: "A",
+    section: 0,
+    answerIdx: 0,
+    gotIncorrect: false,
+  });
+  const [, setReportCard] = useReportCard("colorTheory");
 
   const category = Object.keys(levels)[level - 1];
+  const { answerIdx, gotIncorrect, subLevel, section } = levelState;
   const { colorWheelState, task } = levels[category][subLevel][section];
+  const { direction, colorText, answers, showAnswers } = task;
 
   useEffect(() => {
     const { colors, groups } = colorWheelState;
@@ -48,27 +55,60 @@ const PlayLevel = () => {
     return () => dispatch(clearWheel());
   }, [dispatch, colorWheelState, task]);
 
-  useEffect(() => {}, [subLevel]);
-
-  const update = (e) => {
+  const updateAnswer = (e) => {
     const answer = task.answers[answerIdx];
     const selected = e.target.id;
     if (answer === selected) {
-      setAnswerIdx((answer) => answer + 1);
       dispatch(toggleText(answer));
-      setGotIncorrect(false);
+      setLevelState((level) => ({
+        ...level,
+        answerIdx: level.answerIdx + 1,
+        gotIncorrect: false,
+      }));
     } else {
-      setGotIncorrect(true);
+      setLevelState((level) => ({
+        ...level,
+        gotIncorrect: true,
+      }));
     }
   };
 
+  const handleReportCard = () => {
+    setReportCard((reportCard) => {
+      const key = category + subLevel;
+      const toAdd = colorText ? colorText : answers;
+      const result = {
+        ...reportCard,
+        [key]: {
+          ...reportCard[key],
+          results: updateReportCard({
+            group: reportCard[key].results,
+            name: toAdd,
+          }),
+        },
+      };
+      return result;
+    });
+  };
+
   const goToNextLevel = () => {
+    handleReportCard();
+    // go to next section of sublevel
     if (section < levels[category][subLevel].length - 1) {
-      setSection((section) => section + 1);
-      setAnswerIdx(0);
+      setLevelState((level) => ({
+        ...level,
+        section: section + 1,
+        answerIdx: 0,
+      }));
+      // go to next sublevel
     } else if (subLevel === "A" && answerIdx === answers.length) {
-      setSubLevel("B");
-      setAnswerIdx(0);
+      setLevelState((level) => ({
+        ...level,
+        subLevel: "B",
+        section: 0,
+        answerIdx: 0,
+      }));
+      // flash finish if at the end
     } else if (+level === 3) {
       setCurrPopup({
         title: "COLOR THEORY",
@@ -82,15 +122,17 @@ const PlayLevel = () => {
         ),
         showConfetti: true,
       });
+      // go to the next level
     } else {
+      setLevelState((level) => ({
+        ...level,
+        subLevel: "A",
+        section: 0,
+        answerIdx: 0,
+      }));
       navigate(`${colorTheoryUrls.playMain}/${+level + 1}`);
-      setSubLevel("A");
-      setSection(0);
-      setAnswerIdx(0);
     }
   };
-
-  const { direction, colorText, answers, showAnswers } = task;
 
   const answerDisplay = answers
     .slice(0, answerIdx + (showAnswers ? 1 : 0))
@@ -125,7 +167,7 @@ const PlayLevel = () => {
         {subLevel}
       </span>
       <main className="PlayLevel">
-        <ColorWheel update={update} />
+        <ColorWheel update={updateAnswer} />
         <section className="PlayLevel-question">
           <p>{direction}</p>
           <div className="PlayLevel-target-color">
