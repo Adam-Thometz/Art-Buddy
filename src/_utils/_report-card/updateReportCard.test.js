@@ -13,4 +13,14 @@ describe("updateReportCard", () => {
     group.push("TRUMPET");
     expect(updateReportCard({ group, name })).toEqual(group);
   });
+
+  it("should work with arrays", () => {
+    const nameArr = ["TROMBONE", "TUBA", "FRENCH HORN"];
+    expect(updateReportCard({ group, name: nameArr })).toEqual([
+      "TRUMPET",
+      "TROMBONE",
+      "TUBA",
+      "FRENCH HORN",
+    ]);
+  });
 });
