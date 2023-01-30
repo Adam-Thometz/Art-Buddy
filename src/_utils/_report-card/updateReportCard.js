@@ -4,5 +4,7 @@
 */
 
 export default function updateReportCard({ group, name }) {
-  return [...new Set([...group, name])];
+  const update = new Set([...group]);
+  Array.isArray(name) ? name.forEach((n) => update.add(n)) : update.add(name);
+  return [...update];
 }
