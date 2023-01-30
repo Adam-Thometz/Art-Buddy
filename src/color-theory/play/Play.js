@@ -37,9 +37,11 @@ const Play = () => {
       popup: <ReportCard game="colorTheory" />,
     });
 
-  const levels = COLOR_THEORY_LEVELS.map((level, i) => {
+  const levels = COLOR_THEORY_LEVELS.map((level, i, arr) => {
     const goToTest = () => navigate(`${colorTheoryUrls.playMain}/${i + 1}`);
-    const unlocked = i === 0 || checkHasPassed(reportCard);
+    const unlocked =
+      i === 0 ||
+      checkHasPassed(reportCard, [`${arr[i - 1]}A`, `${arr[i - 1]}B`]);
     return (
       <div key={level} className="Play-level">
         <Button
