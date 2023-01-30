@@ -130,7 +130,7 @@ const PlayLevel = () => {
         section: 0,
         answerIdx: 0,
       }));
-      navigate(`${colorTheoryUrls.playMain}/${+level + 1}`);
+      navigate(`${colorTheoryUrls.playMain}/${+level + 1}`, { replace: true });
     }
   };
 
