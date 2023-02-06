@@ -45,7 +45,7 @@ describe("ControlBar component", () => {
     const black = screen.getByTestId("color-option-#000000");
     userEvent.click(black);
     const style = window.getComputedStyle(pencilBtn);
-    // both values below refer to red. color gives result in rgb and borderColor gives result in hex
+    // both values below refer to black. color gives result in rgb and borderColor gives result in hex
     expect(style.color).toBe("rgb(0, 0, 0)");
     expect(style.borderColor).toBe("#000000");
   });
