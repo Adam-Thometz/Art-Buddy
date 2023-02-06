@@ -1,11 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setColor, setIsErasing } from "_redux/free-paint/freePaintActions";
 
 import "./ColorOptions.css";
 
-import paintColors from "_data/free-paint/colors";
-
 const ColorOptions = () => {
+  const { availableColors } = useSelector((state) => state.freePaint);
+
   const dispatch = useDispatch();
 
   const handleChangeColor = (e) => {
@@ -15,7 +15,7 @@ const ColorOptions = () => {
 
   return (
     <div className="ColorOptions">
-      {paintColors.map((color) => (
+      {availableColors.map((color) => (
         <div
           key={color}
           className="ColorOptions-option"

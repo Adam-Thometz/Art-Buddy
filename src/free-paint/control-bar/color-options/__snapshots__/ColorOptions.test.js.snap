@@ -13,48 +13,6 @@ exports[`ColorOptions component matches snapshot 1`] = `
     />
     <div
       class="ColorOptions-option"
-      data-testid="color-option-#FF69B4"
-      id="#FF69B4"
-      style="background-color: rgb(255, 105, 180);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#FF0000"
-      id="#FF0000"
-      style="background-color: rgb(255, 0, 0);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#FFA500"
-      id="#FFA500"
-      style="background-color: rgb(255, 165, 0);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#FFFF00"
-      id="#FFFF00"
-      style="background-color: rgb(255, 255, 0);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#00FF00"
-      id="#00FF00"
-      style="background-color: rgb(0, 255, 0);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#0000FF"
-      id="#0000FF"
-      style="background-color: rgb(0, 0, 255);"
-    />
-    <div
-      class="ColorOptions-option"
-      data-testid="color-option-#A020F0"
-      id="#A020F0"
-      style="background-color: rgb(160, 32, 240);"
-    />
-    <div
-      class="ColorOptions-option"
       data-testid="color-option-#964B00"
       id="#964B00"
       style="background-color: rgb(150, 75, 0);"
