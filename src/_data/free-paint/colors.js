@@ -1,20 +1,6 @@
-const paintColors = [
+const defaultPaintColors = [
   // black
   "#000000",
-  // pink
-  "#FF69B4",
-  // red
-  "#FF0000",
-  // orange
-  "#FFA500",
-  // yellow
-  "#FFFF00",
-  // green
-  "#00FF00",
-  // blue
-  "#0000FF",
-  // purple
-  "#A020F0",
   // brown
   "#964B00",
   // grey
@@ -27,41 +13,6 @@ export const colorsToFilter = new Map([
     "#000000",
     "invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%)",
   ],
-  // pink
-  [
-    "#FF69B4",
-    "invert(69%) sepia(45%) saturate(4705%) hue-rotate(296deg) brightness(103%) contrast(101%)",
-  ],
-  // red
-  [
-    "#FF0000",
-    "invert(13%) sepia(98%) saturate(6803%) hue-rotate(5deg) brightness(102%) contrast(116%)",
-  ],
-  // orange
-  [
-    "#FFA500",
-    "invert(67%) sepia(37%) saturate(3043%) hue-rotate(359deg) brightness(101%) contrast(107%)",
-  ],
-  // yellow
-  [
-    "#FFFF00",
-    "invert(92%) sepia(44%) saturate(3830%) hue-rotate(353deg) brightness(105%) contrast(104%)",
-  ],
-  // green
-  [
-    "#00FF00",
-    "invert(48%) sepia(26%) saturate(5280%) hue-rotate(91deg) brightness(127%) contrast(121%)",
-  ],
-  // blue
-  [
-    "#0000FF",
-    "invert(8%) sepia(99%) saturate(7150%) hue-rotate(245deg) brightness(109%) contrast(131%)",
-  ],
-  // purple
-  [
-    "#A020F0",
-    "invert(20%) sepia(50%) saturate(6442%) hue-rotate(273deg) brightness(95%) contrast(102%)",
-  ],
   // brown
   [
     "#964B00",
@@ -72,6 +23,66 @@ export const colorsToFilter = new Map([
     "#808080",
     "invert(56%) sepia(0%) saturate(0%) hue-rotate(19deg) brightness(91%) contrast(92%)",
   ],
+  // yellow
+  [
+    "#FEEE1D",
+    "invert(87%) sepia(48%) saturate(823%) hue-rotate(343deg) brightness(107%) contrast(99%)",
+  ],
+  // red
+  [
+    "#EE2024",
+    "invert(36%) sepia(91%) saturate(7216%) hue-rotate(349deg) brightness(95%) contrast(96%)",
+  ],
+  // blue
+  [
+    "#4266B4",
+    "invert(36%) sepia(13%) saturate(2712%) hue-rotate(183deg) brightness(100%) contrast(87%)",
+  ],
+  // orange
+  [
+    "#F78F20",
+    "invert(74%) sepia(38%) saturate(5375%) hue-rotate(347deg) brightness(101%) contrast(94%)",
+  ],
+  // green
+  [
+    "#2DB54F",
+    "invert(64%) sepia(15%) saturate(2216%) hue-rotate(82deg) brightness(89%) contrast(80%)",
+  ],
+  // violet
+  [
+    "#783197",
+    "invert(22%) sepia(34%) saturate(4099%) hue-rotate(264deg) brightness(88%) contrast(88%)",
+  ],
+  // dandelion
+  [
+    "#FDCE0E",
+    "invert(75%) sepia(92%) saturate(680%) hue-rotate(350deg) brightness(102%) contrast(98%)",
+  ],
+  // tangelo
+  [
+    "#F35623",
+    "invert(49%) sepia(88%) saturate(4037%) hue-rotate(349deg) brightness(98%) contrast(94%)",
+  ],
+  // plum
+  [
+    "#A0409A",
+    "invert(29%) sepia(85%) saturate(1273%) hue-rotate(273deg) brightness(83%) contrast(80%)",
+  ],
+  // blueberry
+  [
+    "#665BAA",
+    "invert(42%) sepia(18%) saturate(1468%) hue-rotate(208deg) brightness(88%) contrast(94%)",
+  ],
+  // emerald
+  [
+    "#1A917E",
+    "invert(44%) sepia(52%) saturate(579%) hue-rotate(121deg) brightness(94%) contrast(94%)",
+  ],
+  // pear
+  [
+    "#91C940",
+    "invert(68%) sepia(80%) saturate(365%) hue-rotate(38deg) brightness(94%) contrast(87%)",
+  ],
 ]);
 
-export default paintColors;
+export default defaultPaintColors;
