@@ -51,7 +51,6 @@ const PlayLevel = () => {
       colors.forEach((color) => dispatch(toggleColor(color)));
       groups.forEach((group) => dispatch(toggleGroup(group)));
     }
-
     return () => dispatch(clearWheel());
   }, [dispatch, colorWheelState, task]);
 
@@ -66,10 +65,7 @@ const PlayLevel = () => {
         gotIncorrect: false,
       }));
     } else {
-      setLevelState((level) => ({
-        ...level,
-        gotIncorrect: true,
-      }));
+      setLevelState((level) => ({ ...level, gotIncorrect: true }));
     }
   };
 
@@ -137,8 +133,7 @@ const PlayLevel = () => {
   const answerDisplay = answers
     .slice(0, answerIdx + (showAnswers ? 1 : 0))
     .map((answer, i) => {
-      let src;
-      let text;
+      let src, text;
       if (i < answerIdx) {
         src = correctIcon;
         text = "Correct!";
