@@ -1,5 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
+export const setAvailableColors = createAction("setAvailableColors");
 export const setColor = createAction("setColor");
 export const setStencil = createAction("setStencil");
 export const setShownOptions = createAction("setShownOptions");

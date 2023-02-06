@@ -7,11 +7,20 @@ import {
   clearGame,
   setEditStencilMode,
   setShownOptions,
+  setAvailableColors,
 } from "./freePaintActions";
 
 describe("Free Paint reducer", () => {
   it("should return the initial state", () => {
     expect(freePaintReducer(undefined, {})).toEqual(INITIAL_STATE);
+  });
+
+  it("should add colors to the available colors list", () => {
+    const colorsToAdd = ["yellow", "red", "blue"];
+    const result = freePaintReducer(undefined, setAvailableColors(colorsToAdd));
+    expect(result.availableColors).toEqual(
+      INITIAL_STATE.availableColors.concat(colorsToAdd)
+    );
   });
 
   it("should change the color", () => {

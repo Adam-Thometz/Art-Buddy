@@ -5,8 +5,10 @@ import {
   clearGame,
   setEditStencilMode,
   setShownOptions,
+  setAvailableColors,
 } from "./freePaintActions";
 import { createReducer } from "@reduxjs/toolkit";
+import paintColors from "_data/free-paint/colors";
 
 export const INITIAL_STATE = {
   shownOptions: null,
@@ -14,10 +16,17 @@ export const INITIAL_STATE = {
   stencil: null,
   isErasing: false,
   isEditingStencil: false,
+  availableColors: paintColors,
 };
 
 const freePaintReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
+    .addCase(setAvailableColors, (state, action) => {
+      const colorsToAdd = action.payload;
+      const newColors = [...state.availableColors];
+      newColors.push(...colorsToAdd);
+      state.availableColors = newColors;
+    })
     .addCase(setShownOptions, (state, action) => {
       state.shownOptions = action.payload;
     })
@@ -38,6 +47,7 @@ const freePaintReducer = createReducer(INITIAL_STATE, (builder) => {
       state.stencil = INITIAL_STATE.stencil;
       state.isErasing = INITIAL_STATE.isErasing;
       state.isEditingStencil = INITIAL_STATE.isEditingStencil;
+      state.availableColors = INITIAL_STATE.availableColors;
     });
 });
 
