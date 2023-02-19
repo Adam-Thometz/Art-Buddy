@@ -1,0 +1,15 @@
+.TimeBlock {
+  display: inline-block;
+  border-radius: 25px;
+  padding: 40px 25px;
+}
+
+.excited {
+  background-color: #ffe81a;
+  color: #0d0709;
+}
+
+.relaxed {
+  background-color: #4266b4;
+  color: white;
+}

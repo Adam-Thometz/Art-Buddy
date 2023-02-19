@@ -6,18 +6,20 @@ import { changeCurrGame } from "_redux/_general/generalActions";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";
+import TimeLeft from "./time-left/TimeLeft";
 
 import { timeKeeper } from "_data/_activities/activityList";
+import TimeBlock from "./time-block/TimeBlock";
 
 const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(timeKeeper.lsKey);
-  const { currGame } = useSelector((state) => state.mainSettings);
+  const { currGame } = useSelector((state) => state.general);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeCurrGame(timeKeeper));
     return () => dispatch(changeCurrGame({}));
-  });
+  }, [dispatch]);
 
   return (
     <>
@@ -25,7 +27,11 @@ const TimeKeeper = () => {
       {!hasVisited ? (
         <Instructions setVisited={setHasVisited} />
       ) : (
-        <h2>00:00:00</h2>
+        <>
+          <TimeLeft />
+          <TimeBlock mood="excited" seconds={30} />
+          <TimeBlock mood="relaxed" seconds={30} />
+        </>
       )}
     </>
   );
