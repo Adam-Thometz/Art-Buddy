@@ -11,15 +11,12 @@ export default function makeFrog() {
 
     const toPlay = createNoteOrder(rhythm);
     const part = new Part((time, value) => {
-      if (!value.isRest) {
-        sound.triggerAttackRelease(value.pitch, value.duration, time);
-      }
+      if (!value.isRest) sound.triggerAttackRelease(value.pitch, value.duration, time);
     }, toPlay);
     part.start(QUARTER_NOTE_TIME);
     Transport.start();
 
-    const timerDuration =
-      (Time(`${rhythm.length / 4}m`).toSeconds() + QUARTER_NOTE_TIME) * 1000;
+    const timerDuration = (Time(`${rhythm.length / 4}m`).toSeconds() + QUARTER_NOTE_TIME) * 1000;
     const timer = setTimeout(() => {
       part.stop();
       Transport.stop();

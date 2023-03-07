@@ -6,7 +6,5 @@ export default function checkHasPassed(reportCard, levels = []) {
   const reportCardKeys = levels.length
     ? Object.keys(reportCard).filter((level) => levels.includes(level))
     : Object.keys(reportCard);
-  return reportCardKeys.every(
-    (score) => reportCard[score].results.length >= reportCard[score].maxScore
-  );
+  return reportCardKeys.every((score) => reportCard[score].results.length >= reportCard[score].maxScore);
 }

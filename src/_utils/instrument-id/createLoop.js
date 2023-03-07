@@ -1,7 +1,7 @@
-import * as melodies from "_media/instrument-id/_melodies-rhythms/melodies";
-import * as rhythms from "_media/instrument-id/_melodies-rhythms/rhythms";
-import { Part, Sampler, start, Transport, Time } from "tone";
-import getInstrument from "./getInstrument";
+import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
+import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
+import { Part, Sampler, start, Transport, Time } from 'tone';
+import getInstrument from './getInstrument';
 
 /** createLoop:
  * Purpose: creates a loop for all instruments for the Song Maker
@@ -20,7 +20,7 @@ export default function createLoop(song, volume) {
     if (!melodyId) continue;
 
     const { sound } = getInstrument(instrumentId);
-    const isRhythm = typeof sound === "object";
+    const isRhythm = typeof sound === 'object';
     const soundToPlay = isRhythm
       ? Object.keys(sound).map((hit, i) =>
           new Sampler({
@@ -37,19 +37,17 @@ export default function createLoop(song, volume) {
   }
 
   async function playLoop() {
-    if (Transport.state === "stopped") await start();
+    if (Transport.state === 'stopped') await start();
     for (let partToPlay of loopParts) {
       const { soundToPlay, melody, isRhythm } = partToPlay;
       const part = new Part((time, value) => {
         isRhythm
-          ? value.notes.forEach((note) =>
-              soundToPlay[note].triggerAttackRelease("C3", value.duration, time)
-            )
+          ? value.notes.forEach((note) => soundToPlay[note].triggerAttackRelease('C3', value.duration, time))
           : soundToPlay.triggerAttackRelease(value.notes, value.duration, time);
       }, melody);
       part.loop = true;
       part.loopStart = 0;
-      part.loopEnd = "4m";
+      part.loopEnd = '4m';
       playingLoop.push(part);
     }
 
@@ -66,12 +64,9 @@ export default function createLoop(song, volume) {
   }
 
   function getTimeLeft() {
-    const MOST_POSSIBLE_TIME = Time("4m").toSeconds() * 1000;
-    const progress = playingLoop.map(
-      (part) => MOST_POSSIBLE_TIME * part.progress
-    );
-    const timeLeft =
-      progress.reduce((accum, value) => accum + value, 0) / progress.length;
+    const MOST_POSSIBLE_TIME = Time('4m').toSeconds() * 1000;
+    const progress = playingLoop.map((part) => MOST_POSSIBLE_TIME * part.progress);
+    const timeLeft = progress.reduce((accum, value) => accum + value, 0) / progress.length;
     return MOST_POSSIBLE_TIME - timeLeft;
   }
 

@@ -1,8 +1,8 @@
-import createLoop from "./createLoop";
-import { Sampler, Part, Transport } from "tone";
-import TimeMock from "_testUtils/mocks/timeMock";
+import createLoop from './createLoop';
+import { Sampler, Part, Transport } from 'tone';
+import TimeMock from '_testUtils/mocks/timeMock';
 
-jest.mock("tone", () => ({
+jest.mock('tone', () => ({
   __esModule: true,
   Sampler: jest.fn(({ urls }) => ({
     toDestination: jest.fn(() => urls),
@@ -23,18 +23,18 @@ jest.mock("tone", () => ({
 }));
 
 const song = [
-  { instrumentId: "electricGuitar", melodyId: "babySharkMelody" },
-  { instrumentId: "drumSet", melodyId: "regularRhythm" },
-  { instrumentId: "conga" },
+  { instrumentId: 'electricGuitar', melodyId: 'babySharkMelody' },
+  { instrumentId: 'drumSet', melodyId: 'regularRhythm' },
+  { instrumentId: 'conga' },
   null,
 ];
 const { loopParts, playLoop, stopLoop, getTimeLeft } = createLoop(song, 0);
 
-describe("createLoop function", () => {
-  it("should return a loop to be played", () => {
+describe('createLoop function', () => {
+  it('should return a loop to be played', () => {
     expect(loopParts).toEqual([
       {
-        soundToPlay: { C3: "file" },
+        soundToPlay: { C3: 'file' },
         melody: expect.any(Array),
         isRhythm: false,
       },
@@ -45,30 +45,26 @@ describe("createLoop function", () => {
       },
     ]);
     expect(loopParts[1].soundToPlay.length).toBe(5);
-    expect(loopParts[1].soundToPlay.every((hit) => hit.C3 === "file")).toBe(
-      true
-    );
+    expect(loopParts[1].soundToPlay.every((hit) => hit.C3 === 'file')).toBe(true);
     expect(Sampler).toBeCalledTimes(6);
   });
 });
 
-describe("playLoop function", () => {
-  it("should play the loop", async () => {
+describe('playLoop function', () => {
+  it('should play the loop', async () => {
     const result = await playLoop();
     expect(result.every((part) => part.loop)).toBe(true);
     expect(result.every((part) => part.loopStart === 0)).toBe(true);
-    expect(result.every((part) => part.loopEnd === "4m")).toBe(true);
-    result.forEach((part, i) =>
-      expect(part.notesToPlay).toEqual(loopParts[i].melody)
-    );
+    expect(result.every((part) => part.loopEnd === '4m')).toBe(true);
+    result.forEach((part, i) => expect(part.notesToPlay).toEqual(loopParts[i].melody));
     expect(Part).toBeCalledTimes(2);
     expect(Transport.start).toBeCalled();
     result.forEach((part) => expect(part.start).toBeCalled());
   });
 });
 
-describe("stopLoop function", () => {
-  it("should stop a loop", async () => {
+describe('stopLoop function', () => {
+  it('should stop a loop', async () => {
     await playLoop();
     const result = stopLoop();
     expect(result.length).toBe(0);
@@ -76,8 +72,8 @@ describe("stopLoop function", () => {
   });
 });
 
-describe("getTimeLeft function", () => {
-  it("should return the correct amount of time", async () => {
+describe('getTimeLeft function', () => {
+  it('should return the correct amount of time', async () => {
     const time = new TimeMock();
     const loop = await playLoop();
     time.loopTravel(2000, loop);

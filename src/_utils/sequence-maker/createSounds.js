@@ -29,8 +29,7 @@ export default function createSounds(sequence, volume = 0) {
     }));
 
     const part = new Part((time, value) => {
-      if (value.sound)
-        value.sound.triggerAttackRelease(value.note, duration, time);
+      if (value.sound) value.sound.triggerAttackRelease(value.note, duration, time);
     }, toPlay);
     Transport.start();
     part.start(0);

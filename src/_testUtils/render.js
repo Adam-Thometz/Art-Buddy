@@ -17,15 +17,9 @@ function withProvider({ children, store, initialRoutes }) {
 
 function renderWithProvider(component, options) {
   const store = options && options.store ? options.store : rootReducer;
-  const initialRoutes =
-    options && options.initialRoutes ? options.initialRoutes : ["/"];
+  const initialRoutes = options && options.initialRoutes ? options.initialRoutes : ["/"];
   return render(component, {
-    wrapper: (args) =>
-      withProvider({
-        ...args,
-        store,
-        initialRoutes,
-      }),
+    wrapper: (args) => withProvider({ ...args, store, initialRoutes }),
     ...options,
   });
 }

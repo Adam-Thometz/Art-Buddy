@@ -30,6 +30,7 @@ const sequence = [
   { sound: "file" },
   null,
 ];
+
 const { sounds, playOne, playSequence } = createSounds(sequence);
 
 describe("createSounds function", () => {
