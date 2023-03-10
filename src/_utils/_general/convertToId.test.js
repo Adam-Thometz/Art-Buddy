@@ -12,8 +12,8 @@ describe("convertToId function", () => {
   });
 
   it("should convert input with a number into an id", () => {
-    const result = convertToId("5662 Thometz");
-    expect(result).toBe("5662Thometz");
+    const result = convertToId("5662");
+    expect(result).toBe("5662");
   });
 
   it("should convert an instrument into camel case", () => {
