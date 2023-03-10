@@ -1,7 +1,7 @@
 import "./Interface.css";
 
 import MusicChoices from "time-keeper/interface/music-choices/MusicChoices";
-import PlayPause from "time-keeper/play-pause/PlayPause";
+import PlayPause from "time-keeper/interface/play-pause/PlayPause";
 
 const Interface = () => {
   return (
