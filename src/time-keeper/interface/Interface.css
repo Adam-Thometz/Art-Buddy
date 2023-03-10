@@ -1,0 +1,8 @@
+.Interface {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Interface-blocks {
+  width: 87%;
+}

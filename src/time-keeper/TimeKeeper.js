@@ -9,7 +9,7 @@ import Instructions from "_components/instructions/Instructions";
 import TimeLeft from "./time-left/TimeLeft";
 
 import { timeKeeper } from "_data/_activities/activityList";
-import TimeBlock from "./time-block/TimeBlock";
+import Interface from "./interface/Interface";
 
 const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(timeKeeper.lsKey);
@@ -29,8 +29,7 @@ const TimeKeeper = () => {
       ) : (
         <>
           <TimeLeft />
-          <TimeBlock mood="excited" seconds={30} />
-          <TimeBlock mood="relaxed" seconds={30} />
+          <Interface />
         </>
       )}
     </>

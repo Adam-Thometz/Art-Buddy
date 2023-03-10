@@ -1,0 +1,18 @@
+.TimeLeft {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.TimeLeft-text {
+  font-size: 80px;
+  margin: 16px auto;
+  letter-spacing: 0.5rem;
+  color: #000;
+}
+
+.TimeLeft-bar {
+  width: 100%;
+  height: 10vh;
+  border: 5px solid #d4d2d5;
+  border-radius: 25px;
+}
