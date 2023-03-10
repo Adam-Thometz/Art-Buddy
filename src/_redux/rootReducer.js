@@ -18,6 +18,7 @@ import colorTheoryReducer from "./color-theory/colorTheoryReducer";
 // Tools
 import scoreKeeperReducer from "./score-keeper/scoreKeeperReducer";
 import moodMeterReducer from "./mood-meter/moodMeterReducer";
+import timeKeeperReducer from "./time-keeper/timeKeeperReducer";
 
 const rootReducer = configureStore({
   reducer: {
@@ -32,6 +33,7 @@ const rootReducer = configureStore({
     colorTheory: colorTheoryReducer,
     scoreKeeper: scoreKeeperReducer,
     moodMeter: moodMeterReducer,
+    timeKeeper: timeKeeperReducer,
   },
 });
 
