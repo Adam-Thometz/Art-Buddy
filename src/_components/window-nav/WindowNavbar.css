@@ -9,6 +9,7 @@
 }
 
 .WindowNavbar-games {
+  position: relative;
   display: flex;
   align-items: flex-start;
   margin: 0 auto;
