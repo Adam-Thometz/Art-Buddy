@@ -5,7 +5,8 @@ import "./TimeBlock.css";
 const TimeBlock = ({ mood, seconds, music }) => {
   const dispatch = useDispatch();
 
-  const handleAddSong = () => dispatch(addOneChunk({ music, seconds }));
+  const handleAddSong = () => dispatch(addOneChunk({ mood, seconds, music }));
+
   const displayValue = seconds >= 60 ? `${seconds / 60} MIN` : `${seconds} SEC`;
   return (
     <div className={`TimeBlock ${mood}`} onClick={handleAddSong}>

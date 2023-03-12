@@ -2,15 +2,12 @@ import { useSelector } from "react-redux";
 
 import "./TimeLeft.css";
 
-import makeTwoDigits from "_utils/timeKeeper/makeTwoDigits";
+import createDisplayTime from "_utils/time-keeper/createDisplayTime.js.js";
 
 const TimeLeft = () => {
   const { secondsLeft } = useSelector((state) => state.timeKeeper);
 
-  const hours = makeTwoDigits(Math.floor(secondsLeft / 3600));
-  const minutes = makeTwoDigits(Math.floor(secondsLeft / 60) % 60);
-  const seconds = makeTwoDigits(secondsLeft % 60);
-  const timeDisplay = `${hours}:${minutes}:${seconds}`;
+  const timeDisplay = createDisplayTime(secondsLeft);
 
   return (
     <section className="TimeLeft">
