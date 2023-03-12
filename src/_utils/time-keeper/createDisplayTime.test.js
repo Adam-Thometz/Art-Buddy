@@ -1,4 +1,4 @@
-import createDisplayTime from "./createDisplayTime.js";
+import createDisplayTime from "./createDisplayTime.js.js";
 
 describe("createDisplayTime function", () => {
   it("should display time for 30 seconds", () => {
