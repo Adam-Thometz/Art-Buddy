@@ -6,7 +6,6 @@ export default function randomizeSong({ seconds, mood }) {
     const numChoices = getNumChoices(seconds);
     const randomIdx = Math.floor(Math.random() * numChoices);
     const selectedSong = regularTimeBlocks[randomIdx];
-    debugger;
     song.push({
       seconds: selectedSong.seconds,
       mood,
