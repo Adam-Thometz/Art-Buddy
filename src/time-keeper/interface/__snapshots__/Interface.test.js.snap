@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interface component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="Interface"
+  >
+    <section
+      class="Interface-blocks"
+    >
+      <div
+        class="MusicChoices"
+      >
+        <img
+          alt=""
+          src="file"
+        />
+        <div
+          class="TimeBlock excited"
+        >
+          15 SEC
+        </div>
+        <div
+          class="TimeBlock excited"
+        >
+          30 SEC
+        </div>
+        <div
+          class="TimeBlock excited"
+        >
+          1 MIN
+        </div>
+        <div
+          class="TimeBlock excited"
+        >
+          3 MIN
+        </div>
+        <div
+          class="TimeBlock excited"
+        >
+          5 MIN
+        </div>
+      </div>
+      <div
+        class="MusicChoices"
+      >
+        <img
+          alt=""
+          src="file"
+        />
+        <div
+          class="TimeBlock relaxed"
+        >
+          15 SEC
+        </div>
+        <div
+          class="TimeBlock relaxed"
+        >
+          30 SEC
+        </div>
+        <div
+          class="TimeBlock relaxed"
+        >
+          1 MIN
+        </div>
+        <div
+          class="TimeBlock relaxed"
+        >
+          3 MIN
+        </div>
+        <div
+          class="TimeBlock relaxed"
+        >
+          5 MIN
+        </div>
+      </div>
+    </section>
+    <section
+      class="PlayPause"
+    >
+      <figure
+        class="Icon"
+        data-testid=""
+      >
+        <img
+          alt=""
+          src="file"
+          style="height: 100px; width: 100px; cursor: pointer;"
+        />
+        <figcaption
+          class="Icon-text"
+          style="font-size: 1.75rem;"
+        >
+          START
+        </figcaption>
+      </figure>
+    </section>
+  </section>
+</DocumentFragment>
+`;

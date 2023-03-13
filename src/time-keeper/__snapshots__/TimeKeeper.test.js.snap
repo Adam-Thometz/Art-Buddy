@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeKeeper component matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="WindowNavbar-games"
+  >
+    <h1
+      class="WindowNavbar-label"
+    >
+      TIME KEEPER
+    </h1>
+  </header>
+  <div
+    class="Instructions"
+  >
+    <article>
+      Tell the time with music! Add different music blocks to create a song out of the timer
+    </article>
+    <figure
+      class="Icon"
+      data-testid=""
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 250px; width: 250px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1.75rem;"
+      >
+        PLAY
+      </figcaption>
+    </figure>
+  </div>
+</DocumentFragment>
+`;

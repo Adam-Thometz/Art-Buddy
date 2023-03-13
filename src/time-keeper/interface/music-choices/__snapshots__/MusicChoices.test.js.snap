@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MusicChoices component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MusicChoices"
+  >
+    <img
+      alt=""
+      src="file"
+    />
+    <div
+      class="TimeBlock excited"
+    >
+      15 SEC
+    </div>
+    <div
+      class="TimeBlock excited"
+    >
+      30 SEC
+    </div>
+    <div
+      class="TimeBlock excited"
+    >
+      1 MIN
+    </div>
+    <div
+      class="TimeBlock excited"
+    >
+      3 MIN
+    </div>
+    <div
+      class="TimeBlock excited"
+    >
+      5 MIN
+    </div>
+  </div>
+</DocumentFragment>
+`;

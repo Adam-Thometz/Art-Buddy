@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeLeft component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="TimeLeft"
+  >
+    <h1
+      class="TimeLeft-text"
+    >
+      00:00:00
+    </h1>
+    <div
+      class="TimeLeft-bar"
+    />
+  </section>
+</DocumentFragment>
+`;

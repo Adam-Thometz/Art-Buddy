@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayPause component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="PlayPause"
+  >
+    <figure
+      class="Icon"
+      data-testid=""
+    >
+      <img
+        alt=""
+        src="file"
+        style="height: 100px; width: 100px; cursor: pointer;"
+      />
+      <figcaption
+        class="Icon-text"
+        style="font-size: 1.75rem;"
+      >
+        START
+      </figcaption>
+    </figure>
+  </section>
+</DocumentFragment>
+`;
