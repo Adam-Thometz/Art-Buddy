@@ -13,8 +13,8 @@ const timeKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
     .addCase(addOneChunk, (state, action) => {
       const { mood, seconds, music } = action.payload;
       const newSong = [...state.song];
-      const musicToAdd = music.length === 0 ? randomizeSong({ seconds, mood }) : music;
-      newSong.push(...musicToAdd);
+      const musicToAdd = !music ? randomizeSong({ seconds, mood }) : { music, seconds, mood };
+      newSong.push(musicToAdd);
       state.song = newSong;
       state.secondsLeft = state.secondsLeft + seconds;
     })

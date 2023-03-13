@@ -5,15 +5,15 @@ import excited1min from "_media/time-keeper/music/excited/1-min.mp3";
 export const regularTimeBlocks = [
   {
     seconds: 15,
-    excited: [excited15sec],
+    excited: excited15sec,
   },
   {
     seconds: 30,
-    excited: [excited30sec],
+    excited: excited30sec,
   },
   {
     seconds: 60,
-    excited: [excited1min],
+    excited: excited1min,
   },
 ];
 
@@ -21,11 +21,11 @@ export const allTimeBlocks = [
   ...regularTimeBlocks,
   {
     seconds: 180,
-    excited: [],
+    excited: null,
   },
   {
     seconds: 300,
-    excited: [],
+    excited: null,
   },
 ];
 

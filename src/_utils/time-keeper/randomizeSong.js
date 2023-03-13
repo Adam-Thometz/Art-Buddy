@@ -6,14 +6,19 @@ export default function randomizeSong({ seconds, mood }) {
     const numChoices = getNumChoices(seconds);
     const randomIdx = Math.floor(Math.random() * numChoices);
     const selectedSong = regularTimeBlocks[randomIdx];
-    song.push(...selectedSong[mood]);
+    debugger;
+    song.push({
+      seconds: selectedSong.seconds,
+      mood,
+      music: selectedSong[mood],
+    });
     seconds = seconds - selectedSong.seconds;
   }
   return song;
 }
 
 function getNumChoices(secondsLeft) {
+  if (secondsLeft >= 60) return 3;
   if (secondsLeft < 60 && secondsLeft >= 30) return 2;
   if (secondsLeft < 30 && secondsLeft >= 15) return 1;
-  return 3;
 }
