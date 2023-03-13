@@ -1,6 +1,6 @@
 import "./MusicChoices.css";
 
-import TimeBlock from "time-keeper/interface/music-choices/time-block/TimeBlock";
+import MusicOption from "time-keeper/interface/music-choices/music-option/MusicOption";
 
 import timeBlocks from "_data/time-keeper/timeBlocks";
 import excited from "_media/time-keeper/moods/excited.png";
@@ -12,7 +12,7 @@ const MusicChoices = ({ mood }) => {
     <div className="MusicChoices">
       <img src={moodSrc} alt="" />
       {timeBlocks.map((block) => (
-        <TimeBlock mood={mood} seconds={block.seconds} music={block[mood]} />
+        <MusicOption mood={mood} seconds={block.seconds} music={block[mood]} />
       ))}
     </div>
   );

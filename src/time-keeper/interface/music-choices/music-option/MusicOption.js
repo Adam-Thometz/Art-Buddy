@@ -1,18 +1,18 @@
 import { useDispatch } from "react-redux";
 import { addOneChunk } from "_redux/time-keeper/timeKeeperActions";
-import "./TimeBlock.css";
+import "./MusicOption.css";
 
-const TimeBlock = ({ mood, seconds, music }) => {
+const MusicOption = ({ mood, seconds, music }) => {
   const dispatch = useDispatch();
 
   const handleAddSong = () => dispatch(addOneChunk({ mood, seconds, music }));
 
   const displayValue = seconds >= 60 ? `${seconds / 60} MIN` : `${seconds} SEC`;
   return (
-    <div className={`TimeBlock ${mood}`} onClick={handleAddSong}>
+    <div className={`MusicOption ${mood}`} onClick={handleAddSong}>
       {displayValue}
     </div>
   );
 };
 
-export default TimeBlock;
+export default MusicOption;

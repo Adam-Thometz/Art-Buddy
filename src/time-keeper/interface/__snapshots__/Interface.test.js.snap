@@ -16,27 +16,27 @@ exports[`Interface component matches snapshot 1`] = `
           src="file"
         />
         <div
-          class="TimeBlock excited"
+          class="MusicOption excited"
         >
           15 SEC
         </div>
         <div
-          class="TimeBlock excited"
+          class="MusicOption excited"
         >
           30 SEC
         </div>
         <div
-          class="TimeBlock excited"
+          class="MusicOption excited"
         >
           1 MIN
         </div>
         <div
-          class="TimeBlock excited"
+          class="MusicOption excited"
         >
           3 MIN
         </div>
         <div
-          class="TimeBlock excited"
+          class="MusicOption excited"
         >
           5 MIN
         </div>
@@ -49,27 +49,27 @@ exports[`Interface component matches snapshot 1`] = `
           src="file"
         />
         <div
-          class="TimeBlock relaxed"
+          class="MusicOption relaxed"
         >
           15 SEC
         </div>
         <div
-          class="TimeBlock relaxed"
+          class="MusicOption relaxed"
         >
           30 SEC
         </div>
         <div
-          class="TimeBlock relaxed"
+          class="MusicOption relaxed"
         >
           1 MIN
         </div>
         <div
-          class="TimeBlock relaxed"
+          class="MusicOption relaxed"
         >
           3 MIN
         </div>
         <div
-          class="TimeBlock relaxed"
+          class="MusicOption relaxed"
         >
           5 MIN
         </div>

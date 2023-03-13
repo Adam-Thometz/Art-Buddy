@@ -10,27 +10,27 @@ exports[`MusicChoices component matches snapshot 1`] = `
       src="file"
     />
     <div
-      class="TimeBlock excited"
+      class="MusicOption excited"
     >
       15 SEC
     </div>
     <div
-      class="TimeBlock excited"
+      class="MusicOption excited"
     >
       30 SEC
     </div>
     <div
-      class="TimeBlock excited"
+      class="MusicOption excited"
     >
       1 MIN
     </div>
     <div
-      class="TimeBlock excited"
+      class="MusicOption excited"
     >
       3 MIN
     </div>
     <div
-      class="TimeBlock excited"
+      class="MusicOption excited"
     >
       5 MIN
     </div>
