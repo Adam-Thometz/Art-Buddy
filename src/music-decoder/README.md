@@ -10,6 +10,8 @@ This app lays out a chart of all letters with different colors that correspond t
 Helper functions: `_utils/music-decoder`  
 Redux reducer: `_redux/music-decoder`  
 The LETTER_NOTES object: `_data/music-decoder/letterNotes.js`
+Form Field hook: `_hooks/form-fields`
+Play context: `_context/PlayContext.js`
 
 ## Basic flow
 
