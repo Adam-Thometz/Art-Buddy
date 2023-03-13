@@ -1,6 +1,6 @@
 # Word-To-Music Decoder
 
-[music decoder in initial state](../_media/_docs/music-decoder/music-decoder-1.png)
+![music decoder in initial state](../_media/_docs/music-decoder/music-decoder-1.png)
 
 ## Purpose
 This app lays out a chart of all letters with different colors that correspond to different colors. You type a word into the form and students must find the letters in the chart. You can toggle between upper and lowercase letters. As they find them, the word gets colored in and a sound is played. You can create a melody based on the notes that are already selected.
@@ -15,15 +15,15 @@ The LETTER_NOTES object: `_data/music-decoder/letterNotes.js`
 
 1. Type a word into the input (`WordForm.js`)
 
-[music decoder with the word "Hello" typed in](../_media/_docs/music-decoder/music-decoder-1.png)
+![music decoder with the word "Hello" typed in](../_media/_docs/music-decoder/music-decoder-1.png)
 
 1. Look for the each letter in the word using the alphabet table (`AlphabetTable.js`)
 
-[music decoder with an uppercase letter filled in the alphabet table](../_media/_docs/music-decoder/music-decoder-3.png)
+![music decoder with an uppercase letter filled in the alphabet table](../_media/_docs/music-decoder/music-decoder-3.png)
 
 3. Turn off uppercase mode to get lowercase letters using the toggle (`DecoderControls.js`)
 
-[music decoder with lowercase letters filled in](../_media/_docs/music-decoder/music-decoder-4.png)
+![music decoder with lowercase letters filled in](../_media/_docs/music-decoder/music-decoder-4.png)
 
 4. Press Play to hear the melody!
 
