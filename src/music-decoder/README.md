@@ -3,7 +3,7 @@
 ![music decoder in initial state](../_media/_docs/music-decoder/music-decoder-1.png)
 
 ## Purpose
-This app lays out a chart of all letters with different colors that correspond to different colors. You type a word into the form and students must find the letters in the chart. You can toggle between upper and lowercase letters. As they find them, the word gets colored in and a sound is played. You can create a melody based on the notes that are already selected.
+This app turns words into music.
 
 ## Other Relevant Directories (all under `src`)
 
@@ -19,7 +19,7 @@ Play context: `_context/PlayContext.js`
 
 ![music decoder with the word "Hello" typed in](../_media/_docs/music-decoder/music-decoder-2.png)
 
-1. Look for the each letter in the word using the alphabet table (`AlphabetTable.js`)
+2. Look for the each letter in the word using the alphabet table (`AlphabetTable.js`)
 
 ![music decoder with an uppercase letter filled in the alphabet table](../_media/_docs/music-decoder/music-decoder-3.png)
 
