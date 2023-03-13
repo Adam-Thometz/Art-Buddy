@@ -15,7 +15,7 @@ The LETTER_NOTES object: `_data/music-decoder/letterNotes.js`
 
 1. Type a word into the input (`WordForm.js`)
 
-![music decoder with the word "Hello" typed in](../_media/_docs/music-decoder/music-decoder-1.png)
+![music decoder with the word "Hello" typed in](../_media/_docs/music-decoder/music-decoder-2.png)
 
 1. Look for the each letter in the word using the alphabet table (`AlphabetTable.js`)
 
