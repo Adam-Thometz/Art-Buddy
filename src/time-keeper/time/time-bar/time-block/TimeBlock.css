@@ -1,0 +1,20 @@
+.TimeBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: -5px 2px 0 2px;
+  padding: -5px 0;
+  border: 5px solid #0d0709;
+  height: inherit;
+}
+
+.excited {
+  background-color: #ffe81a;
+  color: #0d0709;
+}
+
+.relaxed {
+  background-color: #4266b4;
+  color: white;
+}
