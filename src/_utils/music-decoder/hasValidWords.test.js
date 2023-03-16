@@ -10,10 +10,7 @@ describe("hasValidWords function", () => {
     ["word with more than 12 chars", "disestablishmentarianism",          WORD_HAS_OVER_12_CHARS],
     ["inputs with non-letters",      "he110",                             NON_LETTERS],
   ]
-  tests.forEach(test => {
-    const [assertion, words, result] = test;
-    it(`supports ${assertion}`, () => {
-      expect(hasValidWords(words)).toEqual(result)
-    });
-  });
+  it.each(tests)("supports %s", (_, words, result) => {
+    expect(hasValidWords(words)).toEqual(result)
+  })
 });

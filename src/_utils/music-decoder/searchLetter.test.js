@@ -7,10 +7,7 @@ describe("searchLetters function", () => {
     ["two words",        ["HI", "HELLO"], "I",   true],
     ["no found letters", ["HI", "HELLO"], "F",   false],
   ];
-  tests.forEach((test) => {
-    const [assertion, input, letter, result] = test;
-    it(`supports ${assertion}`, () => {
-      expect(searchLetter(input, letter)).toBe(result);
-    });
-  });
+  it.each(tests)("supports %s", (_, input, letter, result) => {
+    expect(searchLetter(input, letter)).toBe(result);
+  })
 });

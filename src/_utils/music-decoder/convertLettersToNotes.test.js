@@ -13,10 +13,7 @@ describe("convertLettersToNotes function", () => {
     ["two words, partially filled",   ["hi", "there"], { h: true, t: true, r: true },                   TWO_PARTIAL],
   ];
 
-  tests.forEach(test => {
-    const [assertion, words, filledLetters, result] = test;
-    it(`supports ${assertion}`, () => {
-      expect(convertLettersToNotes(words, filledLetters)).toEqual(result)
-    });
+  it.each(tests)("supports %s", (_, words, filledLetters, result) => {
+    expect(convertLettersToNotes(words, filledLetters)).toEqual(result)
   });
 });
