@@ -13,7 +13,7 @@ export default function findLettersToRemove({ oldInput, newInput }) {
   return lettersToRemove;
 }
 
-export function lettersInInput(words) {
+function lettersInInput(words) {
   const letters = new Set();
   for (let word of words) {
     for (let char of word) {
