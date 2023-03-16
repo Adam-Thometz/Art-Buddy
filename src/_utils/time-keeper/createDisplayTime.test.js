@@ -1,15 +1,13 @@
 import createDisplayTime from "./createDisplayTime.js";
 
 describe("createDisplayTime function", () => {
-  it("should display time for 30 seconds", () => {
-    expect(createDisplayTime(30)).toBe("00:00:30");
-  });
-
-  it("should display time for 3 minutes", () => {
-    expect(createDisplayTime(180)).toBe("00:03:00");
-  });
-
-  it("should display time for 1 hour, 10 minutes, and 29 seconds", () => {
-    expect(createDisplayTime(4229)).toBe("01:10:29");
+  const tests = [
+    // assertion   seconds display
+    ["30 seconds", 30,     "00:00:30"],
+    ["3 minutes",  180,    "00:03:00"],
+    ["1 hour, 10 minutes, and 29 seconds", 4229, "01:10:29"],
+  ];
+  it.each(tests)("display time for %s", (_, seconds, display) => {
+    expect(createDisplayTime(seconds)).toBe(display)
   });
 });
