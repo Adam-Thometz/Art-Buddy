@@ -11,9 +11,12 @@ import searchLetter from "_utils/music-decoder/searchLetter";
 
 const AlphabetTable = () => {
   const { playFn } = useContext(PlayContext);
-  const { isUpperCase, currPlaying, filledLetters, words } = useSelector(
-    (state) => state.musicDecoder
-  );
+  const {
+    isUpperCase,
+    currPlaying,
+    filledLetters,
+    words
+  } = useSelector((state) => state.musicDecoder);
   const dispatch = useDispatch();
 
   const displayLetters = isUpperCase

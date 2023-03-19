@@ -3,21 +3,17 @@ import { useNavigate } from "react-router-dom";
 import useReportCard from "_hooks/report-card/useReportCard";
 import { PopupContext } from "_context/PopupContext";
 
-import Icon from "_components/icon/Icon";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-
 import "./Play.css";
 
+import Icon from "_components/icon/Icon";
+import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 import ReportCard from "_components/report-card/ReportCard";
 
 import colorTheoryIcon from "_media/menu/activity-icons/color-theory.png";
 import reportCardIcon from "_media/_general/report-card.png";
 import { colorTheoryUrls } from "_routes/routeUrls";
-import {
-  lockIcon,
-  unlockIcon,
-} from "_media/_general/lock-icons/lockIconImports";
+import { lockIcon, unlockIcon } from "_media/_general/lock-icons/lockIconImports";
 import checkHasPassed from "_utils/_report-card/checkHasPassed";
 import { COLOR_THEORY_LEVELS } from "_data/color-theory/levels";
 
@@ -28,7 +24,7 @@ const Play = () => {
 
   useEffect(() => {
     return () => setCurrPopup(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const openReportCard = () =>

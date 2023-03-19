@@ -34,8 +34,10 @@ const WordToMusic = () => {
       dispatch(clearGame());
       dispatch(changeCurrGame({}));
       Transport.stop();
+      setPlayFn(null);
     };
-  }, [dispatch]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
