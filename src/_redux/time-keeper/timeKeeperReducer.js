@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import randomizeSong from "_utils/time-keeper/randomizeSong";
-import { addOneChunk, toggleTimer } from "./timeKeeperActions";
+import { addTimeBlocks, toggleTimer } from "./timeKeeperActions";
 
 export const INITIAL_STATE = {
   song: [],
@@ -10,13 +10,15 @@ export const INITIAL_STATE = {
 
 const timeKeeperReducer = createReducer(INITIAL_STATE, (builder) => {
   builder
-    .addCase(addOneChunk, (state, action) => {
+    .addCase(addTimeBlocks, (state, action) => {
       const { mood, seconds, music } = action.payload;
       const newSong = [...state.song];
-      const musicToAdd = !music ? randomizeSong({ seconds, mood }) : [{ music, seconds, mood }];
+      const musicToAdd = music
+        ? [{ music, seconds, mood }]
+        : randomizeSong({ seconds, mood });
       newSong.push(...musicToAdd);
       state.song = newSong;
-      state.secondsLeft = state.secondsLeft + seconds;
+      state.secondsLeft = newSong.reduce((acc, curr) => acc + curr.seconds, 0);
     })
     .addCase(toggleTimer, (state) => {
       state.isPlaying = !state.isPlaying;
