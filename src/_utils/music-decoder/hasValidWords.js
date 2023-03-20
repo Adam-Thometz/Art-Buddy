@@ -15,11 +15,11 @@ export const MORE_THAN_FOUR_WORDS = { success: false, error: "Only four words at
 export const WORD_HAS_OVER_12_CHARS = { success: false, error: "Words can only have 12 characters at a time" };
 
 export default function hasValidWords(words) {
-  const fullInput = words.replace(/ /g, "");
-  if (fullInput.length > 26) return TOO_MANY_CHARS;
-
   const wordsArr = words.split(" ");
   if (wordsArr.length > 4) return MORE_THAN_FOUR_WORDS;
+
+  const fullInput = words.replace(/ /g, "");
+  if (fullInput.length > 26) return TOO_MANY_CHARS;
 
   for (let word of wordsArr) {
     if (word.length === 0) return { success: true };

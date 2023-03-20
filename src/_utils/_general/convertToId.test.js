@@ -1,23 +1,38 @@
 import convertToId from "./convertToId";
+import { faker } from "@faker-js/faker";
 
 describe("convertToId function", () => {
-  it("should convert a one-word name into an id for an object", () => {
-    const result = convertToId("Thometz");
-    expect(result).toBe("thometz");
+  it("should convert one word", () => {
+    const lastName = faker.name.lastName();
+    const expected = lastName.toLowerCase();
+
+    const result = convertToId(lastName);
+
+    expect(result).toBe(expected);
   });
 
-  it("should convert a two-word name into an id for an object", () => {
-    const result = convertToId("demo class");
-    expect(result).toBe("demoClass");
+  it("should convert two words", () => {
+    const firstName = faker.name.firstName();
+    const lastName = faker.name.lastName();
+    const expected = firstName.toLowerCase() + lastName;
+
+    const result = convertToId(`${firstName} ${lastName}`);
+
+    expect(result).toBe(expected);
   });
 
-  it("should convert input with a number into an id", () => {
+  it("should convert a name with a prefix", () => {
+    const prefix = faker.name.prefix();
+    const lastName = faker.name.lastName();
+    const expected = prefix.toLowerCase().replace(".", "") + lastName;
+
+    const result = convertToId(`${prefix} ${lastName}`);
+
+    expect(result).toBe(expected);
+  });
+
+  it("should convert input with a number", () => {
     const result = convertToId("5662");
     expect(result).toBe("5662");
-  });
-
-  it("should convert an instrument into camel case", () => {
-    const result = convertToId("french horn");
-    expect(result).toBe("frenchHorn");
   });
 });
