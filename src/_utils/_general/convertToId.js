@@ -7,7 +7,7 @@ export default function convertToId(name) {
   let id = nameArr[0].toLowerCase().replace(".", "");
   for (let i = 1; i < nameArr.length; i++) {
     const firstLetter = nameArr[i][0];
-    const rest = nameArr[i].slice(1).toLowerCase().replace(".", "");
+    const rest = nameArr[i].slice(1).replace(".", "");
     id += firstLetter.toUpperCase() + rest;
   }
   return id;

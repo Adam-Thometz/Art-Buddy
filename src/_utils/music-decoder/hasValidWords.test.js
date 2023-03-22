@@ -4,11 +4,12 @@ import hasValidWords, {
 import { faker } from "@faker-js/faker";
 
 describe("hasValidWords function", () => {
+  const TWO_WORDS = `${faker.random.alpha(5)} ${faker.random.alpha(5)}`;
   const RANDOM_LONG_INPUT = `${faker.random.alpha(9)} ${faker.random.alpha(9)} ${faker.random.alpha(9)}`;
   const tests = [
     // assertion                     words                   result
     ["one valid word",               faker.random.alpha(5),  SUCCESS],
-    ["two valid words",              faker.random.words(2),  SUCCESS],
+    ["two valid words",              TWO_WORDS,              SUCCESS],
     ["over 26 chars",                RANDOM_LONG_INPUT,      TOO_MANY_CHARS],
     ["more than 4 words",            faker.random.words(5),  MORE_THAN_FOUR_WORDS],
     ["word with more than 12 chars", faker.random.alpha(13), WORD_HAS_OVER_12_CHARS],

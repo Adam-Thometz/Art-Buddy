@@ -22,7 +22,7 @@ export default function hasValidWords(words) {
   if (fullInput.length > 26) return TOO_MANY_CHARS;
 
   for (let word of wordsArr) {
-    if (word.length === 0) return { success: true };
+    if (word.length === 0) continue;
     if (word.length > 12) return WORD_HAS_OVER_12_CHARS;
 
     const hasValidChars = word.match(/^[A-Za-z]+$/);
