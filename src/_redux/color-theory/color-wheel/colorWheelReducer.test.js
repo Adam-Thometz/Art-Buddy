@@ -1,4 +1,4 @@
-import colorTheoryReducer, { INITIAL_STATE } from "./colorTheoryReducer";
+import colorTheoryReducer, { INITIAL_STATE } from "./colorWheelReducer";
 
 import {
   learnColors,
@@ -7,7 +7,7 @@ import {
   toggleColor,
   toggleText,
   toggleGroup,
-} from "./colorTheoryActions";
+} from "./colorWheelActions";
 
 describe("Color Thoery Reducer", () => {
   it("should return the initial state", () => {
