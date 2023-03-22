@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "./ColorWheel.css";
 
 const ColorWheel = ({ update = null }) => {
-  const { colorWheel } = useSelector((state) => state.colorTheory);
+  const { colorWheel } = useSelector((state) => state.colorWheel);
 
   const colors = Object.keys(colorWheel).map((c) => {
     const { color, isShowing } = colorWheel[c];
