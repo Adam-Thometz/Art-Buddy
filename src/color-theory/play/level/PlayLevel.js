@@ -10,7 +10,7 @@ import {
   toggleColor,
   toggleGroup,
   toggleText,
-} from "_redux/color-theory/colorTheoryActions";
+} from "_redux/color-theory/color-wheel/colorWheelActions";
 
 import "./PlayLevel.css";
 
@@ -52,19 +52,21 @@ const PlayLevel = () => {
       groups.forEach((group) => dispatch(toggleGroup(group)));
     }
     return () => dispatch(clearWheel());
-  }, [dispatch, colorWheelState, task]);
+  }, [dispatch, colorWheelState]);
 
   const updateAnswer = (e) => {
     const answer = task.answers[answerIdx];
     const selected = e.target.id;
     if (answer === selected) {
       dispatch(toggleText(answer));
+      // go to the next question
       setLevelState((level) => ({
         ...level,
         answerIdx: level.answerIdx + 1,
         gotIncorrect: false,
       }));
     } else {
+      // set incorrect
       setLevelState((level) => ({ ...level, gotIncorrect: true }));
     }
   };
@@ -89,14 +91,14 @@ const PlayLevel = () => {
 
   const goToNextLevel = () => {
     handleReportCard();
-    // go to next section of sublevel
+    // go to next section of current level
     if (section < levels[category][subLevel].length - 1) {
       setLevelState((level) => ({
         ...level,
         section: section + 1,
         answerIdx: 0,
       }));
-      // go to next sublevel
+    // go to next sublevel
     } else if (subLevel === "A" && answerIdx === answers.length) {
       setLevelState((level) => ({
         ...level,
@@ -104,21 +106,14 @@ const PlayLevel = () => {
         section: 0,
         answerIdx: 0,
       }));
-      // flash finish if at the end
+    // flash finish if at the end
     } else if (+level === 3) {
       setCurrPopup({
         title: "COLOR THEORY",
-        popup: (
-          <Finished
-            gameId="colorTheory"
-            gameName="Color Theory Game"
-            prize="colors"
-            findPrizeIn="Free Paint"
-          />
-        ),
+        popup: <Finished gameId="colorTheory" gameName="Color Theory Game" prize="colors" findPrizeIn="Free Paint" />,
         showConfetti: true,
       });
-      // go to the next level
+    // go to the next level
     } else {
       setLevelState((level) => ({
         ...level,
@@ -133,23 +128,18 @@ const PlayLevel = () => {
   const answerDisplay = answers
     .slice(0, answerIdx + (showAnswers ? 1 : 0))
     .map((answer, i) => {
-      let src, text;
+      let src, text = null;
       if (i < answerIdx) {
         src = correctIcon;
         text = "Correct!";
       } else if (i === answerIdx && gotIncorrect) {
         src = incorrectIcon;
         text = "Try again";
-      } else {
-        src = null;
-        text = null;
       }
       return (
         <div className="PlayLevel-answer">
           <span className={`PlayLevel-question-color ${answer}`}>{answer}</span>
-          <span>
-            <img src={src} alt="" /> {text}
-          </span>
+          <span><img src={src} alt="" /> {text}</span>
         </div>
       );
     });
@@ -157,9 +147,7 @@ const PlayLevel = () => {
   return (
     <>
       <WindowNavbar page="COLOR THEORY" />
-      <span>
-        Play: Level {level}
-        {subLevel}
+      <span>Play: Level {level}{subLevel}
       </span>
       <main className="PlayLevel">
         <ColorWheel update={updateAnswer} />
@@ -172,9 +160,7 @@ const PlayLevel = () => {
           </div>
           {answerDisplay}
           {answerIdx === answers.length && (
-            <Button colorId={0} onClick={goToNextLevel}>
-              NEXT LEVEL
-            </Button>
+            <Button colorId={0} onClick={goToNextLevel}>NEXT LEVEL</Button>
           )}
         </section>
       </main>
