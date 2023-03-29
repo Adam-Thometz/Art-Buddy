@@ -12,38 +12,11 @@ const ColorTheoryRoutes = () => {
   return (
     <Routes>
       {/* Learn */}
-      <Route
-        path={colorTheoryUrls.learn}
-        element={
-          <Window>
-            <LearnColorTheory />
-          </Window>
-        }
-      />
-      <Route
-        path={colorTheoryUrls.learnCategory}
-        element={
-          <Window>
-            <LearnColors />
-          </Window>
-        }
-      />
-      <Route
-        path={colorTheoryUrls.playMain}
-        element={
-          <Window>
-            <Play />
-          </Window>
-        }
-      />
-      <Route
-        path={colorTheoryUrls.playLevel}
-        element={
-          <Window>
-            <PlayLevel />
-          </Window>
-        }
-      />
+      <Route path={colorTheoryUrls.learn} element={<Window><LearnColorTheory /></Window>} />
+      <Route path={colorTheoryUrls.learnCategory} element={<Window><LearnColors /></Window>} />
+      {/* Play */}
+      <Route path={colorTheoryUrls.playMain} element={<Window><Play /></Window>} />
+      <Route path={colorTheoryUrls.playLevel} element={<Window><PlayLevel /></Window>} />
     </Routes>
   );
 };
