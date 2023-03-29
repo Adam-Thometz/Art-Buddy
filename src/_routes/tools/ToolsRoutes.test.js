@@ -15,10 +15,10 @@ describe("Tools Routes", () => {
     expect(screen.getByText("SCORE KEEPER")).toBeInTheDocument();
   });
 
-  // it('renders the time keeper', () => {
-  //   render(<ToolsRoutes />, { initialRoutes: [urls.timeKeeperUrl] });
-  //   expect(screen.getByText('TIME KEEPER')).toBeInTheDocument();
-  // });
+  it('renders the time keeper', () => {
+    render(<ToolsRoutes />, { initialRoutes: [urls.timeKeeperUrl] });
+    expect(screen.getByText('TIME KEEPER')).toBeInTheDocument();
+  });
 
   it("renders the mood meter", () => {
     render(<ToolsRoutes />, { initialRoutes: [urls.moodMeterUrl] });
