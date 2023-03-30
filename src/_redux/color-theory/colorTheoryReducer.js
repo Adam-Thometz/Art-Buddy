@@ -1,4 +1,4 @@
-import { clearWheel, learnColors, toggleAllColors, toggleColor, toggleGroup, toggleText } from "./colorWheelActions";
+import { clearWheel, learnColors, toggleAllColors, toggleColor, toggleGroup, toggleText } from "./colorTheoryActions";
 import colorWheel from "_data/color-theory/colorWheel";
 import { createReducer } from "@reduxjs/toolkit";
 

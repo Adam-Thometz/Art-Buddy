@@ -1,4 +1,4 @@
-import colorTheoryReducer, { INITIAL_STATE } from "./colorWheelReducer";
+import colorTheoryReducer, { INITIAL_STATE } from "./colorTheoryReducer";
 
 import {
   learnColors,
@@ -7,18 +7,15 @@ import {
   toggleColor,
   toggleText,
   toggleGroup,
-} from "./colorWheelActions";
+} from "./colorTheoryActions";
 
-describe("Color Thoery Reducer", () => {
+describe("Color Theory Reducer", () => {
   it("should return the initial state", () => {
     expect(colorTheoryReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
 
   it("should toggle text and colors for a specific group", () => {
-    const { colorWheel } = colorTheoryReducer(
-      undefined,
-      learnColors("primary")
-    );
+    const { colorWheel } = colorTheoryReducer(undefined,learnColors("primary"));
     expect(colorWheel.yellow.isShowing.text).toBe(true);
     expect(colorWheel.yellow.isShowing.color).toBe(true);
     expect(colorWheel.red.isShowing.text).toBe(true);
@@ -29,18 +26,9 @@ describe("Color Thoery Reducer", () => {
 
   it("should toggle all colors", () => {
     const { colorWheel } = colorTheoryReducer(undefined, toggleAllColors());
-    expect(colorWheel.yellow.isShowing.color).toBe(true);
-    expect(colorWheel.dandelion.isShowing.color).toBe(true);
-    expect(colorWheel.orange.isShowing.color).toBe(true);
-    expect(colorWheel.tangelo.isShowing.color).toBe(true);
-    expect(colorWheel.red.isShowing.color).toBe(true);
-    expect(colorWheel.plum.isShowing.color).toBe(true);
-    expect(colorWheel.violet.isShowing.color).toBe(true);
-    expect(colorWheel.blueberry.isShowing.color).toBe(true);
-    expect(colorWheel.blue.isShowing.color).toBe(true);
-    expect(colorWheel.emerald.isShowing.color).toBe(true);
-    expect(colorWheel.green.isShowing.color).toBe(true);
-    expect(colorWheel.pear.isShowing.color).toBe(true);
+    for (let color in colorWheel) {
+      expect(colorWheel[color].isShowing.color).toBe(true);
+    }
   });
 
   it("should toggle a specific color", () => {
@@ -49,10 +37,7 @@ describe("Color Thoery Reducer", () => {
   });
 
   it("should toggle colors for a specific group", () => {
-    const { colorWheel } = colorTheoryReducer(
-      undefined,
-      toggleGroup("primary")
-    );
+    const { colorWheel } = colorTheoryReducer(undefined,toggleGroup("primary"));
     expect(colorWheel.yellow.isShowing.color).toBe(true);
     expect(colorWheel.red.isShowing.color).toBe(true);
     expect(colorWheel.blue.isShowing.color).toBe(true);

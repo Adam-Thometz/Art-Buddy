@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { PopupContext } from "_context/PopupContext";
 import useReportCard from "_hooks/report-card/useReportCard";
@@ -10,7 +10,7 @@ import {
   toggleColor,
   toggleGroup,
   toggleText,
-} from "_redux/color-theory/color-wheel/colorWheelActions";
+} from "_redux/color-theory/colorTheoryActions";
 
 import "./PlayLevel.css";
 
@@ -25,17 +25,47 @@ import incorrectIcon from "_media/color-theory/incorrect.png";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
+const INITIAL_STATE = {
+  subLevel: "A",
+  section: 0,
+  answerIdx: 0,
+  gotIncorrect: false,
+}
+
+const ACTIONS = {
+  NEXT_QUESTION: "NEXT_QUESTION",
+  NEXT_SECTION: "NEXT_SECTION",
+  NEXT_SUBLEVEL: "NEXT_SUBLEVEL",
+  NEXT_LEVEL: "NEXT_LEVEL",
+  GOT_INCORRECT: "GOT_INCORRECT"
+}
+
+const playLevelReducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.NEXT_QUESTION:
+      const newQuestion = state.answerIdx + 1;
+      return { ...state, answerIdx: newQuestion, gotIncorrect: false };
+    case ACTIONS.NEXT_SECTION:
+      const nextSection = state.section + 1;
+      return { ...state, section: nextSection, answerIdx: 0 };
+    case ACTIONS.NEXT_SUBLEVEL:
+      const nextSublevel = state.subLevel === "A" ? "B" : "A";
+      return { ...state, subLevel: nextSublevel, section: 0, answerIdx: 0 };
+    case ACTIONS.NEXT_LEVEL:
+      return { ...state, subLevel: "A", section: 0, answerIdx: 0 };
+    case ACTIONS.GOT_INCORRECT:
+      return { ...state, gotIncorrect: true };
+    default:
+      return state;
+  }
+}
+
 const PlayLevel = () => {
   const { level } = useParams();
   const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [levelState, setLevelState] = useState({
-    subLevel: "A",
-    section: 0,
-    answerIdx: 0,
-    gotIncorrect: false,
-  });
+  const [levelState, setLevelState] = useReducer(playLevelReducer, INITIAL_STATE);
   const [, setReportCard] = useReportCard("colorTheory");
 
   const category = Object.keys(levels)[level - 1];
@@ -59,15 +89,9 @@ const PlayLevel = () => {
     const selected = e.target.id;
     if (answer === selected) {
       dispatch(toggleText(answer));
-      // go to the next question
-      setLevelState((level) => ({
-        ...level,
-        answerIdx: level.answerIdx + 1,
-        gotIncorrect: false,
-      }));
+      setLevelState({ type: ACTIONS.NEXT_QUESTION });
     } else {
-      // set incorrect
-      setLevelState((level) => ({ ...level, gotIncorrect: true }));
+      setLevelState({ type: ACTIONS.GOT_INCORRECT });
     }
   };
 
@@ -91,36 +115,18 @@ const PlayLevel = () => {
 
   const goToNextLevel = () => {
     handleReportCard();
-    // go to next section of current level
     if (section < levels[category][subLevel].length - 1) {
-      setLevelState((level) => ({
-        ...level,
-        section: section + 1,
-        answerIdx: 0,
-      }));
-    // go to next sublevel
+      setLevelState({ type: ACTIONS.NEXT_SECTION });
     } else if (subLevel === "A" && answerIdx === answers.length) {
-      setLevelState((level) => ({
-        ...level,
-        subLevel: "B",
-        section: 0,
-        answerIdx: 0,
-      }));
-    // flash finish if at the end
+      setLevelState({ type: ACTIONS.NEXT_SUBLEVEL });
     } else if (+level === 3) {
       setCurrPopup({
         title: "COLOR THEORY",
         popup: <Finished gameId="colorTheory" gameName="Color Theory Game" prize="colors" findPrizeIn="Free Paint" />,
         showConfetti: true,
       });
-    // go to the next level
     } else {
-      setLevelState((level) => ({
-        ...level,
-        subLevel: "A",
-        section: 0,
-        answerIdx: 0,
-      }));
+      setLevelState({ type: ACTIONS.NEXT_LEVEL });
       navigate(`${colorTheoryUrls.playMain}/${+level + 1}`, { replace: true });
     }
   };

@@ -25,24 +25,9 @@ const Learn = () => {
         <span>Learn</span>
         <br />
         <Options width="80%">
-          <Icon
-            largeFont
-            icon={primary}
-            text="PRIMARY COLORS"
-            onClick={goToPrimary}
-          />
-          <Icon
-            largeFont
-            icon={secondary}
-            text="SECONDARY COLORS"
-            onClick={goToSecondary}
-          />
-          <Icon
-            largeFont
-            icon={tertiary}
-            text="TERTIARY COLORS"
-            onClick={goToTertiary}
-          />
+          <Icon largeFont icon={primary} text="PRIMARY COLORS" onClick={goToPrimary} />
+          <Icon largeFont icon={secondary} text="SECONDARY COLORS" onClick={goToSecondary} />
+          <Icon largeFont icon={tertiary} text="TERTIARY COLORS" onClick={goToTertiary} />
         </Options>
       </main>
     </>
