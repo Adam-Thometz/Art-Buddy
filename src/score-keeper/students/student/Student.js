@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { updatePoints } from "_redux/score-keeper/scoreKeeperActions";
+import { updatePoints } from "_redux/score-keeper/scoreKeeperReducer";
 
 import "./Student.css";
 

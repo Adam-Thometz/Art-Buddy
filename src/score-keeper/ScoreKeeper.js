@@ -2,10 +2,7 @@ import { useEffect } from "react";
 import useVisited from "_hooks/visited/useVisited";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  clearGame,
-  loadStudents,
-} from "_redux/score-keeper/scoreKeeperActions";
+import { clearGame, loadStudents } from "_redux/score-keeper/scoreKeeperReducer";
 import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";

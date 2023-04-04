@@ -1,10 +1,9 @@
-import scoreKeeperReducer, { INITIAL_STATE } from "./scoreKeeperReducer";
-import { clearGame, loadStudents, updatePoints } from "./scoreKeeperActions";
+import scoreKeeperReducer, { initialState, clearGame, loadStudents, updatePoints } from "./scoreKeeperReducer";
 import { addedStudents } from "_testUtils/test-states/scoreKeeperReducerTestState";
 
 describe("Score Keeper reducer", () => {
   it("should return the initial state", () => {
-    expect(scoreKeeperReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(scoreKeeperReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle loading a roster", () => {
@@ -13,7 +12,7 @@ describe("Score Keeper reducer", () => {
       loadStudents(["Jake", "Jane"])
     );
     expect(result).toEqual({
-      ...INITIAL_STATE,
+      ...initialState,
       students: [
         { name: "Jake", points: 0 },
         { name: "Jane", points: 0 },
@@ -56,6 +55,6 @@ describe("Score Keeper reducer", () => {
 
   it("should handle clearing the game", () => {
     const result = scoreKeeperReducer(addedStudents, clearGame());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });
