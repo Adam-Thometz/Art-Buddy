@@ -1,9 +1,8 @@
-import { toggleTimer } from "./timeKeeperActions";
-import timeKeeperReducer, { INITIAL_STATE } from "./timeKeeperReducer";
+import timeKeeperReducer, { initialState, toggleTimer } from "./timeKeeperReducer";
 
 describe("Time Keeper reducer", () => {
   it("should return the initial state", () => {
-    expect(timeKeeperReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(timeKeeperReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should toggle playing", () => {

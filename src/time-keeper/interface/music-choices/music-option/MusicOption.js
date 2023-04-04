@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
-import { addTimeBlocks } from "_redux/time-keeper/timeKeeperActions";
+
+import { addTimeBlocks } from "_redux/time-keeper/timeKeeperReducer";
+
 import "./MusicOption.css";
 
 const MusicOption = ({ mood, seconds, music }) => {

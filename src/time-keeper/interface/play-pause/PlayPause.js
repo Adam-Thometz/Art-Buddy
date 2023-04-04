@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTimer } from "_redux/time-keeper/timeKeeperActions";
+import { toggleTimer } from "_redux/time-keeper/timeKeeperReducer";
 
 import "./PlayPause.css";
 
