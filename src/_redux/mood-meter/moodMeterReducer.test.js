@@ -1,5 +1,4 @@
 import moodMeterReducer, { initialState, setValence, setEnergy, clearOptions } from "./moodMeterReducer";
-import EMPTY_ACTION from "_testUtils/emptyAction";
 
 const LOW = 0;
 const MEDIUM = 1;
@@ -7,7 +6,7 @@ const HIGH = 2;
 
 describe("Mood Meter reducer", () => {
   it("should return the initial state", () => {
-    expect(moodMeterReducer(undefined, EMPTY_ACTION)).toEqual(initialState);
+    expect(moodMeterReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should set the valence", () => {
