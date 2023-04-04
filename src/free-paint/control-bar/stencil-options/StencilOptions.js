@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setStencil } from "_redux/free-paint/freePaintActions";
+import { setStencil } from "_redux/free-paint/freePaintReducer";
 
 import "./StencilOptions.css";
 

@@ -1,54 +1,51 @@
-import {
-  setColor,
-  setStencil,
-  setIsErasing,
-  clearGame,
-  setEditStencilMode,
-  setShownOptions,
-  setAvailableColors,
-} from "./freePaintActions";
-import { createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import paintColors from "_data/free-paint/colors";
 
-export const INITIAL_STATE = {
+export const initialState = {
   shownOptions: null,
   color: "#000000",
   stencil: null,
   isErasing: false,
   isEditingStencil: false,
   availableColors: paintColors,
-};
+}
 
-const freePaintReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(setAvailableColors, (state, action) => {
+const freePaintSlice = createSlice({
+  name: "freePaint",
+  initialState,
+  reducers: {
+    setAvailableColors(state, action) {
       const colorsToAdd = action.payload;
       const newColors = [...state.availableColors];
       newColors.push(...colorsToAdd);
       state.availableColors = newColors;
-    })
-    .addCase(setShownOptions, (state, action) => {
+    },
+    setShownOptions(state, action) {
       state.shownOptions = action.payload;
-    })
-    .addCase(setColor, (state, action) => {
+    },
+    setColor(state, action) {
       state.color = action.payload;
-    })
-    .addCase(setStencil, (state, action) => {
+    },
+    setStencil(state, action) {
       state.stencil = action.payload;
-    })
-    .addCase(setIsErasing, (state, action) => {
+    },
+    setIsErasing(state, action) {
       state.isErasing = action.payload;
-    })
-    .addCase(setEditStencilMode, (state, action) => {
+    },
+    setEditStencilMode(state, action) {
       state.isEditingStencil = action.payload;
-    })
-    .addCase(clearGame, (state) => {
-      state.color = INITIAL_STATE.color;
-      state.stencil = INITIAL_STATE.stencil;
-      state.isErasing = INITIAL_STATE.isErasing;
-      state.isEditingStencil = INITIAL_STATE.isEditingStencil;
-      state.availableColors = INITIAL_STATE.availableColors;
-    });
-});
+    },
+    clearGame(state) {
+      state.color = initialState.color;
+      state.stencil = initialState.stencil;
+      state.isErasing = initialState.isErasing;
+      state.isEditingStencil = initialState.isEditingStencil;
+      state.availableColors = initialState.availableColors;
+    }
+  }
+})
 
-export default freePaintReducer;
+const { setAvailableColors, setShownOptions, setColor, setStencil, setIsErasing, setEditStencilMode, clearGame } = freePaintSlice.actions
+
+export { setAvailableColors, setShownOptions, setColor, setStencil, setIsErasing, setEditStencilMode, clearGame }
+export default freePaintSlice.reducer;

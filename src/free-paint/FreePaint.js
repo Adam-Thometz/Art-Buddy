@@ -3,10 +3,7 @@ import useReportCard from "_hooks/report-card/useReportCard";
 import useVisited from "_hooks/visited/useVisited";
 
 import { useSelector, useDispatch } from "react-redux";
-import {
-  clearGame,
-  setAvailableColors,
-} from "_redux/free-paint/freePaintActions";
+import { clearGame, setAvailableColors } from "_redux/free-paint/freePaintReducer";
 import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";

@@ -1,8 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setIsErasing,
-  setEditStencilMode,
-} from "_redux/free-paint/freePaintActions";
+import { setIsErasing, setEditStencilMode } from "_redux/free-paint/freePaintReducer";
 
 import "./ControlBar.css";
 

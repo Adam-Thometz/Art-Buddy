@@ -1,25 +1,15 @@
-import freePaintReducer, { INITIAL_STATE } from "./freePaintReducer";
-
-import {
-  setColor,
-  setStencil,
-  setIsErasing,
-  clearGame,
-  setEditStencilMode,
-  setShownOptions,
-  setAvailableColors,
-} from "./freePaintActions";
+import freePaintReducer, { initialState, setColor, setStencil, setIsErasing, clearGame, setEditStencilMode, setShownOptions, setAvailableColors } from "./freePaintReducer";
 
 describe("Free Paint reducer", () => {
   it("should return the initial state", () => {
-    expect(freePaintReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(freePaintReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should add colors to the available colors list", () => {
     const colorsToAdd = ["yellow", "red", "blue"];
     const result = freePaintReducer(undefined, setAvailableColors(colorsToAdd));
     expect(result.availableColors).toEqual(
-      INITIAL_STATE.availableColors.concat(colorsToAdd)
+      initialState.availableColors.concat(colorsToAdd)
     );
   });
 
@@ -50,6 +40,6 @@ describe("Free Paint reducer", () => {
 
   it("should handle resetting", () => {
     const result = freePaintReducer(undefined, clearGame());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });

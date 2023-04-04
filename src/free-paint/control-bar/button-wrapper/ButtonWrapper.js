@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setShownOptions } from "_redux/free-paint/freePaintActions";
+import { setShownOptions } from "_redux/free-paint/freePaintReducer";
 
 import "./ButtonWrapper.css";
 

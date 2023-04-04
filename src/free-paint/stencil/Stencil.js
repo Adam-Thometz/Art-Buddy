@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setStencil } from "_redux/free-paint/freePaintActions";
+import { setStencil } from "_redux/free-paint/freePaintReducer";
 
 import "./Stencil.css";
 
