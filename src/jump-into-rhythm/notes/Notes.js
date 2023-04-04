@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setMeasures } from "_redux/jump-into-rhythm/jumpIntoRhythmActions";
+import { setMeasures } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
 
 import "./Notes.css";
 

@@ -3,7 +3,7 @@ import useVisited from "_hooks/visited/useVisited";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { clearGame } from "_redux/jump-into-rhythm/jumpIntoRhythmActions";
+import { clearGame } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
 import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";

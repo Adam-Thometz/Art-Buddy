@@ -2,11 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addToRhythm,
-  toggleAnimation,
-  toggleLilyPadDisplay,
-} from "_redux/jump-into-rhythm/jumpIntoRhythmActions";
+import { addToRhythm, toggleAnimation, toggleLilyPadDisplay } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
 
 import "./NoteOptions.css";
 

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteFromRhythm } from "_redux/jump-into-rhythm/jumpIntoRhythmActions";
+import { deleteFromRhythm } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
 
 import "./NoteBlock.css";
 

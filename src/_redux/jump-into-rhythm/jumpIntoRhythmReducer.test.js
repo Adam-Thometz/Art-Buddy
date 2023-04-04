@@ -1,17 +1,10 @@
-import jumpIntoRhythmReducer, { INITIAL_STATE } from "./jumpIntoRhythmReducer";
-import {
-  addToRhythm,
-  setMeasures,
-  clearGame,
-  deleteFromRhythm,
-  toggleLilyPadDisplay,
-  toggleAnimation,
-} from "./jumpIntoRhythmActions";
+import jumpIntoRhythmReducer, { initialState, addToRhythm, setMeasures, clearGame, deleteFromRhythm, toggleLilyPadDisplay, toggleAnimation } from "./jumpIntoRhythmReducer";
+
 import { testQuarterNote } from "_testUtils/test-states/jumpIntoRhythmReducerTestState";
 
 describe("Jump Into Rhythm Reducer", () => {
   it("should return the initial state", () => {
-    expect(jumpIntoRhythmReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(jumpIntoRhythmReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should add a note to a rhythm", () => {
@@ -65,6 +58,6 @@ describe("Jump Into Rhythm Reducer", () => {
 
   it("should handle resetting", () => {
     const result = jumpIntoRhythmReducer(undefined, clearGame());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });

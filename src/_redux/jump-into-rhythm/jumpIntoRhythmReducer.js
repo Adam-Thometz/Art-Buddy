@@ -1,22 +1,16 @@
-import {
-  addToRhythm,
-  clearGame,
-  deleteFromRhythm,
-  setMeasures,
-  toggleAnimation,
-  toggleLilyPadDisplay,
-} from "./jumpIntoRhythmActions";
-import { createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const INITIAL_STATE = {
+export const initialState = {
   isDisplayingLilyPads: false,
   rhythm: [null, null, null, null],
   isAnimating: false,
 };
 
-const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(addToRhythm, (state, action) => {
+const jumpIntoRhythmSlice = createSlice({
+  name: 'jumpIntoRhythm',
+  initialState,
+  reducers: {
+    addToRhythm(state, action) {
       const nextIdx = state.rhythm.indexOf(null);
       if (nextIdx === -1) return;
 
@@ -24,14 +18,14 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
       const newRhythm = [...state.rhythm];
       newRhythm[nextIdx] = { id, img, duration, isRest };
       state.rhythm = newRhythm;
-    })
-    .addCase(deleteFromRhythm, (state, action) => {
+    },
+    deleteFromRhythm(state, action) {
       const newRhythm = [...state.rhythm];
       const id = action.payload;
       newRhythm[id] = null;
       state.rhythm = newRhythm;
-    })
-    .addCase(setMeasures, (state, action) => {
+    },
+    setMeasures(state, action) {
       const newRhythm = state.rhythm;
       const numOfBeats = action.payload;
       const isInvalid =
@@ -42,18 +36,29 @@ const jumpIntoRhythmReducer = createReducer(INITIAL_STATE, (builder) => {
         numOfBeats > 0 ? newRhythm.push(null) : newRhythm.pop();
         state.rhythm = newRhythm;
       }
-    })
-    .addCase(toggleLilyPadDisplay, (state) => {
+    },
+    toggleLilyPadDisplay(state) {
       state.isDisplayingLilyPads = !state.isDisplayingLilyPads;
-    })
-    .addCase(toggleAnimation, (state) => {
+    },
+    toggleAnimation(state) {
       state.isAnimating = !state.isAnimating;
-    })
-    .addCase(clearGame, (state) => {
-      state.rhythm = INITIAL_STATE.rhythm;
-      state.isDisplayingLilyPads = INITIAL_STATE.isDisplayingLilyPads;
-      state.isAnimating = INITIAL_STATE.isAnimating;
-    });
-});
+    },
+    clearGame(state) {
+      state.rhythm = initialState.rhythm;
+      state.isDisplayingLilyPads = initialState.isDisplayingLilyPads;
+      state.isAnimating = initialState.isAnimating;
+    }
+  }
+})
 
-export default jumpIntoRhythmReducer;
+const { addToRhythm, deleteFromRhythm, setMeasures, toggleLilyPadDisplay, toggleAnimation, clearGame } = jumpIntoRhythmSlice.actions;
+export {
+  addToRhythm,
+  deleteFromRhythm,
+  setMeasures,
+  toggleLilyPadDisplay,
+  toggleAnimation,
+  clearGame
+};
+
+export default jumpIntoRhythmSlice.reducer;
