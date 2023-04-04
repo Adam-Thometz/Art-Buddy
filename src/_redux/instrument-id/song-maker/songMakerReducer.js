@@ -1,13 +1,4 @@
-import {
-  addInstrument,
-  selectInstrument,
-  selectMelody,
-  clearSong,
-  removeInstrument,
-  toggleLoop,
-} from "./songMakerActions";
-import { createReducer } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
 import getInstrument from "_utils/instrument-id/getInstrument";
 
 export const defaultInstrument = {
@@ -16,23 +7,25 @@ export const defaultInstrument = {
   isRhythm: null,
 };
 
-export const INITIAL_STATE = {
+export const initialState = {
   song: [defaultInstrument, null, null, null],
   isPlaying: false,
   currTimer: null,
 };
 
-const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(addInstrument, (state, action) => {
+const songMakerSlice = createSlice({
+  name: "songMaker",
+  initialState,
+  reducers: {
+    addInstrument(state, action) {
       const id = action.payload;
       state.song[id] = defaultInstrument;
-    })
-    .addCase(removeInstrument, (state, action) => {
+    },
+    removeInstrument(state, action) {
       const id = action.payload;
       state.song[id] = null;
-    })
-    .addCase(selectInstrument, (state, action) => {
+    },
+    selectInstrument(state, action) {
       const { id, instrumentId } = action.payload;
       const instrument = getInstrument(instrumentId);
       const { isRhythm } = instrument;
@@ -44,23 +37,35 @@ const songMakerReducer = createReducer(INITIAL_STATE, (builder) => {
         isCurrInstrumentRhythm === isRhythm ? state.song[id].melodyId : null;
       const newInstrument = { instrumentId, isRhythm, melodyId };
       state.song[id] = newInstrument;
-    })
-    .addCase(selectMelody, (state, action) => {
+    },
+    selectMelody(state, action) {
       const { id, melodyId } = action.payload;
       const instrumentWithMelody = {
         ...state.song[id],
         melodyId,
       };
       state.song[id] = instrumentWithMelody;
-    })
-    .addCase(toggleLoop, (state) => {
+    },
+    toggleLoop(state) {
       state.isPlaying = !state.isPlaying;
-    })
-    .addCase(clearSong, (state) => {
-      state.song = INITIAL_STATE.song;
-      state.isPlaying = INITIAL_STATE.isPlaying;
-      state.currTimer = INITIAL_STATE.currTimer;
-    });
-});
+    },
+    clearSong(state) {
+      state.song = initialState.song;
+      state.isPlaying = initialState.isPlaying;
+      state.currTimer = initialState.currTimer;
+    }
+  }
+})
 
-export default songMakerReducer;
+const { addInstrument, removeInstrument, selectInstrument, selectMelody, toggleLoop, clearSong } = songMakerSlice.actions;
+
+export {
+  addInstrument,
+  removeInstrument,
+  selectInstrument,
+  selectMelody,
+  toggleLoop,
+  clearSong
+}
+
+export default songMakerSlice.reducer;

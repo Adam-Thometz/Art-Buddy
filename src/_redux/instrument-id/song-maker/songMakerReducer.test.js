@@ -1,20 +1,10 @@
-import songMakerReducer, {
-  INITIAL_STATE,
-  defaultInstrument,
-} from "./songMakerReducer";
-import {
-  addInstrument,
-  removeInstrument,
-  selectMelody,
-  clearSong,
-  toggleLoop,
-} from "./songMakerActions";
+import songMakerReducer, { initialState, defaultInstrument, addInstrument, removeInstrument, selectMelody, clearSong, toggleLoop } from "./songMakerReducer";
 
 import { setupInstrument } from "_testUtils/setup-functions/instrumentIdReducerTestSetup";
 
 describe("Song Maker reducer", () => {
   it("should return the initial state", () => {
-    expect(songMakerReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(songMakerReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle adding a new instrument to a song", () => {
@@ -86,6 +76,6 @@ describe("Song Maker reducer", () => {
   it("should clear a song", () => {
     const setup = setupInstrument({ id: 0, isRhythm: false });
     const result = songMakerReducer(setup, clearSong());
-    expect(result.song).toEqual(INITIAL_STATE.song);
+    expect(result.song).toEqual(initialState.song);
   });
 });

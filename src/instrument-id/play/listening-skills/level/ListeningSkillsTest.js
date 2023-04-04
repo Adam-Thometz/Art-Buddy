@@ -4,11 +4,7 @@ import { PlayContext } from "_context/PlayContext";
 import useReportCard from "_hooks/report-card/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
-import {
-  selectChoice,
-  generateAnswer,
-  clearChoices,
-} from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
+import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/listeningSkillsTestReducer";
 
 import "./ListeningSkillsTest.css";
 

@@ -1,21 +1,17 @@
-import {
-  clearChoices,
-  generateAnswer,
-  selectChoice,
-} from "./listeningSkillsTestActions";
-import { createReducer } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
 import getChoices from "_utils/instrument-id/getChoices";
 
-export const INITIAL_STATE = {
+export const initialState = {
   choice1: null,
   choice2: null,
   answer: null,
 };
 
-const listeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(selectChoice, (state, action) => {
+const listeningSkillsTestSlice = createSlice({
+  name: "listeningSkillsTest",
+  initialState,
+  reducers: {
+    selectChoice(state, action) {
       const { id, level, choice } = action.payload;
       const selection = getChoices({ level, choice });
       const { instrumentChoice, instrumentChoice2 } = selection;
@@ -26,17 +22,25 @@ const listeningSkillsTestReducer = createReducer(INITIAL_STATE, (builder) => {
         state.choice1 = instrumentChoice;
         state.choice2 = instrumentChoice2;
       }
-    })
-    .addCase(generateAnswer, (state, action) => {
+    },
+    generateAnswer(state, action) {
       const { choice1, choice2 } = action.payload;
       const answer = Math.ceil(Math.random() * 2);
       state.answer = answer === 1 ? choice1 : choice2;
-    })
-    .addCase(clearChoices, (state) => {
-      state.choice1 = INITIAL_STATE.choice1;
-      state.choice2 = INITIAL_STATE.choice2;
-      state.answer = INITIAL_STATE.answer;
-    });
+    },
+    clearChoices(state, action) {
+      state.choice1 = initialState.choice1;
+      state.choice2 = initialState.choice2;
+      state.answer = initialState.answer;
+    }
+  }
 });
 
-export default listeningSkillsTestReducer;
+const { selectChoice, generateAnswer, clearChoices } = listeningSkillsTestSlice.actions;
+
+export {
+  selectChoice,
+  generateAnswer,
+  clearChoices
+};
+export default listeningSkillsTestSlice.reducer;

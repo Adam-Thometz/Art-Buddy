@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { PopupContext } from "_context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerActions";
+import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerReducer";
 
 import "./PlaySave.css";
 

@@ -1,10 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addInstrument,
-  removeInstrument,
-  selectInstrument,
-  selectMelody,
-} from "_redux/instrument-id/song-maker/songMakerActions";
+import { addInstrument, removeInstrument, selectInstrument, selectMelody } from "_redux/instrument-id/song-maker/songMakerReducer";
 
 import "./InstrumentDisplay.css";
 

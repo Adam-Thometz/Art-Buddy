@@ -3,16 +3,13 @@ import { PlayContext } from "_context/PlayContext";
 import useSavedSongs from "_hooks/saved-songs/useSavedSongs";
 
 import { useSelector, useDispatch } from "react-redux";
-import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerActions";
+import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerReducer";
 
 import "./SavedSongs.css";
 
 import Icon from "_components/icon/Icon";
 
-import {
-  smallPlayIcon,
-  deleteIcon,
-} from "_media/instrument-id/_icons/iconImports";
+import { smallPlayIcon, deleteIcon } from "_media/instrument-id/_icons/iconImports";
 import createLoop from "_utils/instrument-id/createLoop";
 
 const SavedSongs = () => {

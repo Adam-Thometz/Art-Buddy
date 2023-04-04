@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestActions";
+import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestReducer";
 
 import "./Choice.css";
 

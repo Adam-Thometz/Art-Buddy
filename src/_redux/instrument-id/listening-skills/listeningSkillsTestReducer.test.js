@@ -1,17 +1,10 @@
-import listeningSkillsTestReducer, {
-  INITIAL_STATE,
-} from "./listeningSkillsTestReducer";
-import {
-  selectChoice,
-  generateAnswer,
-  clearChoices,
-} from "./listeningSkillsTestActions";
+import listeningSkillsTestReducer, { initialState, selectChoice, generateAnswer, clearChoices } from "./listeningSkillsTestReducer";
 
 import { setupChoices } from "_testUtils/setup-functions/instrumentIdReducerTestSetup";
 
 describe("Listening Skills Test reducer", () => {
   it("should return the initial state", () => {
-    expect(listeningSkillsTestReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(listeningSkillsTestReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle selecting a choice for level 1", () => {
