@@ -4,13 +4,7 @@ import { PopupContext } from "_context/PopupContext";
 import useReportCard from "_hooks/report-card/useReportCard";
 
 import { useDispatch } from "react-redux";
-import {
-  clearWheel,
-  toggleAllColors,
-  toggleColor,
-  toggleGroup,
-  toggleText,
-} from "_redux/color-theory/colorTheoryActions";
+import { clearWheel, toggleAllColors, toggleColor, toggleGroup, toggleText } from "_redux/color-theory/colorTheoryReducer";
 
 import "./PlayLevel.css";
 

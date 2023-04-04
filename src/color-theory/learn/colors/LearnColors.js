@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { clearWheel, learnColors } from "_redux/color-theory/colorTheoryActions";
+import { clearWheel, learnColors } from "_redux/color-theory/colorTheoryReducer";
 
 import "./LearnColors.css";
 

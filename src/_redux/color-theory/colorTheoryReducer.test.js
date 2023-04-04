@@ -1,17 +1,8 @@
-import colorTheoryReducer, { INITIAL_STATE } from "./colorTheoryReducer";
-
-import {
-  learnColors,
-  clearWheel,
-  toggleAllColors,
-  toggleColor,
-  toggleText,
-  toggleGroup,
-} from "./colorTheoryActions";
+import colorTheoryReducer, { initialState, learnColors, toggleAllColors, toggleColor, toggleGroup, toggleText, clearWheel } from "./colorTheoryReducer";
 
 describe("Color Theory Reducer", () => {
   it("should return the initial state", () => {
-    expect(colorTheoryReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(colorTheoryReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should toggle text and colors for a specific group", () => {
@@ -51,6 +42,6 @@ describe("Color Theory Reducer", () => {
   it("should clear the color wheel", () => {
     const start = colorTheoryReducer(undefined, learnColors("primary"));
     const result = colorTheoryReducer(start, clearWheel());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });
