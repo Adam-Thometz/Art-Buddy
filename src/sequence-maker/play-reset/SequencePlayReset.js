@@ -2,10 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import {
-  resetSequence,
-  togglePlaying,
-} from "_redux/sequence-maker/sequenceMakerActions";
+import { resetSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerReducer";
 
 import "./SequencePlayReset.css";
 

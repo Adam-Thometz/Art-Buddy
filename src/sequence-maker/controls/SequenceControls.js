@@ -1,9 +1,5 @@
 import { useDispatch } from "react-redux";
-import {
-  setCategory,
-  setDuration,
-  setPitch,
-} from "_redux/sequence-maker/sequenceMakerActions";
+import { setCategory, setDuration, setPitch } from "_redux/sequence-maker/sequenceMakerReducer";
 
 import "./SequenceControls.css";
 

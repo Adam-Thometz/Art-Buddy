@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerActions";
+import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerReducer";
 
 import "./Sequence.css";
 

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addToSequence } from "_redux/sequence-maker/sequenceMakerActions";
+import { addToSequence } from "_redux/sequence-maker/sequenceMakerReducer";
 
 import "./SoundOptions.css";
 

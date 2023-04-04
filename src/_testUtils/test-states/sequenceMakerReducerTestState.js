@@ -1,7 +1,7 @@
-import { INITIAL_STATE } from "_redux/sequence-maker/sequenceMakerReducer";
+import { initialState } from "_redux/sequence-maker/sequenceMakerReducer";
 
 const withCategory = {
-  ...INITIAL_STATE,
+  ...initialState,
   category: "animals",
 };
 

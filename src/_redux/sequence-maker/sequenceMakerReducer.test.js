@@ -1,25 +1,15 @@
-import sequenceMakerReducer, { INITIAL_STATE } from "./sequenceMakerReducer";
-import {
-  addToSequence,
-  setCategory,
-  removeFromSequence,
-  resetSequence,
-  setDuration,
-  setPitch,
-  clearGame,
-  togglePlaying,
-} from "./sequenceMakerActions";
+import sequenceMakerReducer, { initialState, addToSequence, setCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "./sequenceMakerReducer";
 
 import { withCategory } from "_testUtils/test-states/sequenceMakerReducerTestState";
 
 describe("Sequence Maker reducer", () => {
   it("should return the initial state", () => {
-    expect(sequenceMakerReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(sequenceMakerReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle changing category", () => {
     expect(sequenceMakerReducer(undefined, setCategory("animals"))).toEqual({
-      ...INITIAL_STATE,
+      ...initialState,
       category: "animals",
     });
   });
@@ -65,6 +55,6 @@ describe("Sequence Maker reducer", () => {
 
   it("should handle resetting the game", () => {
     const result = sequenceMakerReducer(withCategory, clearGame());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });
