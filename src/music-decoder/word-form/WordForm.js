@@ -2,7 +2,7 @@ import { useRef } from "react";
 import useFormFields from "_hooks/form-fields/useFormFields";
 
 import { useDispatch } from "react-redux";
-import { createWords } from "_redux/music-decoder/musicDecoderActions";
+import { createWords } from "_redux/music-decoder/musicDecoderReducer";
 
 import "./WordForm.css";
 

@@ -1,7 +1,7 @@
-import { INITIAL_STATE } from "_redux/music-decoder/musicDecoderReducer";
+import { initialState } from "_redux/music-decoder/musicDecoderReducer";
 
 const testState = {
-  ...INITIAL_STATE,
+  ...initialState,
   words: ["HI"],
 };
 

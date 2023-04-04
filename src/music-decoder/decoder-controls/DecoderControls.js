@@ -2,12 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  changeScale,
-  changeSound,
-  toggleUpperCase,
-  toggleNote,
-} from "_redux/music-decoder/musicDecoderActions";
+import { changeScale, changeSound, toggleUpperCase, toggleNote } from "_redux/music-decoder/musicDecoderReducer";
 
 import "./DecoderControls.css";
 

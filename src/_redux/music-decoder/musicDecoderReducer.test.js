@@ -1,18 +1,10 @@
-import musicDecoderReducer, { INITIAL_STATE } from "./musicDecoderReducer";
-import {
-  createWords,
-  fillLetter,
-  changeScale,
-  clearGame,
-  toggleUpperCase,
-  toggleNote,
-} from "./musicDecoderActions";
+import musicDecoderReducer, { initialState, createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from "./musicDecoderReducer";
 
 import { testState } from "_testUtils/test-states/musicDecoderReducerTestState";
 
 describe("Word To Music reducer", () => {
   it("should return the initial state", () => {
-    expect(musicDecoderReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(musicDecoderReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should create a word for the word display", () => {
@@ -49,6 +41,6 @@ describe("Word To Music reducer", () => {
 
   it("should handle resetting", () => {
     const result = musicDecoderReducer(testState, clearGame());
-    expect(result).toEqual(INITIAL_STATE);
+    expect(result).toEqual(initialState);
   });
 });

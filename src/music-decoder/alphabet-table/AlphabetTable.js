@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { fillLetter } from "_redux/music-decoder/musicDecoderActions";
+import { fillLetter } from "_redux/music-decoder/musicDecoderReducer";
 
 import "./AlphabetTable.css";
 

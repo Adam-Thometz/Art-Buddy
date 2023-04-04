@@ -1,17 +1,7 @@
-import {
-  changeScale,
-  createWords,
-  fillLetter,
-  clearGame,
-  toggleUpperCase,
-  toggleNote,
-  changeSound,
-} from "./musicDecoderActions";
-import { createReducer } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
 import findLettersToRemove from "_utils/music-decoder/findLettersToRemove";
 
-export const INITIAL_STATE = {
+export const initialState = {
   words: [],
   filledLetters: {},
   scale: 0,
@@ -20,13 +10,15 @@ export const INITIAL_STATE = {
   currPlaying: null,
 };
 
-const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(createWords, (state, action) => {
+const musicDecoderSlice = createSlice({
+  name: "nusicDecoder",
+  initialState,
+  reducers: {
+    createWords(state, action) {
       const newWords = action.payload;
       if (!newWords.length) {
-        state.words = INITIAL_STATE.words;
-        state.filledLetters = INITIAL_STATE.filledLetters;
+        state.words = initialState.words;
+        state.filledLetters = initialState.filledLetters;
         return;
       }
 
@@ -41,31 +33,44 @@ const musicDecoderReducer = createReducer(INITIAL_STATE, (builder) => {
         state.filledLetters = newFilledLetters;
       }
       state.words = splitWords;
-    })
-    .addCase(fillLetter, (state, action) => {
+    },
+    fillLetter(state, action) {
       const letter = action.payload;
       const newFilledLetters = { ...state.filledLetters, [letter]: true };
       state.filledLetters = newFilledLetters;
-    })
-    .addCase(changeScale, (state, action) => {
+    },
+    changeScale(state, action) {
       state.scale = action.payload;
-    })
-    .addCase(changeSound, (state, action) => {
+    },
+    changeSound(state, action) {
       state.sound = action.payload;
-    })
-    .addCase(toggleUpperCase, (state) => {
+    },
+    toggleUpperCase(state) {
       state.isUpperCase = !state.isUpperCase;
-    })
-    .addCase(toggleNote, (state, action) => {
+    },
+    toggleNote(state, action) {
       state.currPlaying = action.payload;
-    })
-    .addCase(clearGame, (state) => {
-      state.words = INITIAL_STATE.words;
-      state.filledLetters = INITIAL_STATE.filledLetters;
-      state.scale = INITIAL_STATE.scale;
-      state.sound = INITIAL_STATE.sound;
-      state.isUpperCase = INITIAL_STATE.isUpperCase;
-    });
-});
+    },
+    clearGame(state) {
+      state.words = initialState.words;
+      state.filledLetters = initialState.filledLetters;
+      state.scale = initialState.scale;
+      state.sound = initialState.sound;
+      state.isUpperCase = initialState.isUpperCase;
+    }
+  }
+})
 
-export default musicDecoderReducer;
+const { createWords, fillLetter, changeScale, changeSound, toggleUpperCase, toggleNote, clearGame } = musicDecoderSlice.actions;
+
+export {
+  createWords,
+  fillLetter,
+  changeScale,
+  changeSound,
+  toggleUpperCase,
+  toggleNote,
+  clearGame
+}
+
+export default musicDecoderSlice.reducer;
