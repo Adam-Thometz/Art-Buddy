@@ -1,11 +1,10 @@
-import generalReducer, { INITIAL_STATE } from "./generalReducer";
-import { changeCurrGame, changeMenu, setCurrTimer } from "./generalActions";
+import generalReducer, { initialState, changeCurrGame, changeMenu, setCurrTimer } from "./generalReducer";
 
 import { wordToMusic } from "_data/_activities/activityList";
 
 describe("General Reducer", () => {
   it("should return the initial state", () => {
-    expect(generalReducer(undefined, {})).toEqual(INITIAL_STATE);
+    expect(generalReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle changing menu category", () => {

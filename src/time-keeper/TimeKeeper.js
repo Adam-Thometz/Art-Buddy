@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import useVisited from "_hooks/visited/useVisited";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeCurrGame } from "_redux/_general/generalActions";
+import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";

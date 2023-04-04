@@ -3,7 +3,7 @@ import useVisited from "_hooks/visited/useVisited";
 import { PopupContext } from "_context/PopupContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { changeCurrGame } from "_redux/_general/generalActions";
+import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";

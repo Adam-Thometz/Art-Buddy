@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { PopupContext } from "_context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeMenu } from "_redux/_general/generalActions";
+import { changeMenu } from "_redux/_general/generalReducer";
 
 import "./WindowNavbar.css";
 

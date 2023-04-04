@@ -4,7 +4,7 @@ import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 
 import { default as store } from "_redux/rootReducer";
-import { changeMenu } from "_redux/_general/generalActions";
+import { changeMenu } from "_redux/_general/generalReducer";
 
 describe("Menu component", () => {
   it("renders without crashing", () => {

@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setCurrTimer } from "_redux/_general/generalActions";
+import { setCurrTimer } from "_redux/_general/generalReducer";
 
 import "./SongMaker.css";
 

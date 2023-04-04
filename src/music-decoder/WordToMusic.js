@@ -4,7 +4,7 @@ import { PlayContext } from "_context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
 import { clearGame } from "_redux/music-decoder/musicDecoderActions";
-import { changeCurrGame } from "_redux/_general/generalActions";
+import { changeCurrGame } from "_redux/_general/generalReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";

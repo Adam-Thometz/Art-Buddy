@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setEnergy } from "_redux/mood-meter/moodMeterActions";
+import { setEnergy } from "_redux/mood-meter/moodMeterReducer";
 
 import "./Battery.css";
 
