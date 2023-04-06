@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTextToSpeech } from "_redux/settings/settingsActions";
+import { toggleTextToSpeech } from "_redux/settings/settingsReducer";
 
 import "./TextToSpeech.css";
 

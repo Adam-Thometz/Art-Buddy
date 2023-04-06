@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleColorBlind } from "_redux/settings/settingsActions";
+import { toggleColorBlind } from "_redux/settings/settingsReducer";
 
 import "./ColorBlind.css";
 

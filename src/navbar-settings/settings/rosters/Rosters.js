@@ -3,7 +3,7 @@ import useRoster from "_hooks/roster/useRoster";
 import { PopupContext } from "_context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setRoster } from "_redux/settings/settingsActions";
+import { setRoster } from "_redux/settings/settingsReducer";
 
 import "./Rosters.css";
 

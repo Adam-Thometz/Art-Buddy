@@ -1,40 +1,37 @@
-import {
-  setRoster,
-  setVolume,
-  toggleColorBlind,
-  toggleTextToSpeech,
-} from "./settingsActions";
-import { createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const demoClass = {
   name: "Demo Class",
   students: ["Mario", "Buzz Lightyear", "Spongebob", "Sonic"],
 };
 
-export const INITIAL_STATE = {
-  menu: "games",
-  currGame: {},
-  timer: null,
+export const initialState = {
   volume: 0,
   textToSpeech: false,
   colorBlind: false,
   roster: demoClass,
 };
 
-const mainSettingsReducer = createReducer(INITIAL_STATE, (builder) => {
-  builder
-    .addCase(setVolume, (state, action) => {
+const settingsSlice = createSlice({
+  name: "settings",
+  initialState,
+  reducers: {
+    setVolume(state, action) {
       state.volume = action.payload;
-    })
-    .addCase(toggleTextToSpeech, (state) => {
+    },
+    toggleTextToSpeech(state) {
       state.textToSpeech = !state.textToSpeech;
-    })
-    .addCase(toggleColorBlind, (state) => {
+    },
+    toggleColorBlind(state) {
       state.colorBlind = !state.colorBlind;
-    })
-    .addCase(setRoster, (state, action) => {
+    },
+    setRoster(state, action) {
       state.roster = action.payload;
-    });
+    }
+  }
 });
 
-export default mainSettingsReducer;
+const { setVolume, toggleTextToSpeech, toggleColorBlind, setRoster } = settingsSlice.actions;
+
+export { setVolume, toggleTextToSpeech, toggleColorBlind, setRoster };
+export default settingsSlice.reducer;

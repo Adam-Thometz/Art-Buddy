@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setVolume } from "_redux/settings/settingsActions";
+import { setVolume } from "_redux/settings/settingsReducer";
 
 import "./Volume.css";
 
