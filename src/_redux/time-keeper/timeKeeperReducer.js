@@ -23,11 +23,18 @@ const timeKeeperSlice = createSlice({
     },
     toggleTimer(state) {
       state.isPlaying = !state.isPlaying;
+    },
+    decrementOneSecond(state) {
+      if (state.secondsLeft === 0) {
+        state.isPlaying = !state.isPlaying;
+        return
+      }
+      state.secondsLeft = state.secondsLeft - 1;
     }
   }
 })
 
-const { addTimeBlocks, toggleTimer } = timeKeeperSlice.actions;
+const { addTimeBlocks, toggleTimer, decrementOneSecond } = timeKeeperSlice.actions;
 
-export { addTimeBlocks, toggleTimer };
+export { addTimeBlocks, toggleTimer, decrementOneSecond };
 export default timeKeeperSlice.reducer;

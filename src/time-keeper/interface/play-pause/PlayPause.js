@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTimer } from "_redux/time-keeper/timeKeeperReducer";
 
@@ -9,9 +11,15 @@ import play from "_media/time-keeper/controls/play.png";
 import pause from "_media/time-keeper/controls/pause.png";
 
 const PlayPause = () => {
-  const { isPlaying } = useSelector((state) => state.timeKeeper);
+  const { isPlaying, secondsLeft } = useSelector((state) => state.timeKeeper);
   const dispatch = useDispatch();
-  const handlePlaying = () => dispatch(toggleTimer());
+  const handlePlaying = () => {
+    if (secondsLeft) dispatch(toggleTimer());
+  };
+
+  useEffect(() => {
+    if (isPlaying && !secondsLeft) dispatch(toggleTimer());
+  }, [secondsLeft, isPlaying, dispatch]);
 
   const icon = !isPlaying ? play : pause;
   const text = !isPlaying ? "START" : "STOP";

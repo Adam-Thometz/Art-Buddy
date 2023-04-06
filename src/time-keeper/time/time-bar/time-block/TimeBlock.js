@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import "./TimeBlock.css";
 
 const TimeBlock = ({ seconds, mood, music }) => {
-  console.log(seconds, mood, music);
   const { secondsLeft } = useSelector((state) => state.timeKeeper);
   const width = `${(seconds / secondsLeft) * 100}%`;
   return (

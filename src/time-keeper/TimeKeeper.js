@@ -7,10 +7,10 @@ import { changeCurrGame } from "_redux/_general/generalReducer";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";
 import TimeLeft from "./time/time-left/TimeLeft";
+import TimeBar from "./time/time-bar/TimeBar";
+import Interface from "./interface/Interface";
 
 import { timeKeeper } from "_data/_activities/activityList";
-import Interface from "./interface/Interface";
-import TimeBar from "./time/time-bar/TimeBar";
 
 const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(timeKeeper.lsKey);
