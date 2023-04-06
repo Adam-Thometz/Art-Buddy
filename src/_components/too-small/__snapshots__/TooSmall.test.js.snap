@@ -9,7 +9,7 @@ exports[`TooSmall component matches snapshot 1`] = `
       Welcome to Art Buddy
     </h1>
     <p>
-      For the best experience, we recommend using a bigger screen, at least 1000 pixels wide.
+      For the best experience, we recommend using a bigger screen.
     </p>
   </div>
 </DocumentFragment>
