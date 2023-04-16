@@ -13,7 +13,8 @@ import songMaker from "./instrument-id/song-maker/songMakerReducer";
 
 // Art Games
 import freePaint from "./free-paint/freePaintReducer";
-import colorTheory from "./color-theory/colorTheoryReducer";
+import colorWheel from "./color-theory/color-wheel/colorWheelReducer";
+import colorTheoryQuiz from "./color-theory/color-theory-quiz/colorTheoryQuizReducer";
 
 // Tools
 import scoreKeeper from "./score-keeper/scoreKeeperReducer";
@@ -30,7 +31,8 @@ const rootReducer = configureStore({
     listeningSkillsTest,
     songMaker,
     freePaint,
-    colorTheory,
+    colorWheel,
+    colorTheoryQuiz,
     scoreKeeper,
     moodMeter,
     timeKeeper,

@@ -1,10 +1,12 @@
-import { useContext, useEffect, useReducer } from "react";
+import { useContext, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { PopupContext } from "_context/PopupContext";
 import useReportCard from "_hooks/report-card/useReportCard";
 
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { clearWheel, toggleAllColors, toggleColor, toggleGroup, toggleText } from "_redux/color-theory/colorTheoryReducer";
+import { clearWheel, toggleAllColors, toggleColor, toggleGroup, toggleText } from "_redux/color-theory/color-wheel/colorWheelReducer";
+import { nextQuestion, nextSection, nextSublevel, nextLevel, gotIncorrect } from "_redux/color-theory/color-theory-quiz/colorTheoryQuizReducer";
 
 import "./PlayLevel.css";
 
@@ -19,51 +21,15 @@ import incorrectIcon from "_media/color-theory/incorrect.png";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
-const INITIAL_STATE = {
-  subLevel: "A",
-  section: 0,
-  answerIdx: 0,
-  gotIncorrect: false,
-}
-
-const ACTIONS = {
-  NEXT_QUESTION: "NEXT_QUESTION",
-  NEXT_SECTION: "NEXT_SECTION",
-  NEXT_SUBLEVEL: "NEXT_SUBLEVEL",
-  NEXT_LEVEL: "NEXT_LEVEL",
-  GOT_INCORRECT: "GOT_INCORRECT"
-}
-
-const playLevelReducer = (state, action) => {
-  switch (action.type) {
-    case ACTIONS.NEXT_QUESTION:
-      const newQuestion = state.answerIdx + 1;
-      return { ...state, answerIdx: newQuestion, gotIncorrect: false };
-    case ACTIONS.NEXT_SECTION:
-      const nextSection = state.section + 1;
-      return { ...state, section: nextSection, answerIdx: 0 };
-    case ACTIONS.NEXT_SUBLEVEL:
-      const nextSublevel = state.subLevel === "A" ? "B" : "A";
-      return { ...state, subLevel: nextSublevel, section: 0, answerIdx: 0 };
-    case ACTIONS.NEXT_LEVEL:
-      return { ...state, subLevel: "A", section: 0, answerIdx: 0 };
-    case ACTIONS.GOT_INCORRECT:
-      return { ...state, gotIncorrect: true };
-    default:
-      return state;
-  }
-}
-
 const PlayLevel = () => {
   const { level } = useParams();
   const { setCurrPopup } = useContext(PopupContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [levelState, setLevelState] = useReducer(playLevelReducer, INITIAL_STATE);
+  const { answerIdx, incorrect, subLevel, section } = useSelector(state => state.colorTheoryQuiz);
   const [, setReportCard] = useReportCard("colorTheory");
 
   const category = Object.keys(levels)[level - 1];
-  const { answerIdx, gotIncorrect, subLevel, section } = levelState;
   const { colorWheelState, task } = levels[category][subLevel][section];
   const { direction, colorText, answers, showAnswers } = task;
 
@@ -83,9 +49,9 @@ const PlayLevel = () => {
     const selected = e.target.id;
     if (answer === selected) {
       dispatch(toggleText(answer));
-      setLevelState({ type: ACTIONS.NEXT_QUESTION });
+      dispatch(nextQuestion())
     } else {
-      setLevelState({ type: ACTIONS.GOT_INCORRECT });
+      dispatch(gotIncorrect())
     }
   };
 
@@ -110,9 +76,9 @@ const PlayLevel = () => {
   const goToNextLevel = () => {
     handleReportCard();
     if (section < levels[category][subLevel].length - 1) {
-      setLevelState({ type: ACTIONS.NEXT_SECTION });
+      dispatch(nextSection())
     } else if (subLevel === "A" && answerIdx === answers.length) {
-      setLevelState({ type: ACTIONS.NEXT_SUBLEVEL });
+      dispatch(nextSublevel())
     } else if (+level === 3) {
       setCurrPopup({
         title: "COLOR THEORY",
@@ -120,7 +86,7 @@ const PlayLevel = () => {
         showConfetti: true,
       });
     } else {
-      setLevelState({ type: ACTIONS.NEXT_LEVEL });
+      dispatch(nextLevel())
       navigate(`${colorTheoryUrls.playMain}/${+level + 1}`, { replace: true });
     }
   };
@@ -132,7 +98,7 @@ const PlayLevel = () => {
       if (i < answerIdx) {
         src = correctIcon;
         text = "Correct!";
-      } else if (i === answerIdx && gotIncorrect) {
+      } else if (i === answerIdx && incorrect) {
         src = incorrectIcon;
         text = "Try again";
       }
