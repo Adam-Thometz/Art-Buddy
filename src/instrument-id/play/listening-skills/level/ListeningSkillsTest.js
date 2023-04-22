@@ -19,9 +19,7 @@ import loadSounds from "_utils/instrument-id/loadSounds";
 import { start, Transport } from "tone";
 
 const ListeningSkillsTest = () => {
-  const { choice1, choice2, answer } = useSelector(
-    (state) => state.listeningSkillsTest
-  );
+  const { choice1, choice2, answer } = useSelector((state) => state.listeningSkillsTest);
   const { playFn, setPlayFn } = useContext(PlayContext);
   const { volume } = useSelector((state) => state.settings);
   const dispatch = useDispatch();
@@ -91,7 +89,7 @@ const ListeningSkillsTest = () => {
                 save={setReportCard}
               />
             ) : null}
-            <p>{choice1 && choice2 ? "OR" : null}</p>
+            <p>{(choice1 && choice2) && "OR"}</p>
             {choice2 ? (
               <Choice
                 choice={choice2}
