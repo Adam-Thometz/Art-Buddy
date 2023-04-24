@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0 1%;
   background-color: white;
-  height: 5vh;
+  height: 50px;
 }
 
 .Navbar-header {
@@ -17,7 +17,7 @@
 .Navbar-settings {
   cursor: pointer;
   width: 2.5vw;
-  height: 4vh;
+  height: 40px;
 }
 
 .Navbar-settings img {
