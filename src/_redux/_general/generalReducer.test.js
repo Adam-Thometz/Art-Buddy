@@ -25,6 +25,6 @@ describe("General Reducer", () => {
 
   it("should set a timer id", () => {
     const result = generalReducer(undefined, setCurrTimer(457457));
-    expect(result.currTimer).toBe(457457);
+    expect(result.timer).toBe(457457);
   });
 });
