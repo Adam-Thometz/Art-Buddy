@@ -17,15 +17,14 @@ const generalSlice = createSlice({
       state.currGame = action.payload;
     },
     setCurrTimer(state, action) {
-      state.currTimer = action.payload;
+      state.timer = action.payload;
     },
   },
 });
 
-const { changeMenu, changeCurrGame, setCurrTimer } = generalSlice.actions;
-export {
+export const {
   changeMenu,
   changeCurrGame,
   setCurrTimer,
-}
+}  = generalSlice.actions;
 export default generalSlice.reducer;
