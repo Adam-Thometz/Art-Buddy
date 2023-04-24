@@ -68,58 +68,6 @@ exports[`Settings component matches the snapshot of Settings 1`] = `
     <p
       class="Settings-text"
     >
-      Text-to-Speech
-    </p>
-    <div
-      class="TextToSpeech"
-    >
-      <div
-        class="Toggle"
-      >
-        <div
-          class="Toggle-switch off"
-        >
-          <div
-            class="Toggle-button"
-          />
-          <span>
-            ON
-          </span>
-          <span>
-            OFF
-          </span>
-        </div>
-      </div>
-    </div>
-    <p
-      class="Settings-text"
-    >
-      Color Blind Mode
-    </p>
-    <div
-      class="ColorBlind"
-    >
-      <div
-        class="Toggle"
-      >
-        <div
-          class="Toggle-switch off"
-        >
-          <div
-            class="Toggle-button"
-          />
-          <span>
-            ON
-          </span>
-          <span>
-            OFF
-          </span>
-        </div>
-      </div>
-    </div>
-    <p
-      class="Settings-text"
-    >
       Roster
     </p>
     <div
