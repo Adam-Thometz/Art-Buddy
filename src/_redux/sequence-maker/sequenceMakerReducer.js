@@ -59,7 +59,15 @@ const sequenceMakerSlice = createSlice({
   }
 })
 
-const { setCategory, addToSequence, removeFromSequence, resetSequence, setPitch, setDuration, togglePlaying, clearGame } = sequenceMakerSlice.actions;
-export { setCategory, addToSequence, removeFromSequence, resetSequence, setPitch, setDuration, togglePlaying, clearGame }
+export const {
+  setCategory,
+  addToSequence,
+  removeFromSequence,
+  resetSequence,
+  setPitch,
+  setDuration,
+  togglePlaying,
+  clearGame
+} = sequenceMakerSlice.actions;
 
 export default sequenceMakerSlice.reducer;

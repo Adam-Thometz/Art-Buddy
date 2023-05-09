@@ -61,9 +61,7 @@ const musicDecoderSlice = createSlice({
   }
 })
 
-const { createWords, fillLetter, changeScale, changeSound, toggleUpperCase, toggleNote, clearGame } = musicDecoderSlice.actions;
-
-export {
+export const {
   createWords,
   fillLetter,
   changeScale,
@@ -71,6 +69,6 @@ export {
   toggleUpperCase,
   toggleNote,
   clearGame
-}
+} = musicDecoderSlice.actions;
 
 export default musicDecoderSlice.reducer;

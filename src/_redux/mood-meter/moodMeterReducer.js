@@ -22,11 +22,9 @@ const moodMeterSlice = createSlice({
   }
 })
 
-const { setValence, setEnergy, clearOptions } = moodMeterSlice.actions;
-
-export {
+export const {
   setValence,
   setEnergy,
   clearOptions
-}
+} = moodMeterSlice.actions;
 export default moodMeterSlice.reducer;

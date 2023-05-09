@@ -36,11 +36,9 @@ const listeningSkillsTestSlice = createSlice({
   }
 });
 
-const { selectChoice, generateAnswer, clearChoices } = listeningSkillsTestSlice.actions;
-
-export {
+export const {
   selectChoice,
   generateAnswer,
   clearChoices
-};
+} = listeningSkillsTestSlice.actions;
 export default listeningSkillsTestSlice.reducer;

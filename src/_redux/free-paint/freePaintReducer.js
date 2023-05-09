@@ -45,7 +45,6 @@ const freePaintSlice = createSlice({
   }
 })
 
-const { setAvailableColors, setShownOptions, setColor, setStencil, setIsErasing, setEditStencilMode, clearGame } = freePaintSlice.actions
+export const { setAvailableColors, setShownOptions, setColor, setStencil, setIsErasing, setEditStencilMode, clearGame } = freePaintSlice.actions
 
-export { setAvailableColors, setShownOptions, setColor, setStencil, setIsErasing, setEditStencilMode, clearGame }
 export default freePaintSlice.reducer;

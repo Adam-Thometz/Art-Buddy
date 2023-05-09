@@ -34,6 +34,5 @@ const scoreKeeperSlice = createSlice({
   }
 });
 
-const { loadStudents, updatePoints, clearGame } = scoreKeeperSlice.actions;
-export { loadStudents, updatePoints, clearGame };
+export const { loadStudents, updatePoints, clearGame } = scoreKeeperSlice.actions;
 export default scoreKeeperSlice.reducer;

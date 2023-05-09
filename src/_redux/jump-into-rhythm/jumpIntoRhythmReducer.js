@@ -51,14 +51,13 @@ const jumpIntoRhythmSlice = createSlice({
   }
 })
 
-const { addToRhythm, deleteFromRhythm, setMeasures, toggleLilyPadDisplay, toggleAnimation, clearGame } = jumpIntoRhythmSlice.actions;
-export {
+export const {
   addToRhythm,
   deleteFromRhythm,
   setMeasures,
   toggleLilyPadDisplay,
   toggleAnimation,
   clearGame
-};
+} = jumpIntoRhythmSlice.actions;
 
 export default jumpIntoRhythmSlice.reducer;
