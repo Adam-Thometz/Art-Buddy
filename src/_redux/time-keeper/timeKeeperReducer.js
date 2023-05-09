@@ -5,6 +5,7 @@ export const initialState = {
   song: [],
   secondsLeft: 0,
   isPlaying: false,
+  millisecondsLeft: 0
 };
 
 const timeKeeperSlice = createSlice({
@@ -30,11 +31,18 @@ const timeKeeperSlice = createSlice({
         return
       }
       state.secondsLeft = state.secondsLeft - 1;
+    },
+    setMillisecondsLeft(state, action) {
+      state.millisecondsLeft = action.payload;
     }
   }
 })
 
-const { addTimeBlocks, toggleTimer, decrementOneSecond } = timeKeeperSlice.actions;
+export const {
+  addTimeBlocks,
+  toggleTimer,
+  decrementOneSecond,
+  setMillisecondsLeft
+} = timeKeeperSlice.actions;
 
-export { addTimeBlocks, toggleTimer, decrementOneSecond };
 export default timeKeeperSlice.reducer;
