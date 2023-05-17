@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { decrementOneSecond, setMillisecondsLeft } from "_redux/time-keeper/timeKeeperReducer";
+import { decrementOneSecond, setMillisecondsLeftInSecond } from "_redux/time-keeper/timeKeeperReducer";
 import { setCurrTimer } from "_redux/_general/generalReducer";
 
 import createDisplayTime from '_utils/time-keeper/createDisplayTime';
@@ -28,7 +28,7 @@ const TimeKeeperNav = () => {
       if (!timer && secondsLeft) {
         const timeOut = setTimeout(() => {
           dispatch(decrementOneSecond());
-          if (millisecondsLeft) dispatch(setMillisecondsLeft(0));
+          if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
         }, millisecondsLeft ? millisecondsLeft+3 : 1000);
         dispatch(setCurrTimer(timeOut));
@@ -39,7 +39,7 @@ const TimeKeeperNav = () => {
     } else if (!isPlaying && start) {
       clearTimer(timer);
       const msLeft = 1000 - (new Date() - start);
-      dispatch(setMillisecondsLeft(msLeft));
+      dispatch(setMillisecondsLeftInSecond(msLeft));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, secondsLeft, timer]);

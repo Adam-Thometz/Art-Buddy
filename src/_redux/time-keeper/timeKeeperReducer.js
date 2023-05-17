@@ -5,7 +5,8 @@ export const initialState = {
   song: [],
   secondsLeft: 0,
   isPlaying: false,
-  millisecondsLeft: 0
+  millisecondsLeft: 0,
+  currSong: 0,
 };
 
 const timeKeeperSlice = createSlice({
@@ -28,11 +29,11 @@ const timeKeeperSlice = createSlice({
     decrementOneSecond(state) {
       if (state.secondsLeft === 0) {
         state.isPlaying = !state.isPlaying;
-        return
+      } else {
+        state.secondsLeft = state.secondsLeft - 1;
       }
-      state.secondsLeft = state.secondsLeft - 1;
     },
-    setMillisecondsLeft(state, action) {
+    setMillisecondsLeftInSecond(state, action) {
       state.millisecondsLeft = action.payload;
     }
   }
@@ -42,7 +43,7 @@ export const {
   addTimeBlocks,
   toggleTimer,
   decrementOneSecond,
-  setMillisecondsLeft
+  setMillisecondsLeftInSecond,
 } = timeKeeperSlice.actions;
 
 export default timeKeeperSlice.reducer;
