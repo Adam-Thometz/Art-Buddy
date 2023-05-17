@@ -3,10 +3,11 @@ import randomizeSong from "_utils/time-keeper/randomizeSong";
 
 export const initialState = {
   song: [],
+  totalLength: 0,
   secondsLeft: 0,
   isPlaying: false,
   millisecondsLeft: 0,
-  currSong: 0,
+  currSongIdx: 0,
 };
 
 const timeKeeperSlice = createSlice({
@@ -21,7 +22,11 @@ const timeKeeperSlice = createSlice({
         : randomizeSong({ seconds, mood });
       newSong.push(...musicToAdd);
       state.song = newSong;
-      state.secondsLeft = newSong.reduce((acc, curr) => acc + curr.seconds, 0);
+      const totalLength = newSong.reduce((acc, curr) => acc + curr.seconds, 0)
+      state.secondsLeft = state.isPlaying
+        ? state.secondsLeft + seconds
+        : totalLength;
+      state.totalLength = totalLength;
     },
     toggleTimer(state) {
       state.isPlaying = !state.isPlaying;
@@ -35,15 +40,24 @@ const timeKeeperSlice = createSlice({
     },
     setMillisecondsLeftInSecond(state, action) {
       state.millisecondsLeft = action.payload;
+    },
+    goToNextSong(state) {
+      if (state.currSongIdx + 1 === state.song.length) {
+        state.currSongIdx = 0;
+        state.secondsLeft = state.totalLength;
+      } else {
+        state.currSongIdx = state.currSongIdx + 1;
+      }
     }
   }
-})
+});
 
 export const {
   addTimeBlocks,
   toggleTimer,
   decrementOneSecond,
   setMillisecondsLeftInSecond,
+  goToNextSong
 } = timeKeeperSlice.actions;
 
 export default timeKeeperSlice.reducer;
