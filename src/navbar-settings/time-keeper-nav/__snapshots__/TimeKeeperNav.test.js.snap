@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeKeeperNav component matches the snapshot of the TimeKeeperNav 1`] = `
+<DocumentFragment>
+  <section
+    class="TimeKeeperNav"
+  >
+    <p
+      class="TimeKeeperNav-time"
+    />
+  </section>
+</DocumentFragment>
+`;

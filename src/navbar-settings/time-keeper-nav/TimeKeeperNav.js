@@ -7,6 +7,7 @@ import { decrementOneSecond, goToNextSong, setMillisecondsLeftInSecond, toggleTi
 import { setCurrTimer } from "_redux/_general/generalReducer";
 
 import createDisplayTime from '_utils/time-keeper/createDisplayTime';
+import generateVolume from '_utils/time-keeper/generateVolume';
 
 const TimeKeeperNav = () => {
   const {
@@ -14,10 +15,12 @@ const TimeKeeperNav = () => {
     secondsLeft,
     isPlaying,
     millisecondsLeft,
-    currSongIdx
+    currSongIdx,
+    isMuted
   } = useSelector(state => state.timeKeeper);
   const [start, setStart] = useState(null);
   const { timer } = useSelector((state) => state.general);
+  const { volume } = useSelector((state) => state.settings);
   const audioRef = useRef(null);
   const location = useLocation();
   const dispatch = useDispatch();
@@ -57,7 +60,13 @@ const TimeKeeperNav = () => {
       clearTimer(timer);
       dispatch(goToNextSong());
     }
-  }, [audioRef.current?.ended])
+  }, [audioRef.current?.ended]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = generateVolume(volume, isMuted)
+    }
+  }, [volume, isMuted])
 
   const clearTimer = timer => {
     clearTimeout(timer);
@@ -72,7 +81,9 @@ const TimeKeeperNav = () => {
   return (
     <section className='TimeKeeperNav'>
       {song.length ? <audio className='TimeKeeperNav-audio' src={currSong} ref={audioRef} /> : null}
-      {!onTimeKeeperPage ? <p onClick={playPause} className='TimeKeeperNav-time'>{displayTime}</p> : null}
+      {!onTimeKeeperPage ? <>
+        <p onClick={playPause} className='TimeKeeperNav-time'>{displayTime}</p>
+      </> : null}
     </section>
   );
 }
