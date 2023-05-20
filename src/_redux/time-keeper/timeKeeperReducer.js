@@ -4,6 +4,7 @@ import randomizeSong from "_utils/time-keeper/randomizeSong";
 export const initialState = {
   song: [],
   totalLength: 0,
+  isMuted: false,
   secondsLeft: 0,
   isPlaying: false,
   millisecondsLeft: 0,
@@ -33,10 +34,13 @@ const timeKeeperSlice = createSlice({
     },
     decrementOneSecond(state) {
       if (state.secondsLeft === 0) {
-        state.isPlaying = !state.isPlaying;
+        state.isPlaying = false;
       } else {
         state.secondsLeft = state.secondsLeft - 1;
       }
+    },
+    toggleMute(state) {
+      state.isMuted = !state.isMuted;
     },
     setMillisecondsLeftInSecond(state, action) {
       state.millisecondsLeft = action.payload;
