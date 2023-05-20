@@ -10,6 +10,13 @@ exports[`Navbar component matches the snapshot of the navbar 1`] = `
     >
       ARTBUDDY
     </span>
+    <section
+      class="TimeKeeperNav"
+    >
+      <p
+        class="TimeKeeperNav-time"
+      />
+    </section>
     <img
       alt="settings"
       class="Navbar-settings"
