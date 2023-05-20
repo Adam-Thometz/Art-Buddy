@@ -31,5 +31,5 @@ const settingsSlice = createSlice({
   }
 });
 
-export const { setVolume, toggleTextToSpeech, toggleColorBlind, setRoster } = settingsSlice.actions;;
+export const { setVolume, toggleTextToSpeech, toggleColorBlind, setRoster } = settingsSlice.actions;
 export default settingsSlice.reducer;
