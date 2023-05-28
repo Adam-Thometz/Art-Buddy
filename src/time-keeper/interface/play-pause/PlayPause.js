@@ -10,7 +10,7 @@ import Icon from "_components/icon/Icon";
 import play from "_media/time-keeper/controls/play.png";
 import pause from "_media/time-keeper/controls/pause.png";
 
-const PlayPause = () => {
+const PlayPause = ({ inNav }) => {
   const { isPlaying, secondsLeft } = useSelector((state) => state.timeKeeper);
   const dispatch = useDispatch();
   const handlePlaying = () => {
@@ -26,7 +26,7 @@ const PlayPause = () => {
 
   return (
     <section className="PlayPause">
-      <Icon icon={icon} text={text} onClick={handlePlaying} size="100px" />
+      <Icon icon={icon} text={inNav ? "" : text} onClick={handlePlaying} size={inNav ? "24px" : "100px"} />
     </section>
   );
 };
