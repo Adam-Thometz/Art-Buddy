@@ -1,4 +1,4 @@
-import timeKeeperReducer, { initialState, toggleTimer, toggleMute, setMillisecondsLeftInSecond, addTimeBlocks, decrementOneSecond } from "./timeKeeperReducer";
+import timeKeeperReducer, { initialState, toggleTimer, toggleMute, setMillisecondsLeftInSecond, addTimeBlocks, decrementOneSecond, goToNextSong, resetSong } from "./timeKeeperReducer";
 
 describe("Time Keeper reducer", () => {
   it("should return the initial state", () => {
@@ -47,5 +47,32 @@ describe("Time Keeper reducer", () => {
   it("should set milliseconds", () => {
     const result = timeKeeperReducer(undefined, setMillisecondsLeftInSecond(500));
     expect(result.millisecondsLeft).toBe(500);
+  });
+
+  it("should go to the next song", () => {
+    const result = timeKeeperReducer(undefined, goToNextSong());
+    expect(result.currSongIdx).toBe(1);
+  });
+
+  it("should go to the beginning if goToNextSong is envoked", () => {
+    const firstBlock = { music: 'file', seconds: 15, mood: 'relaxed' };
+    const secondBlock = { music: 'file', seconds: 30, mood: 'relaxed' };
+
+    const addFirstBlock = timeKeeperReducer(undefined, addTimeBlocks(firstBlock));
+    const addSecondBlock = timeKeeperReducer(addFirstBlock, addTimeBlocks(secondBlock));
+    const nextSong1 = timeKeeperReducer(addSecondBlock, goToNextSong());
+    expect(nextSong1.currSongIdx).toBe(1);
+    const goToEnd = timeKeeperReducer(nextSong1, goToNextSong());
+    expect(goToEnd.currSongIdx).toBe(0);
+  });
+
+  it("should reset the song", () => {
+    const block = { music: 'file', seconds: 15, mood: 'relaxed' };
+
+    const addFirstBlock = timeKeeperReducer(undefined, addTimeBlocks(block));
+    const decremented = timeKeeperReducer(addFirstBlock, decrementOneSecond());
+    expect(decremented.secondsLeft).toBe(14)
+    const reset = timeKeeperReducer(decremented, resetSong());
+    expect(reset.secondsLeft).toBe(15);
   });
 });

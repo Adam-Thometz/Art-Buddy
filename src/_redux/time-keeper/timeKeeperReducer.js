@@ -52,6 +52,20 @@ const timeKeeperSlice = createSlice({
       } else {
         state.currSongIdx = state.currSongIdx + 1;
       }
+    },
+    resetSong(state) {
+      state.secondsLeft = state.totalLength;
+      state.currSongIdx = 0;
+      state.isPlaying = false;
+    },
+    clearSong(state) {
+      state.song = initialState.song;
+      state.totalLength = initialState.totalLength;
+      state.isMuted = initialState.isMuted;
+      state.secondsLeft = initialState.secondsLeft;
+      state.isPlaying = initialState.isPlaying;
+      state.millisecondsLeft = initialState.millisecondsLeft;
+      state.currSongIdx = initialState.currSongIdx;
     }
   }
 });
@@ -62,7 +76,9 @@ export const {
   toggleMute,
   decrementOneSecond,
   setMillisecondsLeftInSecond,
-  goToNextSong
+  goToNextSong,
+  resetSong,
+  clearSong
 } = timeKeeperSlice.actions;
 
 export default timeKeeperSlice.reducer;
