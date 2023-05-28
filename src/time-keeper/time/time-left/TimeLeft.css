@@ -17,11 +17,13 @@
 .TimeLeft img {
   height: 54px;
   width: 54px;
+  cursor: pointer;
 }
 
 .TimeLeft-small img {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 
 .TimeLeft-small > .TimeLeft-header {
