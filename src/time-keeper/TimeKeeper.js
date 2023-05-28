@@ -3,6 +3,7 @@ import useVisited from "_hooks/visited/useVisited";
 
 import { useSelector, useDispatch } from "react-redux";
 import { changeCurrGame } from "_redux/_general/generalReducer";
+import { clearSong } from "_redux/time-keeper/timeKeeperReducer";
 
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";
@@ -22,6 +23,8 @@ const TimeKeeper = () => {
     return () => dispatch(changeCurrGame({}));
   }, [dispatch]);
 
+  const handleClear = () => dispatch(clearSong())
+
   return (
     <>
       <WindowNavbar page={currGame.name} />
@@ -32,6 +35,7 @@ const TimeKeeper = () => {
           <TimeLeft />
           <TimeBar />
           <Interface />
+          <span onClick={handleClear}>clear song</span>
         </>
       )}
     </>
