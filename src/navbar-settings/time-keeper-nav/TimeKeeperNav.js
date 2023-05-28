@@ -3,11 +3,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { decrementOneSecond, goToNextSong, setMillisecondsLeftInSecond, toggleTimer } from "_redux/time-keeper/timeKeeperReducer";
+import { decrementOneSecond, goToNextSong, setMillisecondsLeftInSecond  } from "_redux/time-keeper/timeKeeperReducer";
 import { setCurrTimer } from "_redux/_general/generalReducer";
 
-import createDisplayTime from '_utils/time-keeper/createDisplayTime';
+import "./TimeKeeperNav.css";
+
+import TimeLeft from 'time-keeper/time/time-left/TimeLeft';
+import PlayPause from 'time-keeper/interface/play-pause/PlayPause';
+
 import generateVolume from '_utils/time-keeper/generateVolume';
+import urls from '_routes/routeUrls';
 
 const TimeKeeperNav = () => {
   const {
@@ -24,7 +29,7 @@ const TimeKeeperNav = () => {
   const audioRef = useRef(null);
   const location = useLocation();
   const dispatch = useDispatch();
-  const onTimeKeeperPage = location.pathname === '/time-keeper';
+  const onTimeKeeperPage = location.pathname === urls.timeKeeperUrl;
 
   useEffect(() => {
     if (song.length) {
@@ -78,16 +83,14 @@ const TimeKeeperNav = () => {
     dispatch(setCurrTimer(null));
   }
 
-  const playPause = () => dispatch(toggleTimer());
-
-  const displayTime = song.length ? createDisplayTime(secondsLeft) : null;
   const currSong = song.length ? song[currSongIdx].music : null;
 
   return (
     <section className='TimeKeeperNav'>
       {song.length ? <audio className='TimeKeeperNav-audio' src={currSong} ref={audioRef} /> : null}
-      {!onTimeKeeperPage ? <>
-        <p onClick={playPause} className='TimeKeeperNav-time'>{displayTime}</p>
+      {!onTimeKeeperPage && song.length ? <>
+        <TimeLeft inNav />
+        <PlayPause inNav />
       </> : null}
     </section>
   );
