@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import {
-  songMaker,
-  listeningSkills,
-} from "_media/instrument-id/_icons/iconImports";
+import { songMaker, listeningSkills } from "_media/instrument-id/_icons/iconImports";
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const PlayInstrumentId = () => {
+  const { isPlaying } = useSelector(state => state.timeKeeper);
   const navigate = useNavigate();
 
   const goToListeningTest = () => navigate(instrumentIdUrls.playListening);
@@ -31,14 +31,16 @@ const PlayInstrumentId = () => {
           icon={listeningSkills}
           text="Listening Skills Test"
           onClick={goToListeningTest}
-        />
+          />
         <Icon
           largeFont
           icon={songMaker}
           text="Song Maker"
-          onClick={goToSongMaker}
-        />
+          onClick={isPlaying ? null : goToSongMaker}
+          otherImgStyles={isPlaying ? { opacity: 0.5 } : null}
+          />
       </Options>
+      {isPlaying && <p>Stop the Time Keeper to use the Song Maker</p>}
     </>
   );
 };

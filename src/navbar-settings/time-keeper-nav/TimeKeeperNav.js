@@ -12,7 +12,7 @@ import TimeLeft from 'time-keeper/time/time-left/TimeLeft';
 import PlayPause from 'time-keeper/interface/play-pause/PlayPause';
 
 import generateVolume from '_utils/time-keeper/generateVolume';
-import urls from '_routes/routeUrls';
+import urls, { instrumentIdUrls } from '_routes/routeUrls';
 
 const TimeKeeperNav = () => {
   const {
@@ -29,7 +29,9 @@ const TimeKeeperNav = () => {
   const audioRef = useRef(null);
   const location = useLocation();
   const dispatch = useDispatch();
-  const onTimeKeeperPage = location.pathname === urls.timeKeeperUrl;
+  const onUseablePage =
+    (location.pathname === urls.timeKeeperUrl) ||
+    (location.pathname === instrumentIdUrls.playSongMaker);
 
   useEffect(() => {
     if (song.length) {
@@ -88,7 +90,7 @@ const TimeKeeperNav = () => {
   return (
     <section className='TimeKeeperNav'>
       {song.length ? <audio className='TimeKeeperNav-audio' src={currSong} ref={audioRef} /> : null}
-      {!onTimeKeeperPage && song.length ? <>
+      {!onUseablePage && song.length ? <>
         <TimeLeft inNav />
         <PlayPause inNav />
       </> : null}
