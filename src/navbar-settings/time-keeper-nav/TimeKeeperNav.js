@@ -29,7 +29,7 @@ const TimeKeeperNav = () => {
   const audioRef = useRef(null);
   const location = useLocation();
   const dispatch = useDispatch();
-  const onUseablePage =
+  const onUnuseablePage =
     (location.pathname === urls.timeKeeperUrl) ||
     (location.pathname === instrumentIdUrls.playSongMaker);
 
@@ -90,7 +90,7 @@ const TimeKeeperNav = () => {
   return (
     <section className='TimeKeeperNav'>
       {song.length ? <audio className='TimeKeeperNav-audio' src={currSong} ref={audioRef} /> : null}
-      {!onUseablePage && song.length ? <>
+      {!onUnuseablePage && song.length ? <>
         <TimeLeft inNav />
         <PlayPause inNav />
       </> : null}
