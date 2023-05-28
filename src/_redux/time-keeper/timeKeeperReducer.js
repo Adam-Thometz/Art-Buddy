@@ -59,6 +59,7 @@ const timeKeeperSlice = createSlice({
 export const {
   addTimeBlocks,
   toggleTimer,
+  toggleMute,
   decrementOneSecond,
   setMillisecondsLeftInSecond,
   goToNextSong

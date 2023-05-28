@@ -1,4 +1,4 @@
-import timeKeeperReducer, { initialState, toggleTimer } from "./timeKeeperReducer";
+import timeKeeperReducer, { initialState, toggleTimer, toggleMute, setMillisecondsLeftInSecond } from "./timeKeeperReducer";
 
 describe("Time Keeper reducer", () => {
   it("should return the initial state", () => {
@@ -10,5 +10,17 @@ describe("Time Keeper reducer", () => {
     expect(result.isPlaying).toBe(true);
     const result2 = timeKeeperReducer(result, toggleTimer());
     expect(result2.isPlaying).toBe(false);
+  });
+
+  it("should toggle mute", () => {
+    const result = timeKeeperReducer(undefined, toggleMute());
+    expect(result.isMuted).toBe(true);
+    const result2 = timeKeeperReducer(result, toggleMute());
+    expect(result2.isMuted).toBe(false);
+  });
+  
+  it("should set milliseconds", () => {
+    const result = timeKeeperReducer(undefined, setMillisecondsLeftInSecond(500));
+    expect(result.millisecondsLeft).toBe(500);
   });
 });
