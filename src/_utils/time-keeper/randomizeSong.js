@@ -16,8 +16,8 @@ export default function randomizeSong({ seconds, mood }) {
   return song;
 }
 
-function getNumChoices(secondsLeft) {
-  if (secondsLeft >= 60) return 3;
-  if (secondsLeft < 60 && secondsLeft >= 30) return 2;
-  if (secondsLeft < 30 && secondsLeft >= 15) return 1;
+function getNumChoices(seconds) {
+  if (seconds >= 60) return 3;
+  if (seconds < 60 && seconds >= 30) return 2;
+  if (seconds < 30 && seconds >= 15) return 1;
 }
