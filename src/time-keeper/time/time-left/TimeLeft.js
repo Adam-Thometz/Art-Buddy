@@ -40,6 +40,7 @@ const TimeLeft = ({ inNav }) => {
       <h1
         className="TimeLeft-header"
         onClick={inNav ? goToTimeKeeper : null}
+        style={inNav ? { cursor: "pointer" } : null}
       >{timeDisplay}</h1>
       <img
         className="TimeLeft-reset"
