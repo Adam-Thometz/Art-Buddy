@@ -35,6 +35,7 @@ const TimeKeeperNav = () => {
   useEffect(() => {
     // start timer
     if (isPlaying && !timer) {
+      console.log("invoked!")
       setStart(new Date());
       // create a timer for decrementing a second
       if (!timer && secondsLeft) {
@@ -42,18 +43,23 @@ const TimeKeeperNav = () => {
           dispatch(decrementOneSecond());
           if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
-        }, millisecondsLeft ? millisecondsLeft+3 : 994);
+        }, millisecondsLeft ? millisecondsLeft+3 : 996);
         dispatch(setCurrTimer(timeOut));
+        // end timer
+      } else if (!secondsLeft) {
+        clearTimer(timer);
       }
-      // end timer
-      if (!secondsLeft) clearTimer(timer);
+    }
+  }, [isPlaying, timer, audioRef.current?.ended]);
+  
+  useEffect(() => {
     // keep track of milliseconds when paused
-    } else if (!isPlaying && start) {
+    if (!isPlaying && start) {
       clearTimer(timer);
       const msLeft = 1000 - (new Date() - start);
       dispatch(setMillisecondsLeftInSecond(msLeft));
     }
-  }, [isPlaying, secondsLeft, timer, audioRef.current?.ended]);
+  }, [isPlaying, start])
 
   useEffect(() => {
     if (audioRef.current && audioRef.current.ended) {
@@ -64,7 +70,7 @@ const TimeKeeperNav = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = generateVolume(volume, isMuted)
+      audioRef.current.volume = generateVolume(volume, isMuted);
     }
   }, [volume, isMuted])
 
