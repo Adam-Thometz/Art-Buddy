@@ -11,7 +11,7 @@ import mute from "_media/time-keeper/controls/mute.png";
 import urls from "_routes/routeUrls";
 
 const TimeLeft = ({ inNav }) => {
-  const { secondsLeft, currSongIdx } = useSelector((state) => state.timeKeeper);
+  const { secondsLeft, currSongIdx, isMuted } = useSelector((state) => state.timeKeeper);
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
@@ -35,6 +35,7 @@ const TimeLeft = ({ inNav }) => {
         alt=""
         role="button"
         onClick={handleMute}
+        style={isMuted ? { filter: "invert(0.5)" } : null}
       />
       <h1
         className="TimeLeft-header"
