@@ -35,7 +35,6 @@ const TimeKeeperNav = () => {
   useEffect(() => {
     // start timer
     if (isPlaying && !timer) {
-      console.log("invoked!")
       setStart(new Date());
       // create a timer for decrementing a second
       if (!timer && secondsLeft) {
