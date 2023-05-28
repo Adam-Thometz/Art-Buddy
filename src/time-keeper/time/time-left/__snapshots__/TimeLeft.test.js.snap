@@ -2,10 +2,26 @@
 
 exports[`TimeLeft component matches snapshot 1`] = `
 <DocumentFragment>
-  <h1
+  <div
     class="TimeLeft"
   >
-    00:00:00
-  </h1>
+    <img
+      alt=""
+      class="TimeLeft-mute"
+      role="button"
+      src="file"
+    />
+    <h1
+      class="TimeLeft-header"
+    >
+      00:00:00
+    </h1>
+    <img
+      alt=""
+      class="TimeLeft-reset"
+      role="button"
+      src="file"
+    />
+  </div>
 </DocumentFragment>
 `;

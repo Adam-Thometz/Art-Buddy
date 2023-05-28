@@ -1,8 +1,31 @@
-.TimeLeft {
-  width: 98%;
+.TimeLeft, .TimeLeft-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TimeLeft-header {
+  width: 30%;
   margin: 0 auto;
   font-size: 80px;
-  margin: 16px auto;
+  margin: 0;
   letter-spacing: 0.5rem;
   color: #000;
+  display: inline-block;
+}
+
+.TimeLeft img {
+  height: 54px;
+  width: 54px;
+}
+
+.TimeLeft-small img {
+  height: 24px;
+  width: 24px;
+}
+
+.TimeLeft-small > .TimeLeft-header {
+  font-size: 24px;
+  width: unset;
+  letter-spacing: 0.25rem;
 }
