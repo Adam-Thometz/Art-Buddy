@@ -50,7 +50,7 @@ const TimeKeeperNav = () => {
           dispatch(decrementOneSecond());
           if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
-        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1000);
+        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1005);
         dispatch(setCurrTimer(timeOut));
         // end timer
       } else if (!secondsLeft) {
