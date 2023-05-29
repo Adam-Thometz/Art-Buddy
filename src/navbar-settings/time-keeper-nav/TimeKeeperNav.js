@@ -45,11 +45,12 @@ const TimeKeeperNav = () => {
       setStart(new Date());
       // create a timer for decrementing a second
       if (!timer && secondsLeft) {
+        console.log(millisecondsLeft)
         const timeOut = setTimeout(() => {
           dispatch(decrementOneSecond());
           if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
-        }, millisecondsLeft ? millisecondsLeft+3 : 1003);
+        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1003);
         dispatch(setCurrTimer(timeOut));
         // end timer
       } else if (!secondsLeft) {
