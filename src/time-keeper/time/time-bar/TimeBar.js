@@ -9,8 +9,12 @@ const TimeBar = () => {
   const border = `5px solid ${!song.length ? "#d4d2d5" : "transparent"}`;
   return (
     <div className="TimeBar" style={{ border }}>
-      {song.map((part) => (
-        <TimeBlock seconds={part.seconds} mood={part.mood} music={part.music} />
+      {song.map((part, i) => (
+        <TimeBlock
+          seconds={part.seconds}
+          mood={part.mood}
+          i={i}
+        />
       ))}
     </div>
   );
