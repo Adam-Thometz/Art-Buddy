@@ -16,19 +16,9 @@ const TimeBlock = ({ seconds, mood, i }) => {
         duration: 1000,
         iterations: Infinity
       });
-    } else {
+    } else if (i !== currSongIdx || !isPlaying) {
       const animations = blockRef.current.getAnimations();
       if (animations.length) animations.forEach(a => a.cancel());
-
-      // if (isPlaying) {
-      //   blockRef.current.animate([
-      //     { transform: "scale(1, 1.2)", easing: "ease-out" },
-      //     { transform: "scale(1)", easing: "ease-out" },
-      //   ], {
-      //     duration: 1000,
-      //     iterations: 1
-      //   })
-      // }
     }
   }, [isPlaying, currSongIdx, i, mood])
 
