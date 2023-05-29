@@ -50,7 +50,7 @@ const TimeKeeperNav = () => {
           dispatch(decrementOneSecond());
           if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
-        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1005);
+        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1000);
         dispatch(setCurrTimer(timeOut));
         // end timer
       } else if (!secondsLeft) {
@@ -72,6 +72,7 @@ const TimeKeeperNav = () => {
     if (audioRef.current && audioRef.current.ended) {
       clearTimer(timer);
       dispatch(goToNextSong());
+      audioRef.current.play();
     }
   }, [audioRef.current?.ended]);
 
