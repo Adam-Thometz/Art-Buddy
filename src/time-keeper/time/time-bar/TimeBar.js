@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import "./TimeBar.css";
 
-import TimeBlock from "../time-bar/time-block/TimeBlock";
+import TimeBlock from "./time-block/TimeBlock";
 
 const TimeBar = () => {
   const { song } = useSelector((state) => state.timeKeeper);

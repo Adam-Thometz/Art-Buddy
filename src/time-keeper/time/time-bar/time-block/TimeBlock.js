@@ -20,13 +20,16 @@ const TimeBlock = ({ seconds, mood, i }) => {
       const animations = blockRef.current.getAnimations();
       if (animations.length) animations.forEach(a => a.cancel());
     }
-  }, [isPlaying, currSongIdx, i, mood])
+  }, [isPlaying, currSongIdx, i, mood]);
 
   const width = `${(seconds / totalLength) * 100}%`;
 
   return (
     <div className={`TimeBlock ${mood}`} style={{ width }} ref={blockRef}>
-      {parseInt(width) < 5 ? null : seconds === 60 ? "1 MIN" : `${seconds} SEC`}
+      {parseInt(width) < 5
+        ? null
+        : seconds === 60 ? "1 MIN" : `${seconds} SEC`
+      }
     </div>
   );
 };
