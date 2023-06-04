@@ -6,6 +6,8 @@ import "./TimeBlock.css";
 
 import animations from "_data/time-keeper/possibleAnimations";
 
+const BEAT_LENGTH = 469*4;
+
 const TimeBlock = ({ seconds, mood, i }) => {
   const { totalLength, currSongIdx, isPlaying } = useSelector((state) => state.timeKeeper);
   const blockRef = useRef(null);
@@ -13,7 +15,7 @@ const TimeBlock = ({ seconds, mood, i }) => {
   useEffect(() => {
     if (i === currSongIdx && isPlaying) {
       blockRef.current.animate(animations[mood], {
-        duration: 1000,
+        duration: BEAT_LENGTH,
         iterations: Infinity
       });
     } else if (i !== currSongIdx || !isPlaying) {
