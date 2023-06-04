@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { decrementOneSecond, goToNextSong, setMillisecondsLeftInSecond  } from "_redux/time-keeper/timeKeeperReducer";
+import { decrementOneSecond, goToNextSong, setMillisecondsLeftInSecond } from "_redux/time-keeper/timeKeeperReducer";
 import { setCurrTimer } from "_redux/_general/generalReducer";
 
 import "./TimeKeeperNav.css";
@@ -33,65 +33,63 @@ const TimeKeeperNav = () => {
     (location.pathname === urls.timeKeeperUrl) ||
     (location.pathname === instrumentIdUrls.playSongMaker);
 
+  // play or pause
   useEffect(() => {
     if (song.length) {
-      isPlaying ? audioRef.current.play() : audioRef.current.pause();
+      audioRef.current[isPlaying ? "play" : "pause"]();
     }
   }, [isPlaying, song, currSongIdx]);
-
+  
+  // start timer
   useEffect(() => {
-    // start timer
     if (isPlaying && !timer) {
       setStart(new Date());
       // create a timer for decrementing a second
       if (!timer && secondsLeft) {
-        console.log(millisecondsLeft)
         const timeOut = setTimeout(() => {
           dispatch(decrementOneSecond());
           if (millisecondsLeft) dispatch(setMillisecondsLeftInSecond(0));
           clearTimer(timeOut);
-        }, millisecondsLeft > 0 ? millisecondsLeft+3 : 1005);
+        }, millisecondsLeft > 0 ? millisecondsLeft : 1005);
         dispatch(setCurrTimer(timeOut));
-        // end timer
+      // end timer
       } else if (!secondsLeft) {
         clearTimer(timer);
       }
     }
-  }, [isPlaying, timer, audioRef.current?.ended]);
+  }, [isPlaying, timer]);
   
+  // keep track of milliseconds when paused
   useEffect(() => {
-    // keep track of milliseconds when paused
     if (!isPlaying && start) {
       clearTimer(timer);
       const msLeft = 1000 - (new Date() - start);
       dispatch(setMillisecondsLeftInSecond(msLeft));
     }
-  }, [isPlaying, start])
+  }, [isPlaying, start]);
 
+  // go to next song
   useEffect(() => {
     if (audioRef.current && audioRef.current.ended) {
-      clearTimer(timer);
       dispatch(goToNextSong());
-      audioRef.current.play();
     }
   }, [audioRef.current?.ended]);
 
+  // change volume
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = generateVolume(volume, isMuted);
     }
-  }, [volume, isMuted])
+  }, [volume, isMuted]);
 
   const clearTimer = timer => {
     clearTimeout(timer);
     dispatch(setCurrTimer(null));
   }
 
-  const currSong = song.length ? song[currSongIdx].music : null;
-
   return (
     <section className='TimeKeeperNav'>
-      {song.length ? <audio className='TimeKeeperNav-audio' src={currSong} ref={audioRef} /> : null}
+      {song.length ? <audio className='TimeKeeperNav-audio' src={song[currSongIdx].music} ref={audioRef} /> : null}
       {!onUnuseablePage && song.length ? <>
         <TimeLeft inNav />
         <PlayPause inNav />
