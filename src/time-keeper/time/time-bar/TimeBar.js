@@ -10,11 +10,7 @@ const TimeBar = () => {
   return (
     <div className="TimeBar" style={{ border }}>
       {song.map((part, i) => (
-        <TimeBlock
-          seconds={part.seconds}
-          mood={part.mood}
-          i={i}
-        />
+        <TimeBlock seconds={part.seconds} mood={part.mood} i={i} />
       ))}
     </div>
   );
