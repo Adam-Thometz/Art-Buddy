@@ -1,5 +1,5 @@
 // Main icons
-import playIcon from "_media/_general/play.png";
+import playIcon from "_media/_general/playActionBtn.png";
 import learnIcon from "./learn.png";
 
 // Play icons
