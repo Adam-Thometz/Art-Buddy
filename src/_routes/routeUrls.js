@@ -12,6 +12,7 @@ const urls = {
   scoreKeeperUrl: "/score-keeper",
   timeKeeperUrl: "/time-keeper",
   moodMeterUrl: "/mood-meter",
+  noiseMeterUrl: "/noise-meter",
 };
 
 export const instrumentIdUrls = {

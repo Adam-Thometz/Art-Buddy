@@ -1,7 +1,7 @@
 import urls from "_routes/routeUrls";
 
 import wordToMusicIcon from "_media/menu/activity-icons/word-to-music.png";
-import sequenceMakerIcon from "_media/menu/activity-icons/sequence-maker.png";
+import { images } from "_media/sequence-maker/soundImageImports";
 import instrumentIdIcon from "_media/menu/activity-icons/instrument-id.png";
 import jumpIntoRhythmIcon from "_media/menu/activity-icons/jump-into-rhythm.png";
 import colorTheoryIcon from "_media/menu/activity-icons/color-theory.png";
@@ -20,6 +20,7 @@ const {
   scoreKeeperUrl,
   timeKeeperUrl,
   moodMeterUrl,
+  noiseMeterUrl
 } = urls;
 
 const wordToMusic = {
@@ -58,7 +59,7 @@ const jumpIntoRhythm = {
 const sequenceMaker = {
   name: "SEQUENCE MAKER",
   lsKey: "sm",
-  icon: sequenceMakerIcon,
+  icon: images.clapping,
   url: sequenceMakerUrl,
   activityType: types[0],
   genre: genres[0],
@@ -106,7 +107,7 @@ const timeKeeper = {
   genre: genres[2],
   description:
     "Tell the time with music! Add different music blocks to create a song out of the timer",
-  active: false,
+  active: true,
 };
 const moodMeter = {
   name: "MOOD METER",
@@ -115,7 +116,17 @@ const moodMeter = {
   url: moodMeterUrl,
   activityType: types[2],
   genre: genres[2],
-  description: "Figure out your mood",
+  description: "Figure out your mood using our simple interface",
+  active: true,
+};
+const noiseMeter = {
+  name: "NOISE METER",
+  lsKey: "nm",
+  icon: null,
+  url: noiseMeterUrl,
+  activityType: types[2],
+  genre: genres[2],
+  description: "Measure the amount of noise in a room.",
   active: true,
 };
 
@@ -129,6 +140,7 @@ const activities = {
   scoreKeeper,
   timeKeeper,
   moodMeter,
+  noiseMeter
 };
 
 export default activities;
@@ -143,4 +155,5 @@ export {
   scoreKeeper,
   timeKeeper,
   moodMeter,
+  noiseMeter
 };
