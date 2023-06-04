@@ -20,6 +20,7 @@ import colorTheoryQuiz from "./color-theory/color-theory-quiz/colorTheoryQuizRed
 import scoreKeeper from "./score-keeper/scoreKeeperReducer";
 import moodMeter from "./mood-meter/moodMeterReducer";
 import timeKeeper from "./time-keeper/timeKeeperReducer";
+import noiseMeter from "./noise-meter/noiseMeterReducer";
 
 const rootReducer = configureStore({
   reducer: {
@@ -36,6 +37,7 @@ const rootReducer = configureStore({
     scoreKeeper,
     moodMeter,
     timeKeeper,
+    noiseMeter
   },
 });
 
