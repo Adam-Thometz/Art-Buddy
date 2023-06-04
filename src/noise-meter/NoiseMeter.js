@@ -8,6 +8,8 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Instructions from "_components/instructions/Instructions";
 
 import { noiseMeter } from "_data/_activities/activityList";
+import Meter from "./meter/Meter";
+import Switch from "./switch/Switch";
 
 const NoiseMeter = () => {
   const [hasVisited, setHasVisited] = useVisited(noiseMeter.lsKey);
@@ -26,7 +28,8 @@ const NoiseMeter = () => {
         <Instructions setVisited={setHasVisited} />
       ) : (
         <>
-          <h1>Welcome to the Noise Meter!</h1>
+          <Meter />
+          <Switch />
         </>
       )}
     </>
