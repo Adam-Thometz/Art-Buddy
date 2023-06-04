@@ -16,6 +16,7 @@ import { timeKeeper } from "_data/_activities/activityList";
 const TimeKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(timeKeeper.lsKey);
   const { currGame } = useSelector((state) => state.general);
+  const { currSongIdx } = useSelector((state) => state.timeKeeper);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,7 +24,13 @@ const TimeKeeper = () => {
     return () => dispatch(changeCurrGame({}));
   }, [dispatch]);
 
-  const handleClear = () => dispatch(clearSong())
+  const handleClear = () => {
+    if (currSongIdx === 0) {
+      const audio = document.querySelector(".TimeKeeperNav-audio");
+      if (audio) audio.currentTime = 0;
+    }
+    dispatch(clearSong());
+  }
 
   return (
     <>
