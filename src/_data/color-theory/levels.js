@@ -93,7 +93,7 @@ const levels = {
           groups: [],
         },
         task: {
-          direction: "Click on 3 tertiary colors",
+          direction: "Click on three tertiary colors",
           colorText: "",
           answers: ["pear", "emerald", "blueberry"],
           showAnswers: true,
