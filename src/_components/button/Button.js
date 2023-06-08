@@ -18,7 +18,9 @@ const Button = ({
     <button
       id={id}
       disabled={disabled}
-      className={`Button ${small ? "small" : "regular"}${
+      className={`Button ${
+        small ? "small" : "regular"
+      }${
         selected ? " selected" : ""
       }`}
       onClick={onClick}
