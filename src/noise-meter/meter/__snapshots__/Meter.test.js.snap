@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meter component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="Meter"
+  >
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+    <img
+      alt=""
+      class="Line"
+      src="file"
+    />
+  </section>
+</DocumentFragment>
+`;

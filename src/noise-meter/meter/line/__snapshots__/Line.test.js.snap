@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Line component matches snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt=""
+    class="Line"
+    src="file"
+  />
+</DocumentFragment>
+`;
