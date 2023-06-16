@@ -1,10 +1,6 @@
 .Meter {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 25%;
   margin: 10px auto;
-}
-
-.Meter-line {
-  padding: 10px 0;
 }

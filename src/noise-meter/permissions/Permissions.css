@@ -1,0 +1,15 @@
+.Permissions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Permissions-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.Permissions-buttons .Button {
+  width: 15vw;
+  height: 7vh;
+}
