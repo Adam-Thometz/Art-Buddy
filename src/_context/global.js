@@ -1,13 +1,16 @@
 import React from "react";
 import { PlayProvider } from "./PlayContext";
 import { PopupProvider } from "./PopupContext";
+import { MicProvider } from "./MicContext";
 
 const GlobalContext = ({ children }) => {
   return (
     <PlayProvider>
-      <PopupProvider>
-        {children}
-      </PopupProvider>
+      <MicProvider>
+        <PopupProvider>
+          {children}
+        </PopupProvider>
+      </MicProvider>
     </PlayProvider>
   );
 };
