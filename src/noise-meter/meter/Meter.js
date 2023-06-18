@@ -28,7 +28,6 @@ const Meter = () => {
         const id = setInterval(() => {
           const volume = meter.getValue();
           dispatch(setMeterVolume(volume));
-          console.log(volume);
         }, 100);
         setMic(newMic);
         setIntervalId(id);
