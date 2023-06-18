@@ -24,4 +24,9 @@ describe("Tools Routes", () => {
     render(<ToolsRoutes />, { initialRoutes: [urls.moodMeterUrl] });
     expect(screen.getByText("MOOD METER")).toBeInTheDocument();
   });
+
+  it("renders the noise meter", () => {
+    render(<ToolsRoutes />, { initialRoutes: [urls.noiseMeterUrl] });
+    expect(screen.getByText("NOISE METER")).toBeInTheDocument();
+  });
 });
