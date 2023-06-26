@@ -1,6 +1,6 @@
 const readingGoals = [
   "Identify letters (upper/lower case)",
-  "Identify word fanilies",
+  "Identify word families",
   "Connect objects with familiar events",
   "Follow words read from left to right",
   "Identify vocabulary words",
@@ -10,13 +10,13 @@ const readingGoals = [
 const writingGoals = [
   "Draw a picture",
   "Write simple words",
-  "Tracing",
-  "Identify and extend patterns",
+  "Tracing", // could be an OT goal
   "Sequence a story",
 ];
 
 const mathGoals = [
   "Count using manipulatives",
+  "Identify and extend patterns",
   "Identify quantity",
   "Identify 'more' and 'less'",
   "Identify shapes",
