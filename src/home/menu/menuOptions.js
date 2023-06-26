@@ -31,10 +31,10 @@ const menuOptions = {
       active: true,
     },
     {
-      name: "IEP GOALS",
-      url: urls.byIEPGoals,
+      name: "COMMON CORE",
+      url: null,
       icon: iepIcon,
-      active: false,
+      active: true,
     },
   ],
   tools: [

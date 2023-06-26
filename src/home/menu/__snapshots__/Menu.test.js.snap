@@ -53,14 +53,13 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     </button>
     <button
       class="Button regular"
-      disabled=""
-      style="border-color: #4d4f5e; background-color: grey;"
+      style="border-color: #4d4f5e;"
     >
       <img
         alt=""
         src="file"
       />
-      IEP GOALS
+      COMMON CORE
     </button>
   </div>
 </DocumentFragment>
