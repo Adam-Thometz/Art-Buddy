@@ -12,6 +12,8 @@ import GoalFilter from "goal-filter/GoalFilter";
 
 import menuOptions from "./menuOptions";
 import activities from "_data/_activities/activityList";
+import goalIcons from "_media/goal-filter/goal-icons";
+import getCoveredSubjects from "_utils/goal-filter/getCoveredSubjects";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector((state) => state.general);
@@ -28,6 +30,7 @@ const Menu = ({ type = null }) => {
     const action = option.name === "COMMON CORE"
       ? () => setCurrPopup({ title: "Common Core Standards", popup: <GoalFilter /> })
       : () => navigate(option.url);
+    if (type) console.log(option.name, getCoveredSubjects(option.goalsCovered))
     return (
       <Button
         key={i}
@@ -36,6 +39,11 @@ const Menu = ({ type = null }) => {
         icon={option.icon}
       >
         {option.name}
+        {type ? <div className="Menu-subject-icons">
+          {getCoveredSubjects(option.goalsCovered).map(subject => (
+            <img src={goalIcons[subject]} alt="" />
+          ))}
+        </div> : null}
       </Button>
     );
   });
