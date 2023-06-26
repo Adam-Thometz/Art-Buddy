@@ -35,6 +35,7 @@ const GoalCategory = ({ category }) => {
         <Button
           key={i}
           colorId={i % 4}
+          id={game}
           onClick={goToGame}
           icon={activities[game].icon}
         >
