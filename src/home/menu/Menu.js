@@ -30,7 +30,6 @@ const Menu = ({ type = null }) => {
     const action = option.name === "COMMON CORE"
       ? () => setCurrPopup({ title: "Common Core Standards", popup: <GoalFilter /> })
       : () => navigate(option.url);
-    if (type) console.log(option.name, getCoveredSubjects(option.goalsCovered))
     return (
       <Button
         key={i}
