@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
 import { PlayContext } from "_context/PlayContext";
 
@@ -43,19 +44,16 @@ const SongMaker = () => {
       }, duration);
       dispatch(setCurrTimer(timer));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [song, volume]);
 
   useEffect(() => {
     if (playFn && song.some((part) => part && !!part.melodyId)) {
       isPlaying ? playFn.playLoop() : playFn.stopLoop();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying]);
 
   useEffect(() => {
     if (isPlaying) playFn.playLoop();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playFn]);
 
   return (
