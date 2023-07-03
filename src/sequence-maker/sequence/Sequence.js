@@ -35,7 +35,7 @@ const Sequence = () => {
     <section className="Sequence">
       {sequence.map((block, i) => (
         <figure
-          key={block ? block.alt : i}
+          key={block ? `${block.alt}-${i}` : `block-${i}`}
           className={`Sequence-block${block && block.isPlaying ? " playing" : ""}`}
           style={{ borderColor: colors[i % 4] }}
           id={i}
