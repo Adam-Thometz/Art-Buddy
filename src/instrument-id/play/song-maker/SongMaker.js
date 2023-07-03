@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { PlayContext } from "_context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
+import { clearSong } from "_redux/instrument-id/song-maker/songMakerReducer";
 import { setCurrTimer } from "_redux/_general/generalReducer";
 
 import "./SongMaker.css";
@@ -12,6 +13,7 @@ import PlaySave from "./play-save/PlaySave";
 import InstrumentDisplay from "./instrument-display/InstrumentDisplay";
 
 import createLoop from "_utils/instrument-id/createLoop";
+import { Transport } from "tone";
 
 const SongMaker = () => {
   const { song, isPlaying } = useSelector((state) => state.songMaker);
@@ -19,6 +21,13 @@ const SongMaker = () => {
   const { volume } = useSelector((state) => state.settings);
   const { playFn, setPlayFn } = useContext(PlayContext);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => {
+      Transport.stop();
+      dispatch(clearSong());
+    }
+  }, [])
 
   useEffect(() => {
     if (!isPlaying) {

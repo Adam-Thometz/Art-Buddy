@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PlayContext } from "_context/PlayContext";
@@ -22,22 +23,26 @@ const Instrument = () => {
   const { instrument } = useParams();
   const { playFn, setPlayFn } = useContext(PlayContext);
   const { setCurrPopup } = useContext(PopupContext);
+
   const { id, name, icon, madeFrom, howToPlay, width, videoUri } =
     getInstrument(convertToId(instrument.replace(/-/g, " ")));
 
   const playInstrument = async () => {
     if (Transport.state === "stopped") await start();
-    playFn(id);
+    playFn.play(id);
   };
 
   useEffect(() => {
-    setPlayFn(() => loadSounds({ ids: [id], volume, isTest: false }).play);
     return () => {
       Transport.stop();
       setCurrPopup(null);
+      setPlayFn(null);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, volume]);
+  }, []);
+
+  useEffect(() => {
+    setPlayFn(() => loadSounds({ ids: [id], volume, isTest: false }));
+  }, [id, volume])
 
   const openVideo = () =>
     setCurrPopup({
