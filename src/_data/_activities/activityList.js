@@ -1,17 +1,7 @@
 import urls from "_routes/routeUrls";
 
-import wordToMusicIcon from "_media/menu/activity-icons/word-to-music.png";
-import { images } from "_media/sequence-maker/soundImageImports";
-import instrumentIdIcon from "_media/menu/activity-icons/instrument-id.png";
-import jumpIntoRhythmIcon from "_media/menu/activity-icons/jump-into-rhythm.png";
-import colorTheoryIcon from "_media/menu/activity-icons/color-theory.png";
-import freePaintIcon from "_media/menu/activity-icons/free-paint.png";
-import scoreKeeperIcon from "_media/menu/option-icons/score-keeper.png";
-import timeKeeperIcon from "_media/menu/option-icons/time-keeper.png";
-import moodMeterIcon from "_media/menu/option-icons/mood-meter.png";
-import noiseMeterIcon from "_media/menu/option-icons/noise-meter.png";
-
 import { CONNECT_OBJECTS_WITH_EVENTS, COUNT, DRAW_A_PICTURE, EXTEND_PATTERNS, IDENTIFY_LETTERS, IDENTIFY_MORE_AND_LESS, IDENTIFY_QUANTITY, READ_LEFT_TO_RIGHT, SEQUENCE_STORY, SIGHT_WORDS, VOCAB_WORDS, WORD_FAMILIES, WRITE_SIMPLE_WORDS } from "_data/goals/goals";
+import { COLOR_THEORY_ICON, FREE_PAINT_ICON, JUMP_INTO_RHYTHM_ICON, MOOD_METER, NOISE_METER, SCORE_KEEPER, SEQUENCE_MAKER_ICON, TIME_KEEPER, WHATS_THAT_INSTRUMENT_ICON, WORD_TO_MUSIC_ICON } from "_media/menu/menuAssets";
 
 const types = ["games", "tools"];
 const genres = ["music", "art", "other"];
@@ -32,7 +22,7 @@ const {
 const wordToMusic = {
   name: "WORD-TO-MUSIC DECODER",
   lsKey: "wtm",
-  icon: wordToMusicIcon,
+  icon: WORD_TO_MUSIC_ICON,
   url: wordToMusicUrl,
   activityType: types[0],
   genre: genres[0],
@@ -49,7 +39,7 @@ const wordToMusic = {
 const instrumentId = {
   name: "WHAT'S THAT INSTRUMENT?",
   lsKey: "wti",
-  icon: instrumentIdIcon,
+  icon: WHATS_THAT_INSTRUMENT_ICON,
   url: instrumentIdUrl,
   activityType: types[0],
   genre: genres[0],
@@ -63,7 +53,7 @@ const instrumentId = {
 const jumpIntoRhythm = {
   name: "JUMP INTO RHYTHM",
   lsKey: "jir",
-  icon: jumpIntoRhythmIcon,
+  icon: JUMP_INTO_RHYTHM_ICON,
   url: jumpIntoRhythmUrl,
   activityType: types[0],
   genre: genres[0],
@@ -79,7 +69,7 @@ const jumpIntoRhythm = {
 const sequenceMaker = {
   name: "SEQUENCE MAKER",
   lsKey: "sm",
-  icon: images.CLAPPING_IMG,
+  icon: SEQUENCE_MAKER_ICON,
   url: sequenceMakerUrl,
   activityType: types[0],
   genre: genres[0],
@@ -95,7 +85,7 @@ const sequenceMaker = {
 const colorTheory = {
   name: "COLOR THEORY",
   lsKey: "ct",
-  icon: colorTheoryIcon,
+  icon: COLOR_THEORY_ICON,
   url: colorTheoryUrl,
   activityType: types[0],
   genre: genres[1],
@@ -108,7 +98,7 @@ const colorTheory = {
 const freePaint = {
   name: "FREE PAINT",
   lsKey: "fp",
-  icon: freePaintIcon,
+  icon: FREE_PAINT_ICON,
   url: freePaintUrl,
   activityType: types[0],
   genre: genres[1],
@@ -123,7 +113,7 @@ const freePaint = {
 const scoreKeeper = {
   name: "SCORE KEEPER",
   lsKey: "sk",
-  icon: scoreKeeperIcon,
+  icon: SCORE_KEEPER,
   url: scoreKeeperUrl,
   activityType: types[2],
   genre: genres[2],
@@ -138,7 +128,7 @@ const scoreKeeper = {
 const timeKeeper = {
   name: "TIME KEEPER",
   lsKey: "tk",
-  icon: timeKeeperIcon,
+  icon: TIME_KEEPER,
   url: timeKeeperUrl,
   activityType: types[2],
   genre: genres[2],
@@ -153,7 +143,7 @@ const timeKeeper = {
 const moodMeter = {
   name: "MOOD METER",
   lsKey: "mm",
-  icon: moodMeterIcon,
+  icon: MOOD_METER,
   url: moodMeterUrl,
   activityType: types[2],
   genre: genres[2],
@@ -165,7 +155,7 @@ const moodMeter = {
 const noiseMeter = {
   name: "NOISE METER",
   lsKey: "nm",
-  icon: noiseMeterIcon,
+  icon: NOISE_METER,
   url: noiseMeterUrl,
   activityType: types[2],
   genre: genres[2],
