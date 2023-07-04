@@ -8,47 +8,47 @@ exports[`Meter component matches snapshot 1`] = `
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
     <img
       alt=""
       class="Line"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
     />
   </section>
 </DocumentFragment>
