@@ -10,7 +10,7 @@ exports[`Notes component matches snapshot 1`] = `
     >
       <img
         alt="Treble clef"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/treble-clef.png"
       />
       <section
         class="Notes-beats"

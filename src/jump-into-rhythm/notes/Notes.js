@@ -5,7 +5,7 @@ import "./Notes.css";
 
 import NoteBlock from "./note-block/NoteBlock";
 
-import trebleClef from "_media/jump-into-rhythm/_icons/treble-clef.png";
+import { TREBLE_CLEF } from "_media/jump-into-rhythm/jumpIntoRhythmAssets";
 import plus from "_media/_general/add.png";
 import minus from "_media/_general/minus.png";
 import colors from "_data/_utils/colorOrder";
@@ -23,7 +23,7 @@ const Notes = () => {
     <div className="Notes">
       {/* Measure 1 */}
       <div className="Notes-measure">
-        <img src={trebleClef} alt="Treble clef" />
+        <img src={TREBLE_CLEF} alt="Treble clef" />
         <section className="Notes-beats">
           {rhythm.slice(0, 4).map((note, i) => (
             <NoteBlock

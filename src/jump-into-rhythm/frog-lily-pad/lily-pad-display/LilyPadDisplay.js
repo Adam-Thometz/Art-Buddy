@@ -2,8 +2,7 @@ import { Fragment } from "react";
 
 import "./LilyPadDisplay.css";
 
-import lilyPad from "_media/jump-into-rhythm/_icons/lily-pad.png";
-import flower from "_media/jump-into-rhythm/_icons/lily-pad-flower.png";
+import { LILY_PAD, LILY_PAD_FLOWER } from "_media/jump-into-rhythm/jumpIntoRhythmAssets";
 
 const LilyPadDisplay = ({ measure, id }) => {
   return (
@@ -15,7 +14,7 @@ const LilyPadDisplay = ({ measure, id }) => {
                 <Fragment key={`beat${i}-${id}`}>
                   <img
                     className="LilyPadDisplay-pad"
-                    src={lilyPad}
+                    src={LILY_PAD}
                     alt="Lily pad"
                     style={{
                       width: note === "8n" || beat.isRest ? "45%" : "90%",
@@ -24,7 +23,7 @@ const LilyPadDisplay = ({ measure, id }) => {
                   {beat.isRest ? (
                     <img
                       className="LilyPadDisplay-flower"
-                      src={flower}
+                      src={LILY_PAD_FLOWER}
                       alt=""
                     />
                   ) : null}

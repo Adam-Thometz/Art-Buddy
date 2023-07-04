@@ -19,7 +19,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
     >
       <img
         alt="Treble clef"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/treble-clef.png"
       />
       <section
         class="Notes-beats"
@@ -86,7 +86,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/notes/quarter-note.png"
           style="height: 100px; width: 25%; cursor: pointer;"
         />
         <figcaption
@@ -103,7 +103,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/notes/eighth-notes.png"
           style="height: 100px; width: 50%; cursor: pointer;"
         />
         <figcaption
@@ -120,7 +120,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/notes/quarter-rest.png"
           style="height: 100px; width: 25%; cursor: pointer;"
         />
         <figcaption

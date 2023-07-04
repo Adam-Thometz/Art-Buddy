@@ -11,7 +11,7 @@ exports[`FrogLilyPads component matches snapshot 1`] = `
       <img
         alt="frog"
         class="Frog"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/frogs/blue.png"
       />
       <div
         class="LilyPadDisplay"
