@@ -1,5 +1,5 @@
-import * as melodies from '_media/instrument-id/_melodies-rhythms/melodies';
-import * as rhythms from '_media/instrument-id/_melodies-rhythms/rhythms';
+import * as melodies from '_data/instrument-id/_melodies-rhythms/melodies';
+import * as rhythms from '_data/instrument-id/_melodies-rhythms/rhythms';
 import { Part, Sampler, start, Transport, Time } from 'tone';
 import getInstrument from './getInstrument';
 
