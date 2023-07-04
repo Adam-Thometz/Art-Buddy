@@ -79,7 +79,7 @@ const jumpIntoRhythm = {
 const sequenceMaker = {
   name: "SEQUENCE MAKER",
   lsKey: "sm",
-  icon: images.clapping,
+  icon: images.CLAPPING_IMG,
   url: sequenceMakerUrl,
   activityType: types[0],
   genre: genres[0],

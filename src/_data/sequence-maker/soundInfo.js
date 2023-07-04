@@ -1,7 +1,7 @@
 import { images, sounds } from "_media/sequence-maker/soundImageImports";
 
 const stop = {
-  image: images.stop,
+  image: images.STOP,
   alt: "STOP",
   sound: null,
 };
@@ -9,55 +9,55 @@ const stop = {
 const soundInfo = {
   bodySoundsContinuous: {
     clappingContinuous: {
-      image: images.clapping,
+      image: images.CLAPPING_IMG,
       alt: "CLAPPING",
-      sound: sounds.clappingContinuous,
+      sound: sounds.CLAPPING_CONTINUOUS_SOUND,
     },
     stompingContinuous: {
-      image: images.stomping,
+      image: images.STOMPING_IMG,
       alt: "STOMPING",
-      sound: sounds.stompingContinuous,
+      sound: sounds.STOMPING_CONTINUOUS_SOUND,
     },
     yeahContinuous: {
-      image: images.yeah,
+      image: images.YEAH_IMG,
       alt: "SAY YEAH",
-      sound: sounds.yeahContinuous,
+      sound: sounds.YEAH_CONTINUOUS_SOUND,
     },
     stop,
   },
   bodySoundsOnce: {
     clappingOnce: {
-      image: images.clapping,
+      image: images.CLAPPING_IMG,
       alt: "CLAP",
-      sound: sounds.clappingOnce,
+      sound: sounds.CLAPPING_ONCE_SOUND,
     },
     stompingOnce: {
-      image: images.stomping,
+      image: images.STOMPING_IMG,
       alt: "STOMP",
-      sound: sounds.stompingOnce,
+      sound: sounds.STOMPING_ONCE_SOUND,
     },
     yeahOnce: {
-      image: images.yeah,
+      image: images.YEAH_IMG,
       alt: "SAY YEAH",
-      sound: sounds.yeahOnce,
+      sound: sounds.YEAH_ONCE_SOUND,
     },
     stop,
   },
   animals: {
     dog: {
-      image: images.dog,
+      image: images.DOG_IMG,
       alt: "DOG",
-      sound: sounds.bark,
+      sound: sounds.DOG_SOUND,
     },
     cat: {
-      image: images.cat,
+      image: images.CAT_IMG,
       alt: "CAT",
-      sound: sounds.meow,
+      sound: sounds.CAT_SOUND,
     },
     bird: {
-      image: images.bird,
+      image: images.BIRD_IMG,
       alt: "BIRD",
-      sound: sounds.tweet,
+      sound: sounds.BIRD_SOUND,
     },
     stop,
   },

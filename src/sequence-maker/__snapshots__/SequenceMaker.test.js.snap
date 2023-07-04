@@ -105,7 +105,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/sequence-maker/_icons/play.png"
           style="height: 48px; width: 48px; cursor: pointer;"
         />
         <figcaption
@@ -121,7 +121,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/sequence-maker/_icons/play-all.png"
           style="height: 48px; width: 48px; cursor: pointer;"
         />
         <figcaption
@@ -141,7 +141,7 @@ exports[`SequenceMaker component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/sequence-maker/_icons/reset.png"
           style="height: 48px; width: 48px; cursor: pointer;"
         />
         <figcaption
