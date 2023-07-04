@@ -10,7 +10,7 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 import ReportCard from "_components/report-card/ReportCard";
 
-import colorTheoryIcon from "_media/menu/activity-icons/color-theory.png";
+import { COLOR_THEORY_ICON } from "_media/menu/menuAssets";
 import reportCardIcon from "_media/_general/report-card.png";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import { lockIcon, unlockIcon } from "_media/_general/lock-icons/lockIconImports";
@@ -64,7 +64,7 @@ const Play = () => {
       <WindowNavbar page="COLOR THEORY: PLAY" />
       <main className="Play">
         <header className="Play-icon">
-          <Icon largeFont icon={colorTheoryIcon} text="Color Theory" />
+          <Icon largeFont icon={COLOR_THEORY_ICON} text="Color Theory" />
         </header>
         <section className="Play-levels-report-cards">
           <p className="Play-description">
