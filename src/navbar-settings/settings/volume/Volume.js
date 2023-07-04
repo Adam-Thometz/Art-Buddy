@@ -5,9 +5,7 @@ import "./Volume.css";
 
 import Icon from "_components/icon/Icon";
 
-import volumeHigh from "_media/settings/volume/volume-high.png";
-import volumeMid from "_media/settings/volume/volume-medium.png";
-import volumeLow from "_media/settings/volume/volume-low.png";
+import { VOLUME_LOW, VOLUME_MEDIUM, VOLUME_HIGH } from "_media/settings/settingsAssets";
 import { LOW, MEDIUM, HIGH } from "_data/_utils/volume";
 
 const Volume = () => {
@@ -31,7 +29,7 @@ const Volume = () => {
   return (
     <section className="Volume">
       <Icon
-        icon={volumeLow}
+        icon={VOLUME_LOW}
         otherImgStyles={volume === LOW ? selectedVolume : unselectedVolume}
         text="LOW"
         onClick={handleVolume}
@@ -40,7 +38,7 @@ const Volume = () => {
         width="40px"
       />
       <Icon
-        icon={volumeMid}
+        icon={VOLUME_MEDIUM}
         otherImgStyles={volume === MEDIUM ? selectedVolume : unselectedVolume}
         text="MEDIUM"
         onClick={handleVolume}
@@ -48,7 +46,7 @@ const Volume = () => {
         size="50px"
       />
       <Icon
-        icon={volumeHigh}
+        icon={VOLUME_HIGH}
         otherImgStyles={volume === HIGH ? selectedVolume : unselectedVolume}
         text="HIGH"
         onClick={handleVolume}

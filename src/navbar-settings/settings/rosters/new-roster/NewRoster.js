@@ -9,7 +9,7 @@ import Icon from "_components/icon/Icon";
 
 import convertToId from "_utils/_general/convertToId";
 import deleteIcon from "_media/_general/delete.png";
-import check from "_media/settings/check.png";
+import { CHECK_ICON } from "_media/settings/settingsAssets";
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({
@@ -80,7 +80,7 @@ const NewRoster = () => {
       <aside className="NewRoster-options">
         <AddIcon text="Name" size="50px" onClick={addStudent} />
         <Icon icon={deleteIcon} text="Reset" size="50px" onClick={reset} />
-        <Icon icon={check} text="Done" size="50px" onClick={addRoster} />
+        <Icon icon={CHECK_ICON} text="Done" size="50px" onClick={addRoster} />
       </aside>
       <aside className="NewRoster-students">
         <input
