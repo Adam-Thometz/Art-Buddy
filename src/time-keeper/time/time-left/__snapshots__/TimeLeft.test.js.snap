@@ -9,7 +9,7 @@ exports[`TimeLeft component matches snapshot 1`] = `
       alt=""
       class="TimeLeft-mute"
       role="button"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/time-keeper/controls/mute.png"
     />
     <h1
       class="TimeLeft-header"
@@ -20,7 +20,7 @@ exports[`TimeLeft component matches snapshot 1`] = `
       alt=""
       class="TimeLeft-reset"
       role="button"
-      src="file"
+      src="https://art-buddy.s3.amazonaws.com/time-keeper/controls/reset.png"
     />
   </div>
 </DocumentFragment>
