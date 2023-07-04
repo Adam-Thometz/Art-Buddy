@@ -6,8 +6,9 @@ import { toggleMute, resetSong } from "_redux/time-keeper/timeKeeperReducer";
 import "./TimeLeft.css";
 
 import createDisplayTime from "_utils/time-keeper/createDisplayTime";
-import reset from "_media/time-keeper/controls/reset.png";
-import mute from "_media/time-keeper/controls/mute.png";
+// import reset from "_media/time-keeper/controls/reset.png";
+// import mute from "_media/time-keeper/controls/mute.png";
+import { MUTE, RESET } from "_media/timeKeeperAssets.js/timeKeeperAssets";
 import urls from "_routes/routeUrls";
 
 const TimeLeft = ({ inNav }) => {
@@ -31,7 +32,7 @@ const TimeLeft = ({ inNav }) => {
     <div className={`TimeLeft${inNav ? '-small' : ''}`}>
       <img
         className="TimeLeft-mute"
-        src={mute}
+        src={MUTE}
         alt=""
         role="button"
         onClick={handleMute}
@@ -44,7 +45,7 @@ const TimeLeft = ({ inNav }) => {
       >{timeDisplay}</h1>
       <img
         className="TimeLeft-reset"
-        src={reset}
+        src={RESET}
         alt=""
         role="button"
         onClick={handleReset}

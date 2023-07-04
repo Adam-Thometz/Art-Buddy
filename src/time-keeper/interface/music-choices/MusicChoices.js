@@ -3,11 +3,10 @@ import "./MusicChoices.css";
 import MusicOption from "time-keeper/interface/music-choices/music-option/MusicOption";
 
 import timeBlocks from "_data/time-keeper/timeBlocks";
-import excited from "_media/time-keeper/moods/excited.png";
-import relaxed from "_media/time-keeper/moods/relaxed.png";
+import { EXCITED, RELAXED } from "_media/timeKeeperAssets.js/timeKeeperAssets";
 
 const MusicChoices = ({ mood }) => {
-  const moodSrc = mood === "excited" ? excited : relaxed;
+  const moodSrc = mood === "excited" ? EXCITED : RELAXED;
   return (
     <div className="MusicChoices">
       <img src={moodSrc} alt="" />
