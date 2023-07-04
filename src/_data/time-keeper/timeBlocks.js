@@ -5,7 +5,7 @@ import {
   RELAXED_15_SEC_SONG,
   RELAXED_30_SEC_SONG,
   RELAXED_1_MIN_SONG
-} from "_media/timeKeeperAssets.js/timeKeeperAssets"; 
+} from "_media/time-keeper/timeKeeperAssets"; 
 
 export const regularTimeBlocks = [
   {
