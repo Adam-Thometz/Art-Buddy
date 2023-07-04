@@ -3,8 +3,7 @@ import { setEnergy } from "_redux/mood-meter/moodMeterReducer";
 
 import "./Battery.css";
 
-import battery from "_media/mood-meter/battery.png";
-import bar from "_media/mood-meter/battery-bar.png";
+import { BATTERY_BAR, BATTERY } from "_media/mood-meter/moodMeterAssets";
 
 const Battery = ({ width, filter, id }) => {
   const dispatch = useDispatch();
@@ -17,9 +16,9 @@ const Battery = ({ width, filter, id }) => {
       onClick={handleSelect}
       data-testid={`battery${id}`}
     >
-      <img src={battery} alt="" id={id} onClick={handleSelect} />
+      <img src={BATTERY} alt="" id={id} onClick={handleSelect} />
       <img
-        src={bar}
+        src={BATTERY_BAR}
         alt=""
         style={{ width, filter }}
         id={id}
