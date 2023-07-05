@@ -10,11 +10,10 @@ import WindowNavbar from "_components/window-nav/WindowNavbar";
 import Button from "_components/button/Button";
 import ReportCard from "_components/report-card/ReportCard";
 
-import { COLOR_THEORY_ICON } from "_media/menu/menuAssets";
-import reportCardIcon from "_media/_general/report-card.png";
-import { colorTheoryUrls } from "_routes/routeUrls";
-import { lockIcon, unlockIcon } from "_media/_general/lock-icons/lockIconImports";
 import checkHasPassed from "_utils/_report-card/checkHasPassed";
+import { COLOR_THEORY_ICON } from "_media/menu/menuAssets";
+import { REPORT_CARD, LOCKED, UNLOCKED } from "_media/_general/general.assets";
+import { colorTheoryUrls } from "_routes/routeUrls";
 import { COLOR_THEORY_LEVELS } from "_data/color-theory/levels";
 
 const Play = () => {
@@ -43,7 +42,7 @@ const Play = () => {
         <Button
           small
           colorId={i}
-          icon={unlocked ? unlockIcon : lockIcon}
+          icon={unlocked ? UNLOCKED : LOCKED}
           disabled={!unlocked}
           onClick={goToTest}
         >
@@ -51,7 +50,7 @@ const Play = () => {
         </Button>
         {i === 0 ? (
           <div className="Play-report-card" onClick={openReportCard}>
-            <img src={reportCardIcon} alt="" />
+            <img src={REPORT_CARD} alt="" />
             <p>Report Card</p>
           </div>
         ) : null}

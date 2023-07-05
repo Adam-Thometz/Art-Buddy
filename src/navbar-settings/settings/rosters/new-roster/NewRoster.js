@@ -8,7 +8,7 @@ import AddIcon from "_components/icon/add-icon/AddIcon";
 import Icon from "_components/icon/Icon";
 
 import convertToId from "_utils/_general/convertToId";
-import deleteIcon from "_media/_general/delete.png";
+import { DELETE } from "_media/_general/general.assets";
 import { CHECK_ICON } from "_media/settings/settingsAssets";
 
 const NewRoster = () => {
@@ -79,7 +79,7 @@ const NewRoster = () => {
     <section className="NewRoster">
       <aside className="NewRoster-options">
         <AddIcon text="Name" size="50px" onClick={addStudent} />
-        <Icon icon={deleteIcon} text="Reset" size="50px" onClick={reset} />
+        <Icon icon={DELETE} text="Reset" size="50px" onClick={reset} />
         <Icon icon={CHECK_ICON} text="Done" size="50px" onClick={addRoster} />
       </aside>
       <aside className="NewRoster-students">

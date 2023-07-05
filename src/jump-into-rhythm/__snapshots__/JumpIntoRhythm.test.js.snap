@@ -52,7 +52,7 @@ exports[`JumpIntoRhythm component matches snapshot 1`] = `
       <img
         alt="Add measure"
         class="Notes-toggle"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/_general/add.png"
       />
       <section
         class="Notes-beats"

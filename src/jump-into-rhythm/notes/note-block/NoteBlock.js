@@ -3,7 +3,7 @@ import { deleteFromRhythm } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer"
 
 import "./NoteBlock.css";
 
-import deleteBtn from "_media/_general/close.png";
+import { DELETE } from "_media/_general/general.assets";
 
 const NoteBlock = ({ borderColor, note, id }) => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const NoteBlock = ({ borderColor, note, id }) => {
       {note ? (
         <>
           <img
-            src={deleteBtn}
+            src={DELETE}
             className="NoteBlock-delete"
             alt="Delete note"
             onClick={handleDeleteNote}

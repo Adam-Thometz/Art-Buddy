@@ -7,11 +7,7 @@ import "./Choice.css";
 
 import Icon from "_components/icon/Icon";
 
-import {
-  correctIcon,
-  incorrectIcon,
-  swap,
-} from "_media/instrument-id/_icons/iconImports";
+import { CORRECT_ICON, INCORRECT_ICON, SWAP_ICON } from "_media/instrument-id/instrumentIdAssets";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
 const Choice = ({ id, level, choice, save }) => {
@@ -55,11 +51,11 @@ const Choice = ({ id, level, choice, save }) => {
 
   const isCorrectWrapper =
     isCorrect !== null ? (
-      isCorrect ? (
-        <Icon size="150px" icon={correctIcon} text="CORRECT" />
-      ) : (
-        <Icon size="150px" icon={incorrectIcon} text="INCORRECT" />
-      )
+      <Icon
+        size="150px"
+        icon={isCorrect ? CORRECT_ICON : INCORRECT_ICON}
+        text={isCorrect ? "CORRECT" : "INCORRECT"}
+      />
     ) : null;
 
   return (
@@ -72,7 +68,7 @@ const Choice = ({ id, level, choice, save }) => {
       </div>
       <Icon icon={choice.icon} text={choice.name} onClick={checkAnswer} />
       <Icon
-        icon={swap}
+        icon={SWAP_ICON}
         text="SWAP"
         size="30px"
         onClick={swapInstrument}

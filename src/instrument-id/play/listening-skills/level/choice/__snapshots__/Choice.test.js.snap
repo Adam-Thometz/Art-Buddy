@@ -15,7 +15,7 @@ exports[`Choice component matches snapshot 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/instruments/electronic/theremin.png"
         style="height: 250px; width: 250px; cursor: pointer;"
       />
       <figcaption
@@ -31,7 +31,7 @@ exports[`Choice component matches snapshot 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/play/swap.png"
         style="height: 30px; width: 30px; cursor: pointer; margin-top: 24px;"
       />
       <figcaption

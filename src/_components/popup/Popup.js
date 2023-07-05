@@ -3,7 +3,7 @@ import { PopupContext } from "_context/PopupContext";
 
 import "./Popup.css";
 
-import close from "_media/_general/close.png";
+import { CLOSE } from "_media/_general/general.assets";
 
 const Popup = () => {
   const { currPopup, setCurrPopup } = useContext(PopupContext);
@@ -27,7 +27,7 @@ const Popup = () => {
         <header className="Popup-header">
           <h1>{currPopup.title}</h1>
           <aside className="Popup-close" onClick={handleSetTrigger}>
-            <img src={close} alt="close button" />
+            <img src={CLOSE} alt="close button" />
             <span>CLOSE</span>
           </aside>
         </header>

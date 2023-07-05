@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import Icon from "_components/icon/Icon";
 
-import play from "_media/_general/playActionBtn.png";
+import { PLAY_ACTION_BTN } from "_media/_general/general.assets";
 
 const Instructions = ({ setVisited }) => {
   const { currGame } = useSelector((state) => state.general);
@@ -10,7 +10,7 @@ const Instructions = ({ setVisited }) => {
   return (
     <div className="Instructions">
       <article>{currGame.description}</article>
-      <Icon icon={play} text="PLAY" size="250px" onClick={handleSetVisited} />
+      <Icon icon={PLAY_ACTION_BTN} text="PLAY" size="250px" onClick={handleSetVisited} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { setStencil } from "_redux/free-paint/freePaintReducer";
 
 import "./Stencil.css";
 
-import close from "_media/_general/close.png";
+import { CLOSE } from "_media/_general/general.assets";
 import resizeIcon from "_media/free-paint/resize.png";
 import getNewSize from "_utils/free-paint/getNewSize";
 
@@ -65,7 +65,7 @@ const Stencil = () => {
         {isEditingStencil ? (
           <img
             className="Stencil-clear"
-            src={close}
+            src={CLOSE}
             alt=""
             aria-label="Clear the stencil"
             data-testid="stencil-close"

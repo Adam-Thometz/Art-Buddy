@@ -6,7 +6,8 @@ import WindowNavbar from "../_components/window-nav/WindowNavbar";
 import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 
-import { playIcon, learnIcon } from "_media/instrument-id/_icons/iconImports";
+import { PLAY_ACTION_BTN } from "_media/_general/general.assets";
+import { LEARN_ICON } from "_media/instrument-id/instrumentIdAssets";
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const InstrumentId = () => {
@@ -23,8 +24,8 @@ const InstrumentId = () => {
         knowledge. Click PLAY to test your skills
       </p>
       <Options width="50%">
-        <Icon largeFont icon={learnIcon} text="LEARN" onClick={goToLearn} />
-        <Icon largeFont icon={playIcon} text="PLAY" onClick={goToPlay} />
+        <Icon largeFont icon={LEARN_ICON} text="LEARN" onClick={goToLearn} />
+        <Icon largeFont icon={PLAY_ACTION_BTN} text="PLAY" onClick={goToPlay} />
       </Options>
     </main>
   );

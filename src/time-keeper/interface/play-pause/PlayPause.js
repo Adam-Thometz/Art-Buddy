@@ -7,8 +7,7 @@ import "./PlayPause.css";
 
 import Icon from "_components/icon/Icon";
 
-import play from "_media/_general/play.png";
-import pause from "_media/_general/pause.png";
+import { PLAY, PAUSE } from "_media/_general/general.assets";
 
 const PlayPause = ({ inNav }) => {
   const { isPlaying, secondsLeft } = useSelector((state) => state.timeKeeper);
@@ -21,7 +20,7 @@ const PlayPause = ({ inNav }) => {
     if (isPlaying && !secondsLeft) dispatch(toggleTimer());
   }, [secondsLeft, isPlaying, dispatch]);
 
-  const icon = !isPlaying ? play : pause;
+  const icon = !isPlaying ? PLAY : PAUSE;
   const text = !isPlaying ? "START" : "STOP";
 
   return (

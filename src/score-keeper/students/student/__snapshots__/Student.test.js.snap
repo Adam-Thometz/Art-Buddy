@@ -16,7 +16,7 @@ exports[`Student component matches the snapshot 1`] = `
       <img
         alt="minus"
         role="button"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/_general/minus.png"
       />
       <p
         class="Student-points"
@@ -27,7 +27,7 @@ exports[`Student component matches the snapshot 1`] = `
       <img
         alt="add"
         role="button"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/_general/add.png"
       />
     </div>
   </div>
