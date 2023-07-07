@@ -7,9 +7,7 @@ import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import { colorTheoryUrls } from "_routes/routeUrls";
 
-import primary from "_media/color-theory/primary.png";
-import secondary from "_media/color-theory/secondary.png";
-import tertiary from "_media/color-theory/tertiary.png";
+import { PRIMARY_ICON, SECONDARY_ICON, TERTIARY_ICON } from "_media/color-theory/colorTheory.assets";
 
 const Learn = () => {
   const navigate = useNavigate();
@@ -25,9 +23,9 @@ const Learn = () => {
         <span>Learn</span>
         <br />
         <Options width="80%">
-          <Icon largeFont icon={primary} text="PRIMARY COLORS" onClick={goToPrimary} />
-          <Icon largeFont icon={secondary} text="SECONDARY COLORS" onClick={goToSecondary} />
-          <Icon largeFont icon={tertiary} text="TERTIARY COLORS" onClick={goToTertiary} />
+          <Icon largeFont icon={PRIMARY_ICON} text="PRIMARY COLORS" onClick={goToPrimary} />
+          <Icon largeFont icon={SECONDARY_ICON} text="SECONDARY COLORS" onClick={goToSecondary} />
+          <Icon largeFont icon={TERTIARY_ICON} text="TERTIARY COLORS" onClick={goToTertiary} />
         </Options>
       </main>
     </>

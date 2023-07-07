@@ -7,7 +7,7 @@ import { setStencil } from "_redux/free-paint/freePaintReducer";
 import "./Stencil.css";
 
 import { CLOSE } from "_media/_general/general.assets";
-import resizeIcon from "_media/free-paint/resize.png";
+import { RESIZE } from "_media/free-paint/freePaint.assets";
 import getNewSize from "_utils/free-paint/getNewSize";
 
 const Stencil = () => {
@@ -80,7 +80,7 @@ const Stencil = () => {
         {isEditingStencil ? (
           <img
             className="Stencil-resize"
-            src={resizeIcon}
+            src={RESIZE}
             draggable={false}
             alt=""
             aria-label="Resize the stencil"

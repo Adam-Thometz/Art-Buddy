@@ -7,6 +7,7 @@ import Button from "_components/button/Button";
 import Icon from "_components/icon/Icon";
 
 import { colorsToFilter } from "_data/free-paint/colors";
+import { ROOT_URL } from "_media/awsS3Root";
 
 const ButtonWrapper = ({
   color = null,
@@ -38,22 +39,22 @@ const ButtonWrapper = ({
     dispatch(setShownOptions(currId === shownOptions ? null : currId));
   };
 
-  const buttonTxt = iconImg ? (
-    // tools and functions like eraser and pencil have an icon
-    <Icon
-      id={id}
-      onClick={onClick ? onClick : handleShownOptions}
-      size="45px"
-      text={label}
-      icon={iconImg}
-      otherImgStyles={imgFilter}
-    />
-  ) : // stencils are not icons
-  label.startsWith("data:image") ? (
-    <img src={label} alt={id} className="ButtonWrapper-shape-button" />
-  ) : (
-    label
-  );
+  const buttonTxt = iconImg
+    ? (
+      // tools and functions like eraser and pencil have an icon
+      <Icon
+        id={id}
+        onClick={onClick ? onClick : handleShownOptions}
+        size="45px"
+        text={label}
+        icon={iconImg}
+        otherImgStyles={imgFilter}
+      />
+    )
+    // stencils are not icons
+    : label.startsWith(ROOT_URL)
+      ? <img src={label} alt={id} className="ButtonWrapper-shape-button" />
+      : label;
 
   return (
     <div className="ButtonWrapper">
