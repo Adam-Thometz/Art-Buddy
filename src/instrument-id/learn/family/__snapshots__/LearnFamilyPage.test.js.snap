@@ -59,7 +59,7 @@ exports[`LearnFamilyPage component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/instruments/brass/french-horm.png"
+          src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/instruments/brass/french-horn.png"
           style="height: 200px; width: 200px; cursor: pointer;"
         />
         <figcaption
