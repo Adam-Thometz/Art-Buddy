@@ -18,12 +18,12 @@ export const SWAP_ICON = `${ROOT_URL}/instrument-id/icons/play/swap.${PNG}`;
 export const TRUMPET_ICON = `${ROOT_URL}/instrument-id/icons/instruments/brass/trumpet.${PNG}`;
 export const TROMBONE_ICON = `${ROOT_URL}/instrument-id/icons/instruments/brass/trombone.${PNG}`;
 export const TUBA_ICON = `${ROOT_URL}/instrument-id/icons/instruments/brass/tuba.${PNG}`;
-export const FRENCH_HORN_ICON = `${ROOT_URL}/instrument-id/icons/instruments/brass/french-horm.${PNG}`;
+export const FRENCH_HORN_ICON = `${ROOT_URL}/instrument-id/icons/instruments/brass/french-horn.${PNG}`;
 
 // Electronic
 export const ELECTRIC_GUITAR_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/electric-guitar.${PNG}`;
 export const ELECTRIC_BASS_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/electric-bass.${PNG}`;
-export const SAMPLER_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/sample.${PNG}`;
+export const SAMPLER_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/sampler.${PNG}`;
 export const SYNTH_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/synth.${PNG}`;
 export const THEREMIN_ICON = `${ROOT_URL}/instrument-id/icons/instruments/electronic/theremin.${PNG}`;
 
