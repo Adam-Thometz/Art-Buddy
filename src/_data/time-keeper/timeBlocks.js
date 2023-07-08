@@ -1,26 +1,27 @@
-import excited15sec from "_media/time-keeper/music/excited/15-sec.mp3";
-import excited30sec from "_media/time-keeper/music/excited/30-sec.mp3";
-import excited1min from "_media/time-keeper/music/excited/1-min.mp3";
-
-import relaxed15sec from "_media/time-keeper/music/relaxed/15-sec.mp3";
-import relaxed30sec from "_media/time-keeper/music/relaxed/30-sec.mp3";
-import relaxed1min from "_media/time-keeper/music/relaxed/1-min.mp3";
+import {
+  EXCITED_15_SEC_SONG,
+  EXCITED_30_SEC_SONG,
+  EXCITED_1_MIN_SONG,
+  RELAXED_15_SEC_SONG,
+  RELAXED_30_SEC_SONG,
+  RELAXED_1_MIN_SONG
+} from "_media/time-keeper/timeKeeper.assets"; 
 
 export const regularTimeBlocks = [
   {
     seconds: 15,
-    excited: excited15sec,
-    relaxed: relaxed15sec,
+    excited: EXCITED_15_SEC_SONG,
+    relaxed: RELAXED_15_SEC_SONG,
   },
   {
     seconds: 30,
-    excited: excited30sec,
-    relaxed: relaxed30sec,
+    excited: EXCITED_30_SEC_SONG,
+    relaxed: RELAXED_30_SEC_SONG,
   },
   {
     seconds: 60,
-    excited: excited1min,
-    relaxed: relaxed1min,
+    excited: EXCITED_1_MIN_SONG,
+    relaxed: RELAXED_1_MIN_SONG,
   },
 ];
 

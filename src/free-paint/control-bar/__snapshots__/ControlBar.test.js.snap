@@ -46,7 +46,11 @@ exports[`ControlBar component matches snapshot 1`] = `
         id="shapes"
         style="border-color: #fd4d3a;"
       >
-        file
+        <img
+          alt="shapes"
+          class="ButtonWrapper-shape-button"
+          src="https://art-buddy.s3.amazonaws.com/free-paint/shapes/square.png"
+        />
       </button>
     </div>
     <div
@@ -63,7 +67,7 @@ exports[`ControlBar component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="file"
+            src="https://art-buddy.s3.amazonaws.com/free-paint/stencil.png"
             style="height: 45px; width: 45px; cursor: pointer;"
           />
           <figcaption
@@ -90,7 +94,7 @@ exports[`ControlBar component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="file"
+            src="https://art-buddy.s3.amazonaws.com/free-paint/pencil.png"
             style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
           />
           <figcaption
@@ -117,7 +121,7 @@ exports[`ControlBar component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="file"
+            src="https://art-buddy.s3.amazonaws.com/free-paint/eraser.png"
             style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
           />
           <figcaption

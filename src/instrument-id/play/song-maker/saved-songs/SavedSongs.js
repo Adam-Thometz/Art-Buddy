@@ -9,7 +9,7 @@ import "./SavedSongs.css";
 
 import Icon from "_components/icon/Icon";
 
-import { smallPlayIcon, deleteIcon } from "_media/instrument-id/_icons/iconImports";
+import { PLAY_SMALL, DELETE } from "_media/_general/general.assets";
 import createLoop from "_utils/instrument-id/createLoop";
 
 const SavedSongs = () => {
@@ -61,13 +61,13 @@ const SavedSongs = () => {
     <section className="SavedSongs">
       <aside className="SavedSongs-options">
         <Icon
-          icon={smallPlayIcon}
+          icon={PLAY_SMALL}
           text="Play"
           size="49px"
           onClick={handleToggle}
         />
         <Icon
-          icon={deleteIcon}
+          icon={DELETE}
           text="Delete"
           size="49px"
           onClick={handleDelete}

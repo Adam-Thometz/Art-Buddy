@@ -45,6 +45,6 @@
 }
 
 .confetti {
-  background-image: url(../../_media/_general/confetti.png);
+  background-image: url(https://art-buddy.s3.amazonaws.com/_general/confetti.png);
   background-size: contain;
 }

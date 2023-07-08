@@ -3,8 +3,7 @@ import { updatePoints } from "_redux/score-keeper/scoreKeeperReducer";
 
 import "./Student.css";
 
-import addIcon from "_media/_general/add.png";
-import subtractIcon from "_media/_general/minus.png";
+import { ADD, MINUS } from "_media/_general/general.assets";
 
 const Student = ({ name, points }) => {
   const dispatch = useDispatch();
@@ -17,11 +16,11 @@ const Student = ({ name, points }) => {
     <div className="Student">
       <p className="Student-name">{name}</p>
       <div className="Student-point-control">
-        <img src={subtractIcon} alt="minus" role="button" onClick={subtract} />
+        <img src={MINUS} alt="minus" role="button" onClick={subtract} />
         <p className="Student-points" data-testid="score">
           {points}
         </p>
-        <img src={addIcon} alt="add" role="button" onClick={add} />
+        <img src={ADD} alt="add" role="button" onClick={add} />
       </div>
     </div>
   );

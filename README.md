@@ -12,14 +12,6 @@ Created by two former educators, Art Buddy is a collection of arts-based multise
 
 This app is meant to help teachers by giving them easy access to arts-based multisensory instruction and empowering them to bring their own creativity into their craft while giving students a fun and neurodiverse-friendly way to reach their academic and social goals.  
 
-This app is a work in progress. Currently functioning games include...  
-- *Word-To-Music Decoder*
-- *What's That Instrument?*
-- *Sequence Maker*
-- *Jump Into Rhythm*
-- *Free Paint*
-- *Score Keeper*
-
 ## The App
 
 ### Main Page
@@ -56,13 +48,13 @@ This app is a movement-based game in which students can create unique rhythms an
 
 This app is a basic coloring app that comes with stencils for numbers, letters (upper and lowercase) and shapes. User can pick different colors and can unlock more by playing Color Theory.
 
-#### Color Theory (Play section under construction)
+#### Color Theory
 
 This app is devided into two sections: Learn and Play. The Learn section allows students to learn about primary, secondary, and tertiary colors. In the Play section, students can test their color recognition skills and unlock different colors for the Free Paint app.
 
 ### Tools
 
-#### Time Keeper (under construction)
+#### Time Keeper
 
 This tool is a musical timer that allows users to use samples of varying lengths (15, 30, and 60 seconds) and purposes (focus or relax) to create a timer and the music plays as the timer counts down. Can be used to create full-length songs. Comes with options to create a 5- or 10-minute timer, which creates random sequences of available samples at the selected length. Good for learning about time or just as a timer for a break.  
 
@@ -72,11 +64,11 @@ Samples for Time Keeper to be composed by the developer.
 
 This tool is a basic score keeper. As points are added or subtracted, students are sorted based on who's winning. If you have a roster saved on the app, you can automatically populate the score keeper with the students on your roster. Good for recognizing and comparing quantity or just keeping score for other lessons.
 
-#### Mood Meter (under construction)
+#### Mood Meter
 
 This tool helps students identify their emotions based on how happy they feel and how energetic they are. Then, they get a popup showing the emotion that they feel based on their selection, along with a link to a song that matches the mood. Good for incorporating social-emotional learning.
 
-#### Noise Meter (under construction)
+#### Noise Meter
 
 This tool monitors noise in a room. Good for training noisy classes.
 
@@ -91,6 +83,8 @@ For now, this app is purely front end:
 - CSS for styling (yep, just plain CSS. No libraries or frameworks.)
 - Jest/React Testing Library for testing
 - Tone.js for music-related functionality
+
+Currently building the backend in Python/Flask, and MongoDB
 
 ### How to run app
 

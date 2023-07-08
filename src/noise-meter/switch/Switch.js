@@ -9,8 +9,7 @@ import "./Switch.css";
 import Icon from "_components/icon/Icon";
 import Permissions from "noise-meter/permissions/Permissions";
 
-import play from "_media/_general/play.png";
-import pause from "_media/_general/pause.png";
+import { PLAY, PAUSE } from "_media/_general/general.assets";
 
 const Switch = () => {
   const { isRecording } = useSelector((state) => state.noiseMeter);
@@ -30,7 +29,7 @@ const Switch = () => {
     }
   }
 
-  const icon = !isRecording ? play : pause;
+  const icon = !isRecording ? PLAY : PAUSE;
   const text = !isRecording ? "START" : "STOP";
 
   return (

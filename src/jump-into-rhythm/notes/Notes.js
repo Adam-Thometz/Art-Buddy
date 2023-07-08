@@ -5,9 +5,8 @@ import "./Notes.css";
 
 import NoteBlock from "./note-block/NoteBlock";
 
-import trebleClef from "_media/jump-into-rhythm/_icons/treble-clef.png";
-import plus from "_media/_general/add.png";
-import minus from "_media/_general/minus.png";
+import { TREBLE_CLEF } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
+import { ADD, MINUS } from "_media/_general/general.assets";
 import colors from "_data/_utils/colorOrder";
 
 const Notes = () => {
@@ -23,7 +22,7 @@ const Notes = () => {
     <div className="Notes">
       {/* Measure 1 */}
       <div className="Notes-measure">
-        <img src={trebleClef} alt="Treble clef" />
+        <img src={TREBLE_CLEF} alt="Treble clef" />
         <section className="Notes-beats">
           {rhythm.slice(0, 4).map((note, i) => (
             <NoteBlock
@@ -38,7 +37,7 @@ const Notes = () => {
       {/* Measure 2 */}
       <div className="Notes-measure">
         <img
-          src={rhythm.length >= 8 ? minus : plus}
+          src={rhythm.length >= 8 ? MINUS : ADD}
           className="Notes-toggle"
           alt="Add measure"
           onClick={rhythm.length === 4 ? addMeasure : removeMeasure}
@@ -62,7 +61,7 @@ const Notes = () => {
       <div className="Notes-measure">
         {rhythm.length >= 8 ? (
           <img
-            src={rhythm.length >= 12 ? minus : plus}
+            src={rhythm.length >= 12 ? MINUS : ADD}
             className="Notes-toggle"
             alt="Add measure"
             onClick={rhythm.length === 8 ? addMeasure : removeMeasure}
@@ -87,7 +86,7 @@ const Notes = () => {
       <div className="Notes-measure">
         {rhythm.length >= 12 ? (
           <img
-            src={rhythm.length >= 16 ? minus : plus}
+            src={rhythm.length >= 16 ? MINUS : ADD}
             className="Notes-toggle"
             alt="Add measure"
             onClick={rhythm.length === 12 ? addMeasure : removeMeasure}

@@ -11,7 +11,7 @@ exports[`LilyPadDisplay component matches snapshot 1`] = `
       <img
         alt="Lily pad"
         class="LilyPadDisplay-pad"
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/jump-into-rhythm/_icons/lily-pad.png"
         style="width: 90%;"
       />
     </div>

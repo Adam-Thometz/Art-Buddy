@@ -5,7 +5,7 @@ import { PopupContext } from "_context/PopupContext";
 import Icon from "_components/icon/Icon";
 import ReportCard from "_components/report-card/ReportCard";
 
-import { reportCardIcon } from "_media/instrument-id/_icons/iconImports";
+import { REPORT_CARD } from "_media/_general/general.assets";
 
 const ReportCardIcon = () => {
   const { level } = useParams();
@@ -24,7 +24,7 @@ const ReportCardIcon = () => {
 
   return (
     <Icon
-      icon={reportCardIcon}
+      icon={REPORT_CARD}
       text="REPORT CARD"
       size="50px"
       width="34px"

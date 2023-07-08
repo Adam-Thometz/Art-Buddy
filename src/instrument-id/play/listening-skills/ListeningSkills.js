@@ -10,14 +10,8 @@ import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import ReportCard from "_components/report-card/ReportCard";
 
-import {
-  listeningSkills,
-  reportCardIcon,
-} from "_media/instrument-id/_icons/iconImports";
-import {
-  lockIcon,
-  unlockIcon,
-} from "_media/_general/lock-icons/lockIconImports";
+import { LISTENING_SKILLS_ICON } from "_media/instrument-id/instrumentId.assets";
+import { REPORT_CARD, UNLOCKED, LOCKED } from "_media/_general/general.assets";
 import { instrumentIdUrls } from "_routes/routeUrls";
 import checkHasPassed from "_utils/_report-card/checkHasPassed";
 
@@ -50,14 +44,14 @@ const ListeningSkills = () => {
         <Button
           small
           colorId={i}
-          icon={unlocked ? unlockIcon : lockIcon}
+          icon={unlocked ? UNLOCKED : LOCKED}
           disabled={!unlocked}
           onClick={goToTest}
         >
           Level {currLevel}
         </Button>
         <div className="ListeningSkills-report-card" onClick={openReportCard}>
-          <img src={reportCardIcon} alt="" id={currLevel} />
+          <img src={REPORT_CARD} alt="" id={currLevel} />
           <p id={currLevel}>Report Card</p>
         </div>
       </div>
@@ -69,7 +63,7 @@ const ListeningSkills = () => {
       <WindowNavbar page="INSTRUMENT ID: PLAY" />
       <div className="ListeningSkills">
         <header className="ListeningSkills-icon">
-          <Icon largeFont icon={listeningSkills} text="Listening Skills Test" />
+          <Icon largeFont icon={LISTENING_SKILLS_ICON} text="Listening Skills Test" />
         </header>
         <section className="ListeningSkills-levels-report-cards">
           <p>

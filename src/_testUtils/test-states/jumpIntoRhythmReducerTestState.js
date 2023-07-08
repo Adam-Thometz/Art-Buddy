@@ -1,7 +1,7 @@
-import { quarterNote } from "_media/jump-into-rhythm/_icons/notes/noteImports";
+import { QUARTER_NOTE } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 
 export const testQuarterNote = {
   id: "quarterNote",
-  img: quarterNote,
+  img: QUARTER_NOTE,
   duration: ["4n"],
 };

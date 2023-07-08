@@ -7,7 +7,7 @@ import "./Navbar.css";
 import TimeKeeperNav from "./time-keeper-nav/TimeKeeperNav";
 import Settings from "./settings/Settings";
 
-import settingsIcon from "_media/settings/settings.png";
+import { SETTINGS_ICON } from "_media/settings/settings.assets";
 
 const Navbar = () => {
   const { setCurrPopup } = useContext(PopupContext);
@@ -27,7 +27,7 @@ const Navbar = () => {
       </span>
       <TimeKeeperNav />
       <img
-        src={settingsIcon}
+        src={SETTINGS_ICON}
         alt="settings"
         className="Navbar-settings"
         onClick={openSettings}

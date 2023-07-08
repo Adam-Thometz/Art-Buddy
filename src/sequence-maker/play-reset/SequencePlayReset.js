@@ -8,9 +8,7 @@ import "./SequencePlayReset.css";
 
 import Icon from "_components/icon/Icon";
 
-import play from "_media/sequence-maker/_icons/play.png";
-import playAll from "_media/sequence-maker/_icons/play-all.png";
-import reset from "_media/sequence-maker/_icons/reset.png";
+import { PLAY, PLAY_ALL, RESET } from "_media/sequence-maker/sequenceMaker.assets";
 import { start, Transport } from "tone";
 
 const SequencePlayReset = () => {
@@ -62,14 +60,14 @@ const SequencePlayReset = () => {
     <section className="SequencePlayReset">
       <aside className="SequencePlayReset-play">
         <Icon
-          icon={play}
+          icon={PLAY}
           text="Play"
           size="48px"
           onClick={handlePlay}
           testId="play"
         />
         <Icon
-          icon={playAll}
+          icon={PLAY_ALL}
           text="Play All"
           size="48px"
           onClick={handlePlayAll}
@@ -78,7 +76,7 @@ const SequencePlayReset = () => {
       </aside>
       <aside className="SequencePlayReset-reset">
         <Icon
-          icon={reset}
+          icon={RESET}
           text="Reset Sequence"
           size="48px"
           onClick={handleReset}

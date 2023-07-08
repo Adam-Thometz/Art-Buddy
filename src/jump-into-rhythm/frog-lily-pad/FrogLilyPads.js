@@ -5,7 +5,7 @@ import "./FrogLilyPads.css";
 import Frog from "./frog/Frog";
 import LilyPadDisplay from "./lily-pad-display/LilyPadDisplay";
 
-import { blue, green, red, yellow } from "_media/jump-into-rhythm/frogs/frogs";
+import { BLUE, GREEN, RED, YELLOW } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 import { Time } from "tone";
 
 const FrogLilyPad = () => {
@@ -13,13 +13,13 @@ const FrogLilyPad = () => {
   return (
     <section className="FrogLilyPads">
       <div className="FrogLilyPads-section">
-        <Frog frog={blue} measure={rhythm.slice(0, 4)} />
+        <Frog frog={BLUE} measure={rhythm.slice(0, 4)} />
         <LilyPadDisplay measure={rhythm.slice(0, 4)} id={1} />
       </div>
       {rhythm.length >= 8 ? (
         <div className="FrogLilyPads-section">
           <Frog
-            frog={green}
+            frog={GREEN}
             measure={rhythm.slice(4, 8)}
             delay={Time("1m").toSeconds()}
           />
@@ -29,7 +29,7 @@ const FrogLilyPad = () => {
       {rhythm.length >= 12 ? (
         <div className="FrogLilyPads-section">
           <Frog
-            frog={red}
+            frog={RED}
             measure={rhythm.slice(8, 12)}
             delay={Time("2m").toSeconds()}
           />
@@ -39,7 +39,7 @@ const FrogLilyPad = () => {
       {rhythm.length === 16 ? (
         <div className="FrogLilyPads-section">
           <Frog
-            frog={yellow}
+            frog={YELLOW}
             measure={rhythm.slice(12, 16)}
             delay={Time("3m").toSeconds()}
           />

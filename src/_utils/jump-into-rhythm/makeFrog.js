@@ -1,9 +1,9 @@
-import boing from "_media/jump-into-rhythm/boing.mp3";
+import { BOING } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 import { Part, Sampler, Time, Transport } from "tone";
 import createNoteOrder from "./createNoteOrder";
 
 export default function makeFrog() {
-  const sound = new Sampler({ urls: { D4: boing } }).toDestination();
+  const sound = new Sampler({ urls: { D4: BOING } }).toDestination();
 
   function hop({ rhythm, volume }) {
     sound.volume.value = volume;

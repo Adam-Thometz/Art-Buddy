@@ -7,10 +7,7 @@ import ButtonWrapper from "./button-wrapper/ButtonWrapper";
 import StencilOptions from "./stencil-options/StencilOptions";
 import ColorOptions from "./color-options/ColorOptions";
 
-import square from "_media/free-paint/shapes/square.png";
-import stencil from "_media/free-paint/stencil.png";
-import pencil from "_media/free-paint/pencil.png";
-import eraser from "_media/free-paint/eraser.png";
+import { SQUARE_SHAPE, STENCIL, PENCIL, ERASER } from "_media/free-paint/freePaint.assets";
 
 const ControlBar = () => {
   const { color, isEditingStencil, isErasing } = useSelector(
@@ -44,7 +41,7 @@ const ControlBar = () => {
         colorId={1}
       />
       <ButtonWrapper
-        label={square}
+        label={SQUARE_SHAPE}
         id="shapes"
         Popout={StencilOptions}
         colorId={2}
@@ -52,19 +49,19 @@ const ControlBar = () => {
 
       <ButtonWrapper
         label="Stencil"
-        iconImg={stencil}
+        iconImg={STENCIL}
         onClick={handleEditStencilMode}
       />
       <ButtonWrapper
         label="Pencil"
         id="colors"
-        iconImg={pencil}
+        iconImg={PENCIL}
         Popout={ColorOptions}
         color={color}
       />
       <ButtonWrapper
         label="Eraser"
-        iconImg={eraser}
+        iconImg={ERASER}
         onClick={handleSetEraser}
         color={isErasing ? "#FF69B4" : "#000000"}
       />

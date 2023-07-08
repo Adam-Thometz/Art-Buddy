@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import './Line.css';
 
-import line from "_media/noise-meter/meter-piece.png";
+import { METER_LINE } from '_media/noise-meter/noiseMeter.assets';
 
 const Line = ({ filter, i }) => {
   const { meterVolume, isRecording } = useSelector(state => state.noiseMeter);
@@ -11,7 +11,7 @@ const Line = ({ filter, i }) => {
     <img
       key={`meter${i+1}`}
       className="Line"
-      src={line}
+      src={METER_LINE}
       style={color}
       alt=""
     />

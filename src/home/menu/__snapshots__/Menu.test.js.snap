@@ -27,7 +27,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/art-icon.png"
       />
       ART GAMES
     </button>
@@ -37,7 +37,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/music-icon.png"
       />
       MUSIC GAMES
     </button>
@@ -47,7 +47,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/all-icon.png"
       />
       ALL GAMES
     </button>
@@ -57,7 +57,7 @@ exports[`Menu component matches the snapshot of the main menu 1`] = `
     >
       <img
         alt=""
-        src="file"
+        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/iep-icon.png"
       />
       COMMON CORE
     </button>

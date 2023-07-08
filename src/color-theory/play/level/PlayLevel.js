@@ -16,8 +16,7 @@ import Button from "_components/button/Button";
 import ColorWheel from "color-theory/color-wheel/ColorWheel";
 
 import levels from "_data/color-theory/levels";
-import correctIcon from "_media/color-theory/correct.png";
-import incorrectIcon from "_media/color-theory/incorrect.png";
+import { CORRECT_ICON, INCORRECT_ICON } from "_media/color-theory/colorTheory.assets";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
@@ -96,10 +95,10 @@ const PlayLevel = () => {
     .map((answer, i) => {
       let src, text = null;
       if (i < answerIdx) {
-        src = correctIcon;
+        src = CORRECT_ICON;
         text = "Correct!";
       } else if (i === answerIdx && incorrect) {
-        src = incorrectIcon;
+        src = INCORRECT_ICON;
         text = "Try again";
       }
       return (

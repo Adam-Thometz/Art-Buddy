@@ -4,7 +4,7 @@ import { PopupContext } from "_context/PopupContext";
 
 import "./Finished.css";
 
-import reportCardIcon from "_media/_general/report-card.png";
+import { REPORT_CARD } from "_media/_general/general.assets";
 
 const Finished = ({ gameId, gameName, prize, findPrizeIn, level = null }) => {
   const { setCurrPopup } = useContext(PopupContext);
@@ -23,7 +23,7 @@ const Finished = ({ gameId, gameName, prize, findPrizeIn, level = null }) => {
         available in {findPrizeIn}.
       </p>
       <div className="Finished-report-card" onClick={openReportCard}>
-        <img src={reportCardIcon} alt="" />
+        <img src={REPORT_CARD} alt="" />
         <p>Report Card</p>
       </div>
     </div>

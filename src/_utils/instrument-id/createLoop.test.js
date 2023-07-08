@@ -1,6 +1,8 @@
 import createLoop from "./createLoop";
 import { Sampler, Part, Transport } from "tone";
 import TimeMock from "_testUtils/mocks/timeMock";
+import { ELECTRIC_GUITAR } from "_media/instrument-id/soundImports";
+import { ROOT_URL } from "_media/awsS3Root";
 
 jest.mock("tone", () => ({
   __esModule: true,
@@ -34,7 +36,7 @@ describe("createLoop function", () => {
   it("should return a loop to be played", () => {
     expect(loopParts).toEqual([
       {
-        soundToPlay: { C3: "file" },
+        soundToPlay: { C3: ELECTRIC_GUITAR },
         melody: expect.any(Array),
         isRhythm: false,
       },
@@ -45,7 +47,9 @@ describe("createLoop function", () => {
       },
     ]);
     expect(loopParts[1].soundToPlay.length).toBe(5);
-    expect(loopParts[1].soundToPlay.every((hit) => hit.C3 === "file")).toBe(true);
+    expect(loopParts[1].soundToPlay.every((hit) => 
+      hit.C3.startsWith(`${ROOT_URL}/instrument-id/sounds/percussion/drum-set`)
+    )).toBe(true);
     expect(Sampler).toBeCalledTimes(6);
   });
 });

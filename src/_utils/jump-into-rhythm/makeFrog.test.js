@@ -1,3 +1,4 @@
+import { BOING } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 import makeFrog from "./makeFrog";
 import { Part, Sampler, Time, Transport } from "tone";
 
@@ -31,7 +32,7 @@ jest.mock("tone", () => ({
 describe("makeFrog function", () => {
   it("should create a sound", () => {
     const { sound } = makeFrog();
-    expect(sound.urls).toEqual({ D4: "file" });
+    expect(sound.urls).toEqual({ D4: BOING });
     expect(Sampler).toBeCalled();
   });
 });

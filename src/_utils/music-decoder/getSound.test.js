@@ -1,3 +1,4 @@
+import { TRUMPET } from "_media/instrument-id/soundImports";
 import getSound from "./getSound";
 import { PitchShift, Synth, Sampler, Part, Transport } from "tone";
 
@@ -62,7 +63,7 @@ describe("getSound function", () => {
   it("should create a sample out of a sound", () => {
     const { instrument } = getSound({ volume: 0, sampleId: "trumpet" });
     expect(instrument.pitch).toBe(0);
-    expect(instrument.sound).toBe("file");
+    expect(instrument.sound).toBe(TRUMPET);
     expect(instrument.volume.value).toBe(0);
     expect(PitchShift).toBeCalled();
     expect(Sampler).toBeCalled();

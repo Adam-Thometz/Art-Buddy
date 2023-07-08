@@ -4,7 +4,7 @@ import { PopupContext } from "_context/PopupContext";
 import Icon from "_components/icon/Icon";
 import SavedSongs from "../saved-songs/SavedSongs";
 
-import { savedSongsIcon } from "_media/instrument-id/_icons/iconImports";
+import { SAVED_SONGS_ICON } from "_media/instrument-id/instrumentId.assets";
 
 const SavedSongsIcon = () => {
   const { setCurrPopup } = useContext(PopupContext);
@@ -22,7 +22,7 @@ const SavedSongsIcon = () => {
 
   return (
     <Icon
-      icon={savedSongsIcon}
+      icon={SAVED_SONGS_ICON}
       text="SAVED SONGS"
       size="49px"
       onClick={openSavedSongs}

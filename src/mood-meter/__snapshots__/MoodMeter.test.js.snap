@@ -28,7 +28,7 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="2"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-high.png"
         />
       </div>
       <div
@@ -39,7 +39,7 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="1"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-medium.png"
         />
       </div>
       <div
@@ -50,7 +50,7 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="0"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-low.png"
         />
       </div>
     </div>
@@ -72,13 +72,13 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="2"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery.png"
         />
         <img
           alt=""
           data-testid="bar"
           id="2"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery-bar.png"
           style="width: 89%;"
         />
       </div>
@@ -90,13 +90,13 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="1"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery.png"
         />
         <img
           alt=""
           data-testid="bar"
           id="1"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery-bar.png"
           style="width: 48%;"
         />
       </div>
@@ -108,13 +108,13 @@ exports[`MoodMeter component matches snapshot 1`] = `
         <img
           alt=""
           id="0"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery.png"
         />
         <img
           alt=""
           data-testid="bar"
           id="0"
-          src="file"
+          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery-bar.png"
           style="width: 12%;"
         />
       </div>

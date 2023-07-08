@@ -2,15 +2,15 @@ import Frog from "./Frog";
 
 import { render } from "_testUtils/render";
 
-import { blue } from "_media/jump-into-rhythm/frogs/frogs";
+import { BLUE } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 
 describe("Frog component", () => {
   it("renders without crashing", () => {
-    render(<Frog frog={blue} />);
+    render(<Frog frog={BLUE} />);
   });
 
   it("matches snapshot", () => {
-    const { asFragment } = render(<Frog frog={blue} />);
+    const { asFragment } = render(<Frog frog={BLUE} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
