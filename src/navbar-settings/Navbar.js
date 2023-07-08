@@ -7,7 +7,7 @@ import "./Navbar.css";
 import TimeKeeperNav from "./time-keeper-nav/TimeKeeperNav";
 import Settings from "./settings/Settings";
 
-import { SETTINGS_ICON } from "_media/settings/settingsAssets";
+import { SETTINGS_ICON } from "_media/settings/settings.assets";
 
 const Navbar = () => {
   const { setCurrPopup } = useContext(PopupContext);

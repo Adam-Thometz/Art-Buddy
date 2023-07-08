@@ -1,4 +1,4 @@
-import * as icons from "_media/instrument-id/instrumentIdAssets";
+import * as icons from "_media/instrument-id/instrumentId.assets";
 import * as sounds from "_media/instrument-id/soundImports";
 
 const materials = {

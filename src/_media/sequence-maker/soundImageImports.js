@@ -16,7 +16,7 @@ import {
   CLAPPING_ONCE_SOUND,
   STOMPING_ONCE_SOUND,
   YEAH_ONCE_SOUND
-} from "./sequenceMakerAssets";
+} from "./sequenceMaker.assets";
 
 const sounds = {
   CLAPPING_CONTINUOUS_SOUND,

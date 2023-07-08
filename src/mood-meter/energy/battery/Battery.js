@@ -3,7 +3,7 @@ import { setEnergy } from "_redux/mood-meter/moodMeterReducer";
 
 import "./Battery.css";
 
-import { BATTERY_BAR, BATTERY } from "_media/mood-meter/moodMeterAssets";
+import { BATTERY_BAR, BATTERY } from "_media/mood-meter/moodMeter.assets";
 
 const Battery = ({ width, filter, id }) => {
   const dispatch = useDispatch();

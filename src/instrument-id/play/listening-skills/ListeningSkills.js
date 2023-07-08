@@ -10,7 +10,7 @@ import Icon from "_components/icon/Icon";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import ReportCard from "_components/report-card/ReportCard";
 
-import { LISTENING_SKILLS_ICON } from "_media/instrument-id/instrumentIdAssets";
+import { LISTENING_SKILLS_ICON } from "_media/instrument-id/instrumentId.assets";
 import { REPORT_CARD, UNLOCKED, LOCKED } from "_media/_general/general.assets";
 import { instrumentIdUrls } from "_routes/routeUrls";
 import checkHasPassed from "_utils/_report-card/checkHasPassed";

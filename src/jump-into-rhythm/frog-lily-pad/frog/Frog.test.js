@@ -2,7 +2,7 @@ import Frog from "./Frog";
 
 import { render } from "_testUtils/render";
 
-import { BLUE } from "_media/jump-into-rhythm/jumpIntoRhythmAssets";
+import { BLUE } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 
 describe("Frog component", () => {
   it("renders without crashing", () => {

@@ -3,7 +3,7 @@ import "./MusicChoices.css";
 import MusicOption from "time-keeper/interface/music-choices/music-option/MusicOption";
 
 import timeBlocks from "_data/time-keeper/timeBlocks";
-import { EXCITED, RELAXED } from "_media/time-keeper/timeKeeperAssets";
+import { EXCITED, RELAXED } from "_media/time-keeper/timeKeeper.assets";
 
 const MusicChoices = ({ mood }) => {
   const moodSrc = mood === "excited" ? EXCITED : RELAXED;

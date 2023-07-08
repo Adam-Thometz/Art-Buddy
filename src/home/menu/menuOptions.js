@@ -9,7 +9,7 @@ import {
   TIME_KEEPER,
   MOOD_METER,
   NOISE_METER,
-} from "_media/menu/menuAssets";
+} from "_media/menu/menu.assets";
 
 const menuOptions = {
   games: [

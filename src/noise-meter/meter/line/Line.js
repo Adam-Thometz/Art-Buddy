@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import './Line.css';
 
-import { METER_LINE } from '_media/noise-meter/noiseMeterAssets';
+import { METER_LINE } from '_media/noise-meter/noiseMeter.assets';
 
 const Line = ({ filter, i }) => {
   const { meterVolume, isRecording } = useSelector(state => state.noiseMeter);

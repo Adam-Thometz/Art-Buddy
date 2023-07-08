@@ -5,7 +5,7 @@ import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 
 import { PLAY_ACTION_BTN } from "_media/_general/general.assets";
-import { LEARN_ICON } from "_media/instrument-id/instrumentIdAssets";
+import { LEARN_ICON } from "_media/instrument-id/instrumentId.assets";
 import { colorTheoryUrls } from "_routes/routeUrls";
 
 const ColorTheory = () => {

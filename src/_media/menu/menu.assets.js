@@ -2,7 +2,7 @@ import {
   ROOT_URL,
   PNG
 } from '_media/awsS3Root'
-import { CLAPPING_IMG } from '_media/sequence-maker/sequenceMakerAssets';
+import { CLAPPING_IMG } from '_media/sequence-maker/sequenceMaker.assets';
 
 // Main page
 export const MUSIC_GAMES = `${ROOT_URL}/menu/option-icons/music-icon.${PNG}`;

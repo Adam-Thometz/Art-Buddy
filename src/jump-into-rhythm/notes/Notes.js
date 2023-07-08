@@ -5,7 +5,7 @@ import "./Notes.css";
 
 import NoteBlock from "./note-block/NoteBlock";
 
-import { TREBLE_CLEF } from "_media/jump-into-rhythm/jumpIntoRhythmAssets";
+import { TREBLE_CLEF } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
 import { ADD, MINUS } from "_media/_general/general.assets";
 import colors from "_data/_utils/colorOrder";
 

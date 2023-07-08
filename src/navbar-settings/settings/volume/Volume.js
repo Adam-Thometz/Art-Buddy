@@ -5,7 +5,7 @@ import "./Volume.css";
 
 import Icon from "_components/icon/Icon";
 
-import { VOLUME_LOW, VOLUME_MEDIUM, VOLUME_HIGH } from "_media/settings/settingsAssets";
+import { VOLUME_LOW, VOLUME_MEDIUM, VOLUME_HIGH } from "_media/settings/settings.assets";
 import { LOW, MEDIUM, HIGH } from "_data/_utils/volume";
 
 const Volume = () => {
