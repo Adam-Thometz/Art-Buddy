@@ -88,16 +88,12 @@ Currently building the backend in Python/Flask, and MongoDB
 
 ### How to run app
 
-Very simple:
-
 ```
 npm start
 ```
 It should run on `localhost:3000`.
 
 ### How to run tests
-
-Also very simple:
 
 ```
 npm run test
@@ -107,10 +103,10 @@ You can also activate watch mode to run tests whenever a change is detected:
 npm run test:watch
 ```
 
-### How to deploy app
-
-In the `public` folder, create a file called `CNAME` and type in the full URL where you want to deploy the app. Then run this command:
+## How to determine test coverage
 
 ```
-npm run deploy
+npm run coverage
 ```
+
+In addition to a table getting displayed in your terminal, you will find all coverage info in `src/_testUtils/coverage`.
