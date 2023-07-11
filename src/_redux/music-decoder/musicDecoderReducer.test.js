@@ -1,4 +1,4 @@
-import musicDecoderReducer, { initialState, createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote } from "./musicDecoderReducer";
+import musicDecoderReducer, { initialState, createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderReducer";
 
 import { testState } from "_testUtils/test-states/musicDecoderReducerTestState";
 
@@ -25,6 +25,11 @@ describe("Word To Music reducer", () => {
   it("should change the scale", () => {
     const result = musicDecoderReducer(testState, changeScale(5));
     expect(result.scale).toBe(5);
+  });
+
+  it("should change the sound", () => {
+    const result = musicDecoderReducer(testState, changeSound('synth'));
+    expect(result.sound).toBe('synth');
   });
 
   it("should toggle between uppercase and lowercase", () => {
