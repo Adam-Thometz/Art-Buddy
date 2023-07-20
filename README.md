@@ -84,7 +84,7 @@ For now, this app is purely front end:
 - Jest/React Testing Library for testing
 - Tone.js for music-related functionality
 
-Currently building the backend in Python/Flask, and MongoDB
+Currently building the backend in Python/FastAPI and MongoDB
 
 ### How to run app
 

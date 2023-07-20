@@ -1,21 +1,18 @@
-import prependBrightnessAndSaturation from "_utils/_general/prependBrightnessAndSaturation";
 import colorWheel from "_data/color-theory/colorWheel";
+import colors from "_data/_utils/colorOrder";
 
 // Standard colors
 // Red: #FD4D3A
-const redInstrumentId =
-  "invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) brightness(98%) contrast(104%)";
+const redInstrumentId = colors[2];
 // Yellow: #FFE81A
-const yellowInstrumentId =
-  "invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%)";
+const yellowInstrumentId = colors[1]
 // Green: #89EB0A
-const greenInstrumentId =
-  "invert(72%) sepia(68%) saturate(1545%) hue-rotate(38deg) brightness(109%) contrast(92%)";
+const greenInstrumentId = colors[0]
 export const instrumentIdColors = [
-  prependBrightnessAndSaturation(redInstrumentId),
-  prependBrightnessAndSaturation(yellowInstrumentId),
-  prependBrightnessAndSaturation(yellowInstrumentId),
-  prependBrightnessAndSaturation(greenInstrumentId),
+  redInstrumentId,
+  yellowInstrumentId,
+  yellowInstrumentId,
+  greenInstrumentId,
 ];
 
 // COLOR THEORY COLORS
@@ -35,22 +32,22 @@ const {
 } = colorWheel;
 
 export const primaryColors = [
-  yellow.color.filter,
-  red.color.filter,
-  blue.color.filter,
+  yellow.color.hex,
+  red.color.hex,
+  blue.color.hex,
 ];
 
 export const secondaryColors = [
-  green.color.filter,
-  orange.color.filter,
-  violet.color.filter,
+  green.color.hex,
+  orange.color.hex,
+  violet.color.hex,
 ];
 
 export const tertiaryColors = [
-  dandelion.color.filter,
-  tangelo.color.filter,
-  plum.color.filter,
-  blueberry.color.filter,
-  emerald.color.filter,
-  pear.color.filter,
+  dandelion.color.hex,
+  tangelo.color.hex,
+  plum.color.hex,
+  blueberry.color.hex,
+  emerald.color.hex,
+  pear.color.hex,
 ];
