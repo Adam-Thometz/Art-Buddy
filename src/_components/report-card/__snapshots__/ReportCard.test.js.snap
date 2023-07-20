@@ -17,25 +17,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span
@@ -53,25 +53,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span
@@ -89,25 +89,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span
@@ -125,25 +125,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span
@@ -161,25 +161,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span
@@ -197,25 +197,25 @@ exports[`ReportCard component matches snapshot 1`] = `
         <div
           class="Score-visual-score"
         >
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-            style="width: 23%;"
+            class="Score-block first"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-            style="width: 23%;"
+            class="Score-block"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
-          <img
+          <div
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-            style="width: 23%;"
+            class="Score-block last"
+            style="width: 23%; background-color: rgb(212, 210, 213);"
           />
         </div>
         <span

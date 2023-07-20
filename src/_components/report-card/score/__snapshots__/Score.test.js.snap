@@ -11,25 +11,25 @@ exports[`Score component matches snapshot 1`] = `
     <div
       class="Score-visual-score"
     >
-      <img
+      <div
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/first.png"
-        style="width: 23%; filter: brightness(0%) saturate(100%) invert(53%) sepia(93%) saturate(4071%) hue-rotate(337deg) brightness(98%) contrast(104%);"
+        class="Score-block first"
+        style="width: 23%; background-color: rgb(253, 77, 58);"
       />
-      <img
+      <div
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-        style="width: 23%; filter: brightness(0%) saturate(100%) invert(81%) sepia(95%) saturate(5782%) hue-rotate(336deg) brightness(102%) contrast(103%);"
+        class="Score-block"
+        style="width: 23%; background-color: rgb(255, 232, 26);"
       />
-      <img
+      <div
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/mid.png"
-        style="width: 23%;"
+        class="Score-block"
+        style="width: 23%; background-color: rgb(212, 210, 213);"
       />
-      <img
+      <div
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/_general/report-card-bar/last.png"
-        style="width: 23%;"
+        class="Score-block last"
+        style="width: 23%; background-color: rgb(212, 210, 213);"
       />
     </div>
     <span
