@@ -8,7 +8,7 @@ import "./SequencePlayReset.css";
 
 import Icon from "_components/icon/Icon";
 
-import { PLAY, PLAY_ALL, RESET } from "_media/sequence-maker/sequenceMaker.assets";
+import { PLAY, PLAY_ALL, RESET } from "_assets/sequence-maker/sequenceMaker.assets";
 import { start, Transport } from "tone";
 
 const SequencePlayReset = () => {

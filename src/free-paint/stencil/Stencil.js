@@ -6,8 +6,8 @@ import { setStencil } from "_redux/free-paint/freePaintReducer";
 
 import "./Stencil.css";
 
-import { CLOSE } from "_media/_general/general.assets";
-import { RESIZE } from "_media/free-paint/freePaint.assets";
+import { CLOSE } from "_assets/_general/general.assets";
+import { RESIZE } from "_assets/free-paint/freePaint.assets";
 import getNewSize from "_utils/free-paint/getNewSize";
 
 const Stencil = () => {

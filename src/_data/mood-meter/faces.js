@@ -1,4 +1,4 @@
-import { VALENCE_HIGH, VALENCE_MEDIUM, VALENCE_LOW } from "_media/mood-meter/moodMeter.assets";
+import { VALENCE_HIGH, VALENCE_MEDIUM, VALENCE_LOW } from "_assets/mood-meter/moodMeter.assets";
 
 const faces = [
   { src: VALENCE_HIGH, id: 2 },

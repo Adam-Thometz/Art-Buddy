@@ -4,7 +4,7 @@ import { PopupContext } from "_context/PopupContext";
 import Icon from "_components/icon/Icon";
 import SavedSongs from "../saved-songs/SavedSongs";
 
-import { SAVED_SONGS_ICON } from "_media/instrument-id/instrumentId.assets";
+import { SAVED_SONGS_ICON } from "_assets/instrument-id/instrumentId.assets";
 
 const SavedSongsIcon = () => {
   const { setCurrPopup } = useContext(PopupContext);

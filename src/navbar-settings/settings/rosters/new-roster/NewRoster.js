@@ -8,8 +8,8 @@ import AddIcon from "_components/icon/add-icon/AddIcon";
 import Icon from "_components/icon/Icon";
 
 import convertToId from "_utils/_general/convertToId";
-import { DELETE } from "_media/_general/general.assets";
-import { CHECK_ICON } from "_media/settings/settings.assets";
+import { DELETE } from "_assets/_general/general.assets";
+import { CHECK_ICON } from "_assets/settings/settings.assets";
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({

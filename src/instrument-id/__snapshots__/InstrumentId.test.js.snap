@@ -29,7 +29,7 @@ exports[`InstrumentId component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/learn.png"
+          src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <figcaption
@@ -45,7 +45,7 @@ exports[`InstrumentId component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/_general/play-action-btn.png"
+          src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <figcaption

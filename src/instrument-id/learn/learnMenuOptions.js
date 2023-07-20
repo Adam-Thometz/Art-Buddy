@@ -1,4 +1,4 @@
-import { TRUMPET_ICON, SYNTH_ICON, DRUM_SET_ICON, HARP_ICON, CLARINET_ICON, VOICE_MAIN_ICON } from "_media/instrument-id/instrumentId.assets";
+import { TRUMPET_ICON, SYNTH_ICON, DRUM_SET_ICON, HARP_ICON, CLARINET_ICON, VOICE_MAIN_ICON } from "_assets/instrument-id/instrumentId.assets";
 
 import { instrumentIdUrls } from "_routes/routeUrls";
 

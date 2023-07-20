@@ -2,7 +2,7 @@ import {
   QUARTER_NOTE,
   QUARTER_REST,
   EIGHTH_NOTES
-} from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
+} from "_assets/jump-into-rhythm/jumpIntoRhythm.assets";
 
 const noteInfo = {
   quarterNote: {

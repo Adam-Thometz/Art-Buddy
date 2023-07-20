@@ -3,7 +3,7 @@ import { updatePoints } from "_redux/score-keeper/scoreKeeperReducer";
 
 import "./Student.css";
 
-import { ADD, MINUS } from "_media/_general/general.assets";
+import { ADD, MINUS } from "_assets/_general/general.assets";
 
 const Student = ({ name, points }) => {
   const dispatch = useDispatch();

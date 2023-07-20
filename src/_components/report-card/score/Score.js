@@ -4,12 +4,12 @@ import {
   REPORT_CARD_FIRST,
   REPORT_CARD_LAST,
   REPORT_CARD_MID,
-} from "_media/_general/general.assets";
+} from "_assets/_general/general.assets";
 
 const Score = ({ name, score, maxScore, colorPalette }) => {
   const createScoreDisplay = () => {
     const scoreDisplay = [];
-    const width = `${100 / maxScore - 2}%`;
+    const width = `${(100 / maxScore) - 2}%`;
     for (let i = 1; i <= maxScore; i++) {
       const src = i === 1
         ? REPORT_CARD_FIRST

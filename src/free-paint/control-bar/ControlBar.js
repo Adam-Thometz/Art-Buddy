@@ -7,7 +7,7 @@ import ButtonWrapper from "./button-wrapper/ButtonWrapper";
 import StencilOptions from "./stencil-options/StencilOptions";
 import ColorOptions from "./color-options/ColorOptions";
 
-import { SQUARE_SHAPE, STENCIL, PENCIL, ERASER } from "_media/free-paint/freePaint.assets";
+import { SQUARE_SHAPE, STENCIL, PENCIL, ERASER } from "_assets/free-paint/freePaint.assets";
 
 const ControlBar = () => {
   const { color, isEditingStencil, isErasing } = useSelector(

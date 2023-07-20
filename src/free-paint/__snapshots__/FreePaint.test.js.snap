@@ -76,7 +76,7 @@ exports[`FreePaint component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/free-paint/stencil.png"
+            src="file"
             style="height: 45px; width: 45px; cursor: pointer;"
           />
           <figcaption
@@ -103,7 +103,7 @@ exports[`FreePaint component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/free-paint/pencil.png"
+            src="file"
             style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
           />
           <figcaption
@@ -130,7 +130,7 @@ exports[`FreePaint component matches snapshot 1`] = `
         >
           <img
             alt=""
-            src="https://art-buddy.s3.amazonaws.com/free-paint/eraser.png"
+            src="file"
             style="height: 45px; width: 45px; cursor: pointer; filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(100%) contrast(102%);"
           />
           <figcaption

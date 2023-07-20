@@ -2,10 +2,9 @@
 
 exports[`Line component matches snapshot 1`] = `
 <DocumentFragment>
-  <img
-    alt=""
+  <div
     class="Line"
-    src="https://art-buddy.s3.amazonaws.com/noise-meter/meter-piece.png"
+    style="background-color: rgb(212, 210, 213);"
   />
 </DocumentFragment>
 `;

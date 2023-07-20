@@ -5,7 +5,7 @@ import "./FrogLilyPads.css";
 import Frog from "./frog/Frog";
 import LilyPadDisplay from "./lily-pad-display/LilyPadDisplay";
 
-import { BLUE, GREEN, RED, YELLOW } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
+import { BLUE, GREEN, RED, YELLOW } from "_assets/jump-into-rhythm/jumpIntoRhythm.assets";
 import { Time } from "tone";
 
 const FrogLilyPad = () => {

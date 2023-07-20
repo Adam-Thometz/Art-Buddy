@@ -1,4 +1,4 @@
-import { SQUARE_SHAPE, CIRCLE_SHAPE, TRIANGLE_SHAPE, STAR_SHAPE } from "_media/free-paint/freePaint.assets";
+import { SQUARE_SHAPE, CIRCLE_SHAPE, TRIANGLE_SHAPE, STAR_SHAPE } from "_assets/free-paint/freePaint.assets";
 
 const options = {
   upperCase: Array.from(Array(26)).map((_, i) => String.fromCharCode(i + 65)),

@@ -16,7 +16,7 @@ exports[`Navbar component matches the snapshot of the navbar 1`] = `
     <img
       alt="settings"
       class="Navbar-settings"
-      src="https://art-buddy.s3.amazonaws.com/settings/settings.png"
+      src="file"
     />
   </nav>
 </DocumentFragment>

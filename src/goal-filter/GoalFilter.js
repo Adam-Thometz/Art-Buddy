@@ -5,7 +5,7 @@ import "./GoalFilter.css";
 
 import GoalCategory from "./category/GoalCategory";
 
-import { goalIcons } from "_media/goal-filter/goalFilter.assets";
+import { goalIcons } from "_assets/goal-filter/goalFilter.assets";
 
 const GoalFilter = () => {
   const { setCurrPopup } = useContext(PopupContext);

@@ -3,7 +3,7 @@ import { deleteFromRhythm } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer"
 
 import "./NoteBlock.css";
 
-import { CLOSE } from "_media/_general/general.assets";
+import { CLOSE } from "_assets/_general/general.assets";
 
 const NoteBlock = ({ borderColor, note, id }) => {
   const dispatch = useDispatch();

@@ -8,7 +8,7 @@ exports[`SavedSongsIcon component matches snapshot 1`] = `
   >
     <img
       alt=""
-      src="https://art-buddy.s3.amazonaws.com/instrument-id/icons/play/saved-songs.png"
+      src="file"
       style="height: 49px; width: 49px; cursor: pointer;"
     />
     <figcaption

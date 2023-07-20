@@ -1,5 +1,5 @@
-import * as icons from "_media/instrument-id/instrumentId.assets";
-import * as sounds from "_media/instrument-id/soundImports";
+import * as icons from "_assets/instrument-id/instrumentId.assets";
+import * as sounds from "_assets/instrument-id/soundImports";
 
 const materials = {
   brass: {

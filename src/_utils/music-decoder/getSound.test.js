@@ -1,4 +1,4 @@
-import { TRUMPET } from "_media/instrument-id/soundImports";
+import { TRUMPET } from "_assets/instrument-id/soundImports";
 import getSound from "./getSound";
 import { PitchShift, Synth, Sampler, Part, Transport } from "tone";
 

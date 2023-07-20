@@ -16,7 +16,7 @@ exports[`Result component matches snapshot 1`] = `
         <img
           alt=""
           id="2"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-high.png"
+          src="file"
         />
       </div>
       <div
@@ -27,13 +27,13 @@ exports[`Result component matches snapshot 1`] = `
         <img
           alt=""
           id="2"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery.png"
+          src="file"
         />
         <img
           alt=""
           data-testid="bar"
           id="2"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/battery-bar.png"
+          src="file"
           style="width: 89%; filter: brightness(0%) saturate(100%) invert(68%) sepia(56%) saturate(915%) hue-rotate(38deg) brightness(109%) contrast(92%);"
         />
       </div>

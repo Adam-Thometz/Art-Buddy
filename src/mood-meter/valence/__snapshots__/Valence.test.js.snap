@@ -19,7 +19,7 @@ exports[`Valence component matches snapshot 1`] = `
         <img
           alt=""
           id="2"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-high.png"
+          src="file"
         />
       </div>
       <div
@@ -30,7 +30,7 @@ exports[`Valence component matches snapshot 1`] = `
         <img
           alt=""
           id="1"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-medium.png"
+          src="file"
         />
       </div>
       <div
@@ -41,7 +41,7 @@ exports[`Valence component matches snapshot 1`] = `
         <img
           alt=""
           id="0"
-          src="https://art-buddy.s3.amazonaws.com/mood-meter/valence-low.png"
+          src="file"
         />
       </div>
     </div>

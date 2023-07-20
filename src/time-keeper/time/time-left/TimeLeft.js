@@ -8,7 +8,7 @@ import "./TimeLeft.css";
 import createDisplayTime from "_utils/time-keeper/createDisplayTime";
 // import reset from "_media/time-keeper/controls/reset.png";
 // import mute from "_media/time-keeper/controls/mute.png";
-import { MUTE, RESET } from "_media/time-keeper/timeKeeper.assets";
+import { MUTE, RESET } from "_assets/time-keeper/timeKeeper.assets";
 import urls from "_routes/routeUrls";
 
 const TimeLeft = ({ inNav }) => {

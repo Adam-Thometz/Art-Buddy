@@ -28,7 +28,7 @@ exports[`LearnColorTheory component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/color-theory/primary.png"
+          src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <figcaption
@@ -44,7 +44,7 @@ exports[`LearnColorTheory component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/color-theory/secondary.png"
+          src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <figcaption
@@ -60,7 +60,7 @@ exports[`LearnColorTheory component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/color-theory/tertiary.png"
+          src="file"
           style="height: 250px; width: 250px; cursor: pointer;"
         />
         <figcaption

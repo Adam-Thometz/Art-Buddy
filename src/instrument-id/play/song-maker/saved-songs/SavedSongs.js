@@ -9,7 +9,7 @@ import "./SavedSongs.css";
 
 import Icon from "_components/icon/Icon";
 
-import { PLAY_SMALL, DELETE } from "_media/_general/general.assets";
+import { PLAY_SMALL, DELETE } from "_assets/_general/general.assets";
 import createLoop from "_utils/instrument-id/createLoop";
 
 const SavedSongs = () => {

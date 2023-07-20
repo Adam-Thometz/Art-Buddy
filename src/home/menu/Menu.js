@@ -12,7 +12,7 @@ import GoalFilter from "goal-filter/GoalFilter";
 
 import menuOptions from "./menuOptions";
 import activities from "_data/_activities/activityList";
-import { goalIcons } from "_media/goal-filter/goalFilter.assets";
+import { goalIcons } from "_assets/goal-filter/goalFilter.assets";
 import getCoveredSubjects from "_utils/goal-filter/getCoveredSubjects";
 
 const Menu = ({ type = null }) => {

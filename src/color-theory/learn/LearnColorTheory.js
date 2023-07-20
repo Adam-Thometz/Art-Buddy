@@ -7,7 +7,7 @@ import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 import { colorTheoryUrls } from "_routes/routeUrls";
 
-import { PRIMARY_ICON, SECONDARY_ICON, TERTIARY_ICON } from "_media/color-theory/colorTheory.assets";
+import { PRIMARY_ICON, SECONDARY_ICON, TERTIARY_ICON } from "_assets/color-theory/colorTheory.assets";
 
 const Learn = () => {
   const navigate = useNavigate();

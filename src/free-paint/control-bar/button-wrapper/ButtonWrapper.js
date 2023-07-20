@@ -7,7 +7,7 @@ import Button from "_components/button/Button";
 import Icon from "_components/icon/Icon";
 
 import { colorsToFilter } from "_data/free-paint/colors";
-import { ROOT_URL } from "_media/awsS3Root";
+import { ROOT_URL } from "_assets/awsS3Root";
 
 const ButtonWrapper = ({
   color = null,

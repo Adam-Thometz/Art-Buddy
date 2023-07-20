@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import Icon from "_components/icon/Icon";
 
-import { PLAY_ACTION_BTN } from "_media/_general/general.assets";
+import { PLAY_ACTION_BTN } from "_assets/_general/general.assets";
 
 const Instructions = ({ setVisited }) => {
   const { currGame } = useSelector((state) => state.general);

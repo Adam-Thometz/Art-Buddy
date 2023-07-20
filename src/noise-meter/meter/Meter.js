@@ -45,7 +45,7 @@ const Meter = () => {
 
   return (
     <section className='Meter'>
-      {meterDisplay.map((filter, i) => <Line filter={filter} i={i} />)}
+      {meterDisplay.map((color, i) => <Line color={color} i={i} />)}
     </section>
   );
 }

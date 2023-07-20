@@ -27,7 +27,7 @@ exports[`Home component matches the snapshot of the landing page displaying the 
     >
       <img
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/art-icon.png"
+        src="file"
       />
       ART GAMES
     </button>
@@ -37,7 +37,7 @@ exports[`Home component matches the snapshot of the landing page displaying the 
     >
       <img
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/music-icon.png"
+        src="file"
       />
       MUSIC GAMES
     </button>
@@ -47,7 +47,7 @@ exports[`Home component matches the snapshot of the landing page displaying the 
     >
       <img
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/all-icon.png"
+        src="file"
       />
       ALL GAMES
     </button>
@@ -57,7 +57,7 @@ exports[`Home component matches the snapshot of the landing page displaying the 
     >
       <img
         alt=""
-        src="https://art-buddy.s3.amazonaws.com/menu/option-icons/iep-icon.png"
+        src="file"
       />
       COMMON CORE
     </button>

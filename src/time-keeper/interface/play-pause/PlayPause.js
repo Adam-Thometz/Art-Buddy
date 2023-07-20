@@ -7,7 +7,7 @@ import "./PlayPause.css";
 
 import Icon from "_components/icon/Icon";
 
-import { PLAY, PAUSE } from "_media/_general/general.assets";
+import { PLAY, PAUSE } from "_assets/_general/general.assets";
 
 const PlayPause = ({ inNav }) => {
   const { isPlaying, secondsLeft } = useSelector((state) => state.timeKeeper);

@@ -4,7 +4,7 @@ import { PopupContext } from "_context/PopupContext";
 
 import "./Finished.css";
 
-import { REPORT_CARD } from "_media/_general/general.assets";
+import { REPORT_CARD } from "_assets/_general/general.assets";
 
 const Finished = ({ gameId, gameName, prize, findPrizeIn, level = null }) => {
   const { setCurrPopup } = useContext(PopupContext);

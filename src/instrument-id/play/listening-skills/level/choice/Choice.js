@@ -7,7 +7,7 @@ import "./Choice.css";
 
 import Icon from "_components/icon/Icon";
 
-import { CORRECT_ICON, INCORRECT_ICON, SWAP_ICON } from "_media/instrument-id/instrumentId.assets";
+import { CORRECT_ICON, INCORRECT_ICON, SWAP_ICON } from "_assets/instrument-id/instrumentId.assets";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 
 const Choice = ({ id, level, choice, save }) => {

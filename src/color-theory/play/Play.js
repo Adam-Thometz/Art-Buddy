@@ -11,8 +11,8 @@ import Button from "_components/button/Button";
 import ReportCard from "_components/report-card/ReportCard";
 
 import checkHasPassed from "_utils/_report-card/checkHasPassed";
-import { COLOR_THEORY_ICON } from "_media/menu/menu.assets";
-import { REPORT_CARD, LOCKED, UNLOCKED } from "_media/_general/general.assets";
+import { COLOR_THEORY_ICON } from "_assets/menu/menu.assets";
+import { REPORT_CARD, LOCKED, UNLOCKED } from "_assets/_general/general.assets";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import { COLOR_THEORY_LEVELS } from "_data/color-theory/levels";
 

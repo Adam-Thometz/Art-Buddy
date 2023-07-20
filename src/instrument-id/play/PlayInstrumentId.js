@@ -6,7 +6,7 @@ import Icon from "_components/icon/Icon";
 import Options from "_components/option/Options";
 import WindowNavbar from "_components/window-nav/WindowNavbar";
 
-import { LISTENING_SKILLS_ICON, SONG_MAKER_ICON } from "_media/instrument-id/instrumentId.assets";
+import { LISTENING_SKILLS_ICON, SONG_MAKER_ICON } from "_assets/instrument-id/instrumentId.assets";
 import { instrumentIdUrls } from "_routes/routeUrls";
 
 const PlayInstrumentId = () => {

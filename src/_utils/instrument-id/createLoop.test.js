@@ -1,8 +1,8 @@
 import createLoop from "./createLoop";
 import { Sampler, Part, Transport } from "tone";
 import TimeMock from "_testUtils/mocks/timeMock";
-import { ELECTRIC_GUITAR } from "_media/instrument-id/soundImports";
-import { ROOT_URL } from "_media/awsS3Root";
+import { ELECTRIC_GUITAR } from "_assets/instrument-id/soundImports";
+import { ROOT_URL } from "_assets/awsS3Root";
 
 jest.mock("tone", () => ({
   __esModule: true,

@@ -19,7 +19,7 @@ exports[`ListeningSkillsTest component matches snapshot 1`] = `
       >
         <img
           alt=""
-          src="https://art-buddy.s3.amazonaws.com/_general/report-card.png"
+          src="file"
           style="height: 50px; width: 34px; cursor: pointer;"
         />
         <figcaption

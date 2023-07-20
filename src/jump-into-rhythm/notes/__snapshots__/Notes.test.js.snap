@@ -43,7 +43,7 @@ exports[`Notes component matches snapshot 1`] = `
       <img
         alt="Add measure"
         class="Notes-toggle"
-        src="https://art-buddy.s3.amazonaws.com/_general/add.png"
+        src="file"
       />
       <section
         class="Notes-beats"

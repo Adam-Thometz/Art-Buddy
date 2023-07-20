@@ -10,13 +10,13 @@ exports[`Battery component matches snapshot 1`] = `
     <img
       alt=""
       id="0"
-      src="https://art-buddy.s3.amazonaws.com/mood-meter/battery.png"
+      src="file"
     />
     <img
       alt=""
       data-testid="bar"
       id="0"
-      src="https://art-buddy.s3.amazonaws.com/mood-meter/battery-bar.png"
+      src="file"
       style="width: 100%;"
     />
   </div>

@@ -1,4 +1,4 @@
-import { BOING } from "_media/jump-into-rhythm/jumpIntoRhythm.assets";
+import { BOING } from "_assets/jump-into-rhythm/jumpIntoRhythm.assets";
 import { Part, Sampler, Time, Transport } from "tone";
 import createNoteOrder from "./createNoteOrder";
 

@@ -16,7 +16,7 @@ import Button from "_components/button/Button";
 import ColorWheel from "color-theory/color-wheel/ColorWheel";
 
 import levels from "_data/color-theory/levels";
-import { CORRECT_ICON, INCORRECT_ICON } from "_media/color-theory/colorTheory.assets";
+import { CORRECT_ICON, INCORRECT_ICON } from "_assets/color-theory/colorTheory.assets";
 import { colorTheoryUrls } from "_routes/routeUrls";
 import updateReportCard from "_utils/_report-card/updateReportCard";
 

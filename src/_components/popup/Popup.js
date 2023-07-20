@@ -3,7 +3,7 @@ import { PopupContext } from "_context/PopupContext";
 
 import "./Popup.css";
 
-import { CLOSE } from "_media/_general/general.assets";
+import { CLOSE } from "_assets/_general/general.assets";
 
 const Popup = () => {
   const { currPopup, setCurrPopup } = useContext(PopupContext);
