@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import './Line.css';
 
-const DEFAULT_COLOR = "#D4D2D5"
+const DEFAULT_COLOR = "#D4D2D5";
 
 const Line = ({ color, i }) => {
   const { meterVolume, isRecording } = useSelector(state => state.noiseMeter);
