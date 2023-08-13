@@ -2,13 +2,13 @@ import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
 
-import LearnInstrumentId from "instrument-id/learn/LearnInstrumentId";
-import LearnFamilyPage from "instrument-id/learn/family/LearnFamilyPage";
-import Instrument from "instrument-id/learn/instrument/Instrument";
-import PlayInstrumentId from "instrument-id/play/PlayInstrumentId";
-import ListeningSkills from "instrument-id/play/listening-skills/ListeningSkills";
-import ListeningSkillsTest from "instrument-id/play/listening-skills/level/ListeningSkillsTest";
-import SongMaker from "instrument-id/play/song-maker/SongMaker";
+import LearnInstrumentId from "views/instrument-id/learn/LearnInstrumentId";
+import LearnFamilyPage from "views/instrument-id/learn/family/LearnFamilyPage";
+import Instrument from "views/instrument-id/learn/instrument/Instrument";
+import PlayInstrumentId from "views/instrument-id/play/PlayInstrumentId";
+import ListeningSkills from "views/instrument-id/play/listening-skills/ListeningSkills";
+import ListeningSkillsTest from "views/instrument-id/play/listening-skills/level/ListeningSkillsTest";
+import SongMaker from "views/instrument-id/play/song-maker/SongMaker";
 
 import { instrumentIdUrls } from "_routes/routeUrls";
 

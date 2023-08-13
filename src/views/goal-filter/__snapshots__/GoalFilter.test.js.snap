@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoalFilter component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="GoalFilter"
+  >
+    <p
+      class="GoalFilter-description"
+    >
+      Art Buddy was designed to seamlessly integrate the Common Core Standards! Look for the icon(s) on each game!
+    </p>
+    <ul
+      class="GoalFilter-list"
+    >
+      <li
+        class="GoalFilter-list-item"
+        id="reading"
+      >
+        <img
+          alt=""
+          class="GoalFilter-icon"
+          src="file"
+        />
+        <span>
+          Reading Standards
+        </span>
+      </li>
+      <li
+        class="GoalFilter-list-item"
+        id="writing"
+      >
+        <img
+          alt=""
+          class="GoalFilter-icon"
+          src="file"
+        />
+        <span>
+          Writing Standards
+        </span>
+      </li>
+      <li
+        class="GoalFilter-list-item"
+        id="math"
+      >
+        <img
+          alt=""
+          class="GoalFilter-icon"
+          src="file"
+        />
+        <span>
+          Math Standards
+        </span>
+      </li>
+      <li
+        class="GoalFilter-list-item"
+        id="communication"
+      >
+        <img
+          alt=""
+          class="GoalFilter-icon"
+          src="file"
+        />
+        <span>
+          Communication Standards
+        </span>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

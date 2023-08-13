@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
-import WordToMusic from "music-decoder/WordToMusic";
-import SequenceMaker from "sequence-maker/SequenceMaker";
-import JumpIntoRhythm from "jump-into-rhythm/JumpIntoRhythm";
-import InstrumentId from "instrument-id/InstrumentId";
+import WordToMusic from "views/music-decoder/WordToMusic";
+import SequenceMaker from "views/sequence-maker/SequenceMaker";
+import JumpIntoRhythm from "views/jump-into-rhythm/JumpIntoRhythm";
+import InstrumentId from "views/instrument-id/InstrumentId";
 import InstrumentIdRoutes from "./instrument-id/InstrumentIdRoutes";
 
 import urls from "_routes/routeUrls";

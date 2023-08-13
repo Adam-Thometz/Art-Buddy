@@ -3,7 +3,7 @@ import WindowNavbar from "./WindowNavbar";
 import { render } from "_testUtils/render";
 import { screen } from "@testing-library/react";
 
-import ReportCardIcon from "instrument-id/play/listening-skills/level/corner-icon/ReportCardIcon";
+import ReportCardIcon from "views/instrument-id/play/listening-skills/level/corner-icon/ReportCardIcon";
 
 describe("WindowNavbar component", () => {
   it("renders without crashing", () => {

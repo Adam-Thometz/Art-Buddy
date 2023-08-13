@@ -1,7 +1,7 @@
 import './App.css';
 
 import TooSmall from '_components/too-small/TooSmall';
-import Navbar from './navbar-settings/Navbar';
+import Navbar from '_components/navbar-settings/Navbar';
 import ArtBuddyRoutes from '_routes/ArtBuddyRoutes';
 import Popup from '_components/popup/Popup';
 

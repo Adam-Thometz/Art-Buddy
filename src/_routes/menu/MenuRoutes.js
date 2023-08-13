@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
 
-import Home from "home/Home";
-import Menu from "home/menu/Menu";
+import Home from "views/home/Home";
+import Menu from "views/home/menu/Menu";
 
 import urls from "_routes/routeUrls";
 

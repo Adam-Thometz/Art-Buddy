@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
-import LearnColorTheory from "color-theory/learn/LearnColorTheory";
-import LearnColors from "color-theory/learn/colors/LearnColors";
-import Play from "color-theory/play/Play";
-import PlayLevel from "color-theory/play/level/PlayLevel";
+import LearnColorTheory from "views/color-theory/learn/LearnColorTheory";
+import LearnColors from "views/color-theory/learn/colors/LearnColors";
+import Play from "views/color-theory/play/Play";
+import PlayLevel from "views/color-theory/play/level/PlayLevel";
 
 import { colorTheoryUrls } from "_routes/routeUrls";
 

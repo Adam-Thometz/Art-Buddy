@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
-import FreePaint from "free-paint/FreePaint";
-import ColorTheory from "color-theory/ColorTheory";
+import FreePaint from "views/free-paint/FreePaint";
+import ColorTheory from "views/color-theory/ColorTheory";
 import ColorTheoryRoutes from "./color-theory/ColorTheoryRoutes";
 
 import urls from "_routes/routeUrls";

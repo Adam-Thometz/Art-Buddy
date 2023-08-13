@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
 import Window from "_components/window/Window";
-import ScoreKeeper from "score-keeper/ScoreKeeper";
-import TimeKeeper from "time-keeper/TimeKeeper";
-import MoodMeter from "mood-meter/MoodMeter";
-import NoiseMeter from "noise-meter/NoiseMeter";
+import ScoreKeeper from "views/score-keeper/ScoreKeeper";
+import TimeKeeper from "views/time-keeper/TimeKeeper";
+import MoodMeter from "views/mood-meter/MoodMeter";
+import NoiseMeter from "views/noise-meter/NoiseMeter";
 
 import urls from "_routes/routeUrls";
 

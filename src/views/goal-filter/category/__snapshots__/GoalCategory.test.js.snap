@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoalCategory component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="GoalCategory"
+  >
+    <span>
+      go back
+    </span>
+    <p>
+      Nothing for this yet!
+    </p>
+  </div>
+</DocumentFragment>
+`;
