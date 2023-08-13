@@ -1,8 +1,8 @@
 import React from "react";
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
-import { default as store } from "_redux/rootReducer";
-import { setStencil, setEditStencilMode } from "_redux/free-paint/freePaintReducer";
+import { default as store } from "store/rootReducer";
+import { setStencil, setEditStencilMode } from "store/free-paint/freePaintReducer";
 
 import { screen } from "@testing-library/react";
 

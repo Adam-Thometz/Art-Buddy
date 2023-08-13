@@ -1,14 +1,14 @@
 module.exports = {
   collectCoverage: true,
-  coverageDirectory: "<rootDir>/src/_testUtils/coverage",
+  coverageDirectory: "<rootDir>/src/testUtils/coverage",
   moduleNameMapper: {
-    "\\.(css)$": "<rootDir>/src/_testUtils/mocks/styleMock.js",
-    "\\.(mp3|png|jpeg)$": "<rootDir>/src/_testUtils/mocks/fileMock.js",
+    "\\.(css)$": "<rootDir>/src/testUtils/mocks/styleMock.js",
+    "\\.(mp3|png|jpeg)$": "<rootDir>/src/testUtils/mocks/fileMock.js",
   },
   testEnvironment: "jsdom",
   setupFilesAfterEnv: [
     "<rootDir>/src/setupTests.js",
-    "<rootDir>/src/_testUtils/mocks/localStorageMock.js",
+    "<rootDir>/src/testUtils/mocks/localStorageMock.js",
     "jest-date-mock",
   ],
 };

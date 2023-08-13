@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setShownOptions } from "_redux/free-paint/freePaintReducer";
+import { setShownOptions } from "store/free-paint/freePaintReducer";
 
 import "./ButtonWrapper.css";
 
-import Button from "_components/button/Button";
-import Icon from "_components/icon/Icon";
+import Button from "components/button/Button";
+import Icon from "components/icon/Icon";
 
-import { colorsToFilter } from "_data/free-paint/colors";
-import { ROOT_URL } from "_assets/awsS3Root";
+import { colorsToFilter } from "data/free-paint/colors";
+import { ROOT_URL } from "assets/awsS3Root";
 
 const ButtonWrapper = ({
   color = null,

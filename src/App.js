@@ -1,9 +1,9 @@
 import './App.css';
 
-import TooSmall from '_components/too-small/TooSmall';
-import Navbar from '_components/navbar-settings/Navbar';
-import ArtBuddyRoutes from '_routes/ArtBuddyRoutes';
-import Popup from '_components/popup/Popup';
+import TooSmall from 'components/too-small/TooSmall';
+import Navbar from 'components/navbar-settings/Navbar';
+import ArtBuddyRoutes from 'routes/ArtBuddyRoutes';
+import Popup from 'components/popup/Popup';
 
 const App = () => {
   const screenIsTooSmall = window.innerWidth < 1000;

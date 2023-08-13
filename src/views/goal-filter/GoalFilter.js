@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
 import "./GoalFilter.css";
 
 import GoalCategory from "./category/GoalCategory";
 
-import { goalIcons } from "_assets/goal-filter/goalFilter.assets";
+import { goalIcons } from "assets/goal-filter/goalFilter.assets";
 
 const GoalFilter = () => {
   const { setCurrPopup } = useContext(PopupContext);

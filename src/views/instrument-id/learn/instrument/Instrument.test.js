@@ -1,6 +1,6 @@
 import Instrument from "./Instrument";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),

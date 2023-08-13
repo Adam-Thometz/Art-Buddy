@@ -1,16 +1,16 @@
 import { useContext } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addToSequence } from "_redux/sequence-maker/sequenceMakerReducer";
+import { addToSequence } from "store/sequence-maker/sequenceMakerReducer";
 
 import "./SoundOptions.css";
 
-import Options from "_components/option/Options";
-import Icon from "_components/icon/Icon";
+import Options from "components/option/Options";
+import Icon from "components/icon/Icon";
 
-import soundInfo from "_data/sequence-maker/soundInfo";
-import createSounds from "_utils/sequence-maker/createSounds";
+import soundInfo from "data/sequence-maker/soundInfo";
+import createSounds from "lib/sequence-maker/createSounds";
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector((state) => state.sequenceMaker);

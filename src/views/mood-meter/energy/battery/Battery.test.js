@@ -1,6 +1,6 @@
 import Battery from "./Battery";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Battery component", () => {
   it("renders without crashing", () => {

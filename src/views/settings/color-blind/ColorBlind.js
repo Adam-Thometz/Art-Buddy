@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleColorBlind } from "_redux/settings/settingsReducer";
+import { toggleColorBlind } from "store/settings/settingsReducer";
 
 import "./ColorBlind.css";
 
-import Toggle from "_components/toggle/Toggle";
+import Toggle from "components/toggle/Toggle";
 
 const ColorBlind = () => {
   const { colorBlind } = useSelector((state) => state.settings);

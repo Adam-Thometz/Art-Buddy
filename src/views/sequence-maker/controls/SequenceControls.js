@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
-import { setCategory, setDuration, setPitch } from "_redux/sequence-maker/sequenceMakerReducer";
+import { setCategory, setDuration, setPitch } from "store/sequence-maker/sequenceMakerReducer";
 
 import "./SequenceControls.css";
 
-import Dropdown from "_components/dropdown/Dropdown";
+import Dropdown from "components/dropdown/Dropdown";
 
 import categories from "./dropdown-options/categories";
 import pitches from "./dropdown-options/pitches";

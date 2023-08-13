@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMute, resetSong } from "_redux/time-keeper/timeKeeperReducer";
+import { toggleMute, resetSong } from "store/time-keeper/timeKeeperReducer";
 
 import "./TimeLeft.css";
 
-import createDisplayTime from "_utils/time-keeper/createDisplayTime";
+import createDisplayTime from "lib/time-keeper/createDisplayTime";
 // import reset from "_media/time-keeper/controls/reset.png";
 // import mute from "_media/time-keeper/controls/mute.png";
-import { MUTE, RESET } from "_assets/time-keeper/timeKeeper.assets";
-import urls from "_routes/routeUrls";
+import { MUTE, RESET } from "assets/time-keeper/timeKeeper.assets";
+import urls from "routes/routeUrls";
 
 const TimeLeft = ({ inNav }) => {
   const { secondsLeft, currSongIdx, isMuted } = useSelector((state) => state.timeKeeper);

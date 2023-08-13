@@ -1,4 +1,4 @@
-import urls from "_routes/routeUrls";
+import urls from "routes/routeUrls";
 
 import {
   MUSIC_GAMES,
@@ -9,7 +9,7 @@ import {
   TIME_KEEPER,
   MOOD_METER,
   NOISE_METER,
-} from "_assets/menu/menu.assets";
+} from "assets/menu/menu.assets";
 
 const menuOptions = {
   games: [

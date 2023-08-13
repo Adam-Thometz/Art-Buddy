@@ -1,12 +1,12 @@
 import { useContext, useState, useEffect } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
 import { useDispatch } from "react-redux";
-import { toggleRecording } from "_redux/noise-meter/noiseMeterReducer";
+import { toggleRecording } from "store/noise-meter/noiseMeterReducer";
 
 import "./Permissions.css";
 
-import Button from "_components/button/Button";
+import Button from "components/button/Button";
 
 const Permissions = () => {
   const [showPermissionError, setShowPermissionError] = useState(false);

@@ -1,10 +1,10 @@
 import ScoreKeeper from "./ScoreKeeper";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { scoreKeeper } from "_data/_activities/activityList";
+import { scoreKeeper } from "data/_activities/activityList";
 
 describe("Score Keeper", () => {
   window.localStorage.setItem(`visited-${scoreKeeper.lsKey}`, true);

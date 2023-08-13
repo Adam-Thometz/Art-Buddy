@@ -1,6 +1,6 @@
 import PlayPause from "./PlayPause";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("PlayPause component", () => {
   it("renders without crashing", () => {

@@ -1,6 +1,6 @@
 import TimeLeft from "./TimeLeft";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("TimeLeft component", () => {
   it("renders without crashing", () => {

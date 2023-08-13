@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setValence } from "_redux/mood-meter/moodMeterReducer";
+import { setValence } from "store/mood-meter/moodMeterReducer";
 
 import "./Face.css";
 

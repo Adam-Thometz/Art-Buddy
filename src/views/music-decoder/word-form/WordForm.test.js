@@ -1,6 +1,6 @@
 import WordForm from "./WordForm";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("WordForm component", () => {
   it("renders without crashing", () => {

@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import useVisited from "_hooks/visited/useVisited";
+import useVisited from "hooks/visited/useVisited";
 
 import { useDispatch, useSelector } from "react-redux";
-import { clearGame, loadStudents } from "_redux/score-keeper/scoreKeeperReducer";
-import { changeCurrGame } from "_redux/_general/generalReducer";
+import { clearGame, loadStudents } from "store/score-keeper/scoreKeeperReducer";
+import { changeCurrGame } from "store/_general/generalReducer";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Instructions from "_components/instructions/Instructions";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Instructions from "components/instructions/Instructions";
 import Students from "./students/Students";
 
-import { scoreKeeper } from "_data/_activities/activityList";
+import { scoreKeeper } from "data/_activities/activityList";
 
 const ScoreKeeper = () => {
   const [hasVisited, setHasVisited] = useVisited(scoreKeeper.lsKey);

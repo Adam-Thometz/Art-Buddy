@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggleRecording } from "_redux/noise-meter/noiseMeterReducer";
+import { toggleRecording } from "store/noise-meter/noiseMeterReducer";
 
 import "./Switch.css";
 
-import Icon from "_components/icon/Icon";
+import Icon from "components/icon/Icon";
 import Permissions from "../permissions/Permissions";
 
-import { PLAY, PAUSE } from "_assets/_general/general.assets";
+import { PLAY, PAUSE } from "assets/_general/general.assets";
 
 const Switch = () => {
   const { isRecording } = useSelector((state) => state.noiseMeter);

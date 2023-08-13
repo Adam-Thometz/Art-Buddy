@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import "./Frog.css";
 
-import createHoppingAnimation from "_utils/jump-into-rhythm/createHoppingAnimation";
+import createHoppingAnimation from "lib/jump-into-rhythm/createHoppingAnimation";
 
 const Frog = ({ frog, measure, delay = 0 }) => {
   const { isAnimating } = useSelector((state) => state.jumpIntoRhythm);

@@ -1,16 +1,16 @@
 import { useContext, useEffect } from "react";
-import useVisited from "_hooks/visited/useVisited";
-import { PopupContext } from "_context/PopupContext";
+import useVisited from "hooks/visited/useVisited";
+import { PopupContext } from "context/PopupContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { changeCurrGame } from "_redux/_general/generalReducer";
+import { changeCurrGame } from "store/_general/generalReducer";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Instructions from "_components/instructions/Instructions";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Instructions from "components/instructions/Instructions";
 import Valence from "./valence/Valence";
 import Energy from "./energy/Energy";
 
-import { moodMeter } from "_data/_activities/activityList";
+import { moodMeter } from "data/_activities/activityList";
 import Result from "./result/Result";
 
 const MoodMeter = () => {

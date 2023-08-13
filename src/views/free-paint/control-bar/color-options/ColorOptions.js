@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setColor, setIsErasing } from "_redux/free-paint/freePaintReducer";
+import { setColor, setIsErasing } from "store/free-paint/freePaintReducer";
 
 import "./ColorOptions.css";
 

@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
-import { setStencil } from "_redux/free-paint/freePaintReducer";
+import { setStencil } from "store/free-paint/freePaintReducer";
 
 import "./StencilOptions.css";
 
-import options from "_data/free-paint/freePaintOptions";
+import options from "data/free-paint/freePaintOptions";
 
 const StencilOptions = ({ id }) => {
   const dispatch = useDispatch();

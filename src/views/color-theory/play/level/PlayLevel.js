@@ -1,24 +1,24 @@
 import { useContext, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { PopupContext } from "_context/PopupContext";
-import useReportCard from "_hooks/report-card/useReportCard";
+import { PopupContext } from "context/PopupContext";
+import useReportCard from "hooks/report-card/useReportCard";
 
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { clearWheel, toggleAllColors, toggleColor, toggleGroup, toggleText } from "_redux/color-theory/color-wheel/colorWheelReducer";
-import { nextQuestion, nextSection, nextSublevel, nextLevel, gotIncorrect } from "_redux/color-theory/color-theory-quiz/colorTheoryQuizReducer";
+import { clearWheel, toggleAllColors, toggleColor, toggleGroup, toggleText } from "store/color-theory/color-wheel/colorWheelReducer";
+import { nextQuestion, nextSection, nextSublevel, nextLevel, gotIncorrect } from "store/color-theory/color-theory-quiz/colorTheoryQuizReducer";
 
 import "./PlayLevel.css";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Finished from "_components/popup/finished/Finished";
-import Button from "_components/button/Button";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Finished from "components/popup/finished/Finished";
+import Button from "components/button/Button";
 import ColorWheel from "views/color-theory/color-wheel/ColorWheel";
 
-import levels from "_data/color-theory/levels";
-import { CORRECT_ICON, INCORRECT_ICON } from "_assets/color-theory/colorTheory.assets";
-import { colorTheoryUrls } from "_routes/routeUrls";
-import updateReportCard from "_utils/_report-card/updateReportCard";
+import levels from "data/color-theory/levels";
+import { CORRECT_ICON, INCORRECT_ICON } from "assets/color-theory/colorTheory.assets";
+import { colorTheoryUrls } from "routes/routeUrls";
+import updateReportCard from "lib/_report-card/updateReportCard";
 
 const PlayLevel = () => {
   const { level } = useParams();

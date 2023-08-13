@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setMeasures } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
+import { setMeasures } from "store/jump-into-rhythm/jumpIntoRhythmReducer";
 
 import "./Notes.css";
 
 import NoteBlock from "./note-block/NoteBlock";
 
-import { TREBLE_CLEF } from "_assets/jump-into-rhythm/jumpIntoRhythm.assets";
-import { ADD, MINUS } from "_assets/_general/general.assets";
-import colors from "_data/_utils/colorOrder";
+import { TREBLE_CLEF } from "assets/jump-into-rhythm/jumpIntoRhythm.assets";
+import { ADD, MINUS } from "assets/_general/general.assets";
+import colors from "data/_utils/colorOrder";
 
 const Notes = () => {
   const { rhythm } = useSelector((state) => state.jumpIntoRhythm);

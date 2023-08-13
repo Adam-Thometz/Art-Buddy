@@ -1,12 +1,12 @@
 import { useContext, useEffect } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerReducer";
+import { toggleLoop } from "store/instrument-id/song-maker/songMakerReducer";
 
 import "./PlaySave.css";
 
-import Button from "_components/button/Button";
+import Button from "components/button/Button";
 import SaveSong from "../save-song/SaveSong";
 
 const PlaySave = () => {

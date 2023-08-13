@@ -1,6 +1,6 @@
 import SavedSongs from "./SavedSongs";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("SavedSongs component", () => {
   it("renders without crashing", () => {

@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addToRhythm, toggleAnimation, toggleLilyPadDisplay } from "_redux/jump-into-rhythm/jumpIntoRhythmReducer";
+import { addToRhythm, toggleAnimation, toggleLilyPadDisplay } from "store/jump-into-rhythm/jumpIntoRhythmReducer";
 
 import "./NoteOptions.css";
 
-import Button from "_components/button/Button";
-import Icon from "_components/icon/Icon";
+import Button from "components/button/Button";
+import Icon from "components/icon/Icon";
 
-import noteInfo from "_data/jump-into-rhythm/noteInfo";
+import noteInfo from "data/jump-into-rhythm/noteInfo";
 import { start, Transport, Time } from "tone";
 
 const NoteOptions = () => {

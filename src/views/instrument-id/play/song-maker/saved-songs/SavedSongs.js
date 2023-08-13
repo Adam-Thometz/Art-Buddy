@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
-import { PlayContext } from "_context/PlayContext";
-import useSavedSongs from "_hooks/saved-songs/useSavedSongs";
+import { PlayContext } from "context/PlayContext";
+import useSavedSongs from "hooks/saved-songs/useSavedSongs";
 
 import { useSelector, useDispatch } from "react-redux";
-import { toggleLoop } from "_redux/instrument-id/song-maker/songMakerReducer";
+import { toggleLoop } from "store/instrument-id/song-maker/songMakerReducer";
 
 import "./SavedSongs.css";
 
-import Icon from "_components/icon/Icon";
+import Icon from "components/icon/Icon";
 
-import { PLAY_SMALL, DELETE } from "_assets/_general/general.assets";
-import createLoop from "_utils/instrument-id/createLoop";
+import { PLAY_SMALL, DELETE } from "assets/_general/general.assets";
+import createLoop from "lib/instrument-id/createLoop";
 
 const SavedSongs = () => {
   const { setPlayFn } = useContext(PlayContext);

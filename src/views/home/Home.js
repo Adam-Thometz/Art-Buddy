@@ -1,4 +1,4 @@
-import useVisited from "_hooks/visited/useVisited";
+import useVisited from "hooks/visited/useVisited";
 
 import Welcome from "./welcome/Welcome";
 import Menu from "./menu/Menu";

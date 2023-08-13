@@ -1,20 +1,20 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import useReportCard from "_hooks/report-card/useReportCard";
-import { PopupContext } from "_context/PopupContext";
+import useReportCard from "hooks/report-card/useReportCard";
+import { PopupContext } from "context/PopupContext";
 
 import "./Play.css";
 
-import Icon from "_components/icon/Icon";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Button from "_components/button/Button";
-import ReportCard from "_components/report-card/ReportCard";
+import Icon from "components/icon/Icon";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Button from "components/button/Button";
+import ReportCard from "components/report-card/ReportCard";
 
-import checkHasPassed from "_utils/_report-card/checkHasPassed";
-import { COLOR_THEORY_ICON } from "_assets/menu/menu.assets";
-import { REPORT_CARD, LOCKED, UNLOCKED } from "_assets/_general/general.assets";
-import { colorTheoryUrls } from "_routes/routeUrls";
-import { COLOR_THEORY_LEVELS } from "_data/color-theory/levels";
+import checkHasPassed from "lib/_report-card/checkHasPassed";
+import { COLOR_THEORY_ICON } from "assets/menu/menu.assets";
+import { REPORT_CARD, LOCKED, UNLOCKED } from "assets/_general/general.assets";
+import { colorTheoryUrls } from "routes/routeUrls";
+import { COLOR_THEORY_LEVELS } from "data/color-theory/levels";
 
 const Play = () => {
   const navigate = useNavigate();

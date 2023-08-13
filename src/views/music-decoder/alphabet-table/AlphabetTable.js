@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { fillLetter } from "_redux/music-decoder/musicDecoderReducer";
+import { fillLetter } from "store/music-decoder/musicDecoderReducer";
 
 import "./AlphabetTable.css";
 
-import LETTER_NOTES from "_data/music-decoder/letterNotes";
-import searchLetter from "_utils/music-decoder/searchLetter";
+import LETTER_NOTES from "data/music-decoder/letterNotes";
+import searchLetter from "lib/music-decoder/searchLetter";
 
 const AlphabetTable = () => {
   const { playFn } = useContext(PlayContext);

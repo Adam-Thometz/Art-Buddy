@@ -1,6 +1,6 @@
 import InstrumentDisplay from "./InstrumentDisplay";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 jest.mock("tone", () => ({
   Buffer: jest.fn(),

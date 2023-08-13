@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { clearWheel, learnColors } from "_redux/color-theory/color-wheel/colorWheelReducer";
+import { clearWheel, learnColors } from "store/color-theory/color-wheel/colorWheelReducer";
 
 import "./LearnColors.css";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
+import WindowNavbar from "components/window-nav/WindowNavbar";
 import ColorWheel from "views/color-theory/color-wheel/ColorWheel";
 
 import descriptions from "./learnDescriptions";

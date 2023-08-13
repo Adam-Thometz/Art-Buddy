@@ -1,6 +1,6 @@
 import Meter from "./Meter";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Meter component", () => {
   it("renders without crashing", () => {

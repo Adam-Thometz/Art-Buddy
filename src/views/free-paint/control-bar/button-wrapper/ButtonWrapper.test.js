@@ -1,6 +1,6 @@
 import ButtonWrapper from "./ButtonWrapper";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("ButtonWrapper component", () => {
   it("renders without crashing", () => {

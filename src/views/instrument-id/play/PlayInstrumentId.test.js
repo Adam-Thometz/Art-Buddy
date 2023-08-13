@@ -1,6 +1,6 @@
 import PlayInstrumentId from "./PlayInstrumentId";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("PlayInstrumentId component", () => {
   it("renders without crashing", () => {

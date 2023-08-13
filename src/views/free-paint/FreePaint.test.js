@@ -1,10 +1,10 @@
 import FreePaint from "./FreePaint";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { freePaint } from "_data/_activities/activityList";
+import { freePaint } from "data/_activities/activityList";
 
 describe("FreePaint component", () => {
   window.localStorage.setItem(`visited-${freePaint.lsKey}`, true);

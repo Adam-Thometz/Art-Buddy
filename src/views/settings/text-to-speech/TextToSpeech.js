@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTextToSpeech } from "_redux/settings/settingsReducer";
+import { toggleTextToSpeech } from "store/settings/settingsReducer";
 
 import "./TextToSpeech.css";
 
-import Toggle from "_components/toggle/Toggle";
+import Toggle from "components/toggle/Toggle";
 
 const TextToSpeech = () => {
   const { textToSpeech } = useSelector((state) => state.settings);

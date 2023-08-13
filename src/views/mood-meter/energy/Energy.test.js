@@ -1,6 +1,6 @@
 import Energy from "./Energy";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Energy component", () => {
   it("renders without crashing", () => {

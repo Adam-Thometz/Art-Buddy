@@ -1,6 +1,6 @@
 import MusicChoices from "./MusicChoices";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("MusicChoices component", () => {
   const SAMPLE_MOOD = "excited";

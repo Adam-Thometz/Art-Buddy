@@ -1,6 +1,6 @@
-import { TRUMPET_ICON, SYNTH_ICON, DRUM_SET_ICON, HARP_ICON, CLARINET_ICON, VOICE_MAIN_ICON } from "_assets/instrument-id/instrumentId.assets";
+import { TRUMPET_ICON, SYNTH_ICON, DRUM_SET_ICON, HARP_ICON, CLARINET_ICON, VOICE_MAIN_ICON } from "assets/instrument-id/instrumentId.assets";
 
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { instrumentIdUrls } from "routes/routeUrls";
 
 const learnMenuOptions = [
   {

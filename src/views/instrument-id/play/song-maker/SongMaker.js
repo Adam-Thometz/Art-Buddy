@@ -1,19 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { clearSong } from "_redux/instrument-id/song-maker/songMakerReducer";
-import { setCurrTimer } from "_redux/_general/generalReducer";
+import { clearSong } from "store/instrument-id/song-maker/songMakerReducer";
+import { setCurrTimer } from "store/_general/generalReducer";
 
 import "./SongMaker.css";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
+import WindowNavbar from "components/window-nav/WindowNavbar";
 import SavedSongsIcon from "./corner-icon/SavedSongsIcon";
 import PlaySave from "./play-save/PlaySave";
 import InstrumentDisplay from "./instrument-display/InstrumentDisplay";
 
-import createLoop from "_utils/instrument-id/createLoop";
+import createLoop from "lib/instrument-id/createLoop";
 import { Transport } from "tone";
 
 const SongMaker = () => {

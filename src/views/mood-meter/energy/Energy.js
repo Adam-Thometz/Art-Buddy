@@ -4,7 +4,7 @@ import "./Energy.css";
 
 import Battery from "./battery/Battery";
 
-import batteries from "_data/mood-meter/batteries";
+import batteries from "data/mood-meter/batteries";
 
 const Energy = () => {
   const { energy } = useSelector((state) => state.moodMeter);

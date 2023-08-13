@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import "./TimeBlock.css";
 
-import animations from "_data/time-keeper/possibleAnimations";
+import animations from "data/time-keeper/possibleAnimations";
 
 const BEAT_LENGTH = 469*4;
 

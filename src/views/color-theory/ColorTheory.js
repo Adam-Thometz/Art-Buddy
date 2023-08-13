@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Icon from "_components/icon/Icon";
-import Options from "_components/option/Options";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Icon from "components/icon/Icon";
+import Options from "components/option/Options";
 
-import { PLAY_ACTION_BTN } from "_assets/_general/general.assets";
-import { LEARN_ICON } from "_assets/instrument-id/instrumentId.assets";
-import { colorTheoryUrls } from "_routes/routeUrls";
+import { PLAY_ACTION_BTN } from "assets/_general/general.assets";
+import { LEARN_ICON } from "assets/instrument-id/instrumentId.assets";
+import { colorTheoryUrls } from "routes/routeUrls";
 
 const ColorTheory = () => {
   const navigate = useNavigate();

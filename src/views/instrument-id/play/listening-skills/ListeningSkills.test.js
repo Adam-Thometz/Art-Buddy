@@ -1,6 +1,6 @@
 import ListeningSkills from "./ListeningSkills";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("ListeningSkills component", () => {
   it("renders without crashing", () => {

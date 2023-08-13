@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addInstrument, removeInstrument, selectInstrument, selectMelody } from "_redux/instrument-id/song-maker/songMakerReducer";
+import { addInstrument, removeInstrument, selectInstrument, selectMelody } from "store/instrument-id/song-maker/songMakerReducer";
 
 import "./InstrumentDisplay.css";
 
-import AddIcon from "_components/icon/add-icon/AddIcon";
-import Dropdown from "_components/dropdown/Dropdown";
+import AddIcon from "components/icon/add-icon/AddIcon";
+import Dropdown from "components/dropdown/Dropdown";
 
 import {
   instrumentOptions,

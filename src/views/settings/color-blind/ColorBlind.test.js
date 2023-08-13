@@ -1,6 +1,6 @@
 import ColorBlind from "./ColorBlind";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("ColorBlind component", () => {
   it("renders without crashing", () => {

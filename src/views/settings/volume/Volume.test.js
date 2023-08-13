@@ -1,6 +1,6 @@
 import Volume from "./Volume";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Volume component", () => {
   it("renders without crashing", () => {

@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
-import Icon from "_components/icon/Icon";
-import Options from "_components/option/Options";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Icon from "components/icon/Icon";
+import Options from "components/option/Options";
+import WindowNavbar from "components/window-nav/WindowNavbar";
 
-import { LISTENING_SKILLS_ICON, SONG_MAKER_ICON } from "_assets/instrument-id/instrumentId.assets";
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { LISTENING_SKILLS_ICON, SONG_MAKER_ICON } from "assets/instrument-id/instrumentId.assets";
+import { instrumentIdUrls } from "routes/routeUrls";
 
 const PlayInstrumentId = () => {
   const { isPlaying } = useSelector(state => state.timeKeeper);

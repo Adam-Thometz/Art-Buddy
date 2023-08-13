@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTimer } from "_redux/time-keeper/timeKeeperReducer";
+import { toggleTimer } from "store/time-keeper/timeKeeperReducer";
 
 import "./PlayPause.css";
 
-import Icon from "_components/icon/Icon";
+import Icon from "components/icon/Icon";
 
-import { PLAY, PAUSE } from "_assets/_general/general.assets";
+import { PLAY, PAUSE } from "assets/_general/general.assets";
 
 const PlayPause = ({ inNav }) => {
   const { isPlaying, secondsLeft } = useSelector((state) => state.timeKeeper);

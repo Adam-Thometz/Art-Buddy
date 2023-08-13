@@ -1,20 +1,20 @@
 import { useEffect } from "react";
-import useReportCard from "_hooks/report-card/useReportCard";
-import useVisited from "_hooks/visited/useVisited";
+import useReportCard from "hooks/report-card/useReportCard";
+import useVisited from "hooks/visited/useVisited";
 
 import { useSelector, useDispatch } from "react-redux";
-import { clearGame, setAvailableColors } from "_redux/free-paint/freePaintReducer";
-import { changeCurrGame } from "_redux/_general/generalReducer";
+import { clearGame, setAvailableColors } from "store/free-paint/freePaintReducer";
+import { changeCurrGame } from "store/_general/generalReducer";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Instructions from "_components/instructions/Instructions";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Instructions from "components/instructions/Instructions";
 import ControlBar from "./control-bar/ControlBar";
 import Canvas from "./canvas/Canvas";
 import Stencil from "./stencil/Stencil";
 
-import { freePaint } from "_data/_activities/activityList";
-import colorWheel from "_data/color-theory/colorWheel";
-import checkHasPassed from "_utils/_report-card/checkHasPassed";
+import { freePaint } from "data/_activities/activityList";
+import colorWheel from "data/color-theory/colorWheel";
+import checkHasPassed from "lib/_report-card/checkHasPassed";
 
 const FreePaint = () => {
   const [hasVisited, setHasVisited] = useVisited(freePaint.lsKey);

@@ -1,11 +1,11 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
-import Icon from "_components/icon/Icon";
-import ReportCard from "_components/report-card/ReportCard";
+import Icon from "components/icon/Icon";
+import ReportCard from "components/report-card/ReportCard";
 
-import { REPORT_CARD } from "_assets/_general/general.assets";
+import { REPORT_CARD } from "assets/_general/general.assets";
 
 const ReportCardIcon = () => {
   const { level } = useParams();

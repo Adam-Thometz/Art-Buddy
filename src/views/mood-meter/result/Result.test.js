@@ -1,9 +1,9 @@
 import Result from "./Result";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
-import { default as store } from "_redux/rootReducer";
-import { setEnergy, setValence } from "_redux/mood-meter/moodMeterReducer";
+import { default as store } from "store/rootReducer";
+import { setEnergy, setValence } from "store/mood-meter/moodMeterReducer";
 
 describe("Result component", () => {
   store.dispatch(setValence(2));

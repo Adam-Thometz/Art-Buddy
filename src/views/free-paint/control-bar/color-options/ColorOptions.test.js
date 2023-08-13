@@ -1,6 +1,6 @@
 import ColorOptions from "./ColorOptions";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("ColorOptions component", () => {
   it("renders without crashing", () => {

@@ -1,13 +1,13 @@
 import MoodMeter from "./MoodMeter";
 import App from "App";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { moodMeter } from "_data/_activities/activityList";
-import { GREEN_FILTER, RED_FILTER } from "_data/mood-meter/batteries";
-import urls from "_routes/routeUrls";
+import { moodMeter } from "data/_activities/activityList";
+import { GREEN_FILTER, RED_FILTER } from "data/mood-meter/batteries";
+import urls from "routes/routeUrls";
 
 describe("MoodMeter component", () => {
   window.localStorage.setItem(`visited-${moodMeter.lsKey}`, true);

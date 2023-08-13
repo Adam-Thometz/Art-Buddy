@@ -1,6 +1,6 @@
 import Settings from "./Settings";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Settings component", () => {
   window.localStorage.setItem("rosters", "{}");

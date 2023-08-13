@@ -2,11 +2,11 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import "./LearnFamilyPage.css";
 
-import Icon from "_components/icon/Icon";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Icon from "components/icon/Icon";
+import WindowNavbar from "components/window-nav/WindowNavbar";
 
-import learnInstrumentOptions from "_data/instrument-id/learnInstrumentOptions";
-import { instrumentIdUrls } from "_routes/routeUrls";
+import learnInstrumentOptions from "data/instrument-id/learnInstrumentOptions";
+import { instrumentIdUrls } from "routes/routeUrls";
 
 const LearnFamilyPage = () => {
   const navigate = useNavigate();

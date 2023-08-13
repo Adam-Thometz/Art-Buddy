@@ -1,6 +1,6 @@
 import AlphabetTable from "./AlphabetTable";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("AlphabetTable component", () => {
   it("renders without crashing", () => {

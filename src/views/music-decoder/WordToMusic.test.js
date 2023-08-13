@@ -1,10 +1,10 @@
 import WordToMusic from "./WordToMusic";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { wordToMusic } from "_data/_activities/activityList";
+import { wordToMusic } from "data/_activities/activityList";
 
 jest.mock("tone", () => ({
   PitchShift: jest.fn(() => ({

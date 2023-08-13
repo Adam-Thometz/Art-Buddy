@@ -1,13 +1,13 @@
 import { useRef } from "react";
-import useSavedSongs from "_hooks/saved-songs/useSavedSongs";
-import useFormFields from "_hooks/form-fields/useFormFields";
+import useSavedSongs from "hooks/saved-songs/useSavedSongs";
+import useFormFields from "hooks/form-fields/useFormFields";
 
 import { useSelector } from "react-redux";
 
 import "./SaveSong.css";
 
-import Button from "_components/button/Button";
-import Keyboard from "_components/keyboard/Keyboard";
+import Button from "components/button/Button";
+import Keyboard from "components/keyboard/Keyboard";
 
 const SaveSong = () => {
   const { song } = useSelector((state) => state.songMaker);

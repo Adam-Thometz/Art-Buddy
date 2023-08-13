@@ -1,6 +1,6 @@
 import SequencePlayReset from "./SequencePlayReset";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("SequencePlayReset component", () => {
   it("renders without crashing", () => {

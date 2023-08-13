@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import "./LilyPadDisplay.css";
 
-import { LILY_PAD, LILY_PAD_FLOWER } from "_assets/jump-into-rhythm/jumpIntoRhythm.assets";
+import { LILY_PAD, LILY_PAD_FLOWER } from "assets/jump-into-rhythm/jumpIntoRhythm.assets";
 
 const LilyPadDisplay = ({ measure, id }) => {
   return (

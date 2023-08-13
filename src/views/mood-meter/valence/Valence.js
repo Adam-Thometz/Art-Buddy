@@ -4,7 +4,7 @@ import "./Valence.css";
 
 import Face from "./face/Face";
 
-import faces from "_data/mood-meter/faces";
+import faces from "data/mood-meter/faces";
 
 const Valence = () => {
   const { valence } = useSelector((state) => state.moodMeter);

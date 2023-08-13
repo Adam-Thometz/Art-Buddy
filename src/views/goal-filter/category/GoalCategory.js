@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 import { useNavigate } from "react-router-dom";
 
 import "./GoalCategory.css";
 
 import GoalFilter from "views/goal-filter/GoalFilter";
-import Button from "_components/button/Button";
+import Button from "components/button/Button";
 
-import activities from "_data/_activities/activityList";
-import filterBySubject from "_utils/goal-filter/filter";
+import activities from "data/_activities/activityList";
+import filterBySubject from "lib/goal-filter/filter";
 
 const GoalCategory = ({ category }) => {
   const { setCurrPopup } = useContext(PopupContext);

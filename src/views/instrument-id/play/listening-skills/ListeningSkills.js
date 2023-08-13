@@ -1,19 +1,19 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import useReportCard from "_hooks/report-card/useReportCard";
-import { PopupContext } from "_context/PopupContext";
+import useReportCard from "hooks/report-card/useReportCard";
+import { PopupContext } from "context/PopupContext";
 
 import "./ListeningSkills.css";
 
-import Button from "_components/button/Button";
-import Icon from "_components/icon/Icon";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import ReportCard from "_components/report-card/ReportCard";
+import Button from "components/button/Button";
+import Icon from "components/icon/Icon";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import ReportCard from "components/report-card/ReportCard";
 
-import { LISTENING_SKILLS_ICON } from "_assets/instrument-id/instrumentId.assets";
-import { REPORT_CARD, UNLOCKED, LOCKED } from "_assets/_general/general.assets";
-import { instrumentIdUrls } from "_routes/routeUrls";
-import checkHasPassed from "_utils/_report-card/checkHasPassed";
+import { LISTENING_SKILLS_ICON } from "assets/instrument-id/instrumentId.assets";
+import { REPORT_CARD, UNLOCKED, LOCKED } from "assets/_general/general.assets";
+import { instrumentIdUrls } from "routes/routeUrls";
+import checkHasPassed from "lib/_report-card/checkHasPassed";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();

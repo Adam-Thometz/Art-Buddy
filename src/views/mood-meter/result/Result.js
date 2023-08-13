@@ -1,18 +1,18 @@
 import { useContext } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 
 import { useSelector } from "react-redux";
 
 import "./Result.css";
 
-import Button from "_components/button/Button";
-import Video from "_components/video/Video";
+import Button from "components/button/Button";
+import Video from "components/video/Video";
 import Face from "../valence/face/Face";
 import Battery from "../energy/battery/Battery";
 
-import faces from "_data/mood-meter/faces";
-import batteries from "_data/mood-meter/batteries";
-import moods from "_data/mood-meter/moods";
+import faces from "data/mood-meter/faces";
+import batteries from "data/mood-meter/batteries";
+import moods from "data/mood-meter/moods";
 
 const Result = () => {
   const { valence, energy } = useSelector((state) => state.moodMeter);

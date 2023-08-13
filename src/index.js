@@ -4,18 +4,18 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import GlobalContext from '_context/global';
+import GlobalContext from 'context/global';
 // Redux imports
 import { Provider } from 'react-redux';
-import rootReducer from './_redux/rootReducer';
+import rootReducer from './store/rootReducer';
 // CSS imports
 import './index.css';
 // Component imports
 import App from './App';
 // Everything else
 import reportWebVitals from './reportWebVitals';
-import leftLines from '_assets/_background/LL.png';
-import rightLines from '_assets/_background/RL.png';
+import leftLines from 'assets/_background/LL.png';
+import rightLines from 'assets/_background/RL.png';
 
 ReactDOM.render(
   <Provider store={rootReducer}>

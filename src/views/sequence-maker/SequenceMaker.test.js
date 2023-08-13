@@ -1,11 +1,11 @@
 import SequenceMaker from "./SequenceMaker";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import TimeMock from "_testUtils/mocks/timeMock";
+import TimeMock from "testUtils/mocks/timeMock";
 
-import { sequenceMaker } from "_data/_activities/activityList";
+import { sequenceMaker } from "data/_activities/activityList";
 
 jest.mock("tone", () => ({
   Sampler: jest.fn(({ urls }) => ({

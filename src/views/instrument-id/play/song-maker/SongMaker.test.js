@@ -1,11 +1,11 @@
 import SongMaker from "./SongMaker";
 import App from "App";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { instrumentIdUrls } from "_routes/routeUrls";
+import { instrumentIdUrls } from "routes/routeUrls";
 
 jest.mock("tone", () => ({
   Transport: { stop: jest.fn() },

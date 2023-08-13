@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setIsErasing, setEditStencilMode } from "_redux/free-paint/freePaintReducer";
+import { setIsErasing, setEditStencilMode } from "store/free-paint/freePaintReducer";
 
 import "./ControlBar.css";
 
@@ -7,7 +7,7 @@ import ButtonWrapper from "./button-wrapper/ButtonWrapper";
 import StencilOptions from "./stencil-options/StencilOptions";
 import ColorOptions from "./color-options/ColorOptions";
 
-import { SQUARE_SHAPE, STENCIL, PENCIL, ERASER } from "_assets/free-paint/freePaint.assets";
+import { SQUARE_SHAPE, STENCIL, PENCIL, ERASER } from "assets/free-paint/freePaint.assets";
 
 const ControlBar = () => {
   const { color, isEditingStencil, isErasing } = useSelector(

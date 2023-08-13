@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { addTimeBlocks } from "_redux/time-keeper/timeKeeperReducer";
+import { addTimeBlocks } from "store/time-keeper/timeKeeperReducer";
 
 import "./MusicOption.css";
 

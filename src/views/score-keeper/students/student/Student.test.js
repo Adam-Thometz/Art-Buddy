@@ -1,6 +1,6 @@
 import Student from "./Student";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Student component", () => {
   it("renders without crashing", () => {

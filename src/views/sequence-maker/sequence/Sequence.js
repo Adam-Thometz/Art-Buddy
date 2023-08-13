@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromSequence, togglePlaying } from "_redux/sequence-maker/sequenceMakerReducer";
+import { removeFromSequence, togglePlaying } from "store/sequence-maker/sequenceMakerReducer";
 
 import "./Sequence.css";
 
-import Button from "_components/button/Button";
+import Button from "components/button/Button";
 
-import colors from "_data/_utils/colorOrder";
+import colors from "data/_utils/colorOrder";
 
 const Sequence = () => {
   const { sequence, pitch, duration, isPlaying } = useSelector((state) => state.sequenceMaker);

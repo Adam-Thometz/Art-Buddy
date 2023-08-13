@@ -1,15 +1,15 @@
 import { useRef } from "react";
-import useFormFields from "_hooks/form-fields/useFormFields";
-import useRoster from "_hooks/roster/useRoster";
+import useFormFields from "hooks/form-fields/useFormFields";
+import useRoster from "hooks/roster/useRoster";
 
 import "./NewRoster.css";
 
-import AddIcon from "_components/icon/add-icon/AddIcon";
-import Icon from "_components/icon/Icon";
+import AddIcon from "components/icon/add-icon/AddIcon";
+import Icon from "components/icon/Icon";
 
-import convertToId from "_utils/_general/convertToId";
-import { DELETE } from "_assets/_general/general.assets";
-import { CHECK_ICON } from "_assets/settings/settings.assets";
+import convertToId from "lib/_general/convertToId";
+import { DELETE } from "assets/_general/general.assets";
+import { CHECK_ICON } from "assets/settings/settings.assets";
 
 const NewRoster = () => {
   const [input, setInput, resetInput, addInput] = useFormFields({

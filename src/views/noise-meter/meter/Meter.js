@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from "react";
-import { MicContext } from "_context/MicContext";
+import { MicContext } from "context/MicContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setMeterVolume } from "_redux/noise-meter/noiseMeterReducer";
+import { setMeterVolume } from "store/noise-meter/noiseMeterReducer";
 
 import "./Meter.css";
 
 import Line from "./line/Line";
 
-import meterDisplay from "_data/noise-meter/noiseMeter";
+import meterDisplay from "data/noise-meter/noiseMeter";
 import * as Tone from "tone";
 
 const Meter = () => {

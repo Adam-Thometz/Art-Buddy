@@ -1,21 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PlayContext } from "_context/PlayContext";
-import { PopupContext } from "_context/PopupContext";
+import { PlayContext } from "context/PlayContext";
+import { PopupContext } from "context/PopupContext";
 
 import { useSelector } from "react-redux";
 
 import "./Instrument.css";
 
-import Icon from "_components/icon/Icon";
-import Button from "_components/button/Button";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Video from "_components/video/Video";
+import Icon from "components/icon/Icon";
+import Button from "components/button/Button";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Video from "components/video/Video";
 
-import loadSounds from "_utils/instrument-id/loadSounds";
-import getInstrument from "_utils/instrument-id/getInstrument";
-import convertToId from "_utils/_general/convertToId";
+import loadSounds from "lib/instrument-id/loadSounds";
+import getInstrument from "lib/instrument-id/getInstrument";
+import convertToId from "lib/_general/convertToId";
 import { Transport, start } from "tone";
 
 const Instrument = () => {

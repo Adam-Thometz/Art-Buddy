@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setVolume } from "_redux/settings/settingsReducer";
+import { setVolume } from "store/settings/settingsReducer";
 
 import "./Volume.css";
 
-import Icon from "_components/icon/Icon";
+import Icon from "components/icon/Icon";
 
-import { VOLUME_LOW, VOLUME_MEDIUM, VOLUME_HIGH } from "_assets/settings/settings.assets";
-import { LOW, MEDIUM, HIGH } from "_data/_utils/volume";
+import { VOLUME_LOW, VOLUME_MEDIUM, VOLUME_HIGH } from "assets/settings/settings.assets";
+import { LOW, MEDIUM, HIGH } from "data/_utils/volume";
 
 const Volume = () => {
   const { volume } = useSelector((state) => state.settings);

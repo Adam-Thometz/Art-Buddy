@@ -1,10 +1,10 @@
 import JumpIntoRhythm from "./JumpIntoRhythm";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { jumpIntoRhythm } from "_data/_activities/activityList";
+import { jumpIntoRhythm } from "data/_activities/activityList";
 
 jest.mock("tone", () => ({
   Transport: {

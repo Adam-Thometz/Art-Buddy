@@ -1,19 +1,19 @@
 import { useContext, useEffect } from "react";
-import useVisited from "_hooks/visited/useVisited";
-import { PlayContext } from "_context/PlayContext";
+import useVisited from "hooks/visited/useVisited";
+import { PlayContext } from "context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { clearGame } from "_redux/music-decoder/musicDecoderReducer";
-import { changeCurrGame } from "_redux/_general/generalReducer";
+import { clearGame } from "store/music-decoder/musicDecoderReducer";
+import { changeCurrGame } from "store/_general/generalReducer";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Instructions from "_components/instructions/Instructions";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Instructions from "components/instructions/Instructions";
 import WordForm from "./word-form/WordForm";
 import DecoderControls from "./decoder-controls/DecoderControls";
 import AlphabetTable from "./alphabet-table/AlphabetTable";
 
-import getSound from "_utils/music-decoder/getSound";
-import { wordToMusic } from "_data/_activities/activityList";
+import getSound from "lib/music-decoder/getSound";
+import { wordToMusic } from "data/_activities/activityList";
 import { Transport } from "tone";
 
 const WordToMusic = () => {

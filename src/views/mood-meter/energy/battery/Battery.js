@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
-import { setEnergy } from "_redux/mood-meter/moodMeterReducer";
+import { setEnergy } from "store/mood-meter/moodMeterReducer";
 
 import "./Battery.css";
 
-import { BATTERY_BAR, BATTERY } from "_assets/mood-meter/moodMeter.assets";
+import { BATTERY_BAR, BATTERY } from "assets/mood-meter/moodMeter.assets";
 
 const Battery = ({ width, filter, id }) => {
   const dispatch = useDispatch();

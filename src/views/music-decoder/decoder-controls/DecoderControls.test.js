@@ -1,6 +1,6 @@
 import DecoderControls from "./DecoderControls";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("DecoderControls component", () => {
   it("renders without crashing", () => {

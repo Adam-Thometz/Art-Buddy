@@ -1,6 +1,6 @@
 import ReportCardIcon from "./ReportCardIcon";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("ReportCardIcon component", () => {
   it("renders without crashing", () => {

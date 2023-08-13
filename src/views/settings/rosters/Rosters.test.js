@@ -1,6 +1,6 @@
 import Rosters from "./Rosters";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Rosters component", () => {
   window.localStorage.setItem("rosters", "{}");

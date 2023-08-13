@@ -1,21 +1,21 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PlayContext } from "_context/PlayContext";
-import useReportCard from "_hooks/report-card/useReportCard";
+import { PlayContext } from "context/PlayContext";
+import useReportCard from "hooks/report-card/useReportCard";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice, generateAnswer, clearChoices } from "_redux/instrument-id/listening-skills/listeningSkillsTestReducer";
+import { selectChoice, generateAnswer, clearChoices } from "store/instrument-id/listening-skills/listeningSkillsTestReducer";
 
 import "./ListeningSkillsTest.css";
 
-import Button from "_components/button/Button";
-import Dropdown from "_components/dropdown/Dropdown";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
+import Button from "components/button/Button";
+import Dropdown from "components/dropdown/Dropdown";
+import WindowNavbar from "components/window-nav/WindowNavbar";
 import Choice from "./choice/Choice";
 import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
-import loadSounds from "_utils/instrument-id/loadSounds";
+import loadSounds from "lib/instrument-id/loadSounds";
 import { start, Transport } from "tone";
 
 const ListeningSkillsTest = () => {

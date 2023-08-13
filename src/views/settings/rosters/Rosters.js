@@ -1,15 +1,15 @@
 import { useContext, useMemo } from "react";
-import useRoster from "_hooks/roster/useRoster";
-import { PopupContext } from "_context/PopupContext";
+import useRoster from "hooks/roster/useRoster";
+import { PopupContext } from "context/PopupContext";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setRoster } from "_redux/settings/settingsReducer";
+import { setRoster } from "store/settings/settingsReducer";
 
 import "./Rosters.css";
 
 import NewRoster from "./new-roster/NewRoster";
-import AddIcon from "_components/icon/add-icon/AddIcon";
-import Dropdown from "_components/dropdown/Dropdown";
+import AddIcon from "components/icon/add-icon/AddIcon";
+import Dropdown from "components/dropdown/Dropdown";
 
 const Rosters = () => {
   const { roster } = useSelector((state) => state.settings);

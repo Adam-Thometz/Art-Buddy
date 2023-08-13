@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 
 import "./LearnColorTheory.css";
 
-import Icon from "_components/icon/Icon";
-import Options from "_components/option/Options";
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import { colorTheoryUrls } from "_routes/routeUrls";
+import Icon from "components/icon/Icon";
+import Options from "components/option/Options";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import { colorTheoryUrls } from "routes/routeUrls";
 
-import { PRIMARY_ICON, SECONDARY_ICON, TERTIARY_ICON } from "_assets/color-theory/colorTheory.assets";
+import { PRIMARY_ICON, SECONDARY_ICON, TERTIARY_ICON } from "assets/color-theory/colorTheory.assets";
 
 const Learn = () => {
   const navigate = useNavigate();

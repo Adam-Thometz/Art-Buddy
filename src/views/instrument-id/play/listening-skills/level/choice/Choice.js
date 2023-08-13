@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectChoice } from "_redux/instrument-id/listening-skills/listeningSkillsTestReducer";
+import { selectChoice } from "store/instrument-id/listening-skills/listeningSkillsTestReducer";
 
 import "./Choice.css";
 
-import Icon from "_components/icon/Icon";
+import Icon from "components/icon/Icon";
 
-import { CORRECT_ICON, INCORRECT_ICON, SWAP_ICON } from "_assets/instrument-id/instrumentId.assets";
-import updateReportCard from "_utils/_report-card/updateReportCard";
+import { CORRECT_ICON, INCORRECT_ICON, SWAP_ICON } from "assets/instrument-id/instrumentId.assets";
+import updateReportCard from "lib/_report-card/updateReportCard";
 
 const Choice = ({ id, level, choice, save }) => {
   const { answer } = useSelector((state) => state.listeningSkillsTest);

@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import { PopupContext } from "_context/PopupContext";
+import { PopupContext } from "context/PopupContext";
 import { useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
 import "./Menu.css";
 
-import WindowNavbar from "_components/window-nav/WindowNavbar";
-import Button from "_components/button/Button";
+import WindowNavbar from "components/window-nav/WindowNavbar";
+import Button from "components/button/Button";
 import GoalFilter from "views/goal-filter/GoalFilter";
 
 import menuOptions from "./menuOptions";
-import activities from "_data/_activities/activityList";
-import { goalIcons } from "_assets/goal-filter/goalFilter.assets";
-import getCoveredSubjects from "_utils/goal-filter/getCoveredSubjects";
+import activities from "data/_activities/activityList";
+import { goalIcons } from "assets/goal-filter/goalFilter.assets";
+import getCoveredSubjects from "lib/goal-filter/getCoveredSubjects";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector((state) => state.general);

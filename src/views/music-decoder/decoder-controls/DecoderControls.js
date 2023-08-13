@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import { PlayContext } from "_context/PlayContext";
+import { PlayContext } from "context/PlayContext";
 
 import { useDispatch, useSelector } from "react-redux";
-import { changeScale, changeSound, toggleUpperCase, toggleNote } from "_redux/music-decoder/musicDecoderReducer";
+import { changeScale, changeSound, toggleUpperCase, toggleNote } from "store/music-decoder/musicDecoderReducer";
 
 import "./DecoderControls.css";
 
-import Dropdown from "_components/dropdown/Dropdown";
-import Button from "_components/button/Button";
-import Toggle from "_components/toggle/Toggle";
+import Dropdown from "components/dropdown/Dropdown";
+import Button from "components/button/Button";
+import Toggle from "components/toggle/Toggle";
 
 import scales from "./dropdown-options/scales";
 import instruments from "./dropdown-options/instruments";
-import getSound from "_utils/music-decoder/getSound";
-import convertLettersToNotes from "_utils/music-decoder/convertLettersToNotes";
+import getSound from "lib/music-decoder/getSound";
+import convertLettersToNotes from "lib/music-decoder/convertLettersToNotes";
 
 const DecoderControls = () => {
   const { playFn, setPlayFn } = useContext(PlayContext);

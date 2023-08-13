@@ -1,6 +1,6 @@
 import GoalFilter from "./GoalFilter";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("GoalFilter component", () => {
   it("renders without crashing", () => {

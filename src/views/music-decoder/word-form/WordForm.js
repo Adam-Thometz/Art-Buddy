@@ -1,12 +1,12 @@
 import { useRef } from "react";
-import useFormFields from "_hooks/form-fields/useFormFields";
+import useFormFields from "hooks/form-fields/useFormFields";
 
 import { useDispatch } from "react-redux";
-import { createWords } from "_redux/music-decoder/musicDecoderReducer";
+import { createWords } from "store/music-decoder/musicDecoderReducer";
 
 import "./WordForm.css";
 
-import hasValidWords from "_utils/music-decoder/hasValidWords";
+import hasValidWords from "lib/music-decoder/hasValidWords";
 
 const WordForm = () => {
   const [input, setInput] = useFormFields({ words: "" });

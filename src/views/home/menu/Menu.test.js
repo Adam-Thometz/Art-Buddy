@@ -1,10 +1,10 @@
 import Menu from "./Menu";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 import { screen } from "@testing-library/react";
 
-import { default as store } from "_redux/rootReducer";
-import { changeMenu } from "_redux/_general/generalReducer";
+import { default as store } from "store/rootReducer";
+import { changeMenu } from "store/_general/generalReducer";
 
 describe("Menu component", () => {
   it("renders without crashing", () => {

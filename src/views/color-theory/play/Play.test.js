@@ -1,6 +1,6 @@
 import Play from "./Play";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Play component", () => {
   it("renders without crashing", () => {

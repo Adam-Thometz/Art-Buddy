@@ -2,13 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setStencil } from "_redux/free-paint/freePaintReducer";
+import { setStencil } from "store/free-paint/freePaintReducer";
 
 import "./Stencil.css";
 
-import { CLOSE } from "_assets/_general/general.assets";
-import { RESIZE } from "_assets/free-paint/freePaint.assets";
-import getNewSize from "_utils/free-paint/getNewSize";
+import { CLOSE } from "assets/_general/general.assets";
+import { RESIZE } from "assets/free-paint/freePaint.assets";
+import getNewSize from "lib/free-paint/getNewSize";
 
 const Stencil = () => {
   const { stencil, isEditingStencil } = useSelector((state) => state.freePaint);

@@ -1,6 +1,6 @@
 import Line from "./Line";
 
-import { render } from "_testUtils/render";
+import { render } from "testUtils/render";
 
 describe("Line component", () => {
   it("renders without crashing", () => {
