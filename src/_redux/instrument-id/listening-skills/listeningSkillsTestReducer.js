@@ -28,7 +28,7 @@ const listeningSkillsTestSlice = createSlice({
       const answer = Math.ceil(Math.random() * 2);
       state.answer = answer === 1 ? choice1 : choice2;
     },
-    clearChoices(state, action) {
+    clearChoices(state) {
       state.choice1 = initialState.choice1;
       state.choice2 = initialState.choice2;
       state.answer = initialState.answer;
@@ -41,4 +41,5 @@ export const {
   generateAnswer,
   clearChoices
 } = listeningSkillsTestSlice.actions;
+
 export default listeningSkillsTestSlice.reducer;
