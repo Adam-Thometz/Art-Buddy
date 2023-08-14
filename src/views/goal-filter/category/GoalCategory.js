@@ -12,7 +12,8 @@ import filterBySubject from "lib/goal-filter/filter";
 
 const GoalCategory = ({ category }) => {
   const { setCurrPopup } = useContext(PopupContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const filtered = Object.keys(activities).filter(activity => {
     const goals = activities[activity].goalsCovered;
     const result = filterBySubject(goals, category);
@@ -27,7 +28,8 @@ const GoalCategory = ({ category }) => {
   const goBack = () => setCurrPopup({
     title: "Common Core Standards",
     popup: <GoalFilter />
-  })
+  });
+  
   return (
     <div className="GoalCategory">
       <span onClick={goBack}>go back</span>
