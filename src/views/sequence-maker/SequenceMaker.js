@@ -15,7 +15,7 @@ import SequencePlayReset from "./play-reset/SequencePlayReset";
 
 import { sequenceMaker } from "data/_activities/activityList";
 import { Transport } from "tone";
-import createSounds from "lib/sequence-maker/createSounds";
+import createSounds from "utils/sequence-maker/createSounds";
 
 const SequenceMaker = () => {
   const [hasVisited, setHasVisited] = useVisited(sequenceMaker.lsKey);

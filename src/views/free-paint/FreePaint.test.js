@@ -1,6 +1,6 @@
 import FreePaint from "./FreePaint";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

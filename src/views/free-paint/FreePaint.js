@@ -14,7 +14,7 @@ import Stencil from "./stencil/Stencil";
 
 import { freePaint } from "data/_activities/activityList";
 import colorWheel from "data/color-theory/colorWheel";
-import checkHasPassed from "lib/_report-card/checkHasPassed";
+import checkHasPassed from "utils/_report-card/checkHasPassed";
 
 const FreePaint = () => {
   const [hasVisited, setHasVisited] = useVisited(freePaint.lsKey);

@@ -8,7 +8,7 @@ import GoalFilter from "views/goal-filter/GoalFilter";
 import Button from "components/button/Button";
 
 import activities from "data/_activities/activityList";
-import filterBySubject from "lib/goal-filter/filter";
+import filterBySubject from "utils/goal-filter/filter";
 
 const GoalCategory = ({ category }) => {
   const { setCurrPopup } = useContext(PopupContext);

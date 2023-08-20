@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 import { default as store } from "store/rootReducer";
 import { setStencil, setEditStencilMode } from "store/free-paint/freePaintReducer";

@@ -1,6 +1,6 @@
 import Score from "./Score";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 import { instrumentIdColors } from "data/_report-cards/colorsForProgressBar";
 

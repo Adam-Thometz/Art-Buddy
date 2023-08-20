@@ -1,6 +1,6 @@
 import Sequence from "./Sequence";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Sequence component", () => {
   it("renders without crashing", () => {

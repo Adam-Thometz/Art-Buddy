@@ -1,6 +1,6 @@
 import Canvas from "./Canvas";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Canvas component", () => {
   it("renders without crashing", () => {

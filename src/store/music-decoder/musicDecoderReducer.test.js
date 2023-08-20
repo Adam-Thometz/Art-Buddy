@@ -1,6 +1,6 @@
 import musicDecoderReducer, { initialState, createWords, fillLetter, changeScale, clearGame, toggleUpperCase, toggleNote, changeSound } from "./musicDecoderReducer";
 
-import { testState } from "testUtils/test-states/musicDecoderReducerTestState";
+import { testState } from "test/test-states/musicDecoderReducerTestState";
 
 describe("Word To Music reducer", () => {
   it("should return the initial state", () => {

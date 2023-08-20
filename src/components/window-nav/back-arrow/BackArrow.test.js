@@ -1,6 +1,6 @@
 import BackArrow from "./BackArrow";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("BackArrow component", () => {
   it("renders without crashing", () => {

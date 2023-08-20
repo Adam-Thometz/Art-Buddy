@@ -1,6 +1,6 @@
 import AddIcon from "./AddIcon";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("AddIcon component", () => {
   it("renders without crashing", () => {

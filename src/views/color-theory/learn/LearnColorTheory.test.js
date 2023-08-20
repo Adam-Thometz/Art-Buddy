@@ -1,6 +1,6 @@
 import LearnColorTheory from "./LearnColorTheory";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("LearnColorTheory component", () => {
   it("renders without crashing", () => {

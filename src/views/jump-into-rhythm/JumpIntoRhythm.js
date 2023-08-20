@@ -12,7 +12,7 @@ import Notes from "./notes/Notes";
 import NoteOptions from "./note-options/NoteOptions";
 import FrogLilyPad from "./frog-lily-pad/FrogLilyPads";
 
-import makeFrog from "lib/jump-into-rhythm/makeFrog";
+import makeFrog from "utils/jump-into-rhythm/makeFrog";
 import { jumpIntoRhythm } from "data/_activities/activityList";
 import { Transport } from "tone";
 

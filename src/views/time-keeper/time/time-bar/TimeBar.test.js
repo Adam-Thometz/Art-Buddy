@@ -1,6 +1,6 @@
 import TimeBar from "./TimeBar";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("TimeBar component", () => {
   it("renders without crashing", () => {

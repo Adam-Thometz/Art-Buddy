@@ -1,6 +1,6 @@
 import Toggle from "./Toggle";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Toggle component", () => {
   it("renders without crashing", () => {

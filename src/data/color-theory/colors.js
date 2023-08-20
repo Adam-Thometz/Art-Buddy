@@ -1,4 +1,4 @@
-import prependBrightnessAndSaturation from "lib/_general/prependBrightnessAndSaturation";
+import prependBrightnessAndSaturation from "utils/_general/prependBrightnessAndSaturation";
 
 const colors = {
   // PRIMARY

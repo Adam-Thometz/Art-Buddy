@@ -1,6 +1,6 @@
 import ColorTheory from "./ColorTheory";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("ColorTheory component", () => {
   it("renders without crashing", () => {

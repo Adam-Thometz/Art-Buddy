@@ -1,6 +1,6 @@
 import ReportCard from "./ReportCard";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("ReportCard component", () => {
   it("renders without crashing", () => {

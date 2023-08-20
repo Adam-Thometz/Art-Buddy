@@ -1,6 +1,6 @@
 import LilyPadDisplay from "./LilyPadDisplay";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("LilyPadDisplay component", () => {
   const measure = [{ duration: ["4n"], isRest: false }, null, null, null];

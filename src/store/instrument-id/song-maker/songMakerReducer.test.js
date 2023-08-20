@@ -1,6 +1,6 @@
 import songMakerReducer, { initialState, defaultInstrument, addInstrument, removeInstrument, selectMelody, clearSong, toggleLoop } from "./songMakerReducer";
 
-import { setupInstrument } from "testUtils/setup-functions/instrumentIdReducerTestSetup";
+import { setupInstrument } from "test/setup-functions/instrumentIdReducerTestSetup";
 
 describe("Song Maker reducer", () => {
   it("should return the initial state", () => {

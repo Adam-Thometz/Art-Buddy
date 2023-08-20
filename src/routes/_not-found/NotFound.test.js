@@ -1,6 +1,6 @@
 import NotFound from "./NotFound";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("NotFound component", () => {
   it("renders without crashing", () => {

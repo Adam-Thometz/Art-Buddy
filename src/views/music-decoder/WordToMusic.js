@@ -12,7 +12,7 @@ import WordForm from "./word-form/WordForm";
 import DecoderControls from "./decoder-controls/DecoderControls";
 import AlphabetTable from "./alphabet-table/AlphabetTable";
 
-import getSound from "lib/music-decoder/getSound";
+import getSound from "utils/music-decoder/getSound";
 import { wordToMusic } from "data/_activities/activityList";
 import { Transport } from "tone";
 

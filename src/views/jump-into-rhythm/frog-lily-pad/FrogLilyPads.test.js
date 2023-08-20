@@ -1,6 +1,6 @@
 import FrogLilyPads from "./FrogLilyPads";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("FrogLilyPads component", () => {
   it("renders without crashing", () => {

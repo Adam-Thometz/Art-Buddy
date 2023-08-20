@@ -1,4 +1,4 @@
-import prependBrightnessAndSaturation from "lib/_general/prependBrightnessAndSaturation";
+import prependBrightnessAndSaturation from "utils/_general/prependBrightnessAndSaturation";
 
 export const GREEN_FILTER = prependBrightnessAndSaturation(
   "invert(68%) sepia(56%) saturate(915%) hue-rotate(38deg) brightness(109%) contrast(92%)"

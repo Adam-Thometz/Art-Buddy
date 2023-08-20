@@ -13,7 +13,7 @@ import SavedSongsIcon from "./corner-icon/SavedSongsIcon";
 import PlaySave from "./play-save/PlaySave";
 import InstrumentDisplay from "./instrument-display/InstrumentDisplay";
 
-import createLoop from "lib/instrument-id/createLoop";
+import createLoop from "utils/instrument-id/createLoop";
 import { Transport } from "tone";
 
 const SongMaker = () => {

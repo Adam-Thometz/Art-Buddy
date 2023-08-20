@@ -1,6 +1,6 @@
 import Menu from "./Menu";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 import { default as store } from "store/rootReducer";

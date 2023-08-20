@@ -1,6 +1,6 @@
 import GoalCategory from "./GoalCategory";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("GoalCategory component", () => {
   it("renders without crashing", () => {

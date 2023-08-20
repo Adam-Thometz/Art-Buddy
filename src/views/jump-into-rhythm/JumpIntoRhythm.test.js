@@ -1,6 +1,6 @@
 import JumpIntoRhythm from "./JumpIntoRhythm";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

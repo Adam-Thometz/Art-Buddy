@@ -1,6 +1,6 @@
 import Interface from "./Interface";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Interface component", () => {
   it("renders without crashing", () => {

@@ -1,6 +1,6 @@
 import Face from "./Face";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Face component", () => {
   it("renders without crashing", () => {

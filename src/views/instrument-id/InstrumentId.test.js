@@ -1,6 +1,6 @@
 import InstrumentId from "./InstrumentId";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("InstrumentId component", () => {
   it("renders without crashing", () => {

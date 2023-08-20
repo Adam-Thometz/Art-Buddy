@@ -10,7 +10,7 @@ import "./SavedSongs.css";
 import Icon from "components/icon/Icon";
 
 import { PLAY_SMALL, DELETE } from "assets/_general/general.assets";
-import createLoop from "lib/instrument-id/createLoop";
+import createLoop from "utils/instrument-id/createLoop";
 
 const SavedSongs = () => {
   const { setPlayFn } = useContext(PlayContext);

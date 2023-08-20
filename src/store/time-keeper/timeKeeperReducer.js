@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import randomizeSong from "lib/time-keeper/randomizeSong";
+import randomizeSong from "utils/time-keeper/randomizeSong";
 
 export const initialState = {
   song: [],

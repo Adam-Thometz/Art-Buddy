@@ -1,6 +1,6 @@
 import TimeKeeperNav from "./TimeKeeperNav";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("TimeKeeperNav component", () => {
   it("renders without crashing", () => {

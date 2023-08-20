@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getInstrument from "lib/instrument-id/getInstrument";
+import getInstrument from "utils/instrument-id/getInstrument";
 
 export const defaultInstrument = {
   instrumentId: null,

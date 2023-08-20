@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 import colors from "data/_utils/colorOrder";

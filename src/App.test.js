@@ -1,6 +1,6 @@
 import App from './App';
 
-import { render } from './testUtils/render';
+import { render } from './test/render';
 
 describe('App component', () => {
   it('renders without crashing', () => {

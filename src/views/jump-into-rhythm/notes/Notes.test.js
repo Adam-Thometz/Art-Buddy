@@ -1,6 +1,6 @@
 import Notes from "./Notes";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Notes component", () => {
   it("renders without crashing", () => {

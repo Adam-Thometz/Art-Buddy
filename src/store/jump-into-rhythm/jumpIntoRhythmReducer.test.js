@@ -1,6 +1,6 @@
 import jumpIntoRhythmReducer, { initialState, addToRhythm, setMeasures, clearGame, deleteFromRhythm, toggleLilyPadDisplay, toggleAnimation } from "./jumpIntoRhythmReducer";
 
-import { testQuarterNote } from "testUtils/test-states/jumpIntoRhythmReducerTestState";
+import { testQuarterNote } from "test/test-states/jumpIntoRhythmReducerTestState";
 
 describe("Jump Into Rhythm Reducer", () => {
   it("should return the initial state", () => {

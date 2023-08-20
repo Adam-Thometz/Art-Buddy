@@ -10,7 +10,7 @@ import Options from "components/option/Options";
 import Icon from "components/icon/Icon";
 
 import soundInfo from "data/sequence-maker/soundInfo";
-import createSounds from "lib/sequence-maker/createSounds";
+import createSounds from "utils/sequence-maker/createSounds";
 
 const SoundOptions = () => {
   const { category, sequence } = useSelector((state) => state.sequenceMaker);

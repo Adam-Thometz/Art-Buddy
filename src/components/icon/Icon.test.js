@@ -1,6 +1,6 @@
 import Icon from "./Icon";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Icon component", () => {
   it("renders without crashing", () => {

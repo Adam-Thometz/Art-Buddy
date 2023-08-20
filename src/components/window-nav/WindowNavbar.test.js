@@ -1,6 +1,6 @@
 import WindowNavbar from "./WindowNavbar";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 import ReportCardIcon from "views/instrument-id/play/listening-skills/level/corner-icon/ReportCardIcon";

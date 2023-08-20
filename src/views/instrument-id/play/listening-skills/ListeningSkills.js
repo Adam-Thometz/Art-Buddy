@@ -13,7 +13,7 @@ import ReportCard from "components/report-card/ReportCard";
 import { LISTENING_SKILLS_ICON } from "assets/instrument-id/instrumentId.assets";
 import { REPORT_CARD, UNLOCKED, LOCKED } from "assets/_general/general.assets";
 import { instrumentIdUrls } from "routes/routeUrls";
-import checkHasPassed from "lib/_report-card/checkHasPassed";
+import checkHasPassed from "utils/_report-card/checkHasPassed";
 
 const ListeningSkills = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 import StencilOptions from "./StencilOptions";
 

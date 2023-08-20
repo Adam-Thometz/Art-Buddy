@@ -1,6 +1,6 @@
 import sequenceMakerReducer, { initialState, addToSequence, setCategory, removeFromSequence, resetSequence, setDuration, setPitch, clearGame, togglePlaying } from "./sequenceMakerReducer";
 
-import { withCategory } from "testUtils/test-states/sequenceMakerReducerTestState";
+import { withCategory } from "test/test-states/sequenceMakerReducerTestState";
 
 describe("Sequence Maker reducer", () => {
   it("should return the initial state", () => {

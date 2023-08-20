@@ -1,6 +1,6 @@
 import Frog from "./Frog";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 import { BLUE } from "assets/jump-into-rhythm/jumpIntoRhythm.assets";
 

@@ -1,6 +1,6 @@
 import NoteBlock from "./NoteBlock";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("NoteBlock component", () => {
   it("renders without crashing", () => {

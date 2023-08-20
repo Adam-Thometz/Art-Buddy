@@ -1,6 +1,6 @@
 import Students from "./Students";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 import { default as store } from "store/rootReducer";
 import { loadStudents } from "store/score-keeper/scoreKeeperReducer";

@@ -1,6 +1,6 @@
 import Video from "./Video";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Video component", () => {
   it("renders without crashing", () => {

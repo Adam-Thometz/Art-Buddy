@@ -8,7 +8,7 @@ import ToolsRoutes from "./tools/ToolsRoutes";
 import Window from "components/window/Window";
 import NotFound from "./_not-found/NotFound";
 
-import getRoutes from "lib/_general/getRoutes";
+import getRoutes from "utils/_general/getRoutes";
 
 const ArtBuddyRoutes = () => {
   return (

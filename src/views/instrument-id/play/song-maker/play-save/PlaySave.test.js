@@ -1,6 +1,6 @@
 import PlaySave from "./PlaySave";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("PlaySave component", () => {
   it("renders without crashing", () => {

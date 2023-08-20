@@ -11,7 +11,7 @@ import "./TimeKeeperNav.css";
 import TimeLeft from 'views/time-keeper/time/time-left/TimeLeft';
 import PlayPause from 'views/time-keeper/interface/play-pause/PlayPause';
 
-import generateVolume from 'lib/time-keeper/generateVolume';
+import generateVolume from 'utils/time-keeper/generateVolume';
 import urls, { instrumentIdUrls } from 'routes/routeUrls';
 
 const TimeKeeperNav = () => {

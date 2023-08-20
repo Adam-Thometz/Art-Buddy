@@ -1,6 +1,6 @@
 import SavedSongsIcon from "./SavedSongsIcon";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("SavedSongsIcon component", () => {
   it("renders without crashing", () => {

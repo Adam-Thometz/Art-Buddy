@@ -1,6 +1,6 @@
 import LearnInstrumentId from "./LearnInstrumentId";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("LearnInstrumentId component", () => {
   it("renders without crashing", () => {

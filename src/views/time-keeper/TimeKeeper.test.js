@@ -1,6 +1,6 @@
 import TimeKeeper from "./TimeKeeper";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("TimeKeeper component", () => {
   it("renders without crashing", () => {

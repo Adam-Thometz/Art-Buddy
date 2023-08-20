@@ -1,5 +1,5 @@
 import scoreKeeperReducer, { initialState, clearGame, loadStudents, updatePoints } from "./scoreKeeperReducer";
-import { addedStudents } from "testUtils/test-states/scoreKeeperReducerTestState";
+import { addedStudents } from "test/test-states/scoreKeeperReducerTestState";
 
 describe("Score Keeper reducer", () => {
   it("should return the initial state", () => {

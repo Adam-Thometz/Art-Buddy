@@ -1,6 +1,6 @@
 import Home from "./Home";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Home component", () => {
   it("renders without crashing", () => {

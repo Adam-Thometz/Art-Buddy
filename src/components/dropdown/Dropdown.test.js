@@ -1,6 +1,6 @@
 import Dropdown from "./Dropdown";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 const testOptions = {
   test: "test option",

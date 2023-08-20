@@ -1,6 +1,6 @@
 import Welcome from "./Welcome";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Welcome component", () => {
   it("renders without crashing", () => {

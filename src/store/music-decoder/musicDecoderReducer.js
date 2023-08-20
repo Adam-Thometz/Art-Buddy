@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import findLettersToRemove from "lib/music-decoder/findLettersToRemove";
+import findLettersToRemove from "utils/music-decoder/findLettersToRemove";
 
 export const initialState = {
   words: [],

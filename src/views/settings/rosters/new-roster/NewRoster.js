@@ -7,7 +7,7 @@ import "./NewRoster.css";
 import AddIcon from "components/icon/add-icon/AddIcon";
 import Icon from "components/icon/Icon";
 
-import convertToId from "lib/_general/convertToId";
+import convertToId from "utils/_general/convertToId";
 import { DELETE } from "assets/_general/general.assets";
 import { CHECK_ICON } from "assets/settings/settings.assets";
 

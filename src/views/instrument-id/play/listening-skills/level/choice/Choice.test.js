@@ -1,8 +1,8 @@
 import Choice from "./Choice";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
-import getInstrument from "lib/instrument-id/getInstrument";
+import getInstrument from "utils/instrument-id/getInstrument";
 
 describe("Choice component", () => {
   const choice = getInstrument("theremin");

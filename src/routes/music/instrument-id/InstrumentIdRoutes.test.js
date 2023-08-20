@@ -1,6 +1,6 @@
 import InstrumentIdRoutes from "./InstrumentIdRoutes";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 import { instrumentIdUrls } from "routes/routeUrls";

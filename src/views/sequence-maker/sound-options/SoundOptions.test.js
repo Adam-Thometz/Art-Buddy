@@ -1,6 +1,6 @@
 import SoundOptions from "./SoundOptions";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("SoundOptions component", () => {
   it("renders without crashing", () => {

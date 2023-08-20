@@ -6,7 +6,7 @@ import ColorTheory from "views/color-theory/ColorTheory";
 import ColorTheoryRoutes from "./color-theory/ColorTheoryRoutes";
 
 import urls from "routes/routeUrls";
-import getRoutes from "lib/_general/getRoutes";
+import getRoutes from "utils/_general/getRoutes";
 
 const ArtRoutes = () => {
   return (

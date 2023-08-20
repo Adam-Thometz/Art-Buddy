@@ -1,7 +1,7 @@
 import ListeningSkillsTest from "./ListeningSkillsTest";
 
-import { render } from "testUtils/render";
-import { setupChoices } from "testUtils/setup-functions/ListeningSkillsTestSetup";
+import { render } from "test/render";
+import { setupChoices } from "test/setup-functions/ListeningSkillsTestSetup";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

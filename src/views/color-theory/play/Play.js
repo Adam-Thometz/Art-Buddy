@@ -10,7 +10,7 @@ import WindowNavbar from "components/window-nav/WindowNavbar";
 import Button from "components/button/Button";
 import ReportCard from "components/report-card/ReportCard";
 
-import checkHasPassed from "lib/_report-card/checkHasPassed";
+import checkHasPassed from "utils/_report-card/checkHasPassed";
 import { COLOR_THEORY_ICON } from "assets/menu/menu.assets";
 import { REPORT_CARD, LOCKED, UNLOCKED } from "assets/_general/general.assets";
 import { colorTheoryUrls } from "routes/routeUrls";

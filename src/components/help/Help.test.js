@@ -1,6 +1,6 @@
 import Help from "./Help";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Help component", () => {
   it("renders without crashing", () => {

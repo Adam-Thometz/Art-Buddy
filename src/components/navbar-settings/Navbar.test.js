@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Navbar component", () => {
   it("renders without crashing", () => {

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import sortWinners from "lib/score-keeper/sortWinners";
+import sortWinners from "utils/score-keeper/sortWinners";
 import operations from "data/score-keeper/operations";
 
 export const initialState = {

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getChoices from "lib/instrument-id/getChoices";
+import getChoices from "utils/instrument-id/getChoices";
 
 export const initialState = {
   choice1: null,

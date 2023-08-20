@@ -1,6 +1,6 @@
 import Keyboard from "./Keyboard";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Keyboard component", () => {
   it("renders without crashing", () => {

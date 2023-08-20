@@ -13,7 +13,7 @@ import GoalFilter from "views/goal-filter/GoalFilter";
 import menuOptions from "./menuOptions";
 import activities from "data/_activities/activityList";
 import { goalIcons } from "assets/goal-filter/goalFilter.assets";
-import getCoveredSubjects from "lib/goal-filter/getCoveredSubjects";
+import getCoveredSubjects from "utils/goal-filter/getCoveredSubjects";
 
 const Menu = ({ type = null }) => {
   const { menu } = useSelector((state) => state.general);

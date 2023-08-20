@@ -15,7 +15,7 @@ import Choice from "./choice/Choice";
 import ReportCardIcon from "./corner-icon/ReportCardIcon";
 
 import instrumentOptions from "./instrumentOptions";
-import loadSounds from "lib/instrument-id/loadSounds";
+import loadSounds from "utils/instrument-id/loadSounds";
 import { start, Transport } from "tone";
 
 const ListeningSkillsTest = () => {

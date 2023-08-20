@@ -7,7 +7,7 @@ import { fillLetter } from "store/music-decoder/musicDecoderReducer";
 import "./AlphabetTable.css";
 
 import LETTER_NOTES from "data/music-decoder/letterNotes";
-import searchLetter from "lib/music-decoder/searchLetter";
+import searchLetter from "utils/music-decoder/searchLetter";
 
 const AlphabetTable = () => {
   const { playFn } = useContext(PlayContext);

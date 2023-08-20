@@ -12,8 +12,8 @@ import Toggle from "components/toggle/Toggle";
 
 import scales from "./dropdown-options/scales";
 import instruments from "./dropdown-options/instruments";
-import getSound from "lib/music-decoder/getSound";
-import convertLettersToNotes from "lib/music-decoder/convertLettersToNotes";
+import getSound from "utils/music-decoder/getSound";
+import convertLettersToNotes from "utils/music-decoder/convertLettersToNotes";
 
 const DecoderControls = () => {
   const { playFn, setPlayFn } = useContext(PlayContext);

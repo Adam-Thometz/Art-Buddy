@@ -1,6 +1,6 @@
 import listeningSkillsTestReducer, { initialState, selectChoice, generateAnswer, clearChoices } from "./listeningSkillsTestReducer";
 
-import { setupChoices } from "testUtils/setup-functions/instrumentIdReducerTestSetup";
+import { setupChoices } from "test/setup-functions/instrumentIdReducerTestSetup";
 
 describe("Listening Skills Test reducer", () => {
   it("should return the initial state", () => {

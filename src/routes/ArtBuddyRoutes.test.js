@@ -1,6 +1,6 @@
 import ArtBuddyRoutes from "./ArtBuddyRoutes";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 describe("Art Buddy Routes", () => {

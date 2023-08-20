@@ -1,6 +1,6 @@
 import ArtRoutes from "./ArtRoutes";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen } from "@testing-library/react";
 
 import urls from "routes/routeUrls";

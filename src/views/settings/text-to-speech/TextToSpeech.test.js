@@ -1,6 +1,6 @@
 import TextToSpeech from "./TextToSpeech";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("TextToSpeech component", () => {
   it("renders without crashing", () => {

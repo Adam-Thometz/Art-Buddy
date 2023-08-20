@@ -1,6 +1,6 @@
 import TooSmall from "./TooSmall";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("TooSmall component", () => {
   it("renders without crashing", () => {

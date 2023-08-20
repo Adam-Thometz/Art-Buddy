@@ -18,7 +18,7 @@ import ColorWheel from "views/color-theory/color-wheel/ColorWheel";
 import levels from "data/color-theory/levels";
 import { CORRECT_ICON, INCORRECT_ICON } from "assets/color-theory/colorTheory.assets";
 import { colorTheoryUrls } from "routes/routeUrls";
-import updateReportCard from "lib/_report-card/updateReportCard";
+import updateReportCard from "utils/_report-card/updateReportCard";
 
 const PlayLevel = () => {
   const { level } = useParams();

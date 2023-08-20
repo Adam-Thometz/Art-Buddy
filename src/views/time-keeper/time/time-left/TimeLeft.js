@@ -5,7 +5,7 @@ import { toggleMute, resetSong } from "store/time-keeper/timeKeeperReducer";
 
 import "./TimeLeft.css";
 
-import createDisplayTime from "lib/time-keeper/createDisplayTime";
+import createDisplayTime from "utils/time-keeper/createDisplayTime";
 // import reset from "_media/time-keeper/controls/reset.png";
 // import mute from "_media/time-keeper/controls/mute.png";
 import { MUTE, RESET } from "assets/time-keeper/timeKeeper.assets";

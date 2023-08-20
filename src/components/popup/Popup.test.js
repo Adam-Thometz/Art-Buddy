@@ -1,6 +1,6 @@
 import Popup from "./Popup";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Popup component", () => {
   it("renders without crashing", () => {

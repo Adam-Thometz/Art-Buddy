@@ -6,7 +6,7 @@ import { createWords } from "store/music-decoder/musicDecoderReducer";
 
 import "./WordForm.css";
 
-import hasValidWords from "lib/music-decoder/hasValidWords";
+import hasValidWords from "utils/music-decoder/hasValidWords";
 
 const WordForm = () => {
   const [input, setInput] = useFormFields({ words: "" });

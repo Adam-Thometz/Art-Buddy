@@ -13,9 +13,9 @@ import Button from "components/button/Button";
 import WindowNavbar from "components/window-nav/WindowNavbar";
 import Video from "components/video/Video";
 
-import loadSounds from "lib/instrument-id/loadSounds";
-import getInstrument from "lib/instrument-id/getInstrument";
-import convertToId from "lib/_general/convertToId";
+import loadSounds from "utils/instrument-id/loadSounds";
+import getInstrument from "utils/instrument-id/getInstrument";
+import convertToId from "utils/_general/convertToId";
 import { Transport, start } from "tone";
 
 const Instrument = () => {

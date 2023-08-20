@@ -1,6 +1,6 @@
 import Options from "./Options";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Options component", () => {
   it("renders without crashing", () => {

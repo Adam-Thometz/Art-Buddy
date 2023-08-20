@@ -1,9 +1,9 @@
 import SequenceMaker from "./SequenceMaker";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import TimeMock from "testUtils/mocks/timeMock";
+import TimeMock from "test/mocks/timeMock";
 
 import { sequenceMaker } from "data/_activities/activityList";
 

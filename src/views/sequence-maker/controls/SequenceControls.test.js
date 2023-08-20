@@ -1,6 +1,6 @@
 import SequenceControls from "./SequenceControls";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("SequenceControls component", () => {
   it("renders without crashing", () => {

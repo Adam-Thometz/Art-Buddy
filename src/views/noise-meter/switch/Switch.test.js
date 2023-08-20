@@ -1,6 +1,6 @@
 import Switch from "./Switch";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Switch component", () => {
   it("renders without crashing", () => {

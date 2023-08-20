@@ -1,6 +1,6 @@
 import Valence from "./Valence";
 
-import { render } from "testUtils/render";
+import { render } from "test/render";
 
 describe("Valence component", () => {
   it("renders without crashing", () => {
