@@ -2,4 +2,4 @@ build
 node_modules
 
 .env
-src/testUtils/coverage
+src/test/coverage
