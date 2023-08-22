@@ -109,4 +109,4 @@ npm run test:watch
 npm run coverage
 ```
 
-In addition to a table getting displayed in your terminal, you will find more detailed coverage info in `src/_testUtils/coverage`.
+In addition to a table getting displayed in your terminal, you will find more detailed coverage info in `src/test/coverage`.
