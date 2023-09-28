@@ -1,9 +1,5 @@
 import { Part, Sampler, Transport, now } from "tone";
 
-/** createSounds
- * Purpose: creates sounds and returns the sounds as well as play functions for them.
- */
-
 export default function createSounds(sequence, volume = 0) {
   const sounds = sequence.map((block) => {
     if (!block) return null;

@@ -33,6 +33,11 @@ const TimeKeeperNav = () => {
     (location.pathname === urls.timeKeeperUrl) ||
     (location.pathname === instrumentIdUrls.playSongMaker);
 
+  const clearTimer = timer => {
+    clearTimeout(timer);
+    dispatch(setCurrTimer(null));
+  }
+
   // play or pause
   useEffect(() => {
     if (song.length) {
@@ -81,11 +86,6 @@ const TimeKeeperNav = () => {
       audioRef.current.volume = generateVolume(volume, isMuted);
     }
   }, [volume, isMuted]);
-
-  const clearTimer = timer => {
-    clearTimeout(timer);
-    dispatch(setCurrTimer(null));
-  }
 
   return (
     <section className='TimeKeeperNav'>

@@ -8,16 +8,19 @@ import { Time } from "tone";
 export const LILY_PAD_LENGTH = 18;
 export const HOP_HEIGHT = 7;
 
+const START_ANIMATION = [
+  { transform: "translate(0, 0)" },
+  {
+    transform: `translate(${LILY_PAD_LENGTH / 2}vw, -${HOP_HEIGHT}vh)`,
+    easing: "ease-out",
+    offset: LILY_PAD_LENGTH / 2 / 100,
+  },
+];
+const FINAL_ANIMATION = [{ transform: `translate(95vw, -${HOP_HEIGHT}vh)` }];
+
 export default function createHoppingAnimation(measure) {
-  const animation = [
-    { transform: "translate(0, 0)" },
-    {
-      transform: `translate(${LILY_PAD_LENGTH / 2}vw, -${HOP_HEIGHT}vh)`,
-      easing: "ease-out",
-      offset: LILY_PAD_LENGTH / 2 / 100,
-    },
-  ];
-  measure.forEach((note, i) => {
+  const animation = START_ANIMATION;
+  measure.forEach(function addToAnimation(note, i) {
     const lilyPadPosition = LILY_PAD_LENGTH * (i + 1);
     if (note === "quarterRest") {
       animation.push(...createQuarterRestAnimation(lilyPadPosition, i));
@@ -27,7 +30,7 @@ export default function createHoppingAnimation(measure) {
       animation.push(...createEighthNotesAnimation(lilyPadPosition, i));
     }
   });
-  animation.push({ transform: `translate(95vw, -${HOP_HEIGHT}vh)` });
+  animation.concat(FINAL_ANIMATION);
   const duration = Time("1:2").toSeconds() * 1000;
   return { animation, duration };
 }

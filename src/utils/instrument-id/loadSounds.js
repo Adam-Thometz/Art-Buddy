@@ -7,12 +7,12 @@ import getInstrument from "./getInstrument";
 
 export default function loadSounds({ ids, volume, isTest }) {
   const sounds = {};
-  ids.forEach((id) => {
+  for (let id of ids) {
     const { sound } = getInstrument(id);
     const isRhythm = typeof sound === "object";
     const getSound = isRhythm ? getHits : getNotes;
     sounds[id] = () => getSound({ sound, isTest, volume });
-  });
+  }
 
   function play(id) {
     const toPlay = sounds[id]();
