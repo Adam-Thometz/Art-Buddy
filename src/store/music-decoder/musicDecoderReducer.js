@@ -11,7 +11,7 @@ export const initialState = {
 };
 
 const musicDecoderSlice = createSlice({
-  name: "nusicDecoder",
+  name: "musicDecoder",
   initialState,
   reducers: {
     createWords(state, action) {
