@@ -82,8 +82,6 @@ describe("createHoppingAnimation function", () => {
           offset: ((100 / 6) * 4.5) / 100,
           easing: "ease-out",
         },
-        // End
-        { transform: `translate(95vw, -${HOP_HEIGHT}vh)` },
       ],
     });
   });
