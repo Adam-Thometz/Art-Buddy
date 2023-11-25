@@ -52,6 +52,7 @@ const SequencePlayReset = () => {
   };
 
   const handleReset = () => {
+    if (isPlaying) return;
     dispatch(resetSequence());
     Transport.stop();
   };

@@ -17,7 +17,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "teardown": "npx surge teardown art-buddy.surge.sh",
     "test": "jest --modulePaths=src",
     "test:watch": "npm test -- --watch",
     "coverage": "npm test --coverage",
