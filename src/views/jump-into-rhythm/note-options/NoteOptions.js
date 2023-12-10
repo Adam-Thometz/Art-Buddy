@@ -13,9 +13,7 @@ import noteInfo from "data/jump-into-rhythm/noteInfo";
 import { start, Transport, Time } from "tone";
 
 const NoteOptions = () => {
-  const { rhythm, isDisplayingLilyPads } = useSelector(
-    (state) => state.jumpIntoRhythm
-  );
+  const { rhythm, isDisplayingLilyPads } = useSelector((state) => state.jumpIntoRhythm);
   const { volume } = useSelector((state) => state.settings);
   const { playFn } = useContext(PlayContext);
   const dispatch = useDispatch();

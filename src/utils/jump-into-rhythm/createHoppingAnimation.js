@@ -16,7 +16,7 @@ export default function createHoppingAnimation(measure) {
       easing: "ease-out",
       offset: LILY_PAD_LENGTH / 2 / 100,
     },
-  ];;
+  ];
   measure.forEach(function addToAnimation(note, i) {
     const lilyPadPosition = LILY_PAD_LENGTH * (i + 1);
     if (note === "quarterRest") {
