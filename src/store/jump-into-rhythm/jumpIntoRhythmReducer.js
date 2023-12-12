@@ -26,16 +26,22 @@ const jumpIntoRhythmSlice = createSlice({
       state.rhythm = newRhythm;
     },
     setMeasures(state, action) {
-      const newRhythm = state.rhythm;
       const numOfBeats = action.payload;
       const isInvalid =
-        (newRhythm.length === 16 && numOfBeats > 0) ||
-        (newRhythm.length === 4 && numOfBeats < 0);
+        (state.rhythm.length === 16 && numOfBeats > 0) ||
+        (state.rhythm.length === 4 && numOfBeats < 0);
       if (isInvalid) return;
-      for (let i = 1; i <= Math.abs(numOfBeats); i++) {
-        numOfBeats > 0 ? newRhythm.push(null) : newRhythm.pop();
-        state.rhythm = newRhythm;
+
+      const newRhythm = [...state.rhythm];
+      if (numOfBeats > 0) {
+        newRhythm.push(...Array(numOfBeats).fill(null));
+      } else {
+        let numToUse = Math.abs(numOfBeats);
+        let startSplice = newRhythm.length - numToUse;
+        newRhythm.splice(startSplice, numToUse);
       }
+      console.log(newRhythm)
+      state.rhythm = newRhythm;
     },
     toggleLilyPadDisplay(state) {
       state.isDisplayingLilyPads = !state.isDisplayingLilyPads;
